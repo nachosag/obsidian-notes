@@ -1,0 +1,11 @@
+{
+  "cssTheme": "",
+  "nativeMenus": true,
+  "textFontFamily": "Roboto,Oswald",
+  "monospaceFontFamily": "Google Sans Code,Fira Code",
+  "interfaceFontFamily": "Roboto,Oswald",
+  "theme": "obsidian",
+  "baseFontSizeAction": true,
+  "enabledCssSnippets": [],
+  "baseFontSize": 19
+}

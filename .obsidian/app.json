@@ -1,0 +1,13 @@
+{
+  "tabSize": 2,
+  "showLineNumber": true,
+  "strictLineBreaks": true,
+  "attachmentFolderPath": "./Anexos",
+  "pdfExportSettings": {
+    "includeName": true,
+    "pageSize": "A4",
+    "landscape": true,
+    "margin": "0",
+    "downscalePercent": 50
+  }
+}

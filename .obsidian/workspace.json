@@ -1,0 +1,197 @@
+{
+  "main": {
+    "id": "d1bb77c9c417765d",
+    "type": "split",
+    "children": [
+      {
+        "id": "fd14b753456299a7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53d5208f27c2c6ac",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "bc84d4c37ba970e2",
+    "type": "split",
+    "children": [
+      {
+        "id": "948b6e2207a4a07e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "696b8c848afd1155",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "a484e70542a97658",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "064f20b7111ffef9",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "60744be18a06282d",
+    "type": "split",
+    "children": [
+      {
+        "id": "eeeb2da969b94033",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ea6a90103bdb8b14",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "matemática-discreta/PRÁCTICA 1.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for PRÁCTICA 1"
+            }
+          },
+          {
+            "id": "720fda297a9b7527",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "a4d810856c79370b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "14acf8cb1e50b37b",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "bases:Create new base": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-git:Open Git source control": false
+    }
+  },
+  "active": "53d5208f27c2c6ac",
+  "lastOpenFiles": [
+    "matemática-discreta/PRÁCTICA 1.md",
+    "Excalidraw/Drawing 2025-09-08 22.01.08.excalidraw.md",
+    "algebra-lineal/Práctica 2 (ej11-ej25).md",
+    "algebra-lineal/Práctica 2 (ej1-ej10).md",
+    "notes",
+    "Excalidraw",
+    "algebra-lineal/Anexos/Pasted image 20250908211732.png",
+    "algebra-lineal/Anexos/Pasted image 20250908211639.png",
+    "algebra-lineal/Anexos/Pasted image 20250908211622.png",
+    "algebra-lineal/Anexos/Pasted image 20250908211537.png",
+    "algebra-lineal/Anexos/Pasted image 20250908191056.png",
+    "algebra-lineal/Anexos/Pasted image 20250907222433.png",
+    "algebra-lineal/Anexos/Pasted image 20250908211722.png",
+    "algebra-lineal/Anexos/Pasted image 20250908211708.png",
+    "algebra-lineal/Anexos/Pasted image 20250908211655.png",
+    "algebra-lineal/Anexos/Pasted image 20250908211519.png",
+    "algebra-lineal/Untitled",
+    "2025-08-29.md",
+    "Untitled.canvas",
+    "algebra-lineal/Anexos",
+    "algebra-lineal",
+    "Currículums/Desarrollador de Software - Ignacio Borlenghi - ES.md",
+    "Currículums",
+    "2025-08-11.md",
+    "Untitled 1.md"
+  ]
+}
