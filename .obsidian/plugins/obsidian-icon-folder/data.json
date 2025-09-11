@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "📎",
       "🎨",
       "✍",
       "🧩",
-      "✏",
-      "LiPencil"
+      "✏"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -36,9 +36,11 @@
   },
   "algebra-lineal": "🧮",
   "Excalidraw": "🎨",
-  "algebra-lineal/Anexos": "📎",
   "matemática-discreta": "🧩",
   "matemática-discreta/practica-01.md": "✍",
-  "algebra-lineal/practica-02-e01-10.md": "✍",
-  "algebra-lineal/practica-02-e11-25.md": "✍"
+  "algebra-lineal/practica-03/practica-03-e01-20.md": "✍",
+  "algebra-lineal/practica-02/practica-02-e11-25.md": "✍",
+  "algebra-lineal/practica-02/practica-02-e01-10.md": "✍",
+  "algebra-lineal/practica-02/Anexos": "📎",
+  "algebra-lineal/practica-03/Anexos": "📎"
 }

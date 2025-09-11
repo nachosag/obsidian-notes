@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "409a5805b6fc4de8",
+        "id": "8d054a292e969dc9",
         "type": "tabs",
         "children": [
           {
-            "id": "6de9118f636916f1",
+            "id": "a727e9e6e2170c6c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algebra-lineal/practica-02-e11-25.md",
+                "file": "algebra-lineal/practica-03/practica-03-e01-20.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "practica-02-e11-25"
+              "title": "practica-03-e01-20"
             }
           }
         ]
@@ -171,31 +171,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "6de9118f636916f1",
+  "active": "a727e9e6e2170c6c",
   "lastOpenFiles": [
+    "algebra-lineal/practica-03/Anexos/Pasted image 20250911191819.png",
+    "algebra-lineal/practica-03/practica-03-e01-20.md",
+    "algebra-lineal/practica-03/Anexos/Pasted image 20250911192001.png",
+    "algebra-lineal/practica-03/Anexos/Pasted image 20250911191935.png",
+    "algebra-lineal/practica-03/Anexos/Pasted image 20250911191855.png",
+    "algebra-lineal/practica-03/Anexos/Pasted image 20250911191916.png",
+    "algebra-lineal/practica-03/Anexos/Pasted image 20250911191943.png",
+    "algebra-lineal/practica-03/Anexos",
+    "algebra-lineal/practica-02/practica-02-e11-25.md",
+    "algebra-lineal/practica-02/practica-02-e01-10.md",
+    "algebra-lineal/practica-02",
+    "algebra-lineal/practica-03",
     "Excalidraw/Drawing 2025-09-10 22.33.16.excalidraw.md",
-    "algebra-lineal/practica-02-e11-25.md",
     "Excalidraw/Drawing 2025-09-10 22.27.52.excalidraw.md",
-    "algebra-lineal/practica-02-e01-10.md",
-    "algebra-lineal/Anexos/Pasted image 20250908211732.png",
+    "algebra-lineal/practica-02/Anexos/Pasted image 20250908211732.png",
     "Excalidraw/Drawing 2025-09-09 00.29.29.excalidraw.md",
     "Excalidraw/Drawing 2025-09-08 22.01.08.excalidraw.md",
     "matemática-discreta/practica-01.md",
     "notes",
     "Excalidraw",
-    "algebra-lineal/Anexos/Pasted image 20250908211639.png",
-    "algebra-lineal/Anexos/Pasted image 20250908211622.png",
-    "algebra-lineal/Anexos/Pasted image 20250908211537.png",
-    "algebra-lineal/Anexos/Pasted image 20250908191056.png",
-    "algebra-lineal/Anexos/Pasted image 20250907222433.png",
-    "algebra-lineal/Anexos/Pasted image 20250908211722.png",
-    "algebra-lineal/Anexos/Pasted image 20250908211708.png",
-    "algebra-lineal/Anexos/Pasted image 20250908211655.png",
-    "algebra-lineal/Anexos/Pasted image 20250908211519.png",
-    "algebra-lineal/Untitled",
+    "algebra-lineal/practica-02/Anexos/Pasted image 20250908211639.png",
+    "algebra-lineal/practica-02/Anexos/Pasted image 20250908211622.png",
+    "algebra-lineal/practica-02/Anexos/Pasted image 20250908211537.png",
     "2025-08-29.md",
     "Untitled.canvas",
-    "algebra-lineal/Anexos",
+    "algebra-lineal/practica-02/Anexos",
     "algebra-lineal",
     "Currículums/Desarrollador de Software - Ignacio Borlenghi - ES.md",
     "Currículums",
