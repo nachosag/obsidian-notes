@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "fd14b753456299a7",
+        "id": "409a5805b6fc4de8",
         "type": "tabs",
         "children": [
           {
-            "id": "53d5208f27c2c6ac",
+            "id": "6de9118f636916f1",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "algebra-lineal/practica-02-e11-25.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "practica-02-e11-25"
             }
           }
         ]
@@ -137,12 +141,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "followCursor": false,
+                "file": "algebra-lineal/practica-02-e11-25.md",
+                "followCursor": true,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of practica-02-e11-25"
             }
           }
         ],
@@ -150,7 +155,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 200,
     "collapsed": true
   },
   "left-ribbon": {
@@ -166,15 +171,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "53d5208f27c2c6ac",
+  "active": "6de9118f636916f1",
   "lastOpenFiles": [
-    "matemática-discreta/PRÁCTICA 1.md",
+    "Excalidraw/Drawing 2025-09-10 22.33.16.excalidraw.md",
+    "algebra-lineal/practica-02-e11-25.md",
+    "Excalidraw/Drawing 2025-09-10 22.27.52.excalidraw.md",
+    "algebra-lineal/practica-02-e01-10.md",
+    "algebra-lineal/Anexos/Pasted image 20250908211732.png",
+    "Excalidraw/Drawing 2025-09-09 00.29.29.excalidraw.md",
     "Excalidraw/Drawing 2025-09-08 22.01.08.excalidraw.md",
-    "algebra-lineal/Práctica 2 (ej11-ej25).md",
-    "algebra-lineal/Práctica 2 (ej1-ej10).md",
+    "matemática-discreta/practica-01.md",
     "notes",
     "Excalidraw",
-    "algebra-lineal/Anexos/Pasted image 20250908211732.png",
     "algebra-lineal/Anexos/Pasted image 20250908211639.png",
     "algebra-lineal/Anexos/Pasted image 20250908211622.png",
     "algebra-lineal/Anexos/Pasted image 20250908211537.png",

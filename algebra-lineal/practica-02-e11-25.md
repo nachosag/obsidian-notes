@@ -428,10 +428,161 @@ $$ Comprobación rápida: sustituímos $P_{2}=(0,-2,1):-2\cdot{2}\cdot{1}=-2+2=0
 + Implícita: $y+2z=0$.
 ### Ejercicio 22
 ![[Pasted image 20250908211655.png]]
-
+Estos son los datos que tenemos:
+- $L_{1}:X=\lambda(1,-3,4)+(1,-2,1)$. Su vector director es $u_{1}=(1,-3,4)$.
+- $L_{2}:X=t(-1,4,5)+(0,3,2)$. Un punto genérico de $L_{2}$ es $r_{2}(t)=(-t,4t+3,5t+2)$.
+- Plano $\Pi:-x+y-2z=9$. Su vector normal es $n=(-1,1,-2)$.
+Queremos una recta $L$ que:
+1. Sea perpendicular a $L_{1}\implies$su vector director $v$ debe cumplir $v\cdot u_{1}=0$.
+2. Sea paralela al plano $\Pi\implies v$ debe ser perpendicular al normal del plano: $v\cdot n=0$.
+3. Tenga un punto en común con $L_{2}\implies L$ debe pasar por algún punto $r_{2}(t)$ para algún $t$.
+<mark style="background: #FF5582A6;">Paso 1</mark>
+Las condiciones 1 y 2 significan que $v$ debe ser ortogonal simultaneamente a $u_{1}$ y a $n$. Un vector ortogonal a ambos es el producto vectorial $$
+v=u_{1}\times n
+$$ Calculamos el producto cruz: $$
+u_{1}\times n= \begin{vmatrix}
+i & j & k \\
+1 & -3 & 4 \\
+-1 & 1 & -2
+\end{vmatrix}
+$$ Componente $i$: $$
+-3\cdot(-2)-4\cdot1=6-4=2
+$$ Componente $j$ (importante aplicar el signo $-$ al terminar): $$
+1\cdot(-2)-4\cdot(-1)=-2+4=2=2\cdot(-1)=-2
+$$ Componente $k$: $$
+1\cdot{1}-(-3)\cdot(-1)=1-3=-2
+$$ Por lo tanto $$
+v=(2,-2,-2)
+$$ Podemos simplificarla factoreando $2$: $v$ es proporcional a $(1,-1,-1)$. Tomamos para simplicidad $$
+v=(1,-1,-1)
+$$
+<mark style="background: #FF5582A6;">Paso 2</mark>
+Sabemos que $L$ tiene dirección $v=(1,-1,-1)$. Si $L$ debe compartir un punto con $L_{2}$, entonces ese punto lo tomamos como $r_{2}(t)=(-t,4t+3,5t+2)$ para algún $t$. Entonces una forma paramétrica de todas las rectas $L$ que cumplen las condiciones es: $$
+L:X=s(1,-1,-1)+(-t,4t+3,5t+2),\quad s,t \in \mathbb{R}
+$$ Interpretación: para cada valor $t$ obtenemos un punto de $L_{2}$; la recta con dirección $(1,-1,-1)$ que pasa por ese punto satisface las tres condiciones. Por tanto existen infinitas rectas con la direción requerida que intersectan $L_{2}$ (una por cada punto de $L_{2}$).
+<mark style="background: #FF5582A6;">Paso 3</mark>
+En caso de que nos pidan una recta concreta, elegimos un valor sencillo de $t$.
+Por ejemplo $t=0$ da el punto $r_{2}(0)=(0,3,2)$. Entonces la recta concreta es $$
+L:X=s(1,-1,-1)+(0,3,2),\quad s \in \mathbb{R}
+$$ Podemos excribirla por componentes: $$
+x=s,\quad y=3-s,\quad z=2-s.
+$$ Verificaiones:
+- Dirección $(1,-1,-1)$ es perpendicular a $u_{1}$ y a $n$.
+- El punto $(0,3,2)$ pertenece a $L_{2}$ (es el punto cuando $t=0$).
+- Por tanto esta recta es perpendicular a $L_{1}$, paralela a $\Pi$, y comparte el punto $(0,3,2)$ con $L_{2}$.
 ### Ejercicio 23
 ![[Pasted image 20250908211708.png]]
+Estos son los datos que nos ofrece el enunciado:
+$L_{1}:X=\lambda(-1,2,0)+(0,-1,1)$.
+- Vector director de $L_{1}: u_{1}=(-1,2,0)$.
+- Un punto de $L_{1}:P_{1}=(0,-1,1)$.
+$L_{2}$ es la recta que pasa por los puntos $A=(-2,0,2)$ y $B=(0,-1,1)$.
+<mark style="background: #FF5582A6;">Paso 1</mark>
+Un primer paso natural es ver si $L_{1}$ y $L_{2}$ comparten algún punto. Observemos que $B=(0,-1,1)$ es exactamente el punto que aparece en la ecuación de $L_{1}$ para $\lambda=0$. Es decir, $$
+P_{1}=(0,-1,1)=B\in L_{1}\quad y \quad B\in L_{2}
+$$ Por lo tanto, $L_{1}$ y $L_{2}$ se intersecan en el punto $P=(0,-1,1)$.
+<mark style="background: #FF5582A6;">Paso 2</mark>
+Sea $\Pi$ un plano que contiene a $L_{1}$. Entonces, por definición, $\Pi$ contiene todos los puntos de $L_{1}$. En particular contiene el punto $P=(0,-1,1)$.
+Pero $P$ también pertenece a $L_{2}$. Por lo tanto $\Pi$ contiene al menos **un** punto de $L_{2}$.
+La condición del enunciado exige un plano que **no contenga ningún punto de $L_{2}$** Eso es imposible porque cualquier plano que contenga $L_{1}$ contiene $P$, y $P\in L_{2}$. Luego **no existe** ningún plano que cumpla simultáneamente "contener a $L_{1}$" y "no contener ningún punto de $L_{2}$".
 ### Ejercicio 24
 ![[Pasted image 20250908211722.png]]
+**Idea principal**: una recta no intersecta a un plano exactamente cuando es **paralela** al plano y no está **contenida** en él.
+Si queremos que la recta no tenga puntos en común con **ambos** planos, lo más sencillo es buscar una recta que sea paralela **a los dos planos simultáneamente** y además elegir un punto base que no **no pertenezca** a ninguno de los dos planos. Si logramos eso, la recta no puede alcanzar ninguno de los planos salvo que el punto base ya estuviera en alguno de ellos.
+Entonces tenemos que realizar los siguientes pasos:
+1. Calcular los vectores normales $n_{1},n_{2}$.
+2. Hallar un vector dirección $v$ tal que $v\cdot n_{1}=0$ y $v\cdot n_{2}=0$. Una forma directa es $v=n_{1}\times n_{2}$.
+3. Elegir el punto $P_{0}$ que no satisfaga las ecuaciones de ninguno de los dos planos.
+4. Escribir la recta $L:X=P_{0}+s\cdot{v}$ y comprobar que, al sustituir en las ecuaciones de los planos, no surge solución para $s$.
+<mark style="background: #FF5582A6;">Paso 1</mark>
+Del plano $\Pi_{1}:2x-y-3z=-1$ tenemos $$
+n_{1}=(2,-1,-3)
+$$ Del plano $\Pi_{2}:x-3y-z=3$ tenemos $$
+n_{2}=(1,-3,-1)
+$$
+<mark style="background: #FF5582A6;">Paso 2</mark>
+Usamos la fórmula componente a componente: $$
+v=\begin{vmatrix}
+i & j & k \\
+2 & -1 & -3 \\
+1 & -3 & -1
+\end{vmatrix}
+$$ Calculemos componentes:
+- Componente $i:(-1)\cdot(-1)-(-3)\cdot(-3)=1-9=8$.
+- Componente $j:2\cdot(-1)-(-3)\cdot{1}=-2+3=1=1\cdot(-1)=-1$.
+- Componente $k:2\cdot(-3)-(-1)\cdot1=-6+1=-5$.
+Entonces $$
+v=(-8,-1,-5)
+$$
+<mark style="background: #FF5582A6;">Paso 3</mark>
+El origen $P_{0}=(0,0,0)$ suele ser la elección más simple. Verificamos si pertenece a alguno de los planos:
+- En $\Pi_{1}:2\cdot0-0-3\cdot{0}=0$ y la ecuación pide $-1$. Como $0\neq{-1}$, el origen **no está en $\Pi$**.
+- En $\Pi_{2}:0-0-0=0$ y la ecuación pide $3$. Como $0\neq3$, el origen no está en $\Pi_{2}$.
+Por tanto, $P_{0}=(0,0,0)$ es un punto válido: no pertenece a ninguno de los planos.
+<mark style="background: #FF5582A6;">Paso 4</mark>
+La recta que proponemos es $$
+L:X=(0,0,0)+s(-8,-1,-5),\quad s \in \mathbb{R}
+$$ Es decir, en forma paramétrica: $$
+\begin{cases}
+x=-8s \\
+y=-s \\
+z=-5s
+\end{cases}
+$$ Comprobación de que $L$ no tiene puntos en común con $\Pi_{1}$ ni con $\Pi_{2}$.
+Sustituímos la parametrización en la ecuación de $\Pi_{1}$: $$
+2x-y-3z=2\cdot(-8s)-(-s)-3\cdot(-5s)=-16s+s+15s=0\cdot s=0
+$$ La ecuación de $\Pi_{1}$ exige que tiene que valer $-1$. Como $0\neq{-1}$, **no existe** $s$ que satisfaga la ecuación, por lo tanto, no existe la intersección de $L$ con $\Pi_{1}$.
+
+Análogo para $\Pi_{2}$: $$
+x-3y-z=(-8s)-3\cdot(-s)-(-5s)=-8s+3s+5s=0\cdot s=0
+$$ La ecuación de $\Pi_{2}$ pide $3$. Como $0\neq{3}$, no hay $s$ que la cumpla, por lo tanto, no existe la intersección de $L$ con $\Pi_{2}$.
+<mark style="background: #FF5582A6;">Conclusión</mark>
+Sí es posible. Una recta concreta que cumple la condición es, por ejemplo, $$
+L:X=s(-8,-1,-5), s \in \mathbb{R}
+$$
 ### Ejercicio 25
 ![[Pasted image 20250908211732.png]]
+Datos que nos brinda el enunciado: $$
+A=(2,-1,1),B=(0,2,-1),C=(1,0,-1)
+$$Queremos encontrar $D \in \mathbb{R³}$ de modo que $A,B,C,D$ determinen un paralelogramo; decidir si ese $D$ es único y calcular el perímetro de $ABCD$.
+
+**Idea básica**
+Si $A,B,C,D$ están en ese orden y forman un paralelogramo, se cumplen cualquiera de las formas equivalentes:
+- $\vec{AB}=\vec{DC}$ y $\vec{BC}=\vec{AD}$;
+	- Ejemplificación gráfica: ![[Drawing 2025-09-10 22.27.52.excalidraw]]
+- o el cuarto vértice viene dado por $D=A+C-B$ (porque $\vec{AD}=\vec{BC}\implies D=A+\vec{BC}=A+(C-B)$). 
+	- Ejemplificación gráfica: ![[Drawing 2025-09-10 22.33.16.excalidraw]]
+Usaremos $D=A+C-B$.
+<mark style="background: #FF5582A6;">Paso 1</mark>
+Cálculo de $D$.
+Primero sumamos $A+C$: $$
+A+C=(2,-1,1)+(1,0,-1)=(2+1,-1+0,1-1)=(3,-1,0).
+$$ Ahora restamos $B$: $$
+D=A+C-B=(3,-1,0)-(0,2,-1)=(3-0,-1-2,0+1)=(3,-3,1)
+$$ Entonces $$
+D=(3,-3,1)
+$$
+Comprobaciones: $$
+\begin{gather}
+\vec{AB}=B-A=(0,2,-1)-(2,-1,1)=(-2,3,-2) \\
+\vec{BC}=C-B=(1,0,-1)-(0,2,-1)=(1,-2,0) \\
+\vec{AD}=D-A=(3,-3,1)-(2,-1,1)=(1,-2,0) \\
+\vec{DC}=C-D=(1,0,-1)-(3,-3,1)=(-2,3,-2)
+\end{gather}
+$$ Observamos:
+- $\vec{AD}=(1,-2,0)=\vec{BC}$.
+- $\vec{DC}=(-2,3,-2)=\vec{AB}$.
+Por tanto, las condiciones de paralelogramos se cumplen correctamente.
+<mark style="background: #FF5582A6;">Paso 2</mark>
+¿Es único $D$?
+Si. Dados tres vértices consecutivos $A,B,C$ no colineales, el cuarto vértice que completa el paralelogramo está determinado de forma única por la relación $D=A+C-B$.
+<mark style="background: #FF5582A6;">Paso 3</mark>
+Perímetro de $ABCD$.
+En un paralelogramo los lados opuestos son iguales, así que el perímetro es $$
+P=2(|\vec{AB}|+|\vec{BC}|)
+$$ Calculamos longitudes:
+1. $|\vec{AB}|=\sqrt{ (-2)²+3²+(-2)² }=\sqrt{ 4+9+4 }=\sqrt{ 17 }$.
+2. $|\vec{BC}|=\sqrt{ 1²+(-2)²+0² }=\sqrt{ 1+4+0 }=\sqrt{ 5 }$.
+Entonces $$
+P=2(\sqrt{ 17 }+\sqrt{ 5 })
+$$
