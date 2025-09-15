@@ -337,13 +337,339 @@ Solución y clasificación
 - Solución única $(x,y,z)=(-1,1,2)$.
 - Clasificación: **compatible determinado**.
 <mark style="background: #FF5582A6;">Sistema (f)</mark>
+Tenemos el sistema $$
+(d)=\begin{cases}
+2x+y-z=8 \\
+x-y+z=1 \\
+5x+y-z=17
+\end{cases}
+$$
+Escribimos el sistema (d) como matriz aumentada $\begin{bmatrix}A|b\end{bmatrix}$:
+$$
+\begin{bmatrix}
+A|b
+\end{bmatrix}
+=
+\begin{bmatrix}
+2 & 1 & -1 & | & 8 \\
+1 & -1 & 1 & | & 1 \\
+5 & 1 & -1 & | & 17
+\end{bmatrix}
+$$
+---
+Aplicamos eliminación Gaussiana. Recordemos las <mark style="background: #BBFABBA6;">reglas:</mark>
+1. Multiplicar una fila por un escalar distinto de cero $$
+k\cdot{R_{i}}\to F_{i}
+$$
+2. Intercambiar dos filas $$
+F_{i}\leftrightarrow F_{j}
+$$
+3. Sumar a una fila un múltiplo de otra $$
+F_{j}+k\cdot{F_{i}}\to F_{j}
+$$
+---
+$$\begin{bmatrix}
+A|b
+\end{bmatrix}
+=
+\begin{bmatrix}
+2 & 1 & -1 & | & 8 \\
+1 & -1 & 1 & | & 1 \\
+5 & 1 & -1 & | & 17
+\end{bmatrix}
+$$
+Aplicamos $F_{2}\to F_{2}-\frac{1}{2}\cdot{F_{1}}$:
+- Primera columna: $1-\frac{1}{2}\cdot{2}=1-1=0$.
+- Segunda columna: $-1-\frac{1}{2}\cdot{1}=-1-\frac{1}{2}=-\frac{3}{2}$.
+- Tercera columna: $1-\frac{1}{2}\cdot{(-1)}=1+\frac{1}{2}=\frac{3}{2}$.
+- Término independiente: $1-\frac{1}{2}\cdot{8}=1-4=-3$.
+$F_{2}=\left[ 0,-\frac{3}{2}, \frac{3}{2} | -3 \right]$.
 
+Aplicamos $F_{3}\to F_{3}-\frac{5}{2}\cdot{F_{1}}$:
+- Primera columna: $5-\frac{5}{2}\cdot{2}=5-5=0$.
+- Segunda columna: $1-\frac{5}{2}\cdot{1}=1-\frac{5}{2}=-\frac{3}{2}$.
+- Tercera columna: $-1-\frac{5}{2}\cdot{(-1)}=-1+\frac{5}{2}=\frac{3}{2}$.
+- Término independiente: $17-\frac{5}{2}\cdot{8}=17-20=-3$.
+$F_{3}=\left[ 0, -\frac{3}{2}, \frac{3}{2} | -3 \right]$.
+
+Queda entonces:
+$$
+\begin{bmatrix}
+2 & 1 & -1 & | & 8 \\
+0 & -\frac{3}{2} & \frac{3}{2} & | & -3 \\
+0 & -\frac{3}{2} & \frac{3}{2} & | & -3
+\end{bmatrix}
+$$
+Apliquemos $F_{3}\to F_{3}-F_{2}$:
+$\begin{pmatrix}0 & -\frac{3}{2} & \frac{3}{2} & | & -3\end{pmatrix}-\begin{pmatrix}0 & -\frac{3}{2} & \frac{3}{2} & | & -3\end{pmatrix}=\begin{pmatrix}0 & 0 & 0 & | & 0\end{pmatrix}$.
+
+La matriz reducida es: $$
+\begin{bmatrix}
+2 & 1 & -1 & | & 8 \\
+0 & -\frac{3}{2} & \frac{3}{2} & | & -3 \\
+0 & 0 & 0 & | & 0
+\end{bmatrix}
+$$ Interpretación de rangos y soluciones:
+- Número de incógnitas $n=3$.
+- Número de filas no nulas $r=2$.
+- Como $r<n$, el sistema tiene **infinitas soluciones**.
+<mark style="background: #FF5582A6;">Sistema (g)</mark>
+Tenemos el sistema $$
+(g)=\begin{cases}
+2x+y-z=3 & (1) \\
+x-y+z=2 & (2) \\
+5x+y-z=-5 & (3)
+\end{cases}
+	$$ Escribimos el sistema (g) como matriz aumentada $\begin{bmatrix}A|b\end{bmatrix}$: $$
+\begin{bmatrix}
+A|b
+\end{bmatrix}
+=
+\begin{pmatrix}
+2 & 1 & -1 & | & 3 \\
+1 & -1 & 1 & | & 2 \\
+5 & 1 & -1 & | & -5
+\end{pmatrix}
+$$ Intercambiamos $F_{1}\leftrightarrow F_{2}$. $$
+\begin{pmatrix}
+1 & -1 & 1 & | & 2 \\
+2 & 1 & -1 & | & 3 \\
+5 & 1 & -1 & | & -5
+\end{pmatrix}
+$$ Hacemos $F_{2}\to F_{2}-2F_{1}$. 
+$$
+\begin{gather}
+(2 & 1 & -1 & | & 3)-2\cdot(1 & -1 & 1 & | & 2) \\
+(2 & 1 & -1 & | & 3)+ (-2 & 2 & -2 & | & -4) \\
+(2-2 & 1+2 & -1-2 & | & 3-4) \\
+(0 & 3 & -3 & | & -1)
+\end{gather}
+$$ Por lo que así quedaría la matriz aumentada: $$
+\begin{pmatrix}
+1 & -1 & 1 & | & 2 \\
+0 & 3 & -3 & | & -1 \\
+5 & 1 & -1 & | & -5
+\end{pmatrix}
+$$ Ahora hacemos $F_{3}\to F_{3}-5F_{1}$:
+$$
+\begin{gather}
+(5 & 1 & -1 & | & -5)-5\cdot(1 & -1 & 1 & | & 2) \\
+(5 & 1 & -1 & | & -5)+(-5 & 5 & -5 & | & -10) \\
+(5-5 & 1+5 & -1-5 & | & -5-10) \\
+(0 & 6 & -6 & | & -15)
+\end{gather}
+$$ Por lo que así quedaría la matriz aumentada: $$
+\begin{pmatrix}
+1 & -1 & 1 & | & 2 \\
+0 & 3 & -3 & | & -1 \\
+0 & 6 & -6 & | & -15
+\end{pmatrix}
+$$ Ahora hacemos $F_{3}\to F_{3}-2\cdot F_{2}$:
+$$
+\begin{gather}
+(0 & 6 & -6 & | & -15)-2\cdot(0 & 3 & -3 & | & -1) \\
+(0 & 6 & -6 & | & -15)+(0 & -6 & 6 & | & 2) \\
+(0 & 6-6 & -6+6 & | & -15+2) \\
+(0 & 0 & 0 & | & -13)
+\end{gather}
+$$ Por lo que así quedaría la matriz aumentada: $$
+\begin{pmatrix}
+1 & -1 & 1 & | & 2 \\
+0 & 3 & -3 & | & -1 \\
+0 & 0 & 0 & | & -13
+\end{pmatrix}
+$$ 
+ Observemos que la fila 3 es absurda, ya que sumando ceros no podemos obtener -13 como resultado. Por lo tanto, el sistema (g) es **incompatible**.
+<mark style="background: #FF5582A6;">Sistema (h)</mark>
+Tenemos el sistema $$
+(h)=\begin{cases}
+ &  & 3x_{2} & - & 2x_{3} & + & 3x_{4} & = & 9 \\
+2x_{1} & + & x_{2} &  &  & + & x_{4} & = & 5 \\
+x_{1} & - & x_{2} & + & x_{3} & - & x_{4} & = & -2
+\end{cases}
+$$
+Escribimos el sistema (h) como una matriz aumentada $$
+\begin{pmatrix}
+A|b
+\end{pmatrix}
+=
+\begin{pmatrix}
+0 & 3 & -2 & 3 & | & 9 \\
+2 & 1 & 0 & 1 & | & 5 \\
+1 & -1 & 1 & -1 & | & -2
+\end{pmatrix}
+$$ Efectuamos $F_{1}\leftrightarrow F_{3}$. $$
+\begin{pmatrix}
+1 & -1 & 1 & -1 & | & -2 \\
+2 & 1 & 0 & 1 & | & 5 \\
+0 & 3 & -2 & 3 & | & 9
+\end{pmatrix}
+$$ Efecetuamos $F_{2}\to F_{2}-2\cdot F_{1}$.
+$$
+\begin{gather}
+(2,1,0,1|5)-2\cdot(1,-1,1,-1|-2) \\
+(2,1,0,1|5)+(-2,2,-2,2|4) \\
+(2-2,1+2,0-2,1+2|5+4) \\
+(0,3,-2,3|9)
+\end{gather}
+$$ Después de estas operaciones la matriz queda: $$
+\begin{pmatrix}
+1 & -1 & 1 & -1 & | & -2 \\
+0 & 3 & -2 & 3 & | & 9 \\
+0 & 3 & -2 & 3 & | & 9
+\end{pmatrix}
+$$ Observemos que la fila 2 y 3 son idénticas. Podemos restarlas para deshacernos de la tercer fila. De forma tal que la matriz escalonada quedaría de la siguiente manera: $$
+\begin{pmatrix}
+1 & -1 & 1 & -1 & | & -2 \\
+0 & 3 & -2 & 3 & | & 9 \\
+0 & 0 & 0 & 0 & | & 0
+\end{pmatrix}
+$$ Ahora interpretemos los rangos y clasifiquemos.
+- Número de incógnitas $n=4$.
+- El rango $\begin{pmatrix}A\end{pmatrix}=\begin{pmatrix}A|b\end{pmatrix}=2$
+- Como $2<4$ podemos afirmar por el Teorema de RF que (h) es un sistema **compatible indeterminado**.
+<mark style="background: #FF5582A6;">Sistema (i)</mark>
+Tenemos el sistema $$
+(i)=\begin{cases}
+-2x_{1} & + & 4x_{2} & - & 3x_{3} & - & x_{4} & + & 2x_{5} & = & 1 \\
+-x_{1} & + & x_{2} &  &  &  + & 2x_{4} & + & 4x_{5} & = & -3 \\
+-3x_{1} & + & 5x_{2} & - & 3x_{3} & + & x_{4} & + & 6x_{5} & = & 2
+\end{cases}
+$$ Escribimos el sistema (i) como matriz aumentada.
+$$
+\begin{pmatrix}
+A|b
+\end{pmatrix}
+=
+\begin{pmatrix}
+-2 & 4 & -3 & -1 & 2 & | & 1 \\
+-1 & 1 & 0 & 2 & 4 & | & -3 \\
+-3 & 5 & -3 & 1 & 6 & | & 2
+\end{pmatrix}
+$$
+Intercambiamos $F_{1}\leftrightarrow F_{2}$.
+$$
+\begin{pmatrix}
+-1 & 1 & 0 & 2 & 4 & | & -3 \\
+-2 & 4 & -3 & -1 & 2 & | & 1 \\
+-3 & 5 & -3 & 1 & 6 & | & 2
+\end{pmatrix}
+$$
+Efectuamos $F_{2}\to F_{2}-2\cdot F_{1}$, y $F_{3}\to F_{3}-3\cdot F_{1}$.
+$$
+\begin{gather}
+F_{2}\to F_{2}-2\cdot F_{1} \\
+(-2,4,-3,-1,2|1)-2\cdot(-1,1,0,2,4|-3) \\
+(-2,4,-3,-1,2|1)+(2,-2,0,-4,-8|6) \\
+(-2+2,4-2,-3,-1-4,2-8|1+6) \\
+F_{2}\to(0,2,-3,-5,-6|7) \\
+ \\
+F_{3}\to F_{3}-3\cdot F_{1} \\
+(-3,5,-3,1,6|2)-3\cdot(-1,1,0,2,4|-3) \\
+(-3,5,-3,1,6|2)+(3,-3,0,-6,-12|9) \\
+(-3+3,5-3,-3,1-6,6-12|2+9) \\
+F_{3}\to(0,2,-3,-5,-6|11)
+\end{gather}
+$$ Así quedaría la matriz luego de las operaciones:
+$$
+\begin{pmatrix}
+-1 & 1 & 0 & 2 & 4 & | & -3 \\
+0 & 2 & -3 & -5 & -6 & | & 7 \\
+0 & 2 & -3 & -5 & -6 & | & 11
+\end{pmatrix}
+$$ Observemos que las filas 2 y 3 tienen los mismos coeficientes de variables pero diferente termino independiente. Si restamos $F_{3}-F_{2}=\begin{pmatrix}0 & 0 & 0 & 0 & 0 & | & 11-7=4\end{pmatrix}$.
+
+Es decir, obtenemos la fila $\begin{pmatrix}0 & 0 & 0 & 0 & 0 & | & 4\end{pmatrix}$, que representa la igualdad 0=4, lo cual es absurdo.
+
+Como el proceso nos condujo a una contradicción, podemos afirmar por el Teorema de RF que el sistema (i) es un sistema incompatible, es decir, que no presenta soluciones.
 ### Ejercicio 4
 ![[Pasted image 20250911191935.png]]
 ### Ejercicio 5
 ![[Pasted image 20250911191943.png]]
 ### Ejercicio 6
 ![[Pasted image 20250911192001.png]]
+<mark style="background: #FF5582A6;">Sistema (a)</mark>
+Tenemos el sistema 
+$$
+a=\begin{cases}
+x+2y=-1, & (1) \\
+5x-3y=2. & (2)
+\end{cases}
+$$
+Cada ecuación representa una recta en el plano $(x,y)$. Para ver si las rectas son paralelas, coincidentes o se cortan en un punto, calculamos sus pendientes.
+
+Calculamos la pendiente de la ecuación (1).
+Primero despejamos $y$.
+$$
+\begin{gather}
+x+2y=-1 \\
+2y=-1-x \\
+y=\frac{-1-x}{2} \\
+y=-\frac{1}{2}x-\frac{1}{2}
+\end{gather}
+$$
+La pendiente de la primera recta es $m_{1}=-\frac{1}{2}$.
+
+Calculamos la pendiente de la ecuación (2).
+Despejamos $y$.
+$$
+\begin{gather}
+5x-3y=2 \\
+-3y=2-5x \\
+y=\frac{2-5x}{-3} \\
+y=\frac{5}{3}x-\frac{2}{3}
+\end{gather}
+$$
+La pendiente de la segunda recta es $m_{2}=\frac{5}{3}$.
+
+Como $m_{1}\neq m_{2}$, entonces las dos rectas se van cortarse en exactamente **un punto**. Por lo tanto, el sistema $a$ va a tener exactamente una solución y lo podemos clasificar como **sistema compatible determinado**.
+<mark style="background: #FF5582A6;">Sistema (b)</mark>
+Tenemos el sistema
+$$
+\begin{cases}
+3x & + & y & = & -1 & (1) \\
+-6x & - & 2y & = & 2 & (2)
+\end{cases}
+$$
+A simple vista podemos observar que si multiplicamos por -2 a la ecuación (1) obtenemos como resultado, la ecuación (2). Por lo que, la segunda ecuación es múltiplo de la primera.
+
+Esto quiere decir que ambas ecuaciones representan **la misma** recta en el plano $(x,y)$. Geométricamente eso significa que todas las soluciones de la primera ecuación también satisfacen la segunda: las rectas son coincidentes.
+
+Clasificación final: el sistema (b) es un sistema **compatible indeterminado** con infinitas soluciones.
+<mark style="background: #FF5582A6;">Sistema (c)</mark>
+Tenemos el sistema
+$$
+\begin{cases}
+x & - & 2y & + & z & = & 1, & (1) \\
+-3x & + & 6y & - & 3z & = & 2. & (2)
+\end{cases}
+$$
+La orientación de un plano en el espacio está definida por su **vector normal**, que es un vector perpendicular al plano. El vector normal de un plano $ax+by+cz=d$ es $n=(a,b,c)$.
+- Para (1), el vector normal $n_{1}=(1,-2,1)$.
+- Para (2), el vector normal $n_{2}=(-3,6,-3)$.
+
+Ahora debemos determinar la relación entre estos dos vectores. Dos vectores son paralelos si **uno es múltiplo del otro**. Verifiquemos si existe un escalar $k$ tal que $n_{2}=k\cdot n_{1}$. Es decir:
+$$
+(-3,6,-3)=k\cdot(1,-2,1)
+$$
+A simple vista, podemos ver que con $k=-3$ podemos confirmar que $n_{2}=-3\cdot n_{1}$.
+
+Conclusión inmediata: Dado que los vectores normales son paralelos, los planos (1) y (2) tambien deben ser paralelos.
+
+Si dos planos son paralelos, hay dos posibilidades:
+1. Son **coincidentes** (el mismo plano), y en ese caso hay infinitas soluciones.
+2. Son **paralelos y distintos**, y en ese caso no se tocan nunca, por lo que no hay solución.
+Para verificar esto, podemos tomar la primera ecuación y multiplicar por el escalar $k=-3$ que encontramos. Si el resultado es idéntico a la segunda ecuación, los planos son coincidentes.
+$$
+\begin{gather}
+x-2y+z=1 \\
+-3(x-2y+z)=-3\cdot(1) \\
+-3x+6y-3z=-3 \\
+\end{gather}
+$$
+Los lados izquierdos de las ecuaciones son idénticos, pero los lados derechos son diferentes $(-3\neq{2})$. Esto es una contradicción. No puede existir un punto $(x,y,z)$ que haga que la expresión $-3x+6y-3z$ sea igual a $-3$ y a $2$ al mismo tiempo.
+
+Conclusión final: como los planos son **paralelos** pero no son el mismo plano, son **paralelos y distintos**. Geométricamente, nunca se intersectan. Por lo tanto, el sistema de ecuaciones **no tiene solución**.
 ### Ejercicio 7
 ### Ejercicio 8
 ### Ejercicio 9
