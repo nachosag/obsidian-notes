@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "95294454a602e6c7",
+        "id": "3bbc189eecdbfa96",
         "type": "tabs",
         "children": [
           {
-            "id": "e04a0686602afb50",
+            "id": "11fee1531a27e453",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -171,10 +171,15 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "e04a0686602afb50",
+  "active": "11fee1531a27e453",
   "lastOpenFiles": [
-    "algebra-lineal/practica-03/Anexos/Pasted image 20250911192001.png",
+    "algebra-lineal/practica-03/Anexos/Pasted image 20250916201111.png",
+    "algebra-lineal/practica-03/Anexos/Pasted image 20250916184145.png",
+    "algebra-lineal/practica-03/Anexos/Pasted image 20250916181308.png",
     "algebra-lineal/practica-03/practica-03-e01-20.md",
+    "algebra-lineal/practica-03/Anexos/Pasted image 20250916184031.png",
+    "Excalidraw/Drawing 2025-09-16 18.39.11.excalidraw.md",
+    "algebra-lineal/practica-03/Anexos/Pasted image 20250911192001.png",
     "Excalidraw/calculos-auxiliares.md",
     "algebra-lineal/practica-03/Anexos/Pasted image 20250911191819.png",
     "algebra-lineal/practica-03/Anexos/Pasted image 20250911191935.png",
@@ -194,9 +199,6 @@
     "matemática-discreta/practica-01.md",
     "notes",
     "Excalidraw",
-    "algebra-lineal/practica-02/Anexos/Pasted image 20250908211639.png",
-    "algebra-lineal/practica-02/Anexos/Pasted image 20250908211622.png",
-    "algebra-lineal/practica-02/Anexos/Pasted image 20250908211537.png",
     "2025-08-29.md",
     "Untitled.canvas",
     "algebra-lineal/practica-02/Anexos",

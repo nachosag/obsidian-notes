@@ -672,7 +672,162 @@ Los lados izquierdos de las ecuaciones son idénticos, pero los lados derechos s
 Conclusión final: como los planos son **paralelos** pero no son el mismo plano, son **paralelos y distintos**. Geométricamente, nunca se intersectan. Por lo tanto, el sistema de ecuaciones **no tiene solución**.
 ### Ejercicio 7
 ### Ejercicio 8
+![[Pasted image 20250916181308.png]]
+Primero escribamos la matriz de coeficientes $A$ y los vectores independientes que queremos resolver:
+$$
+A=\begin{pmatrix}
+1 & 0 & 1 \\
+1 & 1 & 0 \\
+2 & 1 & 0
+\end{pmatrix}
+,\quad
+b_{1}=\begin{pmatrix}
+1 \\
+0 \\
+0
+\end{pmatrix}
+,
+b_{2}=\begin{pmatrix}
+0 \\
+1 \\
+0
+\end{pmatrix}
+,
+b_{3}=\begin{pmatrix}
+0 \\
+0 \\
+1
+\end{pmatrix}
+,
+b_{4}=\begin{pmatrix}
+2 \\
+-1 \\
+3
+\end{pmatrix}
+$$ 1. Comprobamos si el sistema tiene solución única
+Calculamos el determinante de $A$. Recordamos:
+![[Pasted image 20250916184145.png]]
+$$
+\begin{gather}
+\det(A)=1\cdot{1}\cdot{0}+0\cdot{0}\cdot{2}+1\cdot{1}\cdot{1}-1\cdot{1}\cdot{2}-0\cdot{1}\cdot{0}-1\cdot{0}\cdot{1} \\
+\det(A)=0+0+1-2-0-0 \\
+\det(A)=-1
+\end{gather}
+$$
+Como $\det(A)\neq{0}$, la matriz es **invertible** y cada sistema $Ax=b_{i}$ tiene una única solución.
+2. Métodos disponibles
+	1. Gauss-Jordan para cada $b_{i}$: para cada $_{i}$ resolver el sistema ampliando $\begin{bmatrix}A|b_{i}\end{bmatrix}$ y haciendo eliminación hasta la forma escalonada reducida.
+	2. Calcular $A^{-1}$ (una sola Gauss-Jordan con la matriz identidad a la derecha) y luego obtener $x=A^{-1}b_{i}$ para cada vector $b_{i}$. Es más trabajo al principio pero luego multiplicamos por cada $b_{i}$ y obtenemos las cuatro soluciones.
+Calculamos Gauss-Jordan para $A^{-1}$:
+Montamos la raiz aumentada $\begin{bmatrix}A|I\end{bmatrix}$:
+$$
+\begin{bmatrix}
+1 & 0 & 1 & | & 1 & 0 & 0 \\
+1 & 1 & 0 & | & 0 & 1 & 0 \\
+2 & 1 & 0 & | & 0 & 0 & 1
+\end{bmatrix}
+$$
+Efectuamos:
+- $F_{2}\to F_{2}-F_{1}$,
+- $F_{3}\to F_{3}-2\cdot F_{1}$.
+La matriz aumentada queda:
+$$
+\begin{bmatrix}
+1 & 0 & 1 & | & 1 & 0 & 0 \\
+0 & 1 & -1 & | & -1 & 1 & 0 \\
+0 & 1 & -2 & | & -2 & 0 & 1
+\end{bmatrix}
+$$
+Ahora efectuamos:
+- $F_{3}\to F_{3}-F_{2}$.
+La matriz aumentada queda:
+$$
+\begin{bmatrix}
+1 & 0 & 1 & | & 1 & 0 & 0 \\
+0 & 1 & -1 & | & -1 & 1 & 0 \\
+0 & 0 & -1 & | & -1 & -1 & 1
+\end{bmatrix}
+$$
+Ahora efectuamos:
+- $F_{3}\to-1\cdot F_{3}$.
+La matriz aumentada queda:
+$$
+\begin{bmatrix}
+1 & 0 & 1 & | & 1 & 0 & 0 \\
+0 & 1 & -1 & | & -1 & 1 & 0 \\
+0 & 0 & 1 & | & 1 & 1 & -1
+\end{bmatrix}
+$$
+Siguiente objetivo: eliminar las entradas por encima del pivote (3,3), es decir, anular la -1 en (2,3) y el 1 en (1,3).
+Para eso efectuamos:
+- $F_{2}\to F_{2}+1\cdot F_{3}$.
+- $F_{1}\to F_{1}-1\cdot F_{3}$.
+Después de esas dos operaciones la matriz estará en forma reducida por las filas en el bloque izquierdo (la identidad) y el bloque derecho será $A^{-1}$. Es decir, obtenemos:
+$$
+\begin{bmatrix}
+1 & 0 & 0 & | & 0 & -1 & 1 \\
+0 & 1 & 0 & | & 0 & 2 & -1 \\
+0 & 0 & 1 & | & 1 & 1 & -1
+\end{bmatrix}
+$$
+Así que el bloque derecho (la inversa) es:
+$$
+A^{-1}=
+\begin{pmatrix}
+0 & -1 & 1 \\
+0 & 2 & -1 \\
+1 & 1 & -1
+\end{pmatrix}
+$$
+---
+Una vez obtenemos $A^{-1}$, para cada vector independiente $b_{i}$ la solución única del sistema $Ax=b_{i}$ se obtiene por $$
+x=A^{-1}b_{i}
+$$
+Es decir multiplicamos la matriz inversa por los términos independientes $b_{i}$.
+$$
+A^{-1}=
+\begin{pmatrix}
+0 & -1 & 1 \\
+0 & 2 & -1 \\
+1 & 1 & -1
+\end{pmatrix}
+$$
+- Para $b_{1}=(1,0,0)^T$:
+	- Primera componente:
+	  $x_{1}=0\cdot{1}+(-1)\cdot{0}+1\cdot{0}=0$.
+	- Segunda componente:
+	  $x_{2}=0\cdot{1}+2\cdot{0}-1\cdot{0}=0$.
+	- Tercera componente:
+	  $x_{3}=1\cdot{1}+1\cdot{0}-1\cdot{0}=1$.
+	  
+	  $x^{(1)}=\begin{pmatrix}0 \\ 0 \\ 1\end{pmatrix}$.
+- Para $b_{2}=(0,1,0)^T$:
+  $x_{1}=0⋅0+(−1)⋅1+1⋅0=0−1+0=−1$.
+  $x_{2}​=0⋅0+2⋅1+(−1)⋅0=0+2+0=2$.
+  $x_{3}​=1⋅0+1⋅1+(−1)⋅0=0+1+0=1$.
+  
+  $x^{(2)}=\begin{pmatrix}-1 \\ 2 \\ 1\end{pmatrix}$.
+- Para $b_{3}=(0,0,1)^T$:
+  $x_{1}​=0⋅0+(−1)⋅0+1⋅1=0+0+1=1$.
+  $x_{2}​=0⋅0+2⋅0+(−1)⋅1=0+0−1=−1$.
+  $x_{3}=1⋅0+1⋅0+(−1)⋅1=0+0−1=−1$.
+  
+  $x^{3}=\begin{pmatrix}1 \\ -1 \\ -1\end{pmatrix}$.
+  
+  _obs: como esperábamos, estas tres soluciones coinciden con las columnas 1,2,3 de $A^{-1}$ respectivamente_.
+- Para $b_{4}=(2,-1,3)^T$:
+  Más cómodo usar combinación lineal de columnas de $A^{-1}$. Columnas: $c_{1}=\begin{pmatrix}0 \\ 0 \\ 1\end{pmatrix},\quad c_{2}=\begin{pmatrix}-1 \\ 2 \\ 1\end{pmatrix},\quad c_{3}=\begin{pmatrix}1 \\ -1 \\ -1\end{pmatrix}.$
+  Entonces $x^{(4)}=2c_{1}+(-1)c_{2}+3c_{3}$.
+- Primera componente: $2⋅0+(−1)⋅(−1)+3⋅1=0+1+3=4$.
+- Segunda componente: $2⋅0+(−1)⋅2+3⋅(−1)=0−2−3=−5$.
+- Tercera componente: $2⋅1+(−1)⋅1+3⋅(−1)=2−1−3=−2$.
+  
+  $x^{(4)}=\begin{pmatrix}4 \\ -5 \\ -2\end{pmatrix}$.
+
+Verificación rápida
+![[Pasted image 20250916201111.png]]
 ### Ejercicio 9
+
 ### Ejercicio 10
 ### Ejercicio 11
 ### Ejercicio 12
