@@ -827,8 +827,141 @@ $$
 Verificación rápida
 ![[Pasted image 20250916201111.png]]
 ### Ejercicio 9
+![[Pasted image 20250918190332.png]]
+Primero escribamos la matriz de coeficientes $A$ y los vectores independientes que queremos resolver:
+$$
+A=\begin{pmatrix}
+1 & 0 & 1 \\
+1 & 1 & 0 \\
+2 & 1 & 1
+\end{pmatrix},
+b_{1}=\begin{pmatrix}
+1 \\
+0 \\
+0
+\end{pmatrix},
+b_{2}=\begin{pmatrix}
+0 \\
+1 \\
+0
+\end{pmatrix},
+b_{3}=\begin{pmatrix}
+0 \\
+0 \\
+1
+\end{pmatrix},
+b_{4}=\begin{pmatrix}
+2 \\
+2 \\
+4
+\end{pmatrix}
+$$
+1. Comprobamos si el sistema tiene solución única calculando el determinante de $A$.
+$$
+\begin{gather}
+\det(A)=a(ei-fh)-b(di-fg)+c(dh-eg) \\
+\det(A)=1\cdot(1\cdot{1}-0\cdot{1})-0\cdot(1\cdot{1}-0\cdot{2})+1\cdot(1\cdot{1}-1\cdot{2}) \\
+\det(A)=1\cdot(1-0)-0+1\cdot(1-2) \\
+\det(A)=1-0+1\cdot{(-1)} \\
+\det(A)=1-1 \\
+\det(A)=0
+\end{gather}
+$$
+![[Pasted image 20250918194432.png]]
+Por lo tanto, el sistema $Ax=b$ puede tener infinitas soluciones o ninguna. Ahora procedemos con eliminación por filas para cada $b$.
 
+**Sistema con $b_{1}=(1,0,0)^T$:**
+Formamos la matriz aumentada $\begin{bmatrix}A|b_{1}\end{bmatrix}$ y hacemos reducción por filas.
+$$
+\begin{bmatrix}
+1 & 0 & 1 & | & 1 \\
+1 & 1 & 0 & | & 0 \\
+2 & 1 & 1 & | & 0
+\end{bmatrix} F_{2}\to F_{2}-F_{1}
+\begin{bmatrix}
+1 & 0 & 1 & | & 1 \\
+0 & 1 & -1 & | & -1 \\
+2 & 1 & 1 & | & 0
+\end{bmatrix}
+$$
+$$
+F_{3}\to F_{3}-2\cdot F_{1}
+\begin{bmatrix}
+1 & 0 & 1 & | & 1 \\
+0 & 1 & -1 & | & -1 \\
+0 & 1 & -1 & | & -2
+\end{bmatrix} F_{3}\to F_{3}-F_{2}
+\begin{bmatrix}
+1 & 0 & 1 & | & 1 \\
+0 & 1 & -1 & | & -1 \\
+0 & 0 & 0 & | & -1
+\end{bmatrix}
+$$
+La última fila dice $0x_{1}+0x_{2}+0x_{3}=-1$, es decir $0=-1$, contradicción. Por tanto no hay solución para $b_{1}$.
+
+**Sistema con $b_{2}=(0,1,0)^T$**:
+Haciendo la reducción (idéntica en estructura al caso anterior, sólo cambian los números del lado derecho), se llega a la misma forma con la fila final $0,0,0=-1$. Concretamente la reducción da una fila $0=−1$. Por tanto **no hay solución** para $b_2$ tampoco.
+
+**Sistema con $b_{3}=(0,0,1)^T$**:
+De nuevo la eliminación produce la fila $0,0,0=-1$. Entonces no hay solución para $b_{3}$.
+
+**Sistema con $b_{4}=(2,2,4)^T$**:
+Matriz aumentada $\begin{bmatrix}A|b_{4}\end{bmatrix}$:
+$$
+\begin{bmatrix}
+1 & 0 & 1 & | & 2 \\
+1 & 1 & 0 & | & 2 \\
+2 & 1 & 1 & | & 4
+\end{bmatrix} F_{2}\to F_{2}-F_{1}
+\begin{bmatrix}
+1 & 0 & 1 & | & 2 \\
+0 & 1 & -1 & | & 0 \\
+2 & 1 & 1 & | & 4
+\end{bmatrix}
+$$
+$$
+F_{3}\to F_{3}-2\cdot F_{1}
+\begin{bmatrix}
+1 & 0 & 1 & | & 2 \\
+0 & 1 & -1 & | & 0 \\
+0 & 1 & -1 & | & 0
+\end{bmatrix} F_{3}\to F_{3}-F_{2}
+\begin{bmatrix}
+1 & 0 & 1 & | & 2 \\
+0 & 1 & -1 & | & 0 \\
+0 & 0 & 0 & | & 0
+\end{bmatrix}
+$$
+La última fila es $0=0$, no contradicción. Tenemos dos ecuaciones independientes: 
+$$
+\begin{cases}
+x_{1}+x_{3}=2, \\
+x_{2}-x_{3}=0.
+\end{cases}
+$$
+Tomamos $x_{3}$ como parámetro $t \in \mathbb{R}$. Entonces:
+$$
+x_{1}=2-x_{3}=2-t, \qquad x_{2}=x_{3}=t.
+$$
+Por lo tanto el conjunto de soluciones es
+$$
+x=(x_{1},x_{2},x_{3})^T=(2-t,t,t), \quad t \in \mathbb{R}
+$$
+o escrito como particular + combinación:
+$$
+x=\begin{pmatrix}
+2 \\
+0 \\
+0
+\end{pmatrix}
++t \begin{pmatrix}
+-1 \\
+1 \\
+1
+\end{pmatrix}, t \in \mathbb{R}
+$$ Por lo tanto para $b_{4}$ existen infinitas soluciones.
 ### Ejercicio 10
+
 ### Ejercicio 11
 ### Ejercicio 12
 ### Ejercicio 13
