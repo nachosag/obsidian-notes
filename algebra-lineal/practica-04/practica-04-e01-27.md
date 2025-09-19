@@ -280,4 +280,39 @@ Comprobación rápida: $E\cdot E^{-1}=I$.
 f)
 Observemos dependencia de filas: $F_{1}-F_{3}=(2-2,1-0,1-0)=(0,1,1)$ que es exactamente $F_{2}$.
 Por tanto filas linealmente dependientes $\implies \det(F)=0$.
-Conlusión: $\det(F)=0\implies$no invertible.
+Conclusión: $\det(F)=0\implies$no invertible.
+
+g) Decidir si la siguiente matriz tiene inversa o no $D=\begin{pmatrix}4 & 3 & 2 \\ 0 & 1 & -1 \\ 0 & 1 & 7\end{pmatrix}$.
+Por método de Sarruss.
+Copiamos las primeras dos filas por debajo de la matriz, de modo que nos quedaría: $$
+\begin{pmatrix}
+4 & 3 & 2 \\
+0 & 1 & -1 \\
+0 & 1 & 7 \\
+4 & 3 & 2 \\
+0 & 1 & -1
+\end{pmatrix}
+$$
+Calculamos las diagonales:
+- $4\cdot{1}\cdot{7}=28$.
+- $0\cdot{1}\cdot{2}=0$.
+- $0\cdot{3}\cdot{(-1)}=0$.
+Sumo estas diagonales: 
+$$
+\begin{cases}
+28 \\
+0 \\
+0
+\end{cases}\implies 28
+$$
+- $2\cdot{1}\cdot{0}=0$.
+- $-1\cdot{1}\cdot{4}=-4$.
+- $7\cdot{3}\cdot{0}=0$.
+$$
+\begin{cases}
+0 \\
+-4 \\
+0
+\end{cases} \implies -4
+$$
+Las resto: $28-(-4)=32$.
