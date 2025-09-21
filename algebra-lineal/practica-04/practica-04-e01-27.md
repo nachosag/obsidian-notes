@@ -316,3 +316,120 @@ $$
 \end{cases} \implies -4
 $$
 Las resto: $28-(-4)=32$.
+### Ejercicio 4
+![[Pasted image 20250920231147.png]]
+El sistema $S$ en su forma matricial es $Ax=b$ con
+$$
+A=\begin{pmatrix}
+2 & -1 & 2 \\
+1 & -1 & 2 \\
+1 & -1 & 0
+\end{pmatrix},
+x=\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix}
+$$
+Calculamos el determinante de $A$.
+$$
+\begin{pmatrix}
+2 & -1 & 2 \\
+1 & -1 & 2 \\
+1 & -1 & 0 \\
+2 & -1 & 2 \\
+1 & -1 & 2
+\end{pmatrix}
+$$
+- $2\cdot{(-1)}\cdot{0}=0$,
+- $1\cdot{(-1)}\cdot{2}=-2$,
+- $1\cdot{(-1)}\cdot{2}=-2$,
+	- $0+(-2)+(-2)=-4$,
+- $2\cdot(-1)\cdot{1}=-2$,
+- $2\cdot(-1)\cdot{2}=-4$,
+- $0\cdot(-1)\cdot{1}=0$,
+	- $-2-4+0=-6$,
+$\det(A)=-4-(-6)=2\neq{0}\implies A$ es invertible y el sistema tiene una **única solución**.
+
+Buscamos la inversa
+Aplicando el método Gauss-Jordan la idea es tomar la matriz aumentada $\begin{bmatrix}A|I\end{bmatrix}$ y aplicar operaciones elementales hasta obtener $\begin{bmatrix}I|A^{-1}\end{bmatrix}$.
+$$
+\begin{bmatrix}
+A|I
+\end{bmatrix}=
+\begin{bmatrix}
+2 & -1 & 2 & | & 1 & 0 & 0 \\
+1 & -1 & 2 & | & 0 & 1 & 0 \\
+1 & -1 & 0 & | & 0 & 0 & 1
+\end{bmatrix}
+$$
+ Aplicamos las siguientes operaciones:
+ - $F_{1}\to \frac{F_{1}}{2}$,
+ - $F_{2}\to F_{2}-F_{1}$,
+ - $F_{3}\to F_{3}-F_{1}$,
+ - $F_{2}\to-2\cdot{F_{2}}$,
+ - $F_{1}\to F_{1}+\frac{1}{2}\cdot F_{2}$,
+ - $F_{3}\to F_{3}+\frac{1}{2}\cdot F_{2}$,
+ - $F_{3}\to \frac{F_{3}}{-2}$,
+ - $F_{2}\to F_{2}+2\cdot F_{3}$.
+$$
+A^{-1}=
+\begin{pmatrix}
+1 & -1 & 0 \\
+1 & -1 & -1 \\
+0 & \frac{1}{2} & -\frac{1}{2}
+\end{pmatrix}
+$$
+Entonces la solución general es $x=A^{-1}b$.
+Resolvemos los casos pedidos.
+
+Caso (i) $b=(0,0,0)^T$.
+$x=A^{-1}b=0$.
+Solución: $(x,y,z)=(0,0,0)$.
+
+Caso (ii) $b(1,0,4)^T$.
+Usamos $x=A^{-1}b$. Multiplicación componente a componente:
+$$
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix}=
+\begin{pmatrix}
+1 & -1 & 0 \\
+1 & -1 & -1 \\
+0 & \frac{1}{2} & -\frac{1}{2}
+\end{pmatrix}
+\begin{pmatrix}
+1 \\
+0 \\
+4
+\end{pmatrix}
+$$
+Calculamos cada entrada
+- $x=1*1+(-1)*0+0*4=1+0+0=1$.
+- $y=1*1+(-1)*0+(-1)*4=1+0-4=-3$.
+- $z=0*1+\frac{1}{2}*0+\left( -\frac{1}{2} \right)*4=0+0-2=-2$.
+Solución: $(x,y,z)=(1,-3,-2)$.
+
+Caso (iii) $b=(16,12,-5)^T$.
+Nuevamente $x=A^{-1}b$:
+$$
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix}=
+\begin{pmatrix}
+1 & -1 & 0 \\
+1 & -1 & -1 \\
+0 & \frac{1}{2} & -\frac{1}{2}
+\end{pmatrix}
+\begin{pmatrix}
+16 \\
+12 \\
+-5
+\end{pmatrix}
+$$
+Calculamos de igual forma y obtenemos la solución $(x,y,z)=\left( 4,9, \frac{17}{2} \right)$.
+
