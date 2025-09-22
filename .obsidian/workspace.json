@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algebra-lineal/practica-04/practica-04-e01-27.md",
+                "file": "algebra-lineal/practica-05/practica-05-e01-26.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "practica-04-e01-27"
+              "title": "practica-05-e01-26"
             }
           }
         ]
@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5,
-    "collapsed": true
+    "width": 309.5
   },
   "right": {
     "id": "60744be18a06282d",
@@ -172,23 +171,26 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "3ba3fc9f2411111b",
+  "active": "696b8c848afd1155",
   "lastOpenFiles": [
+    "algebra-lineal/practica-05/Anexos/Pasted image 20250922184238.png",
+    "algebra-lineal/practica-05/Anexos/Pasted image 20250922180647.png",
+    "algebra-lineal/practica-05/Anexos/Pasted image 20250922172831.png",
+    "algebra-lineal/practica-05/Anexos/Pasted image 20250922164905.png",
+    "algebra-lineal/practica-05/Anexos/Pasted image 20250922164045.png",
+    "algebra-lineal/practica-05/Anexos",
+    "algebra-lineal/practica-04/practica-04-e01-27.md",
+    "algebra-lineal/practica-05/practica-05-e01-26.md",
+    "algebra-lineal/practica-05",
     "algebra-lineal/practica-04/Anexos/Pasted image 20250920231147.png",
     "algebra-lineal/practica-04/Anexos/Pasted image 20250919111024.png",
     "algebra-lineal/practica-04/Anexos/Pasted image 20250919110830.png",
     "algebra-lineal/practica-04/Anexos/Pasted image 20250918235802.png",
     "algebra-lineal/practica-03/practica-03-e01-20.md",
-    "algebra-lineal/practica-04/practica-04-e01-27.md",
     "algebra-lineal/practica-04/Anexos/Pasted image 20250918233640.png",
     "algebra-lineal/practica-04/Anexos/Pasted image 20250918214313.png",
-    "algebra-lineal/practica-04/Anexos/Pasted image 20250918205230.png",
     "algebra-lineal/practica-04/Anexos",
     "algebra-lineal/practica-04",
-    "algebra-lineal/practica-03/Anexos/Pasted image 20250918194432.png",
-    "algebra-lineal/practica-03/Anexos/Pasted image 20250918190332.png",
-    "algebra-lineal/practica-03/Anexos/Pasted image 20250916201111.png",
-    "algebra-lineal/practica-03/Anexos/Pasted image 20250916184145.png",
     "Excalidraw/Drawing 2025-09-16 18.39.11.excalidraw.md",
     "Excalidraw/calculos-auxiliares.md",
     "algebra-lineal/practica-03/Anexos",
@@ -206,9 +208,7 @@
     "2025-08-29.md",
     "Untitled.canvas",
     "algebra-lineal/practica-02/Anexos",
-    "algebra-lineal",
     "Currículums/Desarrollador de Software - Ignacio Borlenghi - ES.md",
-    "Currículums",
     "2025-08-11.md",
     "Untitled 1.md"
   ]
