@@ -167,3 +167,243 @@ definición: $S=\{ x \in \mathbb{R}⁴:x\cdot(1,2,3,4)=0 \}$.
   Así, $(u+v)\cdot(1,2,3,4)=u\cdot(1,2,3,4)+v\cdot(1,2,3,4)=0+0=0$, por lo que $u+v \in S$.
 - si $u \in S$ y $k \in \mathbb{R}$, entonces $(k\cdot{u})\cdot(1,2,3,4)=k(u\cdot(1,2,3,4))=k\cdot{0}=0$, por lo que $k\cdot{u}\in S$.
 - Conclusión, el conjunto es subespacio
+### Ejercicio 5
+![[Pasted image 20250923191503.png]]
+i)
+Tenemos el conjunto $\{ v_{1}=(1,1),v_{2}=(1,-1) \}\subset \mathbb{R}²$.
+Queremos ver si son linealmente independientes. Por definición, comprobamos si la única solución del sistema $\alpha v_{1}+\beta v_{2}=(0,0)$ 
+es $\alpha+\beta=0$.
+Escribimos la combinación por componentes:
+$$
+\alpha(1,1)+\beta(1,-1)=(\alpha+\beta,\alpha-\beta)=(0,0)
+$$ Esto nos da el sistema de ecuaciones lineales $$
+\begin{cases}
+\alpha+\beta=0 \\
+\alpha-\beta=0
+\end{cases}
+$$
+1. Sumamos ambas ecuaciones: $$
+\begin{gather}
+(\alpha+\beta)+(\alpha-\beta)=0+0 \\
+2\alpha=0 \\
+\alpha=\frac{0}{2} \\
+\alpha=0
+\end{gather}
+$$ 
+2. Sustituimos $\alpha=0$ en $\alpha+\beta=0$. Esto nos da $\beta=0$:
+Hemos obtenido $\alpha=\beta=0$ como única solución. Por lo tanto $v_{1}$ y $v_{2}$ son linealmente independientes.
+iii)
+Tenemos el conjunto $\{ v_{1}=(1,0,-1),\quad v_{2}=(2,-1,2) \} \subset \mathbb{R}³$.
+Queremos ver si son linealmente independientes. Por definición, comprobamos si la única solución del sistema $\alpha v_{1}+\beta v_{2}=(0,0,0)$ es $\alpha+\beta=0$.
+Escribimos la combinación por componentes:
+- $x:\alpha\cdot{1}+\beta\cdot{2}=0\quad \implies\quad \alpha+2\beta=0$.
+- $y:\alpha\cdot{0}+\beta\cdot{(-1)}=0\quad\implies\quad -\beta=0$.
+- $z:\alpha\cdot{(-1)}+\beta\cdot{2}=0\quad\implies\quad -\alpha+2\beta=0$.
+Ahora resolvemos estas ecuaciones paso a paso:
+1. De la ecuación de la componente $y:-\beta=0\implies \beta=0$.
+2. Sustituimos $\beta=0$ en la ecuación de la componente $x:\alpha+2\cdot{0}=0\implies \alpha=0$.
+3. La ecuación de la componente $z$ se verifica automaticamente con $\alpha=\beta=0:-0+2\cdot{0}=0$.
+Hemos encontrado que la única solucion es $\alpha=\beta=0$. Por lo tanto $v_{1}$ y $v_{2}$ son linealmente independientes.
+v)
+Tenemos el conjunto $\{ v_{1}=(0,2,-1,1),v_{2}=(0,1,1,1),v_{3}=(1,0,-1,0),v_{4}=(1,1,0,1)\subset \mathbb{R}⁴ \}$.
+Queremos ver si son linealmente independientes.
+Buscamos relaciones lineales
+$$
+\alpha_{1}v_{1}+\alpha_{2}v_{2}+\alpha_{3}v_{3}+\alpha v_{4}=0
+$$ Esto equivale a resolver el sistema matricial $Ax=0$. Escribimos la matriz.
+$$
+A=\begin{pmatrix}
+0 & 0 & 1 & 1 \\
+2 & 1 & 0 & 1 \\
+-1 & 1 & -1 & 0 \\
+1 & 1 & 0 & 1
+\end{pmatrix}
+$$
+Ahora realizamos eliminación de Gauss para triangular la matriz.
+Intercambio $F_{1}\leftrightarrow F_{2}$:
+$$
+\begin{pmatrix}
+2 & 1 & 0 & 1 \\
+0 & 0 & 1 & 1 \\
+-1 & 1 & -1 & 0 \\
+1 & 1 & 0 & 1
+\end{pmatrix}
+$$
+Realizamos $F_{1}\to \frac{1}{2}F_{1}$.
+$$
+\begin{pmatrix}
+1 & \frac{1}{2} & 0 & \frac{1}{2} \\
+0 & 0 & 1 & 1 \\
+-1 & 1 & -1 & 0 \\
+1 & 1 & 0 & 1
+\end{pmatrix}
+$$
+Realizamos $F_{3}\to F_{3}+F_{1},\quad F_{4}\to F_{4}-F_{1}$.
+$$
+\begin{pmatrix}
+1 & \frac{1}{2} & 0 & \frac{1}{2} \\
+0 & 0 & 1 & 1 \\
+0 & \frac{3}{2} & -1 & \frac{1}{2} \\
+0 & \frac{1}{2} & 0 & \frac{1}{2}
+\end{pmatrix}
+$$
+Intercambio $F_{2}\leftrightarrow F_{3}$.
+$$
+\begin{pmatrix}
+1 & \frac{1}{2} & 0 & \frac{1}{2} \\
+0 & \frac{3}{2} & -1 & \frac{1}{2} \\
+0 & 0 & 1 & 1 \\
+0 & \frac{1}{2} & 0 & \frac{1}{2}
+\end{pmatrix}
+$$
+Realizo $F_{2}\to \frac{2}{3}F_{2}$.
+$$
+\begin{pmatrix}
+1 & \frac{1}{2} & 0 & \frac{1}{2} \\
+0 & 1 & -\frac{2}{3} & \frac{1}{3} \\
+0 & 0 & 1 & 1 \\
+0 & \frac{1}{2} & 0 & \frac{1}{2}
+\end{pmatrix}
+$$
+Realizo $R_{4}\to F_{4}-\frac{1}{2}F_{2}$.
+$$
+\begin{pmatrix}
+1 & \frac{1}{2} & 0 & \frac{1}{2} \\
+0 & 1 & -\frac{2}{3} & \frac{1}{3} \\
+0 & 0 & 1 & 1 \\
+0 & 0 & \frac{1}{3} & \frac{1}{3}
+\end{pmatrix}
+$$
+Realizo $F_{1}\to F_{1}-\frac{1}{2}F_{2}$.
+$$
+\begin{pmatrix}
+1 & 0 & \frac{1}{3} & \frac{1}{3} \\
+0 & 1 & -\frac{2}{3} & \frac{1}{3} \\
+0 & 0 & 1 & 1 \\
+0 & 0 & \frac{1}{3} & \frac{1}{3}
+\end{pmatrix}
+$$
+Realizo $F_{4}\to 3F_{4}-F_{1}$.
+$$
+\begin{pmatrix}
+1 & 0 & \frac{1}{3} & \frac{1}{3} \\
+0 & 1 & -\frac{2}{3} & \frac{1}{3} \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 0
+\end{pmatrix}
+$$
+Realizo $F_{1}\to F_{1}- \frac{1}{3}F_{3}$.
+$$
+\begin{pmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & -\frac{2}{3} & \frac{1}{3} \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 0
+\end{pmatrix}
+$$
+Realizo $F_{2}\to F_{2}+\frac{2}{3}F_{3}$.
+$$
+\begin{pmatrix}
+1 & 0 & 0 & 0 \\
+0 & 1 & 0 & 1 \\
+0 & 0 & 1 & 1 \\
+0 & 0 & 0 & 0
+\end{pmatrix}
+$$
+Interpretación
+- Hay pivotes en las columnas 1,2,3. La columna 4 no es pivote por lo que hay una variable libre, no sabemos cual.
+- El rango de la matriz es el número de pivotes, aquí tenemos rango = 3.
+- Teníamos 4 columnas. Si el rango es 3, menor que 4, entonces las 4 columnas no son todas independientes, es decir, hay dependencia lineal. Además las columnas que sí tienen pivote forman un conjunto de columnas linealmente independientes; por eso $\{ v_{1},v_{2},v_{3} \}$ es una base del subespacio generado por todas las columnas. El subespacio general tiene dimensión igual al rango, es decir $dim=3$.
+
+Como $v_{1},v_{2},v_{3},v_{4}$ son linealmente dependientes, tenemos que hallar la relación lineal explícita $A\alpha=0$.
+- Fila 1: $1\cdot \alpha_{1}+0\cdot \alpha_{1}+0\cdot \alpha_{3}+0\cdot \alpha_{4}=0\quad\implies \alpha_{1}=0$.
+- Fila 2: $0\cdot \alpha_{1}+1\cdot \alpha_{2}+0\cdot \alpha_{3}+1\cdot \alpha_{4}=0\quad\implies \alpha_{2}+\alpha_{4}=0\implies \alpha_{2}=-\alpha_{4}$.
+- Fila 3: $0\cdot \alpha_{1}+0\cdot \alpha_{2}+1\cdot \alpha_{3}+1\cdot\alpha_{4}=0\quad\implies \alpha_{3}+\alpha_{4}=0\implies \alpha_{3}=-\alpha_{4}$.
+- Fila 4: $0=0$ (no aporta ecuación nueva).
+Como $\alpha_{4}$ no está determinado por estas ecuaciones, lo dejamos como parámetro. Sea $t\in \mathbb{R}$ y tomamos $\alpha_{4}=t$. Entonces:
+$$
+\alpha_{1}=0,\quad \alpha_{2}=-t,\quad \alpha_{3}=-t,\quad \alpha_{4}=t.
+$$
+Agrupado:
+$$
+\alpha=(\alpha_{1},\alpha_{2},\alpha_{3},\alpha_{4})=(0,-t,-t,t)=t(0,-1,-1,1).
+$$
+### Ejercicio 6
+![[Pasted image 20250923214835.png]]
+a) Para ver si tres en $\mathbb{R}³$ forman una base basta comprobar que son linealmente independientes, es decir que la matriz con ellos como columnas tiene determinante distinto de cero.
+
+**Principio clave:** Si el determinante es **diferente de cero**, los vectores son linealmente independientes y, por lo tanto, forman una base. Si el determinante es **igual a cero**, los vectores son linealmente dependientes y no forman una base
+___
+Formo la matriz $A$ colocando los vectores como columnas:
+$$
+A=\begin{pmatrix}
+1 & -1 & 0 \\
+2 & 1 & -1 \\
+0 & -1 & -1
+\end{pmatrix}
+$$
+Calculamos el $\det(A)$. Para ello, copiamos las primeras dos filas por debajo de la última fila de modo que quede:
+$$
+\begin{pmatrix}
+1 & -1 & 0 \\
+2 & 1 & -1 \\
+0 & -1 & -1 \\
+1 & -1 & 0 \\
+2 & 1 & -1
+\end{pmatrix}
+$$
+Ahora multiplicamos:
+- $1*1*(-1)=-1$,
+- $2*(-1)*0=0$,
+- $0*(-1)*(-1)=0$,
+sumamos: $-1+0+0=-1$.
+- $0*1*0=0$,
+- $-1*(-1)*1=1$,
+- $-1*(-1)*2=2$,
+sumamos: $0+1+2=3$.
+Ahora restamos los resultados: $\det(A)=-1-3=-4$.
+como $\det(A)=-4\neq{0}$, las columnas son linealmente independientes y, siendo tres vectores en $\mathbb{R}³$, generan $\mathbb{R}³$. Por lo tanto $B$ es una base de $\mathbb{R}³$.
+___
+b) El razonamiento es idéntico a la parte anterior. El conjunto $B'$ formará una base de $\mathbb{R}³$ si y solo si, sus tres vectores son linealmente independientes. Esto ocurrirá cuando el determinante de la matriz formada por ellos sea distinto de cero.
+
+Contruimos la matriz $B$ con los vectores de $B'$.
+$$
+B=\begin{pmatrix}
+-1 & 1 & 1 \\
+2 & 0 & -1 \\
+-1 & k & k
+\end{pmatrix}
+$$
+Ahora calculamos el determinante de $B$ en función de $k$.
+Copiamos las dos primeras filas debajo de la última.
+$$
+\begin{pmatrix}
+-1 & 1 & 1 \\
+2 & 0 & -1 \\
+-1 & k & k \\
+-1 & 1 & 1 \\
+2 & 0 & -1
+\end{pmatrix}
+$$
+Calculamos:
+- $-1*0*k=0$,
+- $2*k*1=2k$,
+- $-1*1*(-1)=1$,
+Sumamos: $0+2k+1=2k+1$.
+- $1*0*(-1)=0$,
+- $-1*k*(-1)=k$,
+- $k*1*2=2k$,
+Sumamos: $0+k+2k=3k$.
+$\det(B)=2k+1-3k=-k+1$.
+
+Establecemos la condición para que sea una base
+Para que los vectores formen una base, el determinante debe ser diferente de cero.
+$$
+\begin{gather}
+\det(B)\neq{0} \\
+1-k\neq{0} \\
+1\neq{k}
+\end{gather}
+$$
+Conclusión: el conjunto $B'$ será una base de $\mathbb{R}³$ para cualquier valor real de $k$ excepto cuando $k=1$.
+Respuesta: el conjunto es una base para todo $k\in \mathbb{R}-\{ 1 \}$.
