@@ -169,7 +169,7 @@ definición: $S=\{ x \in \mathbb{R}⁴:x\cdot(1,2,3,4)=0 \}$.
 - Conclusión, el conjunto es subespacio
 ### Ejercicio 5
 ![[Pasted image 20250923191503.png]]
-i)
+<mark style="background: #FFB8EBA6;">i)</mark>
 Tenemos el conjunto $\{ v_{1}=(1,1),v_{2}=(1,-1) \}\subset \mathbb{R}²$.
 Queremos ver si son linealmente independientes. Por definición, comprobamos si la única solución del sistema $\alpha v_{1}+\beta v_{2}=(0,0)$ 
 es $\alpha+\beta=0$.
@@ -192,7 +192,71 @@ $$
 $$ 
 2. Sustituimos $\alpha=0$ en $\alpha+\beta=0$. Esto nos da $\beta=0$:
 Hemos obtenido $\alpha=\beta=0$ como única solución. Por lo tanto $v_{1}$ y $v_{2}$ son linealmente independientes.
-iii)
+<mark style="background: #FFB8EBA6;">ii)</mark>
+Queremos determinar si el conjunto $C=\{ (1,1),(1,-1),(2,-1) \}$ es l.i.
+
+Planteamos la combinación lineal de estos vectores igualada al vector nulo.
+$a_{1}(1,1)+a_{2}(1,-1)+a_{3}(2,-1)=(0,0)$.
+Desarrollamos la ecuación vectorial para obtener un sistema de ecuaciones lineales.
+$(a_{1}+a_{2}+2a_{3},a_{1}-a_{2}-a_{3})=(0,0)$.
+$$
+\begin{cases}
+a_{1}+a_{2}+2a_{3}=0 & (1), \\
+a_{1}-a_{2}-a_{3}=0 & (2).
+\end{cases}
+$$ Como tenemos un sistema **homogéneo** de 3 incógnitas y 2 ecuaciones, podemos concluir de inmediato que el sistema tiene infinitas soluciones y no es l.i.
+
+Ahora debemos extraer un subconjunto l.i. del conjunto original dado.
+Primero debemos resolver el sistema.
+
+Despejamos $a_{1},a_{2},a_{3}$ sumando las ecuaciones.
+
+$(1)+(2)=a_{1}+a_{2}+2a_{3}+a_{1}-a_{2}-a_{3}=0=2a_{1}+a_{3}=0$.
+
+Despejamos $a_{1}$ en función de $a_{3}$.
+$$
+\begin{gather}
+2a_{1}+a_{3}=0 \\
+2a_{1}=-a_{3} \\
+a_{1}=-\frac{1}{2}a_{3}
+\end{gather}
+$$ Reemplazamos $a_{1}$ en $(1)$ para despejar $a_{2}$.
+$$
+\begin{gather}
+a_{1}+a_{2}+2a_{3}=0 \\
+-\frac{1}{2}a_{3}+a_{2}+2a_{3}=0 \\
+\frac{3}{2}a_{3}+a_{2}=0 \\
+a_{2}=-\frac{3}{2}a_{3}
+\end{gather}
+$$ Tenemos:
+1. De $2a_{1}+a_{3}=0$, obtenemos $a_{1}=-\frac{1}{2}a_{3}$.
+2. Al sustituir $a_{1}$ en la ecuación (1), obtenemos $a_{2}=-\frac{3}{2}a_{3}$.
+Ahora el vector de escalar $(a_{1},a_{2},a_{3})$ que anula la combinación lineal es de la forma: $\left( -\frac{1}{2}a_{3},-\frac{3}{2}a_{3},a_{3} \right)$, donde $a_{3}\in \mathbb{R}$.
+
+Ahora abordemos la tarea adicional:
+
+Si elegimos $a_{3}=2$, obtenemos $\left( -\frac{1}{2}*2,-\frac{3}{2}*2,2 \right)=(-1,-3,2)$.
+Reemplazamos coordenada a coordenada en la ecuación vectorial **original**.
+$$
+\begin{gather}
+-1v_{1}+(-3)v_{2}+2v_{3}=(0,0) \\
+-1(1,1)+(-3)(1,-1)+2(2,-1)=(0,0)
+\end{gather}
+$$ Despejamos $v_{3}$ de la ecuación vectorial para expresar a $v_{3}$ como combinación lineal de otros.
+$$
+\begin{gather}
+-1v_{1}+(-3)v_{2}+2v_{3}=(0,0) \\
+2v_{3}=v_{1}+3v_{2} \\
+v_{3}=\frac{1}{2}v_{1}+\frac{3}{2}v_{2}
+\end{gather}
+	$$ Esto demuestra que el vector $v_{3}=(2,-1)$ es una combinación lineal de los otros dos vectores $v_{1}$ y $v_{2}$. Este vector $v_{3}$ es, por lo tanto, **redundante** y no aporta información de dirección nueva al subespacio.
+
+**Respuesta:** para extraer un subconjunto l.i. que genere el mismo subespacio que $C=\{ v_{1},v_{2},v_{3} \}$, debemos eliminar el vector $v_{3}$.
+
+El subconjunto l.i. resultante es:
+$B'=\{ v_{1},v_{2} \}=\{ (1,1),(1,-1) \}$.
+
+<mark style="background: #FFB8EBA6;">iii)</mark>
 Tenemos el conjunto $\{ v_{1}=(1,0,-1),\quad v_{2}=(2,-1,2) \} \subset \mathbb{R}³$.
 Queremos ver si son linealmente independientes. Por definición, comprobamos si la única solución del sistema $\alpha v_{1}+\beta v_{2}=(0,0,0)$ es $\alpha+\beta=0$.
 Escribimos la combinación por componentes:
@@ -204,7 +268,7 @@ Ahora resolvemos estas ecuaciones paso a paso:
 2. Sustituimos $\beta=0$ en la ecuación de la componente $x:\alpha+2\cdot{0}=0\implies \alpha=0$.
 3. La ecuación de la componente $z$ se verifica automaticamente con $\alpha=\beta=0:-0+2\cdot{0}=0$.
 Hemos encontrado que la única solucion es $\alpha=\beta=0$. Por lo tanto $v_{1}$ y $v_{2}$ son linealmente independientes.
-v)
+<mark style="background: #FFB8EBA6;">v)</mark>
 Tenemos el conjunto $\{ v_{1}=(0,2,-1,1),v_{2}=(0,1,1,1),v_{3}=(1,0,-1,0),v_{4}=(1,1,0,1)\subset \mathbb{R}⁴ \}$.
 Queremos ver si son linealmente independientes.
 Buscamos relaciones lineales
