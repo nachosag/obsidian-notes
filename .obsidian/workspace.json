@@ -78,7 +78,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5
+    "width": 309.5,
+    "collapsed": true
   },
   "right": {
     "id": "60744be18a06282d",
@@ -173,6 +174,7 @@
   },
   "active": "3ba3fc9f2411111b",
   "lastOpenFiles": [
+    "algebra-lineal/practica-05/Anexos/Pasted image 20251003225208.png",
     "algebra-lineal/practica-04/practica-04-e01-27.md",
     "algebra-lineal/practica-05/practica-05-e01-26.md",
     "algebra-lineal/practica-05/Anexos/Pasted image 20250923214835.png",

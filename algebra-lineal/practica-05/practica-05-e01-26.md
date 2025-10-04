@@ -133,34 +133,34 @@ Comprobaciones:
 Por lo tanto sí es subespacio de $P_{3}$.
 ### Ejercicio 4
 ![[Pasted image 20250922184238.png]]
-i)
+<mark style="background: #FFB8EBA6;">i)</mark>
 - si tomamos $t=0$, obtenemos $0=(0,0,0)\in L$.
 - cerrado por suma: si $u=t_{1}(1,2,1),\quad v=t_{2}(1,2,1)$ entonces $u+v=(t_{1}+t_{2})(1,2,1)$, y $t_{1},t_{2}\in \mathbb{R}\implies u+v\in L$.
 - cerrado por escalares: $\lambda u=\lambda t_{1}(1,2,1),\quad \lambda t_{1}\in \mathbb{R} \implies \lambda u\in L$.
 - conclusion: $L$ es subespacio es $gen(1,2,1)$.
-ii)
+<mark style="background: #FFB8EBA6;">ii)</mark>
 - para algun $t$ debería cumplirse $(t,t+1)=(0,0)$ no es posible porque $t=0$ da $(0,1)\neq(0,0)$. Como no contiene al 0, no puede ser subespacio.
 - Conclusion: no es subespacio.
-iii)
+<mark style="background: #FFB8EBA6;">iii)</mark>
 - contiene al 0, tomando $t=0$ obtenemos $(0,0,0)\in L$.
 - suma: si $t_{1},t_{2}\geq{0}$ entonces $u+v=(t_{1}+t_{2})(1,2)$ con $t_{1},t_{2}\geq0$, por lo tanto, es cerrado para la suma.
 - escalares: si tomtamos $\lambda=-1$ y $u=t(1,2)$ con $t>0$ y hacemos $\lambda u=-t(1,2)$ tiene parámetro $-t<0$, entonces $\lambda u\not\in  L$
 - conclusion: no es subespacio.
-iv)
+<mark style="background: #FFB8EBA6;">iv)</mark>
 - la ecuacion es homogenea, por lo que 0 la satisface.
 - si $u,v$ satisfacen la ecuacion, tambien $u+v$ la satisface por linealidad, es decir $3(u_{x}+v_{x})+2(u_{y}+v_{y})-2(u_{z}+v_{z})=0+0=0$.
 - si $u$ la satisface y $\lambda \in \mathbb{R}$, $\lambda u$ la satisface, es decir $3(\lambda u_{x})+\dots=\lambda(3u_{x}+2u_{y}-2u_{z})=\lambda\cdot{0}=0$.
 - Conclusión: es subespacio
-v)
+<mark style="background: #FFB8EBA6;">v)</mark>
 - $3*0+2*0-2*0=0\neq{2}$. Entonces $0\not\in \pi$.
 - Si no contiene el origen, no es subespacio
 - conclusion: no es subespacio
-vi)
+<mark style="background: #FFB8EBA6;">vi)</mark>
 - son ecuaciones homogeneas, por lo que el cero las satisface.
 - la suma de soluciones es solucion
 - el multiplo escalar de una solucion sigue siendo solucion
 - conclusión: el conjunto es subespacio
-vii)
+<mark style="background: #FFB8EBA6;">vii)</mark>
 definición: $S=\{ x \in \mathbb{R}⁴:x\cdot(1,2,3,4)=0 \}$.
 - si tomo $x=(0,0,0,0)$, $x\cdot(1,2,3,4)=0$ por lo tanto, contiene al 0.
 - si $u,v \in S$, entonces $u\cdot(1,2,3,4)=0$ y $v\cdot(1,2,3,4)=0$. 
@@ -268,130 +268,296 @@ Ahora resolvemos estas ecuaciones paso a paso:
 2. Sustituimos $\beta=0$ en la ecuación de la componente $x:\alpha+2\cdot{0}=0\implies \alpha=0$.
 3. La ecuación de la componente $z$ se verifica automaticamente con $\alpha=\beta=0:-0+2\cdot{0}=0$.
 Hemos encontrado que la única solucion es $\alpha=\beta=0$. Por lo tanto $v_{1}$ y $v_{2}$ son linealmente independientes.
-<mark style="background: #FFB8EBA6;">v)</mark>
-Tenemos el conjunto $\{ v_{1}=(0,2,-1,1),v_{2}=(0,1,1,1),v_{3}=(1,0,-1,0),v_{4}=(1,1,0,1)\subset \mathbb{R}⁴ \}$.
-Queremos ver si son linealmente independientes.
-Buscamos relaciones lineales
-$$
-\alpha_{1}v_{1}+\alpha_{2}v_{2}+\alpha_{3}v_{3}+\alpha v_{4}=0
-$$ Esto equivale a resolver el sistema matricial $Ax=0$. Escribimos la matriz.
-$$
-A=\begin{pmatrix}
-0 & 0 & 1 & 1 \\
-2 & 1 & 0 & 1 \\
--1 & 1 & -1 & 0 \\
-1 & 1 & 0 & 1
-\end{pmatrix}
-$$
-Ahora realizamos eliminación de Gauss para triangular la matriz.
-Intercambio $F_{1}\leftrightarrow F_{2}$:
-$$
-\begin{pmatrix}
-2 & 1 & 0 & 1 \\
-0 & 0 & 1 & 1 \\
--1 & 1 & -1 & 0 \\
-1 & 1 & 0 & 1
-\end{pmatrix}
-$$
-Realizamos $F_{1}\to \frac{1}{2}F_{1}$.
-$$
-\begin{pmatrix}
-1 & \frac{1}{2} & 0 & \frac{1}{2} \\
-0 & 0 & 1 & 1 \\
--1 & 1 & -1 & 0 \\
-1 & 1 & 0 & 1
-\end{pmatrix}
-$$
-Realizamos $F_{3}\to F_{3}+F_{1},\quad F_{4}\to F_{4}-F_{1}$.
-$$
-\begin{pmatrix}
-1 & \frac{1}{2} & 0 & \frac{1}{2} \\
-0 & 0 & 1 & 1 \\
-0 & \frac{3}{2} & -1 & \frac{1}{2} \\
-0 & \frac{1}{2} & 0 & \frac{1}{2}
-\end{pmatrix}
-$$
-Intercambio $F_{2}\leftrightarrow F_{3}$.
-$$
-\begin{pmatrix}
-1 & \frac{1}{2} & 0 & \frac{1}{2} \\
-0 & \frac{3}{2} & -1 & \frac{1}{2} \\
-0 & 0 & 1 & 1 \\
-0 & \frac{1}{2} & 0 & \frac{1}{2}
-\end{pmatrix}
-$$
-Realizo $F_{2}\to \frac{2}{3}F_{2}$.
-$$
-\begin{pmatrix}
-1 & \frac{1}{2} & 0 & \frac{1}{2} \\
-0 & 1 & -\frac{2}{3} & \frac{1}{3} \\
-0 & 0 & 1 & 1 \\
-0 & \frac{1}{2} & 0 & \frac{1}{2}
-\end{pmatrix}
-$$
-Realizo $R_{4}\to F_{4}-\frac{1}{2}F_{2}$.
-$$
-\begin{pmatrix}
-1 & \frac{1}{2} & 0 & \frac{1}{2} \\
-0 & 1 & -\frac{2}{3} & \frac{1}{3} \\
-0 & 0 & 1 & 1 \\
-0 & 0 & \frac{1}{3} & \frac{1}{3}
-\end{pmatrix}
-$$
-Realizo $F_{1}\to F_{1}-\frac{1}{2}F_{2}$.
-$$
-\begin{pmatrix}
-1 & 0 & \frac{1}{3} & \frac{1}{3} \\
-0 & 1 & -\frac{2}{3} & \frac{1}{3} \\
-0 & 0 & 1 & 1 \\
-0 & 0 & \frac{1}{3} & \frac{1}{3}
-\end{pmatrix}
-$$
-Realizo $F_{4}\to 3F_{4}-F_{1}$.
-$$
-\begin{pmatrix}
-1 & 0 & \frac{1}{3} & \frac{1}{3} \\
-0 & 1 & -\frac{2}{3} & \frac{1}{3} \\
-0 & 0 & 1 & 1 \\
-0 & 0 & 0 & 0
-\end{pmatrix}
-$$
-Realizo $F_{1}\to F_{1}- \frac{1}{3}F_{3}$.
-$$
-\begin{pmatrix}
-1 & 0 & 0 & 0 \\
-0 & 1 & -\frac{2}{3} & \frac{1}{3} \\
-0 & 0 & 1 & 1 \\
-0 & 0 & 0 & 0
-\end{pmatrix}
-$$
-Realizo $F_{2}\to F_{2}+\frac{2}{3}F_{3}$.
-$$
-\begin{pmatrix}
-1 & 0 & 0 & 0 \\
-0 & 1 & 0 & 1 \\
-0 & 0 & 1 & 1 \\
-0 & 0 & 0 & 0
-\end{pmatrix}
-$$
-Interpretación
-- Hay pivotes en las columnas 1,2,3. La columna 4 no es pivote por lo que hay una variable libre, no sabemos cual.
-- El rango de la matriz es el número de pivotes, aquí tenemos rango = 3.
-- Teníamos 4 columnas. Si el rango es 3, menor que 4, entonces las 4 columnas no son todas independientes, es decir, hay dependencia lineal. Además las columnas que sí tienen pivote forman un conjunto de columnas linealmente independientes; por eso $\{ v_{1},v_{2},v_{3} \}$ es una base del subespacio generado por todas las columnas. El subespacio general tiene dimensión igual al rango, es decir $dim=3$.
+<mark style="background: #FFB8EBA6;">iv)</mark>
+El conjunto de vectores es $B=\{ (1,1,-1),(0,2,-1)(1,-1,0),(1,-1,3) \}$ estos vectores pertenecen a $\mathbb{R}³$.
+Como la dimensión de $\mathbb{R}³$ es 3, la cantidad máxima de vectores linealmente independientes que puedo tener en un conjunto en $\mathbb{R}³$ es tres.
+Por lo tanto, nuestro conjunto B de 4 vectores es R³ es linealmente dependientes.
 
-Como $v_{1},v_{2},v_{3},v_{4}$ son linealmente dependientes, tenemos que hallar la relación lineal explícita $A\alpha=0$.
-- Fila 1: $1\cdot \alpha_{1}+0\cdot \alpha_{1}+0\cdot \alpha_{3}+0\cdot \alpha_{4}=0\quad\implies \alpha_{1}=0$.
-- Fila 2: $0\cdot \alpha_{1}+1\cdot \alpha_{2}+0\cdot \alpha_{3}+1\cdot \alpha_{4}=0\quad\implies \alpha_{2}+\alpha_{4}=0\implies \alpha_{2}=-\alpha_{4}$.
-- Fila 3: $0\cdot \alpha_{1}+0\cdot \alpha_{2}+1\cdot \alpha_{3}+1\cdot\alpha_{4}=0\quad\implies \alpha_{3}+\alpha_{4}=0\implies \alpha_{3}=-\alpha_{4}$.
-- Fila 4: $0=0$ (no aporta ecuación nueva).
-Como $\alpha_{4}$ no está determinado por estas ecuaciones, lo dejamos como parámetro. Sea $t\in \mathbb{R}$ y tomamos $\alpha_{4}=t$. Entonces:
+Para demostrar formalmente que es l.d. debemos encontrar una combinación lineal no trivial que resulte en el vector nulo 0.
+
+**planteamiento del sistema**:
+llamamos a los vectores $v_{1},v_{2},v_{3},v_{4}$ y a los escalares$a,b,c,d$, la ecuación es: $a*v_{1}+b*v_{2}+c*v_{3}+d*v_{4}=0$.
+
+Escribimos esta ecuacion como un sistema lineal de ecuaciones.
 $$
-\alpha_{1}=0,\quad \alpha_{2}=-t,\quad \alpha_{3}=-t,\quad \alpha_{4}=t.
+\begin{gather}
+a*v_{1}+b*v_{2}+c*v_{3}+d*v_{4}=0 \\
+a*(1,1,-1)+b*(0,2,-1)+c*(1,-1,0)+d*(1,-1,3)=0 \\
+(a,a,-a)+(0,2b,-b)+(c,-c,0)+(d,-d,3d)=0 \\
+(a+c+d,a+2b-c-d,-a-b+3d)=0 \\
+\end{gather}
 $$
-Agrupado:
 $$
-\alpha=(\alpha_{1},\alpha_{2},\alpha_{3},\alpha_{4})=(0,-t,-t,t)=t(0,-1,-1,1).
+\begin{cases}
+a+c+d=0 \\
+a+2b-c-d=0 \\
+-a-b+3d=0
+\end{cases}
+$$ Este es un sistema homogeneo y dado que tiene 3 ecuaciones y 4 incógnitas, ya sabemos que es un sistema compatible indeterminado, lo que confirma que el conjunto es linealmente dependiente.
+
+Ahora escribimos la matriz de coeficientes ampliada y triangulamos para resolver el sistema y expresar las soluciones en forma paramétrica.
+
 $$
+\begin{bmatrix}
+A|b
+\end{bmatrix}
+=
+\begin{bmatrix}
+1 & 0 & 1 & 1 & | & 0 \\
+1 & 2 & -1 & -1 & | & 0 \\
+-1 & -1 & 0 & 3 & | & 0
+\end{bmatrix} F_{2} \to F_{2}+F_{3}
+\begin{bmatrix}
+1 & 0 & 1 & 1 & | & 0 \\
+0 & 1 & -1 & 2 & | & 0 \\
+-1 & -1 & 0 & 3 & | & 0
+\end{bmatrix}
+$$
+$$
+F_{3} \to F_{1}+F_{3}
+\begin{bmatrix}
+1 & 0 & 1 & 1 & | & 0 \\
+0 & 1 & -1 & 2 & | & 0 \\
+0 & -1 & 1 & 4 & | & 0
+\end{bmatrix} F_{3} \to F_{2}+F_{3}
+\begin{bmatrix}
+1 & 0 & 1 & 1 & | & 0 \\
+0 & 1 & -1 & 2 & | & 0 \\
+0 & 0 & 0 & 6 & | & 0
+\end{bmatrix}
+$$
+Analizamos la matriz escalonada:
+1. Rango: la matriz de coeficientes $(A)$ tiene 3 filas no nulas, por lo que su rango es 3, es decir $\rho(A)=0$. La matriz ampliada $(A|b)$ tambien tiene rango 3, es decir, $\rho(A|b)=3$.
+2. Clasificación: como $\rho(A)=\rho(A|b)=3$ el sistema es compatible, es decir, tiene solución pero no sabemos cuántas. Dado que hay $n=4$ incógnitas y $\rho(A)<4$ el sistema es compatible indeterminado.
+
+Ahora necesitamos encontrar la solución no trivial. Para eso traducimos la matriz escalonada a un sistema de ecuaciones  y usamos una de las variables para expresar las otras variables en términos de ella.
+
+$$
+\begin{cases}
+a+c+d=0 & (1) \\
+b-c+2d=0 & (2) \\
+6d=0 & (3)
+\end{cases}
+$$
+Despejamos d en (3), $6d=0\implies d=0$. Sustituímos este valor en las ecuaciones (1) y (2) para que el sistema se transforme en:
+$$
+\begin{cases}
+a+c=0 & (1) \\
+b-c=0 & (2) \\
+\end{cases}
+$$ Con este nuevo sistema simplificado, ¿cuál es la variable libre?
+<mark style="background: #FF5582A6;">Una variable libre es aquella que podemos elegir arbitrariamente (asignarle cualquier valor en R) y luego expresar las otras variables en función de ella.</mark>
+
+En nuestra matriz escalonada, los pivotes están en las columnas $a,b,d$. La columna $c$ no tiene pivote por lo que la variable libre es $c$ y debemos usarla para describir las infinitas soluciones del sistema.
+
+Ahora que identificamos a $c$ como la variable libre y sabemos que $d=0$, volvamos a expresar $a,b$ en términos de $c$ usando el sistema simplificado:
+$$
+\begin{cases}
+a+c=0 & (1) \\
+b-c=0 & (2) \\
+\end{cases}
+$$
+Despejando a en (1): $a+c=0\implies a=-c$.
+Despejando b en (2): $b-c=0\implies b=c$.
+
+Podemos parametrizar la solución usando $c=\lambda$, donde $\lambda \in \mathbb{R}$:
+$$
+(a,b,c,d)=(-\lambda,\lambda,\lambda,0)
+$$
+Para demostrar que el conjunto es linealmente dependiente, deneceistamos encontrar una combinacion lineal no trivial que de el vector nulo.
+
+Elegimos un valor simple para $\lambda$ por ejemplo $\lambda=1$.
+$(a,b,c,d)=(-1,1,1,0)$.
+$$
+\begin{gather}
+a*v_{1}+b*v_{2}+c*v_{3}+d*v_{4}=0 \\
+-1*v_{1}+1*v_{2}+1*v_{3}+0*v_{4}=0 \\
+-1(1,1,-1)+1(0,2,-1)+1(1,-1,0)+0(1,-1,3)=0 \\
+(-1,-1,1)+(0,2,-1)+(1,-1,0)=0 \\
+(-1+0+1,-1+2-1,1-1+0)=0 \\
+(0,0,0)=0
+\end{gather}
+$$
+Como encontramos una solución no trivial, confirmamos que el conjunto B es linealmente dependiente.
+
+Ahora debemos extraer un subconjunto linealmente independiente del conjunto dado.
+
+¿Cuál de los vectores $v_{1},v_{2},v_{3},v_{4}$ puede escribirse como combinacion lineal de los otros?
+
+Recordemos que llegamos a la siguiente relación de dependencia lineal, eligiendo $\lambda=1$:
+$$
+-1\cdot v_{1}+1\cdot v_{2}+1\cdot v_{3}+0\cdot v_{4}=0
+$$ Donde $v_{1}=(1,1,-1),v_{2}=(0,2,-1),v_{3}=(1,-1,0),v_{4}=(1,-1,3)$.
+
+Para que un vector sea combinación lineal de los demás, simplemente debemos despejarlo de la ecuación de dependencia. Si un escalar $(a,b,c,d)$ es no nulo en la relación de dependencia, el vector asociado a ese escalar puede expresarse como combinacion lineal de los otros.
+
+En nuestra relación:
+$$
+-1\cdot v_{1}+1\cdot v_{2}+1\cdot v_{3}=0
+$$
+Para un conjunto de vectores linealmente dependiente (l.d.), puedes escribir **cualquier** vector cuyo escalar sea **no nulo** en la combinación lineal como una combinación lineal de los demás. Los escalares no nulos son $a,b,c,$ pero $d$ si es nulo; por lo tanto, podemos despejar $v_{1},v_{2},v_{3}$.
+Despejamos $v_{1}$:
+$$
+\begin{gather}
+-1\cdot v_{1}+1\cdot v_{2}+1\cdot v_{3}=0 \\
+-v_{1}+v_{2}+v_{3}=0 \\
+-v_{1}=-v_{2}-v_{3} \\
+v_{1}=v_{2}+v_{3}
+\end{gather}
+$$ Esto significa que $v_{1}$ es combinación lineal de $v_{2}$ y $v_{3}$.
+
+Despejamos $v_{2}$:
+$$
+\begin{gather}
+-1\cdot v_{1}+1\cdot v_{2}+1\cdot v_{3} \\
+-v_{1}+v_{2}+v_{3}=0 \\
+v_{2}=v_{1}-v_{3}
+\end{gather}
+$$ Esto significa que $v_{2}$ es combinación lineal de $v_{1}$ y $v_{3}$.
+
+Despejamos $v_{3}$:
+$$
+\begin{gather}
+-1\cdot v_{1}+1\cdot v_{2}+1\cdot v_{3} \\
+-v_{1}+v_{2}+v_{3}=0 \\
+v_{3}=v_{1}-v_{2}
+\end{gather}
+$$ Esto significa que $v_{3}$ es combinación lineal de $v_{1}$ y $v_{2}$.
+
+Podemos elegir libremente entre $v_{1},v_{2},v_{3}$ para eliminar uno de ellos y armar un nuevo subconjunto. Vamos a elegir $v_{1}$.
+
+El nuevo subconjunto es:
+$B'=\{ v_{2},v_{3},v_{4} \}=\{ (0,2,-1),(1,-1,0),(1,-1,3) \}$.
+
+¿Cómo podemos verificar de forma rápida si este subconjunto es linealmente independiente?
+
+Podemos utilizar el determinante para obtener información acerca de la cantidad de soluciones.
+- Si el **determinante es distinto de cero**, los vectores son linealmente independientes.
+- Si el **determinante es igual a cero**, los vectores son linealmente dependientes.
+Formamos una matriz $A$ con los vectores del subconjunto $B'$.
+$$
+A=
+\begin{bmatrix}
+0 & 2 & -1 \\
+1 & -1 & 0 \\
+1 & -1 & 3
+\end{bmatrix}
+$$
+$\det(A)=-(1)*\det(\begin{bmatrix}2 & -1 \\ -1 & 3\end{bmatrix})+(-1)*\det(\begin{bmatrix}0 & -1 \\ 1 & 3\end{bmatrix})$.
+$$
+\begin{gather}
+\det(A)=-(1)*\det(\begin{bmatrix}2 & -1 \\ -1 & 3\end{bmatrix})+(-1)*\det(\begin{bmatrix}0 & -1 \\ 1 & 3\end{bmatrix}) \\
+\det(A)=-1*(2*3-(-1)*(-1))-1*(0*3-(-1)*1) \\
+\det(A)=-1*5-1*1 \\
+\det(A)=-6
+\end{gather}
+$$
+Ya que el $\det(A)=-6$ y $-6\neq{0}$ podemos concluir que los vectores $\{ v_{1},v_{3},v_{4} \}$ son linealmente independientes.
+<mark style="background: #FFB8EBA6;">v)</mark>
+Se nos pide determinar si el conjunto $B=\{ (0,2,-1,1),(0,1,1,1),(1,0,-1,0),(1,1,0,1) \}$ es l.i.
+
+Para comenzar a determinar si un conjunto de vectores es l.i., el primer paso es plantear la **combinación lineal igualada al vector nulo**.
+
+Sean $v_{1}=(0,2,-1,1),v_{2}=(0,1,1,1),v_{3}=(1,0,-1,0),v_{4}=(1,1,0,1)$.
+$a_{1}v_{1}+a_{2}v_{2}+a_{3}v_{3}+a_{4}v_{4}=0$. Con $a_{i}\in \mathbb{R}$.
+
+Ahora queremos armar un **sistema de ecuaciones lineal**.
+Sustituímos $v_{1},v_{2},v_{3},v_{4}$ y desarrollamos.
+$$
+\begin{gather}
+a_{1}v_{1}+a_{2}v_{2}+a_{3}v_{3}+a_{4}v_{4}=0 \\
+a_{1}(0,2,-1,1)+a_{2}(0,1,1,1)+a_{3}(1,0,-1,0)+a_{4}(1,1,0,1)=0 \\
+(0,2a_{1},-a_{1},a_{1})+(0,a_{2},a_{2},a_{2})+(a_{3},0,-a_{3},0)+(a_{4},a_{4},0,a_{4})=0 \\
+(a_{3}+a_{4},2a_{1}+a_{2}+a_{4},-a_{1}+a_{2}-a_{3},a_{1}+a_{2}+a_{4})=0 \\
+\end{gather}
+$$ Igualamos componente a componente para formar el sistema de ecuaciones lineales homogéneo. 
+$$
+\begin{cases}
+a_{3}+a_{4}=0 & (1), \\
+2a_{1}+a_{2}+a_{4}=0 & (2), \\
+-a_{1}+a_{2}-a_{3}=0 & (3), \\
+a_{1}+a_{2}+a_{4}=0 & (4).
+\end{cases}
+$$ El siguiente paso es resolver este sistema homogéneo para ver si la única solución es trivial $(a_{1}=a_{2}=a_{3}=a_{4}=0)$.
+$$
+\begin{bmatrix}
+A|b
+\end{bmatrix}=
+\begin{bmatrix}
+0 & 0 & 1 & 1 & | & 0 \\
+2 & 1 & 0 & 1 & | & 0 \\
+-1 & 1 & -1 & 0 & | & 0 \\
+1 & 1 & 0 & 1 & | & 0
+\end{bmatrix}
+$$ El siguiente paso es traingular la matriz. Intercambiamos $F_{1}\leftrightarrow F_{4}$.
+$$
+\begin{bmatrix}
+1 & 1 & 0 & 1 & | & 0 \\
+2 & 1 & 0 & 1 & | & 0 \\
+-1 & 1 & -1 & 0 & | & 0 \\
+0 & 0 & 1 & 1 & | & 0
+\end{bmatrix}
+\begin{gather}
+F_{3}\to F_{1}+F_{3}; \\
+F_{2}\to F_{2}-2F_{1};
+\end{gather}
+\begin{bmatrix}
+1 & 1 & 0 & 1 & | & 0 \\
+0 & -1 & 0 & -1 & | & 0 \\
+0 & 2 & -1 & 1 & | & 0 \\
+0 & 0 & 1 & 1 & | & 0
+\end{bmatrix}
+$$ $$
+F_{3}\to_{2}F_{2}+F_{3}
+\begin{bmatrix}
+1 & 1 & 0 & 1 & | & 0 \\
+0 & -1 & 0 & -1 & | & 0 \\
+0 & 0 & -1 & -1 & | & 0 \\
+0 & 0 & 1 & 1 & | & 0
+\end{bmatrix}
+$$ $$
+F_{4}\to F_{3}+F_{4}
+\begin{bmatrix}
+1 & 1 & 0 & 1 & | & 0 \\
+0 & -1 & 0 & -1 & | & 0 \\
+0 & 0 & -1 & -1 & | & 0 \\
+0 & 0 & 0 & 0 & | & 0
+\end{bmatrix}
+$$ Hemos llegado a la forma escalonada. Tenemos 3 filas no nulas, es decir $\rho(A)=3$ pero tenemos 4 incógnitas $(a_{1},a_{2},a_{3},a_{4})$. Dado que $\rho(A)=3<n=4$, el sistema es compatible indeterminado, es decir, tiene infinitas soluciones.
+
+Ahora que sabemos que el conjunto $B$ es l.d., debemos extraer un subconjunto linealmente independiente del conjunto dado que genere el mismo subespacio que el conjunto original.
+
+Para hacer esto, debemos encontrar la solución general del sistema para identificar la dependencia exacta.
+
+Escribimos el sistema de ecuaciones lineales homogéneo simplificado.
+$$
+\begin{cases}
+a_{1}+a_{2}+a_{4}=0 & (1), \\
+-a_{2}-a_{4}=0 & (2), \\
+-a_{3}-a_{4}=0 & (3).
+\end{cases}
+$$  Como tenemos 4 incógnitas y solo 3 ecuaciones, hay 4-3=1 variable libre. En este caso, $a_{4}$ es nuestra variable libre.
+
+Ahora expresamos las variables principales $(a_{1},a_{2},a_{3})$ en función de la variable libre $a_{4}$.
+1. De la ecuación $(2):-a_{2}-a_{4}=0\implies a_{2}=-a_{4}$.
+2. De la ecuación $(3):-a_{3}-a_{4}=0\implies a_{3}=-a_{4}$.
+3. De la ecuación $(1): a_{1}+(-a_{4})+a_{4}=0\implies a_{1}=0$.
+Por lo tanto, la solución general para los escalares $(a_{1},a_{2},a_{3},a_{4})$ es:$$
+(0,-a_{4},-a_{4},a_{4})\quad a_{4}\in \mathbb{R}
+$$ Esto confirma que el conjunto $B$ es l.d.
+Ahora el siguiente paso es **extraer un subconjunto l.i.**. Para hacer esto, debemos identificar cuál vector es la combinación lineal de los otros.
+
+Si tomamos la solución no trivial cuando $a_{4}=1$, obtenemos los escalares $(0,-1,-1,1)$. Sustituyendo estos escalares en la ecuación de la combinación lineal: $$
+\begin{gather}
+0v_{1}+(-1)v_{2}+(-1)v_{3}+1v_{4}=0 \\
+-v_{2}-v_{3}+v_{4}=0
+\end{gather}
+$$ Despejamos $v_{4}$ de esta ecuación. Pero pudimos haber despejado cualquier vector cuyo escalar asociado **no** era cero. En este caso $v_{2},v_{3},v_{4}$ tienen escalares no nulos.
+
+<mark style="background: #FF5582A6;">Cuando se busca extraer el subconjunto l.i. que mantenga el mismo subespacio generado, debemos eliminar el vector que es combinación lineal de los otros. Es decir, podemos eliminar cualquiera de los vectores que participan con un coeficiente no nulo en la relación.</mark> 
+
+Por lo que vamos a eliminar a $v_{4}$.
+**Conclusión**: Subconjunto l.i. candidato: $B'=\{ v_{1},v_{2},v_{3} \}$. El vector $v_{4}$ está contenido en $gen\{ v_{1},v_{2},v_{3} \}$ porque $v_{4}=v_{2}+v_{3}$.
 ### Ejercicio 6
 ![[Pasted image 20250923214835.png]]
 a) Para ver si tres en $\mathbb{R}³$ forman una base basta comprobar que son linealmente independientes, es decir que la matriz con ellos como columnas tiene determinante distinto de cero.
@@ -426,7 +592,9 @@ sumamos: $-1+0+0=-1$.
 - $-1*(-1)*2=2$,
 sumamos: $0+1+2=3$.
 Ahora restamos los resultados: $\det(A)=-1-3=-4$.
-como $\det(A)=-4\neq{0}$, las columnas son linealmente independientes y, siendo tres vectores en $\mathbb{R}³$, generan $\mathbb{R}³$. Por lo tanto $B$ es una base de $\mathbb{R}³$.
+como $\det(A)=-4\neq{0}$ podemos concluir dos cosas:
+1. El sistema de ecuaciones lineales es compatible determinado, lo que significa que tiene una solución única.
+2. La única solución para el sistema homogéneo que planteamos es la solución trivial $(a_{1}=a_{2}=a_{3}=0)$.
 ___
 b) El razonamiento es idéntico a la parte anterior. El conjunto $B'$ formará una base de $\mathbb{R}³$ si y solo si, sus tres vectores son linealmente independientes. Esto ocurrirá cuando el determinante de la matriz formada por ellos sea distinto de cero.
 
@@ -471,3 +639,127 @@ $$
 $$
 Conclusión: el conjunto $B'$ será una base de $\mathbb{R}³$ para cualquier valor real de $k$ excepto cuando $k=1$.
 Respuesta: el conjunto es una base para todo $k\in \mathbb{R}-\{ 1 \}$.
+### Ejercicio 7
+![[Pasted image 20251003225208.png]]
+El subespacio $S_{1}$ está generado por los vectores:
+$$
+S_{1}=gen\{ (1,-1,2,1),(2,-3,3,-1),(-1,2,-1,2) \} \subset \mathbb{R}⁴
+$$ Primero construimos la matriz de coeficientes $A$.
+$$
+A=\begin{bmatrix}
+1 & -1 & 2 & 1 \\
+2 & -3 & 3 & -1 \\
+-1 & 2 & -1 & 2
+\end{bmatrix}
+$$ Aplicamos Gauss-Jordan.
+$$
+\begin{gather}
+F_{2}\to F_{2}-2F_{1} \\
+F_{3}\to F_{3}+F_{1}
+\end{gather}
+\begin{bmatrix}
+1 & -1 & 2 & 1 \\
+0 & -1 & -1 & -3 \\
+0 & 1 & 1 & 3
+\end{bmatrix}
+F_{3}\to F_{2}+F_{3}
+\begin{bmatrix}
+1 & -1 & 2 & 1 \\
+0 & -1 & -1 & -3 \\
+0 & 0 & 0 & 0
+\end{bmatrix}
+$$ Como $\rho(A)=2$ y tenemos $n=4$ incógnitas, el sistema tiene infinitas soluciones y podemos clasificarlo como sistema compatible indeterminado. 
+
+Por lo tanto:
+- $dim(S_{1})=2$.
+- Las filas no nulas de la matriz escalonada nos proporcionan una base para: $B_{S_{1}}=\{ (1,-1,2,1),(0,-1,-1,-3) \}$.
+---
+El subespacio $S_{2}$ está generado por los vectores:
+$$
+S_{2}=gen\{ (2,-3,1,4,1),(2,-3,3,-1,1),(1,0,-1,3,1),(1,0,-3,2,1) \} \subset \mathbb{R}⁵
+$$ Escribimos la matriz de coeficientes $A$:
+$$
+A=\begin{bmatrix}
+2 & -3 & 1 & 4 & 1 \\
+2 & -3 & 3 & -1 & 1 \\
+1 & 0 & -1 & 3 & 1 \\
+1 & 0 & -3 & 2 & 1
+\end{bmatrix}
+$$ Hacemos $F_{1}\leftrightarrow F_{3}$:
+$$
+\begin{bmatrix}
+1 & 0 & -1 & 3 & 1 \\
+2 & -3 & 3 & -1 & 1 \\
+2 & -3 & 1 & 4 & 1 \\
+1 & 0 & -3 & 2 & 1
+\end{bmatrix}
+\begin{gather}
+F_{2}\to F_{2}-2F_{1} \\
+F_{3}\to F_{3}-2F_{1} \\
+F_{4}\to F_{4}-F_{1}
+\end{gather}
+\begin{bmatrix}
+1 & 0 & -1 & 3 & 1 \\
+0 & -3 & 5 & -7 & -1 \\
+0 & -3 & 3 & -2 & -1 \\
+0 & 0 & -2 & -1 & 0
+\end{bmatrix}
+$$
+$$
+\begin{gather}
+F_{3}\to F_{3}-F_{2} \\
+\end{gather}
+\begin{bmatrix}
+1 & 0 & -1 & 3 & 1 \\
+0 & -3 & 5 & -7 & -1 \\
+0 & 0 & -2 & 5 & 0 \\
+0 & 0 & -2 & -1 & 0
+\end{bmatrix}
+F_{4}\to F_{4}-F_{3}
+\begin{bmatrix}
+1 & 0 & -1 & 3 & 1 \\
+0 & -3 & 5 & -7 & -1 \\
+0 & 0 & -2 & 5 & 0 \\
+0 & 0 & 0 & -6 & 0
+\end{bmatrix}
+$$ Como la matriz final escalonada tiene 4 filas no nulas, el rango de la matriz $A$ es 4. Y como la dimensión de un subespacio generado es igual al rango de la matriz de sus generados: $dim(S_{2})=\rho (A)=4$.
+
+Una base para $S_{2}$ utilizando las filas no nulas de la matriz es: $B_{S_{2}}:\{ (1,0,-1,3,1),(0,-3,5,-7,-1),(0,0,-2,5,0),(0,0,0,-6,0) \}$.
+
+---
+Ya que $dim(\mathbb{R}⁵)=5$ y $dim(S_{2})=4$, necesitaríamos añadir solo un vector adicional. Este vector debe ser l.i. respecto de los 4 vectores que ya existen en $B_{S_{2}}$. Una forma práctica y sencilla de elegir este vector es usando los vectores de la base canónica de $\mathbb{R}⁵$ que no son combinación lineal de los vectores $B_{S_{2}}$.
+
+Entonces, tenemos $B_{S_{2}}$ y necesitamos un quinto vector (llamémoslo $v_{5}$) para que el conjunto $B_{S_{2}}\cup{v_{5}}$ sea una base de $\mathbb{R}⁵$.
+
+Usemos los vectores de la base canónica de $\mathbb{R}⁵: e_{1}=(1,0,0,0,0),e_{2}=(0,1,0,0,0)$, etc. Si usamos $v_{5}=e_{5}$, la matriz ampliada sería:
+$$
+M=\begin{bmatrix}
+1 & 0 & -1 & 3 & 1 \\
+0 & -3 & 5 & -7 & -1 \\
+0 & 0 & -2 & 5 & 0 \\
+0 & 0 & 0 & -6 & 0 \\
+0 & 0 & 0 & 0 & 1 
+\end{bmatrix}
+$$ 
+1. Nos quedó una matriz triangulada con rango 5.
+2. Dado que el rango de la matriz que incluye los vectores de la base de $S_{2}$ más el vector $e_{5}$ es 5, los cinco vectores son linealmente independientes.
+3. Como estamos en $\mathbb{R}⁵$ (dimensión 5) y encontramos un conjunto de 5 vectores l.i., este conjunto es una base de $\mathbb{R}⁵$.
+Conclusión: $B_{\mathbb{R}⁵}=\{ (1,0,-1,3,1),(0,-3,5,-7,-1),(0,0,-2,5,0),(0,0,0,-6,0),(0,0,0,0,1) \}$
+
+Ahora volvemos al subespacio $S_{1}$, ya calculamos:
+- Dimension: $dim(S_{1})=2$.
+- Base: $B_{1}=\{ (1,-1,2,1),(0,-1,-1,3) \}$.
+
+En el espacio ambiente $\mathbb{R}⁴$ la $dim(\mathbb{R}⁴)=4$. Por lo que necesitamos $4-2=2$ vectores adicionales l.i. para completar la base de $\mathbb{R}⁴$.
+Elegimos dos vectores de la base canónica de $\mathbb{R}⁴$, $e_{3}=(0,0,1,0),e_{4}=(0,0,0,1)$. Formamos la matriz $M$ con los cuatro vectores $(v_{1},v_{2},e_{3},e_{4})$ y veamos si su rango es 4.
+$$
+M=\begin{bmatrix}
+1 & -1 & 2 & 1 \\
+0 & -1 & -1 & -3 \\
+0 & 0 & 1 & 0 \\
+0 & 0 & 0 & 1
+\end{bmatrix}
+$$ de esta forma, obtenemos una matriz de rango 4.
+
+Por lo tanto, la base extendida sería: 
+$B_{\mathbb{R}⁴}=\{ (1,-1,2,1),(0,-1,-1,-3),(0,0,1,0),(0,0,0,1) \}$.
