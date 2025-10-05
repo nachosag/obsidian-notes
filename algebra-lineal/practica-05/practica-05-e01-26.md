@@ -763,3 +763,41 @@ $$ de esta forma, obtenemos una matriz de rango 4.
 
 Por lo tanto, la base extendida sería: 
 $B_{\mathbb{R}⁴}=\{ (1,-1,2,1),(0,-1,-1,-3),(0,0,1,0),(0,0,0,1) \}$.
+### Ejercicio 8
+![[Pasted image 20251004185015.png]]
+Resolvamos el sistema $S_{1}$.
+1. Armemos la matriz ampliada $$
+\begin{bmatrix}
+A|b
+\end{bmatrix}=
+\begin{bmatrix}
+2 & -1 & -1 & 2 & | & 0 \\
+-1 & 2 & 1 & -1 & | & 0 \\
+1 & 1 & 0 & 1 & | & 0
+\end{bmatrix}
+$$ La simplificamos haciendo $F_{2}\to F_{2}+F_{3},\quad F_{3}\to F_{1}-2F_{3}$.
+$$
+\begin{bmatrix}
+2 & -1 & -1 & 2 & | & 0 \\
+0 & 3 & 1 & 0 & | & 0 \\
+0 & -3 & 1 & 0 & | & 0
+\end{bmatrix}F_{3}\to F_{3}+F_{2}
+\begin{bmatrix}
+2 & -1 & -1 & 2 & | & 0 \\
+0 & 3 & 1 & 0 & | & 0 \\
+0 & 0 & 2 & 0 & | & 0
+\end{bmatrix}
+$$ De esta forma, obtenemos la matriz escalonada.
+Ahora convertimos esta matriz de vuelta a ecuaciones para encontrar la solución que define el subespacio $S_{1}$. $$
+\begin{cases}
+2x_{1}-x_{2}-x_{3}+2x_{4}=0 & (1), \\
+3x_{2}+x_{3}=0 & (2), \\
+2x_{3}=0 & (3).
+\end{cases}
+$$ A partir de la ecuación (3) obtenemos $x_{3}=0$. Sustituímos este valor en (2): $3x_{2}=0\implies x_{2}=0$. Sustituímos estos dos valores en (1): $2x_{1}+2x_{4}=0$. 
+Si dividimos la ecuación por $2$ obtenemos: $x_{1}+x_{4}=0$. Establecemos que $x_{4}=\lambda,\qquad \lambda \in \mathbb{R}$, por lo que la ecuación queda $x_{1}+\lambda=0\implies x_{1}=-\lambda$.
+
+Ahora tenemos la descripción completa de las soluciones para el sistema $S_{1}$. El subespacio $S_{1}$ está formado por vectores $(x_{1},x_{2},x_{3},x_{4})$ que tienen la forma $x=(-\lambda,0,0,\lambda)\quad \lambda \in \mathbb{R}$, para encontrar una base de $S_{1}$ debemos expresar este vector genérico como una combinación lineal y extraer el vector asociado al parámetro $\lambda$. $$
+x=\lambda\cdot(-1,0,0,1)
+$$ Determinamos que una base para $S_{1}$ es $B=\{ (-1,0,0,1) \}$, ya que genera a $S_{1}$ y es l.i. (por que $\lambda=0$ es el único valor que devuelve el vector nulo).
+COMPLETAR
