@@ -799,5 +799,233 @@ Si dividimos la ecuación por $2$ obtenemos: $x_{1}+x_{4}=0$. Establecemos que $
 
 Ahora tenemos la descripción completa de las soluciones para el sistema $S_{1}$. El subespacio $S_{1}$ está formado por vectores $(x_{1},x_{2},x_{3},x_{4})$ que tienen la forma $x=(-\lambda,0,0,\lambda)\quad \lambda \in \mathbb{R}$, para encontrar una base de $S_{1}$ debemos expresar este vector genérico como una combinación lineal y extraer el vector asociado al parámetro $\lambda$. $$
 x=\lambda\cdot(-1,0,0,1)
-$$ Determinamos que una base para $S_{1}$ es $B=\{ (-1,0,0,1) \}$, ya que genera a $S_{1}$ y es l.i. (por que $\lambda=0$ es el único valor que devuelve el vector nulo).
-COMPLETAR
+$$ Determinamos que una base para $S_{1}$ es $B=\{ (-1,0,0,1) \}$, ya que genera a $S_{1}$ y es l.i. (por que $\lambda=0$ es el único valor que devuelve el vector nulo). Para calcular la dimensión de $S_{1}$ solo tenemos que contar la cantidad de vectores que conforman la base $B$, en este caso tenemos un único vector por lo que $dim(S_{1})=1$.
+### Ejercicio 9
+![[Pasted image 20251005183134.png]]
+<mark style="background: #FFB8EBA6;">i)</mark>
+Si el vector que genera a S también está en $T$, entonces cualquier múltiplo de ese vector también estará en $T$. Eso significaría que todo el subespacio $S$ está contenido en $T$. Por lo que sustituímos el vector $(1,-1,2)$ en $T$.
+$$
+\begin{cases}
+1-1=0, \\
+1-(-1)-2=2-2=0.
+\end{cases}
+$$ Como la igualdad se cumple, podemos concluir que $S\subset T$. Ahora tenemos que probar que **son iguales**, para eso hay que probar la otra dirección, que $T\subset S$. Una forma de hacer esto es comparando las dimensiones de ambos subespacios. SI podemos demostrar que $dim(S)=dim(T)$, y ya sabemos que uno está contenido en el otro, entonces deben ser idénticos.
+
+La $dim(S)=1$ porque solo contiene a un único vector.
+
+Comenzamos a calcular $dim(T)$ armando la matriz ampliada y aplicando Gauss-Jordan.
+$$
+\begin{bmatrix}
+A|b
+\end{bmatrix}=
+\begin{bmatrix}
+1 & 1 & 0 & | & 0 \\
+1 & -1 & -1 & | & 0
+\end{bmatrix}
+F_{2}\to F_{2}-F_{1}
+\begin{bmatrix}
+1 & 1 & 0 & | & 0 \\
+0 & -2 & -1 & | & 0
+\end{bmatrix}
+$$ Traducimos esta matriz a un sistema de  ecuaciones $$
+\begin{cases}
+x+y=0 & (1), \\
+-2y-z=0 & (2).
+\end{cases}
+$$ Despejamos $z$ en (2). $$
+\begin{gather}
+-2y-z=0 \\
+-z=2y \\
+z=-2y
+\end{gather}
+$$ Despejamos $x$ en (1). $$
+\begin{gather}
+x+y=0 \\
+x=-y
+\end{gather}
+$$ Ahora hemos expresados todas las variables en función de una sola: $y$.
+- $x=-y$,
+- $z=-2y$.
+Con esta información podemos describir cómo es cualquier vector $(x,y,z)$ que pertenece al subespacio $T$: 
+$X=(-y,y,-2y)=y(-1,1,-2)$.
+
+Una base para $T$ es $B_{T}=\{ (-1,1,-2) \}$. Por lo tanto, $dim(B_{T})=1$.
+
+Hemos demostrado que $S\subset T,\quad dim(S)=1,\quad dim(T)=1$. Tenemos un subespacio $S$ contenido en otro $T$ y ambos tienen la misma dimensión, por lo que podemos concluir que son identicos.
+<mark style="background: #FFB8EBA6;">ii)</mark>
+Tenemos que comparar los subespacios:
+- $S=gen{(1,−1,1,2)}$,
+- $T={(x,y,z,w)∈R⁴:x+z−w=0}$.
+Para que dos subespacios sean iguales, deben tener la misma dimensión y uno debe estar contenido en el otro.
+
+Comencemos con el subespacio $S$:
+- Base de $S$ es $B_{S}=\{ (1,-1,1,2) \}$.
+- Su dimensión es $dim(B_{S})=1$.
+Ahora vamos con el subespacio $T$:
+Para hallar una base de $T$, primero debemos expresar las soluciones de esa ecuación homogéneo en forma paramétrica.
+- Despejamos $x$ de la ecuación: $x=w-z$. 
+Las variables que podemos elegir libremente son $y,z,w$. Esto significa que hay tres variables libres.
+$(x,y,z,w)=(w-z,y,z,w)$. Ahora hay que tomar este vector y descomponerlo en una suma de vectores.
+1. **Enfocándonos en** **:** ¿Qué vector resulta si solo dejamos la variable $y$ igual a $1$ y fijasmos $z=0$ y $w=0$?
+2. **Enfocándonos en** **:** ¿Qué vector resulta si solo dejamos la variable $z$ igual a $1$ y fijamos $y=0$ y $w=0$?
+3. **Enfocándonos en** **:** ¿Qué vector resulta si solo dejamos la variable $w$ igual a $1$ y fijamos $y=0$ y $z=0$?
+$$
+\begin{gather}
+(x,y,z,w)=y\cdot(\text{vector}_{1})+z\cdot(\text{vector}_{2})+w\cdot(\text{vector}_{3}) \\
+(x,y,z,w)=y\cdot(0,1,0,0)+z\cdot(-1,0,1,0)+w\cdot(1,0,0,1)
+\end{gather}
+$$ Esto significa que $T$ está generado por este conjunto de vectores: $T=gen\{ (0,1,0,0),(-1,0,1,0),(1,0,0,1) \}$.
+Ya que estos tres vectores son l.i. forman una base para $T$.
+
+Por lo tanto, la dimensión de $T$ es $dim(T)=3$.
+Al comparar las dimensiones de cada subespacio, podemos notar que $dim(S)\neq dim(T)$. Como ambos subespacios no tienen la misma dimensión entonces no son iguales
+<mark style="background: #FFB8EBA6;">iii)</mark>
+$S=gen\{ (1,-1,1),(2,0,1) \}$ y $T=gen\{ (4,-2,3),(7,-3,5) \}$.
+El objetivo es confirmar si $S=T$.
+
+El primer paso para comparar dos subespacios dados por generadores es determinar su **dimensión**, para lo cual debemos verificar si los vectores que los generan son l.i.
+1. Calculamos la dimensión de $S$.
+Son $v_{1}=(1,-1,1),\quad v_{2}=(2,0,1)$ l.i.? si, porque no son múltiplos entre sí.
+Como $S$ está generado por dos vectores l.i., su base es $B_{S}=\{ (1,-1,1),(2,0,1) \}$ y su dimensión es $dim(S)=2$.
+2. Calculamos la dimensión de $T$.
+Son $w_{1}=(4,-2,3),\quad w_{2}=(7,-3,5)$ l.i.? si, porque no son múltiplos entre sí.
+Como $T$ está generado por vectores l.i., su base es $B_{T}=\{ (4,-2,3),(7,-3,5) \}$ y su dimensión es $dim(T)=2$.
+
+Dado que $dim(S)=dim(T)$, la igualdad $S=T$ es posible, pero **no está garantizada solo por la dimensión**.
+
+Para que $S=T$ es necesario que uno de ellos esté contenido en el otro. Por ejemplo $S\subset T$.
+
+Si cada vector de $S$ se puede escribir como combinación lineal de los vectores pertenecientes de $T$, entonces $S\subset T$.
+
+- Por lo tanto, tomamos el vector $v_{1}=(1,-1,1)$ y verificamos si es combinación lineal de los generadores de $T$.
+
+Necesitamos encontrar **escalares** $\alpha,\beta \in \mathbb{R}$ tales que: $(1,-1,1)=\alpha(4,-2,3)+\beta(7,-3,5)$. Esto nos lleva al siguiente sistema de ecuación: $$
+\begin{cases}
+4\alpha+7\beta=1 & (1), \\
+-2\alpha-3\beta=-1 & (2), \\
+3\alpha+5\beta=1 & (3).
+\end{cases}
+$$ 
+ Trabajemos sobre (1): $$
+\begin{gather}
+4\alpha+7\beta=1 \\
+4a=1-7\beta \\
+\alpha=\frac{1}{4}-\frac{7}{4}\beta
+\end{gather}
+$$ Sustituimos $\alpha=\frac{1}{4}-\frac{7}{4}\beta$ en (2): $$
+\begin{gather}
+-2\alpha-3\beta=-1 \\
+-2\cdot\left( \frac{1}{4}-\frac{7}{4}\beta \right)-3\beta=-1 \\
+-\frac{1}{2}+\frac{7}{2}\beta-3\beta=-1 \\
+-\frac{1}{2}+\frac{1}{2}\beta=-1 \\
+\frac{1}{2}\beta=-1+\frac{1}{2} \\
+\frac{1}{2}\beta=-\frac{1}{2} \\
+\beta=-\frac{\frac{1}{2}}{\frac{1}{2}} \\
+\beta=-1
+\end{gather}
+$$ Sustituimos $\alpha=\frac{1}{4}-\frac{7}{4}\beta,\quad \beta=-1$ en (3): $$
+\begin{gather}
+3\alpha+5\beta=1 \\
+3\cdot\left( \frac{1}{4}-\frac{7}{4}\beta \right)+5\cdot(-1)=1 \\
+3\cdot\left( \frac{1}{4}-\frac{7}{4}\cdot(-1) \right)+5\cdot(-1)=1 \\
+3\cdot{2}-5=1 \\
+6-5=1 \\
+1=1
+\end{gather}
+$$ Como la ecuación (3) se cumple, el sistema es compatible determinado y la solución es $\alpha=2,\beta=-1$. Por lo tanto el vector $v_{1}$ es una combinación lineal de los generadores de $T$. Esto confirma que $v_{1}\in T$.
+
+- Ahora tomamos el vector $v_{2}=(2,0,1)$ y verificamos si es combinación lineal de los generadores de $T$.
+
+Necesitamos encontrar **escalares** $\alpha,\beta \in \mathbb{R}$ tales que: $(2,0,1)=\alpha(4,-2,3)+\beta(7,-3,5)$. Esto nos lleva al siguiente sistema de ecuación: $$
+\begin{cases}
+4\alpha+7\beta=2 & (1), \\
+-2\alpha-3\beta=0 & (2), \\
+3\alpha+5\beta=1 & (3).
+\end{cases}
+$$ Despejamos $\beta$ en (1). $$
+\begin{gather}
+4\alpha+7\beta=2 \\
+7\beta=2-4\alpha \\
+\beta=\frac{2}{7}-\frac{4}{7}\alpha
+\end{gather}
+$$ Sustituímos $\beta=\frac{2}{7}-\frac{4}{7}\alpha$ en (2): $$
+\begin{gather}
+-2\alpha-3\beta=0 \\
+-2\alpha-3\cdot\left( \frac{2}{7}-\frac{4}{7}\alpha \right)=0 \\
+-2\alpha-\frac{6}{7}+\frac{12}{7}\alpha=0 \\
+-\frac{2}{7}\alpha-\frac{6}{7}=0 \\
+-\frac{2}{7}\alpha=\frac{6}{7} \\
+\alpha=\frac{\frac{6}{7}}{-\frac{2}{7}} \\
+\alpha=-3
+\end{gather}
+$$ Sustituímos $\alpha=-3$ y $\beta=\frac{2}{7}-\frac{4}{7}\alpha=\frac{2}{7}-\frac{4}{7}\cdot(-3)=2$ en (3): $$
+\begin{gather}
+3\alpha+5\beta=1 \\
+3\cdot(-3)+5\cdot(2)=1 \\
+-9+10=1 \\
+1=1
+\end{gather}
+$$ Como la ecuación (3) se cumple,el sistema es compatible determinado y la solución es $\alpha=-3$ y $\beta=2$. Por lo tanto, $v_{2}$ es combinación lineal de los generadores de $T$. Esto confirma que $v_{2}\in T$.
+
+Hemos demostrado que $v_{1}\in T$ y que $v_{2}\in T$. Eso implica que $S\subset T$. Anteriormente determinamos que $dim(S)=dim(T)$. Con estos dos datos, podemos concluir que $S=T$. 
+### Ejercicio 10
+### Ejercicio 11
+![[Pasted image 20251006004844.png]]
+<mark style="background: #FFB8EBA6;">i)</mark>
+Comenzamos calculando la dimensión de $S$ y $T$.
+- Como los vectores que generan $S$ no son múltiplos entre sí, podemos afirmar que son l.i. Además, podemos confirmar que forman una base de $S$. Como son dos vectores los que generan $S$, podemos afirmar que la dimensión de $S$ es 2.
+- Como los vectores que generan $t$ no son múltiplos entre sí, podemos afirmar que son l.i. Además, podemos confirmar que forman una base de $T$. Como son dos vectores los que generan $T$, podemos afirmar que la dimensión de $T$ es 2.
+Dado que estamos en $\mathbb{R}³$, donde $dim(\mathbb{R}³)=3$, y $dim(S)+dim(T)=2+2=4,$ la suma de las dimensiones supera a la dimensión del espacio ambiente.
+
+La fórmula de la dimensión para la suma de subespacios es clave aquí: $dim(S+T)=dim(S)+dim(T)-dim(S \cap T)$.
+
+Para verificar si $S+T=\mathbb{R}³$, debemos encontrar $dim(S+T)$. La forma más sencilla de encontrar la dimensión de la suma es triangular la matriz formada por la unión de los generadores de $S$ y $T$: $$
+S+T=gen\{ (1,-1,3),(2,-2,1),(1,1,-1),(1,0,1) \}
+$$ Armamos la matriz de coeficientes: $$
+\begin{pmatrix}
+1 & -1 & 3 \\
+2 & -2 & 1 \\
+1 & 1 & -1 \\
+1 & 0 & 1
+\end{pmatrix}
+\begin{gather}
+F_{2}\to F_{2}-2F_{1} \\
+F_{3}\to F_{3}-F_{1} \\
+F_{4}\to F_{4}-F_{1}
+\end{gather}
+\begin{pmatrix}
+1 & -1 & 3 \\
+0 & 0 & -5 \\
+0 & 2 & -4 \\
+0 & 1 & -2
+\end{pmatrix}F_{2}\leftrightarrow F_{4}
+$$ $$
+\begin{pmatrix}
+1 & -1 & 3 \\
+0 & 1 & -2 \\
+0 & 2 & -4 \\
+0 & 0 & -5
+\end{pmatrix}
+F_{3}\to F_{3}-2F_{2}
+\begin{pmatrix}
+1 & -1 & 3 \\
+0 & 1 & -2 \\
+0 & 0 & 0 \\
+0 & 0 & -5
+\end{pmatrix}
+$$ El rango de esta matriz es 3, por lo tanto la dimensión de $dim(S+T)=3$. Dado que estamos en $\mathbb{R}³$ y su dimensión es 3, y acabamos de demostrar que $dim(S+T)=3$, esto implica $S+T=\mathbb{R}³$. 
+
+Ahora debemos conocer si es suma directa.
+Para que sea suma directa ($S\oplus T=\mathbb{R}³$), se debe cumplir que la intersección sea únicamente el vector nulo, es decir, $S\cap T=\{ \vec{0} \}$.
+
+Según el Teorema de la Dimensión para la suma de subespacios: $dim(S+T)=dim(S)+dim(T)-dim(S\cap T)$.
+
+Ya sabemos:
+- $dim(S+T)=3$,
+- $dim(S)=2$,
+- $dim(T)=2$,
+- Por lo tanto, $dim(S+T)=1$ para que se cumpla la igualdad.
+
+Para que la suma sea **directa** ($S \oplus T$), la intersección debe ser el subespacio trivial: $S\cap T=\{ \vec{0} \}$.
+La dimensión de un subespacio que solo contiene al vector nulo es cero. En resumen, la condición para la suma directa es que $dim(S\cap T)=0$.
+Como sabemos que $dim(S\cap T)=1$ y no 0, podemos concluir que la suma **no es directa**.
