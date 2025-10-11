@@ -129,6 +129,7 @@ x_{1}+x_{2} \\
 2x_{1}-x_{2}
 \end{pmatrix}
 $$ Lo cual coincide con la definición original de $T(x_{1},x_{2})=(x_{1}+x_{2},0,-x_{1},2x_{1}-x_{2})$.
+<mark style="background: #FF5582A6;">SEGUIR COMPLETANDO LOS DEMÁS PUNTOS</mark>
 ### Ejercicio 2
 ![[Pasted image 20251007004915.png]]
 <mark style="background: #FFB8EBA6;">a)</mark>
@@ -267,6 +268,7 @@ T(1,1,0)=1\cdot T(0,1,1)+1\cdot T(1,0,-1) \\
 (-1,0,1,2)=(1,2,3,2)
 \end{gather}
 $$ Al comparar la componente izquierda con la derecha obtenemos un absurdo, por lo tanto, la transformación T no existe.
+<mark style="background: #FF5582A6;">SEGUIR COMPLETANDO LOS DEMÁS PUNTOS</mark>
 ### Ejercicio 3
 ![[Pasted image 20251008191020.png]]
 <mark style="background: #FFB8EBA6;">a)</mark>
@@ -343,6 +345,7 @@ z
 2x+2y
 \end{pmatrix}
 $$
+<mark style="background: #FF5582A6;">SEGUIR COMPLETANDO LOS DEMÁS PUNTOS</mark>
 ### Ejercicio 4
 ![[Pasted image 20251008195918.png]]
 **Principio clave**: Una TL queda definida de forma única por sus valores en una base del espacio de salida.
@@ -481,3 +484,355 @@ $$
 El ejercicio nos da la fórmula de la transformación $T$: $$
 T(x_{1},x_{2},x_{3})=(2x_{1}-x_{2}+x_{3},2x_{3},x_{1}-3x_{3})
 $$ Si comparamos las fórmulas de $L$ y $T$ notamos que son idénticas, por lo tanto, $T=L$.
+<mark style="background: #FF5582A6;">SEGUIR COMPLETANDO LOS DEMÁS PUNTOS</mark>
+### Ejercicio 5
+![[Pasted image 20251010171415.png]]
+<mark style="background: #FFB8EBA6;">b)</mark>
+Recordemos la TL del ejercicio 1 inciso b:
+$T:\mathbb{R}²\to \mathbb{R}⁴,\quad T(x_{1},x_{2})=(x_{1}+x_{2},0,-x_{1},2x_{1}-x_{2})$.
+
+El ejercicio nos pide hallar bases de los subespacios $Nu(T)$ y $\mathrm{Im}(T)$ y clasificarlos según sean monomorfismos, epimorfismos e isomorfismos.
+
+Comencemos calculando $Nu(T)$, para eso armamos un sistema de ecuaciones homogéneo donde igualamos cada componente de $T(X_{1},x_{2})$ al vector nulo $(0,0,0,0)$.
+$$
+\begin{cases}
+x_{1}+x_{2}=0 & (1), \\
+0=0 & (2), \\
+-x_{1}=0 & (3), \\
+2x_{1}-x_{2}=0 & (4).
+\end{cases}
+$$ Por la ecuación (3) sabemos que $x_{1}=0$. Si reemplazamos $x_{1}=0$ en la ecuación (1) obtenemos que $x_{2}=0$. Podemos confirmar estos valores reemplazándolos en la ecuación (4).
+
+De esta forma podemos confirmar que el $Nu(T)=\{ (0,0) \}$.
+Esto significa dos cosas clave:
+1. $dim(Nu(T))=0$.
+2. La base del $Nu(T)$ es el conjunto vacío.
+
+Ahora calculemos $\mathrm{Im}g(T)$, para esto podemos usar el Teorema de la Dimensión. $n=dim(\mathbb{R}^{n})=dim(Nu(T))+dim(Im(T)).$
+
+La dimensión del espacio de salida es $dim(\mathbb{R}^n)=2$. Además conocemos que $dim(Nu(T))=0$, por lo que la $dim(\mathrm{Im}(T))$ tiene que valer 2 para el teorema de la dimensión se cumpla.
+
+Ahora encontremos la base de $\mathrm{Im}(T)$. 
+Una propiedad de la imagen de una TL $T:\mathbb{R}^n\to \mathbb{R}^m$ es que está generada por las imágenes de una base de $\mathbb{R}^n$. Por lo que podemos usar la base canónica $E$ de $\mathbb{R}²$ que es $E=\{ (1,0),(0,1) \}$.
+
+Calculemos $T(1,0)$ y $T(0,1)$ usando la fórmula de $T(x_{1},x_{2})=(x_{1}+x_{2},0,-x_{1},2x_{1}-x_{2})$.
+- Para $T(1,0)=(1+0,0,-1,2\cdot{1}-0)=(1,0,-1,2)$.
+- Para $T(0,1)=(0+1,0,-0,2\cdot{0}-1)=(1,0,0,-1)$.
+De esta forma tenemos que $\mathrm{Im}(T)=gen\{ (1,0,-1,2),(1,0,0,-1) \}$.
+
+Para verificar si este conjunto generador es l.i. hacemos el siguiente planteo
+$(1,0,-1,2)=\alpha\cdot(1,0,0,-1)=(\alpha,0,0,-\alpha),\quad\alpha \in \mathbb{R}$. Armamos el siguiente sistema de ecuaciones: $$
+\begin{cases}
+\alpha=1 & (1), \\
+0=0 & (2), \\
+0=-1 & (3), \\
+-\alpha=2 & (4).
+\end{cases}
+$$ A simple vista se puede ver que los vectores son l.i. ya que $\alpha$ tiene que valer 1 según la ecuación (1) pero también tiene que valer -2 según la ecuación (4).
+
+Resumamos la información que tenemos hasta ahora:
+
+| Subespacio | Base | Dimensión |
+| --- | --- | --- |
+| $Nu(t)$ | $\{  \}$ | 0 |
+| $\mathrm{Im}(T)$ | $B_{\mathrm{Im}}=\{ (1,0,-1,2),(1,0,0,-1) \}$ | 2 |
+Para clasificar $T:\mathbb{R}^2\to \mathbb{R}⁴$, utilizamos las siguientes definiciones:
+1. $T$ es **monomorfismo** si y solo si $Nu(T)=\{ \vec{0} \}$  o $dim(Nu(T))=0$.
+2. $T$ es **epimorfismo** si y solo si $\mathrm{Im}(T)=\mathbb{R}^m$ o $dim(\mathrm{Im}(T))=m$.
+3. $T$ es **isomorfismo** si cumple la condición 1 y 2, solo es posible si $n=m$.
+
+Nosotros descubrimos que $dim(\mathrm{Im}(T))=2$ y para que $T$ pueda ser considerado epimorfismo $dim(\mathrm{Im}(T))$ tendría que haber valido 4. Por lo que podemos descartar que T es epimorfismo e isomorfismo y confirmar que T es monomorfismo.
+<mark style="background: #FF5582A6;">SEGUIR COMPLETANDO LOS DEMÁS PUNTOS</mark>
+### Ejercicio 6
+![[Pasted image 20251010190157.png]]
+<mark style="background: #FFB8EBA6;">(a)</mark>
+Tenemos la siguiente TL $$
+T_{1}:\mathbb{R}⁴\to \mathbb{R}⁴,\quad \begin{cases}
+T_{1}(1,0,1,1)=(0,1,0,2) \\
+T_{1}(1,1,0,0)=(1,0,2,0) \\
+T_{1}(0,1,1,0)=(0,1,-2,0) \\
+T_{1}(1,0,-1,1)=(-1,1,1,-1)
+\end{cases}
+$$ El primer paso es encontrar una manera de representar esta transformación para poder calcular su núcleo $Nu(T_{1})$ e imagen $\mathrm{Im}(T_{1})$. Dado que la TL está definida por sus valores en una base de $\mathbb{R}⁴$, podemos encontrar su **matriz asociada en las bases canónicas** $M_{EE}(T_{1})$.
+
+La TL $T:\mathbb{R}⁴\to \mathbb{R}⁴$ está definida en la base $B=\{ v_{1},v_{2},v_{3},v_{4} \}$, donde $$
+\begin{gather}
+v1​=(1,0,1,1), & T1(v1​)=(0,1,0,2) \\
+v2​=(1,1,0,0), & T1​(v2​)=(1,0,2,0) \\
+v3​=(0,1,1,0), & T1​(v3​)=(0,1,−2,0) \\
+v4​=(1,0,−1,1), & T1​(v4​)=(−1,1,1,−1)
+\end{gather}
+$$
+<mark style="background: #FFB86CA6;">Primer camino: Matriz ampliada</mark>
+Triangular una matriz ampliada hasta obtener la matriz identidad a la izquierda.
+
+Para hallar $M_{EE}(T_{1})$ necesitamos encontrar $T_{1}(e_{1}),T_{1}(e_{2}),T_{1}(e_{3}),T_{1}(e_{4})$, donde $e_{i}$ son los vectores de la base canónica. Usaremos la matriz ampliada $\begin{bmatrix}B|T_{1}(B)\end{bmatrix}$. Esta matriz hay que armarla como **columnas**. $$
+\begin{pmatrix}
+1 & 1 & 0 & 1 & | & 0 & 1 & 0 & -1 \\
+0 & 1 & 1 & 0 & | & 1 & 0 & 1 & 1 \\
+1 & 0 & 1 & -1 & | & 0 & 2 & -2 & 1 \\
+1 & 0 & 0 & 1 & | & 2 & 0 & 0 & -1
+\end{pmatrix}
+$$ El objetivo es transforma la matriz de la izquierda en la matriz identidad $I_{4}$. Las columnas resultantes a la derecha serán $T_{1}(e_{1}),T_{1}(e_{2}),T_{1}(e_{3}),T_{1}(e_{4})$ respectivamente.
+
+Comenzamos aplicando $F_{3}\to F_{3}-F_{1},\quad F_{4}\to F_{4}-F_{1}$. $$
+\begin{pmatrix}
+1 & 1 & 0 & 1 & | & 0 & 1 & 0 & -1 \\
+0 & 1 & 1 & 0 & | & 1 & 0 & 1 & 1 \\
+1 & 0 & 1 & -1 & | & 0 & 2 & -2 & 1 \\
+1 & 0 & 0 & 1 & | & 2 & 0 & 0 & -1
+\end{pmatrix}
+\begin{gather}
+F_{3}\to F_{3}-F_{1} \\
+F_{4}\to F_{4}-F_{1}
+\end{gather}
+$$ $$
+\begin{pmatrix}
+1 & 1 & 0 & 1 & | & 0 & 1 & 0 & -1 \\
+0 & 1 & 1 & 0 & | & 1 & 0 & 1 & 1 \\
+0 & -1 & 1 & -2 & | & 0 & 1 & -2 & 2 \\
+0 & -1 & 0 & 0 & | & 2 & -1 & 0 & 0
+\end{pmatrix}
+\begin{gather}
+F_{1}\to F_{1}-F_{2} \\
+F_{3}\to F_{3}+F_{2} \\
+F_{4}\to F_{4}+F_{2}
+\end{gather}
+$$ $$
+\begin{pmatrix}
+1 & 0 & -1 & 1 & | & -1 & 1 & -1 & -2 \\
+0 & 1 & 1 & 0 & | & 1 & 0 & 1 & 1 \\
+0 & 0 & 2 & -2 & | & 1 & 1 & -1 & 3 \\
+0 & 0 & 1 & 0 & | & 3 & -1 & 1 & 1
+\end{pmatrix} F_{3}\to \frac{1}{2}F_{3}
+$$ $$
+\begin{pmatrix}
+1 & 0 & -1 & 1 & | & -1 & 1 & -1 & -2 \\
+0 & 1 & 1 & 0 & | & 1 & 0 & 1 & 1 \\
+0 & 0 & 1 & -1 & | & \frac{1}{2} & \frac{1}{2} & -\frac{1}{2} & \frac{3}{2} \\
+0 & 0 & 1 & 0 & | & 3 & -1 & 1 & 1
+\end{pmatrix}
+\begin{gather}
+F_{1}\to F_{1}+F_{3} \\
+F_{4}\to F_{4}-F_{3} \\
+F_{2}\to F_{2}-F_{3}
+\end{gather}
+$$ $$
+\begin{pmatrix}
+1 & 0 & 0 & 0 & | & -\frac{1}{2} & \frac{3}{2} & -\frac{3}{2} & -\frac{1}{2} \\
+0 & 1 & 0 & 1 & | & \frac{1}{2} & -\frac{1}{2} & \frac{3}{2} & -\frac{1}{2} \\
+0 & 0 & 1 & -1 & | & \frac{1}{2} & \frac{1}{2} & -\frac{1}{2} & \frac{3}{2} \\
+0 & 0 & 0 & 1 & | & \frac{5}{2} & -\frac{3}{2} & \frac{3}{2} & -\frac{1}{2}
+\end{pmatrix}
+\begin{gather}
+F_{2}\to F_{2}-F_{4} \\
+F_{3}\to F_{3}+F_{4}
+\end{gather}
+$$ $$
+\begin{pmatrix}
+1 & 0 & 0 & 0 & | & -\frac{1}{2} & \frac{3}{2} & -\frac{3}{2} & -\frac{1}{2} \\
+0 & 1 & 0 & 0 & | & -2 & 1 & 0 & 0 \\
+0 & 0 & 1 & 0 & | & 3 & -1 & 1 & 1 \\
+0 & 0 & 0 & 1 & | & \frac{5}{2} & -\frac{3}{2} & \frac{3}{2} & -\frac{1}{2}
+\end{pmatrix}
+$$ Hemos conseguido la matriz identidad a la izquierda y a la derecha tenemos la lamtriz asociada la TL $T_{1}$ en las bases canónicas $M_{EE}(T_{1})$. Las **columnas** de $M_{EE}(T_{1})$ son las imágenes de los vectores de la base canónica de $\mathbb{R}⁴$ a través de $T_{1}$. $$
+M_{EE}(T_{1})=\begin{pmatrix}
+-\frac{1}{2} & \frac{3}{2} & -\frac{3}{2} & -\frac{1}{2} \\
+-2 & 1 & 0 & 0 \\
+3 & -1 & 1 & 1 \\
+\frac{5}{2} & -\frac{3}{2} & \frac{3}{2} & -\frac{1}{2}
+\end{pmatrix}
+$$ con esta matriz ya podemos abordar la primera parte del ejercicio: encontrar $Nu(T_{1})$ y la $\mathrm{Im}(T_{1})$ de $T$.
+
+Busquemos $Nu(T_{1})$ armando el siguiente sistema de ecuaciones:
+$$
+\begin{cases}
+-\frac{1}{2}x_{1}+\frac{3}{2}x_{2}-\frac{3}{2}x_{3}-\frac{1}{2}x_{4}=0 & (1), \\
+-2x_{1}+x_{2}=0 & (2), \\
+3x_{1}-x_{2}+x_{3}+x_{4}=0 & (3), \\
+\frac{5}{2}x_{1}-\frac{3}{2}x_{2}+\frac{3}{2}x_{3}-\frac{1}{2}x_{4}=0 & (4).
+\end{cases}
+$$ Armemos la matriz ampliada de este sistema: $$
+\begin{pmatrix}
+-\frac{1}{2} & \frac{3}{2} & -\frac{3}{2} & -\frac{1}{2} & | & 0 \\
+-2 & 1 & 0 & 0 & | & 0 \\
+3 & -1 & 1 & 1 & | & 0 \\
+\frac{5}{2} & -\frac{3}{2} & \frac{3}{2} & -\frac{1}{2} & | & 0
+\end{pmatrix}
+\begin{gather}
+F_{1}\to 2F_{1} \\
+F_{4}\to 2F_{4}
+\end{gather}
+$$ $$
+\begin{pmatrix}
+-1 & 3 & -3 & -1 & | & 0 \\
+-2 & 1 & 0 & 0 & | & 0 \\
+3 & -1 & 1 & 1 & | & 0 \\
+5 & -3 & 3 & -1 & | & 0
+\end{pmatrix}
+\begin{gather}
+F_{2}\to F_{2}-2F_{1}
+\end{gather}
+$$ $$
+\begin{pmatrix}
+-1 & 3 & -3 & -1 & | & 0 \\
+0 & -5 & 6 & 2 & | & 0 \\
+3 & -1 & 1 & 1 & | & 0 \\
+5 & -3 & 3 & -1 & | & 0
+\end{pmatrix}
+\begin{gather}
+F_{3}\to F_{3}+3F_{1} \\
+F_{4}\to F_{4}+5F_{1}
+\end{gather}
+$$ $$
+\begin{pmatrix}
+-1 & 3 & -3 & -1 & | & 0 \\
+0 & -5 & 6 & 2 & | & 0 \\
+0 & 8 & -8 & -2 & | & 0 \\
+0 & 12 & -12 & -6 & | & 0
+\end{pmatrix}
+\begin{gather}
+F_{3}\to \frac{1}{2}F_{3} \\
+F_{4}\to \frac{1}{6}F_{4}
+\end{gather}
+$$ $$
+\begin{pmatrix}
+-1 & 3 & -3 & -1 & | & 0 \\
+0 & -5 & 6 & 2 & | & 0 \\
+0 & 4 & -4 & -1 & | & 0 \\
+0 & 2 & -2 & -1 & | & 0
+\end{pmatrix} F_{2}\leftrightarrow F_{4}
+$$$$
+\begin{pmatrix}
+-1 & 3 & -3 & -1 & | & 0 \\
+0 & 2 & -2 & -1 & | & 0 \\
+0 & 4 & -4 & -1 & | & 0 \\
+0 & -5 & 6 & 2 & | & 0
+\end{pmatrix}
+\begin{gather}
+F_{3}\to F_{3}-2F_{2} \\
+F_{4}\to F_{4}+\frac{5}{2}F_{2}
+\end{gather}
+$$$$
+\begin{pmatrix}
+-1 & 3 & -3 & -1 & | & 0 \\
+0 & 2 & -2 & -1 & | & 0 \\
+0 & 0 & 0 & 1 & | & 0 \\
+0 & 0 & 1 & -\frac{1}{2} & | & 0
+\end{pmatrix}
+\begin{gather}
+F_{3}\leftrightarrow F_{4}
+\end{gather}
+$$ $$
+\begin{pmatrix}
+-1 & 3 & -3 & -1 & | & 0 \\
+0 & 2 & -2 & -1 & | & 0 \\
+0 & 0 & 1 & -\frac{1}{2} & | & 0 \\
+0 & 0 & 0 & 1 & | & 0 \\
+\end{pmatrix}
+$$ De esta forma tenemos la matriz triangulada.
+
+El rango de la matriz de coeficientes $M_{EE}(T_{1})$ es 4. Como la transformación $T_{1}$ va de $\mathbb{R}⁴$ a $\mathbb{R}⁴$, el número de incógnitas ($n$) también es 4.
+
+Si el rango de la matriz de coeficientes ($\rho(M_{EE}(T_{1}))$) es igual al rango de la matriz ampliada ($\rho(M_{EE}(T_{1})|0)$) y es igual al número de incógnitas ($n$), el sistema homogéneo tiene **solución única**.
+
+En un sistema homogéneo, $\rho(A)=\rho(A|b)$ siempre se cumple, ya que la columna de términos independientes es el vector nulo.
+Dado que $\rho(A)=4$ y $n=4$.
+1. La única solución para $A\cdot x=0$ es la solución **trivial** $x_{1}=x_{2}=x_{3}=x_{4}=0$.
+2. $Nu(T_{1})=\{ (0,0,0,0) \}=\{ \vec{0} \}$.
+3. $dim(Nu(T_{1}))=0$.
+
+Ahora calculamos $\mathrm{Im}(T_{1})$ usando el Teorema de la Dimensión: $n=dim(\mathbb{R}^{n})=dim(Nu(T))+dim(Im(T))$. 
+
+Sabemos que $n=dim(\mathbb{R}^n)=4$ y que $dim(Nu(T_{1}))=0$. Por lo tanto, $dim(\mathrm{Im}(T_{1}))=4$.
+
+Ahora tenemos que clasificar a la TL $T:\mathbb{R}⁴\to \mathbb{R}⁴$.
+- Es monomorfismo porque $Nu(T_{1})=\{ \vec{0} \}$.
+- Es epimorfismo porque $dim(\mathrm{Im}(T_{1}))=dim(\mathbb{R}⁴)=4$.
+- Entonces, $T$ es isomorfa porque es un monomorfismo y un epimorfismo al mismo tiempo.
+### Ejercicio 7
+![[Pasted image 20251010230116.png]]
+<mark style="background: #FFB8EBA6;">(b)</mark>
+El objetivo es determinar la fórmula, el espacio de salida y el espacio de llegada para las TL $T$ y $L$.
+1. **Primer paso**: determinar los espacios de salida y llegada.
+2. **Segundo paso**: determinar la fórmula de la TL $T(v)$ y $L(v)$.
+
+Empezamos por la TL $T$.
+La matriz $M_{EE}(T)$ tiene 4 columnas, esto representa el espacio de **salida**. A su vez, la matriz tiene 4 filas que representan el espacio de **llegada**. Por lo que podemos definir $T:\mathbb{R}⁴\to \mathbb{R}⁴$. Ahora podemos determinar su fórmula.
+
+Una transformación lineal $T:\mathbb{R}^n\to \mathbb{R}^m$ puede ser definida mediante el producto de su matriz asociada $A\in \mathbb{R}^{m\times n}$ por el vector de entrada $v\in \mathbb{R}^n$, es decir, $T(v)=A\cdot v$.
+
+Si tomamos un vector genérico $v=(x_{1},x_{2},x_{3},x_{4})\in \mathbb{R}⁴$, debemos calcular el producto matricial de $M_{EE}(T)$ por el vector columna de coordenadas $\begin{bmatrix}v\end{bmatrix}_{E}$:
+$$
+T\begin{pmatrix}
+x_{1} \\
+x_{2} \\
+x_{3} \\
+x_{4}
+\end{pmatrix}=M_{EE}(T)\cdot \begin{pmatrix}
+x_{1} \\
+x_{2} \\
+x_{3} \\
+x_{4}
+\end{pmatrix}=
+\begin{pmatrix}
+2 & 1 & 3 & 0 \\
+-1 & -2 & 0 & 1 \\
+4 & 1 & 0 & 0 \\
+1 & 1 & 0 & -1
+\end{pmatrix}\cdot
+\begin{pmatrix}
+x_{1} \\
+x_{2} \\
+x_{3} \\
+x_{4}
+\end{pmatrix}
+$$ Hacemos los cálculos:
+- Primer componente: $2x_{1}+x_{2}+3x_{3}$.
+- Segunda componente: $-x_{1}-2x_{2}+x_{4}$.
+- Tercera componente: $4x_{1}+x_{2}$.
+- Cuarta componente: $x_{1}+x_{2}-x_{4}$.
+- Armamos la fórmula: $$
+T(x_{1},x_{2},x_{3},x_{4})=\begin{pmatrix}
+2x_{1}+x_{2}+3x_{3} \\
+-x_{1}-2x_{2}+x_{4} \\
+4x_{1}+x_{2} \\
+x_{1}+x_{2}-x_{4}
+\end{pmatrix}
+$$
+Ahora analizamos la TL $L$:
+Comenzamos definiendo sus espacios de salida y de llegada, para eso miramos la cantidad de filas y columnas.
+Como la matriz $M_{EE}(L)$ tiene 2 columnas el espacio de **salida** es 2. A su vez, como tiene 4 filas, el espacio de **llegada** es 4.
+Por lo tanto definimos la TL $L:\mathbb{R²}\to \mathbb{R}⁴$.
+
+Ahora definimos su fórmula.
+
+Si tomamos un vector genérico $v=(x_{1},x_{2})\in \mathbb{R}²$, debemos calcular el producto matricial de $M_{EE}(L)$ por el vector columna de coordenadas $\begin{bmatrix}v\end{bmatrix}_{E}$: 
+$$
+T\begin{pmatrix}
+x_{1} \\
+x_{2} \\
+\end{pmatrix}=M_{EE}(L)\cdot \begin{pmatrix}
+x_{1} \\
+x_{2} \\
+
+\end{pmatrix}=
+\begin{pmatrix}
+1 & 0 \\
+0 & 1 \\
+1 & 1 \\
+1 & 1
+\end{pmatrix}\cdot
+\begin{pmatrix}
+x_{1} \\
+x_{2} \\
+\end{pmatrix}
+$$ Hacemos los cálculos:
+- Primer coordenada: $x_{1}$.
+- Segunda coordenada: $x_{2}$.
+- Tercer coordenada: $x_{1}+x_{2}$.
+- Cuarta coordenada: $x_{1}+x_{2}$.
+- Armamos la fórmula: $L(x_{1},x_{2})=(x_{1},x_{2},x_{1}+x_{2},x_{1}+x_{2})$.
+Aclaración: las fórmulas de $T$ y $L$ estén expresadas de forma distinta para representar distintas formas de expresión. No hay más razonamiento que ese.
+### Ejercicio 8
+![[Pasted image 20251011001737.png]]
