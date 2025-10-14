@@ -836,3 +836,88 @@ $$ Hacemos los cálculos:
 Aclaración: las fórmulas de $T$ y $L$ estén expresadas de forma distinta para representar distintas formas de expresión. No hay más razonamiento que ese.
 ### Ejercicio 8
 ![[Pasted image 20251011001737.png]]
+<mark style="background: #FFB8EBA6;">(a)</mark>
+El ejercicio pide encontrar la fórmula de $F$ y clasificarlo. Comenzamos analizando los datos principales.
+Tenemos el espacio de salida $\mathbb{R}⁴$ con $dim(\mathbb{R}⁴)=4$ y al $Nu(F)$ con $dim(Nu(F))=2$.
+Usando el Teorema de la Dimensión tenemos que $$
+\begin{gather}
+dim(\mathbb{R}⁴)=dim(Nu(F))+dim(\mathrm{Im}(F)) \\
+4 = 2 + dim(\mathrm{Im}(F)) \implies dim(\mathrm{Im}(F))=2
+\end{gather}
+$$ Como $dim(\mathrm{Im}(F))=2$ y $dim(\mathbb{R}³)=3$, podemos decir que la transformación $F$ no es un **epimorfismo** porque $2\neq3$.
+
+Para definir la TL $F$ necesitamos una base de $\mathbb{R}⁴$.
+**Observación**: no podemos utilizar la base canónica de $\mathbb{R}⁴$ en este caso porque no conocemos las dimensiones de esos vectores. Puede ser que en otro ejercicio este dato sea brindado y esta sea una posibilidad.
+
+Podemos utilizar los dos vectores del $Nu(F)$ y el vector brindado en el enunciado porque **conocemos** sus imagenes.
+- $v_{1}=(1,2,0,0)\in Nu(F)\implies F(v_{1})=0$.
+- $v_{2}=(2,1,0,0)\in Nu(F)\implies F(v_{2})=0$.
+- $v_{4}=(0,0,0,1)\implies F(v_{4})=(1,1,1)$.
+Nos hace falta un $v_{3}$ para completar la base $B$. Podemos utilizar el tercer vector canónico de $\mathbb{R}⁴$, $v_{3}=e_{3}=(0,0,1,0)$.
+**Por qué $v_{3}$ y no $e_{1}$ o $e_{2}$**? La clave es la *independencia lineal*. Los vectores $v_{1},v_{2}$ viven completamente en el plano $x_{3}=0$ y $x_{4}=0$ (es decir, en el subespacio generado por $e_{1}$ y $e_{2}$). 
+Si eligieramos $v_{3}=e_{1}=(1,0,0,0)$ o $v_{3}=e_{2}=(0,1,0,0)$:
+El conjunto $\{ v_{1},v_{2},e_{1} \}$ o $\{ v_{1},v_{2},e_{2} \}$ contendría vectores que son combinaciones lineales de los otros, lo cual hace al conjunto **linealmente dependiente**. Por ejemplo, $v_{1}=1\cdot e_{1}+2\cdot e_{2}$. El objetivo de escoger una base es que todos sus vectores sean L.I.
+
+Entonces, tomaremos $v_{3}=e_{3}=(0,0,1,0)$. Ahora debemos conocer su imagen. Por definición, el conjunto de la imagen está generado por las imágenes de los vectores de la base $B=\{ v_{1},v_{2},v_{3},v_{4} \}$: $$
+\begin{gather}
+\mathrm{Im}(f)=gen\{ F(v_{1}),F(v_{2}),F(v_{3}),F(v_{4}) \} \\
+\mathrm{Im}(F)=gen\{ 0,0,F(v_{3}),(1,1,1) \} \\
+\mathrm{Im}(F)=gen\{ F(v_{3}),(1,1,1) \}
+\end{gather}
+$$ Dado que $dim(\mathrm{Im}(F))=2$, necesitamos que los vectores que generan la imagen sean linealmente independientes. Por lo tanto, $F(v_{3})$ debe ser un vector en $\mathbb{R}³$ que sea linealmente independiente de $(1,1,1)$. Además, como $F$ es una TL, cualquier elección de $F(v_{3})$ definirá de forma única a $F$.
+
+Entonces para que $F(v_{3})$ forme parte de $\mathrm{Im}(F)$, $F(v_{3})$ tiene que ser l.i. con respecto al vector $(1,1,1)$. Podemos tomar al vector $(1,0,0)=F(v_{3})$.
+
+Ahora, tenemos una base completa para $\mathbb{R}⁴$ y conocemos la imagen de cada vector de esa base: $B=\{ (1,2,0,0),(2,1,0,0),(0,0,1,0),(0,0,0,1) \}$ donde $$
+\begin{cases}
+F(v_{1})=(0,0,0), \\
+F(v_{2})=(0,0,0), \\
+F(v_{3})=(1,0,0), \\
+F(v_{4})=(1,1,1).
+\end{cases}
+$$ El siguiente paso es expresar cualquier vector genérico de $\mathbb{R}⁴$ como una combinación lineal de los vectores de la base $B$. Esto es: 
+$$
+\begin{gather}
+(x,y,z,w)=\alpha v_{1}+\beta v_{2}+\gamma v_{3}+\delta v_{4} \\
+(x,y,z,w)=\alpha(1,2,0,0)+\beta(2,1,0,0)+\gamma(0,0,1,0)+\delta(0,0,0,1) \\
+(x,y,z,w)=(\alpha+2\beta,2\alpha+\beta,\gamma,\delta) \\
+\text{Armamos un sistema de ecuaciones:} \\
+\begin{cases}
+\alpha+2\beta=x & (1), \\
+2\alpha+\beta=y & (2), \\
+\gamma=z & (3), \\
+\delta=w & (4).
+\end{cases}
+\end{gather}
+$$ Buscamos $\alpha$ en (1): $$
+\begin{gather}
+\alpha+2\beta=x \\
+\alpha=x-2\beta
+\end{gather}
+$$ Reemplazamos $\alpha=x-2\beta$ en (2): $$
+\begin{gather}
+2\alpha+\beta=y \\
+2(x-2\beta)+\beta=y \\
+2x-4\beta+\beta=y \\
+2x-3\beta=y \\
+-3\beta=y-2x \\
+\beta=\frac{1}{-3}y -\frac{2}{-3}x \\
+\beta=-\frac{1}{3}y+\frac{2}{3}x
+\end{gather}
+$$ Ahora que tenemos todos los escalares en función de $x,y,z,w$ tenemos que encontrar la fórmula $F(x,y,z,w)$. Podemos aplicar $F$ a la combinación lineal que define a $(x,y,z,w)$, esto es:
+$$
+\begin{gather}
+F(x,y,z,w)=F(\alpha v_{1}+\beta v_{2}+\gamma v_{3}+\delta v_{4}) \\
+F(x,y,z,w)=\alpha F(v_{1})+\beta F(v_{2})+\gamma F(v_{3})+\delta F(v_{4})
+\end{gather}
+$$ Susituímos $\alpha,\beta,\gamma,\delta$ y las imágenes de $v_{1},v_{2},v_{3},v_{4}$. $$
+\begin{gather} \\
+F(x,y,z,w)=\alpha F(v_{1})+\beta F(v_{2})+\gamma F(v_{3})+\delta F(v_{4}) \\
+F(x,y,z,w)=\left( -\frac{1}{3}x+ \frac{2}{3}y \right)(0,0,0)+\left( \frac{2}{3}x-\frac{1}{3}y \right)(0,0,0)+z(1,0,0)+w(1,1,1) \\
+F(x,y,z,w)=z(1,0,0)+w(1,1,1) \\
+F(x,y,z,w)=(z,0,0)+(w,w,w) \\
+F(x,y,z,w)=(z+w,w,w)
+\end{gather}
+$$
+### Ejercicio 9
+![[Pasted image 20251014204634.png]]![[Pasted image 20251014204648.png]]
