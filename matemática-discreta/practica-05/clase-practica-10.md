@@ -21,7 +21,7 @@ Por definición del grafo complemento, un vértice $v$ es adyacente a un vértic
 El conjunto de vecinos de $v$ en $\overline{G}$, notado $B_{\overline{G}}(v)$, está formado por todos los vértices en $V(G)$ que no son vecinos de $v$ en $G$, excluyendo al propio $v$ (ya que $G$ es simple y no tiene bucles, $v\not\in N_{G}(v)$).
 
 El conjunto de vecinos de $v$ en $\overline{G}$ es $N_{\overline{G}}(v)=V(G)-N_{G}(v)-\{ v \}$.
-El grado en $\overline{G}$ es la cardinalidad de este conjunto: $d_{\overline{G}}=|V(G)|-|N_{G}(v)|-|\{ v \}|$.
+El grado en $\overline{G}$ es la cardinalidad de este conjunto: $d_{\overline{G}}(v)=|V(G)|-|N_{G}(v)|-|\{ v \}|$.
 Sustituyendo las notaciones, se obtiene la expresión final: $d_{\overline{G}}(v)=n-d_{G}(v)-1$.
 
 <mark style="background: #FFB8EBA6;">(B)</mark> Determinar cuántos grafos simples con 7 vértices y 4-regular hay.
@@ -37,3 +37,40 @@ Dado que un ciclo debe tener al menos 3 vértices (para ser simple), las únicas
 Debido a que existe una relación biyectiva (uno a uno) entre los grafos simples $G$ y sus complementos $\overline{G}$, la cantidad de grafos $G$ que cumplen la condición inicial es igual a la cantidad de grafos no isomorfos $\overline{G}$ que encontramos.
 
 Respuesta: existen solamente dos grafos simples con 7 vértices que son 4-regular.
+### Ejercicio 3
+Demostrar que si $G$ es un grafo simple con exactamente $2n$ vértices y $(n-1)$-regular, entonces su complemento $\overline{G}$ es conexo.
+
+Tenemos:
+1. $G$ es un grafo simple.
+2. $|V(G)|=2n$.
+3. $G$ es $(n-1)$-regular: $d_{G}(v)=n-1$ para todo $v\in V(G)$.
+4. $\overline{G}$ es simple y tiene $|V(\overline{G})|=2n$.
+El objetivo es demostrar que el complemento $\overline{G}$ es conexo.
+
+El grado de un vértice $v$ en su complemento es $d_{\overline{G}}(v)=|V(G)|-d_{G}(v)-1$. Si realizamos la sustitución esto quedaría de la siguiente manera: $$
+\begin{gather}
+d_{\overline{G}}(v)=|V(G)|-d_{G}(v)-1 \\
+d_{\overline{G}}(v)=2n-(n-1)-1 \\
+d_{\overline{G}}(v)=2n-n+1-1 \\
+d_{\overline{G}}(v)=n
+\end{gather}
+$$ Entonces, el grafo complemento $\overline{G}$ es un grafo n-regular con $2n$ vértices.
+
+Ahora debemos probar que $\overline{G}$ es **conexo**.
+Para ello, supongamos que $\overline{G}$ es disconexo y busquemos llegar a un absurdo. 
+
+Si $\overline{G}$ es disconexo entonces tenemos como mínimo dos componentes conexas, llamémoslas $H_{1}$ y $H_{2}$.
+
+Sabemos que $\overline{G}$ es n-regular, lo que quiere decir que cada vértice de $\overline{G}$ debe tener grado n, esto también aplica para los vértices pertenecientes a cualquiera de sus componentes conexas. Por lo tanto, $H_{1}$ y $H_{2}$ también son n-regulares.
+
+Dado que no hay aristas entre $H_{1}$ y cualquier otra componente conexa, todas las n aristas de un vértice en $H_{1}$ deben conectarse a otros vértices dentro de $H_{1}$. Sabiendo esto, el **mínimo número de vértices** que debe tener $H_{1}$ es de $n+1$.
+
+Sabiendo que los vértices de $\overline{G}$ se reparten entre $H_{1}$ y $H_{2}$ y posiblemente otras componentes conexas, el **máximo número de vértices** que puede tener $H_{2}$ es de $n-1$. Entonces, el grado más alto que podría tener cualquiera sus vértices es $n-2$. 
+
+Hemos llegado a una contradicción fundamental:
+- Por un lado, dijimos anteriormente que $H_{2}$ debía ser n-regular.
+- Por otro lado, hemos demostrado que el grado de cualquier vértice en $H_{2}$ no puede ser mayor que $n-2$.
+Es lógicamente imposible que el grado de un vértice sea simultáneamente igual a $n$ y a la vez menor o igual que $n-2$.
+
+La contradicción surgió directamente de nuestra suposición inicial de que $\overline{G}$ era disconexo. Dado que esta suposición conduce a una imposibilidad lógica, debe ser falsa. Por lo tanto, la afirmación original debe ser verdadera: el grafo $\overline{G}$ es conexo.
+### Ejercicio 4
