@@ -89,3 +89,21 @@ Estos tres vértices $v_{1},v_{2}$ y $v_{3}$ en $G$ no son vecinos, lo que impli
 Dado que $v_{1},v_{2},v_{3}$ son todos vecinos entre sí en $\bar{G}$, por lo que podemos inducir un subgrafo $C_{3}$ que particularmente tiene longitud impar.
 
 De esta forma queda demostrado que $\bar{G}$ contiene al menos un ciclo impar.
+
+<mark style="background: #FFB8EBA6;">(B)</mark> Todos los subgrafos de un grafo bipartito son bipartitos.
+
+Sea $G$ un grafo bipartito y $H$ un subgrafo de $G$. 
+
+Sabemos lo siguiente:
+- Si $G$ es un grafo bipartito, entonces $G$ no contiene ciclos de longitud impar.
+- $H$ es un subgrafo de $G$. Por lo tanto, tampoco debe contener ciclos de longitud impar.
+
+Supongamos que $H$ contiene un ciclo de longitud impar, llamémoslo $C_{2k+1}$ con $k\in \mathbb{N}$.
+
+Como $C_{2k+1}\subseteq H$ y $H\subseteq G$ entonces $C_{2k+1}\subseteq G$, es decir $G$ contiene un ciclo de longitud impar lo cual es absurdo pues habíamos partido de la base de que **no los tenía** por ser bipartito.
+
+El absurdo provino de suponer que $H$ contiene un ciclo impar, luego no es posible que $H$ contenga un ciclo impar, por lo tanto $H$ es bipartito.
+
+Como el argumento fue realizado para un subgrafo genérico $H$, queda demostrado que todo subgrafo de un grafo bipartito, es bipartito.
+
+<mark style="background: #FFB8EBA6;">(C)</mark> Los grafos simples con al menos una arista que no es de corte tienen por lo menos tres aristas que no son de corte.
