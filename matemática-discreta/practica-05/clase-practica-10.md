@@ -74,3 +74,18 @@ Es lógicamente imposible que el grado de un vértice sea simultáneamente igual
 
 La contradicción surgió directamente de nuestra suposición inicial de que $\overline{G}$ era disconexo. Dado que esta suposición conduce a una imposibilidad lógica, debe ser falsa. Por lo tanto, la afirmación original debe ser verdadera: el grafo $\overline{G}$ es conexo.
 ### Ejercicio 4
+Decidir si las siguientes afirmaciones son verdaderas o falsas. En caso de ser verdaderas, demostrarlas y en caso de ser falsas, exhibir un contraejemplo.
+
+<mark style="background: #FFB8EBA6;">(A)</mark> Si $G$ es un grafo bipartito con al menos cinco vértices, entonces $\overline{G}$ contiene al menos un ciclo impar.
+
+Sabemos que:
+- $G$ es bipartito, es decir, $V(G)$ se puede particionar en dos conjuntos independientes $X,Y$ de forma tal que $V(G)=X\cup Y$ y $X\cap Y=\emptyset$.
+- $|V(G)|\geq5$. Por lo que $|V(G)|=|X|+|Y|\geq{5}$.
+
+Dado que tenemos al menos 5 vértices para colocar en 2 conjuntos, al menos un conjunto debe contener 3 vértices. Entonces, podemos afirmar que el conjunto $X$ tiene al menos tres vértices, llamémoslos $v_{1},v_{2},v_{3}$.
+
+Estos tres vértices $v_{1},v_{2}$ y $v_{3}$ en $G$ no son vecinos, lo que implica que en $\bar{G}$ sí lo son.
+
+Dado que $v_{1},v_{2},v_{3}$ son todos vecinos entre sí en $\bar{G}$, por lo que podemos inducir un subgrafo $C_{3}$ que particularmente tiene longitud impar.
+
+De esta forma queda demostrado que $\bar{G}$ contiene al menos un ciclo impar.
