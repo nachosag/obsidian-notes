@@ -117,3 +117,18 @@ Sabemos que:
 
 Que $G$ tenga al menos una arista que no es de corte, implica que esta arista pertenece a algún ciclo dentro de $G$, sabemos que el ciclo de longitud mínima que puede haber es de longitud 3 eso implica que en $G$ hay por lo menos tres aristas que no son de corte. 
 De esta forma demostramos que la afirmación es verdadera.
+
+<mark style="background: #FFB8EBA6;">(D)</mark> Los grafos conexos sin aristas de corte que tienen al menos una arista tienen al menos un vértice de grado uno.
+
+Sea $G$ un grafo sabemos que:
+- Es conexo.
+- No tiene aristas de corte.
+- Tiene al menos una arista.
+Queremos probar que:
+- $G$ tiene al menos un vértice de grado uno.
+
+Que nuestro grafo $G$ no tenga aristas de corte, implica que todas sus aristas pertenecen a algún ciclo. Como $G$ no necesariamente es simple, implica que pueden existir bucles o aristas múltiples. Esta condición permite que en $G$ puedan llegar a existir ciclos de longitud 1, 2, 3 y así infinitamente. Tomemos un vértice cualquiera del grafo, llamémoslo $v$.
+
+Supongamos que $v$ tiene, particularmente, grado 1. Para que la única arista de $v$ cumpla la premisa (no ser de corte), necesariamente debe estar en un ciclo. La única forma es que sea un **bucle**. Si esa arista es un bucle, entonces $v$ deberá tener grado 2. Esto es absurdo ya que $v$ no puede tener grado 1 y grado 2 a la vez.
+
+De esta forma, demostramos que la afirmación es falsa.
