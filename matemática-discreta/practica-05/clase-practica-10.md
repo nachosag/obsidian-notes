@@ -107,3 +107,13 @@ El absurdo provino de suponer que $H$ contiene un ciclo impar, luego no es posib
 Como el argumento fue realizado para un subgrafo genérico $H$, queda demostrado que todo subgrafo de un grafo bipartito, es bipartito.
 
 <mark style="background: #FFB8EBA6;">(C)</mark> Los grafos simples con al menos una arista que no es de corte tienen por lo menos tres aristas que no son de corte.
+
+Sea $G$ un grafo simple con al menos una arista que **no es de corte**. Nos piden demostrar que $G$ tiene, por lo menos, tres aristas que no son de corte.
+
+Sabemos que:
+- $G$ no tiene bucles ni aristas múltiples por la definición de grafo simple.
+- El grafo ciclo de longitud mínima que puede estar incluido en $G$ es de longitud 3.
+- *Caracterización*: Una arista es de corte si y solo si **no pertenece a ningún ciclo**.
+
+Que $G$ tenga al menos una arista que no es de corte, implica que esta arista pertenece a algún ciclo dentro de $G$, sabemos que el ciclo de longitud mínima que puede haber es de longitud 3 eso implica que en $G$ hay por lo menos tres aristas que no son de corte. 
+De esta forma demostramos que la afirmación es verdadera.
