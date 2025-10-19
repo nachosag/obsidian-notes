@@ -78,8 +78,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5,
-    "collapsed": true
+    "width": 309.5
   },
   "right": {
     "id": "60744be18a06282d",
@@ -172,8 +171,9 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "332ac30f2287b068",
+  "active": "696b8c848afd1155",
   "lastOpenFiles": [
+    "matemática-discreta/practica-01",
     "algebra-lineal/practica-06/practica-06-e01-13.md",
     "matemática-discreta/practica-05/clase-practica-10.md",
     "matemática-discreta/practica-05",
@@ -207,7 +207,7 @@
     "Excalidraw/Drawing 2025-09-10 22.27.52.excalidraw.md",
     "Excalidraw/Drawing 2025-09-09 00.29.29.excalidraw.md",
     "Excalidraw/Drawing 2025-09-08 22.01.08.excalidraw.md",
-    "matemática-discreta/practica-01.md",
+    "matemática-discreta/practica-01/practica-01.md",
     "2025-08-29.md",
     "Untitled.canvas",
     "Currículums/Desarrollador de Software - Ignacio Borlenghi - ES.md",
