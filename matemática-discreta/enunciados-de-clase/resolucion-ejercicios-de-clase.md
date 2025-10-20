@@ -14,7 +14,7 @@ Luego $G-v$ es un grafo simple que no contiene un ciclo impar. Por *Caracterizac
 Ahora falta demostrar que $G-v$ tiene al menos una arista. Si el menor ciclo es de tamaño 3, entonces en él hay al menos tres aristas. Al eliminar el vértice $v$ (que pertenece al ciclo impar) también se eliminan las dos aristas incidentes en él, pero luego queda como subgrafo del ciclo un camino $P_{k}$ con $k\geq{2}$ que contiene al menos una arista. Es por esto que $G-v$ tiene al menos una arista.
 ### Ejercicio 34
 Considere el siguiente grafo $G$.
+![[Pasted image 20251019220337.png]]
 1. Decidir si $G$ es bipartito.
 2. Hallar $A(G[T])$ siendo $T=\{ v_{1},v_{2},v_{4},v_{6} \}$.
-![[grafo-ejercicio-34.png]]
 
