@@ -4,21 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "025d8126ad2b4716",
+        "id": "4acdc7aef9cb3972",
         "type": "tabs",
         "children": [
           {
-            "id": "76e859fe707bfb62",
+            "id": "5d0b5d00e2b3893e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "matematica-discreta/practica-06/practica-06.md",
-                "mode": "source",
-                "source": false
+                "file": "matematica-discreta/practica-02/practica-02-MD.pdf"
               },
-              "icon": "lucide-file",
-              "title": "practica-06"
+              "icon": "lucide-file-text",
+              "title": "practica-02-MD"
             }
           }
         ]
@@ -171,54 +169,53 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "76e859fe707bfb62",
+  "active": "5d0b5d00e2b3893e",
   "lastOpenFiles": [
+    "matematica-discreta/practica-01/practica-01.md",
+    "algebra-lineal/practica-02/practica-02-e01-10.md",
+    "algebra-lineal/practica-01/practica-01-AL.pdf",
+    "algebra-lineal/practica-07/Practica_7_AL.pdf",
+    "matematica-discreta/practica-07",
+    "matematica-discreta/practica-07/practica-07-MD.pdf",
+    "matematica-discreta/practica-06/practica-06-MD.pdf",
+    "matematica-discreta/practica-05/practica-05-MD.pdf",
+    "matematica-discreta/practica-04/practica-04-MD.pdf",
+    "matematica-discreta/practica-04",
+    "matematica-discreta/practica-03/practica-03-MD.pdf",
+    "matematica-discreta/practica-02/practica-02-MD.pdf",
+    "matematica-discreta/practica-06/practica-06.md",
     "matematica-discreta/practica-05/clase-practica-10.md",
     "matematica-discreta/enunciados-de-clase/resolucion-ejercicios-de-clase.md",
-    "matematica-discreta/practica-06/practica-06.md",
     "matematica-discreta/practica-05/practica-05.md",
-    "matematica-discreta/practica-06",
     "matematica-discreta/practica-05/Anexos/Pasted image 20251025210912.png",
     "matematica-discreta/Anexos/Pasted image 20251025210437.png",
-    "matematica-discreta/practica-01/practica-01.md",
-    "matematica-discreta/practica-05/Anexos",
     "matematica-discreta/practica-05/Anexos/Pasted image 20251025210708.png",
     "test.md",
     "Pasted image 20251025204313.png",
     "algebra-lineal/practica-04/practica-04-e01-27.md",
     "matematica-discreta/test-2.md",
-    "matematica-discreta/Anexos",
     "algebra-lineal/practica-02/practica-02-e11-25.md",
     "matemática-discreta/practica-05/Anexos/Pasted image 20251025204315.png",
-    "matemática-discreta/practica-05/Anexos",
     "Excalidraw/Drawing 2025-10-25 20.32.17.excalidraw.md",
     "matemática-discreta/practica-05/Anexos/Pasted image 20251025203601.png",
     "matemática-discreta/practica-05/Anexos/Pasted image 20251025203500.png",
     "matemática-discreta/practica-05/Anexos/Pasted image 20251025201852.png",
     "matemática-discreta/practica-05/Anexos/Pasted image 20251025202219.png",
     "matemática-discreta/practica-01/Anexos/Pasted image 20251025202121.png",
-    "matemática-discreta/practica-01/Anexos",
-    "matemática-discreta/enunciados-de-clase/Anexos",
     "algebra-lineal/practica-06/practica-06-e01-13.md",
     "Excalidraw/Drawing 2025-10-19 22.16.06.excalidraw.md",
     "home/nachosag/vault/matemática-discreta/enunciados-de-clase/Anexos.md",
-    "home/nachosag/vault/matemática-discreta/enunciados-de-clase",
-    "home/nachosag/vault/matemática-discreta",
-    "home/nachosag/vault",
-    "home/nachosag",
     "matemática-discreta/enunciados-de-clase/asdasd.md",
     "algebra-lineal/practica-05/practica-05-e01-26.md",
     "pasted.md",
     "algebra-lineal/practica-03/practica-03-e01-20.md",
     "Excalidraw/Drawing 2025-09-16 18.39.11.excalidraw.md",
     "Excalidraw/calculos-auxiliares.md",
-    "algebra-lineal/practica-02/practica-02-e01-10.md",
     "Excalidraw/Drawing 2025-09-10 22.33.16.excalidraw.md",
     "Excalidraw/Drawing 2025-09-10 22.27.52.excalidraw.md",
     "Excalidraw/Drawing 2025-09-09 00.29.29.excalidraw.md",
     "Excalidraw/Drawing 2025-09-08 22.01.08.excalidraw.md",
     "2025-08-29.md",
-    "Untitled.canvas",
-    "Currículums/Desarrollador de Software - Ignacio Borlenghi - ES.md"
+    "Untitled.canvas"
   ]
 }
