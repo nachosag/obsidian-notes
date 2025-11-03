@@ -238,187 +238,166 @@ S = \{ z_{1},z_{2} \}
 \end{gather}
 $$
 <mark style="background: #FFB8EBA6;">(c)</mark> 
-<mark style="background: #FFB86CA6;">Resuelto con la forma binómica</mark>
+Debemos hallar todos los $z\in \mathbb{C}$ tales que $z^{2}=1+i$.
+
+Asumimos que $z=a+bi$ donde $a$ es la parte real y $b$ es la parte imaginaria.
+
+Dos números complejos $z,w$ son iguales si:
+- $|z|=|w|$.
+- $\mathrm{Re}(z)=\mathrm{Re}(w)$.
+- $\mathrm{Im}(z)=\mathrm{Im}(w)$.
+
+Igualamos sus módulos:
 $$
 \begin{gather}
-z² = 1 + i \\
-(a + bi)² = 1 + i \\
-a² + 2abi + (bi)² = 1 + i \\
-a² + 2abi + b² \cdot i² = 1 + i \\
-a² + 2abi - b² = 1 + i \\
-\text{Igualamos la parte real e imaginaria} \\
-\text{Parte real: } a² - b² = 1 & (1) \\
-\text{Parte imaginaria: } 2ab = 1 & (2) \\
+|z^{2}|=|1+i| \\
+|z|^{2}=|1+i| \\
+|z|^{2}=\sqrt{ 1^{2}+1^{2} } \\
+|z|^{2}=\sqrt{ 1+1 } \\
+|z|^{2}=\sqrt{ 2 } \\
+\left( \sqrt{ a^{2}+b^{2} } \right) ^{2}=\sqrt{ 2 } \\
+\boxed{a^{2}+b^{2}=\sqrt{ 2 }}
 \end{gather}
-$$ Tratamos de despejar $b$ en la ecuación $(2)$.
+$$
+Igualamos su parte real e imaginaria.
+$$
+z^{2}=1+i \leftrightarrow (a+bi)^{2}=1+i \leftrightarrow a^{2}+2abi+(bi)^{2}=1+i \leftrightarrow a^{2}+2abi-b^{2}=1+i
+$$
+- Parte real: $a^{2}-b^{2}=1$.
+- Parte imaginaria: $2ab=1$.
+
+Ahora tenemos las siguientes ecuaciones:
+$$
+\begin{cases}
+a^{2}+b^{2}=\sqrt{ 2 } & (1), \\
+a^{2}-b^{2}=1 & (2), \\
+2ab=1 & (3) \implies ab=\frac{1}{2}
+\end{cases}
+$$
+Buscamos $a$ **sumando** $(1)$ y $(2)$.
 $$
 \begin{gather}
-2ab = 1 \\
-ab = \frac{1}{2} \\
-\text{Supongamos que }a\neq0 \\
-b = \frac{\frac{1}{2}}{a} \\
- \\
-\boxed{b = \frac{1}{2a}}
+a^{2}+b^{2}+a^{2}-b^{2}=\sqrt{ 2 }+1 \\
+2a^{2}=\sqrt{ 2 }+1 \\
+a^{2}=\frac{\sqrt{ 2 }+1}{2} \\
+\sqrt{ a^{2} }=\sqrt{ \frac{\sqrt{ 2 }+1}{2} } \\
+\boxed{a=\pm \sqrt{ \frac{\sqrt{ 2 }+1}{2} }}
 \end{gather}
-$$ Sustituimos $b = \frac{1}{2a}$ en la ecuación $(1)$.
+$$
+Buscamos $b$ **restando** $(1)$ y $(2)$.
 $$
 \begin{gather}
-a² - b² = 1 \\
-a² - \left( \frac{1}{2a} \right)² = 1 \\
-a² - \left( \frac{1²}{(2a)²} \right) = 1 \\
-a² - \frac{1}{4a²} = 1 \\
-4a² \left( a² - \frac{1}{4a²} \right) = 4a² \\
-4a⁴ - 1 = 4a² \\
-4a⁴ - 4a² - 1 = 0 \\
- \\
-\text{Llamamos }u=a² \\
- \\
-4u² - 4u - 1 = 0 \\
- \\
-\text{Aplicamos la formula resolvente con } a=4, b=-4, c=-1 \\
- \\
-u = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a} \\
-u = \frac{-(-4) \pm \sqrt{(-4)^2 - 4*4*(-1)}}{2*4} \\
-u = \frac{4 \pm \sqrt{ 16 + 16 }}{8} \\
-u = \frac{4 \pm \sqrt{ 32 }}{8} \\
-\end{gather}
-$$ Buscamos las raíces.
-$$
-a²=u_{1} = \frac{4 + \sqrt{ 32 }}{8} = \\
-\frac{4 + \sqrt{ 2\cdot 16 }}{8} = \\
-\frac{4 + \sqrt{ 2 } \cdot \sqrt{ 16 }}{8} = \\
-\frac{4 + \sqrt{ 2 } \cdot 4}{8} = \\
-\frac{4 + 4\sqrt{ 2 }}{8} = \\
-\frac{1 + \sqrt{ 2 }}{2}
-$$
-$$
-a²=u_{2} = \frac{4 - \sqrt{ 32 }}{8} = \frac{4 - \sqrt{ 2\cdot{16} }}{8} = \frac{4 - \sqrt{ 2 }\cdot \sqrt{ 16 }}{8} = \frac{4 - \sqrt{ 2 }\cdot{4}}{8} = \frac{1 - \sqrt{ 2 }}{2}
-$$
-Como $\sqrt{ 2 }\simeq 1.414$, el numerador $1-\sqrt{ 2 }$ es negativo. Esto implica que $u_{2}$ no sea una solución válida porque en el conjunto de los números reales, el cuadrado de cualquier número **nunca** puede ser negativo. Por lo tanto, nos quedamos con $u_{1} =\frac{1+\sqrt{ 2 }}{2}$, lo que nos da dos valores reales para $a=\pm \sqrt{ \frac{1+\sqrt{ 2 }}{2} }$.
-
-Volvamos con la ecuación $(2)$. Sabemos que el producto entre $a$ y $b$ tiene dar un valor **positivo**, el $\frac{1}{2}$.
-- Si $a>0$, entonces $b>0$.
-- Si $a<0$, entonces $b<0$.
-
-Recordemos:
-- $b=\frac{1}{2a}$.
-- $a²=u_{1}=\frac{1+\sqrt{ 2 }}{2}$.
-- Importante: si sustituimos $a$ en $b$ directamente, obtendremos una expresión muy compleja, por lo que es conveniente buscar una expresión más sencilla.
-
-Entonces, elevemos $b$ al cuadrado y luego sustituyamos $a²$ por $u_{1}$.
-$$
-\begin{gather}
-b²= \\
- \\
-\left( \frac{1}{2a} \right)² = \\
- \\
-\frac{1²}{4a²} = \\
- \\
-\frac{1}{4u_{1}} = \\
- \\
-\frac{1}{4\cdot\left( \frac{1+\sqrt{ 2 }}{2} \right)} = \\
- \\
-\frac{1}{2\cdot(1+\sqrt{ 2 })} = \\
- \\
-\frac{1}{2\cdot(1+\sqrt{ 2 })}\cdot \frac{1-\sqrt{ 2 }}{1-\sqrt{ 2 }} = \\
- \\
-\frac{1-\sqrt{ 2 }}{2\cdot(1+\sqrt{ 2 })(1-\sqrt{ 2 })} = \\
- \\
-\text{Formula de la diferencia de cuadrados: }(x+y)(x-y)=x²-y² \\
- \\
-\frac{1-\sqrt{ 2 }}{2\cdot(1²-(\sqrt{ 2 })²)} = \\
- \\
-\frac{1-\sqrt{ 2 }}{2\cdot(1-2)} = \\
- \\
-\frac{1-\sqrt{ 2 }}{2\cdot(-1)} = \\
- \\
-\frac{1-\sqrt{ 2 }}{-2} = \\
- \\
-\frac{-1+\sqrt{ 2 }}{2}
+a^{2}+b^{2}-(a^{2}-b^{2})=\sqrt{ 2 }-1 \\
+a^{2}+b^{2}-a^{2}+b^{2}=\sqrt{ 2 }-1 \\
+2b^{2}=\sqrt{ 2 }-1 \\
+b^{2}=\frac{\sqrt{ 2 }-1}{2} \\
+\sqrt{ b^{2} }=\sqrt{ \frac{\sqrt{ 2 }-1}{2} } \\
+\boxed{b=\pm \sqrt{ \frac{\sqrt{ 2 }-1}{2} }}
 \end{gather}
 $$
-De esta forma encontramos las expresiones finales para:
-- $a²=\frac{\sqrt{ 2 }+1}{2}$.
-- $b²=\frac{\sqrt{ 2 }-1}{2}$.
+Notemos que la ecuación $(3)$ indica que $ab$ debe dar como resultado un número **positivo**. Esto es posible si y solo si $a,b>0$ o $a,b<0$. Por lo tanto:
+$$
+z_{1}=\sqrt{ \frac{\sqrt{ 2 }-1}{2} }+i\sqrt{ \frac{\sqrt{ 2 }-1}{2} }
+$$
+$$
+z_{2}=-\sqrt{ \frac{\sqrt{ 2 }-1}{2} }-i\sqrt{ \frac{\sqrt{ 2 }-1}{2} }
+$$
+<mark style="background: #FFB8EBA6;">(d)</mark>
+El objetivo es encontrar las raíces de la ecuación compleja $z^2 = -2i$.
 
-Para encontrar $a$ y $b$, tomamos la raíz cuadrada de cada expresión:
-$$
-a = \pm \sqrt{ \frac{\sqrt{ 2 }+1}{2} },\quad b = \pm \sqrt{ \frac{\sqrt{ 2 }-1}{2} }
-$$
-Utilizando la regla de los signos que observamos anteriormente, tenemos dos soluciones para $z=a+bi$.
-1. Ambos positivos: $$
-z_{1} = \sqrt{ \frac{\sqrt{ 2 }+1}{2} } + i \sqrt{ \frac{\sqrt{ 2 }-1}{2} }
-$$
-2. Ambos negativos: $$
-z_{2} = - \sqrt{ \frac{\sqrt{ 2 }+1}{2} } - i \sqrt{ \frac{\sqrt{ 2 }-1}{2} }
-$$
-Por lo tanto, $S=\{ z_{1},z_{2} \}$.
+##### Paso 1: Establecer la Forma General de la Solución
 
-<mark style="background: #FFB86CA6;">Resuelto con la forma trigonométrica</mark>
-La ecuación a resolver es: 
-$$
-z² = 1 + i
-$$
-El proceso se basa en los siguientes pasos:
-1. Convertir el número complejo del lado derecho a su forma trigonométrica.
-2. Aplicar la fórmula de las raíces de Moivre.
+Asumimos que la solución $z$ es un número complejo en su forma binómica:
 
-Hagamos el primer paso.
-Primero, trabajemos con $w = 1 + i$ . Necesitamos encontrar su **módulo** $r$ y su **argumento** $\theta$ para poder expresarlo en forma trigonométrica.
-- El módulo $r$ se calcula como $r=|w|=\sqrt{ x²+y² }=\sqrt{ 1²+1² }=\sqrt{ 1+1 }=\sqrt{ 2 }$.
-- El argumento $\theta$ se calcula como $\theta=\tan ^{-1}\left( \frac{1}{1} \right)=45°=\frac{45°}{\pi}=\frac{1}{4}\pi$.
+$$z = a + bi$$
 
-Armamos la forma trigonométrica de $w=1+i$.
-$$
-\begin{gather}
-w = \\
-r \left( \cos \theta + i \sin \theta \right) = \\
-\boxed{\sqrt{ 2 } \left( \cos\left( \frac{\pi}{4} \right) + i \sin\left( \frac{\pi}{4} \right) \right)} 
-\end{gather}
-$$ Ahora, para resolver $z²=w$, necesitamos encontrar las raíces cuadradas $(n=2)$ de $w$. Para eso usamos la Fórmula de De Moivre: para las Raíces 
-$$
-z_{k}= \sqrt[n]{ r } \left( \cos\left( \frac{\theta+2k\pi}{n} \right)+i\sin \left( \frac{\theta+2k\pi}{n} \right)  \right) 
-$$ donde $k=0,1,\dots,n-1$. Para $n=2$, tendremos dos raíces $z_{0},z_{1}$.
+donde $a$ es la parte real y $b$ es la parte imaginaria.
 
-Reemplacemos nuestros datos en la formula de Moivre
-$$
-\begin{gather}
-z_{k} = \sqrt[2]{ \sqrt{ 2 } }\left( cos\left( \frac{\frac{\pi}{4}+2k\pi}{2} \right) + i \sin\left( \frac{\frac{\pi}{4}+2k\pi}{2} \right) \right)  \\
- \\
-\text{Recordemos } \sqrt[m]{ a } = a^m 
- \\
- \\
-z_{k} = (2^{1/2})^{1/2}\left( cos\left( \frac{\frac{\pi}{4}+2k\pi}{2} \right) + i \sin\left( \frac{\frac{\pi}{4}+2k\pi}{2} \right) \right) \\
- \\
-z_{k} = 2^{1/4}\left( cos\left( \frac{\frac{\pi}{4}+2k\pi}{2} \right) + i \sin\left( \frac{\frac{\pi}{4}+2k\pi}{2} \right) \right) \\
- \\
-z_{k} = \sqrt[4]{ 2 }\left( cos\left( \frac{\frac{\pi}{4}+2k\pi}{2} \right) + i \sin\left( \frac{\frac{\pi}{4}+2k\pi}{2} \right) \right) \\
- \\
-\end{gather}
-$$
-Calculemos $z_{0}$ usando $k=0$.
-Sustituimos $k=0$ en el argumento del coseno y seno:
-$$
-\frac{\left( \frac{\pi}{4}+2\cdot{0}\cdot \pi \right)}{2} = \frac{\frac{\pi}{4}}{2} = \frac{\pi}{4}\cdot \frac{1}{2} = \frac{\pi}{8}
-$$ Sustituimos en la expresión original
-$$
-z_{0}=\sqrt[4]{ 2 }\left( \cos\left( \frac{\pi}{8} \right)i\sin\left( \frac{\pi}{8} \right) \right)
-$$
-Calculamos $z_{1}$ usando $k=1$.
-Sustituimos $k=1$ en el argumento del coseno y seno:
-$$
-\frac{\frac{\pi}{4}+2\cdot{1}\cdot \pi}{2} = \frac{\frac{\pi}{4}+2\pi}{2} = \frac{\frac{9}{4}\pi}{2} = \frac{9}{8}\pi
-$$ Podemos simplificar esta expresión si recordamos que dividir por $2$ es lo mismo que multiplicar por $\frac{1}{2}$.
-Sustituimos en la expresión original
-$$
-z_{1}=\sqrt[4]{ 2 }\left( \cos\left( \frac{9\pi}{8} \right)+i\sin\left( \frac{9\pi}{8} \right) \right)
-$$
-Resumen del proceso:
+##### Paso 2: Usar la Condición del Módulo
 
-|**Paso**|**Operación**|**Resultado de z**|
-|---|---|---|
-|**1. Módulo de $w=1+i$**|$r = \sqrt{1^2 + 1^2}$|$r = \sqrt{2}$|
-|**2. Argumento de $w=1+i$**|$\theta = \arctan(1)$|$\theta = \frac{\pi}{4}$|
-|**3. Módulo de las raíces ($n=2$)**|$\sqrt[n]{r} = \sqrt{\sqrt{2}}$|$\sqrt[4]{2}$|
-|**4. Argumento $z_0$ ($k=0$)**|$\frac{\theta}{2} = \frac{\pi/4}{2}$|$\frac{\pi}{8}$|
-|**5. Argumento $z_1$ ($k=1$)**|$\frac{\theta + 2\pi}{2} = \frac{9\pi/4}{2}$|$\frac{9\pi}{8}$|
+Para que dos números complejos sean iguales, sus módulos (o magnitudes) también deben serlo. Esto nos permite establecer una relación entre $a$ y $b$:
+
+1. **Calculamos el módulo de** $z^2$ **y de** $-2i$**:**$$|z^2| = |-2i|$$
+2. **Aplicamos propiedades:** Dado que $|z^2| = |z|^2$, y el módulo de un número complejo puro imaginario $0 - 2i$ es $\sqrt{0^2 + (-2)^2}$:$$|z|^2 = \sqrt{0^2 + (-2)^2}$$$$|z|^2 = \sqrt{4}$$$$|z|^2 = 2$$
+3. **Relacionamos con** $a$ **y** $b$**:** Sustituimos $|z| = \sqrt{a^2 + b^2}$:$$(\sqrt{a^2 + b^2})^2 = 2$$$$\boxed{a^2 + b^2 = 2} \quad \text{(Ecuación I)}$$Esta ecuación relaciona las magnitudes de las partes real e imaginaria de la solución.   
+##### Paso 3: Igualar las Partes Real e Imaginaria
+
+Expandimos la ecuación original $z^2 = -2i$ sustituyendo $z = a + bi$:
+
+$$(a + bi)^2 = -2i$$
+
+1. **Desarrollamos el binomio:** $$a^2 + 2abi + (bi)^2 = -2i$$$$a^2 + 2abi + b^2i^2 = -2i$$
+  Recordando que $i^2 = -1$:$$a^2 + 2abi - b^2 = -2i$$
+2. **Agrupamos Partes Reales e Imaginarias:** Escribimos el resultado en la forma (Real) + (Imaginaria):$$(a^2 - b^2) + (2ab)i = 0 - 2i$$
+3. **Establecemos el Sistema de Ecuaciones:** Para que dos números complejos sean iguales, sus partes reales deben ser iguales, y sus partes imaginarias deben ser iguales.    $$\text{Parte Real: } \quad \boxed{a^2 - b^2 = 0} \quad \text{(Ecuación II)}$$$$\text{Parte Imaginaria: } \quad \boxed{2ab = -2} \quad \text{(Ecuación III)}$$
+##### Paso 4: Resolver el Sistema de Ecuaciones
+
+Ahora resolvemos el sistema de las Ecuaciones I y II.
+$$\begin{cases} a^2 + b^2 = 2 \quad (\text{I}) \\ a^2 - b^2 = 0 \quad (\text{II}) \end{cases}$$
+1. **Sumamos (I) y (II):** Esta operación elimina $b^2$.   $$(a^2 + b^2) + (a^2 - b^2) = 2 + 0$$$$2a^2 = 2$$$$a^2 = 1 \implies \mathbf{a = 1} \quad \text{o} \quad \mathbf{a = -1}$$
+2. **Usamos (II) para encontrar** $b$**:** Como $a^2 - b^2 = 0$, se tiene que $a^2 = b^2$, lo que implica que $|a| = |b|$.
+3. **Usamos la Ecuación III para determinar los signos:** La Ecuación III ($2ab = -2$) es crucial, ya que se simplifica a $ab = -1$.
+- Esto significa que el producto de $a$ y $b$ es negativo. Por lo tanto, $a$ y $b$ **deben tener signos opuestos**.
+
+**Caso 1: Si** $a = 1$ Sustituimos en $ab = -1$:
+
+$$1 \cdot b = -1 \implies b = -1$$
+
+La primera solución es: $\mathbf{z_1 = 1 - i}$
+
+**Caso 2: Si** $a = -1$ Sustituimos en $ab = -1$:
+$$-1 \cdot b = -1 \implies b = 1$$
+
+La segunda solución es: $\mathbf{z_2 = -1 + i}$
+##### Conclusión
+Las dos raíces cuadradas de $z^2 = -2i$ son:
+
+$$\mathbf{z_1 = 1 - i} \quad \text{y} \quad \mathbf{z_2 = -1 + i}$$
+<mark style="background: #FFB8EBA6;">(e)</mark>
+El objetivo es encontrar los valores de $z$ que satisfacen la ecuación.
+##### Paso 1: Reordenar y Establecer la Forma Estándar
+Primero, reescribimos la ecuación en la forma estándar de una ecuación cuadrática compleja, $Az^2 + Bz + C = 0$:
+$$z^2 = 2iz - 2i$$$$z^2 - 2iz + 2i = 0$$
+Identificamos los coeficientes complejos:
+- $A = 1$.
+- $B = -2i$.
+- $C = 2i$.
+##### Paso 2: Aplicar la Fórmula Cuadrática
+Utilizamos la fórmula general para la solución de ecuaciones cuadráticas:
+$$z = \frac{-B \pm \sqrt{B^2 - 4AC}}{2A}$$
+##### Paso 3: Calcular el Discriminante ($\Delta$)
+El término bajo la raíz, llamado discriminante, es $\Delta = B^2 - 4AC$. Su valor nos indicará las características de las soluciones.
+$$\Delta = (-2i)^2 - 4(1)(2i)$$$$\Delta = (4i^2) - 8i$$$$\Delta = 4(-1) - 8i$$$$\Delta = -4 - 8i$$
+El discriminante es un número complejo: $\Delta = -4 - 8i$.
+##### Paso 4: Encontrar la Raíz Cuadrada del Discriminante ($\sqrt{\Delta}$)
+Este es el paso más laborioso. Debemos encontrar un número complejo $w = x + yi$ tal que $w^2 = \Delta = -4 - 8i$.
+
+Expandimos $w^2$ e igualamos las partes (real, imaginaria y módulo):
+##### 4.1. Sistema de Ecuaciones
+
+De la igualdad $(x^2 - y^2) + (2xy)i = -4 - 8i$, obtenemos:
+
+1. **Parte Real:**$$x^2 - y^2 = -4 \quad (\text{Ecuación I})$$
+2. **Parte Imaginaria:**$$2xy = -8 \implies xy = -4 \quad (\text{Ecuación II})$$Esto nos dice que $x$ e $y$ deben tener signos opuestos.
+3. **Módulo (Relación de Magnitud):**$$|w|^2 = |\Delta|$$$$x^2 + y^2 = \sqrt{(-4)^2 + (-8)^2} = \sqrt{16 + 64} = \sqrt{80}$$$$\boxed{x^2 + y^2 = 4\sqrt{5}} \quad (\text{Ecuación III})$$
+##### 4.2. Resolución del Sistema
+Sumamos (I) y (III) para despejar $x^2$:
+$$(x^2 - y^2) + (x^2 + y^2) = -4 + 4\sqrt{5}$$$$2x^2 = 4\sqrt{5} - 4$$$$x^2 = 2\sqrt{5} - 2$$$$x = \pm \sqrt{2\sqrt{5} - 2}$$
+Restamos (I) de (III) para despejar $y^2$:
+$$(x^2 + y^2) - (x^2 - y^2) = 4\sqrt{5} - (-4)$$$$2y^2 = 4\sqrt{5} + 4$$$$y^2 = 2\sqrt{5} + 2$$$$y = \pm \sqrt{2\sqrt{5} + 2}$$
+##### 4.3. Las Raíces Cuadradas ($\pm w$)
+Como $xy = -4$ (Ecuación II), $x$ e $y$ deben tener signos opuestos. Las dos raíces cuadradas de $\Delta$ son:
+
+$$\mathbf{w_1} = \left(\sqrt{2\sqrt{5} - 2}\right) - i \left(\sqrt{2\sqrt{5} + 2}\right)$$$$\mathbf{w_2} = -\left(\sqrt{2\sqrt{5} - 2}\right) + i \left(\sqrt{2\sqrt{5} + 2}\right) \quad (\text{o } w_2 = -w_1)$$
+##### Paso 5: Sustituir en la Fórmula General
+Finalmente, sustituimos $B = -2i$, $2A = 2$ y las raíces $\pm w$ en la fórmula:
+
+$$z = \frac{-(-2i) \pm w}{2} = \frac{2i \pm w}{2}$$
+##### 5.1. Solución $z_1$ (Usando $+w_1$):
+
+$$z_1 = \frac{2i + \left(\sqrt{2\sqrt{5} - 2} - i\sqrt{2\sqrt{5} + 2}\right)}{2}$$
+Agrupamos la parte real y la imaginaria:
+$$z_1 = \frac{\sqrt{2\sqrt{5} - 2}}{2} + i \left( \frac{2 - \sqrt{2\sqrt{5} + 2}}{2} \right)$$$$\boxed{z_1 = \frac{\sqrt{2\sqrt{5} - 2}}{2} + i \left( 1 - \frac{\sqrt{2\sqrt{5} + 2}}{2} \right)}$$
+##### 5.2. Solución $z_2$ (Usando $-w_1$ o $+w_2$):
+$$z_2 = \frac{2i - \left(\sqrt{2\sqrt{5} - 2} - i\sqrt{2\sqrt{5} + 2}\right)}{2}$$$$z_2 = \frac{-\sqrt{2\sqrt{5} - 2}}{2} + i \left( \frac{2 + \sqrt{2\sqrt{5} + 2}}{2} \right)$$$$\boxed{z_2 = -\frac{\sqrt{2\sqrt{5} - 2}}{2} + i \left( 1 + \frac{\sqrt{2\sqrt{5} + 2}}{2} \right)}$$
+### Ejercicio 7

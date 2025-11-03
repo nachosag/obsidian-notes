@@ -2,7 +2,7 @@
   "tabSize": 2,
   "showLineNumber": true,
   "strictLineBreaks": true,
-  "attachmentFolderPath": "./Anexos",
+  "attachmentFolderPath": "./anexos",
   "pdfExportSettings": {
     "includeName": true,
     "pageSize": "A4",
