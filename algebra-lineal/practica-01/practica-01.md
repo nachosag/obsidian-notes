@@ -532,3 +532,179 @@ El factor $z_{2}=-\sqrt{ 3 }+i$ en el plano complejo es el punto $(a,b)=(-\sqrt{
 - Hacemos el ajuste $\theta_{2}=\pi-\alpha_{2}=\pi-\frac{\pi}{6}=\frac{6}{6}\pi-\frac{1}{6}\pi=\frac{6-1}{6}\pi=\frac{5}{6}\pi$.
 
 Calculamos $\theta=\theta_{1}+\theta_{2}=\frac{7}{4}\pi+\frac{5}{6}\pi=\frac{31}{12}\pi$. Notemos que $\frac{31}{12}\pi\simeq{2}.5833\dots$ por lo que debemos ajustarlo para que esté dentro del rango $0\leq \theta\leq2\pi$. Para eso, debemos restarle una vuelta completa es decir $\frac{31}{12}\pi-2\pi=\frac{31}{12}\pi-\frac{24}{12}\pi=\frac{31-24}{12}\pi=\frac{7}{12}\pi$.
+
+<mark style="background: #FFB8EBA6;">(d)</mark>
+Ahora trabajamos con $z=\frac{(1+i)^{2}(\sqrt{ 3 }+i)}{2-2i}$.
+
+<mark style="background: #FFF3A3A6;">Propiedades</mark>:
+- El módulo final es el **producto/cociente** de los módulos.
+- El argumento final es la **suma/resta** de los argumentos.
+
+Comencemos por el factor $(1+i)^{2}$.
+Busquemos su módulo $r_{1}=(\sqrt{ a^{2}+b^{2} })^{2}=(\sqrt{ 1^{2}+1^{2} })^{2}=(\sqrt{ 1+1 })^{2}=(\sqrt{ 2 })^{2}=2$.
+Busquemos su argumento $\theta_{1}=2\cdot\arctan\left( \frac{b}{a} \right)=2\cdot\arctan\left( \frac{1}{1} \right)=2\cdot\arctan(1)=2\cdot\frac{1}{4}\pi=\frac{1}{2}\pi$.
+
+Trabajemos con el factor $\sqrt{ 3 }+i$.
+Busquemos so módulo $r_{2}=\sqrt{ (\sqrt{ 3 })^{2}+(1)^{2} }=\sqrt{ 3+1 }=\sqrt{ 4 }=2$.
+Busquemos su argumento $\theta_{2}=\arctan\left( \frac{1}{\sqrt{ 3 }} \right)=\frac{1}{6}\pi$.
+
+Trabajemos con el factor $2-2i$.
+Busquemos su módulo $r_{3}=\sqrt{ 2^{2}+(-2)^{2} }=\sqrt{ 4+4 }=\sqrt{ 8 }=\sqrt{ 4\cdot{2} }=\sqrt{ 4 }\cdot \sqrt{ 2 }=2\cdot\sqrt{ 2 }$.
+Busquemos su argumento $\theta_{3}=\arctan\left( -\frac{2}{2} \right)=\arctan(-1)=-\frac{1}{4}\pi$.
+
+Calculamos el módulo final $\mathcal{R}=\frac{r_{1}\cdot r_{2}}{r_{3}}=\frac{2\cdot{2}}{\sqrt{ 2 }}=\frac{4}{2\sqrt{ 2 }}=\frac{2}{\sqrt{ 2 }}=\frac{2}{\sqrt{ 2 }}\cdot \frac{\sqrt{ 2 }}{\sqrt{ 2 }}=\frac{2\sqrt{ 2 }}{(\sqrt{ 2 })^{2}}=\frac{2\sqrt{ 2 }}{2}=\sqrt{ 2 }$.
+Calculamos el argumento final $\Theta=\theta_{1}+\theta_{2}-\theta_{3}=\frac{\pi}{2}+\frac{\pi}{6}-\left( -\frac{\pi}{4} \right)=\frac{11}{12}\pi$.
+
+El número complejo $z=\frac{(1+i)^{2}(\sqrt{ 3 }+i)}{2-2i}$ en forma polar es:
+$$
+z=\sqrt{ 2 }\left( \cos\left( \frac{11}{12}\pi \right)+i\sin\left( \frac{11}{12}\pi \right) \right) 
+$$
+### Ejercicio 9
+![[Pasted image 20251104190450.png]]
+Nos piden hallar los $z\in \mathbb{C}$ que sean solución de las siguientes ecuaciones:
+<mark style="background: #FFB8EBA6;">(a)</mark>
+Trabajamos con la ecuación $z^{3}=1$. 
+
+Utilizamos la forma trigonométrica de $z=r(\cos \theta+i\sin \theta)$.
+
+Aplicamos la Fórmula de Moivre al $z^{3}$.
+$$
+z^{3}=r^{3}(\cos(3\cdot \theta)+i\sin(3\cdot \theta))
+$$
+Al lado derecho $w=1$ queremos escribir $w$ como $r_{w}(\cos \phi_{w}+i\sin \phi_{w})$.
+
+Calculamos su módulo.
+$r_{w}=|1|=1$.
+Calculamos su argumento.
+$\phi_{w}=arg(1)=0$.
+
+De esta forma, encontramos la forma trigonométrica de $w=1(\cos(0)+i\sin(0))$.
+
+Dado que las funciones $\cos(\theta)$ y $\sin(\theta)$ son **periódicas** con un periodo de $2\pi$ radianes (o $360^\circ$), el número complejo $w=1$ no solo tiene el argumento $0$. También tiene como argumentos a $2\pi, 4\pi, -2\pi$, y así sucesivamente.
+Para incluir todas estas posibilidades, reemplazamos $\phi_{w}=0+2k\pi$ donde $k\in \mathbb{Z}$.
+
+Ahora podemos igualar las formas trigonométricas.
+$$
+\begin{gather}
+z^{3}=1 \\
+r^{3}(\cos(3\cdot \theta)+i\sin(3\cdot \theta))=1\cdot(\cos(2k\pi)+i\sin(2k\pi))
+\end{gather}
+$$
+Para que dos número complejos en su forma trigonométrica sean iguales, deben tener el mismo módulo y sus argumentos deben ser iguales o diferir por un múltiplo de $2\pi$.
+
+Esto nos da dos ecuaciones independientes para las variables reales $r$ y $\theta$:
+1. Ecuación para el módulo $(r)$:
+$$
+\begin{gather}
+r^{3}=1 \\
+\sqrt[3]{ r^{3} }=\sqrt[3]{ 1 } \\
+r=1
+\end{gather}
+$$
+2. Ecuación para el argumento $(\theta)$:
+$$
+\begin{gather}
+3\cdot \theta=2k\pi \\
+\theta=\frac{2k\pi}{3}
+\end{gather}
+$$
+Ahora tenemos que determinar las distintas soluciones.
+Puesto que estamos buscando las soluciones de una ecuación de tercer grado ($z^{\mathbf{3}}=1$), sabemos que debe haber **tres** soluciones distintas en el plano complejo.
+Estas tres soluciones se obtienen tomando $n=3$ valores consecutivos de $k$. Tradicionalmente, usamos: $k=0,1,2$.
+Si eligiéramos $k=3$, el argumento se repetiría (daría una vuelta completa de $2\pi$ respecto al argumento para $k=0$).
+
+Ahora, usemos estos tres valores para calcular los **tres argumentos distintos**: $\theta_0, \theta_1, \theta_2$.
+1. Para $k=0$:
+$$
+\theta_{0}=\frac{2\cdot{0}\pi}{3}=0
+$$
+2. Para $k=1$:
+$$
+\theta_{1}=\frac{2\cdot{1}\cdot \pi}{3}=\frac{2}{3}\pi
+$$
+3. Para $k=2$:
+$$
+\theta_{2}=\frac{2\cdot{2}\cdot \pi}{3}=\frac{4}{3}\pi
+$$
+Representación en el plano complejo
+![[Pasted image 20251104202427.png]]
+<mark style="background: #FFB8EBA6;">(b)</mark>
+Trabajemos con la ecuación $z^{6}=1$.
+
+Utilizamos la forma trigonométrica de $z=r(\cos \theta+i\sin \theta)$.
+
+Aplicamos la Fórmula de Moivre al $z^{6}$.
+$$
+z^{6}=r^{6}(\cos(6\cdot \theta)+i\sin(6\cdot \theta))
+$$
+Al lado derecho $w=1$ queremos escribir $w$ como $r_{w}(\cos \phi_{w}+i\sin \phi_{w})$.
+
+Calculamos su módulo $(r_{w})$.
+$r_{w}=|1|=1$.
+
+Calculamos su argumento $\phi_{w}$.
+$\phi_{w}=arg(1)=0$.
+
+De esta manera encontramos la expresión trigonométrica de $w=1(\cos(0)+i\sin(0))$.
+
+Dado que las funciones $\cos(\theta)$ y $\sin(\theta)$ son **periódicas** con un periodo de $2\pi$ radianes (o $360^\circ$), el número complejo $w=1$ no solo tiene el argumento $0$. También tiene como argumentos a $2\pi, 4\pi, -2\pi$, y así sucesivamente.
+Para incluir todas estas posibilidades, reemplazamos $\phi_{w}=0+2k\pi$ donde $k\in \mathbb{Z}$.
+
+Igualamos las formas trigonométricas
+$$
+\begin{gather}
+z^{6}=1 \\
+r^{6}(\cos(6\cdot \theta)+i\sin(6\cdot \theta))=1(\cos(2k\pi)+i\sin(2k\pi))
+\end{gather}
+$$
+Para que dos número complejos en su forma trigonométrica sean iguales, deben tener el mismo módulo y sus argumentos deben ser iguales o diferir por un múltiplo de $2\pi$.
+
+Esto nos da dos ecuaciones independientes para las variables reales $r$ y $\theta$:
+
+1. Ecuación para el módulo $(r)$:
+$$
+\begin{gather}
+r^{6}=1 \\
+\sqrt[6]{ r^{6} }=\sqrt[6]{ 1 } \\
+r=1
+\end{gather}
+$$
+2. Ecuación para el argumento $\theta$:
+$$
+\begin{gather}
+6\cdot \theta=2k\pi \\
+\theta=\frac{2k\pi}{6}
+\end{gather}
+$$
+Ahora tenemos que determinar las distintas soluciones.
+Puesto que estamos buscando las soluciones de una ecuación de sexto grado ($z^{\mathbf{6}}=1$), sabemos que debe haber **seis** soluciones distintas en el plano complejo.
+Estas tres soluciones se obtienen tomando $n=6$ valores consecutivos de $k$. Tradicionalmente, usamos: $k=0,1,2,3,4,5$.
+Si eligiéramos $k=6$, el argumento se repetiría (daría una vuelta completa de $2\pi$ respecto al argumento para $k=0$).
+
+Ahora, usemos estos tres valores para calcular los **tres argumentos distintos**: $\theta_0, \theta_1, \theta_2,\theta_{3},\theta_{4},\theta_{5}$.
+1. Para $k=0$:
+$$
+\theta_{0}=\frac{2k\pi}{6}=\frac{2*{0}\cdot \pi}{6}=0
+$$
+2. Para $k=1$:
+$$
+\theta_{1}=\frac{2k\pi}{6}=\frac{2\cdot{1}\cdot \pi}{6}=\frac{2\pi}{6}=\frac{\pi}{3}
+$$
+3. Para $k=2$:
+$$
+\theta_{2}=\frac{2k\pi}{6}=\frac{2\cdot{2}\cdot \pi}{6}=\frac{4\pi}{6}=\frac{2\pi}{3}
+$$
+4. Para $k=3$:
+$$
+\theta_{3}=\frac{2k\pi}{6}=\frac{2\cdot{3}\cdot \pi}{6}=\frac{6\pi}{6}=\pi
+$$
+5. Para $k=4$:
+$$
+\theta_{4}=\frac{2k\pi}{6}=\frac{2\cdot{4}\cdot \pi}{6}=\frac{8\pi}{6}=\frac{4\pi}{3}
+$$
+6. Para $k=5$:
+$$
+\theta_{5}=\frac{2k\pi}{6}=\frac{2\cdot{5}\cdot \pi}{6}=\frac{10\pi}{6}=\frac{5\pi}{3}
+$$
+Representación en el plano complejo
+![[Pasted image 20251104202225.png]]
