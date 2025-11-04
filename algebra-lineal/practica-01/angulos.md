@@ -11,11 +11,11 @@ Dado un ángulo agudo ($\theta$) en el triángulo rectángulo, los lados se nomb
 
 Las razones trigonométricas relacionan las longitudes de los lados con los ángulos del triángulo.
 
-|Razón|Fórmula|Relación|
-|---|---|---|
-|**Seno** ($\text{sen}(\theta)$)|$\frac{\text{Cateto Opuesto}}{\text{Hipotenusa}}$|**SOH** (Seno = Opuesto / Hipotenusa)|
-|**Coseno** ($\cos(\theta)$)|$\frac{\text{Cateto Adyacente}}{\text{Hipotenusa}}$|**CAH** (Coseno = Adyacente / Hipotenusa)|
-|**Tangente** ($\tan(\theta)$)|$\frac{\text{Cateto Opuesto}}{\text{Cateto Adyacente}}$|**TOA** (Tangente = Opuesto / Adyacente)|
+|              Razón              |                         Fórmula                         |                 Relación                  |
+| :-----------------------------: | :-----------------------------------------------------: | :---------------------------------------: |
+| **Seno** ($\text{sen}(\theta)$) |    $\frac{\text{Cateto Opuesto}}{\text{Hipotenusa}}$    |   **SOH** (Seno = Opuesto / Hipotenusa)   |
+|   **Coseno** ($\cos(\theta)$)   |   $\frac{\text{Cateto Adyacente}}{\text{Hipotenusa}}$   | **CAH** (Coseno = Adyacente / Hipotenusa) |
+|  **Tangente** ($\tan(\theta)$)  | $\frac{\text{Cateto Opuesto}}{\text{Cateto Adyacente}}$ | **TOA** (Tangente = Opuesto / Adyacente)  |
 
 ## 2. Cálculo del Ángulo Usando Funciones Inversas
 
@@ -23,11 +23,11 @@ Para _conocer la medida del ángulo_ ($\theta$) a partir de las razones entre lo
 
 Si conoces la razón (el valor de la división de dos lados), aplicas la función inversa correspondiente para obtener el ángulo.
 
-| Razón que conoces | Función Inversa a aplicar    | Fórmula para el Ángulo $\theta$                       |
-| ----------------- | ---------------------------- | ----------------------------------------------------- |
-| Seno              | Arcoseno ($\text{sen}^{-1}$) | $$\theta = \text{sen}^{-1}\left(\frac{CO}{H}\right)$$ |
-| Coseno            | Arcocoseno ($\cos^{-1}$)     | $$\theta = \cos^{-1}\left(\frac{CA}{H}\right)$$       |
-| Tangente          | Arcotangente ($\tan^{-1}$)   | $$\theta = \tan^{-1}\left(\frac{CO}{CA}\right)$$      |
+| Razón que conoces |  Función Inversa a aplicar   |            Fórmula para el Ángulo $\theta$            |
+| :---------------: | :--------------------------: | :---------------------------------------------------: |
+|       Seno        | Arcoseno ($\text{sen}^{-1}$) | $$\theta = \text{sen}^{-1}\left(\frac{CO}{H}\right)$$ |
+|      Coseno       |   Arcocoseno ($\cos^{-1}$)   |    $$\theta = \cos^{-1}\left(\frac{CA}{H}\right)$$    |
+|     Tangente      |  Arcotangente ($\tan^{-1}$)  |   $$\theta = \tan^{-1}\left(\frac{CO}{CA}\right)$$    |
 
 ## 3. Procedimiento Paso a Paso
 

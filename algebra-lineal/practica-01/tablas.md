@@ -2,14 +2,13 @@
 
 Esta tabla muestra los valores de seno y coseno para los ángulos más comunes, que son fundamentales en el cálculo de números complejos en forma trigonométrica.
 
-| Grados  | Radianes ($\theta$) | $\cos(\theta)$ (Parte Real) | $\sin(\theta)$ (Parte Imaginaria) |
-| :-----: | :-----------------: | :-------------------------: | :-------------------------------: |
-|   0°    |          0          |              1              |                 0                 |
-|   30°   |   $\frac{\pi}{6}$   |    $\frac{\sqrt{3}}{2}$     |           $\frac{1}{2}$           |
-| **45°** |   $\frac{\pi}{4}$   |    $\frac{\sqrt{2}}{2}$     |       $\frac{\sqrt{2}}{2}$        |
-| **60°** |   $\frac{\pi}{3}$   |        $\frac{1}{2}$        |       $\frac{\sqrt{3}}{2}$        |
-|   90°   |   $\frac{\pi}{2}$   |              0              |                 1                 |
-
+|Grados|Radianes ($\theta$)|$\cos(\theta)$ (Parte Real)|$\sin(\theta)$ (Parte Imaginaria)|$\tan(\theta) = \dfrac{\sin(\theta)}{\cos(\theta)}$|
+|:-:|:-:|:-:|:-:|:-:|
+|**0°**|0|1|0|0|
+|**30°**|$\dfrac{\pi}{6}$|$\dfrac{\sqrt{3}}{2}$|$\dfrac{1}{2}$|$\dfrac{1}{\sqrt{3}}$ ó $\dfrac{\sqrt{3}}{3}$|
+|**45°**|$\dfrac{\pi}{4}$|$\dfrac{\sqrt{2}}{2}$|$\dfrac{\sqrt{2}}{2}$|1|
+|**60°**|$\dfrac{\pi}{3}$|$\dfrac{1}{2}$|$\dfrac{\sqrt{3}}{2}$|$\sqrt{3}$|
+|**90°**|$\dfrac{\pi}{2}$|0|1|**No definida** (tiende a ∞)|
 ### 💡 Nota Clave
 
 Para el número complejo $Z = a + bi$ en forma trigonométrica:

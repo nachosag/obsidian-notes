@@ -401,3 +401,134 @@ $$z_1 = \frac{\sqrt{2\sqrt{5} - 2}}{2} + i \left( \frac{2 - \sqrt{2\sqrt{5} + 2}
 ##### 5.2. Solución $z_2$ (Usando $-w_1$ o $+w_2$):
 $$z_2 = \frac{2i - \left(\sqrt{2\sqrt{5} - 2} - i\sqrt{2\sqrt{5} + 2}\right)}{2}$$$$z_2 = \frac{-\sqrt{2\sqrt{5} - 2}}{2} + i \left( \frac{2 + \sqrt{2\sqrt{5} + 2}}{2} \right)$$$$\boxed{z_2 = -\frac{\sqrt{2\sqrt{5} - 2}}{2} + i \left( 1 + \frac{\sqrt{2\sqrt{5} + 2}}{2} \right)}$$
 ### Ejercicio 7
+![[Pasted image 20251104102036.png]]
+(a)
+![[Pasted image 20251104103658.png]]
+(b)
+![[Pasted image 20251104103742.png]]
+(c)
+![[Pasted image 20251104105957.png]]
+(d)
+El conjunto pedido es $\left\{  z\in \mathbb{C}:0\leq arg(z)\leq \frac{5}{6}\pi \cap \frac{1}{2}\leq |z|\leq1  \right\}$
+Comenzamos graficando $0\leq arg(z)\leq \frac{5}{6}\pi$
+![[Pasted image 20251104112038.png]]
+Ahora graficamos $\frac{1}{2}\leq |z|\leq{1}$
+![[Pasted image 20251104112521.png]]
+Ahora graficamos la intersección de ambas condiciones
+![[Pasted image 20251104112743.png]]
+### Ejercicio 8
+![[Pasted image 20251104112807.png]]
+Recordar: ![[angulos]]
+![[tablas]]
+Definición de módulo; $|z|=\sqrt{ (\mathrm{Re}(z))^{2}+(\mathrm{Im}(z))^{2} }$.
+<mark style="background: #FFB8EBA6;">(a)</mark>
+ Trabajamos con $z=1-i\sqrt{ 3 }$. Donde $1$ es la parte real y $-\sqrt{ 3 }$ es la parte imaginaria.
+ Nos piden encontrar la coordenada polar de $z$ es decir encontrar la siguiente expresión:
+ $$
+z=|z|(\cos(\theta)+i\sin(\theta))
+$$ donde $\theta=arg(z)$.
+ Representemos $z$ en el plano complejo.
+![[Pasted image 20251104134554.png]]
+Buscamos el módulo. 
+Por definición de módulo: $|z|=\sqrt{ 1^{2}+(-\sqrt{ 3 })^{2} }=\sqrt{ 1+3 }=\sqrt{ 4 }=2$.
+
+Buscamos el argumento de $z$.
+Observemos en la imagen que $z$ está en el cuadrante IV.
+
+Calculemos el ángulo de referencia $\theta$:
+- $\sin(\theta)=\frac{\text{|Cateto opuesto|}}{\text{Hipotenusa}}=\frac{|-\sqrt{ 3 }|}{2}=\frac{\sqrt{ 3 }}{2}$. 
+- $\cos(\theta)=\frac{\text{|Cateto adyacente|}}{\text{Hipotenusa}}=\frac{|1|}{2}=\frac{1}{2}$.
+Según la tabla de ángulos notables, el único ángulo agudo que cumple estas condiciones es: $\theta=\frac{\pi}{3}$.
+
+Para conocer el $arg(z)$ debemos hacer $2\pi-\theta=2\pi-\frac{\pi}{3}$.
+Podemos pensar a $2\pi$ como $\frac{6}{3}\pi$ y a $\frac{\pi}{3}$ como $\frac{1}{3}\pi$ entonces tenemos $arg(z)=\frac{6}{3}\pi-\frac{1}{3}\pi=\frac{6-1}{3}\pi=\frac{5}{3}\pi$.
+
+La coordenada polar de $z$ es $z=2\cdot\left( \cos\left( \frac{5}{3}\pi \right)+i\sin\left( \frac{5}{3}\pi \right) \right)$.
+
+<mark style="background: #FFB8EBA6;">(b)</mark>
+Trabajamos con $z=\frac{1+i}{1-i}$.
+Primero debemos simplificar la expresión a su forma estándar $z=a+bi$.
+$$
+\begin{gather}
+z= \\
+\frac{1+i}{1-i}= \\
+\frac{1+i}{1-i}\cdot \frac{1+i}{1+i}= \\
+ \\
+\text{Diferencia de cuadrados: }(a-b)(a+b)=a^{2}-b^{2} \\
+ \\
+\frac{(1+i)^{2}}{1^{2}-i^{2}}= \\
+ \\
+\frac{(1+i)^{2}}{1-(-1)}= \\
+ \\
+\frac{(1+i)^{2}}{1+1}= \\
+ \\
+\frac{(1+i)^{2}}{2}= \\
+ \\
+\frac{1^{2}+2\cdot{1}\cdot{i}+i^{2}}{2}= \\
+ \\
+\frac{1+2i+(-1)}{2}= \\
+ \\
+\frac{1+2i-1}{2}= \\
+ \\
+\frac{2i}{2}=\boxed{i} \\
+\end{gather}
+$$
+Representamos a $z$ en el plano complejo sabiendo que $0$ es su parte real y $1$ es su parte imaginaria.
+![[Pasted image 20251104144018.png]]
+Buscamos $|z|$.
+$$
+|z|=\sqrt{ 0^{2}+1^{2} }=\sqrt{ 0+1 }=\sqrt{ 1 }=1
+$$
+Buscamos $arg(z)$.
+Podemos ver a simple vista que el $arg(z)$ es $90°=\frac{\pi}{2}$.
+
+Armamos la coordenada polar de $z$.
+$$
+z=1\cdot\left( \cos\left( \frac{\pi}{2} \right)+i\sin\left( \frac{\pi}{2} \right) \right)
+$$
+<mark style="background: #FFB8EBA6;">(c)</mark>
+Trabajamos con $z=(2-2i)(-\sqrt{ 3 }+i)$. Notemos que $z_{1}=2-2i$ y $z_{2}=-\sqrt{ 3 }+i$.
+Primero debemos simplificar la expresión a su forma tradicional $z=a+bi$.
+$$
+\begin{gather}
+z= \\
+(2-2i)(-\sqrt{ 3 }+i)= \\
+-2\sqrt{ 3 }+2i+2\sqrt{ 3 }i-2i^{2}= \\
+-2\sqrt{ 3 }+2i+2\sqrt{ 3 }i-2\cdot(-1)= \\
+-2\sqrt{ 3 }+2i+2\sqrt{ 3 }i+2= \\
+-2\sqrt{ 3 }+2+2i+2\sqrt{ 3 }i= \\
+\boxed{(-2\sqrt{ 3 }+2)+(2+2\sqrt{ 3 })i}
+\end{gather}
+$$
+Representamos a $z$ en el plano complejo:
+![[Pasted image 20251104150848.png]]
+Buscamos $|z|$.
+$$
+\begin{gather}
+|z|= \\
+\sqrt{ (2-2\sqrt{ 3 })^{2}+(2+2\sqrt{ 3 })^{2} }= \\
+\sqrt{ (2^{2}+2\cdot{2}\cdot(-2\sqrt{ 3 })+(-2\sqrt{ 3 })^{2}) + (2^{2}+2\cdot{2}\cdot(2\sqrt{ 3 })+(2\sqrt{ 3 })^{2}) }= \\
+\sqrt{ 4-8\sqrt{ 3 }+4\cdot3 + 4 + 8\sqrt{ 3 } + 4\cdot{3} }= \\
+\sqrt{ 4+12+4+12 }= \\
+\sqrt{ 16+16 }= \\
+\sqrt{ 32 }= \\
+\sqrt{ 2\cdot{16} }= \\
+\sqrt{ 2 }\cdot \sqrt{ 16 }= \\
+4\sqrt{ 2 }
+\end{gather}
+$$
+Calcular $arg(z)$ de la expresión $(-2\sqrt{ 3 }+2)+(2+2\sqrt{ 3 })i$ puede ser complicado. Podemos calcular el $arg(z_{1})$ y el $arg(z_{2})$ por separado y luego sumarlos para obtener el $arg(z)$, es decir $\theta=\theta_{1}+\theta_{2}$.
+
+Calculamos $\theta_{1}=arg(z_{1})$.
+El factor $z_{1}=2-2i$ en el plano complejo es el punto $(a,b)=(2,-2)$.
+- Notemos que el punto $(2,-2)$ se encuentra en el cuadrante IV.
+- Calculamos el ángulo de referencia $\alpha_{2}=\arctan\left( \left| \frac{\text{b}}{a} \right| \right)=\arctan\left( \left| -\frac{2}{2} \right| \right)=\arctan(1)=\frac{1}{4}\pi$.
+- Hacemos el ajuste: $\theta_{1}=2\pi-\alpha_{2}=2\pi-\frac{1}{4}\pi=\frac{8}{4}\pi-\frac{1}{4}\pi=\frac{8-1}{4}\pi=\frac{7}{4}\pi$.
+
+Calculamos $\theta_{2}=arg(z_{2})$.
+El factor $z_{2}=-\sqrt{ 3 }+i$ en el plano complejo es el punto $(a,b)=(-\sqrt{ 3 },1)$.
+- Notemos que el punto $(-\sqrt{ 3 },1)$ se encuentra en el cuadrante II.
+- Calculamos el ángulo de referencia $\alpha_{2}=\arctan\left( \left| \frac{b}{a} \right| \right)=\arctan\left( \left| \frac{1}{-\sqrt{ 3 }} \right| \right)=\arctan\left( \frac{1}{\sqrt{ 3 }} \right)=\frac{\pi}{6}$.
+- Hacemos el ajuste $\theta_{2}=\pi-\alpha_{2}=\pi-\frac{\pi}{6}=\frac{6}{6}\pi-\frac{1}{6}\pi=\frac{6-1}{6}\pi=\frac{5}{6}\pi$.
+
+Calculamos $\theta=\theta_{1}+\theta_{2}=\frac{7}{4}\pi+\frac{5}{6}\pi=\frac{31}{12}\pi$. Notemos que $\frac{31}{12}\pi\simeq{2}.5833\dots$ por lo que debemos ajustarlo para que esté dentro del rango $0\leq \theta\leq2\pi$. Para eso, debemos restarle una vuelta completa es decir $\frac{31}{12}\pi-2\pi=\frac{31}{12}\pi-\frac{24}{12}\pi=\frac{31-24}{12}\pi=\frac{7}{12}\pi$.
