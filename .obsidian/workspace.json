@@ -11,10 +11,26 @@
             "id": "fbcb062c42538dfa",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "algebra-lineal/parciales/segundo-parcial/resoluciones/resolucion-parcial-01.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "resolucion-parcial-01"
+            }
+          },
+          {
+            "id": "7ccbe02f1b07091c",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "algebra-lineal/parciales/segundo-parcial/parcial-01-AL.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "parcial-01-AL"
             }
           }
         ]
@@ -74,7 +90,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 242.5
+    "width": 242.5,
+    "collapsed": true
   },
   "right": {
     "id": "60744be18a06282d",
@@ -169,7 +186,21 @@
   },
   "active": "fbcb062c42538dfa",
   "lastOpenFiles": [
+    "algebra-lineal/parciales/segundo-parcial/parcial-01-AL.pdf",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/resolucion-parcial-01.md",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251106000549.png",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251106000528.png",
     "algebra-lineal/practica-01/practica-01.md",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251105201702.png",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251105201608.png",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos",
+    "algebra-lineal/parciales/segundo-parcial/parcial-02-AL.pdf",
+    "algebra-lineal/parciales/segundo-parcial/parcial-03-AL.pdf",
+    "algebra-lineal/parciales/segundo-parcial/parcial-04-AL.pdf",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones",
+    "algebra-lineal/parciales/segundo-parcial",
+    "algebra-lineal/parciales/primer-parcial",
+    "algebra-lineal/parciales",
     "algebra-lineal/practica-01/practica-01-AL.pdf",
     "algebra-lineal/practica-01/clase.md",
     "algebra-lineal/practica-01/tablas.md",
@@ -182,24 +213,11 @@
     "algebra-lineal/practica-01/Anexos/Pasted image 20251104202225.png",
     "algebra-lineal/practica-01/binomica-vs-trigonometrica.md",
     "algebra-lineal/practica-01/Anexos/Pasted image 20251104190450.png",
-    "algebra-lineal/practica-01/Anexos/Pasted image 20251104150848.png",
-    "algebra-lineal/practica-01/Anexos/Pasted image 20251104144018.png",
-    "algebra-lineal/practica-01/Anexos/Pasted image 20251104134554.png",
-    "algebra-lineal/practica-01/Anexos/Pasted image 20251104112807.png",
     "Pasted image 20251104105618.png.md",
-    "algebra-lineal/practica-01/Anexos",
     "algebra-lineal/practica-07/practica-07.md",
-    "algebra-lineal/practica-07/practica-07-AL.pdf",
     "algebra-lineal/practica-06/practica-06-e01-13.md",
-    "algebra-lineal/practica-06/practica-06-AL.pdf",
-    "algebra-lineal/practica-07/Anexos",
     "matematica-discreta/practica-02/practica-02.md",
-    "matematica-discreta/practica-02/resultados-practica-02-MD.pdf",
-    "matematica-discreta/practica-02/practica-02-MD.pdf",
-    "matematica-discreta/practica-01/resultados-practica-01-MD.pdf",
     "matematica-discreta/practica-01/practica-01.md",
-    "matematica-discreta/practica-01/practica-01-MD.pdf",
-    "matematica-discreta/practica-03/resultados-practica-03-MD.pdf",
     "algebra-lineal/practica-02/practica-02-e01-10.md",
     "matematica-discreta/practica-06/practica-06.md",
     "matematica-discreta/practica-05/clase-practica-10.md",
@@ -213,7 +231,6 @@
     "Excalidraw/Drawing 2025-10-19 22.16.06.excalidraw.md",
     "home/nachosag/vault/matemática-discreta/enunciados-de-clase/Anexos.md",
     "matemática-discreta/enunciados-de-clase/asdasd.md",
-    "algebra-lineal/practica-05/practica-05-e01-26.md",
     "Untitled.canvas"
   ]
 }

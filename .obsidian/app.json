@@ -12,5 +12,6 @@
   },
   "readableLineLength": false,
   "promptDelete": false,
-  "alwaysUpdateLinks": true
+  "alwaysUpdateLinks": true,
+  "smartIndentList": false
 }
