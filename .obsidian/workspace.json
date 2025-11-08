@@ -11,14 +11,12 @@
             "id": "f6c6bc2f6a072f88",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "pdf",
               "state": {
-                "file": "algebra-lineal/parciales/segundo-parcial/resoluciones/resolucion-parcial-01.md",
-                "mode": "source",
-                "source": false
+                "file": "algebra-lineal/parciales/segundo-parcial/parcial-04-AL.pdf"
               },
-              "icon": "lucide-file",
-              "title": "resolucion-parcial-01"
+              "icon": "lucide-file-text",
+              "title": "parcial-04-AL"
             }
           }
         ]
@@ -173,8 +171,13 @@
   },
   "active": "f6c6bc2f6a072f88",
   "lastOpenFiles": [
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/parcial-05.md",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251108002640.png",
+    "algebra-lineal/parciales/segundo-parcial/parcial-05-AL.pdf",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251107202310.png",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251107171153.png",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/parcial-01.md",
     "algebra-lineal/parciales/segundo-parcial/parcial-01-AL.pdf",
-    "algebra-lineal/parciales/segundo-parcial/resoluciones/resolucion-parcial-01.md",
     "Untitled.base",
     "Excalidraw/Drawing 2025-11-06 01.51.23.excalidraw.md",
     "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251106000549.png",
@@ -189,7 +192,6 @@
     "algebra-lineal/parciales/segundo-parcial/resoluciones",
     "algebra-lineal/parciales/segundo-parcial",
     "algebra-lineal/parciales/primer-parcial",
-    "algebra-lineal/parciales",
     "algebra-lineal/practica-01/clase.md",
     "algebra-lineal/practica-01/tablas.md",
     "algebra-lineal/practica-01/Anexos/Pasted image 20251105174422.png",
@@ -197,10 +199,7 @@
     "algebra-lineal/practica-01/Anexos/Pasted image 20251105174307.png",
     "algebra-lineal/practica-01/angulos.md",
     "algebra-lineal/practica-01/raices-cuadraticas.md",
-    "algebra-lineal/practica-01/Anexos/Pasted image 20251104202427.png",
-    "algebra-lineal/practica-01/Anexos/Pasted image 20251104202225.png",
     "algebra-lineal/practica-01/binomica-vs-trigonometrica.md",
-    "algebra-lineal/practica-01/Anexos/Pasted image 20251104190450.png",
     "Pasted image 20251104105618.png.md",
     "algebra-lineal/practica-07/practica-07.md",
     "algebra-lineal/practica-06/practica-06-e01-13.md",
@@ -217,7 +216,6 @@
     "algebra-lineal/practica-02/practica-02-e11-25.md",
     "Excalidraw/Drawing 2025-10-25 20.32.17.excalidraw.md",
     "Excalidraw/Drawing 2025-10-19 22.16.06.excalidraw.md",
-    "home/nachosag/vault/matemática-discreta/enunciados-de-clase/Anexos.md",
     "Untitled.canvas"
   ]
 }

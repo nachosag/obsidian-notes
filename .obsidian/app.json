@@ -13,5 +13,5 @@
   "readableLineLength": false,
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "smartIndentList": false
+  "smartIndentList": true
 }
