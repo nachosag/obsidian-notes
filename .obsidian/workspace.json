@@ -6,7 +6,7 @@
       {
         "id": "0257f172c4f0c756",
         "type": "tabs",
-        "dimension": 54.946236559139784,
+        "dimension": 56.55913978494623,
         "children": [
           {
             "id": "a4567dc68a0b90ca",
@@ -14,12 +14,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algebra-lineal/parciales/segundo-parcial/resoluciones/ejercicios.md",
+                "file": "algebra-lineal/parciales/segundo-parcial/utils.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "ejercicios"
+              "title": "utils"
             }
           }
         ]
@@ -27,7 +27,7 @@
       {
         "id": "63e1d4c969a37082",
         "type": "tabs",
-        "dimension": 45.053763440860216,
+        "dimension": 43.44086021505376,
         "children": [
           {
             "id": "06a7ce28e4811f0f",
@@ -192,11 +192,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "06a7ce28e4811f0f",
+  "active": "a4567dc68a0b90ca",
   "lastOpenFiles": [
     "algebra-lineal/parciales/segundo-parcial/resoluciones/ejercicios.md",
-    "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251109195039.png",
+    "algebra-lineal/parciales/segundo-parcial/utils.md",
     "algebra-lineal/parciales/segundo-parcial/ejercicios-AL.pdf",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251109195039.png",
     "algebra-lineal/practica-05/tipos-de-variables.md",
     "algebra-lineal/practica-07/practica-07-AL.pdf",
     "algebra-lineal/practica-06/practica-06-AL.pdf",
