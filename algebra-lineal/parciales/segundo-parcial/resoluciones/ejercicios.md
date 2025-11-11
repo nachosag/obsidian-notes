@@ -809,3 +809,920 @@ A^{2}-12A+12A^{2}=A^{4}
 $$$$
 13A^{2}-12A=A^{4}
 $$
+### Ejercicio 6
+![[Pasted image 20251110205518.png]]
+### Ejercicio 7
+![[Pasted image 20251110211201.png]]
+<mark style="background: #FFB8EBA6;">(a)</mark>
+Tenemos que
+$$
+A=M_{EE}(T)=\begin{pmatrix}
+-3 & 2 & -2 \\
+-4 & 3 & -2 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+Buscamos $P_{A}(\lambda)$.
+$$
+P_{A}(\lambda)=\det(A-\lambda I)
+$$
+$$
+P_{A}(\lambda)=\det \left( 
+\begin{pmatrix}
+-3 & 2 & -2 \\
+-4 & 3 & -2 \\
+0 & 0 & 1
+\end{pmatrix} -
+\begin{pmatrix}
+\lambda & 0 & 0 \\
+0 & \lambda & 0 \\
+0 & 0 & \lambda
+\end{pmatrix}
+\right) 
+$$
+$$
+P_{A}(\lambda)=\det \begin{pmatrix}
+-3-\lambda & 2 & -2 \\
+-4 & 3-\lambda & -2 \\
+0 & 0 & 1-\lambda
+\end{pmatrix}
+$$
+$$
+P_{A}(\lambda)=(1-\lambda)\cdot \det \begin{pmatrix}
+-3-\lambda & 2 \\
+-4 & 3-\lambda
+\end{pmatrix}
+$$
+$$
+P_{A}(\lambda)=(1-\lambda)\cdot \left( (-3-\lambda)\cdot(3-\lambda) - (-4\cdot{2}) \right) 
+$$
+$$
+P_{A}(\lambda)=(1-\lambda)\cdot \left( (-3-\lambda)\cdot(3-\lambda)+8 \right) 
+$$
+$$
+P_{A}(\lambda)=(1-\lambda)\cdot \left( -9+3\lambda-3\lambda+\lambda^{2}+8 \right) 
+$$
+$$
+P_{A}(\lambda)=(1-\lambda)\cdot(\lambda^{2}-1)
+$$
+Buscamos $\lambda(A)$, es decir, el conjunto de autovalores.
+$$
+P_{A}(\lambda)=0
+$$
+$$
+(1-\lambda)\cdot(\lambda^{2}-1)=0
+$$
+Notemos que $1-\lambda=0\leftrightarrow \lambda=1$ por lo tanto, $\lambda=1$ es una de las raíces.
+
+Busquemos las raíces de $\lambda^{2}-1$ con $x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$ con $a=1,\quad b=0,\quad c=-1$.
+$$
+\lambda = \frac{-0 \pm \sqrt{0^2 - 4\cdot 1\cdot(-1)}}{2\cdot 1} 
+$$
+$$
+\lambda=\frac{\pm \sqrt{ 4 }}{2}
+$$
+$$
+\lambda=\frac{\pm{2}}{2}
+$$
+$$
+\lambda_{1}=\frac{2}{2}=1
+$$
+$$
+\lambda_{2}=-\frac{2}{2}=-1
+$$
+Notemos que $\lambda_{1}=1$ vuelve a aparecer, por lo tanto tiene multiplicidad doble.
+
+Luego, $\lambda(A)=\{ 1,-1 \}$.
+
+Busquemos los autovectores de $A$.
+Por definición de autovector
+$$
+Av=\lambda v\leftrightarrow Av-\lambda v=0\leftrightarrow (A-\lambda I)v=0\quad v\neq \vec{0}
+$$
+Consideremos $\lambda=-1$.
+$$
+A-\lambda I
+$$
+$$
+\begin{pmatrix}
+-3 & 2 & -2 \\
+-4 & 3 & -2 \\
+0 & 0 & 1
+\end{pmatrix} - (-1)\cdot
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-3 & 2 & -2 \\
+-4 & 3 & -2 \\
+0 & 0 & 1
+\end{pmatrix} + 1\cdot
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-3 & 2 & -2 \\
+-4 & 3 & -2 \\
+0 & 0 & 1
+\end{pmatrix} +
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-3+1 & 2 & -2 \\
+-4 & 3+1 & -2 \\
+0 & 0 & 1+1
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-2 & 2 & -2 \\
+-4 & 4 & -2 \\
+0 & 0 & 2
+\end{pmatrix}
+$$
+Retomemos la expresión $(A-\lambda I)v=0$.
+$$
+\begin{pmatrix}
+-2 & 2 & -2 \\
+-4 & 4 & -2 \\
+0 & 0 & 2
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix} =
+\begin{pmatrix}
+0 \\
+0 \\
+0
+\end{pmatrix}
+$$
+Tenemos el siguiente sistema de ecuaciones lineales homogéneo
+$$
+\begin{cases}
+-2x+2y-2z=0 & (1), \\
+-4x+4y-2z=0 & (2), \\
+2z=0 & (3).
+\end{cases}
+$$
+Podemos simplificarlo dividiendo por $-2$ a la ecuación $(1)$, dividiendo por $-4$ a la ecuación $(2)$ y dividiendo por $2$ a la ecuación $(3)$. Por lo que tendríamos
+$$
+\begin{cases}
+x-y+z=0 & (1), \\
+x-y+\frac{1}{2}z=0 & (2), \\
+z=0 & (3).
+\end{cases}
+$$
+Notemos que $z=0$ por la ecuación $(3)$,
+Sustituyamos $z=0$ en la ecuación $(2)$.
+$$
+x-y+\frac{1}{2}z=0
+$$
+$$
+x-y=0
+$$
+$$
+x=y
+$$
+Las soluciones del sistema de ecuaciones son
+$$
+(x,y,z)\leftrightarrow (y,y,0)\leftrightarrow y(1,1,0)\quad y\in \mathbb{R}
+$$
+Luego
+$$
+S_{\lambda=-1}=\{ (1,1,0) \}
+$$
+Consideramos $\lambda=1$.
+$$
+A-\lambda I
+$$
+$$
+\begin{pmatrix}
+-3 & 2 & -2 \\
+-4 & 3 & -2 \\
+0 & 0 & 1
+\end{pmatrix} - 1\cdot
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-3 & 2 & -2 \\
+-4 & 3 & -2 \\
+0 & 0 & 1
+\end{pmatrix} +
+\begin{pmatrix}
+-1 & 0 & 0 \\
+0 & -1 & 0 \\
+0 & 0 & -1
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-3+(-1) & 2 & -2 \\
+-4 & 3+(-1) & -2 \\
+0 & 0 & 1+(-1)
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-4 & 2 & -2 \\
+-4 & 2 & -2 \\
+0 & 0 & 0
+\end{pmatrix}
+$$
+Retomemos la expresión $(A-\lambda I)v=0$.
+$$
+\begin{pmatrix}
+-4 & 2 & -2 \\
+-4 & 2 & -2 \\
+0 & 0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix} =
+\begin{pmatrix}
+0 \\
+0 \\
+0
+\end{pmatrix}
+$$
+Esto es equivalente al siguiente sistema de ecuaciones
+$$
+\begin{cases}
+-4x+2y-2z=0 & (1), \\
+-4x+2y-2z=0 & (2), \\
+0=0 & (3).
+\end{cases}
+$$
+Simplifiquemos el sistema dividiendo por $-2$ a la ecuación $(1)$ y $(2)$ y luego $(1)-(2)$.
+$$
+\begin{cases}
+2x-y+z=0 & (1), \\
+0=0 & (2), \\
+0=0 & (3).
+\end{cases}
+$$
+Despejemos $x$ de la ecuación $(1)$,
+$$
+2x-y+z=0
+$$
+$$
+2x=y-z
+$$
+$$
+x=\frac{1}{2}y-\frac{1}{2}z
+$$
+Las soluciones del sistema son
+$$
+(x,y,z)\leftrightarrow \left( \frac{1}{2}y-\frac{1}{2}z,y,z \right)\leftrightarrow y\left( \frac{1}{2},1,0 \right)+z\left( -\frac{1}{2},0,1 \right)
+$$
+Luego
+$$
+S_{\lambda=1}=\left\{  \left( \frac{1}{2},1,0 \right) ,\left( -\frac{1}{2},0,1 \right)   \right\}
+$$
+Armamos la base $B$.
+$$
+B=S_{\lambda=1} \cup S_{\lambda=-1}
+$$
+$$
+B=\left\{  (1,1,0),\left( \frac{1}{2},1,0 \right),\left( -\frac{1}{2},0,1 \right)  \right\}
+$$
+$$
+B=\{ (1,1,0),(1,2,0),(-1,0,2) \}
+$$
+Donde
+- $\lambda=-1$ está asociado con el vector $(1,1,0)$.
+- $\lambda=1$ está asociado con el vector $(1,2,0)$ y $(-1,0,2)$.
+Armamos 
+$$
+M_{BB}(T) = \begin{pmatrix}
+-1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+<mark style="background: #FFB8EBA6;">(b)</mark>
+Desarrollemos $P_{A}(\lambda)$.
+$$
+P_{A}(\lambda)=(1-\lambda)\cdot(\lambda^{2}-1)
+$$
+$$
+P_{A}(\lambda)=\lambda^{2}-1-\lambda^{3}+\lambda
+$$
+$$
+P_{A}(\lambda)=-\lambda^{3}+\lambda^{2}+\lambda-1
+$$
+Por Teorema de Hamilton-Cayley tenemos
+$$
+P_{A}(A)=0
+$$
+$$
+-A^{3}+A^{2}+A-I=0
+$$
+$$
+-A^{3}+A^{2}+A=I
+$$
+$$
+(-A^{3}+A^{2}+A)\cdot A^{-1}=I\cdot A^{-1}
+$$
+$$
+-A^{2}+A+I=A^{-1}
+$$
+### Ejercicio 8
+![[Pasted image 20251111014813.png]]
+Buscamos el polinomio característico $P_{A}(\lambda)$.
+$$
+P_{A}(\lambda)=\det(A-\lambda I)
+$$
+$$
+P_{A}(\lambda)=\det \left( 
+\begin{pmatrix}
+-6 & -5 & 0 \\
+10 & 9 & 0 \\
+10 & 5 & 4
+\end{pmatrix} - \lambda
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+\right) 
+$$
+$$
+P_{A}(\lambda)=\det \left( 
+\begin{pmatrix}
+-6 & -5 & 0 \\
+10 & 9 & 0 \\
+10 & 5 & 4
+\end{pmatrix} -
+\begin{pmatrix}
+\lambda & 0 & 0 \\
+0 & \lambda & 0 \\
+0 & 0 & \lambda
+\end{pmatrix}
+\right) 
+$$
+$$
+P_{A}(\lambda)=\det \begin{pmatrix}
+-6-\lambda & -5 & 0 \\
+10 & 9-\lambda & 0 \\
+10 & 5 & 4-\lambda
+\end{pmatrix}
+$$
+$$
+P_{A}(\lambda)=(4-\lambda)\cdot \det \begin{pmatrix}
+-6-\lambda & -5 \\
+10 & 9-\lambda
+\end{pmatrix}
+$$
+$$
+P_{A}(\lambda)=(4-\lambda)\cdot \left( (-6-\lambda)\cdot(9-\lambda)-(10\cdot(-5)) \right) 
+$$
+$$
+P_{A}(\lambda)=(4-\lambda)\cdot((-6-\lambda)\cdot(9-\lambda)-(-50))
+$$
+$$
+P_{A}(\lambda)=(4-\lambda)\cdot((-6-\lambda)\cdot(9-\lambda)+50)
+$$
+$$
+P_{A}(\lambda)=(4-\lambda)\cdot \left( -54+6\lambda-9\lambda+\lambda^{2}+50 \right) 
+$$
+$$
+P_{A}(\lambda)=(4-\lambda)\cdot \left( \lambda^{2}-3\lambda-4 \right) 
+$$
+Buscamos los autovalores de $A$.
+$$
+P_{A}(\lambda)=0
+$$
+$$
+(4-\lambda)\cdot(\lambda^{2}-3\lambda-4)=0
+$$
+Si $\lambda=4$ la igualdad se cumple, por lo tanto $\lambda=4$ es una de las raíces.
+Buscamos las raíces de $\lambda^{2}-3\lambda-4$ con $\lambda = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$ con $a=1,\quad b=-3,\quad c=-4$.
+$$
+\lambda = \frac{-(-3) \pm \sqrt{(-3)^2 - 4\cdot{1}\cdot(-4)}}{2\cdot{1}} 
+$$
+$$
+\lambda=\frac{ 3\pm \sqrt{ 9+16 } }{2}
+$$
+$$
+\lambda=\frac{3\pm \sqrt{ 25 }}{2}
+$$
+$$
+\lambda=\frac{3\pm 5}{2}
+$$
+$$
+\lambda_{1}=\frac{3+5}{2}=\frac{8}{2}=4
+$$
+$$
+\lambda_{2}=\frac{3-5}{2}=-\frac{2}{2}=-1
+$$
+Notemos que $\lambda=4$ aparece dos veces, por lo que tiene multiplicidad doble.
+Luego
+$$
+\lambda(A)=\{ -1,4 \}
+$$
+Armemos $D$.
+$$
+D = \begin{pmatrix}
+-1 & 0 & 0 \\
+0 & 4 & 0 \\
+0 & 0 & 4
+\end{pmatrix}
+$$
+Busquemos el subespacio $S_{\lambda=-1}$ y $S_{\lambda=4}$.
+Por la definición de autovector sabemos que
+$$
+Av=\lambda v\leftrightarrow Av-\lambda v=0\leftrightarrow (A-\lambda I)\cdot v=0\quad v\neq \vec{0}
+$$
+Consideremos $\lambda=-1$ en $A-\lambda I$, es decir
+$$
+A-(-1)I
+$$
+$$
+\begin{pmatrix}
+-6 & -5 & 0 \\
+10 & 9 & 0 \\
+10 & 5 & 4
+\end{pmatrix} - (-1)\cdot
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-6 & -5 & 0 \\
+10 & 9 & 0 \\
+10 & 5 & 4
+\end{pmatrix} +1\cdot
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-6 & -5 & 0 \\
+10 & 9 & 0 \\
+10 & 5 & 4
+\end{pmatrix} +
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-6+1 & -5 & 0 \\
+10 & 9+1 & 0 \\
+10 & 5 & 4+1
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-5 & 5 & 0 \\
+10 & 10 & 0 \\
+10 & 5 & 5
+\end{pmatrix}
+$$
+Retomemos la expresión y reemplacemos
+$$
+(A-\lambda I)\cdot v=\vec{0}
+$$
+$$
+(A-(-1)I)\cdot v=\vec{0}
+$$
+$$
+\begin{pmatrix}
+-5 & 5 & 0 \\
+10 & 10 & 0 \\
+10 & 5 & 5
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix} =
+\begin{pmatrix}
+0 \\
+0 \\
+0
+\end{pmatrix}
+$$
+Tenemos el siguiente sistema de ecuaciones homogéneo
+$$
+\begin{cases}
+-5x+5y=0 & (1), \\
+10x+10y=0 & (2), \\
+10x+5y+5z=0 & (3).
+\end{cases}
+$$
+Podemos simplificar este sistema de ecuaciones dividiendo por $5$ la ecuación $(1)$ y $(2)$ y dividiendo por $10$ la ecuación $(2)$, de forma tal que quedaría
+$$
+\begin{cases}
+-x+y=0 & (1), \\
+x+y=0 & (2), \\
+5x+y+z=0 & (3).
+\end{cases}
+$$
+Notemos que $x=-y$ por la ecuación $(2)$.
+Sustituyamos $x=-y$ en la ecuación $(3)$.
+$$
+5x+y+z=0
+$$
+$$
+5\cdot(-y)+y+z=0
+$$
+$$
+-5y+y+z=0
+$$
+$$
+-4y+z=0
+$$
+$$
+z=4y
+$$
+Las soluciones del sistema son
+$$
+(x,y,z)\leftrightarrow (-y,y,4y)\leftrightarrow y(-1,1,4)
+$$
+Luego
+$$
+S_{\lambda=-1}=\{ (-1,1,4) \}
+$$
+Consideremos $\lambda=4$ en $A-\lambda I$, es decir
+$$
+A-4I
+$$
+$$
+\begin{pmatrix}
+-6 & -5 & 0 \\
+10 & 9 & 0 \\
+10 & 5 & 4
+\end{pmatrix} - 4\cdot
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-6 & -5 & 0 \\
+10 & 9 & 0 \\
+10 & 5 & 4
+\end{pmatrix} +
+\begin{pmatrix}
+-4 & 0 & 0 \\
+0 & -4 & 0 \\
+0 & 0 & -4
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-6+(-4) & -5 & 0 \\
+10 & 9+(-4) & 0 \\
+10 & 5 & 4+(-4)
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-6-4 & -5 & 0 \\
+10 & 9-4 & 0 \\
+10 & 5 & 4-4
+\end{pmatrix}
+$$
+$$
+\begin{pmatrix}
+-10 & -5 & 0 \\
+10 & 5 & 0 \\
+10 & 5 & 0
+\end{pmatrix}
+$$
+Retomemos la expresión
+$$
+(A-\lambda I)\cdot v=\vec{0}
+$$
+$$
+(A-4I)\cdot v=\vec{0}
+$$
+$$
+\begin{pmatrix}
+-10 & -5 & 0 \\
+10 & 5 & 0 \\
+10 & 5 & 0
+\end{pmatrix}\cdot
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix} =
+\begin{pmatrix}
+0 \\
+0 \\
+0
+\end{pmatrix}
+$$
+Tenemos el siguiente sistema de ecuaciones lineales homogéneo
+$$
+\begin{cases}
+-10x-5y=0 & (1), \\
+10x+5y=0 & (2), \\
+10x+5y=0 & (3).
+\end{cases}
+$$
+Si multiplicamos por $-1$ a la ecuación $(1)$ obtenemos las mismas ecuaciones. Podemos eliminar las ecuaciones $(2)$ y $(3)$ porque son redundantes. Por lo que tendríamos la única ecuación
+$$
+10x+5y=0
+$$
+$$
+5y=-10x
+$$
+$$
+y=-5x
+$$
+Donde las soluciones tienen la siguiente forma
+$$
+(x,y,z)\leftrightarrow (x,-5x,z)\leftrightarrow (x,-5x,0)+(0,0,z)\leftrightarrow x(1,-5,0)+z(0,0,1)
+$$
+Luego
+$$
+S_{\lambda=4}=\{ (1,-5,0),(0,0,1) \}
+$$
+En resumen
+- El autovalor $\lambda=-1$ está asociado con el autovector $(-1,1,4)$.
+- El autovalor $\lambda=4$ está asociado con los autovectores $\{ (1,-5,0,),(0,0,1) \}$.
+
+Armamos $C$.
+$$
+C=\begin{pmatrix}
+-1 & 1 & 0 \\
+1 & -5 & 0 \\
+4 & 0 & 1
+\end{pmatrix}
+$$
+Buscamos su inversa
+$$
+\begin{pmatrix}
+-1 & 1 & 0 & | & 1 & 0 & 0 \\
+1 & -5 & 0 & | & 0 & 1 & 0 \\
+4 & 0 & 1 & | & 0 & 0 & 1
+\end{pmatrix}
+$$
+$$
+F_{1}\to-1F_{1}
+$$
+$$
+\begin{pmatrix}
+1 & -1 & 0 & | & -1 & 0 & 0 \\
+1 & -5 & 0 & | & 0 & 1 & 0 \\
+4 & 0 & 1 & | & 0 & 0 & 1
+\end{pmatrix}
+$$
+$$
+F_{2}\to F_{2}-F_{1},\quad F_{3}\to F_{3}-4F_{1}
+$$
+$$
+\begin{pmatrix}
+1 & -1 & 0 & | & -1 & 0 & 0 \\
+0 & -4 & 0 & | & 1 & 1 & 0 \\
+0 & 4 & 1 & | & 4 & 0 & 1
+\end{pmatrix}
+$$
+$$
+F_{3}\to F_{3}+F_{2}
+$$
+$$
+\begin{pmatrix}
+1 & -1 & 0 & | & -1 & 0 & 0 \\
+0 & -4 & 0 & | & 1 & 1 & 0 \\
+0 & 0 & 1 & | & 5 & 1 & 1
+\end{pmatrix}
+$$
+$$
+F_{2}\to-\frac{1}{4}F_{2}
+$$
+$$
+\begin{pmatrix}
+1 & -1 & 0 & | & -1 & 0 & 0 \\
+0 & 1 & 0 & | & -\frac{1}{4} & -\frac{1}{4} & 0 \\
+0 & 0 & 1 & | & 5 & 1 & 1
+\end{pmatrix}
+$$
+$$
+F_{1}\to F_{1}+F_{2}
+$$
+$$
+\begin{pmatrix}
+1 & 0 & 0 & | & -\frac{5}{4} & -\frac{1}{4} & 0 \\
+0 & 1 & 0 & | & -\frac{1}{4} & -\frac{1}{4} & 0 \\
+0 & 0 & 1 & | & 5 & 1 & 1
+\end{pmatrix}
+$$
+Entonces
+$$
+C^{-1} = \begin{pmatrix} -\frac{5}{4} & -\frac{1}{4} & 0 \\ -\frac{1}{4} & -\frac{1}{4} & 0 \\ 5 & 1 & 1 \end{pmatrix}
+$$
+Armamos la expresión
+$$
+A=CDC^{-1}
+$$
+$$
+\begin{pmatrix}
+-6 & -5 & 0 \\
+10 & 9 & 0 \\
+10 & 5 & 4
+\end{pmatrix} =
+\begin{pmatrix}
+-1 & 1 & 0 \\
+1 & -5 & 0 \\
+4 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+-1 & 0 & 0 \\
+0 & 4 & 0 \\
+0 & 0 & 4
+\end{pmatrix}
+\begin{pmatrix}
+-\frac{5}{4} & -\frac{1}{4} & 0 \\
+-\frac{1}{4} & -\frac{1}{4} & 0 \\
+5 & 1 & 1
+\end{pmatrix}
+$$
+### Ejercicio 9
+![[Pasted image 20251111025658.png]]
+Para calcular $(g\circ f)(v)$ se deben seguir los siguientes pasos
+1. Calcular $f(1,3,4)$.
+2. Calcular $g(f(1,3,4))$.
+
+Calculamos $f(1,3,4)$.
+La matriz que tenemos para $f$ es $M_{BE}(f)$. Esta matriz toma las coordenadas de un vector en la base $B$ y devuelve las coordenadas de su imagen en la base canónica $E$.
+
+Debemos conocer cómo expresar $v=(1,3,4)$ en términos de la base $B=\{ (1,-1,-1),(0,1,1),(1,0,1) \}$, es decir
+$$
+(1,3,4)=\alpha(1,-1,-1)+\beta(0,1,1)+\gamma(1,0,1)
+$$
+Planteamos el sistema de ecuaciones asociado a esta combinación lineal
+$$
+\begin{cases}
+\alpha+\gamma=1 & (1), \\
+-\alpha+\beta=3 & (2), \\
+-\alpha+\beta+\gamma=4 & (3)
+\end{cases}
+$$
+Podemos simplificar este sistema de ecuaciones restando la ecuación $(2)$ de la ecuación $(3)$.
+$$
+\begin{cases}
+\alpha+\gamma=1 & (1), \\
+-\alpha+\beta=3 & (2), \\
+\gamma=1 & (3)
+\end{cases}
+$$
+Notemos que $\gamma=1$ por la ecuación $(3)$.
+Sustituyamos $\gamma=1$ en la ecuación $(1)$ para encontrar el valor de $\alpha$.
+$$
+\alpha+\gamma=1
+$$
+$$
+\alpha+1=1
+$$
+$$
+\alpha=1-1
+$$
+$$
+\alpha=0
+$$
+Sustituyamos $\alpha=0$ en la ecuación $(2)$ para conocer el valor de $\beta$.
+$$
+-\alpha+\beta=3
+$$
+$$
+0+\beta=3
+$$
+$$
+\beta=3
+$$
+Las soluciones del sistema tienen la siguiente forma
+$$
+(\alpha,\beta,\gamma)=(0,3,1)
+$$
+Esto significa que las coordenadas del vector $v=(1,3,4)$ en la base $B$ son $[v]_{B}=\begin{pmatrix}0 \\ 3 \\ 1\end{pmatrix}$, es decir
+$$
+(1,3,4)=\alpha(1,-1,-1)+\beta(0,1,1)+\gamma(1,0,1)
+$$
+$$
+(1,3,4)=0\cdot(1,-1,-1)+3\cdot(0,1,1)+1\cdot(1,0,1)
+$$
+$$
+(1,3,4)=(0,3,3)+(1,0,1)
+$$
+$$
+(1,3,4)=\left( 0+1,3+0,3+1 \right) 
+$$
+$$
+(1,3,4)=\left( 1,3,4 \right) 
+$$
+Aplicamos $f$ a $\begin{pmatrix}0 \\ 3 \\ 1\end{pmatrix}$, es decir
+$$
+[f(v)]_{E} = M_{BE}(f)\cdot[v]_{B}
+$$
+$$
+[f(v)]_{E} = 
+\begin{pmatrix}
+1 & 0 & 1 \\
+0 & 2 & 3 \\
+0 & 1 & 2
+\end{pmatrix} \cdot
+\begin{pmatrix}
+0 \\
+3 \\
+1
+\end{pmatrix} =
+\begin{pmatrix}
+a' \\
+a'' \\
+a'''
+\end{pmatrix}
+$$
+Cálculos auxiliares
+- $a'=1$.
+- $a''=2\cdot{3}+3\cdot{1}=6+3=9$.
+- $a'''=1\cdot{3}+2\cdot{1}=3+2=5$.
+Por lo tanto
+$$
+[f(v)]_{E} = \begin{pmatrix}
+1 \\
+9 \\
+5
+\end{pmatrix}
+$$
+Hemos encontrado que $[f(v)]_{E} = \begin{pmatrix}1 \\9 \\5\end{pmatrix}$. Dado que $E$ es la base canónica, esto significa que el vector imagen es $f(1,3,4)=(1,9,5)$.
+Aplicamos $g$ a $\begin{pmatrix}1 \\ 9 \\ 5\end{pmatrix}$.
+La matriz que tenemos para $g$ es $M_{EB'}(g)=\begin{pmatrix}2 & -1 & 1 \\ -1 & 3 & 1\end{pmatrix}$. Esta matriz toma las coordenadas de un vector en la base canónica $E$ y devuelve las coordenadas de su imagen en la base $B'$.
+Necesitamos calcular 
+$$
+[g(1,9,5)]_{B'}=M_{EB'}(g)\cdot[f(v)]_{E}
+$$
+$$
+[g(1,9,5)]_{B'} = 
+\begin{pmatrix}
+2 & -1 & 1 \\
+-1 & 3 & 1
+\end{pmatrix}\cdot
+\begin{pmatrix}
+1 \\
+9 \\
+5
+\end{pmatrix} =
+\begin{pmatrix}
+b' \\
+b''
+\end{pmatrix}
+$$
+Cálculos auxiliares
+- $b'=2\cdot{1}-1\cdot{9}+1\cdot{5}=2-9+5=2-4=-2$.
+- $b''=-1\cdot{1}+3\cdot{9}+1\cdot{5}=-1+27+5=31$.
+Luego
+$$
+[g(1,9,5)]_{B'}=\begin{pmatrix}
+-2 \\
+31
+\end{pmatrix}
+$$
+Hemos encontrado que $[g(1,9,5)]_{B'}=\begin{pmatrix}-2 \\31\end{pmatrix}$. Dado que están en las coordenadas de la base $B'$ tenemos que convertirlas a coordenadas de la base canónica de $\mathbb{R}^{2}$, es decir
+$$
+(gof)(1,3,4)=-2\cdot(3,2)+31\cdot(2,1)
+$$
+$$
+(gof)(1,3,4)=(-6,-4)+(62,31)
+$$
+$$
+(gof)(1,3,4)=(-6+62,-4+31)
+$$
+$$
+(gof)(1,3,4)=(56,27)
+$$

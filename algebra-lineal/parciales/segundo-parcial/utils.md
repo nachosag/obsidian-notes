@@ -25,7 +25,7 @@ Sea $T:\mathbb{R}^{n}\to \mathbb{R}^{m}$ una transformación lineal, entonces:
 3. SI $n=m$ y $T$ es epimorfismo, entonces $T$ es isomorfismo.
 4. $T$ es isomorfismo si y solo si $\{ v_{1},v_{2},\dots,v_{n} \}$ es una base de $V$, entonces $\{ T(v_{1}),T(v_{2}),\dots,T(v_{n}) \}$ es una base de $V$.
 ## Matriz de una transformación lineal en cualquier par de bases
-### Porposiciones
+### Proposiciones
 1. Si tenemos $T:\mathbb{R}^{n}\to \mathbb{R}^{m}$ una transformación lineal y $B,B'$ son bases de $\mathbb{R}^{n}$, entonces $\det(M_{BB}(T))=\det(M_{B'B'}(T))$.
 2. $\det(M_{BB'}(T))\neq{0}$ si y solo si tenemos $T:\mathbb{R}^{n}\to \mathbb{R}^{n}$ una transformación lineal isomorfa.
 3. $\det(M_{BB}(T))\neq{0}$ si y solo si $\det(M_{B'B'}(T))\neq{0}$.
@@ -72,4 +72,3 @@ Si $T:\mathbb{R}^{n}\to \mathbb{R}^{n}$ es una transformación lineal isomorfa, 
 	3. $T$ es diagonizable.
 2. Hamilton-Cayley: Sea $A\in \mathbb{R}^{n\times n}$ y $P_{A}(\lambda)$ su polinomio característico, entonces $P_{A}(A)=0$.
    Si $T:\mathbb{R}^{n}\to \mathbb{R}^{n}$ es una transformación lineal y $P_{T}(\lambda)$ es su polinomio característico entonces $P_{T}(T)=0$.
-
