@@ -6,6 +6,7 @@
       {
         "id": "c4100f0140ccf0e3",
         "type": "tabs",
+        "dimension": 57.88667687595712,
         "children": [
           {
             "id": "42ea46d4ba748abd",
@@ -34,7 +35,14 @@
               "icon": "lucide-file",
               "title": "rouche-frobenius"
             }
-          },
+          }
+        ]
+      },
+      {
+        "id": "c595876d4c294a6f",
+        "type": "tabs",
+        "dimension": 42.11332312404288,
+        "children": [
           {
             "id": "7e4928581d8246d7",
             "type": "leaf",
@@ -200,9 +208,11 @@
   },
   "active": "42ea46d4ba748abd",
   "lastOpenFiles": [
-    "algebra-lineal/parciales/primer-parcial/parcial-06-AL.pdf",
-    "algebra-lineal/parciales/primer-parcial/resoluciones/parcial-06.md",
     "algebra-lineal/parciales/primer-parcial/rouche-frobenius.md",
+    "algebra-lineal/parciales/primer-parcial/resoluciones/parcial-06.md",
+    "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251114003504.png",
+    "algebra-lineal/parciales/primer-parcial/parcial-06-AL.pdf",
+    "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251113234530.png",
     "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251113200627.png",
     "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251113190843.png",
     "algebra-lineal/parciales/primer-parcial/resoluciones/anexos",
@@ -227,9 +237,7 @@
     "algebra-lineal/practica-05/tipos-de-variables.md",
     "algebra-lineal/practica-07/practica-07-AL.pdf",
     "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251108200602.png",
-    "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251108181228.png",
     "algebra-lineal/parciales/segundo-parcial/resoluciones/parcial-05.md",
-    "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251108002640.png",
     "algebra-lineal/parciales/segundo-parcial/resoluciones/parcial-01.md",
     "Excalidraw/Drawing 2025-11-06 01.51.23.excalidraw.md",
     "algebra-lineal/practica-01/clase.md",
