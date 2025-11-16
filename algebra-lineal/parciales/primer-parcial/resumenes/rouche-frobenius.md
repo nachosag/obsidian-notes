@@ -28,7 +28,7 @@ Este sistema se puede expresar de forma compacta mediante la notación matricial
 El teorema opera sobre dos matrices clave derivadas del sistema:
 
 - **Matriz del Sistema (A):** Es la matriz formada por los coeficientes de las incógnitas.
-- **Matriz Ampliada (A' o [A|b]):** Es la matriz de coeficientes a la que se le añade el vector de términos independientes **b** como una columna adicional.
+- **Matriz Ampliada (A' o A|b):** Es la matriz de coeficientes a la que se le añade el vector de términos independientes **b** como una columna adicional.
 
 ### 3. Rango de una Matriz
 
