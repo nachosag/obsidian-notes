@@ -639,7 +639,531 @@ Como el sistema tiene solución, significa que existe una combinación lineal de
 Por lo tanto $(-2,-2,-1,0)\in S$.
 ### Ejercicio 12
 ![[Pasted image 20251116005331.png]]
+Buscamos $B_{\mathbb{S}}$ y $dim(\mathbb{S})$.
+El espacio vectorial $\mathbb{S}$ está definido por el siguiente sistema de ecuaciones
+$$
+\mathbb{S} = \begin{cases}
+-x_{1}+x_{2}-x_{3}+x_{4}=0 \\
+2x_{1}-x_{2}+x_{3}-x_{4}=0
+\end{cases}
+$$
+La matriz asociada a este sistema es
+$$
+A = \begin{pmatrix}
+-1 & 1 & -1 & 1 & | & 0 \\
+2 & -1 & 1 & -1 & | & 0
+\end{pmatrix}
+$$
+Podemos simplificar el sistema realizando operaciones sobre filas
+$$
+F_{2}\to F_{2}+F_{1}
+$$
+$$
+A = \begin{pmatrix}
+-1 & 1 & -1 & 1 & | & 0 \\
+1 & 0 & 0 & 0 & | & 0
+\end{pmatrix}
+$$
+Luego, el nuevo sistema de ecuaciones simplificado es
+$$
+\mathbb{S} = \begin{cases}
+-x_{1}+x_{2}-x_{3}+x_{4}=0 & (1) \\
+x_{1}=0 & (2)
+\end{cases}
+$$
+Por la ecuación $(2)$ tenemos que $x_{1}=0$.
+Sustituimos $x_{1}=0$ en la ecuación $(1)$,
+$$
+-x_{1}+x_{2}-x_{3}+x_{4}=0
+$$
+$$
+x_{2}-x_{3}+x_{4}=0
+$$
+$$
+x_{2}=x_{3}-x_{4}
+$$
+Luego, las soluciones del sistema tienen la siguiente forma
+$$
+(x_{1},x_{2},x_{3},x_{4}) = (0,x_{3}-x_{4},x_{3},x_{4}) = x_{3}(0,1,1,0) + x_{4}(0,-1,0,1)
+$$
+Con $x_{3},x_{4}\in \mathbb{R}$.
+Por lo tanto, una posible base de $\mathbb{S}$ es
+$$
+B_{\mathbb{S}}=\{ (0,1,1,0),(0,-1,0,1) \}
+$$
+Notemos que $dim(\mathbb{S})=2$.
+
+Busquemos $B_{\mathbb{T}}$ y $dim(\mathbb{T})$.
+El espacio vectorial $\mathbb{T}$ está definido por su conjunto generador
+$$
+\mathbb{T} = gen\{ (0,0,k^{2},1),(0,-1,1,2) \}
+$$
+Para que este conjunto de vectores sea una base, necesitamos que ambos vectores sean linealmente independientes. 
+
+Dos vectores son linealmente dependientes si y solo si uno es múltiplo escalar del otro.
+
+Busquemos si existe un escalar $\lambda \in \mathbb{R}$ tal que
+$$
+(0,0,k^{2},1)=\lambda\cdot(0,-1,1,2)
+$$
+$$
+(0,0,k^{2},1) = (0, -\lambda, \lambda, 2\lambda)
+$$
+Igualamos componente a componente
+$$
+\begin{cases}
+0=0, \\
+0=-\lambda\leftrightarrow 0=\lambda, \\
+k^{2}=\lambda, \\
+1=2\lambda\leftrightarrow \frac{1}{2}=\lambda
+\end{cases}
+$$
+Notemos que $\lambda$ debería ser $0$ y $\frac{1}{2}$ simultáneamente. Eso es absurdo.
+Por lo tanto, los vectores $(0,0,k^{2},1)$ y $(0,-1,1,2)$ son linealmente independientes para cualquier $k\in \mathbb{R}$.
+
+---
+**Otra forma de demostrar que los vectores son linealmente independientes**
+
+Construimos la matriz $A$ poniendo los vectores como filas
+$$
+A = \begin{pmatrix}
+0 & 0 & k^{2} & 1 \\
+0 & -1 & 1 & 2
+\end{pmatrix}
+$$
+$$
+F_{1}\leftrightarrow F_{2}
+$$
+$$
+A = \begin{pmatrix}
+0 & -1 & 1 & 2 \\
+0 & 0 & k^{2} & 1
+\end{pmatrix}
+$$
+Notemos que $\rho(A)=2$ independientemente del valor de $k$.
+Como $\rho(A)$ es igual al número de vectores, concluimos que los vectores son linealmente independientes para todo $k\in \mathbb{R}$.
+
+---
+
+Por lo tanto, una posible base de $\mathbb{T}$ es
+$$
+B_{\mathbb{T}}=\{ (0,0,k^{2},1),(0,-1,1,2) \}
+$$
+Luego, $dim(\mathbb{T})=2$.
+
+Dado que
+$$
+dim(\mathbb{S})=dim(\mathbb{T})=2
+$$
+la condición de la dimensión se cumple. Ahora necesitamos garantizar la condición de inclusión.
+$$
+B_{\mathbb{S}}\subseteq \mathbb{T}\qquad \text{o}\qquad B_{\mathbb{T}}\subseteq \mathbb{S}
+$$
+Vamos a verificar la segunda condición.
+
+El subespacio $\mathbb{S}$ está definido por el sistema de ecuaciones homogéneas
+$$
+\begin{cases}
+-x_{1}+x_{2}-x_{3}+x_{4}=0 & (1), \\
+2x_{1}-x_{2}+x_{3}-x_{4}=0 & (2)
+\end{cases}
+$$
+
+Verifiquemos que $v_{1}=(0,0,k^{2},1)\in \mathbb{S}$.
+- En la ecuación 1
+$$
+-x_{1}+x_{2}-x_{3}+x_{4}=0
+$$
+$$
+-0+0-k^{2}+1=0
+$$
+$$
+-k^{2}=-1
+$$
+$$
+k^{2}=1
+$$
+Notemos que la igualdad se cumple si $k=1$ o $k=-1$.
+- En la ecuación 2
+$$
+2x_{1}-x_{2}+x_{3}-x_{4}=0
+$$
+$$
+2\cdot{0}-0+k^{2}-1=0
+$$
+$$
+k^{2}-1=0
+$$
+$$
+k^{2}=1
+$$
+Notemos que la igualdad se cumple si $k=1$ o $k=-1$.
+
+Para que $v_{1}\in \mathbb{S}$, ambas ecuaciones deben cumplirse simultáneamente, por lo que $k\in \{ 1,-1 \}$.
+
+Verifiquemos que $v_{2}=(0,-1,1,2)\in \mathbb{S}$.
+- En la ecuación 1
+$$
+-x_{1}+x_{2}-x_{3}+x_{4}=0
+$$
+$$
+-0+(-1)-1+2=0
+$$
+$$
+-1-1+2=0
+$$
+$$
+-2+2=0
+$$
+$$
+0=0
+$$
+Notemos que la igualdad se cumple siempre.
+- En la ecuación 2
+$$
+2x_{1}-x_{2}+x_{3}-x_{4}=0
+$$
+$$
+2\cdot{0}-(-1)+1-2=0
+$$
+$$
+1+1-2=0
+$$
+$$
+0=0
+$$
+Notemos que la igualdad se cumple siempre.
+
+Por lo que $v_{2}\in \mathbb{S}$.
+
+Como demostramos que $dim(\mathbb{S})=dim(\mathbb{T})$ y $B_{\mathbb{T}}\subseteq \mathbb{S}$ podemos afirmar que $\mathbb{S=T}$ con $k\in \{ 1,-1 \}$.
 ### Ejercicio 15
 ![[Pasted image 20251116005407.png]]
+El subespacio $S$ está definido por el conjunto generador $S=gen\{ (1,-1,2),(0,0,1) \}$.
+
+Notemos que los vectores son claramente linealmente independiente, por lo tanto podemos armar una base y calcular su dimensión.
+
+$$
+B_{S}=\{ (1,-1,2),(0,0,1) \}
+$$
+$$
+dim(S)=2
+$$
+El subespacio $T$ está definido por una única ecuación implícita $x-y-3z=0$.
+
+Buscamos $B_{T}$ y $dim(T)$.
+$$
+x-y-3z=0
+$$
+$$
+x=y+3z
+$$
+Por lo que las soluciones de la ecuación tienen la siguiente forma
+$$
+(x,y,z)=(y+3z,y,z)=y(1,1,0)+z(3,0,1)
+$$
+Por lo que una posible base de $T$ es
+$$
+B_{T}=\{ (1,1,0),(3,0,1) \}
+$$
+Luego, $dim(T)=2$.
+
+---
+
+Buscamos $S\cap T$ y $dim(S\cap T)$.
+
+Un vector $v=(x,y,z)\in S\cap T$ si satisface ambas condiciones
+- $v$ es una combinación lineal de $B_{S}$.
+- $v$ satisface la ecuación de $T$.
+
+Un vector $v\in S$ tiene la forma
+$$
+v = \alpha(1,-1,2)+\beta(0,0,1)
+$$
+$$
+v = (\alpha,-\alpha,2\alpha) + (0,0,\beta)
+$$
+$$
+v = (\alpha, -\alpha, 2\alpha+\beta)
+$$
+Ahora sustituimos las componentes de $v$ en la ecuación
+$$
+x-y-3z=0
+$$
+$$
+\alpha-(-\alpha)-3\cdot(2\alpha+\beta)=0
+$$
+$$
+\alpha+\alpha-6\alpha-3\beta=0
+$$
+$$
+-4\alpha-3\beta=0
+$$
+Buscamos $\beta$.
+$$
+-3\beta=4\alpha
+$$
+$$
+\beta=-\frac{4}{3}\alpha
+$$
+Ahora sustituimos esta relación de vuelta en la forma del vector $v$.
+$$
+v = (\alpha, -\alpha, 2\alpha+\beta)
+$$
+$$
+v = \left( \alpha, -\alpha, 2\alpha -\frac{4}{3}\alpha \right)
+$$
+$$
+v = \left( \alpha, -\alpha, \frac{2}{3}\alpha \right)
+$$
+$$
+v = \alpha\left( 1,-1, \frac{2}{3} \right)
+$$
+Para evitar fracciones, podemos tomar el vector múltiplo de 3
+$$
+v = 3\cdot\left( 1,-1, \frac{2}{3} \right) = (3,-3, 2)
+$$
+Luego
+$$
+B_{S\cap T} = \{ (3,-3,2) \}
+$$
+y $dim(S\cap T)=1$.
+
+---
+
+<mark style="background: #FFB8EBA6;">(a)</mark>
+Buscamos $B_{(S\cap T)^{\perp}}$ y $dim((S\cap T)^{\perp})$.
+
+El complemento ortogonal de un subespacio $V$, denotado $V^\perp$, es el conjunto de todos los vectores que son **ortogonales** a cada vector en $V$. Si $V$ es generado por $\mathcal{B}_V = \{v_1\}$, entonces $w \in V^\perp$ si y solo si $w \cdot v_1 = 0$.
+
+$V = S \cap T$ es generado por $v_I = (3, -3, 2)$. Un vector $u = (x, y, z) \in (S \cap T)^\perp$ debe satisfacer la condición de ortogonalidad:
+$$
+u\cdot v=0
+$$
+$$
+(x,y,z)\cdot(3,-3,2)=0
+$$
+$$
+3x-3y+2z=0
+$$
+El subespacio $(S\cap T)^{\perp}$ está definido por esta única ecuación implícita. Despejamos $x$ y luego expresamos las soluciones.
+$$
+3x-3y+2z=0
+$$
+$$
+3x=3y-2z
+$$
+$$
+x=y-\frac{2}{3}z
+$$
+Las soluciones de la ecuación tienen la siguiente forma
+$$
+(x,y,z)=\left( y-\frac{2}{3}z,y,z \right)=y(1,1,0)+z\left( -\frac{2}{3},0,1 \right)
+$$
+Luego, una posible base de $(S\cap T)^{\perp}$ es
+$$
+B_{(S\cap T)^{\perp}}=\left\{  (1,1,0),\left( -\frac{2}{3},0,1 \right)  \right\}
+$$
+$$
+dim((S\cap T)^{\perp})=2
+$$
+---
+
+<mark style="background: #FFB8EBA6;">(b)</mark>
+El objetivo es encontrar un subespacio $W \subseteq \mathbb{R}^3$ tal que al sumarlo con el subespacio $V = (S \cap T)^\perp$ se obtenga $\mathbb{R}^3$ mediante una Suma Directa:
+$$V \oplus W = \mathbb{R}^3$$
+El **Teorema de la Dimensión** para la suma de subespacios nos da la clave. Cuando la suma es directa, la dimensión se vuelve aditiva:
+$$\text{dim}(V \oplus W) = \text{dim}(V) + \text{dim}(W)$$
+Nosotros ya conocemos:
+- $\text{dim}(V \oplus W) = \text{dim}(\mathbb{R}^3) = 3$.
+- $\text{dim}(V) = \text{dim}((S \cap T)^\perp) = 2$. (Del punto a)
+Sustituyendo estos valores en la fórmula:
+$$
+\text{dim}(V \oplus W) = \text{dim}(V) + \text{dim}(W)
+$$
+$$3 = 2 + \text{dim}(W)$$
+$$\mathbf{\text{dim}(W) = 1}$$
+**Justificación:** El subespacio $W$ debe ser una **recta** (dimensión 1) que sea **transversal** al plano $V$ (dimensión 2), sin intersectarlo excepto en el origen.
+
+El subespacio $V = (S \cap T)^\perp$ es el conjunto de vectores $(x, y, z)$ que satisfacen la ecuación:
+$$3x - 3y + 2z = 0$$
+Geométricamente, $V$ es un **plano** que pasa por el origen.
+Para encontrar un subespacio $W$ de dimensión 1 que cumpla $V \cap W = \{\vec{0}\}$, necesitamos elegir un vector $\mathbf{w_1}$ que **no pertenezca** al plano $V$.
+
+El método más sencillo y "canónico" (es decir, el que garantiza la mínima intersección) es elegir el **vector normal** a $V$.
+En nuestro caso, el vector normal a $3x - 3y + 2z = 0$ es $\mathbf{n = (3, -3, 2)}$.
+
+Definimos $W$ como el subespacio generado por el vector normal $\mathbf{n}$:
+$$W = \text{gen}\{(3, -3, 2)\}$$
+**Conclusión:** La única intersección es el vector nulo. Dado que $\text{dim}(V)+\text{dim}(W)=3$ y $V \cap W = \{\vec{0}\}$, la suma es directa y genera $\mathbb{R}^3$.
+
+---
 ### Ejercicio 18
 ![[Pasted image 20251116005433.png]]
+Busquemos $B_{S}$ y $dim(S)$.
+
+El subespacio $S$ está definido por su conjunto generador $\mathcal{G}_S = \{v_1, v_2, v_3\}$, donde:
+$$v_1 = (0, 3, 2, 1)$$
+$$v_2 = (2, -1, -1, 0)$$
+$$v_3 = (4, 4, 2, 1)$$
+Para encontrar una base, debemos verificar si los vectores son **Linealmente Independientes (L.I.)** usando el rango de la matriz formada por ellos:
+$$
+A = \begin{pmatrix}
+0 & 3 & 2 & 1 \\
+2 & -1 & -1 & 0 \\
+4 & 4 & 2 & 1
+\end{pmatrix}
+$$
+$$
+F_{1}\leftrightarrow F_{2}
+$$
+$$
+\begin{pmatrix}
+2 & -1 & -1 & 0 \\
+0 & 3 & 2 & 1 \\
+4 & 4 & 2 & 1
+\end{pmatrix}
+$$
+$$
+F_{3}\to F_{3}-2F_{1}
+$$
+$$
+\begin{pmatrix}
+2 & -1 & -1 & 0 \\
+0 & 3 & 2 & 1 \\
+0 & 6 & 4 & 1
+\end{pmatrix}
+$$
+$$
+F_{3}\to F_{3}-2F_{2}
+$$
+$$
+\begin{pmatrix}
+2 & -1 & -1 & 0 \\
+0 & 3 & 2 & 1 \\
+0 & 0 & 0 & 1
+\end{pmatrix}
+$$
+Notemos que la matriz tiene tres filas no nulas. Esto significa que
+- $dim(S)=3$.
+- $B_{S}=\{ (2,-1,-1,0),(0,3,2,1),(0,0,0,1) \}$.
+
+Busquemos $B_{T}$ y $dim(T)$.
+
+$T$ está definido por una única ecuación implícita en $\mathbb{R}^{4}$:
+$$
+-x_{1}-2x_{3}+4x_{4}=0
+$$
+Despejemos $x_{1}$.
+$$
+-x_{1}=2x_{3}-4x_{4}
+$$
+$$
+x_{1}=-2x_{3}+4x_{4}
+$$
+Las soluciones de la ecuación tienen la siguiente forma
+$$
+(x_{1},x_{2},x_{3},x_{4})=(-2x_{3}+4x_{4},x_{2},x_{3},x_{4})
+$$
+$$
+(x_{1},x_{2},x_{3},x_{4})=x_{2}(0,1,0,0)+x_{3}(-2,0,1,0)+x_{4}(4,0,0,1)
+$$
+Por lo tanto, una posible base de $T$ es
+$$
+B_{T}=\{ (0,1,0,0),(-2,0,1,0),(4,0,0,1) \}
+$$
+Notemos que $dim(T)=3$.
+
+---
+
+<mark style="background: #FFB8EBA6;">(a)</mark>
+
+Para que $S$ y $T$ estén en **Suma Directa** ($S \oplus T$), deben cumplirse dos condiciones:
+1. **Intersección Trivial**: $S \cap T = \{\vec{0}\}$, es decir, $\text{dim}(S \cap T) = 0$.
+2. **Suma Completa**: $S + T = \mathbb{R}^4$, es decir, $\text{dim}(S + T) = 4$.
+
+Verificamos la condición 1 (Intersección Trivial) utilizando el Teorema de la Dimensión para la Suma:
+$$\text{dim}(S + T) = \text{dim}(S) + \text{dim}(T) - \text{dim}(S \cap T)$$
+Sustituimos las dimensiones encontradas:
+$$\text{dim}(S + T) = 3 + 3 - \text{dim}(S \cap T)$$
+$$\text{dim}(S + T) = 6 - \text{dim}(S \cap T)$$
+Dado que la dimensión de cualquier subespacio en $\mathbb{R}^4$ no puede ser mayor que 4, tenemos:
+$$\text{dim}(S + T) \le 4$$
+$$6 - \text{dim}(S \cap T) \le 4$$
+$$2 \le \text{dim}(S \cap T)$$
+**Conclusión necesaria:** La dimensión de la intersección es $\text{dim}(S \cap T) \ge 2$.
+Puesto que $\text{dim}(S \cap T) \ge 2$, y no es 0, los subespacios $S$ y $T$ **no tienen una intersección trivial**.
+**Respuesta a (a):** $S$ y $T$ **no están en suma directa** porque $\text{dim}(S \cap T) \ge 2$.
+
+---
+
+<mark style="background: #FFB8EBA6;">(b)</mark>
+
+Buscamos $B_{T^{\perp}}$.
+
+El complemento ortogonal $T^\perp$ de un subespacio $T$ definido por ecuaciones implícitas es el subespacio generado por los **vectores normales** a esas ecuaciones.
+
+$T$ está definido por la ecuación: $\mathbf{(-1)}x_1 + \mathbf{(0)}x_2 + \mathbf{(-2)}x_3 + \mathbf{(4)}x_4 = 0$. El vector normal $\mathbf{n}$ a este hiperplano es el vector de los coeficientes:
+$$\mathbf{n} = (-1, 0, -2, 4)$$
+- $\mathcal{B}_{T^\perp} = \{(-1, 0, -2, 4)\}$.
+- $dim(T^{\perp})=1$.
+
+Buscamos $B_{S^{\perp}}$.
+
+El complemento ortogonal $S^\perp$ es el subespacio de todos los vectores $u = (x_1, x_2, x_3, x_4)$ que son ortogonales a **todos** los vectores de la base de $S$.
+$$\mathcal{B}_S = \{b_1, b_2, b_3\} = \{(2, -1, -1, 0), (0, 3, 2, 1), (0, 0, 0, -1)\}$$
+$u \in S^\perp$ si $u \cdot b_1 = 0$, $u \cdot b_2 = 0$, y $u \cdot b_3 = 0$. Esto genera el siguiente sistema homogéneo:
+$$
+\begin{cases}
+2x_{1}-x_{2}-x_{3}=0 & (1), \\
+3x_{2}+2x_{3}+x_{4}=0 & (2), \\
+-x_{4}=0 & (3)
+\end{cases}
+$$
+Resolvemos el sistema
+Por la ecuación $(3)$ tenemos que $x_{4}=0$.
+Sustituimos $x_{4}=0$ en la ecuación $(2)$.
+$$
+3x_{2}+2x_{3}+x_{4}=0
+$$
+$$
+3x_{2}+2x_{3}=0
+$$
+$$
+3x_{2}=-2x_{3}
+$$
+$$
+x_{2}=-\frac{2}{3}x_{3}
+$$
+Sustituimos $x_{2}=-\frac{2}{3}x_{3}$ en la ecuación $(1)$.
+$$
+2x_{1}-x_{2}-x_{3}=0
+$$
+$$
+2x_{1}-\left( -\frac{2}{3}x_{3} \right)-x_{3}=0
+$$
+$$
+2x_{1}+\frac{2}{3}x_{3}-x_{3}=0
+$$
+$$
+2x_{1}-\frac{1}{3}x_{3}=0
+$$
+$$
+2x_{1}=\frac{1}{3}x_{3}
+$$
+$$
+x_{1}=\frac{1}{6}x_{3}
+$$
+Las soluciones del sistema tienen la siguiente forma
+$$
+(x_{1},x_{2},x_{3},x_{4})=\left( \frac{1}{6}x_{3}, -\frac{2}{3}x_{3}, x_{3}, 0 \right)=x_{3}\left( \frac{1}{6}, -\frac{2}{3}, 1, 0 \right)
+$$
+Tomamos el vector múltiplo de 6
+$$
+6\cdot\left( \frac{1}{6}, -\frac{2}{3}, 1, 0 \right)=(1,-4,6,0)
+$$
+Luego, una posible base de $S^{\perp}$ es
+$$
+B_{S^{\perp}}=\{ (1,-4,6,0) \}
+$$
+Notemos que $dim(S^{\perp})=1$.

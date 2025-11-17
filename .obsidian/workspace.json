@@ -22,24 +22,6 @@
             }
           }
         ]
-      },
-      {
-        "id": "9f9454a574ff1d49",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "a5d833ae944d47b8",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "algebra-lineal/parciales/segundo-parcial/ejercicios-AL.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "ejercicios-AL"
-            }
-          }
-        ]
       }
     ],
     "direction": "vertical"
