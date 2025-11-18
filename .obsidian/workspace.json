@@ -11,10 +11,26 @@
             "id": "4f69cee06239717a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "algebra-lineal/parciales/primer-parcial/resoluciones/parcial-01.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "parcial-01"
+            }
+          },
+          {
+            "id": "47c2a9ea347a0e4f",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "algebra-lineal/parciales/primer-parcial/parcial-01-AL.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "parcial-01-AL"
             }
           }
         ]
@@ -169,6 +185,13 @@
   },
   "active": "4f69cee06239717a",
   "lastOpenFiles": [
+    "algebra-lineal/parciales/primer-parcial/parcial-01-AL.pdf",
+    "algebra-lineal/parciales/primer-parcial/resoluciones/parcial-01.md",
+    "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251118024704.png",
+    "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251118024644.png",
+    "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251117214320.png",
+    "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251117200149.png",
+    "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251117200133.png",
     "algebra-lineal/parciales/primer-parcial/resoluciones/ejercicios-de-linealidad.md",
     "algebra-lineal/parciales/primer-parcial/resumenes/linealidad.md",
     "algebra-lineal/parciales/primer-parcial/resoluciones/ejercicios-de-subespacios.md",
@@ -179,7 +202,6 @@
     "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251116005331.png",
     "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251115220656.png",
     "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251115202823.png",
-    "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251115194547.png",
     "algebra-lineal/parciales/primer-parcial/resumenes/vectores.md",
     "algebra-lineal/parciales/primer-parcial/resumenes/subespacios.md",
     "algebra-lineal/parciales/primer-parcial/resumenes/rouche-frobenius.md",
@@ -187,13 +209,8 @@
     "algebra-lineal/parciales/segundo-parcial/resumenes/propiedades.md",
     "algebra-lineal/parciales/segundo-parcial/resumenes",
     "algebra-lineal/parciales/primer-parcial/resumenes",
-    "algebra-lineal/parciales/primer-parcial/parcial-01-AL.pdf",
     "algebra-lineal/parciales/primer-parcial/resoluciones/parcial-07.md",
-    "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251114192524.png",
     "algebra-lineal/parciales/primer-parcial/parcial-07-AL.pdf",
-    "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251114180858.png",
-    "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251114171005.png",
-    "algebra-lineal/parciales/primer-parcial/resoluciones/anexos/Pasted image 20251114154618.png",
     "algebra-lineal/parciales/primer-parcial/parcial-07-AL.md",
     "algebra-lineal/parciales/primer-parcial/resoluciones/parcial-06.md",
     "algebra-lineal/parciales/primer-parcial/parcial-06-AL.pdf",
@@ -214,8 +231,6 @@
     "algebra-lineal/practica-01/clase.md",
     "algebra-lineal/practica-01/tablas.md",
     "algebra-lineal/practica-01/angulos.md",
-    "algebra-lineal/practica-01/raices-cuadraticas.md",
-    "algebra-lineal/practica-01/binomica-vs-trigonometrica.md",
     "Untitled.canvas"
   ]
 }
