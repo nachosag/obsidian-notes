@@ -1,11 +1,11 @@
-# Ejercicio 1
+# <mark style="background: #FFB8EBA6;">Ejercicio 1</mark>
 Sea $T: \mathbb{R}^3 \to \mathbb{R}^3$ la transformación lineal definida por su matriz asociada en la base canónica ($E$) como:
 
 $$M_{EE}(T) = A = \begin{pmatrix} 1 & a & 0 \\ 0 & 2 & 0 \\ 0 & a & 1 \end{pmatrix}$$
 
 donde $a$ es un parámetro real.
 
-### **Apartado a) Teorema de la Dimensión y Clasificación**
+### **<mark style="background: #FFF3A3A6;">Apartado a) Teorema de la Dimensión y Clasificación</mark>**
 
 1. Determina los valores de $a \in \mathbb{R}$ para los cuales la transformación lineal $T$ es un **isomorfismo**. Justifica tu respuesta usando el determinante de la matriz $A$.
 
@@ -99,7 +99,7 @@ $T$ es un isomorfismo porque $T$ es monomorfismo y epimorfismo simultáneamente.
 
 ---
 
-### **Apartado b) Autovalores y Autoespacios**
+### **<mark style="background: #FFF3A3A6;">Apartado b) Autovalores y Autoespacios</mark>**
 
 Considera el caso $a=1$. La matriz es $A = \begin{pmatrix} 1 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix}$.
 
@@ -268,7 +268,7 @@ Notemos que $dim(S_{\lambda=2})=1$.
 
 ---
 
-### **Apartado c) Diagonalización**
+### **<mark style="background: #FFF3A3A6;">Apartado c) Diagonalización</mark>**
 
 1. ¿Es la matriz $A$ diagonalizable para $a=1$? Justifica tu respuesta.
 
@@ -340,13 +340,13 @@ $$
 
 ---
 
-# Ejercicio 2
+# <mark style="background: #FFB8EBA6;">Ejercicio 2</mark>
 
 Sea $B = \{(1, 0, 1), (0, 1, 1), (1, 1, 0)\}$ una base de $\mathbb{R}^3$ y sea $T: \mathbb{R}^3 \to \mathbb{R}^4$ una transformación lineal cuya matriz asociada en la base $B$ de **salida** y la base canónica $E$ de **llegada** de $\mathbb{R}^4$ es:
 
 $$M_{BE}(T) = A = \begin{pmatrix} 1 & 0 & 2 \\ 2 & 1 & 3 \\ 0 & -1 & -2 \\ 1 & 1 & 3 \end{pmatrix}$$
 
-### **Apartado a) Núcleo e Imagen**
+### **<mark style="background: #FFF3A3A6;">Apartado a) Núcleo e Imagen</mark>**
 
 1. Determina una **base** y la **dimensión** del **Núcleo** $(\operatorname{Nu}(T))$ de $T$. 
 
@@ -464,7 +464,7 @@ $$
 
 ---
 
-### **Apartado b) Clasificación y Fórmula**
+### **<mark style="background: #FFF3A3A6;">Apartado b) Clasificación y Fórmula</mark>**
 
 1. **Clasifica** la transformación lineal $T$ (monomorfismo, epimorfismo, isomorfismo). 
 
@@ -579,7 +579,7 @@ $$T(x, y, z) = \left( \frac{3}{2}x + \frac{1}{2}y - \frac{1}{2}z, \quad 2x + y, 
 
 ---
 
-### **Apartado c) Composición de Transformaciones**
+### **<mark style="background: #FFF3A3A6;">Apartado c) Composición de Transformaciones</mark>**
 
 Sea $L: \mathbb{R}^4 \to \mathbb{R}^2$ la transformación lineal cuya fórmula es $L(x_1, x_2, x_3, x_4) = (x_1 - x_4, 2x_2 + x_3)$.
 
@@ -727,13 +727,13 @@ $$
 
 ---
 
-# Ejercicio 3
+# <mark style="background: #FFB8EBA6;">Ejercicio 3</mark>
 
 Sea $B = \{(-1, 0, 1), (0, 1, 1), (1, 1, 1)\}$ una base de $\mathbb{R}^3$, y sea $T: \mathbb{R}^3 \to \mathbb{R}^3$ la transformación lineal cuya matriz asociada, $M_{B E}(T)$, en la base $B$ de salida y la base canónica $E$ de llegada, es:
 
 $$M_{B E}(T) = A = \begin{pmatrix} 1 & 2 & 3 \\ 1 & 1 & 1 \\ 0 & 1 & 2 \end{pmatrix}$$
 
-### **Apartado a) Análisis de Núcleo e Imagen**
+### **<mark style="background: #FFF3A3A6;">Apartado a) Análisis de Núcleo e Imagen</mark>**
 
 1. Determina el **rango** de la matriz $A$ y utiliza este valor para encontrar la **dimensión** de la $\operatorname{Im}(T)$.
 
@@ -853,7 +853,7 @@ $$
 
 ---
 
-### **Apartado b) Clasificación y Fórmula**
+### **<mark style="background: #FFF3A3A6;">Apartado b) Clasificación y Fórmula</mark>**
 
 1. **Clasifica** la transformación lineal $T$ (monomorfismo, epimorfismo, isomorfismo).
 
@@ -924,7 +924,7 @@ $$
 
 ---
 
-### **Apartado c) Extensión y Coordenadas**
+### **<mark style="background: #FFF3A3A6;">Apartado c) Extensión y Coordenadas</mark>**
 
 1. Sea $\mathbf{w} = (4, 3, 3)$. Determina las **coordenadas** $[\mathbf{w}]_{B}$ del vector $\mathbf{w}$ en la base $B$.
 
@@ -997,7 +997,7 @@ Veamos que llegamos a un absurdo, por lo tanto, $\mathbf{w}$ no pertenece al sub
 
 ---
 
-# Ejercicio 4
+# <mark style="background: #FFB8EBA6;">Ejercicio 4</mark>
 
 Sea $B = \{(1, 1, 0), (1, 0, 1), (0, 1, 1)\}$ una base de $\mathbb{R}^3$, y sea $T: \mathbb{R}^3 \to \mathbb{R}^3$ una transformación lineal cuya matriz asociada en la base $B$ de salida y la base canónica $E$ de llegada es:
 
@@ -1005,32 +1005,347 @@ $$M_{B E}(T) = A = \begin{pmatrix} 2 & 1 & 3 \\ 1 & 0 & 1 \\ -1 & 1 & 0 \end{pma
 
 ---
 
-### **Apartado a) Análisis Dimensional y Bases**
+### **<mark style="background: #FFF3A3A6;">Apartado a) Análisis Dimensional y Bases</mark>**
 
 1. Determina el **rango** de la matriz $A$ y utiliza el Teorema de la Dimensión para calcular $\dim(\operatorname{Nu}(T))$.
 
+$$
+M_{B E}(T) = A = \begin{pmatrix} 2 & 1 & 3 \\ 1 & 0 & 1 \\ -1 & 1 & 0 \end{pmatrix}
+$$
+$$
+F_{1}\to \frac{1}{2}F_{1}
+$$
+$$
+\begin{pmatrix}
+1 & \frac{1}{2} & \frac{3}{2} \\
+1 & 0 & 1 \\
+-1 & 1 & 0
+\end{pmatrix}
+$$
+$$
+F_{2}\to F_{2}-F_{1},\quad F_{3}\to F_{3}+F_{1}
+$$
+$$
+\begin{pmatrix}
+1 & \frac{1}{2} & \frac{3}{2} \\
+0 & -\frac{1}{2} & -\frac{1}{2} \\
+0 & \frac{3}{2} & \frac{3}{2}
+\end{pmatrix}
+$$
+$$
+F_{2}\to 2F_{2},\quad F_{3}\to 2F_{3}
+$$
+$$
+\begin{pmatrix}
+1 & \frac{1}{2} & \frac{3}{2} \\
+0 & -1 & -1 \\
+0 & 3 & 3
+\end{pmatrix}
+$$
+$$
+F_{3}\to F_{3}+3F_{2}
+$$
+$$
+\begin{pmatrix}
+1 & \frac{1}{2} & \frac{3}{2} \\
+0 & -1 & -1 \\
+0 & 0 & 0
+\end{pmatrix}
+$$
+$$
+F_{1}\to 2F_{1}
+$$
+$$
+\begin{pmatrix}
+2 & 2 & 3 \\
+0 & -1 & -1 \\
+0 & 0 & 0
+\end{pmatrix}
+$$
+$$
+F_{1}\to F_{1}+F_{2}
+$$
+$$
+\begin{pmatrix}
+2 & 1 & 2 \\
+0 & -1 & -1 \\
+0 & 0 & 0
+\end{pmatrix}
+$$
+
+Notemos que el rango de $A$ es 2, esto quiere decir que $dim(\mathrm{Im}(T))=2$.
+
+Por el **Teorema de la Dimensión** tenemos que
+$$
+dim(\mathbb{R}^{3}) = dim(Nu(T)) + dim(\mathrm{Im}(T))
+$$
+$$
+3 = dim(Nu(T)) + 2
+$$
+Por lo tanto
+$$
+dim(Nu(T)) = 1
+$$
+
 2. Halla una **base** para el $\operatorname{Nu}(T)$ y una **base** para la $\operatorname{Im}(T)$.
+
+### Núcleo
+
+El núcleo son todas las soluciones del sistema
+$$
+Ax = 0
+$$
+$$
+\begin{pmatrix}
+2 & 1 & 2 \\
+0 & -1 & -1 \\
+0 & 0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix} =
+\begin{pmatrix}
+0 \\
+0 \\
+0
+\end{pmatrix}
+$$
+Esto es el siguiente sistema de ecuaciones lineales
+$$
+\begin{cases}
+2x+y+2z = 0 & (1) \\
+-y-z = 0 & (2)
+\end{cases}
+$$
+Por la ecuación 2 tenemos que
+$$
+-y-z=0 \leftrightarrow -y=z \leftrightarrow y=-z
+$$
+Sustituyamos en la ecuación 1 tal que
+$$
+2x+y+2z = 0 \leftrightarrow 2x-z+2z = 0 \leftrightarrow 2x+z = 0 \leftrightarrow 2x = -z \leftrightarrow x = -\frac{1}{2}z
+$$
+Las soluciones son
+$$
+(x,y,z) = \left( -\frac{1}{2}z, -z, z \right) = z\left( -\frac{1}{2}, -1, 1 \right)
+$$
+Una posible base de $Nu(T)$ es
+$$
+B_{Nu(T)}=\left\{  \left( -\frac{1}{2},-1,1 \right)  \right\}
+$$
+
+### Imagen
+
+La matriz $M_{BE}(T)$ está conformada por las imágenes de los vectores de la base $B$ escritos en coordenadas de la base $E$. 
+
+Tenemos que la matriz $M_{BE}(T)$ simplificada es 
+$$
+M_{BE}(T) = A =
+\begin{pmatrix}
+2 & 1 & 2 \\
+0 & -1 & -1 \\
+0 & 0 & 0
+\end{pmatrix}
+$$
+Notemos que la tercer fila es una fila nula y la tercer columna no tiene pivote. Esto quiere decir que el tercer vector de la tercera columna de la matriz original es linealmente dependiente.
+
+Luego, una posible base para $\mathrm{Im}(T)$ es
+$$
+B_{\mathrm{Im}(T)} = \{ (2,1,-1),(1,0,1) \}
+$$
 
 3. **Clasifica** la transformación lineal $T$ (monomorfismo, epimorfismo, isomorfismo).
 
+Como $dim(Nu(T))=1$ y $1\neq{0}$, $T$ no es monomorfismo.
+Como $dim(\mathrm{Im}(T))=2$ y $2\neq{3}$, $T$ no es epimorfismo.
+Como $T$ no es monomorfismo ni epimorfismo, $T$ no es isomorfismo.
 
 ---
 
-### **Apartado b) Matriz Canónica y Fórmula**
+### **<mark style="background: #FFF3A3A6;">Apartado b) Matriz Canónica y Fórmula</mark>**
 
 1. Calcula la matriz de cambio de base $C_{E B} = (C_{B E})^{-1}$.
 
+La matriz de cambio de base $C_{BE}$ se forma con los vectores de la base $B$ escritos en coordenadas de la base canónica $E$.
+$$
+(C_{EB})=(C_{BE})^{-1}=
+\begin{pmatrix}
+1 & 1 & 0 \\
+1 & 0 & 1 \\
+0 & 1 & 1
+\end{pmatrix}^{-1} = 
+\begin{pmatrix}
+\frac{1}{2} & \frac{1}{2} & -\frac{1}{2} \\
+\frac{1}{2} & -\frac{1}{2} & \frac{1}{2} \\
+-\frac{1}{2} & \frac{1}{2} & \frac{1}{2}
+\end{pmatrix}
+$$
+
 2. Halla la **matriz canónica** $M_{E E}(T)$.
+
+La fórmula de la composición es
+$$
+M_{EE}(T) = M_{BE}(T)\cdot C_{EB}
+$$
+$$
+M_{EE}(T) = 
+\begin{pmatrix}
+2 & 1 & 3 \\
+1 & 0 & 1 \\
+-1 & 1 & 0
+\end{pmatrix}
+\begin{pmatrix}
+\frac{1}{2} & \frac{1}{2} & -\frac{1}{2} \\
+\frac{1}{2} & -\frac{1}{2} & \frac{1}{2} \\
+-\frac{1}{2} & \frac{1}{2} & \frac{1}{2}
+\end{pmatrix} = 
+\begin{pmatrix}
+0 & 2 & 1 \\
+0 & 1 & 0 \\
+0 & -1 & 1
+\end{pmatrix}
+$$
 
 3. Determina la **fórmula** de la transformación $T(x, y, z)$.
 
+La fórmula de la transformación podemos obtenerla haciendo
+$$
+T(x,y,z) = M_{EE}(T)\cdot(x,y,z)^{T}
+$$
+$$
+T(x,y,z) = 
+\begin{pmatrix}
+0 & 2 & 1 \\
+0 & 1 & 0 \\
+0 & -1 & 1
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y \\
+z
+\end{pmatrix}
+$$
+$$
+T(x,y,z) = 
+\begin{pmatrix}
+2y+z \\
+y \\
+-y+z
+\end{pmatrix}
+$$
+$$
+T(x,y,z) = \left( 2y+z, y, -y+z \right) 
+$$
 
 ---
 
-### **Apartado c) Composición y Coordenadas**
+### **<mark style="background: #FFF3A3A6;">Apartado c) Composición y Coordenadas</mark>**
 
 1. Sea $L: \mathbb{R}^3 \to \mathbb{R}^3$ la transformación lineal dada por $L(\mathbf{w}) = (x, y, 0)$. Halla la matriz canónica $M_{E E}(L)$.
 
+Para encontrar $M_{EE}(L)$, debemos aplicar $L$ a cada vector de la base canónica $\{ e_{1},e_{2},e_{3} \}$ y usar el resultado como columnas.
+$$
+L(e_{1})=L(1,0,0)=(1,0,0)
+$$
+$$
+L(e_{2})=L(0,1,0)=(0,1,0)
+$$
+$$
+L(e_{3})=L(0,0,1)=(0,0,0)
+$$
+Por lo tanto
+$$
+M_{EE}(L) =
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 0
+\end{pmatrix}
+$$
+
 2. Calcula la matriz de la composición $M_{B E}(L \circ T)$.
 
+Por la fórmula de la composición tenemos que
+$$
+M_{BE}(L \circ T) = M_{EE}(L) \cdot M_{BE}(T)
+$$
+$$
+M_{BE}(L \circ T) = 
+\begin{pmatrix}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 0
+\end{pmatrix}
+\begin{pmatrix}
+2 & 1 & 3 \\
+1 & 0 & 1 \\
+-1 & 1 & 0
+\end{pmatrix} =
+\begin{pmatrix}
+2 & 1 & 3 \\
+1 & 0 & 1 \\
+0 & 0 & 0
+\end{pmatrix}
+$$
+
 3. Sea $\mathbf{v} = (0, 2, 2)$. Determina $[\mathbf{v}]_{B}$ y calcula $[(L \circ T)(\mathbf{v})]_{E}$.
+
+### Calculamos $[\mathbf{v}]_{B}$
+
+Tenemos la base $B = \{(1, 1, 0), (1, 0, 1), (0, 1, 1)\}$ y el vector $\mathbf{v}=(0,2,2)$.
+
+Buscamos $(\alpha,\beta,\gamma)$ tal que:
+$$
+\mathbf{v} = \alpha\cdot(1,1,0)+\beta\cdot(1,0,1)+\gamma\cdot(0,1,1)
+$$
+$$
+(0,2,2) = \left( \alpha+\beta,\quad \alpha+\gamma,\quad \beta+\gamma \right) 
+$$
+Igualamos componente a componente
+- $\alpha+\beta=0$.
+- $\alpha+\gamma=2\implies \alpha=2-\gamma$.
+- $\beta+\gamma=2\implies \beta=2-\gamma$.
+
+Sustituimos $\alpha=2-\gamma$ y $\beta=2-\gamma$ en la componente 1 tal que
+$$
+\alpha+\beta=0 \leftrightarrow 2-\gamma+2-\gamma=0 \leftrightarrow 4-2\gamma=0 \leftrightarrow -2+\gamma=0 \leftrightarrow \gamma=2
+$$
+Por lo tanto
+$$
+[\mathbf{v}]_{B} = 
+\begin{pmatrix}
+2-\gamma \\
+2-\gamma \\
+2
+\end{pmatrix} =
+\begin{pmatrix}
+0 \\
+0 \\
+2
+\end{pmatrix}
+$$
+### Calculamos $[(L \circ T)(\mathbf{v})]_{E}$
+
+$$
+[(L \circ T)(\mathbf{v})]_{E} = M_{BE}(L \circ T)\cdot[\mathbf{v}]_{B}
+$$
+$$
+[(L \circ T)(\mathbf{v})]_{E} = 
+\begin{pmatrix}
+2 & 1 & 3 \\
+1 & 0 & 1 \\
+0 & 0 & 0
+\end{pmatrix}\cdot
+\begin{pmatrix}
+0 \\
+0 \\
+2
+\end{pmatrix} =
+\begin{pmatrix}
+6 \\
+2 \\
+0
+\end{pmatrix}
+$$
