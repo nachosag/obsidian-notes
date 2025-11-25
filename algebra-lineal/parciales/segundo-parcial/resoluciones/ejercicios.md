@@ -179,13 +179,178 @@ $$
 \alpha+\gamma=1\leftrightarrow 2+\gamma=1\leftrightarrow \gamma=-1
 $$
 Las coordenadas de $v$ en la base $B$ son $[v]_{B}=(2,1,-1)$.
-### Ejercicio 3
+### <mark style="background: #FFB8EBA6;">Ejercicio 3</mark>
 ![[Pasted image 20251109195039.png]]
+
+#### <mark style="background: #FFF3A3A6;">Apartado A</mark>
+Para que $\lambda=3$ sea un autovalor de la matriz $A$, se debe cumplir que el determinante de la matriz $(A-3I)$ sea igual a cero.
+$$
+(A-3I) =
+\begin{pmatrix}
+1 & 2 & 1 \\
+k & -1 & 0 \\
+-1 & -2 & -1
+\end{pmatrix} -
+\begin{pmatrix}
+3 & 0 & 0 \\
+0 & 3 & 0 \\
+0 & 0 & 3
+\end{pmatrix} =
+\begin{pmatrix}
+1-3 & 2 & 1 \\
+k & -1-3 & 0 \\
+-1 & -2 & -1-3
+\end{pmatrix} =
+\begin{pmatrix}
+-2 & 2 & 1 \\
+k & -4 & 0 \\
+-1 & -2 & -4
+\end{pmatrix}
+$$
+Verifiquemos cuando se cumple la condición
+$$
+\det
+\begin{pmatrix}
+-2 & 2 & 1 \\
+k & -4 & 0 \\
+-1 & -2 & -4
+\end{pmatrix} = 0
+$$
+Desarrollemos por la tercer columna
+$$
+1\cdot \det
+\begin{pmatrix}
+k & -4 \\
+-1 & -2
+\end{pmatrix}
+-4\cdot \det
+\begin{pmatrix}
+-2 & 2 \\
+k & -4
+\end{pmatrix} = 0
+$$
+$$
+(k\cdot(-2)-(-1)\cdot(-4))-4\cdot \left( -2\cdot(-4)-k\cdot{2} \right) = 0 
+$$
+$$
+\left( -2k-4 \right) -4\cdot \left( 8-2k \right) = 0
+$$
+$$
+-2k-4-32+8k = 0
+$$
+$$
+6k-36 = 0
+$$
+Notemos que $k=6$ cumple la igualdad. Es decir, $\lambda=3$ es autovalor simple si $k=6$.
+
 ### Ejercicio 6
 ![[Pasted image 20251110205518.png]]
+
+#### <mark style="background: #FFF3A3A6;">Apartado A</mark>
+
+Si $(1,1,1)\in Nu(T)\implies dim(Nu(T))\geq{1}$.
+Para que $T$ sea un epimorfismo se debe cumplir que $dim(\mathrm{Im}(T))=dim(\mathbb{R}^{3})=3$.
+Por el Teorema de la Identidad tenemos que
+$$
+\underbrace{ dim(\mathbb{R}^{3}) }_{ 3 } = \underbrace{ dim(Nu(T)) }_{ \geq{1} } + dim(\mathrm{Im}(T))
+$$
+Tenemos tres posibles casos
+- $dim(Nu(T))=1\implies dim(\mathrm{Im}(T))=2\implies T$ no es un epimorfismo. 
+- $dim(Nu(T))=2\implies dim(\mathrm{Im}(T))=1\implies T$ no es un epimorfismo.
+- $dim(Nu(T))=3\implies dim(\mathrm{Im}(T))=0\implies T$ no es un epimorfismo.
+
+Por lo tanto, $T$ no puede ser un epimorfismo.
+
 ### Ejercicio 7
 ![[Pasted image 20251110211201.png]]
 ### Ejercicio 8
 ![[Pasted image 20251111014813.png]]
 ### Ejercicio 9
 ![[Pasted image 20251111025658.png]]
+
+Tenemos que
+$$\mathbf{(1,3,4)} \xrightarrow{f} f(\mathbf{(1,3,4)}) \xrightarrow{g} g(f(\mathbf{(1,3,4)})) = (g \circ f)(\mathbf{(1,3,4)})$$
+Notemos que $\mathbf{v}=(1,3,4)$ está dado en coordenadas de la base canónica $E$ de $\mathbb{R}^{3}$. Sin embargo, la matriz $M_{BE}(f)$ requiere que el vector esté en la base $B$.
+
+Buscamos $(\alpha,\beta,\gamma)$ tal que
+$$
+(1,3,4) = \alpha(1,-1,-1)+\beta(0,1,1)+\gamma(1,0,1)
+$$
+$$
+(1,3,4) = \left( \alpha+\gamma,\quad -\alpha+\beta,\quad -\alpha+\beta+\gamma \right) 
+$$
+Por la componente 1 tenemos que
+$$
+\alpha+\gamma=1\leftrightarrow \alpha=1-\gamma
+$$
+Por la componente 2 tenemos que
+$$
+-\alpha+\beta=3\leftrightarrow -\alpha=3-\beta
+$$
+Sustituimos $-\alpha=3-\beta$ en la componente 3 tal que
+$$
+-\alpha+\beta+\gamma=4\leftrightarrow 3\cancel{ -\beta+\beta }+\gamma=4\leftrightarrow 3+\gamma=4\leftrightarrow \gamma=1
+$$
+Sustituimos $\gamma=1$ en la componente 1 tal que
+$$
+\alpha=1-\gamma\leftrightarrow \alpha=1-1\leftrightarrow \alpha=0
+$$
+Sustituimos $\alpha=0$ en la componente 2 tal que
+$$
+-\alpha+\beta=3 \leftrightarrow \beta=3
+$$
+Luego, tenemos que
+$$
+[(1,3,4)]_{B} = (\alpha,\beta,\gamma)^{T} = (0,3,1)^{T}
+$$
+
+Luego
+$$
+[(g \circ f)(1,3,4)]_{B'} = M_{EB'}(g)\cdot M_{BE}(f)\cdot[(1,3,4)]_{B}
+$$
+$$
+[(g \circ f)(1,3,4)]_{B'} =
+\begin{pmatrix}
+2 & -1 & 1 \\
+-1 & 3 & 1
+\end{pmatrix}
+\left( \begin{pmatrix}
+1 & 0 & 1 \\
+0 & 2 & 3 \\
+0 & 1 & 2
+\end{pmatrix}
+\begin{pmatrix}
+0 \\
+3 \\
+1
+\end{pmatrix} \right)
+$$
+$$
+[(g \circ f)(1,3,4)]_{B'} =
+\begin{pmatrix}
+2 & -1 & 1 \\
+-1 & 3 & 1
+\end{pmatrix}
+\begin{pmatrix}
+1 \\
+9 \\
+5
+\end{pmatrix}
+$$
+$$
+[(g \circ f)(1,3,4)]_{B'} =
+\begin{pmatrix}
+-2 \\
+31
+\end{pmatrix}
+$$
+Debemos buscar el vector $\mathbf{w}$ expresado en coordenadas de la base canónica de $\mathbb{R}^{2}$.
+$$
+\mathbf{w} = -2\cdot(3,2)+31\cdot(2,1)
+$$
+$$
+\mathbf{w} = (-6,-4)+(62,31)
+$$
+$$
+\mathbf{w} = (56,27)
+$$

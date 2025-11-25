@@ -41,5 +41,5 @@ $$
 $$
 b) Hallar todos los $z \in \mathbb{C}$ tales que 
 $$
-z + 2\cdot \bar{z} + (\operatorname{Re}(z))^2 = \operatorname{Re}\left( \frac{4}{1 + i} \right) \cdot i \cdot 61.  
+z + 2\cdot \bar{z} + (\operatorname{Re}(z))^2 = \operatorname{Re}\left( \frac{4}{1 + i} \right) \cdot i^{161}
 $$
