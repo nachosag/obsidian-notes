@@ -4,35 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "22fcb1e40f11bacb",
+        "id": "d1f46927cd141138",
         "type": "tabs",
         "children": [
           {
-            "id": "a84bd872ea4297a5",
+            "id": "1e3605f1b098adbf",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "algebra-lineal/parciales/segundo-parcial/resoluciones/complejos.md",
+                "file": "matematica-discreta/resumen.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "complejos"
-            }
-          },
-          {
-            "id": "387700b0e407e765",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "algebra-lineal/parciales/segundo-parcial/parcial-06-AL.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "parcial-06-AL"
+              "title": "resumen"
             }
           }
         ]
@@ -87,12 +73,22 @@
               "icon": "lucide-bookmark",
               "title": "Bookmarks"
             }
+          },
+          {
+            "id": "4002cea30ee603af",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {},
+              "icon": "lucide-file",
+              "title": "New tab"
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 242.5
+    "width": 241.5
   },
   "right": {
     "id": "60744be18a06282d",
@@ -185,10 +181,12 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "a84bd872ea4297a5",
+  "active": "1e3605f1b098adbf",
   "lastOpenFiles": [
-    "algebra-lineal/parciales/segundo-parcial/parcial-06-AL.md",
+    "matematica-discreta/resumen.md",
+    "algebra-lineal/parciales/segundo-parcial/resoluciones/test.md",
     "algebra-lineal/parciales/segundo-parcial/resoluciones/complejos.md",
+    "algebra-lineal/parciales/segundo-parcial/parcial-06-AL.md",
     "algebra-lineal/parciales/segundo-parcial/resoluciones/parcial-06.md",
     "algebra-lineal/parciales/segundo-parcial/parcial-06-AL.pdf",
     "algebra-lineal/parciales/segundo-parcial/resoluciones/anexos/Pasted image 20251124233410.png",
@@ -232,8 +230,6 @@
     "algebra-lineal/parciales/primer-parcial/parcial-02-AL.pdf",
     "algebra-lineal/practica-01/practica-01.md",
     "README.md",
-    "algebra-lineal/practica-05/tipos-de-variables.md",
-    "algebra-lineal/parciales/segundo-parcial/resoluciones/parcial-05.md",
     "Untitled.canvas"
   ]
 }
