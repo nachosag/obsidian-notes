@@ -1,14 +1,12 @@
 # Compendio Unificado de Matemática Discreta: Teoría de Grafos
 
-Este documento unifica definiciones teóricas, teoremas fundamentales y estrategias prácticas de resolución para el estudio de grafos.
-
 ## <mark style="background: #FFB8EBA6;">1. Fundamentos y Características Generales</mark>
 
-### Definiciones Básicas
+### <mark style="background: #FFF3A3A6;">Definiciones Básicas</mark>
 
 - **Grafo (**$G$**):** Es una terna formada por:
     
-    - Un conjunto de vértices $V(G)$.
+    - Un conjunto de vértices $V(G)$.[^1]
         
     - Un conjunto de aristas $E(G)$.
         
@@ -16,7 +14,7 @@ Este documento unifica definiciones teóricas, teoremas fundamentales y estrateg
         
 - **Adyacencia:** Dos vértices $u, v$ son adyacentes (o vecinos) si son extremos de una misma arista. Se denota $u \sim v$. Si no son vecinos, $u \not\sim v$.
     
-- Vecindad ($N_G(v)$): Es el subconjunto de $V(G)$ formado por los vecinos de $v$.
+- **Vecindad (**$N_G(v)$**):** Es el subconjunto de $V(G)$ formado por los vecinos de $v$.
     
     $$N_G(v) = \{u \in V(G) \mid u \sim v\}$$
 - **Grado (**$d(v)$**):** Es el número de aristas incidentes en $v$.
@@ -32,7 +30,7 @@ Este documento unifica definiciones teóricas, teoremas fundamentales y estrateg
 - **Hoja:** Vértice tal que $d(v) = 1$.
     
 
-### Tipos de Aristas y Grafos
+### <mark style="background: #FFF3A3A6;">Tipos de Aristas y Grafos</mark>
 
 - **Aristas múltiples:** Aristas que tienen el mismo par de extremos.
     
@@ -43,26 +41,24 @@ Este documento unifica definiciones teóricas, teoremas fundamentales y estrateg
 - **Grafo Nulo:** Grafo con cantidad de vértices nula ($V = \emptyset$).
     
 
-### <mark style="background: #FFB8EBA6;">Teoremas Fundamentales</mark>
+### <mark style="background: #FFF3A3A6;">Teoremas Fundamentales</mark>
 
-#### <mark style="background: #FFF3A3A6;">Teorema del Apretón de Manos (Handshaking Lemma):</mark>
-    
-En todo grafo $G$:
+- **Teorema del Apretón de Manos (Handshaking Lemma):** En todo grafo $G$:
     
     $$\sum_{v \in V(G)} d(v) = 2|E(G)|$$
     
-Consecuencia: La cantidad de vértices de grado impar en un grafo siempre es par.
+    _Consecuencia:_ La cantidad de vértices de grado impar en un grafo siempre es par.
     
 
 ## <mark style="background: #FFB8EBA6;">2. Tipos Especiales de Grafos y Propiedades</mark>
 
-### Grafo Regular
+### <mark style="background: #FFF3A3A6;">Grafo Regular</mark>
 
-Un grafo $G$ es $k$-regular si todos sus vértices tienen el mismo grado $k$.
+Un grafo $G$ es $k$**-regular** si todos sus vértices tienen el mismo grado $k$.
 
 $$\Delta(G) = \delta(G) = k$$
 
-### Grafo Completo ($K_n$)
+### <mark style="background: #FFF3A3A6;">Grafo Completo</mark> ($K_n$)
 
 Grafo simple donde cada par de vértices distintos es adyacente.
 
@@ -95,13 +91,11 @@ Un grafo $G$ es bipartito si $V(G)$ puede dividirse en dos conjuntos independien
 
 **Caracterización:** Un grafo es bipartito si y solo si **no contiene ciclos de longitud impar**.
 
-Grafo Bipartito Completo ($K_{m,n}$):
+**Grafo Bipartito Completo (**$K_{m,n}$**):** Todos los vértices de la partición $X$ ($|X|=m$) están conectados con todos los de $Y$ ($|Y|=n$).
 
-Todos los vértices de la partición $X$ ($|X|=m$) están conectados con todos los de $Y$ ($|Y|=n$).
-
-- $|V| = m+n$  
+- $|V| = m+n$
     
-- $|E| = m \cdot n$  
+- $|E| = m \cdot n$
     
 
 #### <mark style="background: #BBFABBA6;">📘 Estrategia de Resolución: ¿Es bipartito?</mark>
@@ -144,7 +138,7 @@ $$uv \in E(G) \iff f(u)f(v) \in E(H)$$
 - **Matriz de Incidencia (**$M(G)$**):** Matriz $n \times m$ (vértices $\times$ aristas). $m_{ij} = 1$ si el vértice $v_i$ es extremo de la arista $e_j$.
     
 
-## <mark style="background: #FFB8EBA6;">4. Parámetros Estructurales:</mark> $\alpha$ y $\omega$  
+## <mark style="background: #FFB8EBA6;">4. Parámetros Estructurales:</mark> $\alpha$ y $\omega$
 
 ### <mark style="background: #FFF3A3A6;">Conjunto Independiente</mark> ($\alpha(G)$)
 
@@ -153,11 +147,11 @@ Subconjunto de $V(G)$ tal que sus elementos no son vecinos entre sí (de a pares
 - $\alpha(G)$: Tamaño máximo de un conjunto independiente en $G$.
     
 
-#### <mark style="background: #BBFABBA6;">📘 Estrategia de Resolución: Hallar</mark> $\alpha(G)$  
+#### <mark style="background: #BBFABBA6;">📘 Estrategia de Resolución: Hallar</mark> $\alpha(G)$
 
 1. **Cota inferior (Encontrar uno):** Encuentra "a ojo" un conjunto de vértices no adyacentes grande. Digamos que encuentras uno de tamaño $k$. Entonces $\alpha(G) \ge k$.
     
-2. Cota superior (Descomposición): Divide $V(G)$ en subgrafos disjuntos (generalmente cliques o ciclos) $H_1, H_2, \dots, H_n$.
+2. **Cota superior (Descomposición):** Divide $V(G)$ en subgrafos disjuntos (generalmente cliques o ciclos) $H_1, H_2, \dots, H_n$.
     
     $$\alpha(G) \le \alpha(H_1) + \alpha(H_2) + \dots + \alpha(H_n)$$
 3. Si logras que la cota inferior iguale a la superior, has encontrado $\alpha(G)$.
@@ -170,7 +164,7 @@ Subconjunto de vértices adyacentes de a pares (forman un subgrafo completo).
 - $\omega(G)$: Cantidad de vértices de la clique de tamaño máximo.
     
 
-#### <mark style="background: #BBFABBA6;">📘 Estrategia de Resolución: Hallar</mark> $\omega(G)$  
+#### <mark style="background: #BBFABBA6;">📘 Estrategia de Resolución: Hallar</mark> $\omega(G)$
 
 1. **Encontrar una clique:** Busca el subgrafo completo más grande visible. Supongamos tamaño $k$. Entonces $\omega(G) \ge k$.
     
@@ -235,7 +229,7 @@ Subconjunto de vértices adyacentes de a pares (forman un subgrafo completo).
     
 - **Subgrafo Inducido (**$G[T]$**):** Subgrafo formado por $T \subseteq V(G)$ y **todas** las aristas de $G$ que conectan vértices dentro de $T$.
     
-- Descomposición: Partición de las aristas de $G$ en subgrafos $H_1, \dots, H_k$.
+- **Descomposición:** Partición de las aristas de $G$ en subgrafos $H_1, \dots, H_k$.
     
     $$|E(G)| = \sum |E(H_i)|$$$$d_G(v) = \sum d_{H_i}(v)$$
 
@@ -261,7 +255,7 @@ Para un grafo plano conexo con $v$ vértices, $e$ aristas y $f$ caras:
 
 $$v - e + f = 2$$
 
-(Si tiene $k$ componentes conexas: $v - e + f = 1 + k$)
+_(Si tiene_ $k$ _componentes conexas:_ $v - e + f = 1 + k$_)_
 
 ### <mark style="background: #FFF3A3A6;">Restricciones de Aristas (Criterios de no planaridad)</mark>
 

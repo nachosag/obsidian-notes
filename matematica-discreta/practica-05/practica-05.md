@@ -1,3 +1,290 @@
+### Ejercicio 1
+![[Pasted image 20251130205132.png]]
+### Ejercicio 2
+<mark style="background: #FFB86CA6;">a)</mark>
+$$
+V (G1) = \{ a,b,c,d,e \},\quad E(G1) = \{ ab,ac,ad,ae,bc,bd,be,cd,ce,de \}
+$$
+```mermaid
+graph TD
+
+A[a] --- B[b];
+
+A --- C[c];
+
+A --- D[d];
+
+A --- E[e];
+
+B --- C;
+
+B --- D;
+
+B --- E;
+
+C --- D;
+
+C --- E;
+
+D --- E;
+```
+
+<mark style="background: #FFB86CA6;">b)</mark>
+$$
+V (G2) = \{ v1, v2, v3, v4,w1,w2,w3 \},\quad E(G2) = \{ v1w1, v1w2, v2w1, v2w2,w3v3,w3v4 \}
+$$
+```mermaid
+graph TD
+    subgraph Componente A
+        v1 --- w1;
+        v1 --- w2;
+        v2 --- w1;
+        v2 --- w2;
+    end
+
+    subgraph Componente B
+        v3 --- w3;
+        v4 --- w3;
+    end
+```
+
+<mark style="background: #FFB86CA6;">d)</mark>
+$$
+V(G4​)= \{ u1​,u2​,u3​,u4​,u5​,u6​,u7​ \},\quad E(G4​)= \{ u1​u2​,u2​u3​,u3​u4​,u4​u5​,u5​u6​,u6​u7​,u7​u1​ \}
+$$
+```mermaid
+graph TD
+    u1(u1) --- u2(u2);
+    u2 --- u3(u3);
+    u3 --- u4(u4);
+    u4 --- u5(u5);
+    u5 --- u6(u6);
+    u6 --- u7(u7);
+    u7 --- u1;
+```
+### Ejercicio 3
+![[Pasted image 20251130205306.png]]
+Para el grafo $H$:
+- $\{ v_{2},v_{3},v_{4},v_{5} \}$ forman una clique de tamaño 4.
+- $\{ v_{1},v_{5} \}$ forman un conjunto independiente de tamaño 2.
+Para el grafo $F$:
+- $\{ a,b,e \}$ forman una clique de tamaño 3.
+- $\{ a,d \}$ forman un conjunto independiente de tamaño 2.
+Para el grafo $G$:
+- $\{ x_{4},x_{5},x_{6} \}$ forman una clique de tamaño 3.
+- $\{ x_{8},x_{10},x_{12} \}$ forman un conjunto independiente de tamaño 3.
+Para el grafo $G'$:
+```mermaid
+graph TD
+
+A[a] --- B[b];
+
+A --- C[c];
+
+A --- D[d];
+
+A --- E[e];
+
+B --- C;
+
+B --- D;
+
+B --- E;
+
+C --- D;
+
+C --- E;
+
+D --- E;
+```
+$\{ a,b,c,d,e \}$ forman una clique de tamaño 5.
+$\{ a \}$ forma un conjunto independiente de tamaño 1.
+Para el grafo $G''$:
+```mermaid
+graph TD
+    subgraph Componente A
+        v1 --- w1;
+        v1 --- w2;
+        v2 --- w1;
+        v2 --- w2;
+    end
+
+    subgraph Componente B
+        v3 --- w3;
+        v4 --- w3;
+    end
+```
+$\{ v_{1},w_{2} \}$ forman una clique de tamaño 2.
+$\{ v_{1},v_{2},v_{3},v_{4} \}$ forman un conjunto independiente de tamaño 4.
+Para el grafo $G'''$:
+```mermaid
+graph TD
+    u1(u1) --- u2(u2);
+    u2 --- u3(u3);
+    u3 --- u4(u4);
+    u4 --- u5(u5);
+    u5 --- u6(u6);
+    u6 --- u7(u7);
+    u7 --- u1;
+```
+$\{ u_{1},u_{3},u_{5} \}$ forman un conjunto independiente de tamaño 3.
+$\{ u_{1},u_{2} \}$ forman una clique de tamaño 2.
+
+### Ejercicio 4
+Encuentre el tamaño máximo de una clique y el tamaño máximo de un conjunto independiente en los grafos de los ejercicios 1 y 2.
+![[Pasted image 20251130205306.png]]
+<mark style="background: #FFB8EBA6;">Grafo H.</mark>
+
+Buscamos $\alpha(H)$:
+Notemos que $\alpha(H)\geq{2}$.
+
+Armemos $H_{1}$ inducido por $\{ v_{2},v_{3},v_{4},v_{5} \}$.
+Notemos que $\alpha(H_{1})=1$.
+
+Armemos $H_{2}$ inducido por $\{ v_{1} \}$.
+Notemos que $\alpha(H_{2})=1$.
+
+Como $V(H)=\{ v_{2},v_{3},v_{4},v_{5} \}\cup \{ v_{1} \}$, podemos usar la siguiente propiedad:
+$$
+\alpha(H) \leq \alpha(H_{1}) + \alpha(H_{2})
+$$
+Por lo tanto
+$$
+\alpha(H) \leq 1+1 = 2
+$$
+Como $2\leq \alpha(H)\leq{2}$, entonces $\alpha(H)=2$.
+
+---
+
+Buscamos $\omega(H)$:
+Notemos que $\omega(H)\geq{4}$.
+
+Para que exista $\omega(H)\geq{5}$ debe cumplirse la siguiente condición:
+Deben existir al menos 5 vértices de grado al menos 4.
+
+Listemos los grados de los vértices.
+- $d(v_{1})=2$.
+- $d(v_{2})=4$.
+- $d(v_{3})=3$.
+- $d(v_{4})=4$.
+- $d(v_{5})=3$.
+Notemos que la condición mencionada no se cumple. Por lo tanto, $\omega(H)<5$ y esto implica que $\omega(H)\leq{4}$.
+
+Al demostrar que $4\leq \omega(H)\leq{4}$, podemos afirmar que $\omega(H)=4$.
+
+<mark style="background: #FFB8EBA6;">Grafo F</mark>
+
+Buscamos $\alpha(F)$.
+Notemos que $\alpha(F)\geq{2}$.
+
+Armemos $F_{1}$ inducido por $A=\{ a,b,c,d \}$.
+Notemos que $\alpha(F_{1})=2$.
+
+Armemos $F_{2}$ inducido por $A'=\{ e \}$.
+Notemos que $\alpha(F_{2})=1$.
+
+Como $V(F)=A\cup A'$ y $A\cap A'=\{  \}$, podemos usar la siguiente propiedad:
+$$
+\alpha(F) \leq \alpha(F_{1}) + \alpha(F_{2})
+$$
+$$
+\alpha(F) \leq 2 + 1 = 3
+$$
+Luego, $2\leq \alpha(F)\leq{3}$.
+
+Si intentamos encontrar un conjunto independiente de tamaño 3 deberíamos elegir al vértice $e$ y dos vértices cualesquiera de $A$. Luego, podemos notar que no es posible encontrar un conjunto independiente de tamaño 3, pues los 2 vértices elegidos de $A$ son vecinos al vértice $e$. Esto confirma que $\alpha(F)<3$, es decir, $2\leq \alpha(F)<{3}$, esto implica que $\alpha(F)=2$.
+
+---
+
+Buscamos $\omega(F)$.
+Notemos que $\omega(F)\geq{3}$.
+
+Si en $F$ existe una clique de tamaño 4, entonces deben existir al menos 4 vértices con grado al menos 3.
+
+Listemos los grados de cada vértice:
+- $d(a)=d(b)=d(c)=d(d)=3$.
+- $d(e)=4$.
+
+Para que el conjunto de vértices $\{ a,b,c,d \}$ sea una clique de tamaño 4, debería ocurrir que son todos vecinos entre sí. Esto no ocurre, puesto que $a\not\sim d$. Luego, el conjunto propuesto no forma una clique de tamaño 4.
+
+Por lo tanto, $\omega(F)=3$.
+
+<mark style="background: #FFB8EBA6;">Grafo G</mark>
+
+Buscamos $\alpha(G)$.
+Si tomamos el conjunto de vértices $\{ x_{4},x_{11},x_{9},x_{7} \}$ tenemos un conjunto independiente de tamaño 4. Por lo tanto, $\alpha(G)\geq{4}$.
+
+Armemos:
+- $G_{1}$ inducido por $A_{1}=\{ x_{1},x_{2},x_{3} \}$.
+- $G_{2}$ inducido por $A_{2}=\{ x_{7},x_{8},x_{9},x_{10},x_{11},x_{12} \}$.
+- $G_{3}$ inducido por $A_{3}=\{ x_{4},x_{5},x_{6} \}$.
+
+Notemos que 
+- $\alpha(G_{1})=1$.
+- $\alpha(G_{2})=3$.
+- $\alpha(G_{3})=1$.
+
+Como $V(G)=A_{1}\cup A_{2}\cup A_{3}$ y $A_{1}\cap A_{2}\cap A_{3}=\emptyset$, podemos utilizar la siguiente propiedad:
+$$
+\alpha(G) \leq \alpha(G_{1}) + \alpha(G_{2}) + \alpha(G_{3})
+$$
+$$
+\alpha(G) \leq 1+3+1 = 5
+$$
+Luego, el valor de $\alpha(G)$ se encuentra en el siguiente rango:
+$$
+4\leq \alpha(G)\leq{5}
+$$
+
+Para tener un conjunto independiente $S$ de tamaño 5, necesitamos tomar exactamente 1 vértice de $A_{1}$, 1 de $A_{3}$ y 3 de $A_{2}$.
+Del subgrafo inducido $G_{2}$ podemos encontrar 2 conjuntos independientes de tamaño 3, estos son $I_{1}=\{ x_{7},x_{11},x_{9} \}$ y $I_{2}=\{ x_{8},x_{10},x_{12} \}$.
+
+Consideremos $I_{1}$.
+El conjunto independiente buscado tiene la siguiente forma: $S=\{ x_{A_{1}},x_{A_{3}},x_{7},x_{9},x_{11} \}$.
+Notemos que el vértice elegido $x_{A_{1}}\in A_{1}$ no debe ser adyacente a $x_{7},x_{9},x_{11}$.
+- $x_{1}\sim x_{7}$ (falla).
+- $x_{2}\sim x_{9}$ (falla).
+- $x_{3}\sim x_{11}$ (falla).
+Por lo tanto, es imposible elegir un vértice perteneciente a $A_{1}$ que no sea adyacente a los tres vértices de $I_{1}$.
+
+Consideremos $I_{2}$.
+El conjunto independiente buscado tiene la siguiente forma: $S=\{ x_{A_{1}},x_{A_{3}},x_{8},x_{10},x_{12} \}$.
+Notemos que el vértice elegido $x_{A_{3}}\in A_{3}$ no debe ser adyacente a $x_{8},x_{10},x_{12}$.
+- $x_{4}\sim x_{12}$ (falla).
+- $x_{5}\sim x_{8}$ (falla).
+- $x_{6}\sim x_{10}$ (falla).
+Por lo tanto, es imposible elegir un vértice perteneciente a $A_{3}$ que no sea adyacente a los tres vértices de $I_{2}$.
+
+Dado que para cualquier selección posible de conjuntos independientes de tamaño 3, $(I_{1},I_{2})$, se encuentran vértices adyacentes a $A_{1}$ o $A_{3}$, podemos concluir que no existe un conjunto independiente de tamaño 5 o mayor.
+
+Combinando la cota inferior, $\alpha(G)\geq{4}$, y la cota superior, $\alpha(G)\leq{4}$, queda demostrado que $\alpha(G)=4$.
+
+---
+
+Buscamos $\omega(G)$.
+Notemos que el conjunto de vértices $S=\{ x_{4},x_{5},x_{6} \}$ es isomorfo a un $K_{3}$ y por lo tanto, forma una clique de tamaño 3, luego $\omega(G)\geq{3}$.
+
+Para que exista una clique de tamaño 4, se debería cumplir que existen por lo menos 4 vértices de grado $\geq{3}$.
+Como $G$ es un grafo 3-regular, todos los vértices cumplen la condición de tener grado $\geq{3}$.
+
+Para formar un $K_{4}$ necesitamos un vértice $x_{i}$ que sea adyacente a $x_{4},x_{5},x_{6}$.
+Listemos los vecinos de cada uno y verifiquemos si existe un vértice que sea vecino a $x_{4},x_{5},x_{6}$ simultáneamente.
+- Vecinos de $x_{4}:\{ x_{5},x_{6},x_{12} \}$.
+- Vecinos de $x_{5}:\{ x_{4},x_{6},x_{8} \}$.
+- Vecinos de $x_{6}:\{ x_{4},x_{5},x_{10} \}$.
+
+Notemos que no existe un vértice $x_{i}$ que sea vecino a $x_{4},x_{5},x_{6}$ simultáneamente.
+
+Luego, $x_{12}\not\sim x_{5},x_{6}$, $x_{8}\not\sim x_{4},x_{6}$ y $x_{10}\not\sim x_{4},x_{5}$.
+
+Por lo tanto, no es posible encontrar un cuarto vértice $x_{i}$ que forme un $K_{4}$, es decir, una clique de tamaño 4.
+Luego, concluimos que $\omega(G)=3$.
+
+### Ejercicio 5
+![[Pasted image 20251201004242.png]]
+
+
+
 ### Ejercicio 14
 ¿Puede el grafo $\bar{C_{6}}$ (el complemento del ciclo de seis vértices) descomponerse en copias de $P_{4}$?
 
