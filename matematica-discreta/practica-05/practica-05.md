@@ -281,9 +281,180 @@ Por lo tanto, no es posible encontrar un cuarto vértice $x_{i}$ que forme un $K
 Luego, concluimos que $\omega(G)=3$.
 
 ### Ejercicio 5
-![[Pasted image 20251201004242.png]]
+![[Pasted image 20251201205155.png]]
 
 
+<mark style="background: #FFB8EBA6;">Grafo cubo</mark>
+
+Nombramos al grafo cubo como $G$ con el siguiente conjunto de vértices y arístas.
+
+Buscamos $\alpha(G)$.
+
+Notemos que el conjunto de vértices $A_{1}=\{ A,C,F,H \}$ es un conjunto independiente de tamaño 4.
+Por lo tanto, podemos decir que $\alpha(G)\geq{4}$.
+
+Tomemos el grafo $G_{1}$ inducido por $A_{2}=\{ A,B,C,D \}$ y el grafo $G_{2}$ inducido por $A_{3}=\{ E,F,G,H \}$.
+
+Notemos que $G_{1}$ y $G_{2}$ son copias de $C_{4}$, es decir, un grafo ciclo de 4 vértices.
+Por lo tanto, $\alpha(G_{1})=\alpha(G_{2})=2$.
+
+Como $V(G)=V(G_{1})\cup V(G_{2})$, podemos usar la siguiente propiedad:
+$$
+\alpha(G) \leq \alpha(G_{1}) + \alpha(G_{2})
+$$
+$$
+\alpha(G) \leq 2+2 = 4
+$$
+Entones
+$$
+4 \leq \alpha(G) \leq 4
+$$
+Por lo tanto, $\alpha(G)=4$.
+
+---
+
+Buscamos $\omega(G)$.
+
+Notemos que el conjunto de vértices $B_{1}=\{ A,B \}$ es una clique de tamaño 2.
+Por lo tanto, podemos decir que $\omega(G)\geq{2}$.
+
+Tomemos un par de vértices cualesquiera $v_{1},v_{2}\in V(G)$ tal que $v_{1}\sim v_{2}$.
+Listamos los vecinos de ambos:
+- $N(v_{1})=\{ v_{2},w_{1},w_{2} \}$.
+- $N(v_{2})=\{ v_{1},w_{3},w_{4} \}$.
+- Donde $w_{1},w_{2},w_{3},w_{4}\in V(G)$.
+
+Notemos que no existe un vértice $v_{3}\in V(G)$ tal que $v_{1}\sim v_{3},v_{2}\sim v_{3}$.
+Esto impide que se genere una clique de tamaño 3 en $G$, es decir, $\omega(G)<3\leftrightarrow \omega(G)\leq{2}$.
+
+Como $2\leq \omega(G)\leq{2}\implies \omega(G)=2$.
+
+<mark style="background: #FFB8EBA6;">Grafo de Petersen</mark>
+
+Nombramos al Grafo de Petersen como $H$ con el siguiente conjunto de vértices y arístas.
+
+Buscamos $\alpha(H)$.
+
+Notemos que el conjunto de vértices $B=\{ H,I,B,E \}$ es un conjunto independiente de tamaño 4, por lo tanto, $\alpha(H)\geq{4}$.
+
+Tomemos al subgrafo $H_{1}$ inducido por $B_{1}=\{ A,B,C,D,E \}$ y al subgrafo $H_{2}$ inducido por $B_{2}=\{ F,G,H,I,J \}$.
+
+Notemos que $H_{1}$ y $H_{2}$ son copias de $C_{5}$ y $\alpha(H_{1})=\alpha(H_{2})=2$.
+
+Como $V(H)=B_{1}\cup B_{2}$, podemos usar la siguiente propiedad
+$$
+\alpha(H) \leq \alpha(H_{1}) + \alpha(H_{2})
+$$
+$$
+\alpha(H) \leq 2+2=4
+$$
+Por lo tanto $4\leq \alpha(H)\leq{4}\implies \alpha(H)=4$.
+
+Buscamos $\omega(H)$.
+
+Notemos que el conjunto de vértices $B_{3}=\{ A,B \}$ es una clique de tamaño 2. Por lo tanto, $\omega(H)\geq{2}$.
+
+Si existiese una clique de tamaño 3, tendríamos un conjunto de vértices $B_{4}=\{ v_{1},v_{2},v_{3} \}$ tal que $v_{1}\sim v_{2},v_{2}\sim v_{3},v_{3}\sim v_{1}$.
+
+Tomemos dos vértices $v_{1},v_{2}\in V(H)$ tal que $v_{1}\sim v_{2}$.
+Listemos a los vecinos de cada uno.
+- $N(v_{1})=\{ v_{2},w_{1},w_{2} \}$.
+- $N(v_{2})=\{ v_{1},w_{3},w_{4} \}$.
+Donde $w_{1},w_{2},w_{3},w_{4}\in V(H)$.
+
+Notemos que $v_{1}$ y $v_{2}$ no tienen vecinos en común. Por lo tanto, es imposible encontrar un $v_{3}\in V(H)$ tal que $v_{1}\sim v_{2},v_{2}\sim v_{3},v_{3}\sim v_{1}$, esto indica que $\omega(H)<3\leftrightarrow \omega(H)\leq{2}$.
+
+Como $2\leq\omega(H)\leq{2}=\omega(H)=2$.
+
+### Ejercicio 6
+![[Pasted image 20251201214924.png]]
+
+Modelemos el problema con un grafo simple $G$, donde los vértices representan a las personas y una arista representa la relación "conocerse mutuamente".
+
+La condición "tres personas se conocen todas entre sí" significa que $G$ contiene una clique de tamaño 3.
+
+La condición "tres personas tales que no hay dos de ellas que se conocen entre sí" significa que el conjunto de personas forma un conjunto independiente de tamaño 3.
+
+Queremos demostrar que para todo grafo simple $G$ con $|V(G)|=6$ se cumple que $\omega(G)\geq{3}$ o $\alpha(G)\geq{3}$.
+
+Tomamos un vértice $v\in V(G)$. Sabemos que $d(v)$ puede ser $0,1,2,3,4$ o $5$.
+
+Por el **Teorema del Palomar** sabemos que los 5 vértices restantes o bien son vecinos de $v$ o bien no lo son (no simultáneamente, necesariamente). Por lo tanto, al menos una categoría debe tener 3 vértices.
+
+Es decir, podemos identificar dos casos:
+1. $v$ tiene al menos 3 vecinos
+   Es decir, $3\leq d(v)\leq{5}$.
+   Luego, podemos identificar dos subcasos:
+	1. Existe al menos una arista entre los vecinos de $v$.
+	   Tomemos dos $w_{1},w_{2}\in N(v)$ tal que $w_{1}\sim w_{2}$.
+	   En este caso, $w_{1}\sim w_{2},v\sim w_{1},v\sim w_{2}\implies \omega(G)\geq{3}$.
+	2. No existe ninguna arista entre los vecinos de $v$.
+	   Tomemos tres $w_{1},w_{2},w_{3}\in N(v)$ tal que $w_{1}\not\sim w_{2},w_{1}\not\sim w_{3},w_{2}\not\sim w_{3}$.
+	   En este caso, $w_{1}\not\sim w_{2},w_{1}\not\sim w_{3},w_{2}\not\sim w_{3}\implies \alpha(G)\geq{3}$.
+2. $v$ tiene como mucho 2 vecinos
+   Es decir, $0\leq d(v)\leq{2}$.
+   Luego, podemos identificar dos subcasos:
+	1. Existe al menos un par de no vecinos de $v$ que no son vecinos entre sí.
+	   Tomemos $w_{1},w_{2}\in V(G)$ tal que $w_{1}\not\sim w_{2},v\not\sim w_{1},v\not\sim w_{2}$. 
+	   En este caso, $w_{1}\not\sim w_{2},v\not\sim w_{1},v\not\sim w_{2}\implies \alpha(G)\geq{3}$.
+	2. Todos los no vecinos son vecinos entre sí.
+	   Tomemos $w_{1},w_{2},w_{3}\in V(G)$ tal que $w_{1}\sim w_{2},w_{1}\sim w_{3},w_{2}\sim w_{3}$ pero $v\not\sim w_{1},v\not\sim w_{2},v\not\sim w_{3}$.
+	   En este caso, $w_{1}\sim w_{2},w_{1}\sim w_{3},w_{2}\sim w_{3}\implies \omega(G)\geq{3}$.
+
+### Ejercicio 7
+![[Pasted image 20251202014510.png]]
+#### <mark style="background: #FFB8EBA6;"> Apartado A</mark>
+
+Por hipótesis, $H$ es un grafo simple. Esto implica que $H$ no tiene bucles ni arístas múltiples.
+Luego, sabemos que $\bar{H}$ está compuesto por $V(\bar{H})=V(H)$ y $ab\in E(\bar{H})\leftrightarrow ab\not\in E(H)$.
+
+Si en $H$ tenemos un conjunto independiente de tamaño $k$ entonces existen $k$ vértices que no son vecinos entre sí. Luego, por definición de grafo complemento, en $\bar{H}$ estos $k$ vértices generan una clique de tamaño $k$.
+
+Recíprocamente, si en $\bar{H}$ existe una clique de tamaño $k$ entonces existen $k$ vértices que son vecinos entre sí. Luego, por definición de grafo complemento, en $H$ estos $k$ vértices generan un conjunto independiente de tamaño $k$.
+
+#### <mark style="background: #FFB8EBA6;"> Apartado B</mark>
+
+Nos piden calcular $\alpha(G),\omega(G),\alpha(\bar{G}),\omega(\bar{G})$.
+Como $G$ es un grafo simple $\bar{G}$ también lo es. Esto por definición de grafo complemento.
+Por lo tanto, podemos hacer uso de la propiedad demostrada en el apartado A, que afirma lo siguiente:
+$$
+\text{Sea H un grafo simple.}\quad \alpha(H)=\omega(\bar{H})
+$$
+Nos dicen que $\bar{G}$ es isomorfo a un grafo que se forma agregando $m$ vértices aislados al grafo $K_{n}$, donde $n,m\in \mathbb{Z}:n,m\geq{3}$. 
+De esto podemos saber lo siguiente:
+- $|V(\bar{G})|=m+n$.
+- Un $K_{n}$ está contenido dentro de $\bar{G}$. Es decir, hay $n$ vértices que forman una clique de tamaño $n$.
+- Hay $m$ vértices aislados, esto forma un conjunto independiente de tamaño $m$.
+
+Veamos si la clique de tamaño $n$ es $\omega(\bar{G})$:
+Sabemos que $\omega(\bar{G})\geq n$.
+Que haya $m$ vértices aislados no disminuye ni incrementa el tamaño de la clique encontrada ni tampoco genera nuevas cliques de mayor tamaño que la ya encontrada. Por lo tanto, podemos afirmar que $\omega(\bar{G})=n$.
+Si utilizamos la propiedad mencionada, tenemos que $\omega(\bar{G})=\alpha(G)=n$.
+
+Veamos si el conjunto independiente de tamaño $m$ es $\alpha(\bar{G})$:
+Sabemos que $\alpha(\bar{G})\geq m$.
+Sin embargo, podemos tomar uno y solo uno de los vértices de $K_{n}$ para agrandar el conjunto independiente de tamaño $m$ por uno de tamaño $m+1$. Si tomamos 2 vértices o más, estamos tomando dos vértices o más que son vecinos entre sí y por lo tanto, no pueden ser considerados en el armado del conjunto independiente.
+Luego, podemos afirmar que $\alpha(\bar{G})=m+1$ ya que no podemos considerar los $n-1$ vértices restantes para agrandar el conjunto independiente actual. 
+Si utilizamos la propiedad mencionada, tenemos que $\alpha(\bar{G})=\omega(G)=m+1$.
+
+### Ejercicio 8
+![[Pasted image 20251202023634.png]]
+
+Sea $G$ un grafo simple y 2-regular.
+Se quiere probar $G$ es un ciclo.
+
+Tomemos $v\in V(G)$ y $w_{1},w_{2}\in V(G)$.
+Por hipótesis de grafo 2-regular, sabemos que $v$ tiene dos vecinos, es decir, $v\sim w_{1}$ y $v\sim w_{2}$.
+Esto implica que el primer vecino de $w_{1}$ y $w_{2}$ es $v$.
+Por hipótesis de grafo simple, necesariamente los vértices $w_{1}$ o $w_{2}$ no pueden tener una segunda arista que los conecte con $v$ ni tampoco una segunda arista que los conecte consigo mismos.
+
+Luego, podemos identificar dos casos:
+1. Si $w_{1}\sim w_{2}$ entonces tenemos un ciclo, ya que $v\sim w_{1},v\sim w_{2},w_{1}\sim w_{2}$.
+2. Si $w_{1}\not\sim w_{2}$ entonces $w_{1}$ tiene como segundo vecino a un $w_{3}$ y $w_{2}$ tiene como segundo vecino a un $w_{4}$.
+   Esto implica que el primer vecino de $w_{3}$ y $w_{4}$ es $w_{1}$ o $w_{2}$ respectivamente.
+   Por hipótesis de grafo simple, necesariamente los vértices $w_{3}$ o $w_{4}$ no pueden tener una segunda arista que los conecte con $w_{1}$ o $w_{2}$ respectivamente ni tampoco una segunda arista que los conecte consigo mismos.
+   
+<mark style="background: #FF5582A6;">COMPLETAR</mark>
 
 ### Ejercicio 14
 ¿Puede el grafo $\bar{C_{6}}$ (el complemento del ciclo de seis vértices) descomponerse en copias de $P_{4}$?

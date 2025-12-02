@@ -1,292 +1,621 @@
-# Compendio Unificado de Matemática Discreta: Teoría de Grafos
+# Enciclopedia de Grafos: Teoría Completa y Metodología de Resolución
 
-## <mark style="background: #FFB8EBA6;">1. Fundamentos y Características Generales</mark>
+## <mark style="background: #FFF3A3A6;">1. CONCEPTOS FUNDAMENTALES</mark>
 
-### <mark style="background: #FFF3A3A6;">Definiciones Básicas</mark>
+### Definiciones Básicas
 
 - **Grafo (**$G$**):** Es una terna formada por:
     
-    - Un conjunto de vértices $V(G)$.[^1]
+    1. Un conjunto de vértices $V(G)$.
         
-    - Un conjunto de aristas $E(G)$.
+    2. Un conjunto de aristas $E(G)$.
         
-    - Una relación de incidencia que asocia a cada arista dos vértices llamados extremos.
+    3. Una relación que asocia a cada arista dos vértices (llamados extremos).
         
-- **Adyacencia:** Dos vértices $u, v$ son adyacentes (o vecinos) si son extremos de una misma arista. Se denota $u \sim v$. Si no son vecinos, $u \not\sim v$.
+- **Grafo Nulo:** Aquel grafo tal que la cantidad de vértices es nula.
     
-- **Vecindad (**$N_G(v)$**):** Es el subconjunto de $V(G)$ formado por los vecinos de $v$.
+- **Adyacencia:** Dos vértices $v$ y $u$ son adyacentes (o vecinos) si son extremos de una misma arista.
     
-    $$N_G(v) = \{u \in V(G) \mid u \sim v\}$$
-- **Grado (**$d(v)$**):** Es el número de aristas incidentes en $v$.
-    
-    - _Nota:_ Los bucles suman 2 al grado.
+    - Notación: $v \sim u$.
         
-    - **Grado máximo:** $\Delta(G)$.
+    - Si no son vecinos: $v \not\sim u$.
         
-    - **Grado mínimo:** $\delta(G)$.
+- **Vecindad (**$N_G(v)$**):** Es el subconjunto de $V(G)$ formado por los vértices que son vecinos de $v$.
+    
+    - $N_G(v) = \{u \in V(G) : v \sim u\}$.
         
-- **Vértice Aislado:** Vértice tal que $d(v) = 0$.
-    
-- **Hoja:** Vértice tal que $d(v) = 1$.
-    
-
-### <mark style="background: #FFF3A3A6;">Tipos de Aristas y Grafos</mark>
-
-- **Aristas múltiples:** Aristas que tienen el mismo par de extremos.
+- **Aristas Múltiples:** Son aquellas aristas que tienen el mismo par de extremos.
     
 - **Bucle:** Arista cuyos extremos coinciden (conecta un vértice consigo mismo).
     
-- **Grafo Simple:** Grafo sin bucles ni aristas múltiples.
-    
-- **Grafo Nulo:** Grafo con cantidad de vértices nula ($V = \emptyset$).
+- **Grafo Simple:** Grafo que **no** tiene bucles ni aristas múltiples.
     
 
-### <mark style="background: #FFF3A3A6;">Teoremas Fundamentales</mark>
+## <mark style="background: #FFF3A3A6;">2. GRADOS Y REGULARIDAD</mark>
 
-- **Teorema del Apretón de Manos (Handshaking Lemma):** En todo grafo $G$:
+### Teoría
+
+- **Grado (**$d_G(v)$ **o** $d(v)$**):** Número de aristas incidentes en un vértice $v$.
+    
+    - _Nota Importante:_ El bucle cuenta dos veces en el grado.
+        
+- **Notación de Extremos:**
+    
+    - $\Delta(G)$: Grado máximo del grafo.
+        
+    - $\delta(G)$: Grado mínimo del grafo.
+        
+- **Vértice Aislado:** Vértice cuyo grado es 0.
+    
+- **Grafo k-regular:** Un grafo $G$ es $k$-regular si todos sus vértices tienen grado $k$.
+    
+    - Condición: $\Delta(G) = \delta(G) = k$.
+        
+
+### <mark style="background: #BBFABBA6;">Teoremas y Observaciones</mark>
+
+1. **Teorema del Apretón de Manos:** La suma de los grados de los vértices es igual al doble de la cantidad de aristas.
     
     $$\sum_{v \in V(G)} d(v) = 2|E(G)|$$
-    
-    _Consecuencia:_ La cantidad de vértices de grado impar en un grafo siempre es par.
-    
-
-## <mark style="background: #FFB8EBA6;">2. Tipos Especiales de Grafos y Propiedades</mark>
-
-### <mark style="background: #FFF3A3A6;">Grafo Regular</mark>
-
-Un grafo $G$ es $k$**-regular** si todos sus vértices tienen el mismo grado $k$.
-
-$$\Delta(G) = \delta(G) = k$$
-
-### <mark style="background: #FFF3A3A6;">Grafo Completo</mark> ($K_n$)
-
-Grafo simple donde cada par de vértices distintos es adyacente.
-
-- $|E(K_n)| = \binom{n}{2} = \frac{n(n-1)}{2}$.
+2. **Paridad de Grados:** La cantidad de vértices de grado impar en un grafo siempre es **par**.
     
 
-### <mark style="background: #FFF3A3A6;">Grafo Complemento</mark> ($\overline{G}$)
+## <mark style="background: #FFF3A3A6;">3. CONJUNTOS INDEPENDIENTES Y CLIQUES</mark>
 
-Sea $G$ un grafo simple. Su complemento $\overline{G}$ tiene $V(\overline{G}) = V(G)$ y sus aristas se definen como:
+### Teoría
 
-$$uv \in E(\overline{G}) \iff uv \notin E(G)$$
-
-**Propiedades:**
-
-- $|E(G)| + |E(\overline{G})| = \binom{n}{2}$ (máximo número de aristas).
+- **Conjunto Independiente:** Subconjunto de $V(G)$ tal que sus elementos **no** son vecinos de a pares (ninguno está conectado con otro del mismo conjunto).
     
-- $d_{\overline{G}}(v) = |V(G)| - 1 - d_G(v)$.
+- $\alpha(G)$**:** Tamaño máximo de los conjuntos independientes en $G$.
     
-- Una clique en $\overline{G}$ es un conjunto independiente en $G$.
+- **Clique:** Conjunto de vértices adyacentes de a pares (todos contra todos).
     
-- El complemento de un grafo disconexo es siempre conexo.
+- $\omega(G)$**:** Cantidad de vértices de una clique de tamaño máximo en $G$.
     
 
-### <mark style="background: #FFF3A3A6;">Grafo Bipartito</mark>
+### 🛠️ METODOLOGÍA DE RESOLUCIÓN
 
-Un grafo $G$ es bipartito si $V(G)$ puede dividirse en dos conjuntos independientes disjuntos $X$ e $Y$ (partición) tal que toda arista une un vértice de $X$ con uno de $Y$.
+#### <mark style="background: #ADCCFFA6;">A. Hallar el Conjunto Independiente Máximo</mark> ($\alpha(G)$)
 
-- $V(G) = X \cup Y$ y $X \cap Y = \emptyset$.
+El objetivo es acotar el valor por abajo y por arriba para encontrar el número exacto.
+
+1. **Cota Inferior (**$\ge$**):** Encontrar "a ojo" un conjunto independiente grande en el grafo.
     
-
-**Caracterización:** Un grafo es bipartito si y solo si **no contiene ciclos de longitud impar**.
-
-**Grafo Bipartito Completo (**$K_{m,n}$**):** Todos los vértices de la partición $X$ ($|X|=m$) están conectados con todos los de $Y$ ($|Y|=n$).
-
-- $|V| = m+n$
-    
-- $|E| = m \cdot n$
-    
-
-#### <mark style="background: #BBFABBA6;">📘 Estrategia de Resolución: ¿Es bipartito?</mark>
-
-1. **Verificar ciclos:** Si encuentras un ciclo de longitud impar (ej. triángulo $C_3$, $C_5$), **NO** es bipartito.
-    
-2. **Construir partición:** Intenta colorear los vértices con dos colores (o asignar conjuntos $X$ e $Y$). Si logras que $X \cup Y = V(G)$ sin que haya aristas entre vértices del mismo conjunto, entonces **SÍ** es bipartito.
-    
-
-## <mark style="background: #FFB8EBA6;">3. Subestructuras: Isomorfismo y Matrices</mark>
-
-### <mark style="background: #FFF3A3A6;">Isomorfismo</mark> ($G \simeq H$)
-
-Dos grafos simples $G$ y $H$ son isomorfos si existe una función biyectiva $f: V(G) \to V(H)$ tal que:
-
-$$uv \in E(G) \iff f(u)f(v) \in E(H)$$
-
-**Grafos Autocomplementarios:** $G$ es autocomplementario si $G \simeq \overline{G}$.
-
-- Condición necesaria (no suficiente): $|E(G)| = \frac{n(n-1)}{4}$.
-    
-
-#### <mark style="background: #BBFABBA6;">📘 Estrategia de Resolución: Verificar Isomorfismo</mark>
-
-1. **Chequeo rápido (Invariantes):** Verificar si tienen misma cantidad de vértices, aristas y la misma secuencia de grados. Si algo difiere $\to$ **NO** son isomorfos.
-    
-2. **Definir la biyección:** Si parecen isomorfos, construye la función $f$.
-    
-    - Asocia vértices de igual grado: $d(u) = d(f(u))$.
+    - _Justificación:_ "Observemos que el conjunto de vértices $\{v_1, v_2, ...\}$ es independiente pues no son vecinos entre sí. Por lo tanto, $\alpha(G) \ge x$".
         
-    - Verifica la vecindad: Si $u,v$ son vecinos en $G$, sus imágenes deben ser vecinas en $H$.
+2. **Cota Superior (**$\le$**):** Cubrir el grafo con subgrafos conocidos.
+    
+    - Tomar subgrafos $H_1, H_2, ..., H_n$ tales que la unión de sus vértices cubra todo $V(G)$.
         
-3. **Matrices:** Dos grafos son isomorfos si, reordenando filas/columnas, sus matrices de adyacencia son idénticas.
+    - Idealmente usar grafos donde $\alpha$ es fácil de calcular (Clicos, Ciclos, Caminos).
+        
+    - Aplicar la propiedad: $\alpha(G) \le \alpha(H_1) + \alpha(H_2) + ... + \alpha(H_n)$.
+        
+3. **Conclusión:** Si hallamos que $\alpha(G) \ge x$ y $\alpha(G) \le x$, entonces $\alpha(G) = x$.
     
 
-### Matrices Asociadas
+#### <mark style="background: #ADCCFFA6;">B. Hallar la Clique Máxima</mark> ($\omega(G)$)
 
-- **Matriz de Adyacencia (**$A(G)$**):** Matriz cuadrada $n \times n$. La entrada $a_{ij} = 1$ si $v_i \sim v_j$, de lo contrario $0$. Es simétrica y la suma de una fila $i$ da $d(v_i)$.
+1. **Cota Inferior (**$\ge$**):** Encontrar visualmente una clique máxima (ej. un triángulo $K_3$, un $K_4$).
     
-- **Matriz de Incidencia (**$M(G)$**):** Matriz $n \times m$ (vértices $\times$ aristas). $m_{ij} = 1$ si el vértice $v_i$ es extremo de la arista $e_j$.
+    - _Afirmación:_ $\omega(G) \ge x$.
+        
+2. **Refutación de Cota Superior:** Plantear la hipótesis de si existe una clique mayor ($x+1$).
     
+    - Para que exista una clique de tamaño $x+1$, debe haber al menos $x+1$ vértices con grado $\ge x$.
+        
+    - **Paso 1:** Enumerar los grados. Si no hay suficientes vértices con el grado requerido, se demuestra que $\omega(G) \le x$.
+        
+    - **Paso 2:** Si hay suficientes vértices de grado alto, verificar si son vecinos entre sí. Si no lo son, no forman clique.
+        
 
-## <mark style="background: #FFB8EBA6;">4. Parámetros Estructurales:</mark> $\alpha$ y $\omega$
+## <mark style="background: #FFF3A3A6;">4. CONECTIVIDAD Y COMPLEMENTO</mark>
 
-### <mark style="background: #FFF3A3A6;">Conjunto Independiente</mark> ($\alpha(G)$)
+### <mark style="background: #FF5582A6;">Grafo Conexo</mark>
 
-Subconjunto de $V(G)$ tal que sus elementos no son vecinos entre sí (de a pares).
-
-- $\alpha(G)$: Tamaño máximo de un conjunto independiente en $G$.
+- **Definición:** Un grafo es conexo si cada par de vértices pertenece a un camino contenido en $G$.
     
-
-#### <mark style="background: #BBFABBA6;">📘 Estrategia de Resolución: Hallar</mark> $\alpha(G)$
-
-1. **Cota inferior (Encontrar uno):** Encuentra "a ojo" un conjunto de vértices no adyacentes grande. Digamos que encuentras uno de tamaño $k$. Entonces $\alpha(G) \ge k$.
-    
-2. **Cota superior (Descomposición):** Divide $V(G)$ en subgrafos disjuntos (generalmente cliques o ciclos) $H_1, H_2, \dots, H_n$.
-    
-    $$\alpha(G) \le \alpha(H_1) + \alpha(H_2) + \dots + \alpha(H_n)$$
-3. Si logras que la cota inferior iguale a la superior, has encontrado $\alpha(G)$.
+- **Disconexo:** Caso contrario.
     
 
-### <mark style="background: #FFF3A3A6;">Clique</mark> ($\omega(G)$)
+### <mark style="background: #FF5582A6;">Grafo Complemento</mark> ($\overline{G}$)
 
-Subconjunto de vértices adyacentes de a pares (forman un subgrafo completo).
+- **Definición:** Sea $G$ un grafo simple. Su complemento $\overline{G}$ tiene:
+    
+    - Vértices: $V(\overline{G}) = V(G)$.
+        
+    - Aristas: $uv \in E(\overline{G}) \iff uv \notin E(G)$. (Son aristas en el complemento si y solo si NO lo son en el original).
+        
+- <mark style="background: #BBFABBA6;">Propiedades Clave:</mark>
+    
+    1. $|E(G)| + |E(\overline{G})| = \binom{n}{2} = \frac{n(n-1)}{2}$ (Máximo número de aristas en grafo simple de $n$ vértices).
+        
+    2. Grados: $d_{\overline{G}}(v) = |V(G)| - 1 - d_G(v)$.
+        
+    3. Relación Clique/Independiente: Una clique en $\overline{G}$ es un conjunto independiente en $G$.
+        
+- **Nota sobre Conexidad:**
+    
+    - No siempre el complemento de un grafo conexo es conexo.
+        
+    - Pero, el grafo complemento de un grafo disconexo **siempre** es conexo.
+        
 
-- $\omega(G)$: Cantidad de vértices de la clique de tamaño máximo.
+### <mark style="background: #FF5582A6;">Autocomplementarios</mark>
+
+- **Definición:** $G$ es autocomplementario si es isomorfo a su complemento ($G \simeq \overline{G}$).
+    
+- **Condición Necesaria (pero NO suficiente):**
+    
+    - La cantidad de aristas debe ser la mitad del total posible: $|E(G)| = \frac{n(n-1)}{4}$.
+        
+- <mark style="background: #BBFABBA6;">Propiedad:</mark> Un grafo autocomplementario de $n$ vértices permite descomponer a $K_n$ en dos copias de $G$.
     
 
-#### <mark style="background: #BBFABBA6;">📘 Estrategia de Resolución: Hallar</mark> $\omega(G)$
+## <mark style="background: #FFF3A3A6;">5. MATRICES E ISOMORFISMO</mark>
 
-1. **Encontrar una clique:** Busca el subgrafo completo más grande visible. Supongamos tamaño $k$. Entonces $\omega(G) \ge k$.
-    
-2. **Refutar tamaño mayor:** Para probar que $\omega(G) < k+1$, argumenta sobre los grados. Para que exista una clique de tamaño $k+1$, debe haber al menos $k+1$ vértices con grado $\ge k$. Si no los hay, $\omega(G) = k$.
-    
+### <mark style="background: #FF5582A6;">Isomorfismo</mark>
 
-## <mark style="background: #FFB8EBA6;">5. Conectividad, Árboles y Recorridos</mark>
-
-### <mark style="background: #FFF3A3A6;">Conexidad y Corte</mark>
-
-- **Grafo Conexo:** Existe un camino entre cualquier par de vértices.
+- **Definición:** Dos grafos simples $G$ y $H$ son isomorfos ($G \simeq H$) si existe una función biyectiva $f: V(G) \to V(H)$ tal que:
     
-- **Componentes Conexas:** Subgrafos conexos maximales.
-    
-- **Vértice de Corte:** Vértice cuya eliminación aumenta el número de componentes conexas.
-    
-- **Arista de Corte (Puente):** Arista cuya eliminación aumenta el número de componentes conexas (equivale a decir que la arista no pertenece a ningún ciclo).
+    $$uv \in E(G) \iff f(u)f(v) \in E(H)$$
+- **Vértices Simétricos:** Dos vértices $u, v$ de un grafo $G$ son simétricos si existe un isomorfismo (automorfismo) $f: V(G) \to V(G)$ tal que $f(u) = v$.
     
 
-### <mark style="background: #FFF3A3A6;">Árboles y Bosques</mark>
+### <mark style="background: #FF5582A6;">Matrices</mark>
+
+1. **Matriz de Adyacencia (**$A(G)$**):**
+    
+    - Tamaño $n \times n$. Entrada $a_{ij}$ es el número de aristas entre $v_i$ y $v_j$.
+        
+    - **Obs:** Es cuadrada, simétrica respecto a la diagonal. La suma de una fila da el grado del vértice. En grafos simples las entradas son 0 o 1.
+        
+2. **Matriz de Incidencia (**$M(G)$**):**
+    
+    - Tamaño $n \times m$ (vértices $\times$ aristas). Entrada $m_{ij}$ es 1 si $v_i$ es extremo de $e_j$, 0 si no.
+        
+
+- **Relación con Isomorfismo:** Si dos grafos tienen la misma matriz de adyacencia (reordenando filas/columnas), son isomorfos.
+    
+- <mark style="background: #BBFABBA6;">Propiedad:</mark> $G \simeq H \iff \overline{G} \simeq \overline{H}$.
+    
+
+### 🛠️ METODOLOGÍA DE RESOLUCIÓN: Isomorfismo
+
+#### <mark style="background: #ADCCFFA6;">Verificar si son isomorfos</mark>
+
+1. **Chequeo de Invariantes (Estructurales):**
+    
+    - ¿Tienen misma cantidad de vértices?
+        
+    - ¿Tienen misma cantidad de aristas?
+        
+    - ¿Tienen la misma secuencia de grados?
+        
+    - Si algo falla $\to$ **NO son isomorfos**.
+        
+2. **Confirmación:**
+    
+    - **Método Matrices:** Construir matrices de adyacencia y verificar igualdad.
+        
+    - **Método Función Biyectiva (Formal):**
+        
+        1. Listar $E(G)$ y $E(H)$.
+            
+        2. Definir la función $f(v_i) = u_j$ para todos los vértices.
+            
+        3. Verificar arista por arista: Si $ab \in E(G)$, entonces $f(a)f(b)$ debe estar en $E(H)$.
+            
+
+#### <mark style="background: #ADCCFFA6;">Verificar si es Autocomplementario</mark>
+
+1. Chequear condición de aristas ($n(n-1)/4$).
+    
+2. Construir $\overline{G}$.
+    
+3. Buscar isomorfismo entre $G$ y $\overline{G}$ usando los pasos anteriores (función $f: V(G) \to V(\overline{G})$).
+    
+
+## <mark style="background: #FFF3A3A6;">6. SUBGRAFOS, OPERACIONES Y DESCOMPOSICIÓN</mark>
+
+### Definiciones
+
+- **Subgrafo (**$H \subset G$**):** $H$ es subgrafo si $V(H) \subseteq V(G)$ y $E(H) \subseteq E(G)$ conservando la correspondencia de extremos.
+    
+- <mark style="background: #BBFABBA6;">Propiedad:</mark> Si $H$ y $R$ son subgrafos que cubren los vértices de $G$ ($V(G) = V(H) \cup V(R)$), entonces $\alpha(G) \le \alpha(H) + \alpha(R)$.
+    
+
+### <mark style="background: #FF5582A6;">Operaciones de Eliminación</mark>
+
+- $G - v$**:** Grafo resultante de eliminar el vértice $v$ y **todas** las aristas incidentes en él.
+    
+- $G - e$**:** Subgrafo resultante de eliminar la arista $e$.
+    
+- $G - T$**:** (Donde $T \subset V(G)$) Eliminar todos los vértices de $T$ y sus incidentes.
+    
+
+### <mark style="background: #FF5582A6;">Subgrafo Inducido</mark> ($G[T]$)
+
+- Se obtiene eliminando los vértices que **no** están en $T$.
+    
+- $G[T] = G - (V(G) - T)$.
+    
+- Contiene a los vértices de $T$ y a **todas** las aristas de $G$ que tengan ambos extremos en $T$.
+    
+- _Nota:_ No todo subgrafo es inducido.
+    
+
+### <mark style="background: #FF5582A6;">Descomposición</mark>
+
+- Una descomposición es una lista de subgrafos $H_1, ..., H_k$ tal que **cada arista de** $G$ **pertenece a uno y solo un subgrafo** de la lista.
+    
+- <mark style="background: #BBFABBA6;">Propiedades:</mark>
+    
+    - $|E(G)| = |E(H_1)| + ... + |E(H_k)|$.
+        
+    - $d_G(v) = d_{H_1}(v) + ... + d_{H_k}(v)$.
+        
+
+### <mark style="background: #ADCCFFA6;">🛠️ METODOLOGÍA DE RESOLUCIÓN: Descomposición en Copias</mark>
+
+Supongamos que se pide descomponer $G$ en $x$ copias de un grafo $H$ (ej. $P_n, C_n$).
+
+1. **Condición Aritmética:**
+    
+    - Calcular $|E(G)|$.
+        
+    - Verificar si $|E(G)|$ es divisible por $|E(H)|$. O que $|E(G)| = x \cdot |E(H)|$.
+        
+    - Si no da exacto $\to$ **No se puede**.
+        
+2. **Condición de Grados (para Caminos):**
+    
+    - Si se descompone en caminos, cada camino aporta 2 extremos (grados impares).
+        
+    - El grafo total debe tener a lo sumo $2 \times (\text{cantidad de copias})$ vértices de grado impar. Si tiene más, la descomposición es imposible.
+        
+3. **Exploración:**
+    
+    - Si no hay impedimentos teóricos, se debe buscar la descomposición manualmente (pintando aristas) para demostrarla.
+        
+
+## <mark style="background: #FFF3A3A6;">7. CORTE Y ÁRBOLES</mark>
+
+### <mark style="background: #FF5582A6;">Vértices y Aristas de corte</mark>
+
+- **Vértice o Arista de Corte:** Su eliminación incrementa la cantidad de componentes conexas del grafo.
+    
+- **Observaciones:**
+    
+    - Ningún bucle es arista de corte.
+        
+    - Ninguna arista múltiple es de corte.
+        
+    - Ningún vértice aislado es de corte.
+        
+    - Que un grafo sea disconexo no implica que sus vértices/aristas sean de corte.
+        
+    - Si $G$ es un grafo par, se puede descomponer en ciclos. Si esto ocurre, cada arista de $G$ pertenece a un ciclo contenido en $G$, por lo tanto, $G$ no tiene **aristas de corte**.
+        
+- <mark style="background: #BBFABBA6;">Caracterización de Arista de Corte:</mark> Una arista es de corte **sí y solo sí NO pertenece a ningún ciclo**.
+    
+- <mark style="background: #BBFABBA6;">Corolario 1:</mark> Sea $G$ un grafo conexo con una arista de corte $e$, entonces $G-e$ tiene **exactamente dos** componentes conexas.
+    
+- <mark style="background: #BBFABBA6;">Corolario 2:</mark> Si $G$ tiene al menos una arista de corte, entonces $G$ tiene al menos dos vértices de grado impar.
+    
+- <mark style="background: #BBFABBA6;">Corolario 3:</mark> Todo vértice de un árbol $T$ que **NO** es una hoja, **es un vértice de corte**.
+
+### <mark style="background: #FF5582A6;">Árboles, Bosques y Hojas</mark>
 
 - **Bosque:** Grafo acíclico (sin ciclos).
     
-- **Árbol:** Bosque conexo (Conexo y acíclico).
-    
-- **Propiedades de Árboles (**$T$ **con** $n$ **vértices):**
-    
-    1. $T$ es conexo y tiene $n-1$ aristas.
+    - Sus componentes conexas son árboles.
         
-    2. Existe un único camino entre cada par de vértices.
+    - Todas sus aristas son de corte.
         
-    3. Agregar una arista crea exactamente un ciclo.
+    - Es bipartito.
         
-    4. Toda arista es de corte.
+    - No todo grafo bipartito es un bosque.
         
-    5. Si $n \ge 2$, tiene al menos 2 hojas.
+- **Árbol:** Bosque conexo (Grafo conexo y sin ciclos).
+    
+    - Un árbol con al menos 2 vértices tiene al menos 2 hojas
         
-
-### <mark style="background: #FFF3A3A6;">Tipos Específicos</mark>
-
-- **Camino (**$P_n$**):** $\alpha(P_n) = \lceil n/2 \rceil$. (Si $n$ par $n/2$, si impar $(n+1)/2$).
+    - <mark style="background: #BBFABBA6;">Corolario:</mark> Al agregar una arista a un árbol se forma exactamente un ciclo.
+	    
+	- <mark style="background: #BBFABBA6;">Corolario:</mark> Todo vértice de un árbol que **NO** es hoja, **es vértice de corte**.
+		
+- **Hoja:** Vértice de grado 1.
     
-- **Ciclo (**$C_n$**):** $\alpha(C_n) = \lfloor n/2 \rfloor$. (Si $n$ par $n/2$, si impar $(n-1)/2$).
-    
-- **Rueda (**$W_n$**):** Ciclo $C_n$ + un vértice universal conectado a todos. $|V|=n+1$, $|E|=2n$.
-    
-
-### <mark style="background: #FFF3A3A6;">Grafos Eulerianos</mark>
-
-- **Recorrido Euleriano:** Paseo que atraviesa **todas** las aristas de $G$ una única vez.
-    
-- **Grafo Euleriano:** Posee un recorrido euleriano **cerrado** (empieza y termina en el mismo vértice).
-    
-    - **Teorema:** $G$ es euleriano $\iff$ es conexo (salvo aislados) y **todos** sus vértices tienen grado par.
-        
-    - **Admite recorrido abierto:** Si tiene exactamente 2 vértices de grado impar.
+    - Al borrar una hoja de un árbol de $n$ vértices, queda un árbol de $n-1$ vértices.
         
 
-## <mark style="background: #FFB8EBA6;">6. Descomposición y Subgrafos</mark>
+#### <mark style="background: #BBFABBA6;">Teorema de Caracterización de Árboles</mark>
 
-- **Subgrafo (**$H \subset G$**):** $V(H) \subseteq V(G)$ y $E(H) \subseteq E(G)$.
-    
-- **Subgrafo Inducido (**$G[T]$**):** Subgrafo formado por $T \subseteq V(G)$ y **todas** las aristas de $G$ que conectan vértices dentro de $T$.
-    
-- **Descomposición:** Partición de las aristas de $G$ en subgrafos $H_1, \dots, H_k$.
-    
-    $$|E(G)| = \sum |E(H_i)|$$$$d_G(v) = \sum d_{H_i}(v)$$
+Sea $G$ un grafo con $n$ vértices. Las siguientes afirmaciones son equivalentes:
 
-#### <mark style="background: #BBFABBA6;">📘 Estrategia de Resolución: Descomposición en Copias</mark>
-
-Si se pide descomponer $G$ en $k$ copias de un grafo $H$ (ej. caminos $P_3$):
-
-1. **Condición de Aritmética:** $|E(G)|$ debe ser divisible por $|E(H)|$.
+1. $G$ es un árbol (Conexo y Acíclico).
     
-2. **Condición de Grados:** Verificar los grados impares. Si descomponemos en caminos, la suma de vértices de grado impar en las copias debe ser soportada por el grafo original.
+2. $G$ es conexo y tiene $n-1$ aristas.
+    
+3. $G$ tiene $n-1$ aristas y no tiene ciclos.
+    
+4. Entre cada par de vértices existe un **único** camino.
     
 
-## <mark style="background: #FFB8EBA6;">7. Grafos Planares</mark>
 
-**Definición:** Un grafo es planar si puede dibujarse en el plano sin que sus aristas se crucen.
+## <mark style="background: #FFF3A3A6;">8. TIPOS DE GRAFOS ESPECIALES</mark>
 
-- **Caras (**$f$**):** Regiones conexas delimitadas por aristas (incluye la cara exterior infinita).
+### <mark style="background: #FF5582A6;">A. Ciclo</mark> ($C_n$)
+
+- Es un grafo con igual número de vértices y aristas, cuyos vértices se pueden ordenar formando un círculo de forma tal que dos vértices son vecinos si y sólo sí son adyacentes en la ronda.
+    
+- $\alpha(C_n)$:
+    
+    - Si $n$ es par: $\frac{n}{n}$.
+        
+    - Si $n$ es impar: $\frac{n-1}{2}$.
+        
+
+### <mark style="background: #FF5582A6;">B. Camino</mark> ($P_n$)
+
+- Es un grafo simple cuyos vértices pueden ordenarse en hilera de forma tal que 2 vértices son vecinos si y solo sí son consecutivos en ese orden.
+    
+- $\alpha(P_n)$:
+    
+    - Si $n$ es par: $\frac{n}{2}$.
+        
+    - Si $n$ es impar: $\frac{n+1}{2}$.
+        
+
+### <mark style="background: #FF5582A6;">C. Rueda</mark> ($W_n$)
+
+- Condición: $n \ge 3$.
+    
+- Construcción: Se toma un ciclo $C_n$ y se agrega un vértice universal $u$ conectado a todos los del ciclo.
+    
+- <mark style="background: #BBFABBA6;">Propiedades:</mark>
+    
+    - $|V(W_n)| = n + 1$.
+        
+    - $|E(W_n)| = 2n$.
+        
+    - Grados del ciclo: 3.
+        
+    - Grado del centro ($u$): $n$.
+        
+    - **No** son bipartitos.
+        
+
+## <mark style="background: #FFF3A3A6;">9. PASEOS Y RECORRIDOS (GRAFOS EULERIANOS)</mark>
+
+### Definiciones de Trayectorias
+
+1. <mark style="background: #FF5582A6;">Paseo:</mark> Secuencia vértices-aristas. Puede repetir todo.
+    
+    - Los extremos de un paseo son su primer y último vértice.
+        
+    - Es cerrado si sus extremos coinciden.
+        
+2. <mark style="background: #FF5582A6;">Recorrido:</mark> Paseo que **no repite aristas**.
+    
+    - Los extremos de un recorrido son su primer y último vértice.
+        
+    - Es cerrado si sus extremos coinciden.
+        
+3. <mark style="background: #FF5582A6;">Camino (en un grafo):</mark> Es un paseo que **no repite vértices** **ni aristas**.
+    
+4. <mark style="background: #FF5582A6;">Ciclo (en un grafo):</mark> Es un paseo cerrado que **no repite vértices** (salvo extremos).
+    
+    - Si $G$ es un grafo par, se puede descomponer en ciclos. Si esto ocurre, cada arista de $G$ pertenece a un ciclo contenido en $G$, por lo tanto, $G$ no tiene **aristas de corte**.
+        
+5. La <mark style="background: #FF5582A6;">longitud de un paseo, recorrido o camino</mark> se refiere a la cantidad de aristas del mismo.
+    
+    - <mark style="background: #BBFABBA6;">Lema 1:</mark> Todo paseo con extremos $u,v$ contiene un camino con extremos $u,v$.
+        
+    - <mark style="background: #BBFABBA6;">Lema 2:</mark> Todo paseo cerrado impar contiene un ciclo impar.
+        
+
+### Grafos Eulerianos
+
+- <mark style="background: #FF5582A6;">Recorrido Euleriano:</mark> Recorrido que pasa por **todas** las aristas de $G$.
+    
+- <mark style="background: #FF5582A6;">Grafo Euleriano:</mark> Posee un recorrido euleriano **cerrado**.
+    
+- <mark style="background: #FF5582A6;">Camino Maximal:</mark> Camino que no está contenido en otro más largo.
+    
+    - <mark style="background: #BBFABBA6;">Lema:</mark> Si todo vértice tiene grado al menos 2, el grafo tiene un ciclo.
+        
+- **Observaciones:**
+    
+    - Si $G$ es un grafo disconexo y por lo menos dos componentes conexas tienen aristas, entonces el grafo **NO puede tener un recorrido euleriano** y tampoco sería un grafo euleriano.
+        
+    - Si $G$ es simple y euleriano, $|V(G)|$ es impar.
+        
+    - $W_{2n+1}$ con $n$ es un grafo euleriano.
+        
+
+#### Teoremas de Euler
+
+1. <mark style="background: #BBFABBA6;">Grafo Euleriano (Cerrado):</mark> Un grafo es euleriano sí y solo sí:
+    
+    - Tiene a lo sumo una componente conexa no trivial (con aristas).
+        
+    - **Todos** sus vértices tienen grado **par**.
+        
+2. <mark style="background: #BBFABBA6;">Recorrido Euleriano (Abierto):</mark> Un grafo admite recorrido euleriano (pero no es cerrado) sí y solo sí:
+    
+    - Tiene a lo sumo una componente conexa no trivial.
+        
+    - Tiene **exactamente dos** vértices de grado impar.
+        
+
+### <mark style="background: #ADCCFFA6;">🛠️ METODOLOGÍA DE RESOLUCIÓN: Euleriano</mark>
+
+1. Verificar conexidad (ignorar aislados).
+    
+2. Contar grados impares.
+    
+    - 0 impares $\to$ Es Euleriano.
+        
+    - 2 impares $\to$ Tiene recorrido (Semi-euleriano).
+        
+    - Otro número $\to$ No es Euleriano ni tiene recorrido.
+        
+
+## <mark style="background: #FFF3A3A6;">10. GRAFOS BIPARTITOS</mark>
+
+### Definición
+
+- Un grafo es bipartito si $V(G)$ es la unión disjunta de dos conjuntos independientes $X$ e $Y$.
+    
+    - $X \cup Y = V(G)$.
+        
+    - $X \cap Y = \emptyset$.
+        
+    - Todas las aristas conectan un vértice de $X$ con uno de $Y$.
+        
+- <mark style="background: #BBFABBA6;">Propiedad:</mark> $\sum_{v \in X} d(v) = |E(G)|$.
     
 
-### <mark style="background: #FFF3A3A6;">Fórmula de Euler</mark>
+### <mark style="background: #BBFABBA6;">Caracterización</mark>
 
-Para un grafo plano conexo con $v$ vértices, $e$ aristas y $f$ caras:
+- Un grafo es bipartito **sí y solo sí NO contiene ciclos de longitud impar**.
+    
+- _Consecuencias:_
+    
+    - $C_{2n}$ (Ciclo par) ES bipartito.
+        
+    - $C_{2n+1}$ (Ciclo impar) NO es bipartito.
+        
+    - Todo Árbol/Bosque/Camino ES bipartito.
+        
+    - $K_n$ con $n \ge 3$ NO es bipartito (tiene $C_3$).
+        
+
+### <mark style="background: #FF5582A6;">Bipartito Completo</mark> ($K_{m,n}$)
+
+- Partición $X$ (tamaño $m$) e $Y$ (tamaño $n$).
+    
+- Cada vértice de $X$ es vecino de todos los de $Y$.
+    
+- <mark style="background: #BBFABBA6;">Propiedades:</mark>
+    
+    - $|V| = m + n$.
+        
+    - $|E| = m \cdot n$.
+        
+    - Grados: Vértices de $X$ tienen grado $n$; vértices de $Y$ tienen grado $m$.
+        
+
+### <mark style="background: #ADCCFFA6;">🛠️ METODOLOGÍA DE RESOLUCIÓN: Bipartito</mark>
+
+1. **Descarte Rápido:** Buscar ciclos impares ($C_3, C_5$). Si existen $\to$ **No es Bipartito**.
+    
+2. **Demostración Positiva:**
+    
+    - Intentar separar los vértices en dos conjuntos $X, Y$.
+        
+    - Tomar un vértice, ponerlo en $X$. Sus vecinos obligatoriamente van a $Y$. Los vecinos de estos a $X$, y así sucesivamente.
+        
+    - Si se logra clasificar todos sin contradicciones (vecinos del mismo color), el grafo es bipartito.
+        
+
+## <mark style="background: #FFF3A3A6;">11. PLANARIDAD</mark>
+
+### Definiciones
+
+- **Grafo Planar:** Se puede dibujar en el plano sin que sus aristas se crucen.
+    
+- **Grafo Plano:** Es el dibujo ya realizado sin cruzamientos.
+    
+- **Caras (**$f$**):** Regiones conexas en que el grafo divide al plano (incluyendo la cara exterior no acotada).
+    
+- **Longitud de cara:** Longitud del paseo cerrado que la bordea.
+    
+    - $\sum \text{longitudes de caras} = 2|E|$.
+        
+
+### <mark style="background: #BBFABBA6;">Fórmula de Euler</mark>
+
+Sea $G$ un grafo plano conexo con $v$ vértices, $e$ aristas y $f$ caras:
 
 $$v - e + f = 2$$
 
-_(Si tiene_ $k$ _componentes conexas:_ $v - e + f = 1 + k$_)_
+- Si tiene $k$ componentes conexas: $v - e + f = k + 1$.
+    
+- Si es un bosque ($k$ componentes, sin ciclos, única cara externa por componente visualmente fusionada o tratada como 1 cara general en el plano infinito): $e = v - k$ o $v=e+k$. 
+    
+- <mark style="background: #BBFABBA6;">Corolario:</mark> Un grafo plano conexo tiene $f=2-v+e$ caras con $v$ (cantidad de vértices) y $e$ (cantidad de aristas).
+    
 
-### <mark style="background: #FFF3A3A6;">Restricciones de Aristas (Criterios de no planaridad)</mark>
+### <mark style="background: #BBFABBA6;">Desigualdades (Condiciones Necesarias)</mark>
 
-Si $G$ es un grafo simple planar con $v \ge 3$:
+Si $G$ es planar simple con $v \ge 3$:
 
 1. **General:** $e \le 3v - 6$.
     
-2. **Sin triángulos (ej. bipartitos):** Si $G$ no tiene ciclos de longitud 3 (no tiene subgrafos $K_3$), entonces $e \le 2v - 4$.
+2. **Sin Triángulos:** Si $G$ no tiene subgrafos isomorfos a $K_3$ (no tiene triángulos): $e \le 2v - 4$.
+    
+- _Nota:_ Si no se cumplen, $G$ NO es planar. Si se cumplen, no se sabe (hay que seguir investigando).
     
 
-### <mark style="background: #FFF3A3A6;">Teoremas de Caracterización</mark>
+### <mark style="background: #FF5582A6;">Operaciones de Modificación</mark>
 
-- **Subdivisión:** Reemplazar una arista por un camino (agregar vértices de grado 2).
+1. **Subdivisión de Arista:** Reemplazar arista $uv$ por camino $uwv$ (agrega vértice $w$ de grado 2).
     
-- **Contracción:** Fusionar dos vértices adyacentes eliminando la arista entre ellos.
-    
-- **Teorema de Kuratowski:** $G$ es planar $\iff$ no contiene una subdivisión de $K_5$ ni de $K_{3,3}$.
-    
-- **Teorema de Wagner:** $G$ es planar $\iff$ no contiene un subgrafo que se contraiga a $K_5$ o $K_{3,3}$.
-    
-
-#### <mark style="background: #BBFABBA6;">📘 Estrategia de Resolución: Determinar Planaridad</mark>
-
-1. **Dibujo:** Intentar redibujar sin cruces.
-    
-2. **Desigualdad de aristas:** Verificar $e \le 3v - 6$. Si no se cumple $\to$ **NO** es planar. (Si se cumple, puede o no serlo).
-    
-3. **Kuratowski/Wagner (Definitivo):**
-    
-    - Si hay muchos vértices de grado $\ge 4$, busca una estructura de $K_5$.
+    - Si $G$ es planar, su subdivisión también.
         
-    - Si hay muchos vértices de grado $\ge 3$ y es bipartito (o casi), busca $K_{3,3}$.
+    - Si $G$ NO es planar, ninguna subdivisión lo será.
         
-    - Usa borrado de aristas/vértices o contracción para aislar estas estructuras ("Menores prohibidos").
+2. **Contracción de Arista:** Eliminar arista $uv$ y fusionar $u$ y $v$ en un nuevo vértice $v_e$.
+    
+    - Si $G$ es planar, toda contracción lo es.
+        
+    - Si una contracción da un grafo NO planar, entonces $G$ NO era planar.
+        
+
+### <mark style="background: #BBFABBA6;">Teoremas Principales (Kuratowski y Wagner)</mark>
+
+Un grafo es planar sí y solo sí NO contiene:
+
+1. **Teorema de Kuratowski:** Una **subdivisión** de $K_5$ o $K_{3,3}$.
+    
+2. **Teorema de Wagner:** Un subgrafo **contraíble** a $K_5$ o $K_{3,3}$.
+    
+
+_Nota:_ $K_5$ (Completo de 5 vértices) y $K_{3,3}$ (Bipartito completo 3 vs 3) son los grafos no planares "básicos".
+
+### <mark style="background: #ADCCFFA6;">🛠️ METODOLOGÍA DE RESOLUCIÓN: Planaridad</mark>
+
+#### ¿Es Planar?
+
+- **Sí:** Dibujarlo sin cruces.
+    
+- **No:** Usar Kuratowski o Wagner.
+    
+
+#### <mark style="background: #ADCCFFA6;">Método de Subdivisión (Kuratowski)</mark>
+
+1. **Buscar candidato a** $K_{3,3}$**:**
+    
+    - El grafo debe tener al menos 6 vértices de grado $\ge 3$.
+        
+    - Identificar dos conjuntos de 3 vértices ($X, Y$) que actúen como la bipartición.
+        
+    - Verificar si existen caminos disjuntos (que actúan como aristas subdivididas) conectando cada vértice de $X$ con cada vértice de $Y$.
+        
+2. **Buscar candidato a** $K_5$**:**
+    
+    - El grafo debe tener al menos 5 vértices de grado $\ge 4$.
+        
+    - Verificar conexiones entre ellos (directas o caminos) para formar la estructura de $K_5$.
+        
+
+#### <mark style="background: #ADCCFFA6;">Método de Contracción (Wagner)</mark>
+
+1. Observar el grafo y buscar "reducirlo" contrayendo aristas.
+    
+2. Si al contraer aristas obtenemos explícitamente un $K_5$ o un $K_{3,3}$, entonces el original **no** es planar.
+    
+    - _Ejemplo clásico:_ El grafo de Petersen se contrae a $K_5$, por ende no es planar.
