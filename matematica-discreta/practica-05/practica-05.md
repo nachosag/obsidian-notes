@@ -440,24 +440,184 @@ Si utilizamos la propiedad mencionada, tenemos que $\alpha(\bar{G})=\omega(G)=m+
 ### Ejercicio 8
 ![[Pasted image 20251202023634.png]]
 
-Sea $G$ un grafo simple y 2-regular.
-Se quiere probar $G$ es un ciclo.
+El enunciado es falso.
+**Contraejemplo:** Sea $G$ la unión disjunta de dos ciclos $C_{3}$ tal que $G=C_{3}\cup C_{3}$. Se cumple que, $G$ es simple y 2-regular, pero no es un ciclo porque es disconexo.
 
-Tomemos $v\in V(G)$ y $w_{1},w_{2}\in V(G)$.
-Por hipótesis de grafo 2-regular, sabemos que $v$ tiene dos vecinos, es decir, $v\sim w_{1}$ y $v\sim w_{2}$.
-Esto implica que el primer vecino de $w_{1}$ y $w_{2}$ es $v$.
-Por hipótesis de grafo simple, necesariamente los vértices $w_{1}$ o $w_{2}$ no pueden tener una segunda arista que los conecte con $v$ ni tampoco una segunda arista que los conecte consigo mismos.
+El enunciado es verdadero si se agrega como hipótesis que $G$ sea conexo.
 
-Luego, podemos identificar dos casos:
-1. Si $w_{1}\sim w_{2}$ entonces tenemos un ciclo, ya que $v\sim w_{1},v\sim w_{2},w_{1}\sim w_{2}$.
-2. Si $w_{1}\not\sim w_{2}$ entonces $w_{1}$ tiene como segundo vecino a un $w_{3}$ y $w_{2}$ tiene como segundo vecino a un $w_{4}$.
-   Esto implica que el primer vecino de $w_{3}$ y $w_{4}$ es $w_{1}$ o $w_{2}$ respectivamente.
-   Por hipótesis de grafo simple, necesariamente los vértices $w_{3}$ o $w_{4}$ no pueden tener una segunda arista que los conecte con $w_{1}$ o $w_{2}$ respectivamente ni tampoco una segunda arista que los conecte consigo mismos.
-   
-<mark style="background: #FF5582A6;">COMPLETAR</mark>
+### Ejercicio 9
+![[Pasted image 20251202183354.png]]
+
+Por el Teorema del Apretón de manos tenemos que
+$$
+\frac{2\cdot{8}+7\cdot{2}}{2} = \frac{16+14}{2} = \frac{30}{2} = 15 = |E(G)|
+$$
+
+### Ejercicio 10
+![[Pasted image 20251202183559.png]]
+
+Sabemos que:
+- $G$ es conexo.
+- $|E(G)|=8$.
+- Hay 6 vértices de grado 1.
+- Al menos un vértice tiene grado 3.
+- No hay vértices de grado 5.
+- Hay un vértice de grado par.
+
+Se pide conocer la cantidad de vértices de $G$, es decir, $|(VG)|$, y los grados de los vértices restantes.
+
+Una de las posibles representaciones de $G$ es la siguiente
+![[Pasted image 20251202191409.png]]
+Notemos que cumple con las condiciones pedidas.
+
+Luego, $|V(G)|=9$ y cuenta con:
+- 6 vértices de grado 1
+- 2 vértices de grado 3.
+- 1 vértice de grado 4.
+
+### Ejercicio 11
+![[Pasted image 20251202191649.png]]
+
+a) El grafo de Petersen
+
+b) No es posible armar un grafo 3-regular con exactamente 17 vértices.
+Por el Teorema de Apretón de manos, tenemos que
+$$
+|E(G)|=\frac{17\cdot{3}}{2}=\frac{51}{2}=25,5
+$$
+Como $|E(G)|$ tiene que ser un número entero positivo, el resultado es absurdo.
+
+c) Sea $G$ un grafo tal que $|V(G)|=2n+1$ con $n\in \mathbb{N}$ y que es 3-regular.
+Por el Teorema del Apretón de Manos tenemos que
+$$
+\sum_{v\in V(G)} d(v) = 2|E(G)|
+$$
+La suma de los grados es simplemente la cantidad de vértices multiplicada por el grado regular, es decir:
+$$
+(2n+1)\cdot{3} = 2|E(G)|
+$$
+$$
+6n+3 = 2|E(G)|
+$$
+$$
+\frac{6n+3}{2} = |E(G)|
+$$
+$$
+3n+\frac{3}{2} = |E(G)|
+$$
+Notemos que sumar un número racional con un número da como resultado un número racional.
+Pero, $|E(G)|\in \mathbb{N}$. Esto ocurre porque tenemos una cantidad de vértices impares. 
+
+d) No existe un grafo 3-regular para cualquier cantidad par de vértices.
+Esto es porque con 1 vértice, no se puede armar un grafo 3-regular.
+Con 2 o 3 vértices, tampoco.
+Solo es posible armar grafos 3-regulares, a partir de los 4 vértices.
+
+### Ejercicio 12
+![[Pasted image 20251202201726.png]]
+ 
+a) 
+Sea $n=|V(G)|$.
+Por el Teorema del Apretón de Manos tenemos que
+$$
+\sum_{v\in V(G)} d(v) = 2|E(G)|
+$$
+La suma de los grados es simplemente la cantidad de vértices multiplicada por el grado regular, es decir:
+$$
+k\cdot n = 2|E(G)|
+$$
+$$
+\frac{kn}{2} = |E(G)|
+$$
+
+b)
+Por el Teorema del Apretón de Manos tenemos que
+$$
+\sum_{v\in V(G)} d(v) = 2|E(G)|
+$$
+La suma de los grados es simplemente la cantidad de vértices multiplicada por el grado regular, es decir:
+$$
+k\cdot |V(G)| = 2|E(G)|
+$$
+Notemos que $2|E(G)|$ es un número par y que $k$ puede tomar cualquier valor en los $\mathbb{N}$.
+Podemos identificar dos casos:
+- Si $k$ es impar entonces $|V(G)|$ debe tomar valores $\in \mathbb{Z}>0$ tales que sea par. Sin esta condición, la igualdad no se cumple. 
+- Si $k$ es par entonces el valor que tome $|V(G)|\in \mathbb{Z}>0$ es irrelevante. La igualdad se cumple siempre.
+
+c)
+Por el Teorema del Apretón de Manos tenemos que
+$$
+\sum_{v\in V(G)} d(v) = 2|E(G)|
+$$
+La suma de los grados es simplemente la cantidad de vértices multiplicada por el grado regular, es decir:
+$$
+k\cdot |V(G)| = 2|E(G)|
+$$
+Notemos que $2|E(G)|$ es un número par y que $k$ o $|V(G)|$ pueden tomar cualquier valor en los $\mathbb{Z}>0$.
+Como el producto entre un número par y un número entero positivo, da como resultado resultado un número entero positivo par, la igualdad se cumple si alguno de los dos términos es par.
+
+Como $2|E(G)|$ es par, entonces $k\cdot |V(G)|$ es par. Esto implica lógicamente que $k$ es par o $|V(G)|$ es par.
+
+### Ejercicio 13
+![[Pasted image 20251202204851.png]]
+
+a)
+Un grafo simple pertenece a $S$ si
+$$
+\sum_{v\in V(G)} d(v) = 2|E(G)| \leftrightarrow 2n(2n-1) = 2|E(G)|
+$$
+Un grafo completo $K_{m}$ tiene $m$ vértices y cada vértice tiene grado $m-1$. Por lo tanto, podemos identificar $m=2n$ y $2n-1=\text{El grado de cada vértice}$.
+
+Consideremos al grafo $K_{2n}$ que tiene $2n$ vértices y cada vértice tiene grado $2n-1$.
+Por el Teorema del Apretón de Manos tenemos que
+$$
+\sum_{v\in V(K_{2n})} d(v) = 2|E(G)| \leftrightarrow 2n\cdot(2n-1) = 2|E(G)|
+$$
+Notemos que llegamos a la misma expresión. Por lo tanto, el grafo $K_{2n}\in S$.
+
+b)
+Un grafo simple pertenece a $S$ si
+$$
+\sum_{v\in V(G)} d(v) = 2|E(G)| \leftrightarrow 2n(2n-1) = 2|E(G)|
+$$
+Un grafo completo $K_{m}$ tiene $m$ vértices y cada vértice tiene grado $m-1$. Por lo tanto, podemos identificar $m=2n$ y $2n-1=\text{El grado de cada vértice}$.
+
+Consideremos al grafo $K_{2n-1}$ que tiene $2n-1$ vértices y que cada vértice tiene grado $2n-2$.
+Por el Teorema del Apretón de Manos tenemos que
+$$
+\sum_{v\in V(K_{2n-1})} d(v) = (2n-1)(2n-2) = 2|E(G)|
+$$
+Comparemos los factores:
+- Suma requerida: $2n(2n-1)$.
+- Suma máxima: $(2n-1)(2n-2)$.
+Ambos factores comparten el término $2n-1$. Como $2n-2<2n$, el producto total es menor, por lo tanto, nunca alcanzará la suma requerida.
+
+c) 
+Sea $G$ un grafo en $S$, por el inciso a) y b) sabemos que la cantidad mínima de vértices de $G$ es $2n$.
+
+El mayor grado de un vértice en un grafo simple con $2n$ vértices es $2n-1$.
+Si todos los vértices de $G$ tuvieran grado $2n-1$, entonces
+Por el Teorema del Apretón de Manos tenemos que
+$$
+\sum_{v\in V(G)} d(v) = 2n(2n-1) = 2|E(G)|
+$$
+Comparemos los factores:
+- Suma requerida: $2n(2n-1)$.
+- Suma máxima: $2n(2n-1)$.
+Ambos factores son iguales, esto nos confirma que $G$ pertenece a $S$. A su vez, cada vértice de $G$ tiene grado $2n-1$ y esto implica que $G$ es isomorfo a un $K_{2n}$,
+
+> **Otra resolución posible**: Supongamos que $G$ no es completo. Entonces, existe al menos un vértice en $G$ tal que $d(v)<2n-1$. Esto implicaría que $\sum d(v)<2n(2n-1)$ y por lo tanto, $G\not\in S$. 
+> Por lo tanto, $\forall v\in V(G),d(v)=2n-1$ para que $G\in S$ y que $G\simeq K_{2n}$,
+
+---
+
+Repaso conceptual:
+1. **Inciso a):** Confirmamos que el grafo completo $K_{2n}$ pertenece a $S$. Al tener $2n$ vértices, cada uno con grado máximo $2n-1$, la suma de grados es exactamente $2n(2n-1)$.
+2. **Inciso b):** Demostramos que es imposible pertenecer a $S$ con menos vértices. Incluso el grafo con más aristas posible, con $2n-1$ vértices, tiene una suma de grados $(2n-1)(2n-2)$, la cual es estrictamente menor que el objetivo $2n(2n-1)$.
+3. **Inciso c):** Probamos que si $G$ tiene el mínimo de vértices $2n$, debe ser completo. Para alcanzar la suma requerida, $2n(2n-1)$, con solo $2n$ vértices, **todos** deben tener el grado máximo, $2n-1$. Si faltara una sola arista, la suma bajaría y $G$ no estaría en $S$.
 
 ### Ejercicio 14
-¿Puede el grafo $\bar{C_{6}}$ (el complemento del ciclo de seis vértices) descomponerse en copias de $P_{4}$?
+![[Pasted image 20251202223445.png]]
 
 Se desea conocer si el grafo $\bar{C_{6}}$ se puede descomponer en copias de $P_{4}$.
 Conocemos los siguientes datos:
@@ -465,9 +625,9 @@ Conocemos los siguientes datos:
 - $|V(\bar{C_{6}})|=|V(C_{6})|=6$.
 - $C_{6}$ es isomorfo a un grafo 2-regular, es decir, un grafo donde todos los vértices $v\in V(C_{6})$ tienen grado 2, por lo tanto, $d_{C_{6}}(v)=2$.
 - Tenemos que $d_{\bar{C_{6}}}(v)=|V(C_{6})|-d_{C_{6}}(v)-1\leftrightarrow 6-2-1 \leftrightarrow 3$.
-- Aplicando el Teorema de Apretón de Manos $\sum_{v\in V(G)}d(v)=2|E(G)|$.
-	- $|E(C_{6})|=\frac{\sum_{v\in V(C_{6})}d(v)}{2}=\frac{6\cdot{2}}{2}=6$.
-	- $|E(\bar{C_{6}})|=\frac{\sum_{v\in V(\bar{C_{6}})}d(v)}{2}=\frac{6\cdot{3}}{2}=9$.
+- Aplicando el Teorema de Apretón de Manos $\huge{\sum_{v\in V(G)}d(v)=2|E(G)|}$.
+	- $\Huge{|E(C_{6})|=\frac{\sum_{v\in V(C_{6})}d(v)}{2}=\frac{6\cdot{2}}{2}=6}$.
+	- $\Huge{|E(\bar{C_{6}})|=\frac{\sum_{v\in V(\bar{C_{6}})}d(v)}{2}=\frac{6\cdot{3}}{2}=9}$.
 
 Ahora analicemos la estructura de un $P_{4}$:
 - Es un grafo simple.
@@ -497,6 +657,28 @@ De esta manera, la contribución total de cada vértice es $2+1+0=3$.
 Como las condiciones se cumplen, la descomposición es posible. Ahora debemos construir la descomposición explícita.
 ![[Pasted image 20251025210912.png]]
 Dado que se cumplen las condiciones necesarias y brindamos una descomposición explícita, podemos concluir que $\bar{C_{6}}$ se puede descomponer en copias de $P_{4}$.
+
+### Ejercicio 15
+![[Pasted image 20251202224200.png]]
+
+Sea un grafo $G$ con 7 o más vértices de grado impar.
+Nos piden demostrar que $G$ no se puede descomponer en 3 caminos.
+
+Sea $I(G)$ el conjunto de vértices de grado impar de $G$. Por hipótesis, $|I(G)|\geq{7}$, pero como la cantidad de vértices de grado impar debe ser par, podemos ajustarlo a $|I(G)|\geq{8}$.
+
+Si $G$ se descompone en tres caminos, notados como $P_{1},P_{2},P_{3}$, entonces para todo $v$ se debe cumplir que 
+$$
+\Huge{d_{G}(v) = d_{P_{1}}(v) + d_{P_{2}}(v) + d_{P_{3}}(v)}
+$$
+Sea $v\in I(G)$. Para que $d_{G}(v)$ sea impar, $v$ debe ser extremo en 1 o 3 caminos. Por lo tanto, $v$ aparece al menos una vez en la unión de multiconjuntos de los extremos.
+
+Un camino está compuesto por 2 vértices extremos de grado impar. Si tenemos 3 caminos, entonces necesitamos $3\times{2}=6$ vértices de grado impar que sean los extremos de cada camino.
+
+Por lo tanto, cada $v\in I(G)$ consume al menos 1 extremo disponible.
+Llegamos al absurdo, $8\leq |I(G)|\leq{6}$. Es decir, con 6 vértices de grado impar no logran igualar los 8 vértices de grado impar de $G$. Haría falta descomponer $G$ en un cuarto camino $P_{4}$.
+
+
+
 ### Ejercicio 18
 El grafo simple $P_{4}$ es autocomplementario, es decir, el complemento de $P_{4}$ es isomorfo a $P_{4}$. 
 Demuestre que si un grafo simple $G$ de $n$ vértices es autocomplementario entonces $n$ o $n-1$ es múltiplo de 4. 
