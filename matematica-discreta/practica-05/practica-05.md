@@ -561,7 +561,7 @@ Como $2|E(G)|$ es par, entonces $k\cdot |V(G)|$ es par. Esto implica lógicament
 ### Ejercicio 13
 ![[Pasted image 20251202204851.png]]
 
-a)
+<mark style="background: #FFB8EBA6;">a)</mark>
 Un grafo simple pertenece a $S$ si
 $$
 \sum_{v\in V(G)} d(v) = 2|E(G)| \leftrightarrow 2n(2n-1) = 2|E(G)|
@@ -575,7 +575,7 @@ $$
 $$
 Notemos que llegamos a la misma expresión. Por lo tanto, el grafo $K_{2n}\in S$.
 
-b)
+<mark style="background: #FFB8EBA6;">b)</mark>
 Un grafo simple pertenece a $S$ si
 $$
 \sum_{v\in V(G)} d(v) = 2|E(G)| \leftrightarrow 2n(2n-1) = 2|E(G)|
@@ -592,7 +592,7 @@ Comparemos los factores:
 - Suma máxima: $(2n-1)(2n-2)$.
 Ambos factores comparten el término $2n-1$. Como $2n-2<2n$, el producto total es menor, por lo tanto, nunca alcanzará la suma requerida.
 
-c) 
+<mark style="background: #FFB8EBA6;">c)</mark> 
 Sea $G$ un grafo en $S$, por el inciso a) y b) sabemos que la cantidad mínima de vértices de $G$ es $2n$.
 
 El mayor grado de un vértice en un grafo simple con $2n$ vértices es $2n-1$.
@@ -677,62 +677,156 @@ Un camino está compuesto por 2 vértices extremos de grado impar. Si tenemos 3 
 Por lo tanto, cada $v\in I(G)$ consume al menos 1 extremo disponible.
 Llegamos al absurdo, $8\leq |I(G)|\leq{6}$. Es decir, con 6 vértices de grado impar no logran igualar los 8 vértices de grado impar de $G$. Haría falta descomponer $G$ en un cuarto camino $P_{4}$.
 
+### Ejercicio 16
+![[Pasted image 20251206012153.png]]
+<mark style="background: #FFB8EBA6;">a)</mark>
+Sabemos que el grafo Cubo es 3-regular, es decir, cada uno de sus vértices tiene grado 3. A su vez, sabemos que el tamaño de clique máxima es 2, esto implica que los vecinos de un vértice del grafo Cubo no son vecinos entre sí.
+Luego, la cantidad de aristas del grafo Cubo es 12 y la cantidad de aristas del grafo $K_{1,3}$ es 3.
+Por lo que podemos distribuir las 12 aristas en 4 copias de $K_{1,3}$.
 
+Sabemos que el grafo Cubo es bipartito porque no contiene ciclos de longitud impar.
+Por lo que el conjunto de vértices del grafo Cubo puede distribuirse en dos conjuntos independientes, $A,B$ tal que $V(\text{grafo cubo})=A\cup B$, donde $A=\{ A,F,H,C \}$ y $B=\{ B,D,E,G \}$.
+![[Drawing 2025-12-06 01.48.40.excalidraw]]
+
+Tomemos un vértice $v_{1}\in A$ y su vecinos correspondientes $v_{2},v_{3},v_{4}\in B$.
+Este proceso lo repetimos otras 3 veces para formar nuestras copias de $K_{1,3}$.
+
+<mark style="background: #FFB8EBA6;">b)</mark>
+Del grafo Cubo sabemos lo siguiente:
+- Es 3-regular
+- $|V(\text{Cubo})|=8$.
+- $|E(\text{Cubo})|=12$.
+
+Del grafo $P_{4}$ sabemos lo siguiente:
+- Tiene 2 vértices de grado impar
+- Tiene 2 vértices de grado par
+- $|V(P_{4})|=4$.
+- $|E(P_{4})|=3$.
+
+Las 12 aristas del grafo Cubo pueden distribuirse en 4 copias de $P_{4}$ ya que $3\times{4}=12$.
+Luego, el grafo Cubo tiene 8 vértices de grado impar y 4 de $P_{4}$ también tienen 8 vértices de grado impar.
+
+Como las dos condiciones se cumplen, la descomposición es posible.
+![[Drawing 2025-12-06 01.56.08.excalidraw]]
+
+<mark style="background: #FFB8EBA6;">c)</mark>
+Del grafo Cubo sabemos lo siguiente:
+- Es 3-regular
+- $|V(\text{Cubo})|=8$.
+- $|E(\text{Cubo})|=12$.
+
+Del complemento del grafo Cubo sabemos lo siguiente:
+- $|V(\overline{\text{Cubo}})|=8$.
+- $|E(\overline{\text{Cubo}})|=C(8,2)-12=28-12=16$.
+- $\forall v\in V(\overline{\text{Cubo}}),\quad d_{\overline{\text{Cubo}}}(v)=8-1-3=4\implies \overline{\text{Cubo}}$ es un grafo 4-regular.
+
+### Ejercicio 17
+![[Pasted image 20251206012502.png]]
+Del grafo de Petersen sabemos lo siguiente:
+- Tiene 10 vértices
+- Tiene 15 aristas
+- Es 3-regular
+- Es conexo y simple
+
+Del grafo $P_{4}$ sabemos lo siguiente:
+- Tiene 4 vértices
+- Tiene 3 aristas
+- Tiene 2 vértices de grado par y otros 2 vértices de grado impar
+- Es conexo y simple
+
+Las 15 aristas del grafo de Petersen las podemos distribuir en 5 copias de $P_{4}$.
+Las 5 copias de $P_{4}$ aportan 10 vértices de grado impar. Como el grafo de Petersen tiene 10 vértices de grado impar, la condición se satisface.
+
+Como ambas condiciones se cumplen, la descomposición es posible.
+
+Exhibimos las 5 copias de $P_{4}$:
+![[Drawing 2025-12-06 01.38.36.excalidraw]]
+
+Notemos que el grafo de Petersen tiene 3 tipos de aristas:
+- Las aristas del ciclo exterior
+- Las aristas del ciclo interior
+- Las aristas que conectan el ciclo exterior y el ciclo interior
+Además, notemos que hay 5 aristas de cada una.
+
+Por lo tanto, la clave para formar las 5 copias de $P_{4}$ es tomar una de cada tipo.
 
 ### Ejercicio 18
-El grafo simple $P_{4}$ es autocomplementario, es decir, el complemento de $P_{4}$ es isomorfo a $P_{4}$. 
-Demuestre que si un grafo simple $G$ de $n$ vértices es autocomplementario entonces $n$ o $n-1$ es múltiplo de 4. 
-Para cada $n$ tal que 4 divide a $n$ o a $n-1$, dé un ejemplo de un grafo autocomplementario de $n$ vértices. **Ayuda**: intente aprovechar la estructura que presenta $P_{4}$ para construir estos ejemplos.
+![[Pasted image 20251206012516.png]]
+Sea $G$ un grafo simple, con $n$ vértices y autocomplementario.
+Nos piden demostrar que $n$ o $n-1$ es múltiplo de $4$.
 
-Sea $G$ un grafo sabemos que:
-- $G$ es un grafo simple.
-- Tiene $n$ vértices, es decir $|V(G)|=n$ con $n\in \mathbb{N}$.
-- $G$ es autocomplementario, por lo tanto se satisface la siguiente condición $|E(G)|= \frac{n(n-1)}{4}$.
-Nos piden probar que $n=4m\quad$ o $\quad n-1=4m$, con $m\in \mathbb{N}$.
+Si $G$ es autocomplementario, entonces $|E(G)|=\frac{n(n-1)}{4}$.
+Esta propiedad se cumple con $n\geq{4}$.
 
-Analicemos la condición mencionada. Sabemos que $|E(G)|$ tiene que ser un número entero **no negativo** porque estamos trabajando con los números naturales. También sabemos que $$
-\begin{gather}
-|E(G)|=\frac{n(n-1)}{4} \\
-4|E(G)|=n(n-1)
-\end{gather}
-$$ Es decir, $n(n-1)$ debe ser múltiplo de 4. Además, $n$ y $n-1$ son números consecutivos, es decir, uno de ellos es par y el otro es impar. 
+Notemos que $n$ y $n-1$ son números consecutivos. Para que su producto sea divisible por 4, uno de los factores (el $n$ o el $n-1$) tiene que ser divisible por 4, es decir, $n$ o $n-1$ se debe poder escribir como $4k$.
 
-Si $n$ es par entonces $n-1$ resultará impar. Por lo tanto, $n$ debe ser múltiplo de 4, es decir, debe poder escribirse como $n=4m$.
-Si $n$ es impar entonces $n-1$ resultará par. Por lo tanto, $n-1$ debe ser múltiplo de 4, es decir, debe poder escribirse como $n-1=4m$.
-Queda así demostrado que si el grafo $G$ es simple, tiene $n$ vértices y es autocomplementario entonces $n$ o $n-1$ es múltiplo de 4.
+### Ejercicio 19
+![[Pasted image 20251206012536.png]]
+$T$ es conexo.
+$F,H,G$ no lo son.
 ### Ejercicio 20
-Pruebe que el complemento de un grafo simple disconexo es siempre conexo.
+![[Pasted image 20251205192603.png]]
+Sea $G$ un grafo disconexo y simple. Nos piden demostrar que su complemento es conexo.
 
-Sea $G$ un grafo simple y disconexo. Nos piden demostrar que $\overline{G}$ es siempre conexo. Es decir, debemos probar que para cada par de vértices $u,v\in V(\overline{G})$ existe un camino que los tiene por extremos. Recordemos que $\overline{G}$ está conformado por $V(G)=V(\overline{G})$ y $w\in E(\overline{G})\iff w \not\in E(G)$.
+Que $G$ sea disconexo significa que tiene 2 o más componentes conexas. 
+Tomemos dos vértices $v_{1},v_{2}\in V(G)$. En $G$ estos dos vértices pueden ser vecinos o no y por lo tanto, podemos identificar dos casos:
 
-Que $G$ sea disconexo implica que está compuesto por dos componentes conexas como mínimo. Es decir, los vértices $v$ pertenecientes a una componente conexa $\mathcal{C_{1}}$ no son adyacentes con los vértices $w$ de otra componente conexa $\mathcal{C_{2}}$.
+- **Caso 1:** Si no lo son, entonces pertenecen a componentes conexas distintas.
+  
+Si $v_{1}$ y $v_{2}$ pertenecen a componentes conexas distintas, entonces $v_{1}\not\sim v_{2}$ en $G$. Luego, por definición de complemento, $v_{1}\sim v_{2}$ en $\bar{G}$.
 
-Dividamos el problema en dos casos.
+- **Caso 2:** Si lo son, entonces pertenecen a la misma componente conexa.
 
-**Caso 1**: tomemos dos vértices pertenecientes a componentes conexas distintas. Es decir, $v\in V(\mathcal{C_{1}})$ y $u\in V(\mathcal{C_{2}})$.
-Sabemos que en $G$, $v$ y $u$ no son adyacentes porque pertenecen a componentes conexas distintas. Esto implica que en $\bar{G}$ $v$ y $u$ si lo serán, esto por definición de complemento. Es decir, en $\bar{G}$ existe un camino entre $v$ y $u$ que los tiene por extremos.
+Si $v_{1}$ y $v_{2}$ pertenecen a la misma componentes conexas, entonces existe al menos otra componente conexa en $G$ cuyo vértice $v_{3}$ cumple que $v_{3}\not\sim v_{1}$ y $v_{3}\not\sim v_{2}$.
+Luego, $v_{3}\sim v_{1}$ y $v_{3}\sim v_{2}$ en $\bar{G}$.
 
-**Caso 2**: tomemos dos vértices pertenecientes a la misma componente conexa. Es decir, $v,u\in V(\mathcal{C_{1}})$.
-Sabemos que en $G$ $u$ y $v$ son adyacentes entre sí. También sabemos que existe otra componente conexa $\mathcal{C_{2}}$ como mínimo donde un vértice $w\in \mathcal{C_{2}}$ no es adyacente tanto a $u$ como a $v$ en $G$. Esto implica que en $\bar{G}$, $u$ y $v$ no serán adyacentes pero $w$ será adyacente a $u$ y también a $v$, esto por definición de complemento. Por lo tanto, habrá un camino entre $v$ y $u$ que los tendrá por extremos.
+Como para todo par de vértices en $\bar{G}$ existe un camino que los une, el complemento es conexo.
 
-Dado que no hay otra posibilidad sobre los vértices, queda demostrado que para todo par de vértices $u,v\in V(\bar{G})$ existe un camino en dicho grafo tal que sus extremos son $u$ y $v$, por lo tanto el grafo $\bar{G}$ es conexo.
 ### Ejercicio 21
-Sea $G$ un grafo simple sin vértices aislados y que no contiene un subgrafo inducido con exactamente dos aristas. Probar que $G$ es conexo.
-
+![[Pasted image 20251205201950.png]]
 Sabemos que:
 - $G$ es simple.
 - No tiene vértices aislados.
 - No contiene un subgrafo inducido con exactamente dos aristas.
 Queremos probar que $G$ es conexo.
 
-Para eso, analicemos por el absurdo. Es decir, tomemos como ciertas las hipótesis anteriormente mencionadas y supongamos que $G$ es disconexo.
+Probemos por el absurdo, es decir, supongamos que $G$ es disconexo.
 
-Que $G$ sea disconexo implica que $G$ esté compuesto por dos componentes conexas como mínimo. Por hipótesis n°2 $G$ no tiene que tener vértices aislados por lo que cada componente conexa debe ser no trivial. Por hipótesis n°1 $G$ no puede tener bucles ni aristas múltiples, eso también se aplica para cada componente conexa de $G$ por lo que cada componente conexa no puede tener un único vértice $v$ con un bucle, sino que, cada componente conexa debe contener, como mínimo, 2 vértices que sean vecinos entre sí a través de una arista.
+Si $G$ es disconexo entonces $G$ tiene al menos 2 componentes conexas. 
+Por hipótesis, estas componentes conexas no pueden ser triviales ni contener bucles o aristas múltiples. Eso implica que cada componente conexa debe tener al menos una arista.
 
-Tomemos dos vértices $v_{1},v_{2}$ pertenecientes a una componente conexa y otros dos vértices $v_{3},v_{4}$ pertenecientes a otra componente conexa. Si armamos $T=\{ v_{1},v_{2},v_{3},v_{4} \}$ y calculamos $G[T]$ obtenemos un subgrafo inducido con exactamente dos aristas.
+Que existan al menos dos componentes conexas implica que existan al menos dos aristas.
+Si tomamos esas dos aristas y sus vértices extremos, tenemos un subgrafo inducido con exactamente dos aristas. Esto viola una de las hipótesis.
 
-**Observación**: el subgrafo inducido $G[T]$ está formado por dos copias de $P_{2}$.
+Esta contradicción proviene de suponer que $G$ es disconexo, por lo tanto, $G$ es conexo.
 
-Notemos que llegamos a una contradicción puesto que por hipótesis n°3 $G$ no contiene ningún subgrafo inducido con exactamente dos aristas.
+### Ejercicio 22
+![[Pasted image 20251205203713.png]]
 
-Esta contradicción ocurrió porque supusimos que $G$ era disconexo, por lo que acabamos de demostrar que $G$ es conexo.
+<mark style="background: #FFB8EBA6;">a)</mark>
+Sea $G$ un grafo simple y conexo.
+Queremos probar que si $|V(G)|\geq{2}$, entonces existen al menos dos vértices de $G$ con el mismo grado.
+
+Que $G$ sea conexo implica que entre cada par de vértices $v_{1},v_{2}\in V(G)$ existe un camino entre $v_{1}$ y $v_{2}$ que los tiene por extremos.
+
+Si $|V(G)|=n$ (con $n\geq{2}$) y tomamos un vértice $v\in V(G)$ tenemos que $1\leq d_{G}(v)\leq n-1$.
+
+Si consideramos a $n$ como nuestras palomas y $n-1$ como nuestros palomares, por el Principio del Palomar Generalizado podemos garantizar que al menos 2 vértices tienen el mismo grado.
+
+<mark style="background: #FFB8EBA6;">b)</mark>
+Sea $G$ un grafo simple sin vértices aislados.
+Queremos probar que existen $k$ parejas de vértices de $G$ tal que los dos vértices de cada pareja tienen el mismo grado, donde $k$ es la cantidad de componentes conexas de $G$.
+
+Si $k=1$ entonces tenemos una única componente conexa, esto implica que $G$ es conexo.
+A su vez, esto implica que existe una única pareja conformada por 2 vértices. 
+Como $G$ es conexo y simple, estos dos vértices son vecinos entre sí y además existe una única arista que los une, esto implica que cada vértice tiene grado 1.
+
+Si $k\geq{2}$ entonces tenemos al menos dos componentes conexas, esto implica que $G$ es disconexo.
+Una componente conexa tiene como mínimo 2 vértices (porque no tiene vértices aislados) y como máximo $n$ vértices.
+Tomemos un vértice $v\in V(G)$ que pertenezca a una componente conexa $C_{1}$.
+Tenemos que $1\leq d_{G}(v)\leq n-1$.
+
+Si consideramos a $n$ como nuestras "palomas" y $n-1$ como nuestros "palomares", por el Principio del Palomar Generalizado podemos garantizar al menos 1 pareja de vértices que tienen igual grado.
+
+Este mismo razonamiento por cada componente conexa de $G$. 
+Por lo tanto, tenemos que $k$ parejas de vértices con el mismo grado en $G$.
