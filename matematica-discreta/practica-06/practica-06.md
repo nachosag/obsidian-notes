@@ -113,6 +113,7 @@ Por lo tanto, alguno de los extremos de la arista $e$ es un vértice de corte.
 ### Ejercicio 6
 ![[Pasted image 20251207024332.png]]
 
+
 ### Ejercicio 19
 Sea $G$ un grafo conexo simple. Pruebe que $G$ es bipartito completo si y solo si no contiene $K_{3}$ ni $P_{4}$ como subgrafo inducido.
 
