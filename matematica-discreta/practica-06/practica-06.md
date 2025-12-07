@@ -1,3 +1,99 @@
+### Ejercicio 1
+![[Pasted image 20251206200752.png]]
+![[Drawing 2025-12-06 20.06.49.excalidraw]]
+
+<mark style="background: #FFB8EBA6;">a)</mark> Nos piden encontrar una secuencia que:
+- **Sea un paseo**: podemos repetir vértices y aristas
+- **No sea un recorrido**: tenemos que repetir aristas
+
+Una posible secuencia es $AB,BC,CD,DA,AC,CD,DB$.
+
+<mark style="background: #FFB8EBA6;">b)</mark> Nos piden encontrar una secuencia que:
+- **Sea un recorrido**: no podemos repetir aristas pero sí podemos repetir vértices.
+- **No sea cerrado**: *debemos* terminar en un lugar distinto al que empezamos.
+- **No sea un camino**: *necesitamos* repetir al menos un vértice
+
+Una posible secuencia es $AB,BC,CA,AD,DB$.
+Notemos que no tuvimos en cuenta la arista $DC$ ya que el enunciado pide un **recorrido**, no un *recorrido euleriano*.
+
+<mark style="background: #FFB8EBA6;">c)</mark> Nos piden encontrar una secuencia que:
+- **Sea un recorrido cerrado:** no repite aristas pero sus extremos coinciden.
+- **No sea un ciclo**: repite vértices
+
+Para que un **recorrido cerrado** repita un vértice intermedio (dejando de ser un ciclo), el paseo debe entrar y salir de ese vértice al menos dos veces. Esto requiere que dicho vértice tenga al menos 4 aristas incidentes en él.
+
+Como $K_{4}$ es un grafo 3-regular, donde el grado de cada uno de sus vértices es impar, no es posible encontrar un vértice con 4 aristas incidentes en él.
+
+Luego, el recorrido pedido, no es posible de encontrar.
+
+### Ejercicio 2
+![[Pasted image 20251206212407.png]]
+El grafo de la izquierda lo llamaremos $G$, al del medio $H$ y al de la derecha $J$.
+
+Sea el grafo $G$ con:
+- $V(G)=\{ A,B,C,D \}$.
+- $\text{Vértices de corte}=\{ B,C \}$.
+- $\text{Arista de corte}=\{ e_{1},e_{2},e_{3} \}$.
+
+Sea el grafo $H$ con:
+- $V(H)=\{ v_{1},v_{2},v_{3},v_{4},v_{5} \}$.
+- $\text{Vértices de corte}=\emptyset$.
+- $\text{Arista de corte}=\{ v_{5}v_{4} \}$.
+
+Sea el grafo $J$ con:
+- $V(J)=\{ v_{1},v_{2},v_{3},v_{4},v_{5},v_{6},v_{7} \}$.
+- $\text{Vértices de corte}=\{ v_{1},v_{3} \}$.
+- $\text{Aristas de corte}=\{ e_{4},e_{6} \}$.
+
+### Ejercicio 3
+![[Pasted image 20251206214208.png]]
+
+Sea $G$ un grafo
+- Conexo
+- $|V(G)|\geq{3}$.
+- Con un vértice $v\in V(G)$ tal que $d(v)=1$.
+
+Nos piden probar que el único vecino de $v$ es un vértice de corte.
+
+Que $G$ sea conexo implica que:
+- Existe una única componente conexa no trivial.
+- Para cada par de vértices $v_{1},v_{2}\in V(G)$ existe un camino en $G$ que los tiene por extremos.
+
+Luego, el vecino de $v$, notemoslo $w_{1}$, a su vez tiene que ser vecino de un tercer vértice $w_{2}$.
+Es decir, $d(w_{1})\geq{2}$ y $d(w_{2})\geq{1}$.
+
+Si $w_{1}$ es un vértice de corte entonces su eliminación debería incrementar la cantidad de  componentes conexas.
+
+Si tomamos el subgrafo inducido $G-w_{1}$, el vértice $v$ sería un vértice aislado pues perdió a su único vecino. Esto implica que se generó una nueva componente conexa y por lo tanto, $w_{1}$ es un vértice de corte.
+
+### Ejercicio 4
+![[Pasted image 20251206220825.png]]
+Sea $G$ un grafo conexo y $e$ una arista de corte. Nos piden probar que $G-e$ tiene exactamente dos componentes conexas.
+
+Que $G$ sea conexo implica que existe una única componente conexa no trivial y además que entre cada par de vértices de $G$ existe un camino que los tiene por extremos.
+
+Que $e$ sea una arista de corte implica que no pertenece a ningún ciclo. 
+
+Tomemos dos vértices $v,w\in V(G)$, sabemos que existe un camino $P_{1}$ que los tiene por extremos, luego $P_{1}$ puede utilizar la arista $e$ o bien no.
+
+Si no la utiliza, entonces utiliza otra arista $e_{2}$.
+Si la utiliza, entonces $P_{1}$ no existe el subgrafo inducido $G-e$ porque la única forma de conectar a $v$ y $w$ era a través de $e$.
+
+Luego, si el camino $P_{1}$ no existe en $G-e$ entonces $G-e$ es disconexo y por lo tanto existen al menos dos componentes conexas. 
+
+Tomemos un vértice $u\in V(G)$ y sea $e=\{ v',w' \}$ donde $v',w'\in V(G)$.
+Sabemos que existe un camino $P_{2}$ que tiene por extremos a $u$ y a $w'$ en $G$.
+
+Si $P_{2}$ usa la arista $e$ entonces en $G-e$ existe un camino entre $u$ y $v'$ pero no entre $u$ y $w'$. Es decir, $u$ y $v'$ pertenecen a la misma componente conexa y $w'$ a otra distinta en $G-e$.
+
+Si $P_{2}$ no usa la arista $e$ entonces en $G-e$ existe un camino entre $u$ y $w'$ pero no entre $u$ y $v'$. Es decir, $u$ y $w'$ pertenecen a la misma componente conexa y $v'$ a otra distinta en $G-e$.
+
+Luego, $G-e$ tiene exactamente dos componentes conexas.
+
+### Ejercicio 5
+![[Pasted image 20251207001638.png]]
+
+
 ### Ejercicio 19
 Sea $G$ un grafo conexo simple. Pruebe que $G$ es bipartito completo si y solo si no contiene $K_{3}$ ni $P_{4}$ como subgrafo inducido.
 
