@@ -93,6 +93,25 @@ Luego, $G-e$ tiene exactamente dos componentes conexas.
 ### Ejercicio 5
 ![[Pasted image 20251207001638.png]]
 
+Sea $G$ un grafo conexo, con al menos tres vértices y una arista de corte $e$. Nos piden probar que alguno de los extremos de $e$ es un vértice de corte.
+
+Que $G$ sea conexo implica que
+- Existe una única componente conexa
+- Entre cada par de vértices de $G$ existe un camino que los tiene por extremos
+
+Si la arista $e$ es de corte entonces sabemos que 
+- $e$ tiene por extremos a un vértice $v_{1}$ y $v_{2}$, es decir $e=v_{1},v_{2}$.
+- $e$ no pertenece a un ciclo
+- $G-e$ tiene exactamente dos componentes conexas
+
+Si $G-e$ tiene exactamente dos componentes conexas, entonces $v_{1}$ pertenece a la componente conexa $C_{1}$ y $v_{2}$ pertenece a la componente conexa $C_{2}$. Luego, recordemos que existe un tercer vértice $v_{3}$ que en $G-e$ puede pertenecer tanto a $C_{1}$ como a $C_{2}$ pero no a ambas simultáneamente.
+
+Sin perdida de generalidad, supongamos que $v_{3}\in C_{1}$. En $G$, todo camino entre $v_{3}$ y $v_{2}$ debe pasar la arista $e$. En $G-v_{1}$ la arista $e$ deja de existir, por lo que $v_{3}$ y $v_{2}$ quedan desconectados. Por lo tanto, $v_{1}$ es un vértice de corte.
+
+Por lo tanto, alguno de los extremos de la arista $e$ es un vértice de corte.
+
+### Ejercicio 6
+![[Pasted image 20251207024332.png]]
 
 ### Ejercicio 19
 Sea $G$ un grafo conexo simple. Pruebe que $G$ es bipartito completo si y solo si no contiene $K_{3}$ ni $P_{4}$ como subgrafo inducido.
