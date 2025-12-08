@@ -112,7 +112,75 @@ Por lo tanto, alguno de los extremos de la arista $e$ es un vértice de corte.
 
 ### Ejercicio 6
 ![[Pasted image 20251207024332.png]]
+Sea $G$ un grafo bipartito k-regular con $k\geq{2}$. Nos piden probar que $G$ no tiene aristas de corte.
 
+Sabemos que $G$ no tiene ciclos de longitud impar, tiene por lo menos $k+1$ vértices, cada vértice tiene grado $k$ y $V(G)$ se particiona en $A$ y $B$.
+
+Neguemos la tesis, es decir, supongamos que existe una arista de corte $e$ en $G$ tal que $e$ tiene por extremos a dos vértices distintos $v_{1}$ y $v_{2}$.
+
+Consideremos al grafo $G-e$ tal que $v_{1}$ y $v_{2}$ pertenecen a dos componentes conexas distintas $C_{1}$ y $C_{2}$, por lo que $G-e$ es disconexo.
+
+Luego, $d_{G-e}(v_{1})=k-1$. Esto implica que la componente conexa $C_{1}$ tiene al menos $k$ vértices. El resto de vértices de $C_{1}$ tiene grado $k$. Luego, $G-e$ es bipartito.
+
+Por propiedad de los grafos bipartitos tenemos que la suma de los grados de los vértices de uno de los conjuntos es **igual** a la suma de los grados de los vértices del otro conjunto.
+
+Consideremos la bipartición $X,Y$ de los vértices de $C_{1}$ y supongamos, sin perdida de generalidad, que $v_{1}\in X$.
+Tenemos que $\Huge{\sum_{v\in X}d(v)\neq\sum_{v\in Y}d(v)}$ porque $v_{1}$ tiene un grado distinto al de los otros vértices de $X$. Mientras que el grado de los vértices de $Y$ es $k$.
+
+Notemos que la propiedad de los grafos bipartitos antes mencionada no se cumple, es decir, $G-e$ no es bipartito como inicialmente pensábamos. Esta contradicción de una de las hipótesis proviene de suponer que $G$ tiene una arista de corte $e$. 
+
+Por lo tanto, $G$ no tiene aristas de corte.
+
+### Ejercicio 7
+![[Pasted image 20251207221423.png]]
+Se quiere probar que todo grafo $G$ con una arista de corte $e$ tiene al menos dos vértices de grado impar.
+
+Intentemos razonar por el absurdo, es decir, supongamos que $G$ no tiene vértices de grado impar, es decir, tiene vértices de grado par; eso lo convierte en un grafo par. Por Corolario sabemos todo grafo par entonces se lo puede descomponer en $k$ ciclos.
+
+Es decir, se deben cumplir las siguientes condiciones
+- Las aristas de $G$ se deben repartir en $k$ copias de $C_{n}$.
+- $\forall v\in V(G),$ se debe cumplir que $d_{G}(v) = d_{C_{1}}(v) + d_{C_{2}}(v) + \dots + d_{C_{k}}(v)$.
+
+Notemos que esto contradice la hipótesis de que $e$ es una arista de corte ya que una arista de corte no pertenece a ningún ciclo.
+
+La contradicción proviene de suponer que $G$ no tiene vértices de grado impar. Por lo tanto, $G$ debe tener al menos un vértice de grado impar y como los vértices de grado impar siempre vienen de a pares, concluimos que $G$ tiene al menos dos vértices de grado impar.
+
+### Ejercicio 8
+![[Pasted image 20251208014241.png]]
+
+### Ejercicio 9
+![[Pasted image 20251208014301.png]]
+
+### Ejercicio 10
+![[Pasted image 20251208014317.png]]
+
+### Ejercicio 11
+![[Pasted image 20251208014337.png]]
+
+### Ejercicio 12
+![[Pasted image 20251208014359.png]]
+
+### Ejercicio 13
+![[Pasted image 20251208014417.png]]
+
+### Ejercicio 14
+![[Pasted image 20251208014452.png]]
+
+### Ejercicio 15
+![[Pasted image 20251208014509.png]]
+
+### Ejercicio 16
+![[Pasted image 20251208014527.png]]
+
+### Ejercicio 17
+![[Pasted image 20251208014620.png]]
+![[Pasted image 20251208014629.png]]
+
+### Ejercicio 18
+![[Pasted image 20251208014641.png]]
+
+### Ejercicio 19
+![[Pasted image 20251208014652.png]]
 
 ### Ejercicio 19
 Sea $G$ un grafo conexo simple. Pruebe que $G$ es bipartito completo si y solo si no contiene $K_{3}$ ni $P_{4}$ como subgrafo inducido.
