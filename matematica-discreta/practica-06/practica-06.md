@@ -148,17 +148,104 @@ La contradicción proviene de suponer que $G$ no tiene vértices de grado impar.
 ### Ejercicio 8
 ![[Pasted image 20251208014241.png]]
 
+Nos piden demostrar que los grafos $K_{3,3}$ y dos copias de $C_{3}$ no contienen circuitos eulerianos. 
+Recordemos que un circuito euleriano es un recorrido euleriano cerrado, es decir, el vértice de salida y llegada debe ser el mismo y a su vez debe pasar por **todas** las aristas del grafo una única vez.
+
+Notemos que dos copias de $C_{3}$ no admiten un circuito euleriano ya que al tener dos componentes conexas no triviales no existe un camino entre un vértice de una de las componentes y otro vértice de la componente restante. 
+
+Luego, el grafo $K_{3,3}$ no admite un circuito euleriano ya que todos sus vértices tienen grado impar.
+
 ### Ejercicio 9
 ![[Pasted image 20251208014301.png]]
+
+Nombremos a los vértices del grafo como:
+![[Drawing 2025-12-08 22.31.15.excalidraw]]
+
+Por Teorema de Euler sabemos que un grafo es euleriano si y solo si todos los vértices del grafo tienen grado par.
+
+Notemos que el vértice $A$ tiene grado impar, específicamente grado 3. Por lo tanto, el grafo no admite un circuito euleriano.
+
+---
+
+Si queremos que el grafo admita un circuito euleriano, todos los vértices del grafo deben tener grado par.
+
+Notemos que agregar una arista entre dos vértices existentes (digamos $u$ y $v$), aumenta el grado de los vértices $u$ y $v$ en 1.
+- Si un vértice tiene grado impar, sumarle 1 lo vuelve par.
+- Si un vértice tiene grado par, sumarle 1 lo vuelve impar.
+
+Listemos aquellos vértices que tienen grado impar.
+- $d(A)=d(E)=3$.
+- $d(B)=d(D)=d(F)=d(H)=5$.
+- $d(I)=d(Q)=5$.
+
+Notemos que tenemos 8 vértices de grado impar ($X=\{ A,E,B,D,F,H,I,Q \}$)
+Si tomamos cualquier par de vértices $v_{1},v_{2}$ del conjunto $X$ tal que $v_{1}\neq v_{2}$ y agregamos la arista $e=v_{1}v_{2}$, los vértices $v_{1}$ y $v_{2}$ tendrán grado par pero los 6 vértices restantes de $X$ seguirán teniendo grado impar. 
+
+Esto impide que el grafo admita un circuito euleriano.
 
 ### Ejercicio 10
 ![[Pasted image 20251208014317.png]]
 
+Se pide indicar y justificar si las siguientes afirmaciones son verdaderas o falsas.
+
+<mark style="background: #FFB8EBA6;">a)</mark> Un grafo euleriano bipartito tiene un número par de aristas
+
+Sea $G$ un grafo euleriano y bipartito, con una bipartición de vértices $V(G)=X\cup Y$.
+
+1. Como $G$ es euleriano, sabemos por el Teorema de Euler que el grado $d(v)$ de cada vértice $v\in V(G)$ debe ser un número par.
+2. En un grafo bipartito, la suma de los grados de los vértices en un conjunto de la partición (por ejemplo, $X$) es igual al número total de aristas, $|E(G)|$. Esto se expresa como:
+$$\sum_{v\in X} d(v) = |E(G)|$$
+3. Consideremos la suma $\sum_{v\in X} d(v)$. Como cada grado $d(v)$ en esa suma es un número par (por el paso 1), y la suma de cualquier cantidad de números pares siempre da como resultado un número par, se deduce que la suma total es par.
+
+Por lo tanto, el número de aristas $|E(G)|$ es **par** y la afirmación es **verdadera**.
+
+<mark style="background: #FFB8EBA6;">b)</mark> Un grafo euleriano simple con un número par de vértices tiene un número par de aristas
+
+La afirmación es **falsa**. Contraejemplo:
+![[Drawing 2025-12-08 23.50.37.excalidraw]]
+
+Notemos que $G$ es un grafo simple de 6 (par) vértices porque no tiene bucles ni aristas múltiples y también es euleriano porque existe un recorrido euleriano cerrado. Pero no se cumple que la cantidad de aristas es par.
+
+---
+
+La intuición nos dice que la afirmación es falsa porque la paridad de $|V(G)|$ no restringe necesariamente la paridad de $|E(G)|$ en grafos eulerianos. Por el Teorema del Apretón de Manos, sabemos que $\sum_{v\in V(G)}d(v)=2|E(G)|$. Como el grafo es euleriano, cada $d(v)$ es par ($2k$). Dividiendo por 2, obtenemos $|E(G)|=\sum k$. Nada obliga a que esa suma sea par solo por $|V(G)|$ lo sea.
+
 ### Ejercicio 11
 ![[Pasted image 20251208014337.png]]
 
+<mark style="background: #FFB8EBA6;">Revisar el enunciado</mark>
+
 ### Ejercicio 12
 ![[Pasted image 20251208014359.png]]
+
+Nos piden indicar cuál de las siguientes afirmaciones son verdaderas y cuales son falsas. Luego, justificar la respuesta.
+
+<mark style="background: #FFB8EBA6;">a)</mark> Todo grafo disconexo tiene un vértice aislado. **Falso**, el grafo $G$ compuesto por dos copias de $C_{3}$ es disconexo pero no tiene un vértice aislado.
+
+<mark style="background: #FFB8EBA6;">b)</mark> Un grafo es conexo *si y solo si* existe un camino desde un vértice a todos los demás vértices. **Verdadero**.
+
+Tenemos que demostrar las siguientes dos afirmaciones:
+- Si un grafo es conexo entonces existe un camino desde un vértice a todos los demás.
+- Si existe un camino desde un vértice a todos los demás entonces el grafo es conexo.
+
+Demostremos la primer afirmación.
+Sea $u$ un **vértice arbitrario** en $V(G)$.
+Sea $v$ cualquier otro vértice en $V(G)$, con $v \neq u$.
+Dado que $G$ es conexo, la definición establece que para todo par de vértices $u, v \in V(G)$, debe existir un **camino** en $G$ que los tenga por extremos.
+Por lo tanto, existe un camino entre nuestro vértice elegido $u$ y cualquier otro vértice $v$.
+
+Demostremos la segunda afirmación.
+Sabemos que los grafos conexos tienen una única componente conexa. Por lo tanto, analicemos la afirmación por el absurdo, es decir, supongamos que $G$ es disconexo. Esto implica que $G$ tiene como mínimo 2 componentes conexas $C_{1}$ y $C_{2}$.
+
+Luego, tenemos que $\forall v\in V(C_{1})$ y $\forall w\in V(C_{2})$ no existe una arista $e=vw$, esto implica que no existe un camino entre $v$ y $w$, contradiciendo así la hipótesis.
+
+Esta contradicción proviene de suponer que $G$ es disconexo, por lo tanto, $G$ es conexo.
+
+<mark style="background: #FFB8EBA6;">c)</mark> Las aristas de un recorrido cerrado admiten una descomposición en aristas de ciclos. 
+
+
+
+
 
 ### Ejercicio 13
 ![[Pasted image 20251208014417.png]]

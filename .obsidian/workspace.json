@@ -20,6 +20,18 @@
               "icon": "lucide-file",
               "title": "practica-06"
             }
+          },
+          {
+            "id": "c027b9e7a2eb22e2",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Excalidraw/Drawing 2025-12-08 23.50.37.excalidraw.md"
+              },
+              "icon": "excalidraw-icon",
+              "title": "Drawing 2025-12-08 23.50.37.excalidraw"
+            }
           }
         ]
       },
@@ -27,18 +39,6 @@
         "id": "f6ffd4724ff0cee3",
         "type": "tabs",
         "children": [
-          {
-            "id": "32e3dd721ab65c5e",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "matematica-discreta/practica-06/practica-06-MD.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "practica-06-MD"
-            }
-          },
           {
             "id": "0cf57f98c7ff1f00",
             "type": "leaf",
@@ -49,6 +49,18 @@
               },
               "icon": "lucide-file-text",
               "title": "grafos"
+            }
+          },
+          {
+            "id": "3cc3c6153232dc22",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "matematica-discreta/practica-06/practica-06-MD.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "practica-06-MD"
             }
           },
           {
@@ -227,9 +239,15 @@
   },
   "active": "faa2f6b3e6e06af8",
   "lastOpenFiles": [
-    "matematica-discreta/practica-06/anexos/Pasted image 20251208014652.png",
-    "matematica-discreta/practica-06/practica-06-MD.pdf",
+    "Excalidraw/Drawing 2025-12-08 23.50.37.excalidraw.md",
     "matematica-discreta/practica-06/practica-06.md",
+    "matematica-discreta/resumenes/grafos.pdf",
+    "matematica-discreta/practica-06/practica-06-MD.pdf",
+    "matematica-discreta/resumenes/Untitled.md",
+    "Excalidraw/Drawing 2025-12-08 22.31.15.excalidraw.md",
+    "Excalidraw/anexos/Pasted Image 20251208223218_716.png",
+    "Excalidraw/anexos",
+    "matematica-discreta/practica-06/anexos/Pasted image 20251208014652.png",
     "matematica-discreta/practica-06/anexos/Pasted image 20251208014641.png",
     "matematica-discreta/practica-06/anexos/Pasted image 20251208014629.png",
     "matematica-discreta/practica-06/anexos/Pasted image 20251208014620.png",
@@ -238,10 +256,6 @@
     "matematica-discreta/practica-06/anexos/Pasted image 20251208014509.png",
     "matematica-discreta/practica-06/anexos/Pasted image 20251208014452.png",
     "matematica-discreta/practica-06/anexos/Pasted image 20251208014417.png",
-    "matematica-discreta/practica-06/anexos/Pasted image 20251208014359.png",
-    "matematica-discreta/practica-06/anexos/Pasted image 20251208014339.png",
-    "matematica-discreta/resumenes/grafos.pdf",
-    "matematica-discreta/resumenes/Untitled.md",
     "matematica-discreta/resumenes/grafos.md",
     "README.md",
     "matematica-discreta/resumenes/combinatoria.md",
@@ -266,13 +280,10 @@
     "algebra-lineal/parciales/segundo-parcial/resoluciones/complejos.md",
     "algebra-lineal/parciales/segundo-parcial/parcial-06-AL.md",
     "algebra-lineal/parciales/segundo-parcial/resoluciones/parcial-06.md",
-    "algebra-lineal/parciales/segundo-parcial/parcial-06-AL.pdf",
     "algebra-lineal/parciales/segundo-parcial/resoluciones/ejercicios.md",
     "algebra-lineal/parciales/segundo-parcial/resoluciones/matrices.md",
     "algebra-lineal/parciales/segundo-parcial/resoluciones/transformaciones.md",
     "algebra-lineal/parciales/segundo-parcial/resoluciones/coordenadas.md",
-    "algebra-lineal/parciales/segundo-parcial/resumenes/propiedades.md",
-    "algebra-lineal/parciales/segundo-parcial/resumenes/utils.md",
     "algebra-lineal/parciales/primer-parcial/Untitled.canvas",
     "Untitled.canvas"
   ]
