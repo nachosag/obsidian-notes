@@ -243,18 +243,100 @@ Esta contradicción proviene de suponer que $G$ es disconexo, por lo tanto, $G$ 
 
 <mark style="background: #FFB8EBA6;">c)</mark> Las aristas de un recorrido cerrado admiten una descomposición en aristas de ciclos. 
 
+Sea $G$ un grafo con un recorrido cerrado.
+Se quiere saber si las aristas de $G$ admiten una descomposición en aristas de ciclos.
 
+Consideremos el subgrafo $H$ formado por las aristas de ese recorrido cerrado.
+Sabemos que al entrar a un vértice mediante una arista debemos poder salir de él mediante otra arista distinta. Esto implica que cualquier vértice $v\in V(H)$ cumple que $d(v)=2k$ con $k\in \mathbb{Z_{\geq{0}}}$, es decir, $H$ es un grafo par.
 
+Por Corolario de Descomposición tenemos que "Si un grafo es par entonces se puede descomponer totalmente en ciclos disjuntos en aristas".
 
+Por lo tanto, la afirmación es **verdadera**.
+
+<mark style="background: #FFB8EBA6;">d)</mark> Si un recorrido que no es cerrado puede extenderse a un recorrido más largo, entonces sus extremos tienen grado impar.
+
+La afirmación es **falsa**. Consideremos el siguiente contraejemplo:
+
+Sea $G$ el siguiente grafo:
+![[Drawing 2025-12-09 22.38.41.excalidraw]]
+Tomemos el siguiente recorrido cerrado $v_{1}\to v_{2}$.
+Notemos que puede extenderse a $v_{1}\to v_{2}\to v_{3}$ pero $v_{2}$ no tiene grado impar.
+
+Luego, la capacidad de extender un recorrido depende de la existencia de aristas incidentes no utilizadas en ese vértice, no de que su grado total sea impar.
 
 ### Ejercicio 13
 ![[Pasted image 20251208014417.png]]
 
+<mark style="background: #FFB8EBA6;">a)</mark> 
+
+Sea $G$ un grafo euleriano simple que contiene un vértice universal. Nos piden probar que $G$ tiene una cantidad impar de vértices.
+
+Notemos al vértice universal como $v$. 
+Si $G$ es simple entonces el vértice $v$ no puede ser adyacente consigo mismo.
+Si $v$ es adyacente a todos los demás vértices entonces $d(v)=|V(G)|-1$.
+
+Por Teorema de Euler sabemos que un grafo es euleriano si y solo si el grado de todos sus vértices es par.
+
+Por lo que $d(v)$ es par si y solo si $|V(G)|-1$ es par. Esto solo es posible si $|V(G)|$ es impar.
+
+<mark style="background: #FFB8EBA6;">b)</mark>
+
+Sea $G$ un grafo euleriano simple con 5 vértices tal que uno de esos vértices es universal.
+Nos piden probar que $G$ es isomorfo a uno de los siguientes grafos.
+
+- El grafo moño
+- El grafo completo $K_{5}$.
+- El grafo $F$ con $V(F)=\{ a,b,c,d,e \}$ y $E(F)=\{ ab,ac,ad,ae,cb,cd,ce \}$.
+
+Llamemos $u$ al vértice universal. Como $|V(G)|=5$, $u$ se conecta con los otros 4. Por lo tanto, $d(u)=4$.
+
+Como $G$ es euleriano, todos sus vértices tienen grado par. En un grafo simple y euleriano de 5 vértices, el grado máximo posible que puede tomar un vértice distinto de $u$ es 2 o 4.
+Un vértice no puede tener grado 0 ya que existe al menos un vértice universal.
+
+Analicemos los 4 vértices restantes.
+1. Todos pueden tener grado 4
+2. Todos pueden tener grado 2
+3. Pueden haber 3 de grado 4 y 1 de grado 2
+4. Pueden haber 2 de grado 4 y 2 de grado 2
+5. Pueden haber 1 de grado 4 y 3 de grado 2
+
+Los casos 1, 2 y 5 son geométricamente posibles.
+En el caso 1 $G$ es isomorfo al grafo $K_{5}$.
+En el caso 2 $G$ es isomorfo al grafo moño.
+En el caso 5 $G$ es isomorfo al grafo $F$.
+
 ### Ejercicio 14
 ![[Pasted image 20251208014452.png]]
 
+Sea $G$ un grafo par. Nos piden probar que $G$ no tiene aristas de corte.
+
+Supongamos que $G$ tiene una arista de corte $e$.
+
+Por Corolario de Descomposición sabemos que los grafos pares se pueden descomponer en $k$ ciclos.
+
+Luego, $e$ debe pertenecer a uno de esos $k$ ciclos. Esto contradice la caracterización de las aristas de corte, que asegura que no pertenecen a ciclos.
+
+Esta contradicción proviene de suponer que $G$ tiene una arista de corte. Por lo tanto, $G$ no tiene arista de corte.
+
 ### Ejercicio 15
 ![[Pasted image 20251208014509.png]]
+
+Sea $G$ un grafo sin bucles tal que todos sus vértices tienen grado al menos 3.
+Se pide probar que $G$ tiene un ciclo con una cantidad par de aristas.
+**Ayuda:** considere un camino maximal en $G$.
+
+Sea $P=x_{0},x_{1},\dots,x_{k}$ un camino maximal. Como $d(x_{0})\geq{3}$, $x_{0}$ está conectado a otros dos vértices del camino, digamos $x_{i}$ y $x_{j}$ con $1<i<j$. 
+
+*Aclaración:* $1<i<j$ significa que $x_{i}$ aparece después de $x_{1}$ y que $x_{j}$ aparece después de $x_{i}$.
+
+Si $x_{0}$ tuviese un vecino fuera del camino, podríamos agregarlo a $P$ y extender su longitud, esto contradice que $P$ es un camino maximal. Por lo tanto, los vértices $x_{i}$ y $x_{j}$ pertenecen a $P$.
+
+- Un ciclo $C_{1}$ se forma yendo por el camino desde $x_{0}$ hasta $x_{i}$ y volviendo por la arista $x_{i}x_{0}$. La longitud de este ciclo es $i+1$.
+- Un ciclo $C_{2}$ se forma yendo por el camino desde $x_{0}$ hasta $x_{j}$ y volviendo por la arista $x_{j}x_{0}$. La longitud de este ciclo es $j+1$.
+- Un ciclo $C_{3}$ se forma yendo por el camino desde $x_{i}$ hasta $x_{j}$ y volviendo por las aristas $x_{j}x_{0},x_{0}x_{i}$. La longitud de este ciclo es $j-i+2$.
+- Un ciclo $C_{4}$ se forma yendo por el camino desde $x_{j}$ hasta $x_{i}$ y volviendo por las aristas $x_{i}x_{0},x_{0}x_{j}$. La longitud de este ciclo es $j-i+2$.
+
+Si $C_{1}$ y $C_{2}$ fueran ciclos impares, entonces $i+1$ y $j+1$ son impares. Esto solo es posible si $i$ y $j$ son pares. Si $i$ y $j$ son pares entonces $C_{3}$ y $C_{4}$ son pares porque $j-i+2$ es par.
 
 ### Ejercicio 16
 ![[Pasted image 20251208014527.png]]
