@@ -341,6 +341,47 @@ Si $C_{1}$ y $C_{2}$ fueran ciclos impares, entonces $i+1$ y $j+1$ son impares. 
 ### Ejercicio 16
 ![[Pasted image 20251208014527.png]]
 
+Debemos probar las siguientes dos implicaciones:
+1. Si un grafo tiene una única bipartición $\implies$ es conexo.
+2. Si un grafo es conexo $\implies$ tiene una única bipartición.
+
+Comencemos por la segunda implicación.
+Sea $G$ un grafo conexo. Nos piden demostrar que tiene una única bipartición.
+
+Que $G$ sea conexo implica que $G$ tiene una única componente conexa y que para todo par de vértices de $G$ existe un camino que los tiene por extremos.
+
+Definimos los conjuntos $X,Y$ tal que $V(G)=X\cup Y$ y $X\cap Y=\emptyset$.
+Tomemos un vértice arbitrario $u$ y otro cualquiera $v$ tal que $v\neq u$ y supongamos que $u\in X$.
+
+Sabemos que existe un camino $P$ en $G$ que tiene por extremos a $u$ y a $v$.
+- Caso 1: Si $P$ tiene longitud par entonces $u,v\in X$.
+- Caso 2: Si $P$ tiene longitud impar entonces $u\in X$ y $v\in Y$.
+
+Por lo tanto, sin perdida de generalidad, el conjunto $X$ está formado por aquellos vértices cuyo camino que los tiene por extremos tiene longitud par y el conjunto $Y$ está formado por aquellos vértices cuyo camino que los tiene por extremos tiene longitud impar.
+
+Comencemos con la primer implicación.
+Que $G$ tenga una única bipartición implica que $V(G)=X\cup Y$ y $X\cap Y=\emptyset$.
+
+Supongamos que $G$ no es conexo.
+Esto implicaría que $G$ tiene al menos 2 componentes conexas $C_{1},C_{2},\dots C_{k}$ tal que no existe aristas que las unan.
+
+Como $G$ es bipartito con partición $X,Y$, cada componente $C_{i}$ induce so propia bipartición local.
+- Es decir, para la componente $C_{1}$ una parte de sus vértices está en $X$ (llamémosla $X_{1}$) y la otra parte está en $Y$ (llamémosla $Y_{1}$).
+- Para las demás componentes conexas, sus vértices se reparten en $X_{\text{resto}}$ e $Y_{\text{resto}}$.
+
+Vamos a invertir la partición solamente en la componente $C_{1}$, mientras dejamos el resto del grafo tal como estaba.
+
+Definimos una nueva partición global $X',Y'$ de la siguiente manera:
+- $X'$ está formado por los vértices de $Y_{1}$ más los vértices del resto del grafo que estaban en $X$.
+- $Y'$ está formado por los vértices de $X_{1}$, más los vértices del resto del grafo que estaban en $Y$.
+
+Notemos que dentro de $C_{1}$ solo invertimos los conjuntos $X_{1}$ e $Y_{1}$, pero las aristas originales siguen uniendo un vértice de $X_{1}$ con uno de $Y_{1}$, la nueva partición sigue siendo correcta.
+Luego, en las demás componentes conexas no hicimos cambios, por lo que la partición sigue siendo válida.
+
+Esto implica que encontramos una segunda partición válida $X'$ e $Y'$. Esto contradice nuestra hipótesis de que $G$ tenía una única bipartición. Por lo tanto, nuestra suposición de que $G$ es disconexo, es falsa. En conclusión, $G$ es conexo.
+
+Como demostramos las dos implicaciones, podemos concluir que el enunciado es **verdadero**.
+
 ### Ejercicio 17
 ![[Pasted image 20251208014620.png]]
 ![[Pasted image 20251208014629.png]]
