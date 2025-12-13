@@ -241,15 +241,128 @@ Por principio multiplicativo existen $(21\cdot{6})+(15\cdot{7})=126+105=231$ for
 ### Ejercicio 16
 ![[Pasted image 20251212231409.png]]
 
+En una empresa trabajan 8 hombres y 12 mujeres.
+
+<mark style="background: #FFB8EBA6;">a) De cuántas formas se puede elegir una delegación de 5 empleados</mark>
+
+Notemos que en la empresa existen $8+12=20$ empleados en total.
+Existen $C(20,5)=15504$ formas de elegir 5 empleados de los 20 totales.
+
+<mark style="background: #FFB8EBA6;">b) De cuántas formas si debe estar formada por 2 hombres y 3 mujeres</mark>
+
+Existen $C(8,2)=28$ formas de elegir 2 de los 8 empleados hombres.
+Existen $C(12,3)=220$ formas de elegir 2 de las 12 empleadas mujeres.
+
+Por principio multiplicativo, tenemos $28\cdot{220}=6160$ formas de elegir 2 hombres y 3 mujeres que conformen la delegación.
 ### Ejercicio 17
 ![[Pasted image 20251212231423.png]]
+Un club cuenta con 60 miembros. 30 de ellos residen en Malvinas Argentinas y los restantes en San Miguel. Se desea conformar un comité con 8 miembros.
 
+<mark style="background: #FFB8EBA6;">a) De cuántas formas se puede formar el comité</mark>
+
+Existen $C(60,8)=2558620845$ formas de elegir 8 de los 60 socios para formar el comité.
+
+<mark style="background: #FFB8EBA6;">b) De cuántas formas se puede formar el comité si al menos uno de los 8 debe ser un residente de Malvinas Argentinas</mark>
+
+Calculamos la cantidad de formas de armar un comité sin integrantes de Malvinas Argentinas.
+
+Debemos elegir 8 socios residentes de San Miguel.
+Existen $C(30,8)=5852925$ formas de armar un comité sin integrantes de Malvinas Argentinas
+
+Por principio de sustracción existen $C(60,8)-C(30,8)=2552767920$ formas de armar un comité con al menos un residente de Malvinas Argentinas.
+
+<mark style="background: #FFB8EBA6;">c) De cuántas formas se puede formar el comité si al menos 3 miembros deben residir en San Miguel y al menos 3 deben residir en Malvinas Argentinas?</mark>
+
+<mark style="background: #FFB86CA6;">Caso 1: Hay 3 socios de San Miguel</mark>
+
+Si hay 3 socios de San Miguel, entonces hay 5 socios de Malvinas Argentinas.
+Existen $C(30,3)=4060$ formas de elegir 3 de los 30 socios de San Miguel.
+Existen $C(30,5)=142506$ formas de elegir 5 de los 30 socios de Malvinas Argentinas.
+
+Por principio multiplicativo, existen $4060\cdot{142506}=578574360$ formas de elegir 3 socios de San Miguel y 5 de Malvinas Argentinas.
+
+<mark style="background: #FFB86CA6;">Caso 2: Hay 4 socios de San Miguel</mark>
+
+Si hay 4 socios de San Miguel, entonces hay 4 socios de Malvinas Argentinas.
+Existen $C(30,4)=27405$ formas de elegir 4 de los 30 socios de San Miguel.
+Existen $C(30,4)=27405$ formas de elegir 4 de los 30 socios de Malvinas Argentinas.
+
+Por principio multiplicativo, existen $27405\cdot{27405}=751034025$ formas de elegir 4 socios de San Miguel y de Malvinas.
+
+<mark style="background: #FFB86CA6;">Caso 3: Hay 5 socios de San Miguel</mark>
+
+Si hay 5 socios de San Miguel, entonces hay 3 socios de Malvinas Argentinas.
+Este caso es simétrico al caso 1.
+
+Por principio multiplicativo, existen $4060\cdot{142506}=578574360$ formas de elegir 5 socios de San Miguel y 3 de Malvinas Argentinas.
+
+Por principio aditivo tenemos $578574360+578574360+751034025=1908182745$ formas de un comité con al menos 3 socios residentes de San Miguel y Malvinas Argentinas.
 ### Ejercicio 18
 ![[Pasted image 20251212231435.png]]
+Ana tiene 5 libros de Matemática, 6 libros de Informática y 7 libros de biología. Los libros son todos distintos.
 
+<mark style="background: #FFB8EBA6;">a) De cuántas formas puede ordenar los libros en un estante</mark>
+
+Ana tiene $5+6+7=18$ libros distintos.
+Puede ordenarlos en un estante de $18! =6,402373706×10¹⁵$ formas.
+
+<mark style="background: #FFB8EBA6;">b) De cuántas formas puede ordenar los libros de manera tal que los de biología estén juntos</mark>
+
+Formemos el bloque $X$ compuesto por los libros de biología, es decir, $X=\{ B_{1},B_{2},B_{3},B_{4},B_{5},B_{6},B_{7} \}$.
+Los libros del bloque $X$ pueden ordenarse internamente de $7! =5040$ formas distintas.
+
+Ahora Ana tiene 5 libros de Matemática, 6 libros de Informática y el bloque $X$. Todos los elementos son distintos entre sí.
+
+Por lo que, Ana puede ordenar estos $5+6+1=12$ elementos de $12! =479001600$ formas en el estante.
+
+Por principio multiplicativo, Ana puede ordenar estos $5+6+1=12$ elementos de $12!\cdot{7!}=2,414168064×10¹²$ formas.
+
+<mark style="background: #FFB8EBA6;">c) De cuántas formas puede ordenar los libros de manera tal que los de cada materia queden juntos</mark>
+
+Formemos el bloque $X$ compuesto por los libros de biología, es decir, $X=\{ B_{1},B_{2},B_{3},B_{4},B_{5},B_{6},B_{7} \}$. Este bloque está compuesto por elementos distintos, por lo que se pueden ordenar internamente de $7! =5040$ formas.
+Formemos el bloque $Y$ compuesto por los libros de matemática, es decir, $Y=\{ M_{1},M_{2},M_{3},M_{4},M_{5} \}$. Este bloque está compuesto por elementos distintos, por lo que se pueden ordenar internamente de $5! =120$ formas.
+Formemos el bloque $Z$ compuesto por los libros de informática, es decir, $Z=\{ I_{1},I_{2},I_{3},I_{4},I_{5},I_{6} \}$. Este bloque está compuesto por elementos distintos, por lo que se pueden ordenar internamente de $6! =720$ formas distintas.
+
+Ahora, Ana tiene tres bloques, $X,Y,Z$. Estos 3 bloques pueden ordenarse de $3! =6$ formas.
+
+Por principio multiplicativo, Ana puede ordenar sus libros de $6\cdot{5040}\cdot{120}\cdot{720}=2612736000$ formas distintas, de manera tal que los libros de cada materia están juntos.
+
+<mark style="background: #FFB8EBA6;">d) De cuántas formas puede elegir 9 libros</mark>
+
+Ana puede elegir 9 de sus 18 libros de $C(18,9)=48620$ formas distintas.
+
+<mark style="background: #FFB8EBA6;">e) De cuántas formas puede elegir 9 libros si exactamente 2 de ellos tienen que ser de matemática y exactamente 3 tienen que ser informática</mark>
+
+Podemos elegir 2 de los 5 libros de matemática de $C(5,2)=10$ formas distintas.
+Podemos elegir 3 de los 6 libros de informática de $C(6,3)=20$ formas distintas.
+Ahora estamos obligados a elegir $9-2-3=4$ libros de biología.
+Podemos elegir 4 de los 7 libros de biología de $C(7,4)=35$ formas distintas.
+
+Por principio multiplicativo, Ana puede elegir 9 de sus 18 libros de $10\cdot{20}\cdot{35}=7000$ formas distintas de manera tal que 2 de los 9 son de matemática, 3 de los 9 son de informática y los 4 restantes son de biología.
 ### Ejercicio 19
 ![[Pasted image 20251212231446.png]]
+Tenemos un tablero de ajedrez de $8\times{8}$ casillas.
 
+<mark style="background: #FFB8EBA6;">a) De cuántas formas distintas pueden ubicarse 8 torres iguales que no se amenacen entre sí</mark>
+
+Dado que hay 8 torres y 8 filas, necesariamente debe haber una torre en cada fila. Podemos modelar el problema asignando una columna a cada fila de manera secuencial:
+
+- Para la **fila 1**, disponemos de **8** columnas posibles.
+- Para la **fila 2**, disponemos de **7** columnas (cualquiera excepto la usada en la fila 1).
+- ...
+- Para la **fila 8**, disponemos de **1** columna restante.
+
+Esto equivale a contar las permutaciones de 8 elementos (las columnas) en 8 posiciones (las filas). Por lo tanto, existen $P(8,8)=8!=40.320$ formas distintas.
+
+<mark style="background: #FFB8EBA6;">b) De cuántas formas distintas pueden ubicarse 8 torres de 8 colores distintos que no se amenacen entre sí</mark>
+
+Podemos dividir la construcción en dos etapas independientes:
+
+1. **Ubicación:** Dado que debe haber exactamente una torre por fila, para la **Fila 1** tenemos 8 columnas posibles; para la **Fila 2**, 7 columnas (para no amenazar a la anterior), y así sucesivamente. Esto equivale a permutar las 8 columnas: $P(8,8)=8!$.
+
+2. **Coloración:** Una vez ubicadas las torres, tenemos 8 colores para asignar a la primera torre, 7 para la segunda, etc. Esto equivale a permutar los 8 colores: $P(8,8)=8!$.
+
+Por el **Principio Multiplicativo**, el total es $8!\cdot8! = 1625702400$.
 ### Ejercicio 20
 ![[Pasted image 20251212231738.png]]
 
