@@ -288,56 +288,499 @@ Luego, estas 7 letras se pueden ordenar de $\frac{7!}{2!}=2520$ formas.
 
 <mark style="background: #FFB8EBA6;">c) Cuántos de estos ordenamientos no tienen dos o más vocales juntas</mark>
 
-Tomamos una de las dos letras $T$ disponibles y la fijamos en la ronda.
-Las letras restantes y su cantidad de apariciones son: $2M,A,3N,T,2E,2I,O$.
-Las $2+3+1=6$ consonantes se pueden ordenar de $\frac{6!}{2!3!}=60$ formas.
+Las 7 consonantes se pueden ordenar de $\frac{7!}{2!2!3!}=210$ formas.
+Como 7 es primo, cada ronda genera exactamente 7 filas lineales distintas al rotarse (no hay simetrías internas menores). Dividimos por 7 para obtener las rondas únicas.
+$$
+\frac{210}{7}=30
+$$
+Las consonantes fijadas crean 7 espacios. Podemos elegir 6 de los 7 espacios de $C(7,6)=7$ formas. Las 6 vocales pueden ubicarse en estos 6 lugares de $\frac{6!}{2!2!}=180$ formas.
 
-Entre las 6 consonantes se forman 5 espacios intermedios y 2 espacios en los extremos, lo que da un total de 7 espacios. 
-Existen $C(7,6)=7$ formas de elegir 6 de estos 7 espacios para las 6 vocales. Las 6 vocales se pueden ordenar de $\frac{6!}{2!2!}=180$ formas.
+Por principio multiplicativo existen $30\cdot{7}\cdot{180}=37800$ formas de ordenar las letras de la palabra MANTENIMIENTO de manera tal que no hayan dos o mas vocales juntas.
 
-Por principio multiplicativo existen $60\cdot{7}\cdot{180}=75600$.
 ### Ejercicio 11
 ![[Pasted image 20251214203615.png]]
 
+Un anillo tiene grabados 10 símbolos. 5 de ellos son elegidos entre las 24 letras del alfabeto griego y los otros 5 son números enteros entre el 1 y el 100.
+
+<mark style="background: #FFB8EBA6;">a) Cuantos anillos pueden fabricarse sin que las letras y los números puedan repetirse</mark>
+
+Existen $C(24,5)=42504$ formas de elegir 5 de las 24 letras del alfabeto griego.
+Existen $C(100,5)=75287520$ formas de elegir 5 de los 100 números.
+
+Fijemos en la ronda 1 de los 5 números.
+En los 9 espacios restantes ubicamos las 5 letras y los 4 números. Estos elementos se pueden ordenar de $9! =362880$ formas.
+
+Por principio multiplicativo existen $362880\times{75287520}\times{42504}=1,16122353×10^{18}$.
+
+<mark style="background: #FFB8EBA6;">b) Cuántos anillos pueden fabricarse sin que las letras se repitan</mark>
+
+Existen $C(24,5)=42504$ formas de elegir 5 de las 24 letras del alfabeto griego.
+Existen $100^{5}=10000000000$ formas de elegir 5 de los 100 números de manera tal que puede haber números repetidos.
+
+Fijamos en la ronda 1 de las 5 letras.
+Existen $C(9,4)=126$ formas de elegir 4 de los 9 espacios disponibles para las 4 letras restantes. Estas letras pueden ordenarse de $4! =24$ formas.
+Los 5 espacios restantes son para los números.
+
+Por principio multiplicativo existen $42504\times{10000000000}\times{24}\times{126}=1,28532096×10^{18}$ formas de fabricar anillos con las condiciones pedidas.
+
+<mark style="background: #FFB8EBA6;">c) Cuántos anillos pueden fabricarse sin que las letras se repitan y que tenga los números impares juntos y los pares juntos</mark>
+
+Existen $C(24,5)=42504$ formas de elegir 5 de las 24 letras del alfabeto griego. 
+Sabemos que existen 50 números entre 1 y 100 que son pares.
+
+Podemos identificar los siguientes casos:
+- <mark style="background: #FFB86CA6;">Caso 1: 5 números son pares</mark>
+
+Podemos armar un bloque $X$ con los números pares tal que $X=\{ x_{1},x_{2},x_{3},x_{4},x_{5} \}$.
+Cada $x_{i}$ tiene $50$ opciones, por lo que los elementos del bloque $X$ tienen $50^{5}=312500000$ ordenamientos.
+
+Ahora tenemos 5 letras y el bloque $X$, un total de 6 elementos.
+Fijamos uno de los elementos en la ronda y permutamos los 5 elementos restantes. Estos se pueden ubicar en una ronda de $5! =120$ formas distintas.
+
+Por principio multiplicativo existen $42504\cdot{50^{5}}\cdot{120}=1,5939×10^{15}$ formas de armar anillos sin letras repetidas y con 5 números pares juntos.
+
+- <mark style="background: #FFB86CA6;">Caso 2: 4 números son pares</mark>
+
+Podemos armar un bloque $X$ con los números pares tal que $X=\{ x_{1},x_{2},x_{3},x_{4} \}$.
+Cada $x_{i}$ tiene $50$ opciones, por lo que los elementos del bloque $X$ tienen $50^{4}=6250000$ ordenamientos.
+El número impar restante tiene 50 opciones.
+
+Ahora tenemos 5 letras, el bloque $X$ y el número impar, un total de 7 elementos distintos.
+Fijamos uno de estos elementos en la ronda y permutamos los 6 restantes.
+Estos se pueden ubicar en una ronda de $6! =720$ formas distintas.
+
+Por principio multiplicativo existen $42504\cdot{50^{4}}\cdot{50}\cdot{720}=9,5634×10¹⁵$ formas de armar anillos sin letras repetidas y con 4 números pares juntos y un número impar.
+
+- <mark style="background: #FFB86CA6;">Caso 3: 3 números son pares</mark>
+
+Podemos armar un bloque $X$ con los números pares tal que $X=\{ x_{1},x_{2},x_{3} \}$.
+Cada $x_{i}$ tiene $50$ opciones, por lo que los elementos del bloque $X$ tienen $50^{3}=125000$ ordenamientos.
+
+Podemos armar un bloque $Y$ con los números impares tal que $Y=\{ y_{1},y_{2} \}$.
+Cada $y_{i}$ tiene 50 opciones, por lo que los elementos del bloque $Y$ tienen $50^{2}=2500$ ordenamientos.
+
+Ahora tenemos 5 letras, un bloque $X$ y otro bloque $Y$, un total de 7 elementos distintos.
+Fijamos uno de estos 7 elementos en la ronda y permutamos los 6 restantes. Esto se puede hacer de $6! =720$ formas distintas.
+
+Por principio multiplicativo existen $42504\times{50³}\times{50²}\times{720}=9,5634×10¹⁵$ formas de armar anillos sin letras repetidas y con 3 números pares juntos y 2 números impares juntos.
+
+- <mark style="background: #FFB86CA6;">Caso 4: 2 números son pares</mark>
+
+Este caso es análogo al caso 3 donde había 2 números impares
+
+- <mark style="background: #FFB86CA6;">Caso 5: 1 número es par</mark>
+
+Este caso es análogo al caso 2 donde había un único número impar.
+
+Por principio multiplicativo existen $42504\times{50}\times{50⁴}\times{720}=9,5634×10¹⁵$ formas de armar anillos sin letras repetidas y con 1 número par y 4 números impares juntos.
+
+- <mark style="background: #FFB86CA6;">Caso 6: No hay números pares.</mark>
+
+Este caso es análogo al caso 1 donde no había números impares.
+
+Por principio multiplicativo existen $42504\cdot{312500000}\cdot{120}=1,5939×10^{15}$ formas de armar anillos sin letras repetidas y con 5 números pares juntos.
+
+---
+
+Por principio aditivo tenemos que existen
+$$
+2\times\underbrace{ (42504\cdot{50^{5}}\cdot{120}) }_{ \text{Caso 1 y 6} }+2\times\underbrace{ (42504\cdot{50^{4}}\cdot{50}\cdot{720}) }_{ \text{Caso 2 y 5} }+2\times\underbrace{ (42504\cdot{50³}\cdot{50²}\cdot{720}) }_{ \text{Caso 3 y 4} }
+$$
+$$
+2\times(42504\times{50^{5}}\times{120})+2\times(42504\times{50^{5}}\times{720})+2\times(42504\times{50^{5}}\times{720})
+$$
+$$
+2\times(42504\times{50^{5}}\times{120})+4\times(42504\times{50^{5}}\times{720})
+$$
+$$
+4,14414×10¹⁶
+$$
+formas de armar anillos sin letras repetidas, con los números pares juntos y con los números impares juntos.
 ### Ejercicio 12
 ![[Pasted image 20251214203625.png]]
 
+<mark style="background: #FFB8EBA6;">a) Cuántas configuraciones distintas tiene la ruleta</mark>
+
+Tenemos una ruleta con 10 lugares disponibles para 10 premios.
+Existen $C(7,5)=21$ formas de elegir 5 de los 7 elementos del conjunto $\{ 1,2,3,4,5,6,7 \}$, donde cada número representa millones de pesos.
+Existen $4^{5}=1024$ formas de elegir 5 premios del conjunto $\{ \text{Parlante, Auriculares, Teclado, Mouse} \}$, donde los premios pueden repetirse.
+
+Tenemos 5 premios distintos en dinero y 5 premios en tecnología para ubicar en 10 lugares de la ruleta.
+
+Fijamos en la ruleta uno de los premios en dinero.
+Existen $C(9,4)=126$ formas de elegir 4 de los 9 lugares disponibles para ubicar los 4 premios seleccionado. Estos 4 premios se pueden ordenar de $4! =24$ formas distintas.
+Los 5 lugares restantes son para los 5 premios en tecnología.
+
+Por principio multiplicativo existen $21\times{4^{5}}\times{126}\times{24}=65028096$ configuraciones distintas en la ruleta.
+
+<mark style="background: #FFB8EBA6;">b) Cuántas configuraciones distintas tiene la ruleta con la condición de que los 5 premios en dinero estén separados y ordenados de menor a mayor en sentido horario</mark>
+
+Tenemos una ruleta con 10 lugares disponibles para 10 premios.
+Existen $C(7,5)=21$ formas de elegir 5 de los 7 elementos del conjunto $\{ 1,2,3,4,5,6,7 \}$, donde cada número representa millones de pesos.
+Existen $4^{5}=1024$ formas de elegir 5 premios del conjunto $\{ \text{Parlante, Auriculares, Teclado, Mouse} \}$, donde los premios pueden repetirse.
+
+Tenemos 5 premios distintos en dinero y 5 premios en tecnología para ubicar en 10 lugares de la ruleta.
+
+La única forma de ubicar en la ruleta los 5 premios distintos en dinero de forma tal que estén separados, es alternándolos. Luego, existe una única forma de ordenarlos de forma tal que estén en orden creciente y en sentido horario. Esto deja 5 posiciones intermedias bien definidas para colocar la secuencia de premios tecnológicos.
+
+Por principio multiplicativo existen $21\times{4^{5}}=21504$ formas de armar la ruleta de manera tal que los premios en dinero estén separados y ordenados de menor a mayor en sentido horario.
 ### Ejercicio 13
 ![[Pasted image 20251214203635.png]]
 
+Se tienen 50 libros distintos de matemática y 70 libros distintos de física, 120 libros en total. Se le pide a una persona que elija la cantidad de libros que quiera, por lo menos uno, con la condición de que todos sean de matemática o todos sean de física.
+
+Se quiere conocer de cuántas maneras se puede hacer esta selección.
+
+Podemos seleccionar a los libros de matemática de $2^{50}-1$ formas distintas con la condición de que haya al menos uno.
+Podemos seleccionar a los libros de física de $2^{70}-1$ formas distintas con la condición de que haya al menos uno.
+
+Por principio aditivo, existen $2^{50}-1+2^{70}-1=1,180592747×10²¹$ formas de seleccionar los libros.
 ### Ejercicio 14
 ![[Pasted image 20251214203644.png]]
+Hay un grupo con $N$ personas.
 
+<mark style="background: #FFB8EBA6;">a) Si N=5. Cuántas formas hay de elegir un subgrupo con un número impar de integrantes</mark>
+
+- <mark style="background: #FFB86CA6;">Caso 1: Hay 1 integrante</mark>
+
+Existen $C(5,1)=5$ formas de armar un subgrupo con un único integrante.
+
+- <mark style="background: #FFB86CA6;">Caso 2: Hay 3 integrantes</mark>
+
+Existen $C(5,3)=10$ formas de armar un subgrupo con tres integrantes.
+
+- <mark style="background: #FFB86CA6;">Caso 3: Hay 5 integrantes</mark>
+
+Existen $C(5,5)=1$ forma de armar un subgrupo con cinco integrantes.
+
+---
+
+Por principio aditivo, existen $5+10+1=16$ formas de armar subgrupos con una cantidad impar de integrantes
+
+<mark style="background: #FFB8EBA6;">b) Si N=6. Cuántas formas hay de elegir un subgrupo con un número impar de integrantes</mark>
+
+- <mark style="background: #FFB86CA6;">Caso 1: Hay 1 integrante</mark>
+
+Existen $C(6,1)=6$ formas de armar un subgrupo con un único integrante.
+
+- <mark style="background: #FFB86CA6;">Caso 2: Hay 3 integrantes</mark>
+
+Existen $C(6,3)=20$ formas de armar un subgrupo con tres integrantes.
+
+- <mark style="background: #FFB86CA6;">Caso 3: Hay 5 integrantes</mark>
+
+Existen $C(6,5)=6$ forma de armar un subgrupo con cinco integrantes.
+
+---
+
+Por principio aditivo, existen $6+20+6=32$ formas de armar subgrupos con una cantidad impar de integrantes.
+
+<mark style="background: #FFB8EBA6;">c) Si N es impar. Cuántas formas hay de elegir un subgrupo con un número impar de integrantes</mark>
+
+Para un conjunto con $N$ elementos, la cantidad total de subconjuntos es $2^N$, lo que se expresa como la suma de los coeficientes binomiales:
+$$\sum_{k=0}^{N}\binom{N}{k} = O + E = 2^N$$
+Donde $O$ es el número de subgrupos con una cantidad impar de integrantes ($\binom{N}{1} + \binom{N}{3} + \dots$) y $E$ es el número de subgrupos con una cantidad par de integrantes ($\binom{N}{0} + \binom{N}{2} + \dots$).
+
+Por otra parte, la suma alternada de los coeficientes binomiales es igual a cero (Teorema 4):
+$$\sum_{k=0}^{N}(-1)^{k}\binom{N}{k} = E - O = 0$$
+Dado que $N$ es impar, $E - O = 0$, lo que implica que la cantidad de subgrupos de tamaño par es igual a la cantidad de subgrupos de tamaño impar ($E = O$).
+
+Sustituyendo $E$ por $O$ en la primera ecuación:
+$$O + O = 2^N \implies 2O = 2^N$$
+Por lo tanto, el número de formas de elegir un subgrupo con un número impar de integrantes, cuando $N$ es impar, es:
+
+$$O = \frac{2^N}{2} = 2^{N-1}$$
+
+<mark style="background: #FFB8EBA6;">d) Si N es par. Cuántas formas hay de elegir un subgrupo con un número impar de integrantes</mark>
+Para un conjunto con $N$ elementos, la cantidad total de subconjuntos es $2^N$, lo que se expresa como la suma de los coeficientes binomiales:
+$$\sum_{k=0}^{N}\binom{N}{k} = O + E = 2^N$$
+Donde $O$ es el número de subgrupos de tamaño impar y $E$ es el número de subgrupos de tamaño par.
+
+Por otra parte, la suma alternada de los coeficientes binomiales es siempre igual a cero para todo $N \ge 1$ (Teorema 4):
+$$\sum_{k=0}^{N}(-1)^{k}\binom{N}{k} = E - O = 0$$
+De la identidad $E - O = 0$, se deduce que la cantidad de subgrupos de tamaño par es siempre igual a la cantidad de subgrupos de tamaño impar ($E = O$), sin importar si $N$ es par o impar.
+
+Sustituyendo $E$ por $O$ en la primera ecuación:
+$$O + O = 2^N \implies 2O = 2^N$$
+Por lo tanto, el número de formas de elegir un subgrupo con un número impar de integrantes, cuando $N$ es par, es:
+$$O = \frac{2^N}{2} = 2^{N-1}$$
 ### Ejercicio 15
 ![[Pasted image 20251214203655.png]]
+Hay 12 libros ordenados en un estante.
+Se quiere conocer de cuántas formas se pueden elegir 5 de esos libros de forma tal que la selección no incluya libros que estén uno junto al otro en el estante.
 
+De los 12 libros tomamos los 7 que están colocados de forma alternada. Nos sobran 5 libros.
+
+Entre los 7 libros hay 6 espacios intermedios y 2 espacios adicionales en los extremos, unos 8 espacios en total.
+
+Es en estos 8 espacios donde debemos colocar los 5 libros, de forma tal que los 5 libros están colocados de forma alternada. Esto solo es posible si a cada espacio se le asigna un único libro.
+
+Existen $C(8,5)=56$ formas de elegir 5 de los 8 espacios de forma tal que los 5 libros no estén uno junto al otro.
 ### Ejercicio 16
 ![[Pasted image 20251214203707.png]]
+Un preceptor de una escuela secundaria tiene en su legajero, que está ordenado alfabéticamente, las fichas personales de los 32 alumnos de uno de sus cursos. Le han pedido que seleccione a 12 alumnos de ese curso para que conformen una comisión de debate en el centro de estudiantes.
+Se quiere conocer de cuántas formas distintas puede realizar tal elección de forma tal que no elija a dos alumnos que estén consecutivos en el fichero.
 
+De los 32 alumnos tomamos a los $32-12=20$ alumnos que están posicionados de forma alternada en la planilla. Nos sobran 12 alumnos.
+
+Entre los 20 alumnos existen 19 espacios intermedios y 2 espacios adicionales en los extremos, un total de 21 espacios. Para que los 12 alumnos restantes no estén en posiciones consecutivas en el listado, a cada espacio se le debe asignar un alumno.
+
+Existen $C(21,12)=293930$ formas de seleccionar 12 de los 21 espacios para colocar a los 12 alumnos.
 ### Ejercicio 17
 ![[Pasted image 20251214203721.png]]
+Tenemos la ecuación $x_{1}+x_{2}+x_{3}+x_{4}=18$.
 
+<mark style="background: #FFB8EBA6;">a) Cuántas soluciones tiene en los enteros positivos</mark>
+
+Esto implica que cada $x_{i}$ tiene que ser igual o mayor a 1. Es decir, ninguno puede valer 0.
+
+Esto es lo mismo a calcular de cuántas formas podemos distribuir 18 elementos en 4 recipientes, de forma tal que ningún recipiente quede vacío.
+
+Esto se puede hacer de $C(18-1,4-1)=C(17,3)=680$ formas.
+
+Cantidad de soluciones en los **naturales**:
+$$
+C(m-1,k-1)
+$$
+
+<mark style="background: #FFB8EBA6;">b) Cuántas soluciones tiene en los enteros no negativos</mark>
+
+Esto implica que cada $x_{i}$ tiene que ser igual o mayor a 0. Es decir, ninguno puede tener valor negativo.
+
+Esto es lo mismo a calcular de cuántas formas podemos distribuir 18 elementos en 4 recipientes.
+
+Esto puede hacerse de $C(18+4-1,4-1)=C(21,3)=1330$ formas.
+
+Cantidad de soluciones en los **enteros no negativos**:
+$$
+C(m+k-1,k-1)
+$$
 ### Ejercicio 18
 ![[Pasted image 20251214203730.png]]
+Las fichas de póquer vienen en 8 colores diferentes y se venden a 1 peso cada una.
+Se quiere saber cuántas combinaciones de colores hay disponibles por 10 pesos.
 
+Podemos pensar el siguiente problema como la cantidad de soluciones en los enteros no negativos de la siguiente ecuación:
+$$
+x_{1}+x_{2}+x_{3}+x_{4}+x_{5}+x_{6}+x_{7}+x_{8}=10
+$$
+donde cada $x_{i}$ representan los 8 colores.
+
+Existen $C(10+8-1,8-1)=C(17,7)=19448$ formas de elegir fichas por 10 pesos.
 ### Ejercicio 19
 ![[Pasted image 20251214203739.png]]
+En una juguetería se vende una docena de bolitas por 2 pesos. Cada bolita puede tener uno de los 5 colores disponibles.
+Se quiere conocer cuántas combinaciones distintas de colores se pueden comprar por 2 pesos.
 
+Podemos modelar el problema calculando la cantidad de soluciones de la siguiente ecuación:
+$$
+x_{1}+x_{2}+x_{3}+x_{4}+x_{5}=12
+$$
+Donde cada $x_{i}$ representa los 5 colores de las bolitas. En una docena de bolitas podría pasar que no haya ninguna bolita de algún color. Por lo que buscamos la cantidad de soluciones no negativas de la ecuación.
+
+Existen $C(12+5-1,5-1)=C(16,4)=1820$ combinaciones distintas de colores.
 ### Ejercicio 20
 ![[Pasted image 20251214203747.png]]
+<mark style="background: #FFB8EBA6;">a) En cuántos de los números entre 1 y 1000000, ambos inclusive, la suma de sus dígitos es 6</mark>
 
+El número 1000000 no es una solución, por lo que podemos descartarlo.
+Todos los demás números entre 1 y 999999 pueden ser representados con 6 dígitos, incluyendo ceros a la izquierda.
+
+Esto es lo mismo a calcular la cantidad de soluciones de la siguiente ecuación:
+$$
+x_{1}+x_{2}+x_{3}+x_{4}+x_{5}+x_{6}=6
+$$
+donde $x_{6}$ representa las unidades, $x_{5}$ representa las decenas, $x_{4}$ representa las centenas, $x_{3}$ representa los miles, $x_{2}$ representa los decimos de miles y $x_{1}$ representa los cientos de miles. Donde cada $x_{i}$ puede tomar valores entre $0\leq i\leq{9}$. 
+
+Notemos que si algún $x_{i}$ fuese igual a 6, la ecuación no tendría solución. Por lo tanto, cada $x_{i}$ puede tomar valores entre $0\leq i\leq{6}$.
+
+Por lo que buscamos la cantidad de soluciones en los enteros no negativos de la ecuación.
+
+Existen $C(6+6-1,6-1)=C(11,5)=462$ soluciones en los enteros no negativos para la ecuación anterior.
+
+<mark style="background: #FFB8EBA6;">b) En cuántos de los números entre 1 y 1000000, ambos inclusive, la suma de sus dígitos es a lo sumo 6</mark>
+
+El número 1000000 es solución porque la suma de sus dígitos es 1.
+
+Consideremos los números entre 1 y 999999.
+Estos números podemos modelarlos como números de 6 dígitos $x_{1}x_{2}x_{3}x_{4}x_{5}x_{6}$ permitiendo ceros iniciales. La condición es que la suma de sus dígitos sea a lo sumo 6, es decir:
+$$
+x_{1}+x_{2}+x_{3}+x_{4}+x_{5}+x_{6}\leq{6}
+$$
+donde $0 \le x_i \le 9$ (dígitos) y $x_i \ge 0$ (números no negativos).
+
+Introducimos una variable auxiliar $y$, que debe ser un entero no negativo $y\geq{0}$. Esta variable "absorbe" la diferencia para que la suma sea exactamente 6.
+$$
+x_{1}+x_{2}+x_{3}+x_{4}+x_{5}+x_{6}+y={6}
+$$
+Esta nueva ecuación tiene 7 variables ($k=7$) y una suma total de $m=6$.
+
+La cantidad de soluciones en los enteros no negativos es $C(6+7-1,7-1)=C(12,6)=924$.
+
+El número $000000$ está incluido dentro de las 924 soluciones, por lo que debemos descartarlo. Pero debemos recordar que el número $1000000$ también es solución, por lo que debemos incluirlo. Luego, la cantidad de soluciones de la ecuación es $924$.
+
+---
+
+### La función de la variable auxiliar.
+La variable $y$ se aplica porque el teorema que usamos, que es la fórmula de combinaciones con repetición $C(m+k-1, k-1)$, solo cuenta soluciones para una **igualdad** $X=m$ (teníamos una desigualdad, por lo que no podíamos aplicar la fórmula).
+
+Al añadir $y \ge 0$, transformamos la inecuación $\sum x_i \le 6$ en una igualdad $\sum x_i + y = 6$. Esto nos permite contar de una sola vez todas las posibilidades:
+
+- Si $\sum x_i = 6$, entonces $y=0$.
+- Si $\sum x_i = 5$, entonces $y=1$.
+- ...
+- Si $\sum x_i = 0$, entonces $y=6$.
+
+$y$ es la herramienta matemática que permite usar la fórmula de la igualdad para un problema de desigualdad.
+
+El valor de $y$ (donde $y \ge 0$) es la **cantidad que falta** para que la suma de los dígitos sea exactamente 6. Es el **margen** o **holgura** que sobra.
+
+Si el número que consideramos es $000003$ (suma de dígitos 3), ¿qué valor tomaría la variable $y$ en nuestra ecuación $x_{1}+x_{2}+x_{3}+x_{4}+x_{5}+x_{6}+y=6$?
+
+Si la suma de los dígitos es 3, entonces $y$ debe tomar el valor de **3**.
+$$\underbrace{x_{1}+x_{2}+x_{3}+x_{4}+x_{5}+x_{6}}_{\text{Suma de dígitos } (3)} \quad + \quad \underbrace{y}_{\text{Margen}} \quad = \quad 6$$
+Esto confirma que $y$ es exactamente el número de unidades que le faltan a la suma real (3) para alcanzar la suma máxima permitida (6).
+
+<mark style="background: #FFB8EBA6;">c) En cuántos de los números entre 1 y 1000000, ambos inclusive, la suma de sus dígitos es al menos 6</mark>
+
+Ahora estamos buscando la cantidad de números donde la suma es al **menos 6** ($\geq{6}$).
+Recordemos que la cantidad total de números en el rango $[1, 1.000.000]$ es $1.000.000$.
+
+La idea es:
+
+$$\text{Total}(\text{Suma} \ge 6) = \text{Total de números en el rango} - \text{Total}(\text{Suma} < 6)$$
+$$
+\text{Total}(\text{Suma} \ge 6) = 1.000.000 - \text{Total}(\text{Suma} < 6)
+$$
+La condición que debemos modelar para los números de 6 dígitos es que la suma de los dígitos sea a lo sumo 5.
+
+Ahora, tenemos que modelar la nueva inecuación para los números de 6 dígitos ($x_1$ a $x_6$):
+$$x_1 + x_2 + x_3 + x_4 + x_5 + x_6 \le 5$$
+Agregamos la variable auxiliar $y\geq{0}$ para obtener una igualdad.
+$$
+x_{1}+x_{2}+x_{3}+x_{4}+x_{5}+x_{6}+y=5
+$$
+La cantidad de soluciones de esta ecuación es $C(5+7-1,7-1)=C(11,6)=462$. Dentro de estas soluciones está el número $000000$, que no es solución, por lo que debemos excluirlo. Luego, el número $1.000.000$ es solución y debemos contarlo.
+
+Reemplazando en la expresión original tenemos que existen $1.000.000-462=999538$ números entre 1 y 1.000.000 tal que la suma de sus dígitos es al menos 6.
 ### Ejercicio 21
 ![[Pasted image 20251214203756.png]]
 
 ### Ejercicio 22
 ![[Pasted image 20251214203806.png]]
+Se quiere sabe cuántas soluciones en los naturales mayores que 7 tiene la ecuación
+$$
+x_{1}+x_{2}+x_{3}+x_{4}=45
+$$
+Notemos que cada $x_{i}\geq{8}$.
 
+Hagamos el siguiente cambio de variable:
+- $x_{1}'=x_{1}-8$.
+- $x_{2}'=x_{2}-8$.
+- $x_{3}'=x_{3}-8$.
+- $x_{4}'=x_{4}-8$.
+
+Notemos que las nuevas variables $x_{i}'$ son **enteros no negativos**. Sustituyendo en la ecuación original tenemos:
+$$
+x_{1}'+x_{2}'+x_{3}'+x_{4}'=45-(8\cdot{4})
+$$
+$$
+x_{1}'+x_{2}'+x_{3}'+x_{4}'=13
+$$
+El problema se transformó a contar las soluciones en los enteros **no negativos** de la nueva ecuación.
+
+Esta nueva ecuación tiene $C(13+4-1,4-1)=C(16,3)=560$ soluciones.
 ### Ejercicio 23
 ![[Pasted image 20251214203814.png]]
+Hallar la cantidad de soluciones en los enteros no negativos de la siguiente ecuación:
+$$
+x_{1}+x_{2}+x_{3}+x_{4}+x_{5}=50
+$$
+<mark style="background: #FFB8EBA6;">a) Tal que x5>12</mark>
 
+Aplicamos el siguiente cambio de variable:
+- $y_{5}=x_{5}-13$.
+Sustituimos en la ecuación original.
+$$
+x_{1}+x_{2}+x_{3}+x_{4}+y_{5}=50-13
+$$
+$$
+x_{1}+x_{2}+x_{3}+x_{4}+y_{5}=37
+$$
+Ahora el problema se transformó en buscar la cantidad de soluciones en los enteros no negativos de la nueva ecuación.
+
+La nueva ecuación tiene $C(37+5-1,5-1)=C(41,4)=101270$ soluciones en los enteros no negativos.
+
+<mark style="background: #FFB8EBA6;">b) Tal que x4>=7 y x5>12</mark>
+
+Aplicamos el siguiente cambio de variable:
+- $y_{5}=x_{5}-13$.
+- $y_{4}=x_{4}-7$.
+Sustituimos en la ecuación original.
+$$
+x_{1}+x_{2}+x_{3}+y_{4}+y_{5}=50-13-7
+$$
+$$
+x_{1}+x_{2}+x_{3}+y_{4}+y_{5}=30
+$$
+Ahora el problema se transformó en buscar la cantidad de soluciones en los enteros no negativos de la nueva ecuación.
+
+La nueva ecuación tiene $C(30+5-1,5-1)=C(34,4)=46376$ soluciones en los enteros no negativos.
 ### Ejercicio 24
 ![[Pasted image 20251214203823.png]]
+Se quiere conocer la cantidad de soluciones en los enteros positivos de la siguiente inecuación:
+$$
+7\leq x_{1}+x_{2}+x_{3}<9
+$$
+Donde además, $x_{1}\geq{4}$.
 
+Como estamos en los enteros positivos, $x_{1},x_{2},x_{3}\geq{1}$, es decir, no pueden valer 0.
+Luego, podemos afinar la cota máxima a $\leq{8}$, por lo que la inecuación quedaría:
+$$
+7\leq x_{1}+x_{2}+x_{3}\leq{8}
+$$
+Notemos que $x_{1},x_{2},x_{3}$ no pueden ser $\geq{9}$ porque si no, la inecuación no tendría solución.
+
+Podemos identificar dos casos:
+- Caso 1: $x_{1}+x_{2}+x_{3}=7$.
+- Caso 2: $x_{1}+x_{2}+x_{3}=8$.
+
+Donde en ambos casos se debe cumplir que $x_{1}\geq{4},x_{2},x_{3}\geq{1}$.
+
+<mark style="background: #FFB86CA6;">Resolvamos el caso 1</mark>
+
+Apliquemos el siguiente cambio de variable:
+- $y_{1}=x_{1}-4$.
+- $y_{2}=x_{2}-1$.
+- $y_{3}=x_{3}-1$.
+Sustituyamos en la ecuación.
+$$
+y_{1}+y_{2}+y_{3}=7-4-1-1
+$$
+$$
+y_{1}+y_{2}+y_{3}=1
+$$
+El problema se transformó en calcular la cantidad de soluciones enteras no negativas de la nueva ecuación.
+
+Existen $C(1+3-1,3-1)=C(3,2)=3$ soluciones en los enteros no negativos para la nueva ecuación.
+
+<mark style="background: #FFB86CA6;">Resolvamos el caso 2</mark>
+Apliquemos el siguiente cambio de variable:
+- $y_{1}=x_{1}-4$.
+- $y_{2}=x_{2}-1$.
+- $y_{3}=x_{3}-1$.
+Sustituyamos en la ecuación.
+$$
+y_{1}+y_{2}+y_{3}=8-4-1-1
+$$
+$$
+y_{1}+y_{2}+y_{3}=2
+$$
+El problema se transformó en calcular la cantidad de soluciones enteras no negativas de la nueva ecuación.
+
+Existen $C(2+3-1,3-1)=C(4,2)=6$ soluciones en los enteros no negativos para la nueva ecuación.
+
+Por principio aditivo existen $6+3=9$ soluciones para la inecuación $7\leq x_{1}+x_{2}+x_{3}<9$.
 ### Ejercicio 25
 ![[Pasted image 20251214203834.png]]
 
