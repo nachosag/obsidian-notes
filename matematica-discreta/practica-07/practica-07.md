@@ -90,7 +90,6 @@ donde $k$ representa la cantidad de componentes conexas, tenemos:
 $$
 |E(T)| = 109-7 = 102
 $$
-
 ### Ejercicio 9
 ![[Pasted image 20251211193008.png]]
 Sea $T$ un árbol con un vértice de grado 5. Nos piden demostrar que $T$ tiene al menos 5 hojas.
@@ -110,16 +109,31 @@ Dentro de $C_i$, una de esas hojas podría ser el vértice $v_i$ (que se conecta
 Como $w$ no está conectado a $v$, su grado en $T$ es idéntico a su grado en $C_i$. Es decir, $d_T(w) = d_{C_i}(w) = 1$. Por lo tanto, $w$ es una hoja en $T$.
 
 Conclusión: Cada una de las 5 componentes conexas aporta, al menos, una hoja al grafo original $T$. Por lo tanto, $T$ tiene al menos 5 hojas.
-
 ### Ejercicio 10
 ![[Pasted image 20251211193022.png]]
-
+El grafo tiene 17 vértices.
+El grafo tiene:
+- 2 vértices de grado 3.
+- 2 vértices de grado 2.
+- 6 vértices de grado 5.
+- 7 vértices de grado 4.
+Por el Teorema del Apretón de Manos, el grafo tiene $2\cdot{3}+2\cdot{2}+6\cdot{5}+7\cdot{4}=\frac{68}{2}=34$ aristas.
+Por la fórmula de Euler tenemos que existen $v-e+f=2 \leftrightarrow 17-34+f=2 \leftrightarrow f=2+34-17 \leftrightarrow f=19$ caras.
+Si contamos a mano también podemos llegar a encontrar 18 caras internas y 1 cara externa.
+Verifiquemos utilizando la fórmula de Euler:
+$$
+v-e+f=2 \leftrightarrow 17-34+19=2 \leftrightarrow 2=2
+$$
 ### Ejercicio 11
 ![[Pasted image 20251211193038.png]]
-
+Usando la Fórmula de Euler tenemos que existen $v-e+f=2\leftrightarrow 6-10+f=2 \leftrightarrow f=2-6+10 \leftrightarrow f=6$ caras para cualquier grafo conexo con 6 vértices y 10 aristas.
 ### Ejercicio 12
 ![[Pasted image 20251211193049.png]]
-
+Sumemos los grados de los vértices para obtener la cantidad de aristas de $G$.
+$$
+\frac{2\cdot{3}+3\cdot{3}+4\cdot{2}+5}{2}=\frac{28}{2}=14=|E(G)|
+$$
+Por la Fórmula de Euler existen $v-e+f=2\leftrightarrow{9}-14+f=2\leftrightarrow f=2-9+14\leftrightarrow f=7$ caras para cualquier grafo conexo con 9 vértices y 14 aristas.
 ### Ejercicio 13
 ![[Pasted image 20251211193057.png]]
 
