@@ -783,13 +783,183 @@ Existen $C(2+3-1,3-1)=C(4,2)=6$ soluciones en los enteros no negativos para la n
 Por principio aditivo existen $6+3=9$ soluciones para la inecuación $7\leq x_{1}+x_{2}+x_{3}<9$.
 ### Ejercicio 25
 ![[Pasted image 20251214203834.png]]
+En un negocio se venden cajas de cartas, cada caja tiene 30 cartas elegidas entre 7 tipos distintos con al menos 2 del tipo 1, al menos 3 del tipo 2, al menos 3 del tipo 3 y más de 5 del tipo 7. 
+Se quiere conocer cuántas cajas distintas se pueden armar.
+Nota: No importa el orden de las cartas en cada caja.
 
+Podemos modelar el problema con la siguiente ecuación:
+$$
+x_{1}+x_{2}+x_{3}+x_{4}+x_{5}+x_{6}+x_{7}=30
+$$
+Con las siguientes restricciones:
+- $x_{1}\geq{2}$.
+- $x_{2}\geq{3}$.
+- $x_{3}\geq{3}$.
+- $x_{7}\geq{6}$.
+donde cada $x_{i}$ representa la cantidad de cartas de cada tipo.
+
+Hacemos el siguiente cambio de variable:
+- $y_{1}=x_{1}-2$.
+- $y_{2}=x_{2}-3$.
+- $y_{3}=x_{3}-3$.
+- $y_{7}=x_{7}-6$.
+
+Sustituimos las nuevas variables en la ecuación:
+$$
+y_{1}+y_{2}+y_{3}+x_{4}+x_{5}+x_{6}+y_{7}=30-2-3-3-6
+$$
+$$
+y_{1}+y_{2}+y_{3}+x_{4}+x_{5}+x_{6}+y_{7}=16
+$$
+El problema se transformó en contar la cantidad de soluciones no negativas de la nueva ecuación.
+
+La nueva ecuación tiene $C(16+7-1,7-1)=C(22,6)=74613$ soluciones.
 ### Ejercicio 26
 ![[Pasted image 20251214203842.png]]
+Una empresa vende bolsas que contienen 500 piezas de igual diseño cuya finalidad es el uso en juegos de armado (tipo lego). Cada pieza puede tener uno de entre 7 colores distintos. Suponiendo que de cada color debe haber al menos 50, pero de color rojo debe haber como mínimo 75, de colo azul más de 60 y de color negro exactamente 70.
+Cuántos tipos de bolsas distintas puede fabricar la empresa?
+Nota: Dos bolsas se consideran distintas si difieren en la cantidad de fichas de alguno de los colores.
 
+Podemos modelas el problema con la siguiente ecuación:
+$$
+x_{1}+x_{2}+x_{3}+x_{4}+x_{5}+x_{6}+x_{7}=500
+$$
+Con las siguientes restricciones:
+- $x_{1},x_{2},x_{3},x_4,x_{5},x_{6},x_{7}\geq{50}$.
+- $x_{1}\geq{75}$.
+- $x_{2}\geq{61}$.
+- $x_{3}={70}$.
+
+Realizamos el siguiente cambio de variables:
+- $y_{1}=x_{1}-75$.
+- $y_{2}=x_{2}-61$.
+- $y_{3}=x_{3}-70$.
+- $y_{4}=x_{4}-50$.
+- $y_{5}=x_{5}-50$.
+- $y_{6}=x_{6}-50$.
+- $y_{7}=x_{7}-50$.
+
+Sustituimos en la ecuación:
+$$
+y_{1}+y_{2}+y_{3}+y_{4}+y_{5}+y_{6}=500-75-61-70-(50\cdot{4})
+$$
+$$
+y_{1}+y_{2}+y_{3}+y_{4}+y_{5}+y_{6}=94
+$$
+El problema se transformó en contar la cantidad de soluciones de la nueva ecuación.
+
+La nueva ecuación tiene $C(94+6-1,6-1)=C(99,5)=71523144$ soluciones.
 ### Ejercicio 27
 ![[Pasted image 20251214203851.png]]
+Se tienen 25 libros para repartir en 3 filas. Suponiendo que la primera pila debe tener más de 7 libros, la segunda al menos 5 y la tercera como mínimo 7.
+
+<mark style="background: #FFB8EBA6;">a) Suponiendo que los libros son todos iguales, de cuántas formas distintas se pueden distribuir los libros en las tres pilas?</mark>
+
+Este problema se puede modelar planteando la siguiente ecuación:
+$$
+x_{1}+x_{2}+x_{3}=25
+$$
+Con las siguientes restricciones:
+- $x_{1}\geq{8}$.
+- $x_{2}\geq{5}$.
+- $x_{3}\geq{7}$.
+
+Donde cada $x_{i}$ representa la cantidad de libros en cada pila.
+
+Realizamos el siguiente cambio de variable:
+- $y_{1}=x_{1}-8$.
+- $y_{2}=x_{2}-5$.
+- $y_{3}=x_{3}-7$.
+
+Sustituimos las variables en la ecuación.
+$$
+y_{1}+y_{2}+y_{3}=25-8-5-7
+$$
+$$
+y_{1}+y_{2}+y_{3}=5
+$$
+El problema se transformó en contar la cantidad de soluciones de la nueva ecuación.
+
+La nueva ecuación tiene $C(5+3-1,3-1)=C(7,2)=21$ soluciones.
+
+<mark style="background: #FFB8EBA6;">b) Suponiendo que los libros son todos distintos, de cuántas formas distintas se pueden distribuir los libros en las tres pilas?</mark>
+
+### Opción 1: Argumento Conceptual (La más elegante)
+
+Esta forma evita la manipulación algebraica enfocándose en la naturaleza del problema.
+
+> "Sabemos por el inciso **a)** que existen **21** formas de dimensionar las pilas (definir los valores de $x_1, x_2, x_3$) respetando las restricciones.
+> 
+> Una vez definidos los tamaños de las pilas, imaginemos que ponemos las tres pilas una encima de otra formando una sola columna de 25 libros. Como los libros son **distintos**, cualquier permutación de los 25 libros es un ordenamiento válido.
+> 
+> Por lo tanto, para cada una de las 21 configuraciones de tamaños, existen **$25!$** formas de ordenar los libros.
+> 
+> **Total:** $21 \times 25!$"
+
+---
+
+### Opción 2: Argumento de "Lugares" (Directo)
+
+Esta opción se centra en que, al fijar los tamaños, solo estamos creando "casilleros" distintos.
+
+> Del inciso **a)** sabemos que hay **21** distribuciones posibles para la _cantidad_ de libros en cada pila ($x_1, x_2, x_3$).
+> 
+> Para cualquiera de estas distribuciones, tenemos un total de $x_1 + x_2 + x_3 = 25$ posiciones distintas (lugares) en las pilas. Dado que los libros son distintos y el orden importa, simplemente debemos colocar 25 objetos distintos en 25 lugares distintos.
+> 
+> La cantidad de formas de hacer esto es una permutación de 25 elementos: $P(25, 25) = 25!$.
+> 
+> **Respuesta:** $21 \times 25!$.
+
+---
+
+### Opción 3: Argumento Algebraico Compacto
+
+Si prefieres mantener la estructura matemática pero ahorrar espacio, puedes usar la definición de Permutación $P(n,k)$ en lugar de escribir Combinatoria y Factorial por separado.
+
+>Existen 21 soluciones para los tamaños de las pilas. Para una solución fija $(x_1, x_2, x_3)$:
+> 
+>1. Elegimos y ordenamos los libros de la Pila 1: $P(25, x_1)$ formas.
+>2. Elegimos y ordenamos los libros de la Pila 2: $P(25-x_1, x_2)$ formas.
+>3. Elegimos y ordenamos los libros de la Pila 3: $P(x_3, x_3)$ formas.
+> 
+>Multiplicando:
+>$$\frac{25!}{(25-x_1)!} \cdot \frac{(25-x_1)!}{(25-x_1-x_2)!} \cdot \frac{x_3!}{0!}$$
+>Como $25-x_1-x_2 = x_3$, los términos se cancelan directamente resultando en $25!$.
+> 
+>**Total:** $21 \times 25!$.
 
 ### Ejercicio 28
 ![[Pasted image 20251214203859.png]]
 ![[Pasted image 20251214203909.png]]
+Cierta caja musical tiene una pieza circular con 20 espacios a lo largo de su borde donde se pueden colgar campanitas elegidas entre 4 tipos distintos. 
+Suponiendo que:
+- Al menos un espacio no debe quedar vacío.
+- Que hay suficientes campanitas para que las 20 sean del mismo tipo.
+- Las campanitas del mismo tipo son indistinguibles.
+
+<mark style="background: #FFB8EBA6;">a) De cuántas formas distintas se pueden elegir las campanitas sin considerar cómo se ubicarán en la pieza circular.</mark>
+
+Podemos modelar el problema con la siguiente ecuación:
+$$
+x_{1}+x_{2}+x_{3}+x_{4}+x_{5}=20
+$$
+Donde $x_{1},x_{2},x_{3},x_{4}$ representan la cantidad de campanitas de cada tipo y $x_{5}$ representa la cantidad de espacios vacíos en la caja. Donde $x_{1},x_{2},x_{3},x_{4},x_{5}\geq{0}$.
+
+El problema se transformó en contar la cantidad de soluciones en los enteros no negativos de la ecuación.
+
+La ecuación tiene $C(20+5-1,5-1)=C(24,4)=10626$ soluciones, pero dentro de ellas está incluida aquella distribución donde todos los espacios están vacíos, por lo que debemos descartarla. Luego, existen $10625$ formas de elegir las campanitas.
+
+<mark style="background: #FFB8EBA6;">b) En una elección al azar se tomaron 3 campanitas del tipo uno, 3 del tipo dos, 5 del tipo tres y 4 del tipo cuatro. De cuántas formas distintas se pueden ubicar estas campanitas en el borde de la pieza circular con la condición de que las campanitas del tipo 1 estén todas juntas, las del tipo 2 estén todas juntas y no haya dos espacios vacíos consecutivos?</mark>
+
+Para que las campanitas del tipo 1 estén juntas, formamos un bloque $X$ con las 3 campanitas. Análogamente, formamos un bloque $Y$ con las 3 campanitas del tipo 2. Los elementos a ordenar en la pieza circular son: el bloque $X$, el bloque $Y$, las 5 campanitas del tipo 3 y las 4 campanitas del tipo 4. Esto da un total de $1+1+5+4 = 11$ objetos "sólidos".
+
+Para romper la simetría circular, fijamos el bloque $X$. Debemos permutar los 10 elementos restantes ($Y$, 5 del tipo 3, 4 del tipo 4) en las posiciones relativas a $X$.
+
+La cantidad de ordenamientos posibles para estos objetos es:
+$$\frac{10!}{1! \cdot 5! \cdot 4!} = 1260$$
+Una vez ubicados estos 11 objetos en la ronda, se generan exactamente 11 espacios intermedios (huecos) entre ellos. Para cumplir la condición de que no haya dos espacios vacíos consecutivos, debemos seleccionar 5 de estos 11 huecos para colocar los 5 espacios vacíos (uno en cada hueco elegido).
+
+Esto se puede realizar de:
+$$C(11, 5) = 462 \text{ formas}$$
+Finalmente, por el principio multiplicativo, el total de formas distintas de ubicar las campanitas es:
+$$1260 \cdot 462 = 582.120$$
