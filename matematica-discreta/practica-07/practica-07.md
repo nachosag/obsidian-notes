@@ -237,10 +237,74 @@ Esta contradicción proviene de suponer que $G$ es un bosque. Por lo que la afir
 
 ### Ejercicio 17
 ![[Pasted image 20251211193151.png]]
+Sea $G$ un grafo plano, simple y conexo. Suponiendo que:
+- $G$ admite una descomposición en 2 copias de $C_{3}$, 1 copia de $C_{4}$ y 1 copia de $K_{4}$.
+- $|V(G)|=11$ con cinco vértices de grado $\ell$, tres vértices de grado $\ell+1$, dos vértices de grado $\ell+2$ y uno de grado $\ell+3$.
+Nos piden lo siguiente:
 
+<mark style="background: #FFB8EBA6;">a) Calcular</mark> $\ell$.
+
+Por propiedades de la descomposición tenemos:
+$$
+|E(G)|=2|E(C_{3})|+|E(C_{4})|+|E(K_{4})|=2\cdot{3}+4+6=6+4+6=16
+$$
+Por el Teorema del Apretón de Manos tenemos:
+$$
+\sum_{v\in V(G)}d_{G}(v)=2|E(G)|=2\cdot{16}=32
+$$
+$$
+5\ell+3\cdot(\ell+1)+2\cdot(\ell+2)+\ell+3=32
+$$
+$$
+5\ell+3\ell+3+2\ell+4+\ell+3=32
+$$
+$$
+11\ell+10=32
+$$
+$$
+11\ell=22
+$$
+$$
+\ell=2
+$$
+
+<mark style="background: #FFB8EBA6;">b) Hallar la cantidad de caras de G</mark>
+
+Por la fórmula de Euler tenemos:
+$$
+v-e+f=2\leftrightarrow 11-16+f=2\leftrightarrow f=7
+$$
+
+<mark style="background: #FFB8EBA6;">c) Decidir si G es bipartito</mark>
+
+Un grafo es bipartito si y solo si no contiene ciclos de longitud impar. Como $G$ se descompone en 2 copias de $C_{3}$, $G$ no es bipartito.
 ### Ejercicio 18
 ![[Pasted image 20251211193202.png]]
+Sea $G$ un grafo simple simple sin vértices aislados. Suponiendo que una posible descomposición de $G$ es $P_{3},P_{4},C_{4},C_{5}$.
+Nos piden:
 
+<mark style="background: #FFB8EBA6;">a) Calcular la cantidad de aristas de G y probar que G tiene como mínimo 6 vértices y como máximo 16 vértices.</mark>
+
+Por propiedad de la descomposición tenemos:
+$$
+|E(G)|=|E(P_{3})|+|E(P_{4})|+|E(C_{4})|+|E(C_{5})|=2+3+4+5=14
+$$
+Si la descomposición de $G$ mencionada utiliza conjuntos disjuntos de vértices, entonces $G$ tiene como mucho $3+4+4+5=16$ vértices.
+
+Sabemos que $G$ es simple y tiene 14 aristas, por lo tanto $14\leq C(|V(G)|,2)$.
+Si $G$ tuviese 6 vértices, la máxima cantidad de aristas que podría tener seria $C(6,2)=15$.
+
+Por lo tanto, $6\leq |V(G)|\leq{16}$.
+
+<mark style="background: #FFB8EBA6;">b) Suponiendo que G es k-regular. Probar que la cantidad de vértices de G es 14 o 7.</mark>
+
+Dado que $n \cdot k = 2|E| = 28$, se deduce que $n$ debe ser un **divisor** de 28.
+los únicos valores dentro del rango $6 \leq n \leq 16$ son $n=7$ y $n=14$.
+
+<mark style="background: #FFB8EBA6;">C) Probar que G no es un bosque. ¿G es bipartito?</mark>
+
+Si $G$ se puede descomponer en un $C_{5}$, implica que $G$ contiene un ciclo de longitud impar. Por lo tanto, $G$ no es bipartito.
+Luego, un bosque es un grafo sin ciclos, por lo tanto $G$ no es un bosque.
 ### Ejercicio 19
 ![[Pasted image 20251211193215.png]]
 
