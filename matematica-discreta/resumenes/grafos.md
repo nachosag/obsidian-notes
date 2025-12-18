@@ -472,7 +472,9 @@ Estos teoremas ofrecen una condición necesaria y suficiente definitiva. Un graf
 - **Contracción:** Colapsar una arista. Esto puede simplificar el grafo.
     
 
-**Teorema de Kuratowski:** $G$ es planar $\iff$ no contiene una subdivisión de $K_5$ ni de $K_{3,3}$. **Teorema de Wagner:** $G$ es planar $\iff$ no contiene un menor (subgrafo contraíble) isomorfo a $K_5$ o $K_{3,3}$.
+**Teorema de Kuratowski:** $G$ es planar $\iff$ no contiene una subdivisión de $K_5$ ni de $K_{3,3}$.
+
+**Teorema de Wagner:** $G$ es planar $\iff$ no contiene un menor (subgrafo contraíble) isomorfo a $K_5$ o $K_{3,3}$.
 
 ### 9.4. Metodología Maestra: Determinar Planaridad
 

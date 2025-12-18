@@ -139,10 +139,99 @@ Por la Fórmula de Euler existen $v-e+f=2\leftrightarrow{9}-14+f=2\leftrightarro
 
 ### Ejercicio 14
 ![[Pasted image 20251211193108.png]]
+Se pide probar que el grafo que se obtiene al borrar **dos** aristas cualesquiera del grafo $K_{6}$ se obtiene un grafo no planar.
+¿Es cierto que si borramos **tres** aristas cualesquiera del grafo $K_{6}$ se obtiene un grafo no planar?
 
+El grafo $K_{6}$ es un grafo completo de 6 vértices donde cada vértice tiene grado 5, por el Teorema del Apretón de Manos sabemos que $|E(K_{6})|=\frac{6\cdot{5}}{2}=15$.
+
+Consideremos el grafo $G$ que se obtiene de eliminar dos aristas cualesquiera de $K_{6}$.
+Sabemos que $|V(G)|=|V(K_{6})|=6$ y $|E(G)|=|E(K_{6})|-2=15-2=13$.
+
+Sabemos que $K_{6}$ es un grafo simple y conexo y $G$ es un subgrafo de $K_{6}$ con exactamente 2 aristas menos.
+Luego, en $G$ no hay vértices aislados ya que como mínimo un vértice puede tener grado 3 luego de perder 2 aristas.
+
+Como $G$ es un grafo simple y conexo, podemos utilizar el siguiente Corolario de Euler:
+$$
+e\leq3v-6
+$$
+Donde $e=|E(G)|$ y $v=|V(G)|$. Sustituyendo en la inecuación tenemos que
+$$
+13\leq3\cdot{6}-6\leftrightarrow 13\leq18-6\leftrightarrow 13\leq12
+$$
+Notemos que llegamos a un absurdo ya que 13 no es menor que 12. Por lo tanto, $G$ **no** es planar.
+
+---
+
+Luego, consideremos el grafo $G'$ que se obtiene de borrar 3 aristas cualesquiera de $K_{6}$.
+Sabemos que $|V(G')|=|V(K_{6})|=6$ y $|E(G')|=|E(K_{6})|-3=15-3=12$.
+
+Sabemos que $K_{6}$ es un grafo simple y conexo y $G'$ es un subgrafo de $K_{6}$ con exactamente 2 aristas menos.
+Luego, en $G$ no hay vértices aislados ya que como mínimo un vértice puede tener grado 2 luego de perder 3 aristas.
+
+Como $G'$ es un grafo simple y conexo, podemos utilizar el siguiente Corolario de Euler:
+$$
+e\leq3v-6
+$$
+Donde $e=|E(G')|$ y $v=|V(G')|$. Sustituyendo en la inecuación tenemos que
+$$
+12\leq3\cdot{6}-6\leftrightarrow 12\leq18-6\leftrightarrow 12\leq12
+$$
+Notemos que la condición se cumple pero no es suficiente para determinar que $G'$ no es planar.
+
+Si eliminamos 3 aristas específicas de $K_{6}$ obtenemos un grafo de 6 vértices 4-regular. Este grafo es isomorfo a un octaedro, que es un grafo planar.
+
+![[Pasted image 20251217202743.png]]
+
+Luego, la afirmación es falsa ya que no todo $K_{6}$ con 3 aristas menos cualesquiera es no planar.
 ### Ejercicio 14
 ![[Pasted image 20251211193125.png]]
+Determinar si las siguientes afirmaciones son verdaderas o falsas. Justifique en cada caso.
 
+<mark style="background: #FFB8EBA6;">a) Sea G un grafo simple que se obtiene de agregar una arista a un árbol. Entonces, la cantidad de aristas de G es igual a la cantidad de vértices de G.</mark>
+
+Sabemos que un árbol es un grafo sin ciclos, conexo con una única componente conexa, $n$ vértices y $n-1$ aristas.
+Si a un árbol le agregamos exactamente una arista, el nuevo grafo pasa a tener $n$ vértices y $n$ aristas.
+Por lo tanto, la afirmación es **verdadera**.
+
+<mark style="background: #FFB8EBA6;">b) Todo grafo conexo planar bipartito con por lo menos 3 vértices tiene al menos un vértice de grado 3.</mark>
+
+Consideremos el grafo camino $P_{3}$. Este es un grafo conexo, planar, bipartito, con 3 vértices y 2 aristas.
+Dos de sus vértices tienen grado 1 y el vértice restante tiene grado 2.
+
+Por lo tanto, la afirmación es **falsa**.
+
+<mark style="background: #FFB8EBA6;">c) Sea G un grafo bosque con exactamente 3 componentes conexas. Si H es un grafo simple que se obtiene de agregar 3 aristas a G, entonces H no es un bosque.</mark>
+
+Que $G$ sea un bosque implica que $G$ es un conjunto disjunto de árbol. Es decir, las 3 componentes conexas de $G$ son árboles.
+Nombremos a estas 3 componentes conexas como $C_{1},C_{2},C_{3}$.
+Un árbol es un grafo conexo y sin ciclos. Si a un árbol se le agrega al menos una arista, entonces se forma un ciclo y este nuevo grafo deja de ser un árbol.
+
+Tenemos 3 aristas para agregarle a $G$.
+Si agregamos al menos una arista a cualquier componente conexa $C_{i}$, entonces $G$ deja de ser un bosque ya que esa componente conexa $C_{i}$ contiene un ciclo y no es un árbol.
+
+Tomemos un vértice $v\in V(C_{1}),w\in V(C_{2}),z\in V(C_{3})$. Sabemos que $v\not\sim w,v\not\sim z,w\not\sim z$ en $G$. 
+Consideremos el grafo $G'$ que se forma de agregar dos de estas 3 aristas.
+$G'$ es un árbol conexo con una única componente conexa no trivial y sin ciclos. Un árbol es un bosque.
+Consideremos el grafo $G''$ que se forma de agregar una tercer arista cualquiera.
+Como $G'$ era un árbol, al agregarle una arista sucedió que el grafo $G''$ dejó de ser un árbol porque esto generó un ciclo.
+
+Por lo tanto, la afirmación es **verdadera**.
+
+<mark style="background: #FFB8EBA6;">d) Si G es un grafo simple no planar, entonces G no es un bosque.</mark>
+
+Supongamos que $G$ es un bosque.
+Esto implica que $G$ no tiene ciclos y que es una colección disjunta de árboles, llamémoslos $C_{1},C_{2},\dots,C_{k}$.
+Donde cada $C_{i}$ es conexo y no contiene ciclos.
+
+Si $G$ es no planar entonces:
+- Contiene una subdivisión de aristas de $K_{5}$ o $K_{3,3}$.
+- Contiene un subgrafo contraible a $K_{5}$ o $K_{3,3}$.
+
+Sabemos que $K_{5}$ y $K_{3,3}$ poseen ciclos. La operación de subdivisión consiste en reemplazar una arista por un camino, lo cual **no elimina los ciclos existentes** (solo aumenta la cantidad de vértices y aristas en ellos).
+
+Si $G$ no fuera planar, por el **Teorema de Kuratowski**, contendría una subdivisión de $K_{5}$ o $K_{3,3}$. Esto implicaría necesariamente que $G$ tiene ciclos. Como asumimos que $G$ es un bosque (grafo acíclico), llegamos a una contradicción.
+
+Esta contradicción proviene de suponer que $G$ es un bosque. Por lo que la afirmación es **verdadera**.
 ### Ejercicio 16
 ![[Pasted image 20251211193137.png]]
 

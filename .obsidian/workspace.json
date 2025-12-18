@@ -8,7 +8,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "251909adcd8f6a41",
+            "id": "b45f619806e4c79b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -22,7 +22,7 @@
             }
           },
           {
-            "id": "431a0ab464bb6c34",
+            "id": "5b4f6c89523fa4bb",
             "type": "leaf",
             "state": {
               "type": "pdf",
@@ -31,18 +31,6 @@
               },
               "icon": "lucide-file-text",
               "title": "grafos"
-            }
-          },
-          {
-            "id": "487288b65b032936",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "matematica-discreta/practica-07/practica-07-MD.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "practica-07-MD"
             }
           }
         ]
@@ -205,16 +193,18 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "251909adcd8f6a41",
+  "active": "b45f619806e4c79b",
   "lastOpenFiles": [
-    "Excalidraw/Drawing 2025-12-17 01.25.13.excalidraw.md",
-    "matematica-discreta/practica-07/practica-07.md",
     "matematica-discreta/resumenes/grafos.pdf",
+    "matematica-discreta/practica-07/practica-07.md",
     "matematica-discreta/resumenes/grafos.md",
-    "matematica-discreta/practica-07/anexos/Pasted image 20251211193022.png",
     "matematica-discreta/practica-07/practica-07-MD.pdf",
-    "matematica-discreta/practica-02/resultados-practica-02-MD.pdf",
+    "Excalidraw/Drawing 2025-12-17 19.24.15.excalidraw.md",
+    "matematica-discreta/practica-07/anexos/Pasted image 20251217202743.png",
     "matematica-discreta/practica-02/practica-02.md",
+    "Excalidraw/Drawing 2025-12-17 01.25.13.excalidraw.md",
+    "matematica-discreta/practica-07/anexos/Pasted image 20251211193022.png",
+    "matematica-discreta/practica-02/resultados-practica-02-MD.pdf",
     "matematica-discreta/practica-01/practica-01.md",
     "matematica-discreta/practica-02/practica-02-MD.pdf",
     "matematica-discreta/practica-02/anexos/Pasted image 20251214203909.png",
@@ -225,7 +215,6 @@
     "matematica-discreta/practica-02/anexos/Pasted image 20251214203823.png",
     "matematica-discreta/practica-02/anexos/Pasted image 20251214203814.png",
     "matematica-discreta/practica-02/anexos/Pasted image 20251214203806.png",
-    "matematica-discreta/practica-02/anexos/Pasted image 20251214203756.png",
     "matematica-discreta/practica-02/anexos",
     "matematica-discreta/practica-01/resultados-practica-01-MD.pdf",
     "matematica-discreta/practica-01/practica-01-MD.pdf",
