@@ -8,41 +8,17 @@
         "type": "tabs",
         "children": [
           {
-            "id": "b45f619806e4c79b",
+            "id": "1aded2b06a2484cc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "matematica-discreta/parciales/grafos/noche-11-06-2025.md",
+                "file": "matematica-discreta/parciales/grafos/noche-12-11-2025.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "noche-11-06-2025"
-            }
-          },
-          {
-            "id": "70bdfe102e603bdd",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Excalidraw/Drawing 2025-12-19 00.15.01.excalidraw.md"
-              },
-              "icon": "excalidraw-icon",
-              "title": "Drawing 2025-12-19 00.15.01.excalidraw"
-            }
-          },
-          {
-            "id": "1aded2b06a2484cc",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "matematica-discreta/resumenes/grafos.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "grafos"
+              "title": "noche-12-11-2025"
             }
           }
         ]
@@ -205,23 +181,25 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "b45f619806e4c79b",
+  "active": "1aded2b06a2484cc",
   "lastOpenFiles": [
-    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219013217.png",
-    "Excalidraw/Drawing 2025-12-19 00.15.01.excalidraw.md",
-    "matematica-discreta/parciales/grafos/noche-11-06-2025.md",
-    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219012621.png",
+    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219204831.png",
+    "Excalidraw/Drawing 2025-12-19 18.39.01.excalidraw.md",
+    "matematica-discreta/parciales/grafos/noche-12-11-2025.md",
+    "Excalidraw/anexos/Pasted Image 20251219200903_728.png",
+    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219195822.png",
+    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219195809.png",
+    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219194744.png",
+    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219194519.png",
+    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219194356.png",
+    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219194037.png",
+    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219181753.png",
     "matematica-discreta/resumenes/grafos.pdf",
-    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219003105.png",
-    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219002712.png",
-    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219002641.png",
-    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219002445.png",
-    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219001927.png",
-    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219001750.png",
-    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251218195042.png",
+    "matematica-discreta/parciales/grafos/noche-11-06-2025.md",
+    "Excalidraw/Drawing 2025-12-19 00.15.01.excalidraw.md",
+    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219013217.png",
+    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251219012621.png",
     "Excalidraw/Drawing 2025-12-18 21.55.21.excalidraw.md",
-    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251218224956.png",
-    "matematica-discreta/parciales/grafos/anexos/Pasted image 20251218224433.png",
     "Excalidraw/Drawing 2025-12-18 20.00.36.excalidraw.md",
     "matematica-discreta/practica-05/practica-05.md",
     "matematica-discreta/parciales/grafos/anexos",
@@ -251,8 +229,6 @@
     "Excalidraw/Drawing 2025-12-06 01.48.40.excalidraw.md",
     "Excalidraw/Drawing 2025-12-06 01.38.36.excalidraw.md",
     "Excalidraw/Drawing 2025-12-01 20.43.23.excalidraw.md",
-    "Excalidraw/Drawing 2025-11-30 23.18.17.excalidraw.md",
-    "matematica-discreta/mermaid-sintax.md",
     "algebra-lineal/parciales/primer-parcial/Untitled.canvas",
     "Untitled.canvas"
   ]
