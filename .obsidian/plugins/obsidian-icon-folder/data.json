@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiChartColumnStacked",
       "📎",
       "🎨",
       "✍",
-      "🧩",
-      "✏"
+      "🧩"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -47,5 +47,6 @@
   "algebra-lineal/practica-05/practica-05-e01-26.md": "✍",
   "algebra-lineal/practica-06/practica-06-e01-13.md": "✍",
   "matematica-discreta": "🧩",
-  "matematica-discreta/practica-01/practica-01.md": "✍"
+  "matematica-discreta/practica-01/practica-01.md": "✍",
+  "base-de-datos-2": "LiChartColumnStacked"
 }
