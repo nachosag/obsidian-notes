@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "b4263cccea04211b",
+        "id": "39ca96e5bba337b5",
         "type": "tabs",
         "children": [
           {
-            "id": "96a58b79eca91d30",
+            "id": "290a1117dd6ab2de",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "base-de-datos-2/apuntes 12-03-26.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "apuntes 12-03-26"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -88,7 +84,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 241.5
+    "width": 528.5,
+    "collapsed": true
   },
   "right": {
     "id": "60744be18a06282d",
@@ -180,18 +177,28 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "696b8c848afd1155",
+  "active": "290a1117dd6ab2de",
   "lastOpenFiles": [
+    "organizacion-del-computador-2/tema-2/02 - FPU x87 en Arquitectura IA-32 - clase 2.pdf",
+    "organizacion-del-computador-2/tema-2/02 - Tema 1_ Arquitectura de uP Intel IA32 y 64 - clase 2.pdf",
+    "organizacion-del-computador-2/tema-3/03 - Tema 1 FPU - clase 3.pdf",
+    "organizacion-del-computador-2/tema-3/03 - Gestión de Memoria - clase 3.pdf",
+    "organizacion-del-computador-2/tema-1/Apuntes.md",
+    "organizacion-del-computador-2/01 - Repaso Organización del Compurador I - clase 1.pdf",
+    "organizacion-del-computador-2/tema-4/04 - Tema 1 Gestión de Memoria - clase 4.pdf",
+    "organizacion-del-computador-2/Arquitectura de microprocesadores - clase 1.2.pdf",
+    "organizacion-del-computador-2/Repaso  - OC 2023 - clase 1.pdf",
+    "organizacion-del-computador-2/tema-4",
+    "organizacion-del-computador-2/tema-3",
+    "Sin título 1.md",
+    "Sin título.md",
+    "organizacion-del-computador-2/Sin título.md",
     "base-de-datos-2/anexos/Pasted image 20260315204421.png",
-    "base-de-datos-2/anexos",
     "base-de-datos-2/apuntes 12-03-26.md",
-    "base-de-datos-2",
-    "matematica-discreta/resumenes/combinatoria.pdf",
     "matematica-discreta/parciales/finales/23-07-2024.md",
     "Untitled.md",
     "matematica-discreta/parciales/finales/18-02-2025.md",
     "matematica-discreta/parciales/finales/22-07-2025.md",
-    "matematica-discreta/parciales/finales",
     "matematica-discreta/parciales/combinatoria/noche-24-09-2025.md",
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251221013143.png",
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251221013122.png",
@@ -204,30 +211,19 @@
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251220195535.png",
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251220195523.png",
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251220034731.png",
-    "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251220024726.png",
-    "matematica-discreta/parciales/combinatoria/anexos",
     "matematica-discreta/parciales/grafos/noche-12-11-2025.md",
     "Excalidraw/Drawing 2025-12-19 18.39.01.excalidraw.md",
-    "matematica-discreta/resumenes/grafos.pdf",
     "matematica-discreta/parciales/grafos/noche-11-06-2025.md",
     "Excalidraw/Drawing 2025-12-19 00.15.01.excalidraw.md",
     "Excalidraw/Drawing 2025-12-18 21.55.21.excalidraw.md",
     "Excalidraw/Drawing 2025-12-18 20.00.36.excalidraw.md",
     "matematica-discreta/practica-05/practica-05.md",
-    "matematica-discreta/parciales/grafos/anexos",
     "matematica-discreta/practica-07/practica-07.md",
-    "matematica-discreta/parciales/grafos",
-    "matematica-discreta/parciales/combinatoria",
-    "matematica-discreta/parciales",
     "matematica-discreta/resumenes/grafos.md",
     "Excalidraw/Drawing 2025-12-17 19.24.15.excalidraw.md",
     "matematica-discreta/practica-02/practica-02.md",
     "Excalidraw/Drawing 2025-12-17 01.25.13.excalidraw.md",
     "matematica-discreta/practica-01/practica-01.md",
-    "matematica-discreta/practica-06/practica-06.md",
-    "Excalidraw/Drawing 2025-12-09 22.38.41.excalidraw.md",
-    "Excalidraw/Drawing 2025-12-08 23.50.37.excalidraw.md",
-    "Excalidraw/Drawing 2025-12-08 22.31.15.excalidraw.md",
     "algebra-lineal/parciales/primer-parcial/Untitled.canvas",
     "Untitled.canvas"
   ]
