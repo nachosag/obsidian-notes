@@ -4,17 +4,41 @@
     "type": "split",
     "children": [
       {
-        "id": "39ca96e5bba337b5",
+        "id": "7ea611941c8938de",
         "type": "tabs",
+        "dimension": 49.88986784140969,
         "children": [
           {
-            "id": "290a1117dd6ab2de",
+            "id": "ad82a6b833cca410",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "organizacion-del-computador-2/tema-2/Apuntes.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "Apuntes"
+            }
+          }
+        ]
+      },
+      {
+        "id": "a9ed79d421c019ad",
+        "type": "tabs",
+        "dimension": 50.110132158590304,
+        "children": [
+          {
+            "id": "3809d77ff8064aa9",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "organizacion-del-computador-2/tema-2/02 - Tema 1_ Arquitectura de uP Intel IA32 y 64 - clase 2.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "02 - Tema 1_ Arquitectura de uP Intel IA32 y 64 - clase 2"
             }
           }
         ]
@@ -84,7 +108,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 528.5,
+    "width": 265.5,
     "collapsed": true
   },
   "right": {
@@ -177,26 +201,27 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "290a1117dd6ab2de",
+  "active": "ad82a6b833cca410",
   "lastOpenFiles": [
-    "organizacion-del-computador-2/tema-2/02 - FPU x87 en Arquitectura IA-32 - clase 2.pdf",
     "organizacion-del-computador-2/tema-2/02 - Tema 1_ Arquitectura de uP Intel IA32 y 64 - clase 2.pdf",
+    "organizacion-del-computador-2/tema-2/Apuntes.md",
+    "organizacion-del-computador-2/tema-2/02 - FPU x87 en Arquitectura IA-32 - clase 2.pdf",
+    "Sin título 1.md",
+    "Sin título.md",
+    "Untitled.md",
+    "organizacion-del-computador-2/tema-1/Apuntes.md",
     "organizacion-del-computador-2/tema-3/03 - Tema 1 FPU - clase 3.pdf",
     "organizacion-del-computador-2/tema-3/03 - Gestión de Memoria - clase 3.pdf",
-    "organizacion-del-computador-2/tema-1/Apuntes.md",
     "organizacion-del-computador-2/01 - Repaso Organización del Compurador I - clase 1.pdf",
     "organizacion-del-computador-2/tema-4/04 - Tema 1 Gestión de Memoria - clase 4.pdf",
     "organizacion-del-computador-2/Arquitectura de microprocesadores - clase 1.2.pdf",
     "organizacion-del-computador-2/Repaso  - OC 2023 - clase 1.pdf",
     "organizacion-del-computador-2/tema-4",
     "organizacion-del-computador-2/tema-3",
-    "Sin título 1.md",
-    "Sin título.md",
     "organizacion-del-computador-2/Sin título.md",
     "base-de-datos-2/anexos/Pasted image 20260315204421.png",
     "base-de-datos-2/apuntes 12-03-26.md",
     "matematica-discreta/parciales/finales/23-07-2024.md",
-    "Untitled.md",
     "matematica-discreta/parciales/finales/18-02-2025.md",
     "matematica-discreta/parciales/finales/22-07-2025.md",
     "matematica-discreta/parciales/combinatoria/noche-24-09-2025.md",
@@ -223,7 +248,6 @@
     "Excalidraw/Drawing 2025-12-17 19.24.15.excalidraw.md",
     "matematica-discreta/practica-02/practica-02.md",
     "Excalidraw/Drawing 2025-12-17 01.25.13.excalidraw.md",
-    "matematica-discreta/practica-01/practica-01.md",
     "algebra-lineal/parciales/primer-parcial/Untitled.canvas",
     "Untitled.canvas"
   ]
