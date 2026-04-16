@@ -7,5 +7,6 @@
   "theme": "obsidian",
   "baseFontSizeAction": false,
   "enabledCssSnippets": [],
-  "baseFontSize": 19
+  "baseFontSize": 19,
+  "accentColor": "#f4013a"
 }

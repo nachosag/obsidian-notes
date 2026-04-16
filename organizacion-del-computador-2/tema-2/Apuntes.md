@@ -3,7 +3,7 @@
 | Procesador  | Arquitectura | Bus de direcciones | Memoria direccionable |    Frecuencia     |                                   Novedad                                    |
 | :---------: | :----------: | :----------------: | :-------------------: | :---------------: | :--------------------------------------------------------------------------: |
 |    8086     |   16 bits    |      20 bits       |         1 MB          |     6-12 MHz      |                         Primer procesador de 16 bits                         |
-|    8088     |   16 bits    |       8 bits       |         1 MB          |     6-12 MHz      |                        Versión más económica del 8086                        |
+|    8088     |   16 bits    |       8 bits       |         1 MB          |     6-12 MHz      |                      Versión más económica del **8086**                      |
 |    80186    |   16 bits    |      20 bits       |         1 MB          |     6-12 MHz      |               Mantiene compatibilidad con versiones anteriores               |
 |    80286    |   16 bits    |      24 bits       |         26 MB         |   Hasta 25 MHz    | Pensado para sistemas operativos **multitarea** y **protección de memoria**  |
 |    80386    |   32 bits    |      32 bits       |         4 GB          |     12-40 MHz     |                       Introdujo la arquitectura IA-32                        |
@@ -148,7 +148,7 @@
 
 ## Pre preguntas
 - ¿Qué es una arquitectura superescalar? ¿Cómo se diferencia de la arquitectura de Von Neumann?
-	- Una arquitectura superescalar tiene múltiples unidades funcionales, lo que le permite emitir y ejecutar varias instrucciones en un solo ciclo de reloj.
+	- Una arquitectura superescalar **tiene múltiples unidades de procesamiento funcionales**, lo que le permite emitir y ejecutar varias instrucciones en un solo ciclo de reloj.
 	- Se diferencia del diseño clásico de Von Neumann porque logra **concurrencia** y mayor rendimiento sin aumentar la velocidad del reloj.
 - ¿Qué es la ejecución paralela? ¿Cómo se logró la ejecución paralela?
 	- Es la capacidad de realizar múltiples tareas o procesar múltiples datos de manera simultánea.
@@ -214,14 +214,19 @@
 ---
 # Novedades de la arquitectura x86-64
 
-- Registros de 64 bits
+- Registros
+	- Todos los registros se amplían a 64 bits
+	- Nuevos registros adicionales
+		- `R8-R15`.
+	- Ampliación de registros existentes
+		- `EAX -> RAX`.
 - Arquitectura multinúcleos
 - Ejecución fuera de orden avanzada
 - Caché multinivel
+	- `L1, L2, L3`.
 - Soporte para virtualización
 - Extensiones vectoriales
 - Ampliación del espacio de direcciones
-- Nuevos registros
 
 ## Pre preguntas
 - ¿Qué es la arquitectura multinúcleos? ¿Cómo se diferencia de la arquitectura de Von Neumann y la Super escalar?
@@ -238,3 +243,158 @@
 	- En la arquitectura x86-64 se le dio soporte introduciendo extensiones de hardware (como Intel VT-x y AMD SVM) que añaden nuevos modos de ejecución e instrucciones específicas para gestionar las máquinas virtuales sin el costo de rendimiento que implicaba emular todo por software.
 - ¿Qué es una extensión vectorial?
 	- **Extensiones vectoriales:** Son conjuntos de instrucciones (como SSE) basadas en el modelo SIMD (Una Instrucción, Múltiples Datos), que permiten procesar bloques enteros de datos (vectores) en paralelo con una sola orden. Son fundamentales para acelerar drásticamente cálculos de gráficos 3D y multimedia
+
+# Preguntas finales
+- ¿Qué diferencia existe en la arquitectura superescalar y la multinucleo?
+- Diferencias entre `IA-64` y `x86-64`.
+
+---
+
+# Modos de operación en IA-32
+
+- Modo real
+- Modo protegido
+- Modo sistema
+
+## Pre preguntas
+- Ejemplos donde se utilice cada tipo de operación
+	- **Modo real:** se utilizaba en el 8086.
+		- Los utilizan procesos de arranque o reinicio del sistema
+	- **Modo protegido:** se utilizaba en 80286. 
+		- Lo utilizan los procesos de **usuario** en arquitecturas modernas.
+	- **Modo sistema:** lo utiliza el sistema operativo en arquitecturas modernas.
+		- Windows 11
+		- Ubuntu 24
+
+## Brain Dump
+- **Modo real:** Los procesos tienen **privilegios**.
+	- Pueden acceder a hardware sin restricciones
+	- Pueden acceder a memoria sin restricciones
+- **Modo protegido:** Los procesos tienen **restricciones**.
+	- Solo pueden acceder a sus direcciones de memoria correspondiente
+	- Para acceder al hardware tienen que pasar por el Sistema Operativo
+	- El nivel de restricciones está determinado por el nivel de privilegio:
+		- **Ring 0:** Kernel
+		- **Ring 1:** Servicios del sistema
+		- **Ring 2:** Drivers
+		- **Ring 3:** Aplicaciones
+- **Sistema:** Es utilizado por el sistema operativo para gestionar el hardware y los procesos de usuario. Para esto tiene **privilegios**.
+	- Gestiona dispositivos de entrada/salida
+	- Gestiona interrupciones
+	- Gestiona el uso de los recursos
+		- Memoria
+		- Disco
+		- Procesador
+
+---
+# Características de procesadores Pentium
+
+- Pentium
+	- **Segundo pipeline** de ejecución
+	- arquitectura **superescalar**
+	- Caché L1 dividido en:
+		- 8KB para datos
+		- 8KB para instrucciones
+	- **Predicción de saltos**
+	- Introdujo el `MMX` en sus últimas versiones de producciones.
+- Pentium Pro
+	- **Tercer pipeline** de ejecución
+	- Arquitectura superescalar de 3 vías
+	- **Ejecución fuera de orden**
+	- Predicción de saltos y **ejecución especulativa**.
+- Pentium 2
+	- Consolidó el uso de **MMX**.
+- Pentium 2 Xeon
+	- Enfocado al mercado de servidores
+	- Una caché más grande que la del Pentium 2
+	- Un bus más rápido de el del Pentium
+	- Mejor soporte para multiprocesamiento
+- Pentium 3
+	- **Streaming SIMD Extensions (SSE)**.
+	- Registros de 128 bits
+- Pentium 4
+	- **Arquitectura NetBurst**.
+	- **SSE2, SSE3**.
+	- **Virtualización por hardware**.
+
+---
+
+# Predicción de saltos
+
+## Pre preguntas
+- ¿Cómo funciona?
+- Funciona de dos maneras principales:
+		- **Estática:** Se hace mediante software al compilar, aplicando reglas simples como asumir que los saltos hacia atrás (usado en bucles) siempre se toman y los saltos hacia adelante no.
+		- **Dinámica:** El hardware utiliza una memoria interna, como una tabla de historial o búfer, para recordar el comportamiento reciente de cada salto. Un método clásico usa un estado de 2 bits, donde el procesador solo cambia su predicción para un salto si se equivoca dos veces seguidas.
+- ¿Qué problema soluciona?
+	- Soluciona un problema crítico en los pipeline: Cuando aparece un salto condicional en el código, el procesador no sabe qué camino tomará el programa hasta evaluar la condición, lo que normalmente obligaría a detenerse y desperdiciar ciclos de reloj esperando el resultado
+- ¿En qué consiste?
+	- Consiste en **adivinar** si un salto se tomará o no antes de que se resuelva, permitiendo que el procesador siga cargando y ejecutando instrucciones por adelantado. 
+	- Si la predicción es correcta, el procesador continúa trabajando a máxima velocidad sin interrupciones. Si se equivoca, debe deshacer las instrucciones que adelantó por error, limpiar el pipeline y reiniciar la búsqueda desde la dirección correcta, lo cual tiene una penalización de tiempo.
+
+# Ejecución especulativa
+
+## Pre preguntas
+- ¿En qué consiste?
+	- La ejecución especulativa es una técnica donde el procesador se adelanta y ejecuta instrucciones basándose en una suposición antes de tener la certeza de que realmente debían ejecutarse
+- ¿Qué problema soluciona?
+	- Evita que el procesador se quede de brazos cruzados por culpa de las dependencias de control. En lugar de detenerse a esperar que se resuelva una condición (como un salto), aprovecha el tiempo para adelantar trabajo, mejorando enormemente el paralelismo y el rendimiento.
+- ¿Cómo funciona la ejecución especulativa?
+	- El hardware ejecuta las instrucciones adelantadas pero guarda sus resultados en un espacio temporal llamado búfer de reordenamiento (_Reorder Buffer_ o ROB), sin modificar los registros principales ni la memoria. Si la suposición original fue correcta, los cambios se vuelven permanentes (se hace el _commit_); si la suposición fue incorrecta, los resultados temporales simplemente se descartan y el procesador retoma el camino adecuado.
+- ¿En qué se diferencia con la predicción de saltos?
+	- La predicción de saltos solo _adivina_ el camino del programa para empezar a buscar y cargar las siguientes instrucciones en el _pipeline_. La ejecución especulativa va más allá: utiliza esa predicción para **procesar y ejecutar** físicamente esas instrucciones como si la predicción fuera correcta, obteniendo resultados listos para usarse.
+
+---
+
+# Seguridad de las CPUs
+
+## Pre preguntas
+- ¿Qué es Metldown? ¿En qué consiste?
+- ¿Qué es Spectre? ¿En qué consiste?
+- ¿Cómo funcionaban?
+- ¿Cómo se pasaban el modo seguro?
+- ¿Qué costos tuvo su arreglo?
+
+---
+
+# SIMD - MIMD - MMX - SSE
+
+## Pre preguntas
+- ¿Qué es cada uno? ¿Qué problema resuelve? ¿Qué diferencias existe entre ambos?
+	- **SIMD (Single Instruction, Multiple Data):** es un modelo de arquitectura donde una única instrucciones ejecuta la misma operación sobre múltiplos datos al mismo tiempo.
+		- Resuelve el problema de procesar eficientemente grandes bloques de datos repetitivos, lo que lo hace ideal para gráficos 3D, audio y video al aprovechar el paralelismo de datos.
+	- **MIMD (Multiple Instruction, Multiple Data):** Múltiples procesadores obtienen sus propias instrucciones de manera independiente y operan sobre sus propios datos. Resuelve la ejecución concurrente de tareas o programas completamente distintos, siendo la base de los procesadores multinúcleo modernos (paralelismo de hilos).
+	- **MMX (MultiMedia eXtensions):** Es el primer conjunto de instrucciones tipo SIMD que Intel introdujo para acelerar cálculos de audio y video, empaquetando datos pequeños en vectores de 64 bits.
+	- **SSE (Streaming SIMD Extensions):** Es la evolución de MMX. Resuelve cálculos gráficos más exigentes ampliando el tamaño del vector a 128 bits y agregando operaciones avanzadas de punto flotante.
+	- Diferencias principales
+		- **SIMD vs. MIMD:** En SIMD todos los elementos de procesamiento hacen exactamente la _misma_ operación a la vez; en MIMD, cada procesador puede estar haciendo una tarea _completamente distinta_.
+		- **MMX vs. SSE:** MMX usa registros de 64 bits que comparte físicamente con la unidad de punto flotante tradicional, lo que exige precaución al programar para no corromper datos. SSE utiliza registros propios independientes de 128 bits, evitando estas penalizaciones y permitiendo cálculos más complejos.
+
+# Hyper Threading
+
+## Pre preguntas
+- ¿Qué es?
+	- El **Hyper-threading** es la implementación de Intel de la tecnología de multihilo (multithreading). Permite que un solo núcleo físico del procesador se presente al sistema operativo como si fueran dos procesadores lógicos independientes.
+- ¿Qué problema soluciona?
+	- Minimiza el tiempo de inactividad del CPU. Si un hilo se detiene a esperar datos de la memoria (por ejemplo, por un fallo en la caché), el procesador aprovecha esos ciclos de reloj "muertos" para ejecutar las instrucciones del segundo hilo.
+- ¿Cómo funciona?
+	- El procesador duplica el estado arquitectónico (como el contador de programa, el controlador de interrupciones y los registros) para cada hilo, lo que permite cambiar entre ellos casi instantáneamente. Sin embargo, ambos hilos comparten de forma dinámica el motor de ejecución principal y la memoria caché.
+- ¿Qué relación tiene con el comando `lstopo`?
+	- `lstopo` grafica la topología del hardware y te permitirá visualizar exactamente este efecto. Si ejecutas el comando en un CPU con Hyper-threading, verás gráficamente que un solo núcleo físico (Core) agrupa dentro a dos unidades lógicas de procesamiento (PUs o _Processing Units_) que comparten la misma caché.
+
+---
+
+# RISC vs CISC
+
+## Pre preguntas
+- ¿Qué son?
+	- **RISC (Reduced Instruction Set Computer)** y **CISC (Complex Instruction Set Computer)** son dos enfoques fundamentales para el diseño del conjunto de instrucciones de un procesador.
+- ¿Qué diferencias existen entre ellos?
+	- **Complejidad de instrucciones:** CISC utiliza instrucciones complejas y de longitud variable que pueden realizar múltiples tareas a la vez. RISC se basa en un conjunto reducido de instrucciones simples, de longitud fija, diseñadas para ejecutarse en un solo ciclo de reloj.
+	- **Acceso a la memoria:** CISC permite que las operaciones aritméticas accedan directamente a la memoria. RISC utiliza un modelo _load-store_ (carga/almacenamiento), donde solo instrucciones específicas acceden a la memoria y las operaciones matemáticas se hacen estrictamente entre registros.
+	- **Hardware vs. Software:** CISC utiliza microcódigo complejo en el hardware para interpretar y ejecutar las instrucciones. RISC traslada esta complejidad al compilador, dependiendo del software para ordenar y optimizar las instrucciones eficientemente.
+- ¿En qué contextos uno es mejor que el otro?
+	- **RISC** es superior para implementar _pipelining_ (segmentación) profundo, diseños superescalares y eficiencia energética, por lo que domina en sistemas embebidos (celulares, consolas, routers) y servidores de alto rendimiento
+	- **CISC** ofrece una mayor densidad de código (programas que ocupan menos espacio) y ha sido históricamente superior en el mercado de las computadoras personales (PC) gracias a la compatibilidad hacia atrás con décadas de software heredado (como la arquitectura x86)
+- ¿Pueden convivir en simultaneo?
+	- Sí, y es exactamente lo que ocurre en la actualidad. Los procesadores modernos con arquitectura CISC (como las familias Intel Core, Pentium 4 o AMD Athlon) utilizan un decodificador frontal que toma las instrucciones complejas CISC (x86) y las divide en secuencias de operaciones simples llamadas microoperaciones (_uops_), que son esencialmente instrucciones RISC. Esto les permite mantener la compatibilidad con el software CISC existente mientras aprovechan la velocidad y eficiencia de un núcleo de ejecución RISC.
