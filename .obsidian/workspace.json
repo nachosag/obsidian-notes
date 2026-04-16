@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2730fbb8c528763a",
+        "id": "318dd4eea9c6ad55",
         "type": "tabs",
         "children": [
           {
-            "id": "ebc5dc6b2bc4eea7",
+            "id": "c555858592cdea2f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -176,16 +176,17 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "ebc5dc6b2bc4eea7",
+  "active": "c555858592cdea2f",
   "lastOpenFiles": [
-    "organizacion-del-computador-2/tema-2/Apuntes.md",
+    "organizacion-del-computador-2/tema-2/Apuntes de FPU x87.md",
+    "organizacion-del-computador-2/tema-2/Apuntes de arquitectura.md",
+    "organizacion-del-computador-2/tema-2/02 - FPU x87 en Arquitectura IA-32 - clase 2.pdf",
+    "organizacion-del-computador-2/tema-1/Apuntes.md",
     "organizacion-del-computador-2/tema-2/02 - Tema 1_ Arquitectura de uP Intel IA32 y 64 - clase 2.pdf",
     "Sin título.md",
-    "organizacion-del-computador-2/tema-2/02 - FPU x87 en Arquitectura IA-32 - clase 2.pdf",
     "organizacion-del-computador-2/Sin título.md",
     "Sin título 1.md",
     "Untitled.md",
-    "organizacion-del-computador-2/tema-1/Apuntes.md",
     "organizacion-del-computador-2/tema-3/03 - Tema 1 FPU - clase 3.pdf",
     "organizacion-del-computador-2/tema-3/03 - Gestión de Memoria - clase 3.pdf",
     "organizacion-del-computador-2/01 - Repaso Organización del Compurador I - clase 1.pdf",
@@ -222,7 +223,6 @@
     "matematica-discreta/resumenes/grafos.md",
     "Excalidraw/Drawing 2025-12-17 19.24.15.excalidraw.md",
     "matematica-discreta/practica-02/practica-02.md",
-    "Excalidraw/Drawing 2025-12-17 01.25.13.excalidraw.md",
     "algebra-lineal/parciales/primer-parcial/Untitled.canvas",
     "Untitled.canvas"
   ]
