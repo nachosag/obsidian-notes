@@ -4,17 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "6b9ff24bfc21e1e8",
+        "id": "07564d25fb28d878",
         "type": "tabs",
         "children": [
           {
-            "id": "12f79c3d8986390f",
+            "id": "67bb5fa51816e89b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "type": "pdf",
+              "state": {
+                "file": "organizacion-del-computador-2/Memoria/03-gestion-de-memoria.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "03-gestion-de-memoria"
             }
           }
         ]
@@ -176,23 +178,23 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "696b8c848afd1155",
+  "active": "67bb5fa51816e89b",
   "lastOpenFiles": [
-    "organizacion-del-computador-2/Memoria/03 - Gestión de Memoria - clase 3.pdf",
-    "organizacion-del-computador-2/Memoria/04 - Tema 1 Gestión de Memoria - clase 4.pdf",
-    "organizacion-del-computador-2/Memoria/Memoria.md",
-    "organizacion-del-computador-2/FPU/02 - FPU x87 en Arquitectura IA-32 - clase 2.pdf",
-    "organizacion-del-computador-2/FPU/03 - Tema 1 FPU - clase 3.pdf",
-    "organizacion-del-computador-2/FPU/Apuntes de FPU x87.md",
-    "organizacion-del-computador-2/Arquitectura/Arquitectura de microprocesadores - clase 1.2.pdf",
-    "organizacion-del-computador-2/Arquitectura/02 - Tema 1_ Arquitectura de uP Intel IA32 y 64 - clase 2.pdf",
+    "organizacion-del-computador-2/Memoria/04--gestion-de-memoria.pdf",
+    "organizacion-del-computador-2/Memoria/03-gestion-de-memoria.pdf",
+    "organizacion-del-computador-2/FPU/03-fpu.pdf",
+    "organizacion-del-computador-2/FPU/FPU.md",
     "organizacion-del-computador-2/Arquitectura/Arquitectura 2.md",
+    "organizacion-del-computador-2/Arquitectura/02-arquitectura.pdf",
     "organizacion-del-computador-2/Arquitectura/Arquitectura 1.md",
-    "organizacion-del-computador-2/Repaso",
-    "organizacion-del-computador-2/Repaso/Repaso  - OC 2023 - clase 1.pdf",
-    "organizacion-del-computador-2/Repaso/01 - Repaso Organización del Compurador I - clase 1.pdf",
-    "organizacion-del-computador-2/Memoria",
+    "organizacion-del-computador-2/Arquitectura/01-arquitectura.pdf",
+    "organizacion-del-computador-2/Memoria/Memoria.md",
     "Sin título.md",
+    "organizacion-del-computador-2/FPU/02-fpu.pdf",
+    "organizacion-del-computador-2/Repaso",
+    "organizacion-del-computador-2/Repaso/00-repaso.pdf",
+    "organizacion-del-computador-2/Repaso/01-repaso.pdf",
+    "organizacion-del-computador-2/Memoria",
     "organizacion-del-computador-2/Sin título.md",
     "Sin título 1.md",
     "Untitled.md",
