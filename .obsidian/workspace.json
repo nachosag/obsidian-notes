@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "318dd4eea9c6ad55",
+        "id": "6b9ff24bfc21e1e8",
         "type": "tabs",
         "children": [
           {
-            "id": "c555858592cdea2f",
+            "id": "12f79c3d8986390f",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -176,25 +176,26 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "c555858592cdea2f",
+  "active": "696b8c848afd1155",
   "lastOpenFiles": [
-    "organizacion-del-computador-2/tema-2/Apuntes de FPU x87.md",
-    "organizacion-del-computador-2/tema-2/Apuntes de arquitectura.md",
-    "organizacion-del-computador-2/tema-2/02 - FPU x87 en Arquitectura IA-32 - clase 2.pdf",
-    "organizacion-del-computador-2/tema-1/Apuntes.md",
-    "organizacion-del-computador-2/tema-2/02 - Tema 1_ Arquitectura de uP Intel IA32 y 64 - clase 2.pdf",
+    "organizacion-del-computador-2/Memoria/03 - Gestión de Memoria - clase 3.pdf",
+    "organizacion-del-computador-2/Memoria/04 - Tema 1 Gestión de Memoria - clase 4.pdf",
+    "organizacion-del-computador-2/Memoria/Memoria.md",
+    "organizacion-del-computador-2/FPU/02 - FPU x87 en Arquitectura IA-32 - clase 2.pdf",
+    "organizacion-del-computador-2/FPU/03 - Tema 1 FPU - clase 3.pdf",
+    "organizacion-del-computador-2/FPU/Apuntes de FPU x87.md",
+    "organizacion-del-computador-2/Arquitectura/Arquitectura de microprocesadores - clase 1.2.pdf",
+    "organizacion-del-computador-2/Arquitectura/02 - Tema 1_ Arquitectura de uP Intel IA32 y 64 - clase 2.pdf",
+    "organizacion-del-computador-2/Arquitectura/Arquitectura 2.md",
+    "organizacion-del-computador-2/Arquitectura/Arquitectura 1.md",
+    "organizacion-del-computador-2/Repaso",
+    "organizacion-del-computador-2/Repaso/Repaso  - OC 2023 - clase 1.pdf",
+    "organizacion-del-computador-2/Repaso/01 - Repaso Organización del Compurador I - clase 1.pdf",
+    "organizacion-del-computador-2/Memoria",
     "Sin título.md",
     "organizacion-del-computador-2/Sin título.md",
     "Sin título 1.md",
     "Untitled.md",
-    "organizacion-del-computador-2/tema-3/03 - Tema 1 FPU - clase 3.pdf",
-    "organizacion-del-computador-2/tema-3/03 - Gestión de Memoria - clase 3.pdf",
-    "organizacion-del-computador-2/01 - Repaso Organización del Compurador I - clase 1.pdf",
-    "organizacion-del-computador-2/tema-4/04 - Tema 1 Gestión de Memoria - clase 4.pdf",
-    "organizacion-del-computador-2/Arquitectura de microprocesadores - clase 1.2.pdf",
-    "organizacion-del-computador-2/Repaso  - OC 2023 - clase 1.pdf",
-    "organizacion-del-computador-2/tema-4",
-    "organizacion-del-computador-2/tema-3",
     "base-de-datos-2/anexos/Pasted image 20260315204421.png",
     "base-de-datos-2/apuntes 12-03-26.md",
     "matematica-discreta/parciales/finales/23-07-2024.md",
@@ -222,7 +223,6 @@
     "matematica-discreta/practica-07/practica-07.md",
     "matematica-discreta/resumenes/grafos.md",
     "Excalidraw/Drawing 2025-12-17 19.24.15.excalidraw.md",
-    "matematica-discreta/practica-02/practica-02.md",
     "algebra-lineal/parciales/primer-parcial/Untitled.canvas",
     "Untitled.canvas"
   ]
