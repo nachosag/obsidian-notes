@@ -42,18 +42,19 @@
             }
           },
           {
-            "id": "1111b3b07be79196",
+            "id": "46c1f62983edd23b",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "organizacion-del-computador-2/Memoria/04--gestion-de-memoria.pdf"
+                "file": "organizacion-del-computador-2/Memoria/04-gestion-de-memoria.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "04--gestion-de-memoria"
+              "title": "04-gestion-de-memoria"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -120,8 +121,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5,
-    "collapsed": true
+    "width": 265.5
   },
   "right": {
     "id": "60744be18a06282d",
@@ -215,9 +215,9 @@
   },
   "active": "f36f8739e13dcacc",
   "lastOpenFiles": [
-    "organizacion-del-computador-2/Memoria/03-gestion-de-memoria.pdf",
+    "organizacion-del-computador-2/Memoria/04-gestion-de-memoria.pdf",
     "organizacion-del-computador-2/Memoria/memoria-3.md",
-    "organizacion-del-computador-2/Memoria/04--gestion-de-memoria.pdf",
+    "organizacion-del-computador-2/Memoria/03-gestion-de-memoria.pdf",
     "organizacion-del-computador-2/Arquitectura/01-arquitectura.pdf",
     "organizacion-del-computador-2/Memoria/05-segmentacion-paginacion.pdf",
     "organizacion-del-computador-2/Arquitectura/02-arquitectura.pdf",
