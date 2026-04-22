@@ -1,0 +1,38 @@
+# Segmentación y paginación
+
+## Pre preguntas
+- ¿Qué es la segmentación? ¿Qué problema tiene?
+	- Es una técnica que permite que las direcciones físicas asignadas a un proceso no sean continuas.
+	- Tiene como problema encajar segmentos de diferentes tamaños en memoria.
+	- Es una técnica que particiona un programa en segmentos. Cada segmento almacena un único tipo de información relacionada y tiene tamaño independiente.
+- ¿Qué es la paginación?
+	- Es una técnica que divide a la memoria física en bloques de tamaño fijo llamados *marcos* y a la memoria lógica en bloques del mismo tamaño llamados *páginas*. 
+- ¿Qué tamaño tiene una página y un marco? ¿Qué lo define?
+	- El tamaño de una página y un marco es una potencia de 2. Esto hace que la traducción de una dirección lógica a un número y página y un desplazamiento sea sencillo.
+	- Está definido por el hardware y el sistema operativo.
+- ¿Qué componente crea las direcciones lógicas? ¿Cómo están compuestas?
+	- Las crea la CPU
+	- Están compuestas por el número de página y el desplazamiento.
+		- `desplazamiento = tamaño de página`
+		- `número de página = tamaño del espacio de direcciones lógicas - tamaño de página`
+- ¿Qué diferencia existe entre la segmentación y la paginación?
+	- La paginación evita la fragmentación externa pero puede sufrir de **fragmentación interna**. Además, la paginación es invisible para el programador, mientras que la segmentación respeta la visión lógica del usuario.
+- ¿Qué son las tablas de páginas? ¿Cuántas existen? ¿Dónde viven? ¿Existen registros que estén relacionados a estas tablas?
+	- Son estructuras en memoria que contienen la **dirección base** de cada página en la memoria física.
+	- Generalmente el sistema operativo mantiene **una tabla de páginas por cada proceso**
+	- Residen en la memoria principal
+	- El hardware utiliza el **PTBR (Page Table Base Register)** para apuntar a la tabla de páginas actual y algunos sistemas usan el **PTLR (Page Table Length Register)** para indicar el tamaño exacto de la tabla de páginas.
+- ¿Qué son las tablas de páginas invertidas? ¿Qué ventajas tiene? ¿Puede coexistir con las otras tablas? ¿Qué ventajas y desventajas tiene?
+	- En lugar de tener una entrada por cada página virtual, tiene **una sola entrada por cada marco físico** real en la memoria RAM.
+	- **Ventaja:** Reducen drásticamente la cantidad de memoria necesaria para almacenar las tablas de páginas
+	- **Desventajas:** Hacen que la búsqueda sea más lenta (se suele solucionar usando tablas Hash) y dificultan mucho la implementación de memoria compartida entre procesos.
+- ¿Cómo esta compuesta una dirección lógica en la arquitectura IA-32? ¿Qué es IA-32-PAE?
+	- En IA-32, una dirección lógica está compuesta por un **selector de 16 bits** y un **desplazamiento de 32 bits**.
+	- En IA-32-PAE (Page Address Extension) es un cambio en la arquitectura que añade un tercer nivel en la paginación y amplía las entradas de 32 a 64 bits. Esto permite que procesadores de 32 bits superen la limitación de 4 GB y puedan acceder hasta 64 GB de memoria física.
+- ¿Existen las tablas de segmentos? ¿Cuáles son? ¿Qué función cumplen? ¿En qué se diferencian con las tablas de páginas? ¿Dónde viven? ¿Qué registros están relacionados con este tipo de tablas?
+	- En la arquitectura IA-32 existen dos tablas principales.
+		- La **LDT (Local Descriptor Table)** que guarda información de los segmentos que son **privados** para un proceso especifico.
+		- La **GDT (Global Descriptor Table)** que guarda los segmentos **compartidos** entre todos los procesos.
+	- Las tablas de segmentos gestionan bloques de memoria lógicos de tamaño variable mediante el uso de pares **base-límite**. En contraste, las tablas de páginas gestionan bloques de tamaño fijo para mapear páginas a marcos en la memoria física.
+	- Residen en la memoria principal
+	- La CPU utiliza **registros de segmentos** para guardar un selector que apunta a la entrada correspondiente en la tabla. Para evitar tener que leer la tabla en la memoria principal en cada instrucción, la CPU cuenta con registros internos ocultos en la MMU donde almacena en caché al descriptor del segmento (la base, el límite y los permisos).
