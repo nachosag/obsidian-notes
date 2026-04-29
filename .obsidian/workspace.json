@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "96c96fbdd1a50036",
+        "id": "5f2fdf8e38653a02",
         "type": "tabs",
         "children": [
           {
-            "id": "0271ec287a0ea741",
+            "id": "cdf077a24e0a2586",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "organizacion-del-computador-2/Repaso/feynmann.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "feynmann"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -104,7 +100,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "matematica-discreta/resumen.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +109,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for resumen"
+              "title": "Enlaces entrantes"
             }
           },
           {
@@ -180,29 +175,31 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "0271ec287a0ea741",
+  "active": "696b8c848afd1155",
   "lastOpenFiles": [
-    "organizacion-del-computador-2/Memoria/memoria-3.md",
-    "organizacion-del-computador-2/Memoria/memoria-5.md",
-    "organizacion-del-computador-2/Repaso/feynmann.md",
-    "organizacion-del-computador-2/Repaso/01-repaso.pdf",
-    "organizacion-del-computador-2/Repaso/00-repaso.pdf",
-    "organizacion-del-computador-2/Arquitectura/arquitectura-1.md",
-    "organizacion-del-computador-2/Memoria/memoria-feynmann.md",
-    "organizacion-del-computador-2/Arquitectura/arquitectura-1-feynmann.md",
+    "organizacion-del-computador-2/compiladores/Sin título.md",
+    "organizacion-del-computador-2/compiladores/2026-04-29.md",
+    "organizacion-del-computador-2/compiladores",
+    "propiedades-de-la-potenciacion.md",
+    "organizacion-del-computador-2/repaso/feynmann.md",
+    "organizacion-del-computador-2/memoria/memoria-3.md",
+    "organizacion-del-computador-2/memoria/memoria-5.md",
+    "organizacion-del-computador-2/repaso/01-repaso.pdf",
+    "organizacion-del-computador-2/repaso/00-repaso.pdf",
+    "organizacion-del-computador-2/arquitectura/arquitectura-1.md",
+    "organizacion-del-computador-2/memoria/memoria-feynmann.md",
+    "organizacion-del-computador-2/arquitectura/arquitectura-1-feynmann.md",
     "organizacion-del-computador-2/Arquitectura/arquitectura-2-feynmann.md",
-    "Sin título.md",
     "Sin título.canvas",
-    "organizacion-del-computador-2/Arquitectura/01-arquitectura.pdf",
-    "organizacion-del-computador-2/Arquitectura/02-arquitectura.pdf",
-    "organizacion-del-computador-2/Memoria/05-segmentacion-paginacion.pdf",
-    "organizacion-del-computador-2/Memoria/03-gestion-de-memoria.pdf",
-    "organizacion-del-computador-2/Memoria/04-gestion-de-memoria.pdf",
-    "organizacion-del-computador-2/FPU/02-fpu.pdf",
-    "organizacion-del-computador-2/FPU/03-fpu.pdf",
-    "organizacion-del-computador-2/Arquitectura/arquitectura-2.md",
-    "organizacion-del-computador-2/FPU/fpu-2.md",
-    "organizacion-del-computador-2/Repaso",
+    "organizacion-del-computador-2/arquitectura/01-arquitectura.pdf",
+    "organizacion-del-computador-2/arquitectura/02-arquitectura.pdf",
+    "organizacion-del-computador-2/memoria/05-segmentacion-paginacion.pdf",
+    "organizacion-del-computador-2/memoria/03-gestion-de-memoria.pdf",
+    "organizacion-del-computador-2/memoria/04-gestion-de-memoria.pdf",
+    "organizacion-del-computador-2/fpu/02-fpu.pdf",
+    "organizacion-del-computador-2/fpu/03-fpu.pdf",
+    "organizacion-del-computador-2/arquitectura/arquitectura-2.md",
+    "organizacion-del-computador-2/fpu/fpu-2.md",
     "organizacion-del-computador-2/Sin título.md",
     "Sin título 1.md",
     "Untitled.md",
@@ -227,7 +224,6 @@
     "Excalidraw/Drawing 2025-12-19 18.39.01.excalidraw.md",
     "matematica-discreta/parciales/grafos/noche-11-06-2025.md",
     "Excalidraw/Drawing 2025-12-19 00.15.01.excalidraw.md",
-    "Excalidraw/Drawing 2025-12-18 21.55.21.excalidraw.md",
     "algebra-lineal/parciales/primer-parcial/Untitled.canvas",
     "Untitled.canvas"
   ]
