@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "5f2fdf8e38653a02",
+        "id": "e9f4d745423139f6",
         "type": "tabs",
         "children": [
           {
-            "id": "cdf077a24e0a2586",
+            "id": "0776b4700c6d52ae",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "test.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "test"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -179,7 +175,7 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "cdf077a24e0a2586",
+  "active": "0776b4700c6d52ae",
   "lastOpenFiles": [
     "test.md",
     "organizacion-del-computador-2/compiladores/Sin título.md",
