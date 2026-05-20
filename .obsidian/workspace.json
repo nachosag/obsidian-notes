@@ -4,17 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "e9f4d745423139f6",
+        "id": "52f55b6ce933adf5",
         "type": "tabs",
         "children": [
           {
-            "id": "0776b4700c6d52ae",
+            "id": "2731bd5eeab4827c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "base-de-datos-2/mongodb/courses-ignacio-borlenghi.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "courses-ignacio-borlenghi"
             }
           }
         ]
@@ -175,8 +179,12 @@
       "obsidian-excalidraw-plugin:New drawing": false
     }
   },
-  "active": "0776b4700c6d52ae",
+  "active": "2731bd5eeab4827c",
   "lastOpenFiles": [
+    "base-de-datos-2/apuntes 12-03-26.md",
+    "base-de-datos-2/mongodb/courses-ignacio-borlenghi.md",
+    "base-de-datos-2/mongodb",
+    "organizacion-del-computador-2/fpu/fpu-2.md",
     "test.md",
     "organizacion-del-computador-2/compiladores/Sin título.md",
     "organizacion-del-computador-2/compiladores/2026-04-29.md",
@@ -198,14 +206,11 @@
     "organizacion-del-computador-2/memoria/03-gestion-de-memoria.pdf",
     "organizacion-del-computador-2/memoria/04-gestion-de-memoria.pdf",
     "organizacion-del-computador-2/fpu/02-fpu.pdf",
-    "organizacion-del-computador-2/fpu/03-fpu.pdf",
     "organizacion-del-computador-2/arquitectura/arquitectura-2.md",
-    "organizacion-del-computador-2/fpu/fpu-2.md",
     "organizacion-del-computador-2/Sin título.md",
     "Sin título 1.md",
     "Untitled.md",
     "base-de-datos-2/anexos/Pasted image 20260315204421.png",
-    "base-de-datos-2/apuntes 12-03-26.md",
     "matematica-discreta/parciales/finales/23-07-2024.md",
     "matematica-discreta/parciales/finales/18-02-2025.md",
     "matematica-discreta/parciales/finales/22-07-2025.md",
@@ -222,8 +227,6 @@
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251220195523.png",
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251220034731.png",
     "matematica-discreta/parciales/grafos/noche-12-11-2025.md",
-    "Excalidraw/Drawing 2025-12-19 18.39.01.excalidraw.md",
-    "matematica-discreta/parciales/grafos/noche-11-06-2025.md",
     "algebra-lineal/parciales/primer-parcial/Untitled.canvas",
     "Untitled.canvas"
   ]
