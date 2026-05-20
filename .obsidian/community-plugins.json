@@ -1,10 +1,11 @@
 [
   "obsidian-excalidraw-plugin",
-  "obsidian-latex-suite",
   "obsidian-latex-environments",
   "obsidian-icon-folder",
   "highlightr-plugin",
   "github-sync",
-  "obsidian-linter",
-  "typewriter-mode"
+  "typewriter-mode",
+  "obsidian-minimal-settings",
+  "obsidian-math-plus",
+  "obsidian-latex-suite"
 ]

@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "base-de-datos-2/mongodb/books-ignacio-borlenghi.md",
+                "file": "base-de-datos-2/mongodb/library-ignacio-borlenghi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "books-ignacio-borlenghi"
+              "title": "library-ignacio-borlenghi"
             }
           }
         ]
@@ -61,7 +61,7 @@
                 "sortOrder": "alphabetical"
               },
               "icon": "lucide-search",
-              "title": "Search"
+              "title": "Buscar"
             }
           },
           {
@@ -176,16 +176,29 @@
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": false,
       "github-sync:Sync with Remote": false,
-      "obsidian-excalidraw-plugin:New drawing": false
+      "obsidian-excalidraw-plugin:New drawing": false,
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
   "active": "2731bd5eeab4827c",
   "lastOpenFiles": [
+    "base-de-datos-2/mongodb/hospital-turns-ignacio-borlenghi.md",
+    "base-de-datos-2/mongodb/e-commerce-ignacio-borlenghi.md",
+    "base-de-datos-2/mongodb/flights-ignacio-borlenghi.md",
+    "base-de-datos-2/mongodb/courses-ignacio-borlenghi.md",
+    "base-de-datos-2/mongodb/multiple-choice-ignacio-borlenghi.md",
+    "base-de-datos-2/mongodb/library-ignacio-borlenghi.md",
+    "base-de-datos-2/cassandra/hotels-2-ignacio-borlenghi.md",
+    "base-de-datos-2/cassandra/hotels-1-ignacio-borlenghi.md",
+    "base-de-datos-2/cassandra/portal-ignacio-borlenghi.md",
+    "base-de-datos-2/cassandra/streaming-platform-ignacio-borlenghi.md",
+    "base-de-datos-2/cassandra/educational-platform-ignacio-borlenghi.md",
+    "base-de-datos-2/mongodb/books-ignacio-borlenghi.md",
+    "base-de-datos-2/cassandra",
     "base-de-datos-2/mongodb/languages-ignacio-borlenghi.md",
     "base-de-datos-2/mongodb/quotes-ignacio-borlenghi.md",
     "matematica-discreta/practica-01/practica-01.md",
     "matematica-discreta/practica-01/practica-01-MD.pdf",
-    "base-de-datos-2/mongodb/books-ignacio-borlenghi.md",
     "base-de-datos-2/apuntes 12-03-26.md",
     "base-de-datos-2/mongodb",
     "organizacion-del-computador-2/fpu/fpu-2.md",
@@ -201,28 +214,16 @@
     "organizacion-del-computador-2/repaso/00-repaso.pdf",
     "organizacion-del-computador-2/arquitectura/arquitectura-1.md",
     "organizacion-del-computador-2/memoria/memoria-feynmann.md",
-    "organizacion-del-computador-2/arquitectura/arquitectura-1-feynmann.md",
-    "organizacion-del-computador-2/Arquitectura/arquitectura-2-feynmann.md",
     "Sin título.canvas",
     "organizacion-del-computador-2/arquitectura/01-arquitectura.pdf",
     "organizacion-del-computador-2/arquitectura/02-arquitectura.pdf",
     "organizacion-del-computador-2/memoria/05-segmentacion-paginacion.pdf",
     "organizacion-del-computador-2/memoria/03-gestion-de-memoria.pdf",
-    "organizacion-del-computador-2/memoria/04-gestion-de-memoria.pdf",
-    "organizacion-del-computador-2/arquitectura/arquitectura-2.md",
-    "organizacion-del-computador-2/Sin título.md",
-    "Sin título 1.md",
-    "Untitled.md",
     "base-de-datos-2/anexos/Pasted image 20260315204421.png",
-    "matematica-discreta/parciales/finales/23-07-2024.md",
-    "matematica-discreta/parciales/finales/18-02-2025.md",
-    "matematica-discreta/parciales/finales/22-07-2025.md",
-    "matematica-discreta/parciales/combinatoria/noche-24-09-2025.md",
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251221013143.png",
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251221013122.png",
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251221013109.png",
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251221013046.png",
-    "matematica-discreta/parciales/combinatoria/mañana-25-09-2025.md",
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251221001538.png",
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251220195546.png",
     "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251220195535.png",
