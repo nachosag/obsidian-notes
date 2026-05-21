@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "base-de-datos-2/mongodb/library-ignacio-borlenghi.md",
+                "file": "base-de-datos-2/mongodb/books-ignacio-borlenghi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "library-ignacio-borlenghi"
+              "title": "books-ignacio-borlenghi"
             }
           }
         ]
@@ -176,18 +176,17 @@
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": false,
       "github-sync:Sync with Remote": false,
-      "obsidian-excalidraw-plugin:New drawing": false,
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
   "active": "2731bd5eeab4827c",
   "lastOpenFiles": [
+    "base-de-datos-2/mongodb/library-ignacio-borlenghi.md",
     "base-de-datos-2/mongodb/hospital-turns-ignacio-borlenghi.md",
     "base-de-datos-2/mongodb/e-commerce-ignacio-borlenghi.md",
     "base-de-datos-2/mongodb/flights-ignacio-borlenghi.md",
     "base-de-datos-2/mongodb/courses-ignacio-borlenghi.md",
     "base-de-datos-2/mongodb/multiple-choice-ignacio-borlenghi.md",
-    "base-de-datos-2/mongodb/library-ignacio-borlenghi.md",
     "base-de-datos-2/cassandra/hotels-2-ignacio-borlenghi.md",
     "base-de-datos-2/cassandra/hotels-1-ignacio-borlenghi.md",
     "base-de-datos-2/cassandra/portal-ignacio-borlenghi.md",
