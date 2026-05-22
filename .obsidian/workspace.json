@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "base-de-datos-2/plan-de-estudio.md",
+                "file": "base-de-datos-2/cassandra/streaming-platform-ignacio-borlenghi.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "plan-de-estudio"
+              "title": "streaming-platform-ignacio-borlenghi"
             }
           }
         ]
@@ -88,7 +88,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 265.5
+    "width": 265.5,
+    "collapsed": true
   },
   "right": {
     "id": "60744be18a06282d",
@@ -168,6 +169,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "markdown-importer:Abrir el importador de Markdown": false,
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
       "canvas:Crear nuevo lienzo": false,
@@ -181,8 +183,13 @@
   },
   "active": "91191038fadcfb8b",
   "lastOpenFiles": [
-    "base-de-datos-2/notes/errores-confusiones.md",
+    "base-de-datos-2/cassandra/educational-platform-ignacio-borlenghi.md",
+    "base-de-datos-2/cassandra/hotels-1-ignacio-borlenghi.md",
+    "base-de-datos-2/cassandra/hotels-2-ignacio-borlenghi.md",
+    "base-de-datos-2/cassandra/portal-ignacio-borlenghi.md",
+    "base-de-datos-2/cassandra/streaming-platform-ignacio-borlenghi.md",
     "base-de-datos-2/plan-de-estudio.md",
+    "base-de-datos-2/notes/errores-confusiones.md",
     "base-de-datos-2/notes/apuntes-07-05-26.md",
     "base-de-datos-2/notes/apuntes-30-04-26.md",
     "base-de-datos-2/notes/apuntes-27-4-26.md",
@@ -207,11 +214,6 @@
     "base-de-datos-2/mongodb/languages-ignacio-borlenghi.md",
     "base-de-datos-2/mongodb/library-ignacio-borlenghi.md",
     "base-de-datos-2/mongodb/multiple-choice-ignacio-borlenghi.md",
-    "base-de-datos-2/cassandra/hotels-2-ignacio-borlenghi.md",
-    "base-de-datos-2/cassandra/hotels-1-ignacio-borlenghi.md",
-    "base-de-datos-2/cassandra/portal-ignacio-borlenghi.md",
-    "base-de-datos-2/cassandra/streaming-platform-ignacio-borlenghi.md",
-    "base-de-datos-2/cassandra/educational-platform-ignacio-borlenghi.md",
     "base-de-datos-2/cassandra",
     "base-de-datos-2/mongodb/quotes-ignacio-borlenghi.md",
     "matematica-discreta/practica-01/practica-01.md",
