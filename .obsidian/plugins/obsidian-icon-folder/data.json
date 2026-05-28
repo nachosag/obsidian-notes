@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "⚖",
       "LiComputer",
       "LiChartColumnStacked",
       "📎",
-      "🎨",
-      "✍"
+      "🎨"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -49,5 +49,6 @@
   "matematica-discreta": "🧩",
   "matematica-discreta/practica-01/practica-01.md": "✍",
   "base-de-datos-2": "LiChartColumnStacked",
-  "organizacion-del-computador-2": "LiComputer"
+  "organizacion-del-computador-2": "LiComputer",
+  "sociedad-informatica": "⚖"
 }

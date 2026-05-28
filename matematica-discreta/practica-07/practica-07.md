@@ -1,10 +1,10 @@
-### Ejercicio 1
+# Ejercicio 1
 ![[Pasted image 20251211192820.png]]
 
-### Ejercicio 2
+# Ejercicio 2
 ![[Pasted image 20251211192837.png]]
 
-### Ejercicio 3
+# Ejercicio 3
 ![[Pasted image 20251211192855.png]]
 Sea $T$ un árbol con exactamente 2 vértices de grado 1 (hojas). Entonces $T$ es un camino ($P_n$).
 
@@ -43,7 +43,7 @@ $T$ es un grafo conexo con:
 Esta estructura es, por definición, la de un grafo camino $P_n$.
 $$\therefore \text{T es un camino. }$$
 
-### Ejercicio 4
+# Ejercicio 4
 ![[Pasted image 20251211192905.png]]
 Sea $T$ un árbol tal que todo vértice no pendiente tiene grado 3. Nos piden demostrar que $|V(T)|$ es par.
 
@@ -51,7 +51,7 @@ Sabemos que un vértice $v$ puede tener grado 3 o 1.
 Luego, sabemos que la cantidad de vértices de grado impar en un grafo debe ser par.
 Como $T$ no tiene vértices de grado par, podemos concluir que tiene cantidad par de vértices.
 
-### Ejercicio 5
+# Ejercicio 5
 ![[Pasted image 20251211192916.png]]
 Sea $T$ un bosque con $k$ componentes conexas, a las que llamaremos $C_{1}, C_{2}, \dots, C_{k}$.
 
@@ -71,13 +71,13 @@ $$|E(T)| = \sum_{i=1}^{k} |V(C_{i})| + \sum_{i=1}^{k} (-1)$$
 Como la primera parte es el total de vértices de $T$ y sumar $-1$ $k$ veces es igual a $-k$, concluimos:
 $$|E(T)| = |V(T)| - k$$
 
-### Ejercicio 6
+# Ejercicio 6
 ![[Pasted image 20251211192927.png]]
 
-### Ejercicio 7
+# Ejercicio 7
 ![[Pasted image 20251211192939.png]]
 
-### Ejercicio 8
+# Ejercicio 8
 ![[Pasted image 20251211192952.png]]
 
 Sea $T$ un árbol con $109$ vértices y $7$ componentes conexas. Nos piden calcular su cantidad de aristas.
@@ -90,7 +90,7 @@ donde $k$ representa la cantidad de componentes conexas, tenemos:
 $$
 |E(T)| = 109-7 = 102
 $$
-### Ejercicio 9
+# Ejercicio 9
 ![[Pasted image 20251211193008.png]]
 Sea $T$ un árbol con un vértice de grado 5. Nos piden demostrar que $T$ tiene al menos 5 hojas.
 
@@ -109,7 +109,7 @@ Dentro de $C_i$, una de esas hojas podría ser el vértice $v_i$ (que se conecta
 Como $w$ no está conectado a $v$, su grado en $T$ es idéntico a su grado en $C_i$. Es decir, $d_T(w) = d_{C_i}(w) = 1$. Por lo tanto, $w$ es una hoja en $T$.
 
 Conclusión: Cada una de las 5 componentes conexas aporta, al menos, una hoja al grafo original $T$. Por lo tanto, $T$ tiene al menos 5 hojas.
-### Ejercicio 10
+# Ejercicio 10
 ![[Pasted image 20251211193022.png]]
 El grafo tiene 17 vértices.
 El grafo tiene:
@@ -124,20 +124,20 @@ Verifiquemos utilizando la fórmula de Euler:
 $$
 v-e+f=2 \leftrightarrow 17-34+19=2 \leftrightarrow 2=2
 $$
-### Ejercicio 11
+# Ejercicio 11
 ![[Pasted image 20251211193038.png]]
 Usando la Fórmula de Euler tenemos que existen $v-e+f=2\leftrightarrow 6-10+f=2 \leftrightarrow f=2-6+10 \leftrightarrow f=6$ caras para cualquier grafo conexo con 6 vértices y 10 aristas.
-### Ejercicio 12
+# Ejercicio 12
 ![[Pasted image 20251211193049.png]]
 Sumemos los grados de los vértices para obtener la cantidad de aristas de $G$.
 $$
 \frac{2\cdot{3}+3\cdot{3}+4\cdot{2}+5}{2}=\frac{28}{2}=14=|E(G)|
 $$
 Por la Fórmula de Euler existen $v-e+f=2\leftrightarrow{9}-14+f=2\leftrightarrow f=2-9+14\leftrightarrow f=7$ caras para cualquier grafo conexo con 9 vértices y 14 aristas.
-### Ejercicio 13
+# Ejercicio 13
 ![[Pasted image 20251211193057.png]]
 
-### Ejercicio 14
+# Ejercicio 14
 ![[Pasted image 20251211193108.png]]
 Se pide probar que el grafo que se obtiene al borrar **dos** aristas cualesquiera del grafo $K_{6}$ se obtiene un grafo no planar.
 ¿Es cierto que si borramos **tres** aristas cualesquiera del grafo $K_{6}$ se obtiene un grafo no planar?
@@ -183,7 +183,7 @@ Si eliminamos 3 aristas específicas de $K_{6}$ obtenemos un grafo de 6 vértice
 ![[Pasted image 20251217202743.png]]
 
 Luego, la afirmación es falsa ya que no todo $K_{6}$ con 3 aristas menos cualesquiera es no planar.
-### Ejercicio 14
+# Ejercicio 14
 ![[Pasted image 20251211193125.png]]
 Determinar si las siguientes afirmaciones son verdaderas o falsas. Justifique en cada caso.
 
@@ -232,10 +232,10 @@ Sabemos que $K_{5}$ y $K_{3,3}$ poseen ciclos. La operación de subdivisión con
 Si $G$ no fuera planar, por el **Teorema de Kuratowski**, contendría una subdivisión de $K_{5}$ o $K_{3,3}$. Esto implicaría necesariamente que $G$ tiene ciclos. Como asumimos que $G$ es un bosque (grafo acíclico), llegamos a una contradicción.
 
 Esta contradicción proviene de suponer que $G$ es un bosque. Por lo que la afirmación es **verdadera**.
-### Ejercicio 16
+# Ejercicio 16
 ![[Pasted image 20251211193137.png]]
 
-### Ejercicio 17
+# Ejercicio 17
 ![[Pasted image 20251211193151.png]]
 Sea $G$ un grafo plano, simple y conexo. Suponiendo que:
 - $G$ admite una descomposición en 2 copias de $C_{3}$, 1 copia de $C_{4}$ y 1 copia de $K_{4}$.
@@ -278,7 +278,7 @@ $$
 <mark style="background: #FFB8EBA6;">c) Decidir si G es bipartito</mark>
 
 Un grafo es bipartito si y solo si no contiene ciclos de longitud impar. Como $G$ se descompone en 2 copias de $C_{3}$, $G$ no es bipartito.
-### Ejercicio 18
+# Ejercicio 18
 ![[Pasted image 20251211193202.png]]
 Sea $G$ un grafo simple simple sin vértices aislados. Suponiendo que una posible descomposición de $G$ es $P_{3},P_{4},C_{4},C_{5}$.
 Nos piden:
@@ -305,11 +305,11 @@ los únicos valores dentro del rango $6 \leq n \leq 16$ son $n=7$ y $n=14$.
 
 Si $G$ se puede descomponer en un $C_{5}$, implica que $G$ contiene un ciclo de longitud impar. Por lo tanto, $G$ no es bipartito.
 Luego, un bosque es un grafo sin ciclos, por lo tanto $G$ no es un bosque.
-### Ejercicio 19
+# Ejercicio 19
 ![[Pasted image 20251211193215.png]]
 
-### Ejercicio 20
+# Ejercicio 20
 ![[Pasted image 20251211193229.png]]
 
-### Ejercicio 21
+# Ejercicio 21
 ![[Pasted image 20251211193241.png]]

@@ -1,6 +1,6 @@
 # Vectores, Producto Escalar y Ortogonalidad
 
-### Propiedades del Producto Escalar
+## Propiedades del Producto Escalar
 
 - Para todo `x, y, z ∈ Rⁿ` y `λ ∈ ℝ`, el producto escalar cumple:
     - **Conmutatividad**: `x · y = y · x`
@@ -10,7 +10,7 @@
 - **Fórmula Geométrica**: La relación entre el producto escalar y el ángulo `θ` entre dos vectores `a` y `b` es: `a · b = ||a|| · ||b|| · cos(θ)`
 - **Desigualdad de Schwarz**: `|aᵀb| ≤ ||a|| ||b||`. Esta desigualdad es equivalente a `|cos(θ)| ≤ 1`.
 
-### Utilidades de la Ortogonalidad
+## Utilidades de la Ortogonalidad
 
 - **Verificación de Perpendicularidad**: Dos vectores son perpendiculares (ortogonales) si su producto escalar es cero, ya que `cos(90°) = 0`.
 - **Proyección de un Vector**:

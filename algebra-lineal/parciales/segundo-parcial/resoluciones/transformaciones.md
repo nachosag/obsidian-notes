@@ -5,7 +5,7 @@ $$M_{EE}(T) = A = \begin{pmatrix} 1 & a & 0 \\ 0 & 2 & 0 \\ 0 & a & 1 \end{pmatr
 
 donde $a$ es un parámetro real.
 
-### **<mark style="background: #FFF3A3A6;">Apartado a) Teorema de la Dimensión y Clasificación</mark>**
+## **<mark style="background: #FFF3A3A6;">Apartado a) Teorema de la Dimensión y Clasificación</mark>**
 
 1. Determina los valores de $a \in \mathbb{R}$ para los cuales la transformación lineal $T$ es un **isomorfismo**. Justifica tu respuesta usando el determinante de la matriz $A$.
 
@@ -47,7 +47,7 @@ A = \begin{pmatrix}
 \end{pmatrix}
 $$
 
-### Núcleo
+## Núcleo
 
 El núcleo está formado por los vectores $x \in \mathbb{R}^{3}$ tales que $T(x)=0$. Resolvamos $A\cdot x=0$.
 $$
@@ -78,7 +78,7 @@ Notemos que la solución a este sistema es el vector nulo, por lo tanto, el úni
 - **Base del núcleo**: $B_{Nu(T)}=\{  \}$.
 - **Dimensión del núcleo**: $dim(Nu(T))=0$.
 
-### Imagen
+## Imagen
 
 La imagen está generada por los vectores columna de la matriz $A$.
 $$
@@ -89,7 +89,7 @@ Como los tres vectores columna son linealmente independientes, entonces forman u
 - **Base de la imagen**: $B_{\mathrm{Im}(T)}=\{ (1,0,0),(0,2,0),(0,0,1) \}$.
 - **Dimensión de la imagen**: $dim(\mathrm{Im}(T))=3$.
 
-### Clasificación
+## Clasificación
 $$
 T:\mathbb{R}^{3}\to \mathbb{R}^{3}
 $$
@@ -99,13 +99,13 @@ $T$ es un isomorfismo porque $T$ es monomorfismo y epimorfismo simultáneamente.
 
 ---
 
-### **<mark style="background: #FFF3A3A6;">Apartado b) Autovalores y Autoespacios</mark>**
+## **<mark style="background: #FFF3A3A6;">Apartado b) Autovalores y Autoespacios</mark>**
 
 Considera el caso $a=1$. La matriz es $A = \begin{pmatrix} 1 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix}$.
 
 1. Calcula todos los **autovalores** de la matriz $A$ y sus respectivas **multiplicidades algebraicas**.
 
-### Buscamos el polinomio característico $P_{A}(\lambda)$
+## Buscamos el polinomio característico $P_{A}(\lambda)$
 El polinomio característico está definido como
 $$
 P_{A}(\lambda)=\det(A-\lambda I)
@@ -140,7 +140,7 @@ $$
 P_{A}(\lambda)=(1-\lambda)\cdot (1-\lambda)\cdot(2-\lambda)
 $$
 
-### Buscamos los autovalores
+## Buscamos los autovalores
 
 Los autovalores son las raíces del $P_{A}(\lambda)$, es decir, son todos los valores de $\lambda \in \mathbb{R}$ que hacen que $P_{A}(\lambda)=0$.
 $$
@@ -155,7 +155,7 @@ Notemos que la igualdad se cumple si:
 
 2. Determina una **base** para cada **autoespacio** asociado a los autovalores reales de $A$.
 
-### Consideramos $\lambda=1$ en $A-\lambda I$
+## Consideramos $\lambda=1$ en $A-\lambda I$
 $$
 A-\lambda I = \begin{pmatrix}
 1-\lambda & 1 & 0 \\
@@ -184,7 +184,7 @@ A-\lambda I = \begin{pmatrix}
 0 & 0 & 0
 \end{pmatrix}
 $$
-### Resolvemos $(A-\lambda I)x=0$
+## Resolvemos $(A-\lambda I)x=0$
 $$
 \begin{pmatrix}
 0 & 1 & 0 \\
@@ -210,7 +210,7 @@ S_{\lambda=1}=\{ (1,0,0),(0,0,1) \}
 $$
 Notemos que $dim(S_{\lambda=1})=2$.
 
-### Consideremos $\lambda=2$ en $A-\lambda I$
+## Consideremos $\lambda=2$ en $A-\lambda I$
 $$
 A-\lambda I = \begin{pmatrix}
 1-\lambda & 1 & 0 \\
@@ -232,7 +232,7 @@ A-\lambda I = \begin{pmatrix}
 0 & 1 & -1
 \end{pmatrix}
 $$
-### Resolvemos $(A-\lambda I)x=0$
+## Resolvemos $(A-\lambda I)x=0$
 $$
 \begin{pmatrix}
 -1 & 1 & 0 \\
@@ -268,7 +268,7 @@ Notemos que $dim(S_{\lambda=2})=1$.
 
 ---
 
-### **<mark style="background: #FFF3A3A6;">Apartado c) Diagonalización</mark>**
+## **<mark style="background: #FFF3A3A6;">Apartado c) Diagonalización</mark>**
 
 1. ¿Es la matriz $A$ diagonalizable para $a=1$? Justifica tu respuesta.
 
@@ -346,7 +346,7 @@ Sea $B = \{(1, 0, 1), (0, 1, 1), (1, 1, 0)\}$ una base de $\mathbb{R}^3$ y sea $
 
 $$M_{BE}(T) = A = \begin{pmatrix} 1 & 0 & 2 \\ 2 & 1 & 3 \\ 0 & -1 & -2 \\ 1 & 1 & 3 \end{pmatrix}$$
 
-### **<mark style="background: #FFF3A3A6;">Apartado a) Núcleo e Imagen</mark>**
+## **<mark style="background: #FFF3A3A6;">Apartado a) Núcleo e Imagen</mark>**
 
 1. Determina una **base** y la **dimensión** del **Núcleo** $(\operatorname{Nu}(T))$ de $T$. 
 
@@ -446,7 +446,7 @@ $$
 dim(\mathrm{Im}(T))=3
 $$
 
-### Imagen
+## Imagen
 
 La imagen de una transformación lineal está generada por las imágenes de los vectores de cualquier base del dominio, por ejemplo, la base $B$.
 $$
@@ -464,7 +464,7 @@ $$
 
 ---
 
-### **<mark style="background: #FFF3A3A6;">Apartado b) Clasificación y Fórmula</mark>**
+## **<mark style="background: #FFF3A3A6;">Apartado b) Clasificación y Fórmula</mark>**
 
 1. **Clasifica** la transformación lineal $T$ (monomorfismo, epimorfismo, isomorfismo). 
 
@@ -562,7 +562,7 @@ M_{EE}(T) =
 \end{pmatrix}
 $$
 $$M_{E E}(T) = \begin{pmatrix} \frac{3}{2} & \frac{1}{2} & -\frac{1}{2} \\ 2 & 1 & 0 \\ -\frac{1}{2} & -\frac{3}{2} & \frac{1}{2} \\ \frac{3}{2} & \frac{3}{2} & -\frac{1}{2} \end{pmatrix}$$
-### Buscamos la fórmula
+## Buscamos la fórmula
 
 Con la matriz en las bases canónicas $M_{EE}(T)$, la fórmula de la transformación $T(x,y,z)$ se obtiene realizando
 $$
@@ -579,7 +579,7 @@ $$T(x, y, z) = \left( \frac{3}{2}x + \frac{1}{2}y - \frac{1}{2}z, \quad 2x + y, 
 
 ---
 
-### **<mark style="background: #FFF3A3A6;">Apartado c) Composición de Transformaciones</mark>**
+## **<mark style="background: #FFF3A3A6;">Apartado c) Composición de Transformaciones</mark>**
 
 Sea $L: \mathbb{R}^4 \to \mathbb{R}^2$ la transformación lineal cuya fórmula es $L(x_1, x_2, x_3, x_4) = (x_1 - x_4, 2x_2 + x_3)$.
 
@@ -733,7 +733,7 @@ Sea $B = \{(-1, 0, 1), (0, 1, 1), (1, 1, 1)\}$ una base de $\mathbb{R}^3$, y sea
 
 $$M_{B E}(T) = A = \begin{pmatrix} 1 & 2 & 3 \\ 1 & 1 & 1 \\ 0 & 1 & 2 \end{pmatrix}$$
 
-### **<mark style="background: #FFF3A3A6;">Apartado a) Análisis de Núcleo e Imagen</mark>**
+## **<mark style="background: #FFF3A3A6;">Apartado a) Análisis de Núcleo e Imagen</mark>**
 
 1. Determina el **rango** de la matriz $A$ y utiliza este valor para encontrar la **dimensión** de la $\operatorname{Im}(T)$.
 
@@ -771,7 +771,7 @@ La imagen está generada por las columnas de $M_{BE}(T)$, y una base se forma co
 
 La imagen, $\mathrm{Im}(T)$, está generada por las transformaciones de los vectores de la base $B$ expresados en coordenadas de la base $E$.
 
-### Base y dimensión de la imagen
+## Base y dimensión de la imagen
 $$
 B_{\mathrm{Im}(T)}=\{ (1,1,0),(2,1,1) \}
 $$
@@ -801,7 +801,7 @@ $$
 B_{\mathrm{Im}(T)}=\{ (1,1,0),(2,1,1) \}
 $$
 
-### Base para el núcleo
+## Base para el núcleo
 
 Para hallar el núcleo debemos encontrar las soluciones del siguiente sistema de ecuaciones homogéneos
 $$
@@ -853,7 +853,7 @@ $$
 
 ---
 
-### **<mark style="background: #FFF3A3A6;">Apartado b) Clasificación y Fórmula</mark>**
+## **<mark style="background: #FFF3A3A6;">Apartado b) Clasificación y Fórmula</mark>**
 
 1. **Clasifica** la transformación lineal $T$ (monomorfismo, epimorfismo, isomorfismo).
 
@@ -924,7 +924,7 @@ $$
 
 ---
 
-### **<mark style="background: #FFF3A3A6;">Apartado c) Extensión y Coordenadas</mark>**
+## **<mark style="background: #FFF3A3A6;">Apartado c) Extensión y Coordenadas</mark>**
 
 1. Sea $\mathbf{w} = (4, 3, 3)$. Determina las **coordenadas** $[\mathbf{w}]_{B}$ del vector $\mathbf{w}$ en la base $B$.
 
@@ -1005,7 +1005,7 @@ $$M_{B E}(T) = A = \begin{pmatrix} 2 & 1 & 3 \\ 1 & 0 & 1 \\ -1 & 1 & 0 \end{pma
 
 ---
 
-### **<mark style="background: #FFF3A3A6;">Apartado a) Análisis Dimensional y Bases</mark>**
+## **<mark style="background: #FFF3A3A6;">Apartado a) Análisis Dimensional y Bases</mark>**
 
 1. Determina el **rango** de la matriz $A$ y utiliza el Teorema de la Dimensión para calcular $\dim(\operatorname{Nu}(T))$.
 
@@ -1089,7 +1089,7 @@ $$
 
 2. Halla una **base** para el $\operatorname{Nu}(T)$ y una **base** para la $\operatorname{Im}(T)$.
 
-### Núcleo
+## Núcleo
 
 El núcleo son todas las soluciones del sistema
 $$
@@ -1136,7 +1136,7 @@ $$
 B_{Nu(T)}=\left\{  \left( -\frac{1}{2},-1,1 \right)  \right\}
 $$
 
-### Imagen
+## Imagen
 
 La matriz $M_{BE}(T)$ está conformada por las imágenes de los vectores de la base $B$ escritos en coordenadas de la base $E$. 
 
@@ -1164,7 +1164,7 @@ Como $T$ no es monomorfismo ni epimorfismo, $T$ no es isomorfismo.
 
 ---
 
-### **<mark style="background: #FFF3A3A6;">Apartado b) Matriz Canónica y Fórmula</mark>**
+## **<mark style="background: #FFF3A3A6;">Apartado b) Matriz Canónica y Fórmula</mark>**
 
 1. Calcula la matriz de cambio de base $C_{E B} = (C_{B E})^{-1}$.
 
@@ -1241,7 +1241,7 @@ $$
 
 ---
 
-### **<mark style="background: #FFF3A3A6;">Apartado c) Composición y Coordenadas</mark>**
+## **<mark style="background: #FFF3A3A6;">Apartado c) Composición y Coordenadas</mark>**
 
 1. Sea $L: \mathbb{R}^3 \to \mathbb{R}^3$ la transformación lineal dada por $L(\mathbf{w}) = (x, y, 0)$. Halla la matriz canónica $M_{E E}(L)$.
 
@@ -1292,7 +1292,7 @@ $$
 
 3. Sea $\mathbf{v} = (0, 2, 2)$. Determina $[\mathbf{v}]_{B}$ y calcula $[(L \circ T)(\mathbf{v})]_{E}$.
 
-### Calculamos $[\mathbf{v}]_{B}$
+## Calculamos $[\mathbf{v}]_{B}$
 
 Tenemos la base $B = \{(1, 1, 0), (1, 0, 1), (0, 1, 1)\}$ y el vector $\mathbf{v}=(0,2,2)$.
 
@@ -1326,7 +1326,7 @@ $$
 2
 \end{pmatrix}
 $$
-### Calculamos $[(L \circ T)(\mathbf{v})]_{E}$
+## Calculamos $[(L \circ T)(\mathbf{v})]_{E}$
 
 $$
 [(L \circ T)(\mathbf{v})]_{E} = M_{BE}(L \circ T)\cdot[\mathbf{v}]_{B}

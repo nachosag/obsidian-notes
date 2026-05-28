@@ -1,4 +1,4 @@
-### Ejercicio 1
+# Ejercicio 1
 Sea $G$ un grafo simple conexo, no completo. Probar que existen tres vértices de $G$, $x,y,z$, tales que $x$ es vecino con $y$, $y$ es vecino con $z$, pero $x$ no es vecino con $z$.
 
 Conocemos los siguientes datos:
@@ -10,7 +10,7 @@ a=v_{0},v_{1},v_{2},\dots,v_{k}=b,\quad k\geq2
 $$ Si usamos los tres primeros vértices del camino $P_{k}:x=v_{0},y=v_{1},z=v_{2}$: si $v_{0}$ fuera adyacente a $v_{2}$ entonces existiría un camino de longitud 1 entre ellos y esto implicaría que la secuencia $v_{0},v_{1},v_{2}$ ya no podría ser el camino de longitud mínima porque la ruta $v_{0},v_{2}$ sería mas corta.
 
 Por lo tanto, si $P_{k}$ es un amino de longitud mínima, se debe cumplir que $v_{0}$ y $v_{2}$ no son adyacentes.
-### Ejercicio 2
+# Ejercicio 2
 <mark style="background: #FFB8EBA6;">(A)</mark> Demostrar que para todo vértice $v$ de un grafo simple $G$ con $n$ vértices, el grado de $v$ en $\overline{G}$ es $d_{\overline{G}}(v)=n-d_{G}(v)-1$.
 
 Sea $G$ un grafo simple con un conjunto de vértices $V(G)$. Sea $n=|V(G)|$.
@@ -37,7 +37,7 @@ Dado que un ciclo debe tener al menos 3 vértices (para ser simple), las únicas
 Debido a que existe una relación biyectiva (uno a uno) entre los grafos simples $G$ y sus complementos $\overline{G}$, la cantidad de grafos $G$ que cumplen la condición inicial es igual a la cantidad de grafos no isomorfos $\overline{G}$ que encontramos.
 
 Respuesta: existen solamente dos grafos simples con 7 vértices que son 4-regular.
-### Ejercicio 3
+# Ejercicio 3
 Demostrar que si $G$ es un grafo simple con exactamente $2n$ vértices y $(n-1)$-regular, entonces su complemento $\overline{G}$ es conexo.
 
 Tenemos:
@@ -73,7 +73,7 @@ Hemos llegado a una contradicción fundamental:
 Es lógicamente imposible que el grado de un vértice sea simultáneamente igual a $n$ y a la vez menor o igual que $n-2$.
 
 La contradicción surgió directamente de nuestra suposición inicial de que $\overline{G}$ era disconexo. Dado que esta suposición conduce a una imposibilidad lógica, debe ser falsa. Por lo tanto, la afirmación original debe ser verdadera: el grafo $\overline{G}$ es conexo.
-### Ejercicio 4
+# Ejercicio 4
 Decidir si las siguientes afirmaciones son verdaderas o falsas. En caso de ser verdaderas, demostrarlas y en caso de ser falsas, exhibir un contraejemplo.
 
 <mark style="background: #FFB8EBA6;">(A)</mark> Si $G$ es un grafo bipartito con al menos cinco vértices, entonces $\overline{G}$ contiene al menos un ciclo impar.

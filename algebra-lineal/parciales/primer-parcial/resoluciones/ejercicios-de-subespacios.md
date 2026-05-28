@@ -1,4 +1,4 @@
-### Ejercicio 1
+# Ejercicio 1
 ![[Pasted image 20251115194547.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark>
 Para decidir si $\mathbb{S}=\mathbb{T}$ debemos comparar sus bases y su dimensiones
@@ -163,7 +163,7 @@ Podemos agregar el vector $e_{3}=(0,1,0,0)\in \mathbb{R}^{4}$ a $B'$.
 $$
 B' = \{ (2,0,2,0),(0,1,0,0),(0,0,3,3),(1,0,1,2) \}
 $$
-### Ejercicio 4
+# Ejercicio 4
 ![[Pasted image 20251115202823.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark>
 Sea $\mathbb{S}=gen\{ v_{1},v_{2} \}$ con $v_{1}=(-1,0,-1,1)$ y $v_{2}=(1,1,1,1)$.
@@ -380,7 +380,7 @@ Por lo tanto
 $$
 B'=\{ (-1,1,-1,3),(1,0,0,0),(0,1,0,0),(0,0,1,0) \}
 $$
-### Ejercicio 5
+# Ejercicio 5
 ![[Pasted image 20251115220656.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark>
 
@@ -637,7 +637,7 @@ $$
 Como el sistema tiene solución, significa que existe una combinación lineal de los generadores de $S$ que da como resultado el vector $(-2,-2,-1,0)$.
 
 Por lo tanto $(-2,-2,-1,0)\in S$.
-### Ejercicio 12
+# Ejercicio 12
 ![[Pasted image 20251116005331.png]]
 Buscamos $B_{\mathbb{S}}$ y $dim(\mathbb{S})$.
 El espacio vectorial $\mathbb{S}$ está definido por el siguiente sistema de ecuaciones
@@ -837,7 +837,7 @@ Notemos que la igualdad se cumple siempre.
 Por lo que $v_{2}\in \mathbb{S}$.
 
 Como demostramos que $dim(\mathbb{S})=dim(\mathbb{T})$ y $B_{\mathbb{T}}\subseteq \mathbb{S}$ podemos afirmar que $\mathbb{S=T}$ con $k\in \{ 1,-1 \}$.
-### Ejercicio 15
+# Ejercicio 15
 ![[Pasted image 20251116005407.png]]
 El subespacio $S$ está definido por el conjunto generador $S=gen\{ (1,-1,2),(0,0,1) \}$.
 
@@ -998,7 +998,7 @@ $$W = \text{gen}\{(3, -3, 2)\}$$
 **Conclusión:** La única intersección es el vector nulo. Dado que $\text{dim}(V)+\text{dim}(W)=3$ y $V \cap W = \{\vec{0}\}$, la suma es directa y genera $\mathbb{R}^3$.
 
 ---
-### Ejercicio 18
+# Ejercicio 18
 ![[Pasted image 20251116005433.png]]
 Busquemos $B_{S}$ y $dim(S)$.
 

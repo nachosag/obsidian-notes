@@ -14,15 +14,15 @@ Un grafo es mucho más que un dibujo de puntos y líneas; es una estructura mate
         
     - **Conjunto de Aristas (**$E(G)$**):** Enlaces o líneas que conectan pares de vértices.
         
-    - **Función de Incidencia (**$\psi$**):** La relación que asocia a cada arista un par de vértices (llamados **extremos**). Si las aristas tienen dirección, es un grafo dirigido (digrafo); si no, es no dirigido. _En este compendio nos enfocamos en grafos no dirigidos._
+    - **Función de Incidencia (**$\psi$**):** La relación que asocia a cada arista un par de vértices (llamados **extremos**). Si las aristas tienen dirección, es un grafo dirigido (digrafo); si no, es no dirigido. *En este compendio nos enfocamos en grafos no dirigidos.*
         
 - **Adyacencia (**$\sim$**) e Incidencia:**
     
-    - **Adyacencia:** Relación entre _vértices_. Dos vértices $u, v$ son adyacentes si existe una arista que los conecta directamente.
+    - **Adyacencia:** Relación entre *vértices*. Dos vértices $u, v$ son adyacentes si existe una arista que los conecta directamente.
         
-        - _Notación:_ $v \sim u$ (son vecinos), $v \not\sim u$ (no son vecinos).
+        - *Notación:* $v \sim u$ (son vecinos), $v \not\sim u$ (no son vecinos).
             
-    - **Incidencia:** Relación entre _vértice y arista_. Un vértice $v$ es incidente a una arista $e$ si $v$ es uno de los extremos de $e$.
+    - **Incidencia:** Relación entre *vértice y arista*. Un vértice $v$ es incidente a una arista $e$ si $v$ es uno de los extremos de $e$.
         
 - **Vecindad (**$N_G(v)$**):**
     
@@ -32,9 +32,9 @@ Un grafo es mucho más que un dibujo de puntos y líneas; es una estructura mate
         
 - **Clasificación por Tipos de Aristas:**
     
-    - **Aristas Múltiples (Paralelas):** Dos o más aristas que conectan exactamente el mismo par de vértices. _Ejemplo:_ En un mapa de rutas, dos carreteras distintas que van de la ciudad A a la ciudad B.
+    - **Aristas Múltiples (Paralelas):** Dos o más aristas que conectan exactamente el mismo par de vértices. *Ejemplo:* En un mapa de rutas, dos carreteras distintas que van de la ciudad A a la ciudad B.
         
-    - **Bucle (Lazo):** Una arista que conecta un vértice consigo mismo. _Ejemplo:_ Una carretera que sale de una ciudad y vuelve a la misma sin pasar por otra.
+    - **Bucle (Lazo):** Una arista que conecta un vértice consigo mismo. *Ejemplo:* Una carretera que sale de una ciudad y vuelve a la misma sin pasar por otra.
         
     - **Grafo Simple:** La forma más pura de grafo. **No** permite ni bucles ni aristas múltiples. La mayoría de los teoremas fuertes (como los de planaridad o coloración) suelen enunciarse para grafos simples.
         
@@ -49,7 +49,7 @@ El "grado" es una medida local de la conectividad de un vértice.
 
 - **Grado (**$d_G(v)$ **o** $d(v)$**):** Número de aristas incidentes en $v$.
     
-    - _Detalle Crítico:_ Los bucles contribuyen **2** al grado del vértice, ya que la arista "entra" y "sale" del mismo vértice.
+    - *Detalle Crítico:* Los bucles contribuyen **2** al grado del vértice, ya que la arista "entra" y "sale" del mismo vértice.
         
     - **Grado Máximo (**$\Delta(G)$**):** El valor de grado más alto en todo el grafo. Útil para cotas de coloración.
         
@@ -60,7 +60,7 @@ El "grado" es una medida local de la conectividad de un vértice.
     $$\sum_{v \in V(G)} d(v) = 2|E(G)|$$
     - **Intuición:** Cada arista tiene dos extremos. Al sumar los grados, estamos contando cada extremo. Por lo tanto, cada arista es contada exactamente dos veces (una por cada vértice que toca).
         
-    - _Corolario Importante:_ El número de vértices con grado **impar** en cualquier grafo debe ser **par**. Si cuentas un número impar de personas que han dado un número impar de apretones de manos en una fiesta, has contado mal.
+    - *Corolario Importante:* El número de vértices con grado **impar** en cualquier grafo debe ser **par**. Si cuentas un número impar de personas que han dado un número impar de apretones de manos en una fiesta, has contado mal.
         
 - **Tipos de Vértices según su grado:**
     
@@ -76,7 +76,7 @@ El "grado" es una medida local de la conectividad de un vértice.
         
     - Esto implica $\Delta(G) = \delta(G) = k$.
         
-    - _Ejemplos:_ El ciclo $C_n$ es 2-regular. El grafo completo $K_n$ es $(n-1)$-regular. El cubo $Q_n$ es $n$-regular.
+    - *Ejemplos:* El ciclo $C_n$ es 2-regular. El grafo completo $K_n$ es $(n-1)$-regular. El cubo $Q_n$ es $n$-regular.
         
 
 ## 2. Conjuntos Independientes y Cliques
@@ -91,7 +91,7 @@ Estos conceptos son "duales" y representan el orden y el caos dentro de un grafo
         
     - $\alpha(G)$ **(Número de Independencia):** Es la cardinalidad del conjunto independiente más grande posible en $G$.
         
-    - _Aplicación:_ En problemas de horarios, representa clases que pueden ocurrir simultáneamente sin conflicto.
+    - *Aplicación:* En problemas de horarios, representa clases que pueden ocurrir simultáneamente sin conflicto.
         
 - **Clique (Subgrafo Completo Máximo):**
     
@@ -99,7 +99,7 @@ Estos conceptos son "duales" y representan el orden y el caos dentro de un grafo
         
     - $\omega(G)$ **(Número de Clique):** Es la cardinalidad de la clique más grande posible en $G$.
         
-    - _Nota:_ Una clique de tamaño 3 es un triángulo ($K_3$).
+    - *Nota:* Una clique de tamaño 3 es un triángulo ($K_3$).
         
 - **Relación de Complementariedad:**
     
@@ -118,13 +118,13 @@ Este es un problema NP-difícil en general, pero en ejercicios manuales usamos c
     
     - Busca visualmente el grupo más grande de puntos no conectados.
         
-    - _Redacción:_ "Por inspección, encontramos el conjunto $I = \{v_1, v_3, v_8\}$. Verificamos que no existen aristas entre ellos. Como $|I|=3$, entonces $\alpha(G) \ge 3$".
+    - *Redacción:* "Por inspección, encontramos el conjunto $I = \{v_1, v_3, v_8\}$. Verificamos que no existen aristas entre ellos. Como $|I|=3$, entonces $\alpha(G) \ge 3$".
         
 2. **Establecer Cota Superior (**$\alpha(G) \le x$**):**
     
     - Usa el **Recubrimiento por Cliques/Subgrafos**. Si puedes dividir todos los vértices del grafo en $k$ subgrafos (cliques, ciclos impares, caminos), la suma de los $\alpha$ de esos subgrafos es una cota superior.
         
-    - _Lógica:_ "Si divido el grafo en 3 triángulos ($K_3$), en cada triángulo solo puedo elegir como máximo 1 vértice independiente. Por tanto, no puedo elegir más de 3 vértices en total".
+    - *Lógica:* "Si divido el grafo en 3 triángulos ($K_3$), en cada triángulo solo puedo elegir como máximo 1 vértice independiente. Por tanto, no puedo elegir más de 3 vértices en total".
         
     - Fórmula: $V(G) = V(H_1) \cup \dots \cup V(H_k) \implies \alpha(G) \le \sum \alpha(H_i)$.
         
@@ -137,17 +137,17 @@ Este es un problema NP-difícil en general, pero en ejercicios manuales usamos c
     
 2. **Refutación por Grados (Cota Superior):**
     
-    - Para que exista un $K_{x+1}$, necesitas al menos $x+1$ vértices que tengan, _cada uno_, grado $\ge x$.
+    - Para que exista un $K_{x+1}$, necesitas al menos $x+1$ vértices que tengan, *cada uno*, grado $\ge x$.
         
-    - _Procedimiento:_ Haz una lista de los grados de los vértices en orden descendente. Si no tienes suficientes candidatos con el grado mínimo necesario, es imposible que exista esa clique.
+    - *Procedimiento:* Haz una lista de los grados de los vértices en orden descendente. Si no tienes suficientes candidatos con el grado mínimo necesario, es imposible que exista esa clique.
         
-    - _Ejemplo:_ Para buscar un $K_4$ ($\omega=4$), necesitas al menos 4 vértices con grado $\ge 3$. Si solo tienes 2 vértices con grado 3, entonces $\omega(G) < 4$.
+    - *Ejemplo:* Para buscar un $K_4$ ($\omega=4$), necesitas al menos 4 vértices con grado $\ge 3$. Si solo tienes 2 vértices con grado 3, entonces $\omega(G) < 4$.
         
 3. **Análisis de Vecindad (Refinamiento):**
     
-    - Si _sí_ tienes suficientes vértices con el grado adecuado, no garantiza la clique. Debes verificar si esos candidatos específicos se conectan entre sí.
+    - Si *sí* tienes suficientes vértices con el grado adecuado, no garantiza la clique. Debes verificar si esos candidatos específicos se conectan entre sí.
         
-    - _Redacción:_ "Los vértices $u, v, w, z$ tienen grado suficiente para formar un $K_4$, pero observamos que $u$ no es vecino de $z$. Por tanto, no forman una clique".
+    - *Redacción:* "Los vértices $u, v, w, z$ tienen grado suficiente para formar un $K_4$, pero observamos que $u$ no es vecino de $z$. Por tanto, no forman una clique".
         
 
 ## 3. Isomorfismo, Complemento y Matrices
@@ -172,7 +172,7 @@ El complemento es el "negativo" del grafo.
         
     - **Grados:** $d_{\overline{G}}(v) = (n - 1) - d_G(v)$. Un vértice de grado alto en $G$ tendrá grado bajo en $\overline{G}$.
         
-    - **Conexidad:** Si $G$ es disconexo, $\overline{G}$ es obligatoriamente conexo. (Si $G$ es conexo, $\overline{G}$ _podría_ ser conexo o no).
+    - **Conexidad:** Si $G$ es disconexo, $\overline{G}$ es obligatoriamente conexo. (Si $G$ es conexo, $\overline{G}$ *podría* ser conexo o no).
         
 
 ### 3.2. Matrices de Grafos: Representación Algebraica
@@ -211,7 +211,7 @@ Dos grafos son isomorfos si son **estructuralmente idénticos**, aunque sus dibu
 
 El problema del isomorfismo de grafos no tiene solución polinomial simple conocida, pero para ejercicios usamos un enfoque de dos fases:
 
-1. **Fase 1: El Filtro de Invariantes (Descarte Rápido)** Busca cualquier propiedad estructural que _deba_ conservarse. Si alguna difiere, **NO** son isomorfos. Revisa en orden:
+1. **Fase 1: El Filtro de Invariantes (Descarte Rápido)** Busca cualquier propiedad estructural que *deba* conservarse. Si alguna difiere, **NO** son isomorfos. Revisa en orden:
     
     - Número de vértices ($|V|$).
         
@@ -234,11 +234,11 @@ El problema del isomorfismo de grafos no tiene solución polinomial simple conoc
 
 - **Subgrafo (**$H \subseteq G$**):** Se obtiene borrando vértices y/o aristas.
     
-- **Subgrafo Recubridor (Spanning):** Contiene **todos** los vértices de $G$ ($V(H) = V(G)$) pero solo algunas aristas. _Ejemplo:_ Un árbol recubridor.
+- **Subgrafo Recubridor (Spanning):** Contiene **todos** los vértices de $G$ ($V(H) = V(G)$) pero solo algunas aristas. *Ejemplo:* Un árbol recubridor.
     
 - **Subgrafo Inducido (**$G[S]$**):** Es el subgrafo "más completo posible" dado un conjunto de vértices $S$.
     
-    - _Regla:_ Tomas los vértices de $S$ y **todas** las aristas que existían en $G$ entre ellos. No puedes "olvidar" aristas si ambos extremos están en $S$.
+    - *Regla:* Tomas los vértices de $S$ y **todas** las aristas que existían en $G$ entre ellos. No puedes "olvidar" aristas si ambos extremos están en $S$.
         
     - Fundamental para detectar cliques o conjuntos independientes.
         
@@ -259,7 +259,7 @@ Descomponer un grafo significa dividir sus aristas en grupos disjuntos que forme
         
 2. **Condición de Grados (Vértices Impares):**
     
-    - _Principio:_ En una descomposición, el grado de un vértice $v$ en $G$ es la suma de sus grados en cada copia $H_i$.
+    - *Principio:* En una descomposición, el grado de un vértice $v$ en $G$ es la suma de sus grados en cada copia $H_i$.
         
     - $d_G(v) = d_{H_1}(v) + d_{H_2}(v) + \dots$
         
@@ -273,7 +273,7 @@ Descomponer un grafo significa dividir sus aristas en grupos disjuntos que forme
     
     - Usa lápices de colores. Marca una copia del subgrafo y "gasta" esas aristas. Repite con las aristas restantes (no aristas originales).
         
-    - _Error común:_ Reutilizar una arista. En descomposición, cada arista se usa **exactamente una vez**.
+    - *Error común:* Reutilizar una arista. En descomposición, cada arista se usa **exactamente una vez**.
         
 
 ## 5. Conexidad y Corte
@@ -297,13 +297,13 @@ Estos elementos son los "puntos de fallo único" en una red.
 
 - **Vértice de Corte (Articulación):** Si se elimina (junto con sus aristas incidentes), aumenta el número de componentes conexas.
     
-    - _Identificación:_ Cualquier vértice interno de un camino que no forma parte de un ciclo es de corte. El centro de una estrella es de corte.
+    - *Identificación:* Cualquier vértice interno de un camino que no forma parte de un ciclo es de corte. El centro de una estrella es de corte.
         
 - **Arista de Corte (Puente):** Si se elimina, el grafo se separa.
     
     - **Teorema del Puente:** Una arista es un puente **sí y solo sí** no pertenece a ningún ciclo.
         
-    - _Consecuencia:_ Los árboles tienen todas sus aristas como puentes.
+    - *Consecuencia:* Los árboles tienen todas sus aristas como puentes.
         
 - **Bloques:** Son los subgrafos maximales que no tienen vértices de corte internos.
     
@@ -358,11 +358,11 @@ Un grafo es bipartito si sus vértices se pueden colorear con 2 colores de tal f
     
 - **Teorema Fundamental:** $G$ es bipartito $\iff$ $G$ no contiene ningún ciclo de longitud impar.
     
-    - _Ejemplo:_ Un triángulo ($C_3$) no es bipartito. Un pentágono ($C_5$) tampoco. Un cuadrado ($C_4$) sí lo es.
+    - *Ejemplo:* Un triángulo ($C_3$) no es bipartito. Un pentágono ($C_5$) tampoco. Un cuadrado ($C_4$) sí lo es.
         
 - **Grafo Bipartito Completo (**$K_{m,n}$**):**
     
-    - Caso extremo donde existen _todas_ las aristas posibles entre $X$ e $Y$.
+    - Caso extremo donde existen *todas* las aristas posibles entre $X$ e $Y$.
         
     - Tamaño: $n+m$ vértices, $n \cdot m$ aristas.
         
@@ -396,7 +396,7 @@ El problema de los puentes de Königsberg dio origen a este campo.
     
 - **Camino Euleriano:** Empieza en un punto y termina en otro diferente, recorriendo **cada arista** exactamente una vez.
     
-- _Nota:_ Se pueden repetir vértices tantas veces como sea necesario, lo prohibido es repetir aristas.
+- *Nota:* Se pueden repetir vértices tantas veces como sea necesario, lo prohibido es repetir aristas.
     
 
 ### 8.2. Teoremas y Condiciones Necesarias y Suficientes
@@ -407,7 +407,7 @@ El problema de los puentes de Königsberg dio origen a este campo.
         
     - Condición 2: **Todos** los vértices deben tener grado **par**.
         
-    - _Por qué:_ Cada vez que entras a un vértice por una arista, debes salir por otra. Las aristas vienen en pares de entrada/salida.
+    - *Por qué:* Cada vez que entras a un vértice por una arista, debes salir por otra. Las aristas vienen en pares de entrada/salida.
         
 2. **Para Camino Euleriano:**
     
@@ -415,12 +415,12 @@ El problema de los puentes de Königsberg dio origen a este campo.
         
     - Condición 2: Debe tener **exactamente 2** vértices de grado **impar**.
         
-    - _Implicación:_ El recorrido debe obligatoriamente comenzar en uno de los impares y terminar en el otro.
+    - *Implicación:* El recorrido debe obligatoriamente comenzar en uno de los impares y terminar en el otro.
         
 
 ### 8.3. Algoritmo de Fleury (Simplificado)
 
-Si necesitas _encontrar_ el recorrido:
+Si necesitas *encontrar* el recorrido:
 
 1. Empieza en un vértice válido (cualquiera si todos son pares; uno impar si hay dos impares).
     
@@ -435,7 +435,7 @@ Si necesitas _encontrar_ el recorrido:
 
 La planaridad trata sobre problemas de diseño de circuitos impresos, mapas y visualización.
 
-- **Inmersión Planar:** Es el dibujo sin cruces. Un mismo grafo puede tener dibujos planos y no planos (si te esfuerzas en cruzar líneas). Si existe _al menos una_ forma de dibujarlo sin cruces, es Planar.
+- **Inmersión Planar:** Es el dibujo sin cruces. Un mismo grafo puede tener dibujos planos y no planos (si te esfuerzas en cruzar líneas). Si existe *al menos una* forma de dibujarlo sin cruces, es Planar.
     
 - **Caras (**$f$**):** En un grafo plano, el plano queda dividido en regiones.
     
@@ -454,7 +454,7 @@ La relación $v - e + f = 2$ es una de las joyas de la geometría combinatoria.
         
         - Si un grafo viola esto (tiene más aristas de las permitidas), es **seguro** que no es planar.
             
-        - _Advertencia:_ Si cumple la desigualdad, **no** garantiza que sea planar. Es condición necesaria, no suficiente.
+        - *Advertencia:* Si cumple la desigualdad, **no** garantiza que sea planar. Es condición necesaria, no suficiente.
             
     2. **Sin Triángulos:** Si el grafo no tiene ciclos de longitud 3 (ej. bipartitos), la cota es más estricta:
         
@@ -503,7 +503,7 @@ Si el grafo parece "enmarañado", intenta encontrar los culpables ($K_{3,3}$ o $
     
 3. Verifica si existen caminos disjuntos entre todos los miembros de $X$ y todos los de $Y$.
     
-    - _Pista Visual:_ A menudo el $K_{3,3}$ está camuflado como un hexágono con diagonales o una escalera cruzada.
+    - *Pista Visual:* A menudo el $K_{3,3}$ está camuflado como un hexágono con diagonales o una escalera cruzada.
         
 
 **Estrategia para** $K_5$**:**
@@ -523,4 +523,4 @@ A veces es difícil ver la subdivisión, pero fácil ver la contracción.
     
 3. Si tras varias contracciones obtienes un $K_5$ o $K_{3,3}$ explícito, el grafo original **NO** era planar.
     
-    - _Ejemplo Clásico:_ El Grafo de Petersen. Es difícil ver la subdivisión de $K_{3,3}$ a simple vista, pero contrayendo las aristas que conectan el pentágono exterior con la estrella interior, se revela instantáneamente un $K_5$. Por tanto, Petersen no es planar.
+    - *Ejemplo Clásico:* El Grafo de Petersen. Es difícil ver la subdivisión de $K_{3,3}$ a simple vista, pero contrayendo las aristas que conectan el pentágono exterior con la estrella interior, se revela instantáneamente un $K_5$. Por tanto, Petersen no es planar.

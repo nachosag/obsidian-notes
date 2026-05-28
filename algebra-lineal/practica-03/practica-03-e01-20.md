@@ -1,4 +1,4 @@
-### Ejercicio 1
+# Ejercicio 1
 ![[Pasted image 20250911191819.png]]
 Para un vector $v=(v_{1},v_{2},v_{3},v_{4})$ calculamos las tres expresiones $$
 E_{1}=-x_{1}+2x_{2}+x_{3},\quad E_{2}=x_{1}+3x_{2}-x_{4},\quad E_{3}=2x_{1}+3x_{2}+x_{4}
@@ -74,7 +74,7 @@ Pasos a seguir:
 El vector $v_{3}$ es el único que es solución del sistema $S$.
 <mark style="background: #FF5582A6;">Paso 2</mark>
 Los vectores $v_{1},v_{4}$ son solución del sistema homogeneo $S_{h}$.
-### Ejercicio 2
+# Ejercicio 2
 ![[Pasted image 20250911191855.png]]
 <mark style="background: #FF5582A6;">Parte (a)</mark>
 Vector candidato: $(x_{1},x_{2},x_{3})=(2,-2,1)$.
@@ -582,11 +582,11 @@ $$ Observemos que las filas 2 y 3 tienen los mismos coeficientes de variables pe
 Es decir, obtenemos la fila $\begin{pmatrix}0 & 0 & 0 & 0 & 0 & | & 4\end{pmatrix}$, que representa la igualdad 0=4, lo cual es absurdo.
 
 Como el proceso nos condujo a una contradicción, podemos afirmar por el Teorema de RF que el sistema (i) es un sistema incompatible, es decir, que no presenta soluciones.
-### Ejercicio 4
+# Ejercicio 4
 ![[Pasted image 20250911191935.png]]
-### Ejercicio 5
+# Ejercicio 5
 ![[Pasted image 20250911191943.png]]
-### Ejercicio 6
+# Ejercicio 6
 ![[Pasted image 20250911192001.png]]
 <mark style="background: #FF5582A6;">Sistema (a)</mark>
 Tenemos el sistema 
@@ -670,8 +670,8 @@ $$
 Los lados izquierdos de las ecuaciones son idénticos, pero los lados derechos son diferentes $(-3\neq{2})$. Esto es una contradicción. No puede existir un punto $(x,y,z)$ que haga que la expresión $-3x+6y-3z$ sea igual a $-3$ y a $2$ al mismo tiempo.
 
 Conclusión final: como los planos son **paralelos** pero no son el mismo plano, son **paralelos y distintos**. Geométricamente, nunca se intersectan. Por lo tanto, el sistema de ecuaciones **no tiene solución**.
-### Ejercicio 7
-### Ejercicio 8
+# Ejercicio 7
+# Ejercicio 8
 ![[Pasted image 20250916181308.png]]
 Primero escribamos la matriz de coeficientes $A$ y los vectores independientes que queremos resolver:
 $$
@@ -826,7 +826,7 @@ $$
 
 Verificación rápida
 ![[Pasted image 20250916201111.png]]
-### Ejercicio 9
+# Ejercicio 9
 ![[Pasted image 20250918190332.png]]
 Primero escribamos la matriz de coeficientes $A$ y los vectores independientes que queremos resolver:
 $$

@@ -118,7 +118,7 @@ data/
 
 Cuando se instala un sistema gestor de base de datos (DBMS) ocurren varias cosas:
 
-### 1. Se instala el software del motor
+## 1. Se instala el software del motor
 
 Ejemplo:
 
@@ -128,7 +128,7 @@ PostgreSQL Server
 
 ---
 
-### 2. Se inicializa un cluster de base de datos
+## 2. Se inicializa un cluster de base de datos
 
 Se crea la estructura de almacenamiento inicial:
 
@@ -139,7 +139,7 @@ Se crea la estructura de almacenamiento inicial:
 
 ---
 
-### 3. Se crean bases de datos del sistema
+## 3. Se crean bases de datos del sistema
 
 Ejemplo en PostgreSQL:
 
@@ -155,7 +155,7 @@ Estas contienen:
 
 ---
 
-### 4. Se levanta un proceso servidor
+## 4. Se levanta un proceso servidor
 
 El servidor queda escuchando en un puerto.
 
@@ -388,7 +388,7 @@ Esto significa que deben respetarse las **reglas de integridad**.
 
 Aunque hay distintas clasificaciones, las más comunes en cursos universitarios son:
 
-### 1. Integridad de dominio
+## 1. Integridad de dominio
 
 Los valores deben pertenecer a un dominio válido.
 
@@ -406,7 +406,7 @@ edad = "texto"
 
 ---
 
-### 2. Integridad de entidad
+## 2. Integridad de entidad
 
 Cada tabla debe tener una **clave primaria única**.
 
@@ -420,7 +420,7 @@ No puede haber dos filas con el mismo `id`.
 
 ---
 
-### 3. Integridad referencial
+## 3. Integridad referencial
 
 Las **foreign keys** deben apuntar a registros existentes.
 
@@ -440,7 +440,7 @@ clientes(id)
 
 ---
 
-### 4. Restricciones de usuario
+## 4. Restricciones de usuario
 
 Definidas mediante:
 
@@ -456,7 +456,7 @@ CHECK (edad >= 0)
 
 ---
 
-### 5. Reglas de negocio
+## 5. Reglas de negocio
 
 Restricciones definidas por la aplicación o triggers.
 

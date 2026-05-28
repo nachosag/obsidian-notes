@@ -1,17 +1,17 @@
-## Forma binómica
-### Ejercicio 1
+# Forma binómica
+## Ejercicio 1
 ![[Pasted image 20251031162748.png]]
 (a)![[Pasted image 20251031164752.png]]
 (b)![[Pasted image 20251031164811.png]]
 (c)![[Pasted image 20251031164828.png]]
 (d)![[Pasted image 20251031164841.png]]
-### Ejercicio 2
+## Ejercicio 2
 (a) $z=a+bi,\quad \bar{z}=a-bi$. ![[Pasted image 20251031165723.png]]
 (b) $-z=-a-bi,\quad \bar{z}=a-bi$. ![[Pasted image 20251031170553.png]]
 (c) ![[Pasted image 20251031171829.png]]
-### Ejercicio 3
+## Ejercicio 3
 
-### Ejercicio 4
+## Ejercicio 4
 ![[Pasted image 20251031171914.png]]
 Nos piden hallar la forma binómica de las siguientes operaciones, es decir, tenemos que llegar a la expresión $z=a+bi$.
 <mark style="background: #FFB8EBA6;">(a)</mark>
@@ -83,7 +83,7 @@ $$
 -1 + \sqrt{ 3 }i
 \end{gather}
 $$
-### Ejercicio 5
+## Ejercicio 5
 ![[Pasted image 20251031192103.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark>
 $$
@@ -186,9 +186,9 @@ $$ En nuestro caso, $n=3$.
 $$
 \begin{gather}
 z³ = \\
-\left[ |z| \left( \cos(\alpha) + i \sin(\alpha) \right)  \right]³ = \\
+\left[ |z| \left( \cos(\alpha) + i \sin(\alpha) \right) \right]³ = \\
 \left[ 2 \left( \cos\left( \frac{\pi}{3} \right) + i \sin\left( \frac{\pi}{3} \right) \right) \right]³ = \\
-\left[ 2³ \left( \cos\left( 3\cdot\left( \frac{\pi}{3} \right) \right) + i \sin\left( 3\cdot\left( \frac{\pi}{3} \right) \right) \right)  \right] = \\
+\left[ 2³ \left( \cos\left( 3\cdot\left( \frac{\pi}{3} \right) \right) + i \sin\left( 3\cdot\left( \frac{\pi}{3} \right) \right) \right) \right] = \\
 \boxed{8 \left( \cos(\pi) + i \sin(\pi) \right)}
 \end{gather}
 $$
@@ -559,7 +559,7 @@ El número complejo $z=\frac{(1+i)^{2}(\sqrt{ 3 }+i)}{2-2i}$ en forma polar es:
 $$
 z=\sqrt{ 2 }\left( \cos\left( \frac{11}{12}\pi \right)+i\sin\left( \frac{11}{12}\pi \right) \right) 
 $$
-### Ejercicio 9
+## Ejercicio 9
 ![[Pasted image 20251104190450.png]]
 Nos piden hallar los $z\in \mathbb{C}$ que sean solución de las siguientes ecuaciones:
 <mark style="background: #FFB8EBA6;">(a)</mark>

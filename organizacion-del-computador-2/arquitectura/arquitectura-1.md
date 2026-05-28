@@ -216,7 +216,7 @@ Ambas arquitecturas representan filosofías de diseño totalmente distintas. La 
 - Este problema radica en la diferencia de velocidad entre los distintos componentes de la computadora, donde `CPU > Memoria > Disco`.
 - Para *atenuarlo* se presentan las siguientes soluciones:
 	- **Prefetch:** Consiste en que el procesador busque instrucciones en memoria antes de que sean necesarias para su ejecución y las almacene temporalmente en un buffer interno.
-	- **Memoria caché:** es una memoria pequeña, muy rápida, ubicada entre la CPU y la memoria principal. Su función es almacenar los  datos e instrucciones más utilizados.
+	- **Memoria caché:** es una memoria pequeña, muy rápida, ubicada entre la CPU y la memoria principal. Su función es almacenar los datos e instrucciones más utilizados.
 	- **Pipeline de instrucciones**: Es una técnica que permite ejecutar varias instrucciones *simultáneamente* en distintas etapas de procesamiento.
 		- Las etapas son: **fetch, decode, execute y write-back**.
 

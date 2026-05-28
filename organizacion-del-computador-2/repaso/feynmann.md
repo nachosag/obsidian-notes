@@ -6,7 +6,7 @@
 	- El TI (Table Indicator) apunta a qué tabla debe acceder (GDT o LDT). Es el ala del edificio
 	- El RPL indica el nivel de privilegios requerido. Es la credencial presentada
 
-- **Cuello de botella de Von Neumann:** Tus apuntes mencionan el _Prefetch_ y el _Pipeline_. ¿Cómo es que estas técnicas ayudan a que la CPU no se quede "de brazos cruzados" esperando a la memoria?
+- **Cuello de botella de Von Neumann:** Tus apuntes mencionan el *Prefetch* y el *Pipeline*. ¿Cómo es que estas técnicas ayudan a que la CPU no se quede "de brazos cruzados" esperando a la memoria?
 	- **Prefetch:** Mientras el CPU está ocupado procesando la instrucción actual, un modulo busca las siguientes instrucciones y las almacena en una caché.
 	- **Pipeline:** Mientras una instrucción se está ejecutando, la de atrás se está decodificando y la otra se está buscando.
 

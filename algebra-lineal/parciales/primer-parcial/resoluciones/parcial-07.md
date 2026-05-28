@@ -1,4 +1,4 @@
-### Ejercicio 1
+# Ejercicio 1
 ![[Pasted image 20251114154618.png]]
 Notemos que $L$ está dada por la intersección de dos planos, por lo tanto su vector director $v_{L}$ es perpendicular a los vectores normales de ambos planos, estos vectores $n_{1}$ y $n_{2}$ podemos obtenerlos directamente de las ecuaciones implícitas. Por lo tanto, tenemos que
 $$
@@ -111,7 +111,7 @@ Por lo tanto, la fórmula de $\Pi_{2}$ es
 $$
 \Pi_{2}: 7x-3y+2z=11
 $$
-### Ejercicio 2
+# Ejercicio 2
 ![[Pasted image 20251114171005.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark>
 Sabemos que el sistema $Ax=b$ tiene solución única si el $\det(A)\neq{0}$.
@@ -234,7 +234,7 @@ $$
 (x,y,z)=(-6z, 1-5z, z)= z(-6,-5,1)+(0,1,0)
 $$
 Con $z\in \mathbb{R}$.
-### Ejercicio 3
+# Ejercicio 3
 ![[Pasted image 20251114180858.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark>
 Sabemos que $A$ es inversible si y solo si $\det(A)\neq{0}$.
@@ -383,7 +383,7 @@ $$
 a=\pm \sqrt{ 3 }
 $$
 Por lo tanto, la expresión $\det\left( \frac{1}{2}A^{-1}B^{2} \right)=1$ se cumple con $a=\pm \sqrt{ 3 }$.
-### Ejercicio 4
+# Ejercicio 4
 ![[Pasted image 20251114192524.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark>
 Analicemos el subespacio $S=gen\{ (-2,-1,0,2),(2,-1,-2,-3) \}$.

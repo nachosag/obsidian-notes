@@ -1,16 +1,16 @@
-### Ejercicio 1
+# Ejercicio 1
 ![[Pasted image 20251214203253.png]]
 ¿Cuántos anagramas de la palabra MISSISSIPI se pueden construir?
 
 Notemos que la palabra MISSISSIPI tiene 10 letras en total. Adicionalmente, la letra S aparece repetida 4 veces y la letra I se repite 4 veces. Por otro lado, las letras M y P solo aparecen una vez.
 
 Por lo tanto, la cantidad de anagramas que se pueden construir son: $\frac{10!}{4!4!}=6.300$.
-### Ejercicio 2
+# Ejercicio 2
 ![[Pasted image 20251214203302.png]]
 ¿De cuántas formas se pueden ordenar 4 letras $x$, 5 letras $y$, 6 letras $z$ y 2 letras $w$? 
 
 Otro problema de permutación con repetición. Esta vez tenemos $4+5+6+2=10+7=17$ letras en total. El resultado es $\frac{17!}{4!5!6!2!}=85.765.680$.
-### Ejercicio 3
+# Ejercicio 3
 ![[Pasted image 20251214203310.png]]
 Un hombre trabaja en un edificio localizado a 12 cuadras al este y 5 cuadras al norte de su casa. Así, cuando va a trabajar caminando, recorre 17 cuadras.
 
@@ -31,7 +31,7 @@ Primero coloquemos las 12 $E$'s en hilera. Luego, notemos que se crean espacios 
 Por lo tanto, el problema se reduce a elegir 5 de estos 13 espacios, lo que da $13C5=\frac{13!}{(13-5)!\cdot5!} =1287$.
 
 De esta forma, existen **1287** formas distintas en que el hombre puede ir de su casa al trabajo caminando exactamente 17 cuadras sin caminar dos cuadras seguidas hacia el Norte.
-### Ejercicio 4
+# Ejercicio 4
 ![[Pasted image 20251214203320.png]]
 Considere el conjunto formado por las permutaciones de todas las letras de la palabra CAMPAMENTO.
 
@@ -71,7 +71,7 @@ Tomamos las dos letras M y las fijamos en la primer y última posición de la pa
 Por permutación con repetición tenemos que existen $\frac{8!}{2!}=21.160$ configuraciones que comienzan y terminan con la letra M
 
 Por propiedad aditiva, sumamos las configuraciones de cada caso y obtenemos $21.160 \times2=40.320$ configuraciones totales para la palabra CAMPAMENTO de forma tal que comienzan y terminan con la misma letra.
-### Ejercicio 5
+# Ejercicio 5
 ![[Pasted image 20251214203334.png]]
 Considere el conjunto formado por las permutaciones de todas las letras de la palabra MANTENIMIENTO.
 
@@ -156,10 +156,10 @@ Entre las consonantes tenemos 6 espacios y 2 espacios adicionales en los extremo
 Existen $C(8,6)=28$ formas de elegir 6 de estos 8 espacios para colocar las 6 vocales. Luego, las vocales pueden ordenarse de $\frac{6!}{2!2!}=180$ maneras.
 
 Por principio multiplicativo tenemos $210\cdot{28}\cdot{180}=1058400$ formas de permutar la palabra MANTENIMIENTO de manera tal que no haya dos o más vocales juntas.
-### Ejercicio 6
+# Ejercicio 6
 ![[Pasted image 20251214203403.png]]
 
-### Ejercicio 7
+# Ejercicio 7
 ![[Pasted image 20251214203425.png]]
 Tenemos 4 estantes distintos. Cada uno de ellos tiene espacio para 17 libros.
 Se quiere conocer de cuántas formas distintas se pueden ordenar 17 libros en los 4 estantes.
@@ -168,7 +168,7 @@ Coloquemos a los 17 libros **distintos** en fila. Para dividir esta fila en 4 es
 
 Luego, estos $17+3=20$ elementos los podemos ordenar de $\frac{20!}{3!}=4,05483668×10¹⁷$.
 
-### Ejercicio 8
+# Ejercicio 8
 ![[Pasted image 20251214203436.png]]
 Tenemos un tablero de $8\times{8}$ con:
 - 6 fichas de color rojo, 
@@ -227,7 +227,7 @@ Si las dos fichas elegidas fueron, una blanca y otra negra, entonces las 18 fich
 Por principio aditivo tenemos $\frac{18!}{6!5!4!3!}+\frac{18!}{6!5!4!2!}+2\cdot\frac{18!}{6!5!4!2!}=514594080+4631346720=5145940800$.
 
 Por principio multiplicativo tenemos $C(62,18)\cdot{5145940800}=9515262899\times{10^{24}}$.
-### Ejercicio 9
+# Ejercicio 9
 ![[Pasted image 20251214203449.png]]
 ![[Pasted image 20251214203456.png]]
 En un videojuego se debe elegir 1 personaje entre 20 y 1 de los 15 modos de juego. Suponiendo que se puede repetir personaje, modo de juego y cada partida es independiente de las otras.
@@ -244,7 +244,7 @@ Sé que existen 300 pares posibles. Existen $C(300,10)$ formas de elegir 10 de e
 
 Por principio multiplicativo, existen $C(300,10)\cdot{10!}=5074224462\times{10^{24}}$ formas de jugar 10 partidas sin repetir el par (personaje, modo de juego).
 
-- **Si el orden no importa** (es decir, solo te interesa el _conjunto_ final de 10 pares elegidos, sin importar en qué secuencia se jugaron), entonces estás calculando una **combinación**.
+- **Si el orden no importa** (es decir, solo te interesa el *conjunto* final de 10 pares elegidos, sin importar en qué secuencia se jugaron), entonces estás calculando una **combinación**.
 
 Tenemos 300 opciones para la partida 1, 299 opciones para la partida 2, 298 opciones para la partida 3 y así sucesivamente para las 10 partidas.
 
@@ -266,7 +266,7 @@ Para la primer partida tenemos 15 modos de juego para elegir. Fijado el modo de 
 Es decir, tenemos $15\times{14}\times{13}\times\dots \times{6}=P(15,10)$ formas de elegir 10 modos de juego sin repetición.
 
 Por principio multiplicativo existen $(20\times{19}\times{18}\times\dots \times{11})\times(15\times{14}\times{13}\times\dots \times{6})$ formas de elegir 10 personajes y 10 modos de juego para 10 partidas sin repetir personajes ni modo de juego.
-### Ejercicio 10
+# Ejercicio 10
 ![[Pasted image 20251214203606.png]]
 Tenemos la palabra MANTENIMIENTO donde $M^{2},A,N^{3},T^{2},E^{2},I^{2},O$ y el conjunto S formado por los ordenamientos en círculo de todas las letras de la palabra MANTENIMIENTO.
 
@@ -297,7 +297,7 @@ Las consonantes fijadas crean 7 espacios. Podemos elegir 6 de los 7 espacios de 
 
 Por principio multiplicativo existen $30\cdot{7}\cdot{180}=37800$ formas de ordenar las letras de la palabra MANTENIMIENTO de manera tal que no hayan dos o mas vocales juntas.
 
-### Ejercicio 11
+# Ejercicio 11
 ![[Pasted image 20251214203615.png]]
 
 Un anillo tiene grabados 10 símbolos. 5 de ellos son elegidos entre las 24 letras del alfabeto griego y los otros 5 son números enteros entre el 1 y el 100.
@@ -396,7 +396,7 @@ $$
 4,14414×10¹⁶
 $$
 formas de armar anillos sin letras repetidas, con los números pares juntos y con los números impares juntos.
-### Ejercicio 12
+# Ejercicio 12
 ![[Pasted image 20251214203625.png]]
 
 <mark style="background: #FFB8EBA6;">a) Cuántas configuraciones distintas tiene la ruleta</mark>
@@ -424,7 +424,7 @@ Tenemos 5 premios distintos en dinero y 5 premios en tecnología para ubicar en 
 La única forma de ubicar en la ruleta los 5 premios distintos en dinero de forma tal que estén separados, es alternándolos. Luego, existe una única forma de ordenarlos de forma tal que estén en orden creciente y en sentido horario. Esto deja 5 posiciones intermedias bien definidas para colocar la secuencia de premios tecnológicos.
 
 Por principio multiplicativo existen $21\times{4^{5}}=21504$ formas de armar la ruleta de manera tal que los premios en dinero estén separados y ordenados de menor a mayor en sentido horario.
-### Ejercicio 13
+# Ejercicio 13
 ![[Pasted image 20251214203635.png]]
 
 Se tienen 50 libros distintos de matemática y 70 libros distintos de física, 120 libros en total. Se le pide a una persona que elija la cantidad de libros que quiera, por lo menos uno, con la condición de que todos sean de matemática o todos sean de física.
@@ -435,7 +435,7 @@ Podemos seleccionar a los libros de matemática de $2^{50}-1$ formas distintas c
 Podemos seleccionar a los libros de física de $2^{70}-1$ formas distintas con la condición de que haya al menos uno.
 
 Por principio aditivo, existen $2^{50}-1+2^{70}-1=1,180592747×10²¹$ formas de seleccionar los libros.
-### Ejercicio 14
+# Ejercicio 14
 ![[Pasted image 20251214203644.png]]
 Hay un grupo con $N$ personas.
 
@@ -504,7 +504,7 @@ Sustituyendo $E$ por $O$ en la primera ecuación:
 $$O + O = 2^N \implies 2O = 2^N$$
 Por lo tanto, el número de formas de elegir un subgrupo con un número impar de integrantes, cuando $N$ es par, es:
 $$O = \frac{2^N}{2} = 2^{N-1}$$
-### Ejercicio 15
+# Ejercicio 15
 ![[Pasted image 20251214203655.png]]
 Hay 12 libros ordenados en un estante.
 Se quiere conocer de cuántas formas se pueden elegir 5 de esos libros de forma tal que la selección no incluya libros que estén uno junto al otro en el estante.
@@ -516,7 +516,7 @@ Entre los 7 libros hay 6 espacios intermedios y 2 espacios adicionales en los ex
 Es en estos 8 espacios donde debemos colocar los 5 libros, de forma tal que los 5 libros están colocados de forma alternada. Esto solo es posible si a cada espacio se le asigna un único libro.
 
 Existen $C(8,5)=56$ formas de elegir 5 de los 8 espacios de forma tal que los 5 libros no estén uno junto al otro.
-### Ejercicio 16
+# Ejercicio 16
 ![[Pasted image 20251214203707.png]]
 Un preceptor de una escuela secundaria tiene en su legajero, que está ordenado alfabéticamente, las fichas personales de los 32 alumnos de uno de sus cursos. Le han pedido que seleccione a 12 alumnos de ese curso para que conformen una comisión de debate en el centro de estudiantes.
 Se quiere conocer de cuántas formas distintas puede realizar tal elección de forma tal que no elija a dos alumnos que estén consecutivos en el fichero.
@@ -526,7 +526,7 @@ De los 32 alumnos tomamos a los $32-12=20$ alumnos que están posicionados de fo
 Entre los 20 alumnos existen 19 espacios intermedios y 2 espacios adicionales en los extremos, un total de 21 espacios. Para que los 12 alumnos restantes no estén en posiciones consecutivas en el listado, a cada espacio se le debe asignar un alumno.
 
 Existen $C(21,12)=293930$ formas de seleccionar 12 de los 21 espacios para colocar a los 12 alumnos.
-### Ejercicio 17
+# Ejercicio 17
 ![[Pasted image 20251214203721.png]]
 Tenemos la ecuación $x_{1}+x_{2}+x_{3}+x_{4}=18$.
 
@@ -555,7 +555,7 @@ Cantidad de soluciones en los **enteros no negativos**:
 $$
 C(m+k-1,k-1)
 $$
-### Ejercicio 18
+# Ejercicio 18
 ![[Pasted image 20251214203730.png]]
 Las fichas de póquer vienen en 8 colores diferentes y se venden a 1 peso cada una.
 Se quiere saber cuántas combinaciones de colores hay disponibles por 10 pesos.
@@ -567,7 +567,7 @@ $$
 donde cada $x_{i}$ representan los 8 colores.
 
 Existen $C(10+8-1,8-1)=C(17,7)=19448$ formas de elegir fichas por 10 pesos.
-### Ejercicio 19
+# Ejercicio 19
 ![[Pasted image 20251214203739.png]]
 En una juguetería se vende una docena de bolitas por 2 pesos. Cada bolita puede tener uno de los 5 colores disponibles.
 Se quiere conocer cuántas combinaciones distintas de colores se pueden comprar por 2 pesos.
@@ -579,7 +579,7 @@ $$
 Donde cada $x_{i}$ representa los 5 colores de las bolitas. En una docena de bolitas podría pasar que no haya ninguna bolita de algún color. Por lo que buscamos la cantidad de soluciones no negativas de la ecuación.
 
 Existen $C(12+5-1,5-1)=C(16,4)=1820$ combinaciones distintas de colores.
-### Ejercicio 20
+# Ejercicio 20
 ![[Pasted image 20251214203747.png]]
 <mark style="background: #FFB8EBA6;">a) En cuántos de los números entre 1 y 1000000, ambos inclusive, la suma de sus dígitos es 6</mark>
 
@@ -621,7 +621,7 @@ El número $000000$ está incluido dentro de las 924 soluciones, por lo que debe
 
 ---
 
-### La función de la variable auxiliar.
+# La función de la variable auxiliar.
 La variable $y$ se aplica porque el teorema que usamos, que es la fórmula de combinaciones con repetición $C(m+k-1, k-1)$, solo cuenta soluciones para una **igualdad** $X=m$ (teníamos una desigualdad, por lo que no podíamos aplicar la fórmula).
 
 Al añadir $y \ge 0$, transformamos la inecuación $\sum x_i \le 6$ en una igualdad $\sum x_i + y = 6$. Esto nos permite contar de una sola vez todas las posibilidades:
@@ -663,10 +663,10 @@ $$
 La cantidad de soluciones de esta ecuación es $C(5+7-1,7-1)=C(11,6)=462$. Dentro de estas soluciones está el número $000000$, que no es solución, por lo que debemos excluirlo. Luego, el número $1.000.000$ es solución y debemos contarlo.
 
 Reemplazando en la expresión original tenemos que existen $1.000.000-462=999538$ números entre 1 y 1.000.000 tal que la suma de sus dígitos es al menos 6.
-### Ejercicio 21
+# Ejercicio 21
 ![[Pasted image 20251214203756.png]]
 
-### Ejercicio 22
+# Ejercicio 22
 ![[Pasted image 20251214203806.png]]
 Se quiere sabe cuántas soluciones en los naturales mayores que 7 tiene la ecuación
 $$
@@ -690,7 +690,7 @@ $$
 El problema se transformó a contar las soluciones en los enteros **no negativos** de la nueva ecuación.
 
 Esta nueva ecuación tiene $C(13+4-1,4-1)=C(16,3)=560$ soluciones.
-### Ejercicio 23
+# Ejercicio 23
 ![[Pasted image 20251214203814.png]]
 Hallar la cantidad de soluciones en los enteros no negativos de la siguiente ecuación:
 $$
@@ -726,7 +726,7 @@ $$
 Ahora el problema se transformó en buscar la cantidad de soluciones en los enteros no negativos de la nueva ecuación.
 
 La nueva ecuación tiene $C(30+5-1,5-1)=C(34,4)=46376$ soluciones en los enteros no negativos.
-### Ejercicio 24
+# Ejercicio 24
 ![[Pasted image 20251214203823.png]]
 Se quiere conocer la cantidad de soluciones en los enteros positivos de la siguiente inecuación:
 $$
@@ -781,7 +781,7 @@ El problema se transformó en calcular la cantidad de soluciones enteras no nega
 Existen $C(2+3-1,3-1)=C(4,2)=6$ soluciones en los enteros no negativos para la nueva ecuación.
 
 Por principio aditivo existen $6+3=9$ soluciones para la inecuación $7\leq x_{1}+x_{2}+x_{3}<9$.
-### Ejercicio 25
+# Ejercicio 25
 ![[Pasted image 20251214203834.png]]
 En un negocio se venden cajas de cartas, cada caja tiene 30 cartas elegidas entre 7 tipos distintos con al menos 2 del tipo 1, al menos 3 del tipo 2, al menos 3 del tipo 3 y más de 5 del tipo 7. 
 Se quiere conocer cuántas cajas distintas se pueden armar.
@@ -814,7 +814,7 @@ $$
 El problema se transformó en contar la cantidad de soluciones no negativas de la nueva ecuación.
 
 La nueva ecuación tiene $C(16+7-1,7-1)=C(22,6)=74613$ soluciones.
-### Ejercicio 26
+# Ejercicio 26
 ![[Pasted image 20251214203842.png]]
 Una empresa vende bolsas que contienen 500 piezas de igual diseño cuya finalidad es el uso en juegos de armado (tipo lego). Cada pieza puede tener uno de entre 7 colores distintos. Suponiendo que de cada color debe haber al menos 50, pero de color rojo debe haber como mínimo 75, de colo azul más de 60 y de color negro exactamente 70.
 Cuántos tipos de bolsas distintas puede fabricar la empresa?
@@ -849,7 +849,7 @@ $$
 El problema se transformó en contar la cantidad de soluciones de la nueva ecuación.
 
 La nueva ecuación tiene $C(94+6-1,6-1)=C(99,5)=71523144$ soluciones.
-### Ejercicio 27
+# Ejercicio 27
 ![[Pasted image 20251214203851.png]]
 Se tienen 25 libros para repartir en 3 filas. Suponiendo que la primera pila debe tener más de 7 libros, la segunda al menos 5 y la tercera como mínimo 7.
 
@@ -884,7 +884,7 @@ La nueva ecuación tiene $C(5+3-1,3-1)=C(7,2)=21$ soluciones.
 
 <mark style="background: #FFB8EBA6;">b) Suponiendo que los libros son todos distintos, de cuántas formas distintas se pueden distribuir los libros en las tres pilas?</mark>
 
-### Opción 1: Argumento Conceptual (La más elegante)
+# Opción 1: Argumento Conceptual (La más elegante)
 
 Esta forma evita la manipulación algebraica enfocándose en la naturaleza del problema.
 
@@ -898,11 +898,11 @@ Esta forma evita la manipulación algebraica enfocándose en la naturaleza del p
 
 ---
 
-### Opción 2: Argumento de "Lugares" (Directo)
+# Opción 2: Argumento de "Lugares" (Directo)
 
 Esta opción se centra en que, al fijar los tamaños, solo estamos creando "casilleros" distintos.
 
-> Del inciso **a)** sabemos que hay **21** distribuciones posibles para la _cantidad_ de libros en cada pila ($x_1, x_2, x_3$).
+> Del inciso **a)** sabemos que hay **21** distribuciones posibles para la *cantidad* de libros en cada pila ($x_1, x_2, x_3$).
 > 
 > Para cualquiera de estas distribuciones, tenemos un total de $x_1 + x_2 + x_3 = 25$ posiciones distintas (lugares) en las pilas. Dado que los libros son distintos y el orden importa, simplemente debemos colocar 25 objetos distintos en 25 lugares distintos.
 > 
@@ -912,7 +912,7 @@ Esta opción se centra en que, al fijar los tamaños, solo estamos creando "casi
 
 ---
 
-### Opción 3: Argumento Algebraico Compacto
+# Opción 3: Argumento Algebraico Compacto
 
 Si prefieres mantener la estructura matemática pero ahorrar espacio, puedes usar la definición de Permutación $P(n,k)$ en lugar de escribir Combinatoria y Factorial por separado.
 
@@ -928,7 +928,7 @@ Si prefieres mantener la estructura matemática pero ahorrar espacio, puedes usa
 > 
 >**Total:** $21 \times 25!$.
 
-### Ejercicio 28
+# Ejercicio 28
 ![[Pasted image 20251214203859.png]]
 ![[Pasted image 20251214203909.png]]
 Cierta caja musical tiene una pieza circular con 20 espacios a lo largo de su borde donde se pueden colgar campanitas elegidas entre 4 tipos distintos. 

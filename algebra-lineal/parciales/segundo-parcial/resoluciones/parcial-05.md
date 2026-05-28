@@ -1,4 +1,4 @@
-### Ejercicio 2
+# Ejercicio 2
 ![[Pasted image 20251107171153.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark>
 Sabemos que la matriz $M_{EE}(T)$ se obtiene a partir de la relación $M_{EE}(T)=M_{BE}(T)\cdot C(E,B)$.
@@ -223,7 +223,7 @@ Tenemos que $T$ va de $\mathbb{R}^{3}$ a $\mathbb{R}^{3}$, es decir, $n=m=3$.
 $T$ es un monomorfismo puesto que $Nu(T)=\{ \vec{0} \}$.
 $T$ es un epimorfismo puesto que $\mathrm{Im}(T)=\mathbb{R}^{3}$.
 Como $T$ es monomorfismo y epimorfismo simultáneamente, $T$ es isomorfo.
-### Ejercicio 3
+# Ejercicio 3
 ![[Pasted image 20251107202310.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark>
 Nos piden determinar la fórmula de la transformación $T(x,y,z)$, lo cual se logra encontrando la matriz de $T$ respecto a las bases canónicas, $\large{M_{EE'}(T)}$, donde $E$ es la base canónica de $\mathbb{R}^{3}$ y $E'$ es la base canónica de $\mathbb{R}^{2}$.

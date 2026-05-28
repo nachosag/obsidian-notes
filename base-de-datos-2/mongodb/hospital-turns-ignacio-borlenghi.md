@@ -43,7 +43,7 @@ El alumno deberá decidir cómo modelar la información, pudiendo utilizar:
 
 Se deberá justificar brevemente la decisión de modelado elegida.
 
-# **Casos de uso**
+# **Casos De uso**
 
 1. ¿Qué pacientes tienen obra social “OSDE”?  
 2. ¿Qué pacientes tienen al menos un turno pendiente de atención?  

@@ -1,20 +1,20 @@
-### Ejercicio 1
+# Ejercicio 1
 ![[Pasted image 20251212231130.png]]
 Tenemos 2 marcas distintas. Por cada marca tenemos 2 tamaños distintos. Por cada tamaño tenemos 2 opciones, con o sin flúor. 
 
 Por principio multiplicativa tenemos $2\cdot{2}\cdot{2}=8$ tipos diferentes de tubos.
-### Ejercicio 2
+# Ejercicio 2
 ![[Pasted image 20251212231137.png]]
 Tenemos 5 marcas distintas. Por cada marca tenemos 8 tamaños distintos. Por cada tamaño tenemos 2 opciones, con cubierta diagonal o radial. Por cada opción tenemos otras 2 opciones, con o sin cámara.
 
 Por principio multiplicativa tenemos $5\cdot{8}\cdot{2}\cdot{2}=160$ cubiertas diferentes.
-### Ejercicio 3
+# Ejercicio 3
 ![[Pasted image 20251212231148.png]]
 Cada bandera ocupa una posición del mástil. Por lo tanto, el mástil tiene 5 posiciones.
 Por cada posición tenemos 7 opciones.
 
 Por principio multiplicativa tenemos $7^{5}=16807$.
-### Ejercicio 4
+# Ejercicio 4
 ![[Pasted image 20251212231159.png]]
 
 <mark style="background: #FFB8EBA6;">Sin letras repetidas</mark>
@@ -31,7 +31,7 @@ Armemos el bloque $X'$ formado por el bloque $X$ y las letras restantes tal que 
 Podemos ordenar los elementos del bloque $X$ de $2! =2$ formas distintas y ordenar los elementos del bloque $X'$ de $4! =24$ formas distintas.
 
 Por principio multiplicativa tenemos que existen $2!\cdot{4!}=2\cdot{24}=48$ palabras donde las vocales están juntas.
-### Ejercicio 5
+# Ejercicio 5
 ![[Pasted image 20251212231211.png]]
 Las patentes están formadas por 6 caracteres donde los primeros tres representan la parte alfabética y los otros 3 representan la parte numérica.
 
@@ -41,7 +41,7 @@ El sistema decimal cuenta con 10 números que van del 0 al 9.
 La primera, segunda y tercera posición de las patentes tiene 26 opciones. La cuarta, quinta y sexta tiene 10 opciones.
 
 Por propiedad multiplicativa tenemos $26\cdot{26}\cdot{26}\cdot{10}\cdot{10}\cdot{10}=26^{3}\cdot{10^{3}}=17576000$ patentes distintas.
-### Ejercicio 6
+# Ejercicio 6
 ![[Pasted image 20251212231222.png]]
 
 <mark style="background: #FFB8EBA6;">a) Cantidad de patentes sin letras repetidas</mark>
@@ -95,14 +95,14 @@ La primer posición tiene 5 opciones.
 La cuarta, quinta y sexta posición tienen 10 opciones cada una.
 
 Por principio multiplicativo tenemos $26^{2}\cdot{5}\cdot{10^{3}}=3380000$ patentes donde la última letra es una vocal.
-### Ejercicio 7
+# Ejercicio 7
 ![[Pasted image 20251212231234.png]]
 Para entrar a la habitación tenemos 7 puertas. Para salir de la habitación tenemos 6 puertas.
 
 Notemos que las puertas son nuestras opciones.
 
 Por principio multiplicativo tenemos $7\cdot{6}=42$ formas de entrar a la habitación por una puerta y salir por otra puerta distinta.
-### Ejercicio 8
+# Ejercicio 8
 ![[Pasted image 20251212231242.png]]
 
 <mark style="background: #FFB8EBA6;">Cuántos números enteros existen entre 10.000 y 100.000 tal que cada uno de sus dígitos es un 6, un 7 o un 8</mark>
@@ -116,7 +116,7 @@ Por principio multiplicativo, tenemos $3^{5}=243$ números entre 10.000 y 100.00
 Notemos que los números entre 10.000 y 100.000 tienen 5 cifras y cada cifra puede ser 0, 6, 7 u 8 a excepción de la primer cifra, que no puede ser 0 porque estaríamos trabajando con un número menor que 10.000
 
 Por principio multiplicativo tenemos $3\cdot{4^{4}}=768$ números entre 10.000 y 100.000 donde sus dígitos son el 0, el 6, el 7 o el 8.
-### Ejercicio 9
+# Ejercicio 9
 ![[Pasted image 20251212231252.png]]
 Notemos que los números entre 1 y 10.000 pueden ser unidades, decenas, centenas y millares
 
@@ -152,7 +152,7 @@ Por propiedad aditiva tenemos $2+4+8+16=30$ números entre 1 y 10.000 que se for
 Sabemos que existen 80 números entre el 1 y el 10.000 que se forman con 1, 2 o 3 y son impares.
 
 Usando principio de sustracción tenemos que existen $80-30=50$ números entre el 1 y el 10.000 que se forman con 1, 2 o 3 y que tienen al menos una vez al dígito 2.
-### Ejercicio 10
+# Ejercicio 10
 ![[Pasted image 20251212231305.png]]
 Notemos que entre el 99 y el 1000 se encuentran números de 3 cifras.
 
@@ -171,7 +171,7 @@ La primer cifra (centenas) debe ser alguno de estos valores $\{ 1,2,3,4,5,6,7,8,
 La segunda cifra (decenas) debe ser alguno de estos valores $\{ 0,1,2,3,4,5,6,7,8,9 \}$ pero no puede repetir el dígito utilizado en la primer o tercer cifra, por lo que tiene 8 opciones.
 
 Por principio multiplicativo tenemos $5\cdot{8}\cdot{8}=320$ números entre 99 y 1000 que se pueden escribir con dígitos distintos y son impares.
-### Ejercicio 11
+# Ejercicio 11
 ![[Pasted image 20251212231322.png]]
 
 <mark style="background: #FFB8EBA6;">a) Cantidad de ordenamientos de la palabra ARTÍCULOS</mark>
@@ -213,15 +213,15 @@ Las 5 letras que no fueron elegidas pueden ordenarse de $5! =120$ formas distint
 
 Por principio multiplicativo tenemos $12\cdot{120}\cdot{20}=28800$ formas de ordenar la palabra ARTÍCULOS de forma tal que comience con dos vocales y termine con dos consonantes.
 
-### Ejercicio 12
+# Ejercicio 12
 ![[Pasted image 20251212231333.png]]
 
-### Ejercicio 13
+# Ejercicio 13
 ![[Pasted image 20251212231341.png]]
 Tenemos el conjunto de letras $\{ A,B,C,D,E \}$ y se quiere conocer cuántas formas existen de formar subconjuntos de tres elementos.
 
 Existen $C(5,3)=10$ formas de formar subconjuntos de tres elementos.
-### Ejercicio 14
+# Ejercicio 14
 ![[Pasted image 20251212231350.png]]
 En una recta tenemos 7 puntos. En otra recta paralela a la anterior, tenemos 6 puntos. Se quiere conocer cuántos triángulos podemos formar.
 
@@ -235,10 +235,10 @@ Luego, necesitamos tomar un tercer punto de la recta 1.
 Existen $C(7,1)=7$ formas de tomar 1 de los 7 puntos de la recta 1.
 
 Por principio multiplicativo existen $(21\cdot{6})+(15\cdot{7})=126+105=231$ formas de formar triángulos entre las dos rectas.
-### Ejercicio 15
+# Ejercicio 15
 ![[Pasted image 20251212231401.png]]
 
-### Ejercicio 16
+# Ejercicio 16
 ![[Pasted image 20251212231409.png]]
 
 En una empresa trabajan 8 hombres y 12 mujeres.
@@ -254,7 +254,7 @@ Existen $C(8,2)=28$ formas de elegir 2 de los 8 empleados hombres.
 Existen $C(12,3)=220$ formas de elegir 2 de las 12 empleadas mujeres.
 
 Por principio multiplicativo, tenemos $28\cdot{220}=6160$ formas de elegir 2 hombres y 3 mujeres que conformen la delegación.
-### Ejercicio 17
+# Ejercicio 17
 ![[Pasted image 20251212231423.png]]
 Un club cuenta con 60 miembros. 30 de ellos residen en Malvinas Argentinas y los restantes en San Miguel. Se desea conformar un comité con 8 miembros.
 
@@ -297,7 +297,7 @@ Este caso es simétrico al caso 1.
 Por principio multiplicativo, existen $4060\cdot{142506}=578574360$ formas de elegir 5 socios de San Miguel y 3 de Malvinas Argentinas.
 
 Por principio aditivo tenemos $578574360+578574360+751034025=1908182745$ formas de un comité con al menos 3 socios residentes de San Miguel y Malvinas Argentinas.
-### Ejercicio 18
+# Ejercicio 18
 ![[Pasted image 20251212231435.png]]
 Ana tiene 5 libros de Matemática, 6 libros de Informática y 7 libros de biología. Los libros son todos distintos.
 
@@ -339,7 +339,7 @@ Ahora estamos obligados a elegir $9-2-3=4$ libros de biología.
 Podemos elegir 4 de los 7 libros de biología de $C(7,4)=35$ formas distintas.
 
 Por principio multiplicativo, Ana puede elegir 9 de sus 18 libros de $10\cdot{20}\cdot{35}=7000$ formas distintas de manera tal que 2 de los 9 son de matemática, 3 de los 9 son de informática y los 4 restantes son de biología.
-### Ejercicio 19
+# Ejercicio 19
 ![[Pasted image 20251212231446.png]]
 Tenemos un tablero de ajedrez de $8\times{8}$ casillas.
 
@@ -363,29 +363,29 @@ Podemos dividir la construcción en dos etapas independientes:
 2. **Coloración:** Una vez ubicadas las torres, tenemos 8 colores para asignar a la primera torre, 7 para la segunda, etc. Esto equivale a permutar los 8 colores: $P(8,8)=8!$.
 
 Por el **Principio Multiplicativo**, el total es $8!\cdot8! = 1625702400$.
-### Ejercicio 20
+# Ejercicio 20
 ![[Pasted image 20251212231738.png]]
 
-### Ejercicio 21
+# Ejercicio 21
 ![[Pasted image 20251212231747.png]]
 
-### Ejercicio 22
+# Ejercicio 22
 ![[Pasted image 20251212231800.png]]
 
-### Ejercicio 23
+# Ejercicio 23
 ![[Pasted image 20251212231807.png]]
 
-### Ejercicio 24
+# Ejercicio 24
 ![[Pasted image 20251212231814.png]]
 
-### Ejercicio 25
+# Ejercicio 25
 ![[Pasted image 20251212231825.png]]
 
-### Ejercicio 26
+# Ejercicio 26
 ![[Pasted image 20251212231832.png]]
 
-### Ejercicio 27
+# Ejercicio 27
 ![[Pasted image 20251212231846.png]]
 
-### Ejercicio 28
+# Ejercicio 28
 ![[Pasted image 20251212231901.png]]

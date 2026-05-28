@@ -11,8 +11,8 @@ El determinante es un número escalar asociado a toda matriz cuadrada. Este núm
 El determinante de una matriz A, denotado como `det(A)` o `|A|`, se puede calcular de varias maneras.
 
 - **Fórmula de 2x2:** Para una matriz de 2x2, el determinante es `ad - bc`.
-- **Fórmula por Cofactores:** El determinante de una matriz de orden _n_ es igual a la suma de los productos de los elementos de una fila (o columna) por sus correspondientes adjuntos (o cofactores). El cofactor `Cᵢⱼ` se calcula como `(-1)ⁱ⁺ʲ` multiplicado por el determinante de la submatriz `Mᵢⱼ` que resulta de eliminar la fila _i_ y la columna _j_.
-- **Fórmula General por Permutaciones:** El determinante es una suma de _n!_ términos, donde cada término corresponde a una permutación de los números de columna (α, β, ..., ν).
+- **Fórmula por Cofactores:** El determinante de una matriz de orden *n* es igual a la suma de los productos de los elementos de una fila (o columna) por sus correspondientes adjuntos (o cofactores). El cofactor `Cᵢⱼ` se calcula como `(-1)ⁱ⁺ʲ` multiplicado por el determinante de la submatriz `Mᵢⱼ` que resulta de eliminar la fila *i* y la columna *j*.
+- **Fórmula General por Permutaciones:** El determinante es una suma de *n!* términos, donde cada término corresponde a una permutación de los números de columna (α, β, ..., ν).
 
 ### Propiedades Fundamentales
 
@@ -21,7 +21,7 @@ El determinante se rige por un conjunto de propiedades clave que facilitan su c�
 1. **Determinante de la Identidad:** `det(I) = 1`.
 2. **Intercambio de Filas:** Si se intercambian dos filas de una matriz, el signo de su determinante cambia.
 3. **Dependencia Lineal:** El determinante depende linealmente de cada una de sus filas. Esto implica:
-    - Si se multiplica una fila por un escalar _t_, el determinante se multiplica por _t_.
+    - Si se multiplica una fila por un escalar *t*, el determinante se multiplica por *t*.
     - Si una fila es la suma de dos vectores, el determinante es la suma de los determinantes correspondientes.
 4. **Filas Iguales:** Si una matriz tiene dos filas iguales, su determinante es 0.
 5. **Operaciones Elementales:** Restar un múltiplo de una fila a otra no cambia el determinante. Esta propiedad es fundamental para el método de eliminación gaussiana.
@@ -38,7 +38,7 @@ El determinante se rige por un conjunto de propiedades clave que facilitan su c�
 
 - **Volumen de una Caja:** El valor absoluto del determinante de A, `|det(A)|`, es igual al volumen de la caja n-dimensional cuyas aristas son los vectores fila (o columna) de A.
 - **Fórmula para los Pivotes:** El determinante de una matriz es el producto de sus pivotes, con un signo ± que depende del número de intercambios de filas realizados durante la eliminación.
-- **Regla de Cramer:** Permite resolver sistemas de ecuaciones `Ax = b` mediante determinantes. La componente _j_-ésima de la solución _x_ es el cociente de dos determinantes:
+- **Regla de Cramer:** Permite resolver sistemas de ecuaciones `Ax = b` mediante determinantes. La componente *j*-ésima de la solución *x* es el cociente de dos determinantes:
 
 --------------------------------------------------------------------------------
 
@@ -71,7 +71,7 @@ La matriz inversa, denotada como `A⁻¹`, es una matriz que, al multiplicarla p
 - La inversa `A⁻¹` de una matriz cuadrada A es aquella que cumple: `AA⁻¹ = I` y `A⁻¹A = I`.
 - **Condición de Existencia:** Una matriz A tiene inversa si y solo si es **no singular** (o invertible). Esto es equivalente a las siguientes condiciones:
     - `det(A) ≠ 0`.
-    - Tiene un conjunto completo de _n_ pivotes no nulos.
+    - Tiene un conjunto completo de *n* pivotes no nulos.
     - Sus columnas (y filas) son linealmente independientes.
     - La única solución para `Ax = 0` es el vector nulo `x = 0`.
 - Una matriz con una columna o fila de ceros no puede tener inversa.

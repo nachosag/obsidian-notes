@@ -1,4 +1,4 @@
-### Ejercicio 1
+# Ejercicio 1
 ![[Pasted image 20251105201608.png]]
 ![[Pasted image 20251105201702.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark> el objetivo está en encontrar un valor $k$ para que se cumpla esta ecuación: $\det\left( \frac{1}{3}A^{6}B^{t}A^{-1} \right)=\frac{32}{9}$.
@@ -285,7 +285,7 @@ x=-3-2z
 \end{gather}
 $$
 $\mathcal{S}=(x,y,z)=(-3-2z,-4-2z,z)=(-3,-4,0)+z\cdot(-2,-2,1)$ con $z\in \mathbb{R}$.
-### Ejercicio 2
+# Ejercicio 2
 ![[Pasted image 20251106000528.png]]
 ![[Pasted image 20251106000549.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark> Nos piden hallar una base de $S^{\perp}$.

@@ -1,6 +1,6 @@
 # Matrices y Sistemas de Ecuaciones Lineales
 
-### Operaciones y Propiedades
+## Operaciones y Propiedades
 
 - **Multiplicación Matriz-Vector**: El producto `Ax` puede interpretarse de dos formas:
     1. **Por Renglones**: Cada componente del vector resultante es el producto interno de un renglón de A con el vector x.
@@ -19,7 +19,7 @@
 | `F₃ → F₃ + 4F₂`       | `E₄ = [[1, 0, 0], [0, 1, 0], [0, 4, 1]]`    |
 | `F₃ → (1/12)F₃`       | `E₅ = [[1, 0, 0], [0, 1, 0], [0, 0, 1/12]]` |
 
-### Teorema de Rouché-Frobenius
+## Teorema de Rouché-Frobenius
 
 Este teorema establece cuándo un sistema de ecuaciones lineales `Ax = b` tiene solución, basándose en los rangos de la matriz de coeficientes `A` y la matriz ampliada `[A|b]`.
 
@@ -31,7 +31,7 @@ Este teorema establece cuándo un sistema de ecuaciones lineales `Ax = b` tiene 
         - **Infinitas Soluciones**: Si `r < n` (el rango es menor que el número de incógnitas). Geométricamente (en 2D), las ecuaciones representan la misma recta.
 - **Dimensión del Espacio de Soluciones**: Para un sistema compatible, la dimensión del subespacio afín de soluciones es `n - r`.
 
-### Inversa, Traspuesta y Factorizaciones
+## Inversa, Traspuesta y Factorizaciones
 
 - **Matriz Inversa (A⁻¹)**:
     - Una matriz `A` es invertible si existe una matriz `A⁻¹` tal que `AA⁻¹ = A⁻¹A = I`.

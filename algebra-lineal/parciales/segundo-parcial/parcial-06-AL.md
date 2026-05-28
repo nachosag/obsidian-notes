@@ -33,7 +33,7 @@ b) Escribir $A^{-1}$ como combinación lineal de $A^2$, $A$ e $I$.
 
 ---
 
-3. Dados los números complejos $z = \sqrt{3} - i$ y  $w = 3\left( \cos\left(\frac{\pi}{6}\right) + i \sin\left(\frac{\pi}{6}\right) \right)$, 
+3. Dados los números complejos $z = \sqrt{3} - i$ y $w = 3\left( \cos\left(\frac{\pi}{6}\right) + i \sin\left(\frac{\pi}{6}\right) \right)$, 
 
 a) Escribir la forma trigonométrica del número
 $$

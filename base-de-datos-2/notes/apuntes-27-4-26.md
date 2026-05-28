@@ -18,7 +18,7 @@
         
     - **P2P (Peer-to-Peer)**: Todos los nodos en el cluster son iguales. Actúan como clientes y servidores simultáneamente.
         
-    - **Simetría**: Cualquier nodo puede recibir una consulta de lectura o escritura de la aplicación (actuando como _Nodo Coordinador_ para esa petición).
+    - **Simetría**: Cualquier nodo puede recibir una consulta de lectura o escritura de la aplicación (actuando como *Nodo Coordinador* para esa petición).
     
 - **Análisis de la Disponibilidad**:
     
@@ -32,7 +32,7 @@
             
         - Si el nodo Primario se cae, el cluster de Mongo queda indisponible para escrituras durante unos segundos mientras los secundarios eligen un nuevo líder.
             
-        - Cassandra, al ser _masterless_, no sufre esta interrupción, garantizando una disponibilidad muy superior.
+        - Cassandra, al ser *masterless*, no sufre esta interrupción, garantizando una disponibilidad muy superior.
 
 ## Bloque 2: Cassandra Query Language (CQL) y Modelo de Datos
 
@@ -70,7 +70,7 @@
         
     - **Restricción de Búsqueda**: Cassandra solo permite buscar eficientemente por los campos que componen la Clave Primaria.
         
-        - Si intentás filtrar por una columna común, el motor tendría que escanear secuencialmente todos los nodos del cluster (un _Full Cluster Scan_ usando `ALLOW FILTERING`), destruyendo la performance.
+        - Si intentás filtrar por una columna común, el motor tendría que escanear secuencialmente todos los nodos del cluster (un *Full Cluster Scan* usando `ALLOW FILTERING`), destruyendo la performance.
             
         - En su lugar, si necesitás buscar por otro campo, tenés que crear una tabla duplicada optimizada para esa nueva clave de búsqueda.
 

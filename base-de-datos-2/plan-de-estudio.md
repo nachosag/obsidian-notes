@@ -4,7 +4,7 @@ Este plan de estudio está diseñado para llevarte paso a paso por todos los con
 
 ## 📅 Fase 1: Fundamentos Relacionales y Ciclo de Diseño (Clases 17-03 y 19-03)
 
-_El objetivo de esta fase es dominar la lógica de modelado relacional y la transición formal de requerimientos a base de datos._
+*El objetivo de esta fase es dominar la lógica de modelado relacional y la transición formal de requerimientos a base de datos.*
 
 - [ ] **Paso 1.1: Cardinalidad vs. Modalidad**
     
@@ -24,11 +24,11 @@ _El objetivo de esta fase es dominar la lógica de modelado relacional y la tran
     
     - Diferenciar Requerimientos Funcionales (comportamiento) de Requisitos No Funcionales / Atributos de Calidad (restricciones de rendimiento, seguridad, escalabilidad, flexibilidad).
         
-    - Estudiar la diferencia de abstracción entre las etapas de diseño: _Conceptual_ (DER) $\rightarrow$ _Lógico_ (Tablas normalizadas) $\rightarrow$ _Físico_ (DDL, índices, tipos de datos del SGBD).
+    - Estudiar la diferencia de abstracción entre las etapas de diseño: *Conceptual* (DER) $\rightarrow$ *Lógico* (Tablas normalizadas) $\rightarrow$ *Físico* (DDL, índices, tipos de datos del SGBD).
 
 ## 📅 Fase 2: Introducción a Sistemas Distribuidos y Modelo Documental (Clases 24-03 y 13-04)
 
-_El objetivo de esta fase es comprender cómo escala la infraestructura física y cómo funciona MongoDB por dentro._
+*El objetivo de esta fase es comprender cómo escala la infraestructura física y cómo funciona MongoDB por dentro.*
 
 - [ ] **Paso 2.1: Infraestructura de Cluster y Balanceo**
     
@@ -52,7 +52,7 @@ _El objetivo de esta fase es comprender cómo escala la infraestructura física 
 
 ## 📅 Fase 3: Alta Disponibilidad, Particionamiento y CAP (Clases 27-04 y 07-05)
 
-_El objetivo de esta fase es dominar las leyes que rigen los sistemas distribuidos y comparar las arquitecturas de Mongo y Cassandra._
+*El objetivo de esta fase es dominar las leyes que rigen los sistemas distribuidos y comparar las arquitecturas de Mongo y Cassandra.*
 
 - [ ] **Paso 3.1: Sharding vs. Replicación**
     
@@ -64,11 +64,11 @@ _El objetivo de esta fase es dominar las leyes que rigen los sistemas distribuid
     
 - [ ] **Paso 3.3: Arquitectura Masterless (P2P)**
     
-    - Entender el funcionamiento de un anillo P2P en Cassandra, la simetría de sus nodos y el rol dinámico del _Nodo Coordinador_.
+    - Entender el funcionamiento de un anillo P2P en Cassandra, la simetría de sus nodos y el rol dinámico del *Nodo Coordinador*.
 
 ## 📅 Fase 4: Modelado Query-Driven y Mecanismos de Escritura (Clases 30-04 y 07-05)
 
-_El objetivo de esta fase es cambiar de chip mental al diseñar para bases de datos columnares de alto rendimiento._
+*El objetivo de esta fase es cambiar de chip mental al diseñar para bases de datos columnares de alto rendimiento.*
 
 - [ ] **Paso 4.1: Diseño Query-Driven en Cassandra**
     

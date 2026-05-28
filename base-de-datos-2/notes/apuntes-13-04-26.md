@@ -57,10 +57,10 @@
 | **Modelo Relacional (SQL)**  | **Modelo Documental (MongoDB)** |
 | ---------------------------- | ------------------------------- |
 | **Base de Datos**            | Base de Datos                   |
-| **Tabla**                    | Colección (_Collection_)        |
-| **Registro / Fila**          | Documento (_Document_)          |
-| **Columna**                  | Clave o Campo (_Key_)           |
-| **Celda / Valor de columna** | Valor (_Value_)                 |
+| **Tabla**                    | Colección (*Collection*)        |
+| **Registro / Fila**          | Documento (*Document*)          |
+| **Columna**                  | Clave o Campo (*Key*)           |
+| **Celda / Valor de columna** | Valor (*Value*)                 |
 
 - **Reglas de Nomenclatura y Convenciones**:
     
@@ -86,11 +86,11 @@
         
     - **Consola de Mongo (Shell)**: Es un intérprete de **JavaScript** interactivo. Esto permite manipular bases de datos y colecciones usando código JS directo.
 
-- **Propiedades de las Claves (**_**Keys**_**)**:
+- **Propiedades de las Claves (*****Keys*****)**:
     
     - Son **Case Sensitive** (sensibles a mayúsculas y minúsculas: no es lo mismo `"Nombre"` que `"nombre"`).
         
-    - Son **atipadas** en su declaración (las claves son simples cadenas de texto), pero el _valor_ asociado a ellas sí posee un tipo de datos estricto que MongoDB respeta.
+    - Son **atipadas** en su declaración (las claves son simples cadenas de texto), pero el *valor* asociado a ellas sí posee un tipo de datos estricto que MongoDB respeta.
 
 - **La Clave Primaria (`_id`)**:
     
@@ -98,7 +98,7 @@
         
     - **Estructura de un `ObjectId` (12 bytes)**:
         
-        - $4$ bytes que representan una marca de tiempo (_Timestamp_), indicando el segundo exacto de su creación.
+        - $4$ bytes que representan una marca de tiempo (*Timestamp*), indicando el segundo exacto de su creación.
             
         - $5$ bytes que son un identificador aleatorio único para el servidor y el proceso en el que se generó.
             

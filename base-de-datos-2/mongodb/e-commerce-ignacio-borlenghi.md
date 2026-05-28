@@ -43,7 +43,7 @@ El alumno deberá decidir cómo modelar la información, pudiendo utilizar:
 
 Se deberá justificar brevemente la decisión de modelado elegida.
 
-# **Casos de uso**
+# **Casos De uso**
 
 1. ¿Qué productos pertenecen a la categoría “Electrónica”?  
 2. ¿Qué clientes tienen al menos un pedido con estado “pendiente”?  

@@ -1,4 +1,4 @@
-### Ejercicio 2
+# Ejercicio 2
 ![[Pasted image 20251108200602.png]]
 
 Dado que $M_{EB}(T)$ es la matriz, asumimos que toma coordenadas en la base canónica $E$ $([v]_{E})$ y devuelve coordenadas en la base $B$ $([Tv]_{B})$.
@@ -7,7 +7,7 @@ Datos:
 - $B=\{ v_{1},v_{2},v_{3} \}=\{ (1,0,-1),(0,2,1),(1,0,0) \}$.
 - $M_{EB}(T)=\begin{pmatrix}1 & 2 & 0 \\ -1 & 2 & -4 \\ 0 & 3 & -3\end{pmatrix}$.
 
-## Calculamos $T(2,-1,0)$
+# Calculamos $T(2,-1,0)$
 
 El vector de entrada $v=(2,-1,0)$ está dado en coordenadas canónicas $E$, así que $[v]_{E}=\begin{pmatrix}2 \\ -1 \\ 0\end{pmatrix}$.
 Buscamos las coordenadas de la imagen en base $B$, es decir $[Tv]_{B}$.
@@ -62,11 +62,11 @@ T(2,-1,0) = (-3,-8,-4)
 $$
 ---
 
-## Buscamos $B_{Nu(T)}$, $B_{\mathrm{Im}(T)}$, $dim(Nu(T))$ y $dim(\mathrm{Im}(T))$
+# Buscamos $B_{Nu(T)}$, $B_{\mathrm{Im}(T)}$, $dim(Nu(T))$ y $dim(\mathrm{Im}(T))$
 
 La transformación $T$ va de $\mathbb{R}^{3}$ a $\mathbb{R}^{2}$. El Teorema de la Dimensión establece que $dim(\mathbb{R}^{3})=dim(Nu(T))+dim(\mathrm{Im}(T))$.
 
-### Núcleo
+## Núcleo
 
 El núcleo se encuentra resolviendo el sistema homogéneo $M_{EB}(T)\cdot X=0$:
 $$
@@ -125,7 +125,7 @@ $$
 $$
 dim(Nu(T))=1
 $$
-### Imagen
+## Imagen
 
 La dimensión de la imagen es igual al rango de la matriz, por lo tanto
 $$
@@ -145,14 +145,14 @@ $$
 $$
 dim(\mathrm{Im}(T))=2
 $$
-### Clasificación
+## Clasificación
 
 Como $T:\mathbb{R}^{3}\to \mathbb{R}^{3}$, comparamos las dimensiones con $n=3$.
 - **Monomorfismo**: No, porque $dim(Nu(T))=1\neq{0}$.
 - **Epimorfismo**: No, porque $dim(\mathrm{Im}(T))=2\neq{3}$.
 - **Isomorfismo**: No, porque no es un monomorfismo ni epimorfismo.
 
-## Escribir $v=(1,2-1)$ en coordenadas de la base $B$
+# Escribir $v=(1,2-1)$ en coordenadas de la base $B$
 
 Buscamos $(\alpha,\beta,\gamma)=[v]_{B}$ tal que
 $$
@@ -179,10 +179,10 @@ $$
 \alpha+\gamma=1\leftrightarrow 2+\gamma=1\leftrightarrow \gamma=-1
 $$
 Las coordenadas de $v$ en la base $B$ son $[v]_{B}=(2,1,-1)$.
-### <mark style="background: #FFB8EBA6;">Ejercicio 3</mark>
+## <mark style="background: #FFB8EBA6;">Ejercicio 3</mark>
 ![[Pasted image 20251109195039.png]]
 
-#### <mark style="background: #FFF3A3A6;">Apartado A</mark>
+### <mark style="background: #FFF3A3A6;">Apartado A</mark>
 Para que $\lambda=3$ sea un autovalor de la matriz $A$, se debe cumplir que el determinante de la matriz $(A-3I)$ sea igual a cero.
 $$
 (A-3I) =
@@ -243,10 +243,10 @@ $$
 $$
 Notemos que $k=6$ cumple la igualdad. Es decir, $\lambda=3$ es autovalor simple si $k=6$.
 
-### Ejercicio 6
+## Ejercicio 6
 ![[Pasted image 20251110205518.png]]
 
-#### <mark style="background: #FFF3A3A6;">Apartado A</mark>
+### <mark style="background: #FFF3A3A6;">Apartado A</mark>
 
 Si $(1,1,1)\in Nu(T)\implies dim(Nu(T))\geq{1}$.
 Para que $T$ sea un epimorfismo se debe cumplir que $dim(\mathrm{Im}(T))=dim(\mathbb{R}^{3})=3$.
@@ -261,11 +261,11 @@ Tenemos tres posibles casos
 
 Por lo tanto, $T$ no puede ser un epimorfismo.
 
-### Ejercicio 7
+## Ejercicio 7
 ![[Pasted image 20251110211201.png]]
-### Ejercicio 8
+## Ejercicio 8
 ![[Pasted image 20251111014813.png]]
-### Ejercicio 9
+## Ejercicio 9
 ![[Pasted image 20251111025658.png]]
 
 Tenemos que

@@ -1,4 +1,4 @@
-### Ejercicio 1
+# Ejercicio 1
 ![[Pasted image 20251206200752.png]]
 ![[Drawing 2025-12-06 20.06.49.excalidraw]]
 
@@ -26,7 +26,7 @@ Como $K_{4}$ es un grafo 3-regular, donde el grado de cada uno de sus vértices 
 
 Luego, el recorrido pedido, no es posible de encontrar.
 
-### Ejercicio 2
+# Ejercicio 2
 ![[Pasted image 20251206212407.png]]
 El grafo de la izquierda lo llamaremos $G$, al del medio $H$ y al de la derecha $J$.
 
@@ -45,7 +45,7 @@ Sea el grafo $J$ con:
 - $\text{Vértices de corte}=\{ v_{1},v_{3} \}$.
 - $\text{Aristas de corte}=\{ e_{4},e_{6} \}$.
 
-### Ejercicio 3
+# Ejercicio 3
 ![[Pasted image 20251206214208.png]]
 
 Sea $G$ un grafo
@@ -62,11 +62,11 @@ Que $G$ sea conexo implica que:
 Luego, el vecino de $v$, notemoslo $w_{1}$, a su vez tiene que ser vecino de un tercer vértice $w_{2}$.
 Es decir, $d(w_{1})\geq{2}$ y $d(w_{2})\geq{1}$.
 
-Si $w_{1}$ es un vértice de corte entonces su eliminación debería incrementar la cantidad de  componentes conexas.
+Si $w_{1}$ es un vértice de corte entonces su eliminación debería incrementar la cantidad de componentes conexas.
 
 Si tomamos el subgrafo inducido $G-w_{1}$, el vértice $v$ sería un vértice aislado pues perdió a su único vecino. Esto implica que se generó una nueva componente conexa y por lo tanto, $w_{1}$ es un vértice de corte.
 
-### Ejercicio 4
+# Ejercicio 4
 ![[Pasted image 20251206220825.png]]
 Sea $G$ un grafo conexo y $e$ una arista de corte. Nos piden probar que $G-e$ tiene exactamente dos componentes conexas.
 
@@ -90,7 +90,7 @@ Si $P_{2}$ no usa la arista $e$ entonces en $G-e$ existe un camino entre $u$ y $
 
 Luego, $G-e$ tiene exactamente dos componentes conexas.
 
-### Ejercicio 5
+# Ejercicio 5
 ![[Pasted image 20251207001638.png]]
 
 Sea $G$ un grafo conexo, con al menos tres vértices y una arista de corte $e$. Nos piden probar que alguno de los extremos de $e$ es un vértice de corte.
@@ -110,7 +110,7 @@ Sin perdida de generalidad, supongamos que $v_{3}\in C_{1}$. En $G$, todo camino
 
 Por lo tanto, alguno de los extremos de la arista $e$ es un vértice de corte.
 
-### Ejercicio 6
+# Ejercicio 6
 ![[Pasted image 20251207024332.png]]
 Sea $G$ un grafo bipartito k-regular con $k\geq{2}$. Nos piden probar que $G$ no tiene aristas de corte.
 
@@ -131,7 +131,7 @@ Notemos que la propiedad de los grafos bipartitos antes mencionada no se cumple,
 
 Por lo tanto, $G$ no tiene aristas de corte.
 
-### Ejercicio 7
+# Ejercicio 7
 ![[Pasted image 20251207221423.png]]
 Se quiere probar que todo grafo $G$ con una arista de corte $e$ tiene al menos dos vértices de grado impar.
 
@@ -145,7 +145,7 @@ Notemos que esto contradice la hipótesis de que $e$ es una arista de corte ya q
 
 La contradicción proviene de suponer que $G$ no tiene vértices de grado impar. Por lo tanto, $G$ debe tener al menos un vértice de grado impar y como los vértices de grado impar siempre vienen de a pares, concluimos que $G$ tiene al menos dos vértices de grado impar.
 
-### Ejercicio 8
+# Ejercicio 8
 ![[Pasted image 20251208014241.png]]
 
 Nos piden demostrar que los grafos $K_{3,3}$ y dos copias de $C_{3}$ no contienen circuitos eulerianos. 
@@ -155,7 +155,7 @@ Notemos que dos copias de $C_{3}$ no admiten un circuito euleriano ya que al ten
 
 Luego, el grafo $K_{3,3}$ no admite un circuito euleriano ya que todos sus vértices tienen grado impar.
 
-### Ejercicio 9
+# Ejercicio 9
 ![[Pasted image 20251208014301.png]]
 
 Nombremos a los vértices del grafo como:
@@ -183,7 +183,7 @@ Si tomamos cualquier par de vértices $v_{1},v_{2}$ del conjunto $X$ tal que $v_
 
 Esto impide que el grafo admita un circuito euleriano.
 
-### Ejercicio 10
+# Ejercicio 10
 ![[Pasted image 20251208014317.png]]
 
 Se pide indicar y justificar si las siguientes afirmaciones son verdaderas o falsas.
@@ -210,12 +210,12 @@ Notemos que $G$ es un grafo simple de 6 (par) vértices porque no tiene bucles n
 
 La intuición nos dice que la afirmación es falsa porque la paridad de $|V(G)|$ no restringe necesariamente la paridad de $|E(G)|$ en grafos eulerianos. Por el Teorema del Apretón de Manos, sabemos que $\sum_{v\in V(G)}d(v)=2|E(G)|$. Como el grafo es euleriano, cada $d(v)$ es par ($2k$). Dividiendo por 2, obtenemos $|E(G)|=\sum k$. Nada obliga a que esa suma sea par solo por $|V(G)|$ lo sea.
 
-### Ejercicio 11
+# Ejercicio 11
 ![[Pasted image 20251208014337.png]]
 
 <mark style="background: #FFB8EBA6;">Revisar el enunciado</mark>
 
-### Ejercicio 12
+# Ejercicio 12
 ![[Pasted image 20251208014359.png]]
 
 Nos piden indicar cuál de las siguientes afirmaciones son verdaderas y cuales son falsas. Luego, justificar la respuesta.
@@ -264,7 +264,7 @@ Notemos que puede extenderse a $v_{1}\to v_{2}\to v_{3}$ pero $v_{2}$ no tiene g
 
 Luego, la capacidad de extender un recorrido depende de la existencia de aristas incidentes no utilizadas en ese vértice, no de que su grado total sea impar.
 
-### Ejercicio 13
+# Ejercicio 13
 ![[Pasted image 20251208014417.png]]
 
 <mark style="background: #FFB8EBA6;">a)</mark> 
@@ -305,7 +305,7 @@ En el caso 1 $G$ es isomorfo al grafo $K_{5}$.
 En el caso 2 $G$ es isomorfo al grafo moño.
 En el caso 5 $G$ es isomorfo al grafo $F$.
 
-### Ejercicio 14
+# Ejercicio 14
 ![[Pasted image 20251208014452.png]]
 
 Sea $G$ un grafo par. Nos piden probar que $G$ no tiene aristas de corte.
@@ -318,7 +318,7 @@ Luego, $e$ debe pertenecer a uno de esos $k$ ciclos. Esto contradice la caracter
 
 Esta contradicción proviene de suponer que $G$ tiene una arista de corte. Por lo tanto, $G$ no tiene arista de corte.
 
-### Ejercicio 15
+# Ejercicio 15
 ![[Pasted image 20251208014509.png]]
 
 Sea $G$ un grafo sin bucles tal que todos sus vértices tienen grado al menos 3.
@@ -338,7 +338,7 @@ Si $x_{0}$ tuviese un vecino fuera del camino, podríamos agregarlo a $P$ y exte
 
 Si $C_{1}$ y $C_{2}$ fueran ciclos impares, entonces $i+1$ y $j+1$ son impares. Esto solo es posible si $i$ y $j$ son pares. Si $i$ y $j$ son pares entonces $C_{3}$ y $C_{4}$ son pares porque $j-i+2$ es par.
 
-### Ejercicio 16
+# Ejercicio 16
 ![[Pasted image 20251208014527.png]]
 
 Debemos probar las siguientes dos implicaciones:
@@ -382,23 +382,23 @@ Esto implica que encontramos una segunda partición válida $X'$ e $Y'$. Esto co
 
 Como demostramos las dos implicaciones, podemos concluir que el enunciado es **verdadero**.
 
-### Ejercicio 17
+# Ejercicio 17
 ![[Pasted image 20251208014620.png]]
 ![[Pasted image 20251208014629.png]]
 
-### Ejercicio 18
+# Ejercicio 18
 ![[Pasted image 20251208014641.png]]
 
-### Ejercicio 19
+# Ejercicio 19
 ![[Pasted image 20251208014652.png]]
 
-### Ejercicio 19
+# Ejercicio 19
 Sea $G$ un grafo conexo simple. Pruebe que $G$ es bipartito completo si y solo si no contiene $K_{3}$ ni $P_{4}$ como subgrafo inducido.
 
 Sabemos que $G$ es simple y conexo. Nos piden demostrar los siguientes puntos:
 1. Si $G$ es bipartito completo entonces no contiene a $K_{3}$ ni $P_{4}$ como subgrafo inducido.
 2. Si $G$ es un grafo simple y conexo que no contiene a $K_{3}$ ni $P_{4}$ como subgrafo inducido entonces $G$ es bipartito completo.
-#### Primer demostración
+## Primer demostración
 Supongamos que $G$ es un grafo simple, conexo y bipartito completo.
 
 Sabemos que:
@@ -407,11 +407,11 @@ Sabemos que:
 - $\forall v\in X,\quad d_{G}(v)=m$ y $\forall w\in Y,\quad d_{G}(w)=n$.
 
 Comencemos analizando la estructura de un $K_{3}$.
-Un $K_{3}$ es un grafo simple y conexo de tres vértices donde cada par de vértices es vecino entre sí. Es decir, existen $v_{1},v_{2},v_{3}\in V(K_{3})$ tal que $v_{1}\sim v_{2},v_{2}\sim v_{3},v_{3}\sim v_{1}$. Si  es un subgrafo inducido en $G$ entonces esta misma estructura debe estar presente en $G$.
+Un $K_{3}$ es un grafo simple y conexo de tres vértices donde cada par de vértices es vecino entre sí. Es decir, existen $v_{1},v_{2},v_{3}\in V(K_{3})$ tal que $v_{1}\sim v_{2},v_{2}\sim v_{3},v_{3}\sim v_{1}$. Si es un subgrafo inducido en $G$ entonces esta misma estructura debe estar presente en $G$.
 
 Tomemos un $w_{1}\in X$ y un $w_{2}\in Y$. Como $X$ e $Y$ son conjuntos independientes y cada vértice $v\in X$ es vecino con los $m$ vértices de $Y$ y a su vez cada vértice $v\in Y$ es vecino con los $n$ vértices de $X$, sabemos que $w_{1}\sim w_{2}$. Ahora necesitamos encontrar un $w_{3}\in V(G)$ tal que $w_{3}\sim w_{1}$ y $w_{3}\sim w_{2}$, pero esto es imposible ya que $w_{3}$ debe pertenecer a $X$ o $Y$ y eso implica que $w_{3}$ no puede ser vecino con los demás vértices del conjunto independiente al que pertenece, puesto que eso viola la definición de grafo bipartito. Por lo tanto, $G$ no contiene un $K_{3}$ como un subgrafo inducido.
 
-==De forma un poco más directa, a veces se usa el hecho de que un $K_3$ es, por definición, un ciclo de longitud 3. Como un grafo es bipartito _si y sólo si_ no contiene ciclos de longitud impar, un grafo bipartito no puede contener un $K_3$. Tu argumento lo demuestra excelentemente desde la definición de los conjuntos independientes.==
+==De forma un poco más directa, a veces se usa el hecho de que un $K_3$ es, por definición, un ciclo de longitud 3. Como un grafo es bipartito *si y sólo si* no contiene ciclos de longitud impar, un grafo bipartito no puede contener un $K_3$. Tu argumento lo demuestra excelentemente desde la definición de los conjuntos independientes.==
 
 Ahora analicemos la estructura de un $P_{4}$.
 Un $P_{4}$ es un grafo simple y conexo cuyos 4 vértices pueden ordenarse en hilera de forma tal que dos vértices son vecinos si y solo si son consecutivos en ese orden. Es decir, existen $v_{1},v_{2},v_{3},v_{4}\in V(P_{4})$ tal que $v_{1}\sim v_{2},v_{2}\sim v_{3},v_{3}\sim v_{4}$. Si $P_{4}$ es un subgrafo inducido en $G$ entonces esta misma estructura debe estar presente en él.
@@ -419,7 +419,7 @@ Un $P_{4}$ es un grafo simple y conexo cuyos 4 vértices pueden ordenarse en hil
 Notemos que en $P_{4}$ la arista $(v_{1},v_{4})$ no debe existir. Sin embargo, los vértices $v_{1}$ y $v_{4}$ deben alternarse en los conjuntos independientes $X$ e $Y$. Como $G$ es un grafo bipartito completo, la arista $(v_{1},v_{4})$ está forzada a existir en $G$. Esto representa una contradicción directa, ya que una arista no puede existir y estar ausente al mismo tiempo. Por lo tanto, $G$ no contiene a $P_{4}$ como subgrafo inducido.
 
 De esta forma queda demostrada la primer demostración.
-#### Segunda demostración
+## Segunda demostración
 Comencemos probando que $G$ es bipartito.
 Si decimos que un grafo $G$ no contiene a $K_{3}$, también estamos diciendo que $G$ no contiene un $C_{3}$, puesto que $K_{3}$ es isomorfo a un $C_{3}$ que particularmente es un ciclo de longitud impar. Por caracterización de grafos bipartitos, podemos afirmar que $G$ es bipartito.
 

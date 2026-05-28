@@ -1,4 +1,4 @@
-#### **Ejercicio 1: En $\mathbb{R}^2$ (Caso Básico)**
+# **Ejercicio 1: En $\mathbb{R}^2$ (Caso Básico)**
 
 Dada la base $B_1 = \{\mathbf{b}_1, \mathbf{b}_2\}$ de $\mathbb{R}^2$, donde $\mathbf{b}_1 = (1, 2)$ y $\mathbf{b}_2 = (3, -1)$.
 
@@ -64,7 +64,7 @@ $$
 
 ---
 
-#### **Ejercicio 2: En $\mathbb{R}^2$ (Caso Intermedio)**
+# **Ejercicio 2: En $\mathbb{R}^2$ (Caso Intermedio)**
 
 Dada la base $B_2 = \{\mathbf{b}_1, \mathbf{b}_2\}$ de $\mathbb{R}^2$, donde $\mathbf{b}_1 = (2, 1)$ y $\mathbf{b}_2 = (-1, 3)$.
 
@@ -126,7 +126,7 @@ $$
 
 ---
 
-#### **Ejercicio 3: En $\mathbb{R}^3$ (Similar al Problema Original)**
+# **Ejercicio 3: En $\mathbb{R}^3$ (Similar al Problema Original)**
 
 Dada la base $B_3 = \{\mathbf{b}_1, \mathbf{b}_2, \mathbf{b}_3\}$ de $\mathbb{R}^3$, donde $\mathbf{b}_1 = (1, 0, 0)$, $\mathbf{b}_2 = (1, 1, 0)$, y $\mathbf{b}_3 = (1, 1, 1)$.
 
@@ -169,7 +169,7 @@ $$
 
 ---
 
-#### **Ejercicio 4: En $\mathbb{R}^3$ (Base General, Enfoque en Gauss-Jordan)**
+# **Ejercicio 4: En $\mathbb{R}^3$ (Base General, Enfoque en Gauss-Jordan)**
 
 Dada la base $B_4 = \{\mathbf{b}_1, \mathbf{b}_2, \mathbf{b}_3\}$ de $\mathbb{R}^3$, donde $\mathbf{b}_1 = (1, 1, 0)$, $\mathbf{b}_2 = (0, 1, 1)$, y $\mathbf{b}_3 = (1, 0, 1)$.
 
@@ -261,7 +261,7 @@ $$
 
 ---
 
-#### **Ejercicio 5: En $\mathbb{R}^4$ (Aumento de Dimensión)**
+# **Ejercicio 5: En $\mathbb{R}^4$ (Aumento de Dimensión)**
 
 Dada la base $B_5 = \{\mathbf{e}_1, \mathbf{e}_2, \mathbf{e}_3, \mathbf{e}_4\}$ de $\mathbb{R}^4$, donde $\mathbf{e}_1 = (1, 0, 0, 0)$, $\mathbf{e}_2 = (1, 1, 0, 0)$, $\mathbf{e}_3 = (1, 1, 1, 0)$, y $\mathbf{e}_4 = (1, 1, 1, 1)$.
 

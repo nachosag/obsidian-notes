@@ -1,4 +1,4 @@
-### Ejercicio 1
+# Ejercicio 1
 ![[Pasted image 20250918205230.png]]
 a)
 $$
@@ -165,9 +165,9 @@ $$
 8 & -3
 \end{pmatrix}
 $$
-### Ejercicio 2
+# Ejercicio 2
 ![[Pasted image 20250918214313.png]]
-### Ejercicio 3
+# Ejercicio 3
 ![[Pasted image 20250918233640.png]]
 a)
 $\det(A)=1\cdot{1}-2\cdot{(-3)}=1+6=7$. Como $\det(A)=7\neq{0},A$ es invertible.

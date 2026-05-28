@@ -14,7 +14,7 @@
 
 - **La trampa del diseño tradicional**:
     
-    - En tus notas apuntaste: _"Este modelo se hizo basándose en el enunciado, no en las consultas"_.
+    - En tus notas apuntaste: *"Este modelo se hizo basándose en el enunciado, no en las consultas"*.
         
     - **Corrección del Arquitecto**: Esto es correcto **únicamente** en la fase de análisis conceptual (DER). Pero en Cassandra, la transición al modelo físico exige que **cada tabla se diseñe exclusivamente para responder a una consulta específica**.
         
@@ -38,7 +38,7 @@
 
 ### 📝 NOTAS DE CLASE (OUTLINE)
 
-- **Análisis de la Consulta**: _"Traer los hoteles cerca de un punto de interés (POI) determinado"_.
+- **Análisis de la Consulta**: *"Traer los hoteles cerca de un punto de interés (POI) determinado"*.
     
     - El filtro de entrada (el `WHERE`) va a ser el punto de interés. Por lo tanto, el POI debe ser la **Partition Key**.
         
@@ -56,9 +56,9 @@
 
 - **Pseudocódigo del Esquema y Consulta (CQL)**:
     
-    - _Definición de tabla_: Pensá la estructura de creación definiendo las columnas, asignando los tipos correspondientes y declarando la `PRIMARY KEY (clave_particion, clave_agrupacion)`.
+    - *Definición de tabla*: Pensá la estructura de creación definiendo las columnas, asignando los tipos correspondientes y declarando la `PRIMARY KEY (clave_particion, clave_agrupacion)`.
         
-    - _Consulta_: Para recuperar los datos de forma eficiente, la cláusula de filtrado debe apuntar directamente a la clave de partición.
+    - *Consulta*: Para recuperar los datos de forma eficiente, la cláusula de filtrado debe apuntar directamente a la clave de partición.
 
 ```CQL
 -- Estructura lógica para la búsqueda

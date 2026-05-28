@@ -32,7 +32,7 @@ Un **Cluster** es un conjunto de servidores independientes (nodos) interconectad
 
 - **Objetivos principales**:
     
-    - **Alta Disponibilidad (HA - High Availability)**: Si un nodo se cae, otros asumen su carga sin interrumpir el servicio, eliminando los Puntos Únicos de Falla (SPOF - _Single Points of Failure_).
+    - **Alta Disponibilidad (HA - High Availability)**: Si un nodo se cae, otros asumen su carga sin interrumpir el servicio, eliminando los Puntos Únicos de Falla (SPOF - *Single Points of Failure*).
     
     - **Tolerancia a Fallas**: Capacidad de seguir operando correctamente a pesar de la pérdida o corrupción de algunos de sus componentes.
     

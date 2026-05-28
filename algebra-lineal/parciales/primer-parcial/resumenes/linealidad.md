@@ -1,4 +1,4 @@
-## 1. ¿Cómo puedo saber si un conjunto de vectores es linealmente independiente (L.I.)?
+# 1. ¿Cómo Puedo saber si un conjunto de vectores es linealmente independiente (L.I.)?
 
 Un conjunto de vectores $S = {v_1, v_2, \ldots, v_k}$ de un espacio vectorial $V$ es **linealmente independiente (l.i.)** si la única manera de obtener el vector nulo ($\vec{0}$) a partir de una combinación lineal de ellos es si todos los escalares son cero.
 
@@ -6,18 +6,18 @@ Formalmente, el conjunto es L.I. si se cumple que: $$c_1 v_1 + c_2 v_2 + \cdots 
 
 Para conocer si un conjunto de vectores es L.I., se debe plantear y resolver el **sistema de ecuaciones homogéneo** asociado a esta combinación lineal:
 
-### A. Método General (Sistema Homogéneo)
+## A. Método General (Sistema Homogéneo)
 
 1. **Construir la matriz A:** Escriba cada vector $v_i$ como una columna (o, alternativamente, como una fila) de una matriz $A$.
 2. **Plantear el sistema homogéneo:** Considere el sistema $A\mathbf{c} = \vec{0}$, donde $\mathbf{c} = (c_1, c_2, \ldots, c_k)$ es el vector de escalares desconocidos.
 3. **Resolver el sistema:** Aplique el método de eliminación de Gauss-Jordan para llevar la matriz $A$ a su forma escalonada.
 
-#### Criterios de Independencia Lineal:
+### Criterios de Independencia Lineal:
 
 - **Si la única solución es la trivial ($\mathbf{c} = \vec{0}$):** Los vectores son **linealmente independientes**. <mark style="background: #BBFABBA6;">Esto ocurre cuando el rango de la matriz es igual al número de vectores</mark> (es decir, no hay variables libres).
 - **Si existe alguna solución no trivial ($\mathbf{c} \neq \vec{0}$):** Los vectores son **linealmente dependientes**. <mark style="background: #FF5582A6;">Esto sucede cuando el rango de la matriz es menor que el número de vectores</mark>, lo que resulta en variables libres.
 
-### B. Método del Determinante (Solo para matrices cuadradas)
+## B. Método del Determinante (Solo para matrices cuadradas)
 
 Si se tiene un conjunto de $n$ vectores en $\mathbb{R}^n$ (es decir, una matriz cuadrada $A$), se puede utilizar el determinante como un atajo:
 
@@ -28,13 +28,13 @@ Si se utiliza una transformación lineal $T: \mathbb{R}^n \to \mathbb{R}^n$, la 
 
 ---
 
-## 2. ¿Cómo puedo conocer cuál de esos vectores es el que está sobrando?
+# 2. ¿Cómo Puedo conocer cuál de esos vectores es el que está sobrando?
 
 Un vector está "sobrando" (es decir, es **redundante** o **linealmente dependiente**) si puede escribirse como una **combinación lineal** de los otros vectores del conjunto. Un conjunto de vectores linealmente dependiente puede generar el mismo subespacio que un subconjunto más pequeño.
 
 La identificación de los vectores sobrantes se realiza mediante el mismo proceso de **resolución del sistema homogéneo** $A\mathbf{c} = \vec{0}$ (donde los vectores forman las columnas de $A$) o mediante el proceso de **eliminación**.
 
-### A. Usando el Sistema Homogéneo y Variables Libres
+## A. Usando el Sistema Homogéneo y Variables Libres
 
 Cuando se resuelve el sistema $A\mathbf{c} = \vec{0}$ y se obtienen soluciones no triviales (lo que indica dependencia), esto significa que es posible expresar algunos vectores como combinación lineal de otros:
 
@@ -42,7 +42,7 @@ Cuando se resuelve el sistema $A\mathbf{c} = \vec{0}$ y se obtienen soluciones n
 2. **Determinar la redundancia:** Las columnas (vectores) de la matriz original $A$ que corresponden a las columnas **sin pivote** en la matriz escalonada son aquellas que pueden expresarse como combinaciones lineales de los vectores correspondientes a las columnas con pivotes. Estos son los vectores "sobrantes" que se pueden descartar para formar un conjunto linealmente independiente que genere el mismo subespacio.
     - **Ejemplo:** Si el sistema $A\mathbf{c} = \vec{0}$ arroja la solución $3v_1 - v_2 - 2v_3 + 0v_4 = \vec{0}$, y si $v_2$ es el vector correspondiente a una variable libre (escalar no nulo), se puede despejar $v_2 = 3v_1 - 2v_3$, confirmando que $v_2$ es redundante.
 
-### B. Mediante Eliminación de Filas (para reducir un conjunto generador)
+## B. Mediante Eliminación de Filas (para reducir un conjunto generador)
 
 Si usted coloca los vectores como **filas** en una matriz y realiza operaciones elementales de fila para escalonarla, los siguientes criterios se aplican:
 

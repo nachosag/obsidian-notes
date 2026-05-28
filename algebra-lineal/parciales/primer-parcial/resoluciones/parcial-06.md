@@ -1,4 +1,4 @@
-### Ejercicio 1
+# Ejercicio 1
 ![[Pasted image 20251113190843.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark>
 
@@ -108,7 +108,7 @@ $$
 0=0
 $$
 $v_{1}$ es perpendicular a $v$.
-### Ejercicio 3
+# Ejercicio 3
 ![[Pasted image 20251113200627.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark>
 Escribimos la matriz ampliada $[A|b]$.
@@ -218,7 +218,7 @@ $$
 S=\left\{  z\left( -\frac{1}{2}, \frac{1}{2}, 1 \right) + \left( -\frac{1}{2}, \frac{1}{2}, 0 \right)   \right\}
 $$
 con $z\in \mathbb{R}$.
-### Ejercicio 3
+# Ejercicio 3
 ![[Pasted image 20251113234530.png]]
 <mark style="background: #FFB8EBA6;">(a)</mark>
 Si el $\det(A)$ es igual cero entonces $A$ no es inversible. Por lo tanto, tenemos que descubrir cuales son los valores de $k$ que hacen que $A$ no sea inversible y luego apartarlos del conjunto de soluciones.
@@ -375,7 +375,7 @@ Sabemos que
 - $\det(B-I)=0$ si $k=0$ o $k=3$.
 
 Luego, el sistema $(3A^{t}B-3A^{t})X=\vec{0}$ tiene infinitas soluciones con $k\in\{ 0,2,3 \}$.
-### Ejercicio 4
+# Ejercicio 4
 ![[Pasted image 20251114003504.png]]
 Este es el procedimiento a seguir:
 1. Buscamos una base para $H$ y determinamos su dimensión.

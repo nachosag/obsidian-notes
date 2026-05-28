@@ -1,5 +1,5 @@
-### Ejercicio 1
-### Ejercicio 2
+# Ejercicio 1
+# Ejercicio 2
 1. Dado el vector v = (3, 4), encontrar un vector w distinto de v tal que w sea un múltiplo de v y verifique: 
 	1. $∥w∥ = 7$
 	2. $∥w∥ = 5$
@@ -28,7 +28,7 @@
 	1. ¿Para qué valores del escalar $\lambda \in \mathbb{R}$ resulta que $|| \lambda \cdot v || > || v ||$ ?
 	2. ¿Para qué valores del escalar $\lambda \in \mathbb{R}$ resulta que $|| \lambda \cdot v || < || v ||$?
 	3. ¿Para qué valores del escalar $\lambda \in \mathbb{R}$ resulta que $|| \lambda \cdot v || = 1$? 
-### Ejercicio 3
+# Ejercicio 3
 Considere $A=(1,0),B=(0,1),C=(1,2),D=(2,1),E=(-1,2),F=(-2,-1)$
 1. Realizar las siguientes operaciones:
 	1. $C\cdot D$
@@ -39,7 +39,7 @@ Considere $A=(1,0),B=(0,1),C=(1,2),D=(2,1),E=(-1,2),F=(-2,-1)$
 	6. $(E-F)\cdot(E-F)$
 	7. $||E||²-2E\cdot F+||F||²$
 2. Calcular los seis ángulos entre los 6 vectores e indique cuáles de ellos forman un par de vectores ortogonales.
-### Ejercicio 4
+# Ejercicio 4
 Decidir cuáles de los siguientes puntos pertenecen a la recta $\mathbb{L}:X= \alpha(-2,3) + (2,2)$, para $\alpha \in \mathbb{R}: P_{1} = (2,2), P_{2}= (-2,3), P_{3}=(0,0), P_{4}=(12,-13), P_{5}=(2,-1)$. Graficar en un papel y luego verificar la correctitud del dibujo usando geogebra.
 
 La ecuación de la recta está dada en forma paramétrica:
@@ -70,7 +70,7 @@ y así consecutivamente.
 
 En conclusión, $P1 \text{ y } P4$ pertenecen a la recta, los demás puntos no.
 ![[Pasted image 20250828233615.png]]
-### Ejercicio 5
+# Ejercicio 5
 Dadas las rectas 
 $$
 \begin{align}
@@ -116,7 +116,7 @@ X(4) = (-1,1) \\
 \end{align}
 $$
 <mark style="background: #FFB8EBA6;">Generar puntos que no pertenecen</mark>
-Igualamos la paramétrica $\mathbb{L_{1}}: X = t\cdot(-1,1)+(3,-3)$ a un punto que **no sea múltiplo del vector director** (ni tampoco sea el punto de paso) y desarrollamos cada ecuación. Si los $t$  llegan a dar distinto, entonces ese punto no pertenece a $\mathbb{L_{1}}$
+Igualamos la paramétrica $\mathbb{L_{1}}: X = t\cdot(-1,1)+(3,-3)$ a un punto que **no sea múltiplo del vector director** (ni tampoco sea el punto de paso) y desarrollamos cada ecuación. Si los $t$ llegan a dar distinto, entonces ese punto no pertenece a $\mathbb{L_{1}}$
 $$\begin{align}
 \mathbb{L_{1}}: X = t\cdot(-1,1)+(3,-3) = (-2,3) \\
 X = (-t,t)+(3,-3) = (-2,3) \\
@@ -283,7 +283,7 @@ $$
 B_{4}=(4-\frac{3\sqrt{ 2 }}{2},1-\frac{3\sqrt{ 2 }}{2})
 $$
 En conclusión, esos dos puntos son todos los puntos sobre $\mathbb{L_{2}}$ que quedan a distancia 3 de $A$.
-### Ejercicio 6
+# Ejercicio 6
 Si los tres puntos son colineales, **los tres deben satisfacer la misma ecuación de recta**. Vamos a ver cómo armar esa recta y comprobarlo paso a paso.
 
 **Paso 1: recordar la forma de la recta**
@@ -305,7 +305,7 @@ $$
 2. Con la pendiente y un punto (por ejemplo, A), la ecuación es: $$
 y-y_{A}=m(x-x_{A})
 $$
-Esa es la forma _punto-pendiente_. También se puede pasar a la forma explícita $y=mx+b$.
+Esa es la forma *punto-pendiente*. También se puede pasar a la forma explícita $y=mx+b$.
 
 **Paso 3: verificar el tercer punto**
 Una vez que tenemos la ecuación de la recta que pasa por $A\text{ y }B$, sustituimos las coordenadas del tercer punto $C(x_{C},y_{C})$.
@@ -354,7 +354,7 @@ y=x+1 \\
 \end{array}
 $$
 Estamos ante otro resultado absurdo, el punto $D$ tampoco pertenece a la recta.
-### Ejercicio 7
+# Ejercicio 7
 Queremos hallar una **ecuación paramétrica** para cada recta.
 Una recta en el plano se puede describir como $$
 (x,y)=(x_{0},y_{0})+t\cdot(a,b)
@@ -410,7 +410,7 @@ y=-2+3t
 \end{cases}​​
 $$
 3. Eliminamos el parámetro $t$ sustituyendo en $y=-2+3t \implies y=3x-2$ y **recuperamos** la ecuación original.
-### Ejercicio 8
+# Ejercicio 8
 1. Hallar 3 vectores que sean ortogonales/perpendiculares al $(2,-3)$. ¿Qué relación encuentra entre los vectores hallados?
 
 Escribimos el vector desconocido como $u=(x,y)$
@@ -617,7 +617,7 @@ Por qué? porque $$
 \end{gather}
 $$
 En este caso, la recta $\mathbb{L}$ tiene vector director $d=(2,-3)$. Entonces un vector normal es por ejemplo $n=(-(-3),2)=(3,2)$. El otro sería $n=(-3,-2)$.
-### Ejercicio 9
+# Ejercicio 9
 1. Graficamos las rectas en geogebra
 ![[Pasted image 20250906194205.png]]
 ![[Pasted image 20250906194227.png]]
@@ -767,7 +767,7 @@ Verificamos la perpendicularidad
 - Dirección de $L_{4}: v_{L_{4}}=(1,-1)$
 - Dirección de la nueva recta $v=(1,1)$
 - Producto escalar: $v\cdot v_{L_{4}}=(1,1)\cdot(1,-1)=1+(-1)=0$.
-### Ejercicio 10
+# Ejercicio 10
 Encontrar una ecuación paramétrica para las siguientes rectas:
 1. La recta que pasa por los puntos $A=(1,-4)$ y $B=(-1,-3)$.
 El vector dirección es $v=B-A$. Hacemos el cálculo:

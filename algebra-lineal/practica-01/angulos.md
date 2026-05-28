@@ -19,7 +19,7 @@ Las razones trigonométricas relacionan las longitudes de los lados con los áng
 
 ## 2. Cálculo del Ángulo Usando Funciones Inversas
 
-Para _conocer la medida del ángulo_ ($\theta$) a partir de las razones entre los lados, necesitamos usar las funciones trigonométricas inversas (o arcofunciones), representadas como $\text{sen}^{-1}$, $\cos^{-1}$ y $\tan^{-1}$ (o $\text{arcsen}$, $\arccos$ y $\arctan$).
+Para *conocer la medida del ángulo* ($\theta$) a partir de las razones entre los lados, necesitamos usar las funciones trigonométricas inversas (o arcofunciones), representadas como $\text{sen}^{-1}$, $\cos^{-1}$ y $\tan^{-1}$ (o $\text{arcsen}$, $\arccos$ y $\arctan$).
 
 Si conoces la razón (el valor de la división de dos lados), aplicas la función inversa correspondiente para obtener el ángulo.
 

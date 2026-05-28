@@ -108,10 +108,10 @@
 ## Pre preguntas
 - ¿Cómo se accede a memoria en el modo protegido? ¿Y en los demás modos?
 	- En el **modo protegido** se accede a memoria mediante un **proceso de traducción** de direcciones lógicas a físicas. 
-	- En el **modo real** (el modo de compatibilidad original de procesadores como el 8086), no se usan tablas de descriptores ni hay protección de memoria. El procesador simplemente toma el valor de 16 bits del registro de segmento, lo multiplica por 16 (agregando un cero en hexadecimal al final) y le suma el _offset_ para obtener directamente una dirección física de 20 bits.
+	- En el **modo real** (el modo de compatibilidad original de procesadores como el 8086), no se usan tablas de descriptores ni hay protección de memoria. El procesador simplemente toma el valor de 16 bits del registro de segmento, lo multiplica por 16 (agregando un cero en hexadecimal al final) y le suma el *offset* para obtener directamente una dirección física de 20 bits.
 - ¿Qué pasos se realizan durante la traducción en el modo protegido?
 	- Una dirección lógica apunta a un **descriptor de segmento** dentro de una tabla. 
-	- **Selector de segmento:** Es un número de 16 bits que se encuentra dentro de la dirección lógica que se divide internamente en: un índice de 13 bits (que apunta a la entrada exacta en la tabla), 1 bit llamado TI (_Table Indicator_, que define si se busca en la GDT o en la LDT) y 2 bits para el RPL (_Requestor Privilege Level_, o nivel de privilegio del solicitante).
+	- **Selector de segmento:** Es un número de 16 bits que se encuentra dentro de la dirección lógica que se divide internamente en: un índice de 13 bits (que apunta a la entrada exacta en la tabla), 1 bit llamado TI (*Table Indicator*, que define si se busca en la GDT o en la LDT) y 2 bits para el RPL (*Requestor Privilege Level*, o nivel de privilegio del solicitante).
 	- **Descriptor de segmento:** Es una estructura de 8 bytes que **define** la dirección base, el tamaño límite, los derechos de acceso y el tipo de segmento (sistema, código, datos).
 	- **Cálculo de dirección lineal:** El procesador **suma** realiza `Dirección lineal = dirección base + offset`.
 	- **Paginación:** Si la paginación está activa, la dirección lineal obtenida se somete a una segunda etapa de traducción para llegar finalmente a la dirección física.

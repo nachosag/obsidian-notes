@@ -9,7 +9,7 @@ Esta tabla muestra los valores de seno y coseno para los ángulos más comunes, 
 |**45°**|$\dfrac{\pi}{4}$|$\dfrac{\sqrt{2}}{2}$|$\dfrac{\sqrt{2}}{2}$|1|
 |**60°**|$\dfrac{\pi}{3}$|$\dfrac{1}{2}$|$\dfrac{\sqrt{3}}{2}$|$\sqrt{3}$|
 |**90°**|$\dfrac{\pi}{2}$|0|1|**No definida** (tiende a ∞)|
-### 💡 Nota Clave
+## 💡 Nota Clave
 
 Para el número complejo $Z = a + bi$ en forma trigonométrica:
 $$Z = r (\cos(\theta) + i \sin(\theta))$$
@@ -28,7 +28,7 @@ Esta tabla indica los signos de las funciones trigonométricas (y por ende, de l
 |  **III**  | $\pi$ a $\frac{3\pi}{2}$ (180° a 270°)  |             **Negativo (-)**             |                **Negativo (-)**                |
 |  **IV**   | $\frac{3\pi}{2}$ a $2\pi$ (270° a 360°) |             **Positivo (+)**             |                **Negativo (-)**                |
 
-### 📝 ¿Cómo se usa?
+## 📝 ¿Cómo Se usa?
 
 Para determinar el argumento ($\theta$) de un número complejo $Z = a + bi$:
 1. **Encuentra el cuadrante:** Usa los signos de $a$ y $b$.

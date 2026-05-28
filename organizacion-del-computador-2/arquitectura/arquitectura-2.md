@@ -193,7 +193,7 @@
 
 ## Pre preguntas
 - ¿Qué son esas extensiones multimedia? ¿Qué valor aportaban?
-	- Son un conjunto de instrucciones especiales basadas en el modelo SIMD (_Single-Instruction Multiple-Data_). Esto significa que permiten ejecutar una única operación matemática sobre múltiples pequeños fragmentos de datos (como bloques de 8, 16 o 32 bits) al mismo tiempo, aprovechando los registros de punto flotante del procesador.
+	- Son un conjunto de instrucciones especiales basadas en el modelo SIMD (*Single-Instruction Multiple-Data*). Esto significa que permiten ejecutar una única operación matemática sobre múltiples pequeños fragmentos de datos (como bloques de 8, 16 o 32 bits) al mismo tiempo, aprovechando los registros de punto flotante del procesador.
 	- Estaban diseñadas para acelerar drásticamente el software que procesaba audio y video. Su mayor aportación fue permitir que la CPU manejara tareas multimedia pesadas de forma nativa, eliminando la necesidad de instalar costosos coprocesadores multimedia adicionales en la computadora.
 
 ---
@@ -231,7 +231,7 @@
 ## Pre preguntas
 - ¿Qué es la arquitectura multinúcleos? ¿Cómo se diferencia de la arquitectura de Von Neumann y la Super escalar?
 	- **Arquitectura multinúcleos:** Consiste en colocar múltiples núcleos de procesamiento independientes dentro de un solo chip de silicio.
-	- Se diferencia del modelo de Von Neumann (que es estrictamente secuencial) y de la arquitectura superescalar (que ejecuta varias instrucciones a la vez, pero usando múltiples unidades funcionales dentro de _un solo_ núcleo). El multinúcleo duplica el núcleo entero para correr diferentes hilos o programas en paralelo.
+	- Se diferencia del modelo de Von Neumann (que es estrictamente secuencial) y de la arquitectura superescalar (que ejecuta varias instrucciones a la vez, pero usando múltiples unidades funcionales dentro de *un solo* núcleo). El multinúcleo duplica el núcleo entero para correr diferentes hilos o programas en paralelo.
 - ¿Qué es la ejecución fuera de orden avanzada? ¿Como se diferencia de la versión anterior?
 	- **Ejecución fuera de orden avanzada:** Mejora los métodos clásicos incorporando especulación de hardware y buffers de reordenamiento
 	- La diferencia principal con versiones anteriores es que ahora el procesador no solo desordena las instrucciones para no detenerse, sino que "adivina" el camino del código y ejecuta por adelantado. Si se equivoca, puede deshacer los cambios fácilmente confirmando los resultados siempre en el orden original del programa, lo que permite manejar excepciones de forma precisa.
@@ -340,9 +340,9 @@
 - ¿Qué problema soluciona?
 	- Evita que el procesador se quede de brazos cruzados por culpa de las dependencias de control. En lugar de detenerse a esperar que se resuelva una condición (como un salto), aprovecha el tiempo para adelantar trabajo, mejorando enormemente el paralelismo y el rendimiento.
 - ¿Cómo funciona la ejecución especulativa?
-	- El hardware ejecuta las instrucciones adelantadas pero guarda sus resultados en un espacio temporal llamado búfer de reordenamiento (_Reorder Buffer_ o ROB), sin modificar los registros principales ni la memoria. Si la suposición original fue correcta, los cambios se vuelven permanentes (se hace el _commit_); si la suposición fue incorrecta, los resultados temporales simplemente se descartan y el procesador retoma el camino adecuado.
+	- El hardware ejecuta las instrucciones adelantadas pero guarda sus resultados en un espacio temporal llamado búfer de reordenamiento (*Reorder Buffer* o ROB), sin modificar los registros principales ni la memoria. Si la suposición original fue correcta, los cambios se vuelven permanentes (se hace el *commit*); si la suposición fue incorrecta, los resultados temporales simplemente se descartan y el procesador retoma el camino adecuado.
 - ¿En qué se diferencia con la predicción de saltos?
-	- La predicción de saltos solo _adivina_ el camino del programa para empezar a buscar y cargar las siguientes instrucciones en el _pipeline_. La ejecución especulativa va más allá: utiliza esa predicción para **procesar y ejecutar** físicamente esas instrucciones como si la predicción fuera correcta, obteniendo resultados listos para usarse.
+	- La predicción de saltos solo *adivina* el camino del programa para empezar a buscar y cargar las siguientes instrucciones en el *pipeline*. La ejecución especulativa va más allá: utiliza esa predicción para **procesar y ejecutar** físicamente esas instrucciones como si la predicción fuera correcta, obteniendo resultados listos para usarse.
 
 ---
 
@@ -367,7 +367,7 @@
 	- **MMX (MultiMedia eXtensions):** Es el primer conjunto de instrucciones tipo SIMD que Intel introdujo para acelerar cálculos de audio y video, empaquetando datos pequeños en vectores de 64 bits.
 	- **SSE (Streaming SIMD Extensions):** Es la evolución de MMX. Resuelve cálculos gráficos más exigentes ampliando el tamaño del vector a 128 bits y agregando operaciones avanzadas de punto flotante.
 	- Diferencias principales
-		- **SIMD vs. MIMD:** En SIMD todos los elementos de procesamiento hacen exactamente la _misma_ operación a la vez; en MIMD, cada procesador puede estar haciendo una tarea _completamente distinta_.
+		- **SIMD vs. MIMD:** En SIMD todos los elementos de procesamiento hacen exactamente la *misma* operación a la vez; en MIMD, cada procesador puede estar haciendo una tarea *completamente distinta*.
 		- **MMX vs. SSE:** MMX usa registros de 64 bits que comparte físicamente con la unidad de punto flotante tradicional, lo que exige precaución al programar para no corromper datos. SSE utiliza registros propios independientes de 128 bits, evitando estas penalizaciones y permitiendo cálculos más complejos.
 
 # Hyper Threading
@@ -380,7 +380,7 @@
 - ¿Cómo funciona?
 	- El procesador duplica el estado arquitectónico (como el contador de programa, el controlador de interrupciones y los registros) para cada hilo, lo que permite cambiar entre ellos casi instantáneamente. Sin embargo, ambos hilos comparten de forma dinámica el motor de ejecución principal y la memoria caché.
 - ¿Qué relación tiene con el comando `lstopo`?
-	- `lstopo` grafica la topología del hardware y te permitirá visualizar exactamente este efecto. Si ejecutas el comando en un CPU con Hyper-threading, verás gráficamente que un solo núcleo físico (Core) agrupa dentro a dos unidades lógicas de procesamiento (PUs o _Processing Units_) que comparten la misma caché.
+	- `lstopo` grafica la topología del hardware y te permitirá visualizar exactamente este efecto. Si ejecutas el comando en un CPU con Hyper-threading, verás gráficamente que un solo núcleo físico (Core) agrupa dentro a dos unidades lógicas de procesamiento (PUs o *Processing Units*) que comparten la misma caché.
 
 ---
 
@@ -391,13 +391,13 @@
 	- **RISC (Reduced Instruction Set Computer)** y **CISC (Complex Instruction Set Computer)** son dos enfoques fundamentales para el diseño del conjunto de instrucciones de un procesador.
 - ¿Qué diferencias existen entre ellos?
 	- **Complejidad de instrucciones:** CISC utiliza instrucciones complejas y de longitud variable que pueden realizar múltiples tareas a la vez. RISC se basa en un conjunto reducido de instrucciones simples, de longitud fija, diseñadas para ejecutarse en un solo ciclo de reloj.
-	- **Acceso a la memoria:** CISC permite que las operaciones aritméticas accedan directamente a la memoria. RISC utiliza un modelo _load-store_ (carga/almacenamiento), donde solo instrucciones específicas acceden a la memoria y las operaciones matemáticas se hacen estrictamente entre registros.
+	- **Acceso a la memoria:** CISC permite que las operaciones aritméticas accedan directamente a la memoria. RISC utiliza un modelo *load-store* (carga/almacenamiento), donde solo instrucciones específicas acceden a la memoria y las operaciones matemáticas se hacen estrictamente entre registros.
 	- **Hardware vs. Software:** CISC utiliza microcódigo complejo en el hardware para interpretar y ejecutar las instrucciones. RISC traslada esta complejidad al compilador, dependiendo del software para ordenar y optimizar las instrucciones eficientemente.
 - ¿En qué contextos uno es mejor que el otro?
-	- **RISC** es superior para implementar _pipelining_ (segmentación) profundo, diseños superescalares y eficiencia energética, por lo que domina en sistemas embebidos (celulares, consolas, routers) y servidores de alto rendimiento
+	- **RISC** es superior para implementar *pipelining* (segmentación) profundo, diseños superescalares y eficiencia energética, por lo que domina en sistemas embebidos (celulares, consolas, routers) y servidores de alto rendimiento
 	- **CISC** ofrece una mayor densidad de código (programas que ocupan menos espacio) y ha sido históricamente superior en el mercado de las computadoras personales (PC) gracias a la compatibilidad hacia atrás con décadas de software heredado (como la arquitectura x86)
 - ¿Pueden convivir en simultaneo?
-	- Sí, y es exactamente lo que ocurre en la actualidad. Los procesadores modernos con arquitectura CISC (como las familias Intel Core, Pentium 4 o AMD Athlon) utilizan un decodificador frontal que toma las instrucciones complejas CISC (x86) y las divide en secuencias de operaciones simples llamadas microoperaciones (_uops_), que son esencialmente instrucciones RISC. Esto les permite mantener la compatibilidad con el software CISC existente mientras aprovechan la velocidad y eficiencia de un núcleo de ejecución RISC.
+	- Sí, y es exactamente lo que ocurre en la actualidad. Los procesadores modernos con arquitectura CISC (como las familias Intel Core, Pentium 4 o AMD Athlon) utilizan un decodificador frontal que toma las instrucciones complejas CISC (x86) y las divide en secuencias de operaciones simples llamadas microoperaciones (*uops*), que son esencialmente instrucciones RISC. Esto les permite mantener la compatibilidad con el software CISC existente mientras aprovechan la velocidad y eficiencia de un núcleo de ejecución RISC.
 
 ---
 

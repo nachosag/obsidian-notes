@@ -1,8 +1,8 @@
-## 📝 Ejercicios de Construcción de Matrices de Transformación
+# 📝 Ejercicios de Construcción de Matrices de Transformación
 
 Aquí tienes una serie de ejercicios que cubren los diferentes tipos de matrices que mencionaste.
 
-### Ejercicio 1: $M_{EE}(T)$ (Matriz en Bases Canónicas)
+## Ejercicio 1: $M_{EE}(T)$ (Matriz en Bases Canónicas)
 
 Problema: Sea $T: \mathbb{R}^3 \to \mathbb{R}^2$ la transformación lineal definida por la fórmula:
 $$T(x_1, x_2, x_3) = (2x_1 - 4x_3, x_2 + x_3)$$
@@ -27,7 +27,7 @@ $$
 
 ---
 
-### Ejercicio 2: $M_{EB}(T)$ (Matriz de Base Canónica a No Canónica)
+## Ejercicio 2: $M_{EB}(T)$ (Matriz de Base Canónica a No Canónica)
 
 Problema: Sea $T: \mathbb{R}^2 \to \mathbb{R}^2$ la transformación lineal definida por $T(x_1, x_2) = (x_1 + 2x_2, 3x_1 - x_2)$.
 
@@ -37,12 +37,12 @@ Considera la base canónica $E = \{(1, 0), (0, 1)\}$ para el dominio $\mathbb{R}
 
 La matriz $M_{EB}(T)$ se forma con las imágenes de los vectores $[T(e_{i})]$ escritos en coordenadas de la base $B$ como columnas, es decir $[T(e_{i})]_{B}$.
 
-#### Calculamos las imágenes
+### Calculamos las imágenes
 Aplicamos $T$ a cada $e_{i}$ tal que:
 - $T(e_{1})=T(1,0)=(1+2\cdot{0},\quad 3\cdot{1}-0)=(1,3)$.
 - $T(e_{2})=T(0,1)=(0+2\cdot{1},\quad 3\cdot{0}-1)=(2,-1)$.
 
-#### Expresamos las imágenes en coordenadas de la base $B$
+### Expresamos las imágenes en coordenadas de la base $B$
 Buscamos $(\alpha,\beta)$ tal que el vector imagen sea una combinación lineal de los vectores del a base $B$.
 
 Primera imagen, $T(1,0)=(1,3)$.
@@ -103,7 +103,7 @@ $$
 
 ---
 
-### Ejercicio 3: $M_{BE'}(T)$ (Matriz entre Bases No Canónicas)
+## Ejercicio 3: $M_{BE'}(T)$ (Matriz entre Bases No Canónicas)
 
 Problema: Sea $T: \mathbb{R}^3 \to \mathbb{R}^2$ una transformación lineal de la cual solo conocemos sus valores en una base del dominio:
 $$\begin{cases} T(1, 0, 1) = (1, 2) \\ T(0, 1, 1) = (-1, 0) \\ T(1, 1, 0) = (0, 1) \end{cases}$$

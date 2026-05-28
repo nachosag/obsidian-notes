@@ -1,4 +1,4 @@
-### Ejercicio 11
+# Ejercicio 11
 ![[Pasted image 20250907180726.png]]
 1. ![[Pasted image 20250907181136.png]]
 2. Cálculos:
@@ -18,7 +18,7 @@ $$
 (-3,6,0)
 \end{gather}
 $$
-### Ejercicio 12
+# Ejercicio 12
 ![[Pasted image 20250907181618.png]]
 **Idea clave**. Si $w$ tiene la misma dirección (o la contraria) que $v$, entonces existe un escalar $k$ tal que $$
 w=k\cdot{v}
@@ -194,7 +194,7 @@ w=(0,2,0)\quad o \quad w=(0,-2,0)
 $$
 Ambos son ortogonales a $(-1,0,2)$ y tienen norma $2$.
 <mark style="background: #FF5582A6;">Punto 4</mark>
-### Ejercicio 17
+# Ejercicio 17
 ![[Pasted image 20250908001917.png]]
 <mark style="background: #FF5582A6;">Punto 1</mark>
 Igualamos componente a componente:
@@ -365,12 +365,12 @@ Ahora trabajamos sobre el punto $(0,3a,5a)$, sustituímos $x=0$: $$
 0=11
 \end{gather}
 $$ Esto es una contradicción. Por lo tanto, no existe ningún $a$ que haga que $(0,3a,5a)$ pertencezca a $\Pi$.
-### Ejercicio 19
+# Ejercicio 19
 ![[Pasted image 20250908211519.png]]
 ![[Pasted image 20250908211537.png]]
-### Ejercicio 20
+# Ejercicio 20
 ![[Pasted image 20250908211622.png]]
-### Ejercicio 21
+# Ejercicio 21
 ![[Pasted image 20250908211639.png]]
 Datos importantes:
 - $L_{1}:X=\lambda\cdot(-1,2,-1)+(3,0,0)$. Punto $P_{1}=(3,0,0)$, vector director $d_{1}=(-1,2,-1)$.
@@ -426,7 +426,7 @@ $$ Comprobación rápida: sustituímos $P_{2}=(0,-2,1):-2\cdot{2}\cdot{1}=-2+2=0
 **Resumen final**
 + Paramétrica: $X(s,t)=(3,0,0)+s(-1,2,-1)+t(-3,-2,1)$.
 + Implícita: $y+2z=0$.
-### Ejercicio 22
+# Ejercicio 22
 ![[Pasted image 20250908211655.png]]
 Estos son los datos que tenemos:
 - $L_{1}:X=\lambda(1,-3,4)+(1,-2,1)$. Su vector director es $u_{1}=(1,-3,4)$.

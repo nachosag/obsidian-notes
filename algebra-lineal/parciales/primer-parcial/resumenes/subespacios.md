@@ -1,4 +1,4 @@
-### Definiciones y Propiedades
+# Definiciones y Propiedades
 
 - **Definición de Rⁿ**: El espacio `Rⁿ` se define como el conjunto de n-uplas de números reales `{(x₁, x₂, ..., xₙ) : x₁, ..., xₙ ∈ ℝ}`. En este espacio se definen dos operaciones:
     - **Suma**: `(x₁, ..., xₙ) + (y₁, ..., yₙ) = (x₁ + y₁, ..., xₙ + yₙ)`
@@ -14,7 +14,7 @@
     - **Dimensión**: La dimensión de un espacio es el número de vectores en cualquiera de sus bases.
 - **Teorema de la Dimensión**: Si un espacio vectorial V tiene una base con m vectores, entonces cualquier conjunto con más de m vectores (n > m) debe ser linealmente dependiente.
 
-### Subespacios Fundamentales
+# Subespacios Fundamentales
 
 - **Espacio Columna (C(A))**: Es el subespacio generado por las columnas de la matriz A. Un sistema `Ax = b` tiene solución si y solo si `b` pertenece al espacio columna de A.
 - **Espacio Nulo (N(A))**: Es el subespacio de todas las soluciones `x` a la ecuación homogénea `Ax = 0`.
@@ -29,7 +29,7 @@
     - `dim C(Aᵀ) = r` (dimensión del espacio renglón)
     - `dim N(Aᵀ) = m - r` (dimensión del espacio nulo izquierdo)
 
-### Relaciones entre Subespacios
+# Relaciones entre Subespacios
 
 - **Intersección y Suma**: La intersección de dos subespacios (`V ∩ W`) también es un subespacio. La suma de subespacios (`V + W`) es el menor subespacio que contiene a ambos.
 - **Fórmula de Dimensión para Suma de Subespacios**: `dim(V + W) = dim(V) + dim(W) - dim(V ∩ W)`

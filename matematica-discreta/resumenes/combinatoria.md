@@ -17,7 +17,7 @@ El conteo no es simplemente enumerar, sino comprender la estructura de los conju
 
 $$|S| = |S_1| + |S_2| + ... + |S_m|$$
 
-_Aplicación y Estrategia:_ Este principio es la herramienta fundamental cuando un proceso de decisión se ramifica en **casos mutuamente excluyentes**. Por ejemplo, si debemos elegir un representante que puede ser estudiante o profesor (y nadie es ambas cosas a la vez), sumamos la cantidad de estudiantes más la cantidad de profesores. _Ejemplo:_ Contar cuántos números naturales menores a 10 son múltiplos de 3 o terminan en 7 (se debe tener cuidado si los casos no son disjuntos, lo que llevaría al Principio de Inclusión-Exclusión).
+*Aplicación y Estrategia:* Este principio es la herramienta fundamental cuando un proceso de decisión se ramifica en **casos mutuamente excluyentes**. Por ejemplo, si debemos elegir un representante que puede ser estudiante o profesor (y nadie es ambas cosas a la vez), sumamos la cantidad de estudiantes más la cantidad de profesores. *Ejemplo:* Contar cuántos números naturales menores a 10 son múltiplos de 3 o terminan en 7 (se debe tener cuidado si los casos no son disjuntos, lo que llevaría al Principio de Inclusión-Exclusión).
 
 **Teorema 2 (Principio Multiplicativo):** Si una tarea o procedimiento complejo se puede descomponer en una secuencia ordenada de $k$ pasos o etapas sucesivas, donde:
 
@@ -34,13 +34,13 @@ Entonces el número total de formas de completar la tarea es el producto:
 
 $$N = n_1 \times n_2 \times ... \times n_k$$
 
-_Condición Crítica:_ La **cantidad** de opciones disponibles en el paso $i$ no debe depender de la **elección específica** hecha en los pasos anteriores, aunque el conjunto de opciones sí pueda cambiar. Si la elección anterior cambia el _número_ de opciones futuras, el principio simple no aplica directamente y se requiere un árbol de decisión. _Ejemplo clásico:_ La formación de patentes o contraseñas donde cada posición se llena independientemente de las otras.
+*Condición Crítica:* La **cantidad** de opciones disponibles en el paso $i$ no debe depender de la **elección específica** hecha en los pasos anteriores, aunque el conjunto de opciones sí pueda cambiar. Si la elección anterior cambia el *número* de opciones futuras, el principio simple no aplica directamente y se requiere un árbol de decisión. *Ejemplo clásico:* La formación de patentes o contraseñas donde cada posición se llena independientemente de las otras.
 
 **Teorema 3 (Principio de Sustracción):** Sea $U$ un conjunto universal que contiene todas las posibilidades bajo consideración, y sea $A \subseteq U$ el conjunto que queremos contar. Si contar $A$ directamente es difícil, pero contar su complemento $\overline{A}$ (elementos de $U$ que no están en $A$) es sencillo, utilizamos:
 
 $$|A| = |U| - |\overline{A}|$$
 
-_Estrategia:_ Es especialmente útil cuando se piden contar configuraciones con "al menos uno" o "al menos una repetición". En lugar de sumar muchos casos positivos, calculamos el total sin restricciones y restamos el caso "ninguno" o "todos distintos".
+*Estrategia:* Es especialmente útil cuando se piden contar configuraciones con "al menos uno" o "al menos una repetición". En lugar de sumar muchos casos positivos, calculamos el total sin restricciones y restamos el caso "ninguno" o "todos distintos".
 
 ### 1.2 Noción de Sumatoria
 
@@ -78,7 +78,7 @@ Aquí distinguimos si el **orden** de los elementos importa (lineal) o no (grupo
 
 $$P(n,r) = n \times (n-1) \times ... \times (n-r+1) = \frac{n!}{(n-r)!}$$
 
-_Caso particular:_ Si ordenamos _todos_ los elementos ($r=n$), obtenemos $P(n,n) = n!$. Esto representa todas las biyecciones de un conjunto en sí mismo.
+*Caso particular:* Si ordenamos *todos* los elementos ($r=n$), obtenemos $P(n,n) = n!$. Esto representa todas las biyecciones de un conjunto en sí mismo.
 
 ### 2.2 Combinaciones (Sin repetición)
 
@@ -88,7 +88,7 @@ _Caso particular:_ Si ordenamos _todos_ los elementos ($r=n$), obtenemos $P(n,n)
 
 $$\binom{n}{r} = C(n,r) = \frac{P(n,r)}{r!} = \frac{n!}{r!(n-r)!}$$
 
-**Corolario (Simetría):** $\binom{n}{r} = \binom{n}{n-r}$. _Interpretación Combinatoria:_ Existe una biyección natural entre elegir $r$ elementos para "incluir" en un grupo y elegir $n-r$ elementos para "excluir". Seleccionar el equipo titular es lo mismo que seleccionar a los suplentes.
+**Corolario (Simetría):** $\binom{n}{r} = \binom{n}{n-r}$. *Interpretación Combinatoria:* Existe una biyección natural entre elegir $r$ elementos para "incluir" en un grupo y elegir $n-r$ elementos para "excluir". Seleccionar el equipo titular es lo mismo que seleccionar a los suplentes.
 
 ### 2.3 Permutaciones Circulares
 
@@ -98,11 +98,11 @@ $$\binom{n}{r} = C(n,r) = \frac{P(n,r)}{r!} = \frac{n!}{r!(n-r)!}$$
 
 $$\frac{P(n,r)}{r} = \frac{n!}{r(n-r)!}$$
 
-_Caso particular (_$r=n$_):_ Para ordenar $n$ elementos distintos utilizando todos ellos:
+*Caso particular (*$r=n$*):* Para ordenar $n$ elementos distintos utilizando todos ellos:
 
 $$P_{circ}(n) = \frac{n!}{n} = (n-1)!$$
 
-_Estrategia de "Fijar un Elemento":_ Una forma intuitiva de resolver esto es fijar arbitrariamente a uno de los $n$ elementos en una posición "norte". Al hacer esto, rompemos la simetría circular y los $n-1$ asientos restantes se convierten en una línea ordenable de $(n-1)!$ formas.
+*Estrategia de "Fijar un Elemento":* Una forma intuitiva de resolver esto es fijar arbitrariamente a uno de los $n$ elementos en una posición "norte". Al hacer esto, rompemos la simetría circular y los $n-1$ asientos restantes se convierten en una línea ordenable de $(n-1)!$ formas.
 
 **Estrategia para "Elementos Juntos" en Círculo:** Si el problema exige que un subgrupo de $k$ elementos permanezca contiguo:
 
@@ -123,7 +123,7 @@ _Estrategia de "Fijar un Elemento":_ Una forma intuitiva de resolver esto es fij
 
 $$P_{rep} = \frac{n!}{n_1! \cdot n_2! \cdot ... \cdot n_k!}$$
 
-_Ejemplo clásico:_ Anagramas de la palabra MISSISSIPPI.
+*Ejemplo clásico:* Anagramas de la palabra MISSISSIPPI.
 
 ### 2.5 Permutaciones Circulares con Elementos Repetidos
 
@@ -137,9 +137,9 @@ _Ejemplo clásico:_ Anagramas de la palabra MISSISSIPPI.
     
     - No hay una fórmula cerrada simple.
         
-    - _Método:_ Debemos listar las posibles configuraciones lineales y agruparlas manualmente por rotación, o usar herramientas avanzadas (Lema de Burnside - usualmente fuera del alcance básico, por lo que se prefiere la exploración de casos).
+    - *Método:* Debemos listar las posibles configuraciones lineales y agruparlas manualmente por rotación, o usar herramientas avanzadas (Lema de Burnside - usualmente fuera del alcance básico, por lo que se prefiere la exploración de casos).
         
-    - _Ejemplo:_ Ordenar dos fichas blancas y dos negras en círculo. Linealmente hay $4!/(2!2!) = 6$ formas. Circularmente solo hay 2 configuraciones visuales distintas (alternadas o agrupadas).
+    - *Ejemplo:* Ordenar dos fichas blancas y dos negras en círculo. Linealmente hay $4!/(2!2!) = 6$ formas. Circularmente solo hay 2 configuraciones visuales distintas (alternadas o agrupadas).
         
 
 ### 3. Coeficientes Binomiales y Multinomiales
@@ -152,7 +152,7 @@ Esta identidad es el motor detrás del Triángulo de Pascal y la inducción en c
 
 $$\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$$
 
-_Demostración Combinatoria:_ Supongamos que queremos formar un comité de $k$ personas de un grupo de $n$. Marcamos a una persona específica, digamos "Ana".
+*Demostración Combinatoria:* Supongamos que queremos formar un comité de $k$ personas de un grupo de $n$. Marcamos a una persona específica, digamos "Ana".
 
 - **Caso A (Ana está en el comité):** Ya tenemos 1 lugar ocupado. Debemos elegir los $k-1$ miembros restantes de las $n-1$ personas restantes. $\rightarrow \binom{n-1}{k-1}$.
     
@@ -165,7 +165,7 @@ _Demostración Combinatoria:_ Supongamos que queremos formar un comité de $k$ p
 
 $$\sum_{k=0}^{n} \binom{n}{k} = \binom{n}{0} + \binom{n}{1} + ... + \binom{n}{n} = 2^n$$
 
-_Interpretación:_ El lado izquierdo cuenta los subconjuntos de tamaño 0, de tamaño 1, ..., hasta tamaño $n$. La suma es el total de subconjuntos posibles de un conjunto $S$. Alternativamente, por cada elemento tenemos 2 opciones (estar o no estar en el subconjunto), lo que da $2 \times 2 \times ... \times 2 = 2^n$ configuraciones.
+*Interpretación:* El lado izquierdo cuenta los subconjuntos de tamaño 0, de tamaño 1, ..., hasta tamaño $n$. La suma es el total de subconjuntos posibles de un conjunto $S$. Alternativamente, por cada elemento tenemos 2 opciones (estar o no estar en el subconjunto), lo que da $2 \times 2 \times ... \times 2 = 2^n$ configuraciones.
 
 ### 3.3 Binomio de Newton
 
@@ -175,7 +175,7 @@ Permite expandir potencias de binomios. Los coeficientes de la expansión son pr
 
 $$(x+y)^n = \sum_{k=0}^{n} \binom{n}{k} x^{n-k} y^k$$
 
-_Propiedad (Suma Alternada):_ Si hacemos $x=1$ e $y=-1$, obtenemos $0 = \sum_{k=0}^{n} (-1)^k \binom{n}{k}$. Esto implica que, en cualquier fila del triángulo de Pascal, la suma de los términos en posiciones pares es igual a la suma de los términos en posiciones impares.
+*Propiedad (Suma Alternada):* Si hacemos $x=1$ e $y=-1$, obtenemos $0 = \sum_{k=0}^{n} (-1)^k \binom{n}{k}$. Esto implica que, en cualquier fila del triángulo de Pascal, la suma de los términos en posiciones pares es igual a la suma de los términos en posiciones impares.
 
 ### 3.4 Teorema Multinomial
 
@@ -185,7 +185,7 @@ Generalización para la potencia de una suma de $t$ variables.
 
 $$(x_1 + x_2 + ... + x_t)^n = \sum_{n_1+...+n_t=n} \frac{n!}{n_1! n_2! ... n_t!} x_1^{n_1} x_2^{n_2} ... x_t^{n_t}$$
 
-_Interpretación:_ Para obtener el término $x_1^{n_1}...x_t^{n_t}$, debemos elegir $x_1$ en $n_1$ paréntesis, $x_2$ en $n_2$ paréntesis, etc. Esto equivale a contar los anagramas de una palabra con esas letras.
+*Interpretación:* Para obtener el término $x_1^{n_1}...x_t^{n_t}$, debemos elegir $x_1$ en $n_1$ paréntesis, $x_2$ en $n_2$ paréntesis, etc. Esto equivale a contar los anagramas de una palabra con esas letras.
 
 ## 4. Ecuaciones Lineales y Combinaciones con Repetición
 
@@ -212,17 +212,17 @@ Este es el caso base, a menudo llamado problema de **"Stars and Bars" (Estrellas
 
 $$C_R(k, m) = \frac{(m + k - 1)!}{m! (k - 1)!} = \binom{m + k - 1}{k - 1} = \binom{m + k - 1}{m}$$
 
-_(Nota importante:_ $m$ _es la cantidad a repartir, y_ $k-1$ _es el número de separadores necesarios para crear_ $k$ _categorías)._
+*(Nota importante:* $m$ *es la cantidad a repartir, y* $k-1$ *es el número de separadores necesarios para crear* $k$ *categorías).*
 
 ### 4.3 Soluciones en Naturales ($x_i \ge 1$)
 
-Si cada variable debe valer al menos 1 (reparto donde nadie se queda sin nada). _Método:_ Primero damos 1 unidad a cada una de las $k$ variables para satisfacer la restricción. Nos quedan $m' = m - k$ unidades libres para repartir sin restricciones (caso $\ge 0$). Aplicando la fórmula anterior con $m-k$: $\binom{(m-k) + k - 1}{k-1} = \binom{m-1}{k-1}$.
+Si cada variable debe valer al menos 1 (reparto donde nadie se queda sin nada). *Método:* Primero damos 1 unidad a cada una de las $k$ variables para satisfacer la restricción. Nos quedan $m' = m - k$ unidades libres para repartir sin restricciones (caso $\ge 0$). Aplicando la fórmula anterior con $m-k$: $\binom{(m-k) + k - 1}{k-1} = \binom{m-1}{k-1}$.
 
 **Teorema:** El número de soluciones en enteros positivos es:
 
 $$\binom{m - 1}{k - 1}$$
 
-_Requisito:_ Debe cumplirse $m \ge k$, de lo contrario es imposible dar al menos 1 a cada uno, y el resultado es 0.
+*Requisito:* Debe cumplirse $m \ge k$, de lo contrario es imposible dar al menos 1 a cada uno, y el resultado es 0.
 
 ### 4.4 Soluciones con Restricciones Inferiores Arbitrarias ($x_i \ge c_i$)
 
@@ -281,7 +281,7 @@ Resultados de existencia (no constructivos).
 
 $$\lceil \frac{N}{n} \rceil \text{ objetos}$$
 
-_(Función Techo: entero más pequeño mayor o igual al cociente)._
+*(Función Techo: entero más pequeño mayor o igual al cociente).*
 
 **Formulación alternativa (Objetos vs Capacidad):** Si queremos garantizar que una caja tenga al menos $r$ objetos, necesitamos distribuir $N$ objetos tal que:
 

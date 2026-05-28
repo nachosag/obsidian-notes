@@ -1,4 +1,4 @@
-### Ejericio 1
+# Ejericio 1
 ![[Pasted image 20251006213949.png]]
 Una aplicación debe cumplir dos condiciones para ser TL.
 1. Para todo vector $v,w\in \mathbb{R}^n$, se debe cumplir que $T(v+w)=T(v)+T(w)$.
@@ -11,7 +11,7 @@ La función a trabajar es: $T(x_{1},x_{2},x_{3})=(2x_{1}x_{2}+x_{3},2x_{2}-3x_{3
 T(0,0,0)=(2\cdot{0}\cdot{0}+0,2\cdot{0}-3\cdot{0})=(0,0)
 $$ como $T(0)=0$, esto significa que *no podemos descartar* que $T$ sea una TL solo con esta prueba.
 - Verifiquemos la suma en $T$, es decir $T(v+w)=T(v)+T(w)$:
-  Definamos dos vectores genéricos en $\mathbb{R}³$: $v=(v_{1},v_{2},v_{3}),w=(w_{1},w_{2},w_{3})$. Primero, calculemos el lado <mark style="background: #FFF3A3A6;">izquierdo</mark> de la igualdad: $T(v+w)$.   $$
+  Definamos dos vectores genéricos en $\mathbb{R}³$: $v=(v_{1},v_{2},v_{3}),w=(w_{1},w_{2},w_{3})$. Primero, calculemos el lado <mark style="background: #FFF3A3A6;">izquierdo</mark> de la igualdad: $T(v+w)$. $$
 \begin{gather}
 v+w=(v_{1}+w_{1},v_{2}+w_{2},v_{3}+w_{3}) \\
 \text{Sustituímos }x_{1}=(v_{1}+w_{1}),x_{2}=(v_{2}+w_{2}),x_{3}=(v_{3}+w_{3}). \\
@@ -130,7 +130,7 @@ x_{1}+x_{2} \\
 \end{pmatrix}
 $$ Lo cual coincide con la definición original de $T(x_{1},x_{2})=(x_{1}+x_{2},0,-x_{1},2x_{1}-x_{2})$.
 <mark style="background: #FF5582A6;">SEGUIR COMPLETANDO LOS DEMÁS PUNTOS</mark>
-### Ejercicio 2
+# Ejercicio 2
 ![[Pasted image 20251007004915.png]]
 <mark style="background: #FFB8EBA6;">a)</mark>
 $$
@@ -346,7 +346,7 @@ z
 \end{pmatrix}
 $$
 <mark style="background: #FF5582A6;">SEGUIR COMPLETANDO LOS DEMÁS PUNTOS</mark>
-### Ejercicio 4
+# Ejercicio 4
 ![[Pasted image 20251008195918.png]]
 **Principio clave**: Una TL queda definida de forma única por sus valores en una base del espacio de salida.
 
@@ -485,7 +485,7 @@ El ejercicio nos da la fórmula de la transformación $T$: $$
 T(x_{1},x_{2},x_{3})=(2x_{1}-x_{2}+x_{3},2x_{3},x_{1}-3x_{3})
 $$ Si comparamos las fórmulas de $L$ y $T$ notamos que son idénticas, por lo tanto, $T=L$.
 <mark style="background: #FF5582A6;">SEGUIR COMPLETANDO LOS DEMÁS PUNTOS</mark>
-### Ejercicio 5
+# Ejercicio 5
 ![[Pasted image 20251010171415.png]]
 <mark style="background: #FFB8EBA6;">b)</mark>
 Recordemos la TL del ejercicio 1 inciso b:

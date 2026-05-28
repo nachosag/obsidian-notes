@@ -187,7 +187,7 @@ $$
 # Ejercicio 3
 ![[Pasted image 20251117214320.png]]
 
-### Armemos la matriz ampliada asociada
+## Armemos la matriz ampliada asociada
 $$
 [A|b] = \begin{pmatrix}
 2 & -1 & 3 & | & 2 \\
@@ -196,7 +196,7 @@ $$
 0 & \alpha & -1 & | & 1
 \end{pmatrix}
 $$
-### Triangulamos la matriz
+## Triangulamos la matriz
 $$
 F_{2}\to F_{2}-F_{1}
 $$
@@ -239,7 +239,7 @@ y+z=\alpha & (2), \\
 (-1-\alpha)z=1-\alpha^{2} & (4)
 \end{cases}
 $$
-### Buscamos las soluciones
+## Buscamos las soluciones
 Por la ecuación $(3)$ tenemos que $z=-1$.
 Sustituimos $z=-1$ en la ecuación $(4)$ de forma tal que
 $$(-1 - \alpha)z = 1 - \alpha^2$$
@@ -262,7 +262,7 @@ $$
 Notemos que la igualdad se cumple si $\alpha=0$ o $\alpha=-1$.
 Estos valores de $\alpha$ son los únicos que hacen que la cuarta fila de la matriz ampliada $[A|b]$ sea una fila nula.
 
-### Aplicamos el Teorema de Rouché-Frobenius
+## Aplicamos el Teorema de Rouché-Frobenius
 
 Si $\alpha=0$ o $\alpha=-1$, la última fila de la matriz ampliada se convierte en una fila de ceros. Luego, la matriz queda con tres filas no nulas, por lo tanto $\rho(A)=3$ y $\rho(A|b)=3$. Como ambos rangos son iguales a la cantidad de incógnitas, podemos afirmar que el sistema es **compatible determinado**.
 
@@ -275,7 +275,7 @@ Si $\alpha\neq{0}$ o $\alpha\neq{1}$, la última fila de la matriz ampliada no s
 ![[Pasted image 20251118024704.png]]
 
 <mark style="background: #FFB8EBA6;">a)</mark>
-### Aplicamos las propiedades del determinante
+## Aplicamos las propiedades del determinante
 $$
 \det(AB^{2}C^{T}) = 16
 $$
@@ -292,7 +292,7 @@ $$
 a-b & 0 & 0
 \end{pmatrix} = 16
 $$
-### Calculamos $\det(C)$
+## Calculamos $\det(C)$
 Desarrollamos por la tercer fila
 $$
 (a-b)\cdot \det \begin{pmatrix}
@@ -306,7 +306,7 @@ $$
 $$
 (a-b)^{2}
 $$
-### Sustituimos en la expresión
+## Sustituimos en la expresión
 $$
 \det(A)\cdot \left( \frac{4\cdot \det(A)}{a-b} \right)^{2}\cdot \det \begin{pmatrix}
 1 & a & b \\
@@ -367,7 +367,7 @@ $$
 0 & 0 & 1
 \end{pmatrix}
 $$
-### Realizamos el producto matricial
+## Realizamos el producto matricial
 El resultado de la multiplicación $R = C \cdot C^{-1}$ es:
 $$R = \begin{pmatrix} (1)(0) + (a)(1) + (0)(-1) & (1)(0) + (a)(0) + (0)(1) & (1)(1) + (a)(-1) + (0)(0) \\ (1)(0) + (1)(1) + (1)(-1) & (1)(0) + (1)(0) + (1)(1) & (1)(1) + (1)(-1) + (1)(0) \\ (a)(0) + (0)(1) + (0)(-1) & (a)(0) + (0)(0) + (0)(1) & (a)(1) + (0)(-1) + (0)(0) \end{pmatrix}$$
 Simplificando los elementos:

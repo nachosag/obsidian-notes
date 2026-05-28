@@ -18,7 +18,7 @@
     
 - **Sharding (Particionamiento Horizontal)**:
     
-    - **Definición**: Es el proceso de dividir un conjunto grande de datos en partes más chicas y manejables llamadas _shards_ (particiones).
+    - **Definición**: Es el proceso de dividir un conjunto grande de datos en partes más chicas y manejables llamadas *shards* (particiones).
         
     - **Distribución de datos**: Cada partición almacena un subconjunto de información **único y distinto** al de las demás.
         
@@ -76,7 +76,7 @@ $$\text{Base de Datos Total} = \sum_{i=1}^{n} \text{Shard}_i$$
 
 - **El Flujo de Escritura "Append-Only"**:
     
-    - A diferencia de los motores relacionales tradicionales, Cassandra no busca en disco para validar si el dato ya existe antes de escribir. Simplemente hace un _append_ (añadir al final), lo que hace que las escrituras sean casi instantáneas.
+    - A diferencia de los motores relacionales tradicionales, Cassandra no busca en disco para validar si el dato ya existe antes de escribir. Simplemente hace un *append* (añadir al final), lo que hace que las escrituras sean casi instantáneas.
     
 - **Los dos destinos de la escritura simultánea**:
     

@@ -51,13 +51,13 @@ Las resoluciones matemáticas y los diagramas se apoyan en los siguientes plugin
 - **Obsidian Excalidraw:** Requerido para ver los archivos `.excalidraw.md` que contienen diagramas y bocetos conceptuales.
     
 
-_(La configuración de estos plugins está incluida en la carpeta `.obsidian/`.)_
+*(La configuración de estos plugins está incluida en la carpeta `.obsidian/`.)*
 
 ## 🤝 Colaboración y Aportes
 
 Como educador técnico, valoro enormemente la **revisión por pares y el pensamiento crítico**.
 
-Si utiliza este _vault_ como referencia y detecta algún error conceptual, lógico o de transcripción en la resolución de un ejercicio:
+Si utiliza este *vault* como referencia y detecta algún error conceptual, lógico o de transcripción en la resolución de un ejercicio:
 
 1. Abra un **Issue** con una referencia clara a la nota (`ruta/archivo.md` y ejercicio).
     
@@ -66,4 +66,4 @@ Si utiliza este _vault_ como referencia y detecta algún error conceptual, lógi
 
 Agradezco de antemano cualquier contribución que mejore la precisión y el rigor de este recurso de estudio.
 
-_Hecho con el objetivo de convertir las notas en un conocimiento interconectado y verificable._
+*Hecho con el objetivo de convertir las notas en un conocimiento interconectado y verificable.*

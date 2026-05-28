@@ -1,4 +1,4 @@
-### Ejercicio 1
+# Ejercicio 1
 ![[Pasted image 20250922164045.png]]
 a) Denotemos por $M_{2}(\mathbb{R})$ al conjunto de todas las matrices $2\times{2}$ con entradas reales. Tomemos dos matrices cualquiera $$
 A=\begin{pmatrix}

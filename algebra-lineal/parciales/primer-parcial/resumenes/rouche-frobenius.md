@@ -8,7 +8,7 @@ Para comprender el teorema, es esencial dominar ciertos conceptos clave del álg
 
 ### 1. Sistemas de Ecuaciones Lineales
 
-Uno de los problemas centrales de las matemáticas es resolver sistemas de ecuaciones lineales, que consisten en un conjunto de _m_ ecuaciones con _n_ incógnitas. Un sistema general se puede representar de la siguiente forma:
+Uno de los problemas centrales de las matemáticas es resolver sistemas de ecuaciones lineales, que consisten en un conjunto de *m* ecuaciones con *n* incógnitas. Un sistema general se puede representar de la siguiente forma:
 
 ```
 a₁₁x₁ + a₁₂x₂ + ... + a₁nxn = b₁
@@ -19,9 +19,9 @@ am₁x₁ + am₂x₂ + ... + amnxn = bm
 
 Este sistema se puede expresar de forma compacta mediante la notación matricial **Ax = b**, donde:
 
-- **A** es la matriz de coeficientes (_m_ x _n_).
-- **x** es el vector columna de las incógnitas (_n_ x 1).
-- **b** es el vector columna de los términos independientes (_m_ x 1).
+- **A** es la matriz de coeficientes (*m* x *n*).
+- **x** es el vector columna de las incógnitas (*n* x 1).
+- **b** es el vector columna de los términos independientes (*m* x 1).
 
 ### 2. Matriz del Sistema y Matriz Ampliada
 
@@ -36,7 +36,7 @@ El concepto más importante para el teorema es el **rango** de una matriz, denot
 
 ## Enunciado del Teorema de Rouché-Frobenius
 
-El teorema establece que para un sistema de ecuaciones lineales **Ax = b** con _n_ incógnitas, la existencia y naturaleza de sus soluciones dependen exclusivamente de la comparación entre el rango de la matriz de coeficientes `rg(A)` y el rango de la matriz ampliada `rg(A')`.
+El teorema establece que para un sistema de ecuaciones lineales **Ax = b** con *n* incógnitas, la existencia y naturaleza de sus soluciones dependen exclusivamente de la comparación entre el rango de la matriz de coeficientes `rg(A)` y el rango de la matriz ampliada `rg(A')`.
 
 El análisis se divide en tres casos posibles:
 
@@ -47,14 +47,14 @@ El análisis se divide en tres casos posibles:
 
 **Explicación:** Si el rango de la matriz ampliada es mayor que el de la matriz de coeficientes, significa que durante la eliminación gaussiana aparece una fila de la forma `(0 0 ... 0 | k)` donde `k` es un número distinto de cero. Esto se traduce en una ecuación inconsistente del tipo `0 = k`, una contradicción matemática.
 
-**Interpretación Geométrica:** Cada ecuación lineal representa un hiperplano. En dos dimensiones (_n_=2), son rectas; en tres dimensiones (_n_=3), son planos. Un sistema incompatible corresponde a figuras geométricas que no tienen ningún punto en común. Por ejemplo, en dos dimensiones, serían dos rectas paralelas que nunca se cortan. En tres dimensiones, podrían ser planos paralelos o planos que se cortan dos a dos formando un prisma triangular sin un punto de intersección común.
+**Interpretación Geométrica:** Cada ecuación lineal representa un hiperplano. En dos dimensiones (*n*=2), son rectas; en tres dimensiones (*n*=3), son planos. Un sistema incompatible corresponde a figuras geométricas que no tienen ningún punto en común. Por ejemplo, en dos dimensiones, serían dos rectas paralelas que nunca se cortan. En tres dimensiones, podrían ser planos paralelos o planos que se cortan dos a dos formando un prisma triangular sin un punto de intersección común.
 
 ### Caso 2: Sistema Compatible Determinado (SCD)
 
-- **Condición:** `rg(A) = rg(A') = n` (donde _n_ es el número de incógnitas)
+- **Condición:** `rg(A) = rg(A') = n` (donde *n* es el número de incógnitas)
 - **Conclusión:** El sistema tiene **una única solución**.
 
-**Explicación:** Cuando los rangos son iguales y coinciden con el número de incógnitas, el sistema tiene un conjunto completo de _n_ pivotes. Esto indica que hay suficientes ecuaciones linealmente independientes para determinar un valor único para cada una de las _n_ variables, sin dejar variables libres.
+**Explicación:** Cuando los rangos son iguales y coinciden con el número de incógnitas, el sistema tiene un conjunto completo de *n* pivotes. Esto indica que hay suficientes ecuaciones linealmente independientes para determinar un valor único para cada una de las *n* variables, sin dejar variables libres.
 
 **Interpretación Geométrica:** En este caso, los hiperplanos se intersecan en un único punto. En dos dimensiones, son dos rectas que se cortan en un punto. En tres dimensiones, corresponde a tres planos que se intersecan en un punto específico.
 

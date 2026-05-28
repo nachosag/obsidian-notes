@@ -1,6 +1,6 @@
 # Ejercicio 1
 ![[Pasted image 20251121183519.png]]
-## <mark style="background: #FFF3A3A6;">Valores de</mark> $k$ <mark style="background: #FFF3A3A6;">para que</mark> $T$ <mark style="background: #FFF3A3A6;">sea un epimorfismo</mark>
+## <mark style="background: #FFF3A3A6;">Valores de</mark> $k$ <mark style="background: #FFF3A3A6;">para que</mark> $T$ <mark style="background: #FFF3A3A6;">sea Un epimorfismo</mark>
 Un epimorfismo requiere que la imagen sea todo el codominio, es decir, $\mathrm{Im}(T)=\mathbb{R}^{3}$. Esto ocurre si $dim(\mathrm{Im}(T))=3$.
 
 Una forma práctica de verificar esto es asegurar que los vectores imagen de una base del dominio sean **linealmente independientes**. Además, sabemos que una transformación lineal es un epimorfismo si y solo si su matriz asociada es **inversible**, lo que se traduce en que su determinante es **distinto de cero**.
@@ -63,7 +63,7 @@ Notemos que $\det(M_{W}) = 0$ si $k=2$ o $k=-2$ por lo que $T$ es un epimorfismo
 
 ---
 
-## <mark style="background: #FFF3A3A6;">Calculemos</mark> $Nu(T)$ e $\mathrm{Im}(T)$ con $k=2$.
+## <mark style="background: #FFF3A3A6;">Calculemos</mark> $Nu(T)$ E $\mathrm{Im}(T)$ con $k=2$.
 Por el ejercicio anterior sabemos que cuando $k=2$ la matriz de imágenes tiene determinante cero, lo que significa que $dim(\mathrm{Im}(T))<3$ y los vectores de la imagen $\{ (1,0,1),(0,1,2),(0,4,8) \}$ son linealmente dependientes. Buscamos el subconjunto linealmente independiente que forma la base de $\mathrm{Im}(T)$.
 
 Armamos la matriz $M_{W}$ con los vectores la imagen como columnas
@@ -253,7 +253,7 @@ $$
 # <mark style="background: #FFB8EBA6;">Ejercicio 2</mark>
 ![[Pasted image 20251121213827.png]]
 
-## <mark style="background: #FFF3A3A6;">Buscamos los autovalores y autoespacios</mark>
+## <mark style="background: #FFF3A3A6;">Buscamos Los autovalores y autoespacios</mark>
 Para encontrar los autovalores de la matriz $A$ debemos calcular el polinomio característico $P_{A}(\lambda)=\det(A-\lambda I)$ y hallar sus raíces.
 $$
 P_{A}(\lambda) = \det \left( 
@@ -404,7 +404,7 @@ Definimos $z$ como $z = a+bi$ donde $a\in \mathrm{Re}(z)$ y $b\in \mathrm{Im}(z)
 
 ---
 
-#### <mark style="background: #BBFABBA6;">Lado derecho</mark>
+### <mark style="background: #BBFABBA6;">Lado derecho</mark>
 $$
 \mathrm{Re}\left( \frac{4}{1+i} \right)\cdot i^{161}
 $$
@@ -438,7 +438,7 @@ $$
 $$
 2i
 $$
-#### <mark style="background: #BBFABBA6;">Lado izquierdo</mark>
+### <mark style="background: #BBFABBA6;">Lado izquierdo</mark>
 $$
 z + 2\cdot \bar{z} + (\operatorname{Re}(z))^2
 $$
@@ -460,7 +460,7 @@ $$
 $$
 (a^{2}+3a)-bi
 $$
-#### <mark style="background: #BBFABBA6;">Igualamos las expresiones</mark>
+### <mark style="background: #BBFABBA6;">Igualamos Las expresiones</mark>
 $$
 \text{Lado izquierdo = Lado derecho}
 $$

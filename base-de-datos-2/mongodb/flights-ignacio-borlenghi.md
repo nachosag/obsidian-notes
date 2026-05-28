@@ -1,4 +1,4 @@
-# **Aerolínea y vuelos**
+# **Aerolínea Y vuelos**
 
 ## **Dominio**
 
@@ -44,7 +44,7 @@ El alumno deberá decidir cómo modelar la información, pudiendo utilizar:
 
 Se deberá justificar brevemente la decisión de modelado elegida.
 
-# **Casos de uso**
+# **Casos De uso**
 
 1. ¿Qué vuelos tienen destino “Madrid”?  
 2. ¿Qué pasajeros viajan en clase “Business”?  

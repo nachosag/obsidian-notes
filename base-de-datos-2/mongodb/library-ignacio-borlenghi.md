@@ -1,4 +1,4 @@
-# **Ejercicio  Biblioteca Universitaria**
+# **Ejercicio Biblioteca Universitaria**
 
 ## **Dominio**
 
@@ -41,7 +41,7 @@ El alumno deberá decidir cómo modelar la información, pudiendo utilizar:
 
 Se deberá justificar brevemente la decisión de modelado elegida.
 
-# **Casos de uso**
+# **Casos De uso**
 
 1. ¿Qué libros pertenecen al género “Ciencia Ficción”?  
 2. ¿Qué socios tienen al menos un préstamo activo?  

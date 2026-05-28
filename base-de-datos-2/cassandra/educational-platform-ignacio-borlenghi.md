@@ -33,7 +33,7 @@ Para cada caso de uso se pide:
 
 * Diseño de la Tabla  
 * CREATE TABLE  
-* CQL  (consulta)  
+* CQL (consulta)  
 * Instanciación con un valor de token como ejemplo.  
 * CQL de valor del token  
 * Utilizar MAP SET o LIST donde considere conveniente.     

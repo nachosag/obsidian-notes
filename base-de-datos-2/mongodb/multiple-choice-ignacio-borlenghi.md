@@ -50,7 +50,7 @@ Elegir la o las respuestas que considera más convenientes:
 	* [ ] MySQL
 
 
-9. “Vamos a agregar más memoria y procesadores más rápidos a nuestros equipos de base de datos”.  Es un ejemplo de:  
+9. “Vamos a agregar más memoria y procesadores más rápidos a nuestros equipos de base de datos”. Es un ejemplo de:  
 	* [ ] Flexibilidad  
 	* [ ] Escalabilidad Horizontal  
 	* [ ] Escalabilidad Vertical  
@@ -79,7 +79,7 @@ Elegir la o las respuestas que considera más convenientes:
 
 Responder únicamente Verdadero o Falso según corresponda. Puede justificar en no más de 3 renglones:
 
-1. Las bases de datos NoSQL reemplazan a las bases de datos relacionales.  Justifique.
+1. Las bases de datos NoSQL reemplazan a las bases de datos relacionales. Justifique.
 
 	- [ ] Verdadero  
 	- [ ] Falso  

@@ -57,7 +57,7 @@ CREATE TABLE songs_by_playlist_id (
 
 ## Patrones de consulta requeridos
 
-1. Obtener los datos de perfil de un usuario por su _user_id_, incluyendo sus géneros favoritos y sus dispositivos asociados con fecha de último uso.
+1. Obtener los datos de perfil de un usuario por su *user_id*, incluyendo sus géneros favoritos y sus dispositivos asociados con fecha de último uso.
 
 ```cql
 SELECT *

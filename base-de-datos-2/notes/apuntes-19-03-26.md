@@ -18,8 +18,8 @@ Definen **cómo** debe comportarse el sistema bajo ciertas restricciones operati
 
 - **Escalabilidad**: Capacidad del sistema de manejar una cantidad creciente de trabajo (usuarios concurrentes, volumen de datos o transacciones por segundo) sin degradar su rendimiento.
     
-    - _Escalabilidad Vertical (Scaling Up)_: Agregar más recursos (CPU, RAM, disco rápido) al servidor existente.
-    - _Escalabilidad Horizontal (Scaling Out)_: Distribuir la carga entre varios servidores (utilizando mecanismos como clustering, sharding o replicación).
+    - *Escalabilidad Vertical (Scaling Up)*: Agregar más recursos (CPU, RAM, disco rápido) al servidor existente.
+    - *Escalabilidad Horizontal (Scaling Out)*: Distribuir la carga entre varios servidores (utilizando mecanismos como clustering, sharding o replicación).
 
 - **Seguridad**: Garantía de protección de los datos contra accesos no autorizados y corrupción. Involucra mecanismos de autenticación (quién sos), autorización (qué podés hacer), cifrado de datos (en tránsito y en reposo) y pistas de auditoría.
 - **Flexibilidad (Mantenibilidad / Modificabilidad)**: Facilidad con la que el esquema de la base de datos puede adaptarse a cambios futuros en las reglas de negocio con el menor costo y tiempo de desarrollo posible.
@@ -51,14 +51,14 @@ Es la bajada a tierra absoluta. Acá el administrador/diseñador de la base de d
     - Estrategias de almacenamiento físico (particionamiento de tablas, tablespaces).
     - Creación de índices específicos (Árboles B+, Hash) para optimizar el tiempo de respuesta en consultas críticas.
 
-- **Entregable principal**: El script de creación de la base de datos (DDL - _Data Definition Language_) listo para desplegar.
+- **Entregable principal**: El script de creación de la base de datos (DDL - *Data Definition Language*) listo para desplegar.
 
 
 ## Glosario de Abstracción: ¿Entidad o Tabla?
 
 Aunque en el día a día se usen como sinónimos, técnicamente pertenecen a mundos distintos:
 
-- **Entidad (Nivel Conceptual)**: Es una representación abstracta de un objeto del mundo real con existencia propia dentro del dominio del problema (ej. _la entidad "Estudiante"_).
+- **Entidad (Nivel Conceptual)**: Es una representación abstracta de un objeto del mundo real con existencia propia dentro del dominio del problema (ej. *la entidad "Estudiante"*).
 - **Tabla (Nivel Lógico/Físico)**: Es la estructura de datos física o lógica donde se almacenan los datos de esa entidad (compuesta por filas que representan registros individuales, y columnas que representan atributos).
 
-> _En resumen_: Modelás **entidades** en un pizarrón para entender el negocio, pero creás **tablas** en el disco duro para guardar los datos.
+> *En resumen*: Modelás **entidades** en un pizarrón para entender el negocio, pero creás **tablas** en el disco duro para guardar los datos.

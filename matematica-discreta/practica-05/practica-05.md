@@ -1,6 +1,6 @@
-### Ejercicio 1
+# Ejercicio 1
 ![[Pasted image 20251130205132.png]]
-### Ejercicio 2
+# Ejercicio 2
 <mark style="background: #FFB86CA6;">a)</mark>
 $$
 V (G1) = \{ a,b,c,d,e \},\quad E(G1) = \{ ab,ac,ad,ae,bc,bd,be,cd,ce,de \}
@@ -62,7 +62,7 @@ graph TD
     u6 --- u7(u7);
     u7 --- u1;
 ```
-### Ejercicio 3
+# Ejercicio 3
 ![[Pasted image 20251130205306.png]]
 Para el grafo $H$:
 - $\{ v_{2},v_{3},v_{4},v_{5} \}$ forman una clique de tamaño 4.
@@ -130,7 +130,7 @@ graph TD
 $\{ u_{1},u_{3},u_{5} \}$ forman un conjunto independiente de tamaño 3.
 $\{ u_{1},u_{2} \}$ forman una clique de tamaño 2.
 
-### Ejercicio 4
+# Ejercicio 4
 Encuentre el tamaño máximo de una clique y el tamaño máximo de un conjunto independiente en los grafos de los ejercicios 1 y 2.
 ![[Pasted image 20251130205306.png]]
 <mark style="background: #FFB8EBA6;">Grafo H.</mark>
@@ -280,7 +280,7 @@ Luego, $x_{12}\not\sim x_{5},x_{6}$, $x_{8}\not\sim x_{4},x_{6}$ y $x_{10}\not\s
 Por lo tanto, no es posible encontrar un cuarto vértice $x_{i}$ que forme un $K_{4}$, es decir, una clique de tamaño 4.
 Luego, concluimos que $\omega(G)=3$.
 
-### Ejercicio 5
+# Ejercicio 5
 ![[Pasted image 20251201205155.png]]
 
 
@@ -366,7 +366,7 @@ Notemos que $v_{1}$ y $v_{2}$ no tienen vecinos en común. Por lo tanto, es impo
 
 Como $2\leq\omega(H)\leq{2}=\omega(H)=2$.
 
-### Ejercicio 6
+# Ejercicio 6
 ![[Pasted image 20251201214924.png]]
 
 Modelemos el problema con un grafo simple $G$, donde los vértices representan a las personas y una arista representa la relación "conocerse mutuamente".
@@ -401,9 +401,9 @@ Es decir, podemos identificar dos casos:
 	   Tomemos $w_{1},w_{2},w_{3}\in V(G)$ tal que $w_{1}\sim w_{2},w_{1}\sim w_{3},w_{2}\sim w_{3}$ pero $v\not\sim w_{1},v\not\sim w_{2},v\not\sim w_{3}$.
 	   En este caso, $w_{1}\sim w_{2},w_{1}\sim w_{3},w_{2}\sim w_{3}\implies \omega(G)\geq{3}$.
 
-### Ejercicio 7
+# Ejercicio 7
 ![[Pasted image 20251202014510.png]]
-#### <mark style="background: #FFB8EBA6;"> Apartado A</mark>
+## <mark style="background: #FFB8EBA6;"> Apartado A</mark>
 
 Por hipótesis, $H$ es un grafo simple. Esto implica que $H$ no tiene bucles ni arístas múltiples.
 Luego, sabemos que $\bar{H}$ está compuesto por $V(\bar{H})=V(H)$ y $ab\in E(\bar{H})\leftrightarrow ab\not\in E(H)$.
@@ -412,7 +412,7 @@ Si en $H$ tenemos un conjunto independiente de tamaño $k$ entonces existen $k$ 
 
 Recíprocamente, si en $\bar{H}$ existe una clique de tamaño $k$ entonces existen $k$ vértices que son vecinos entre sí. Luego, por definición de grafo complemento, en $H$ estos $k$ vértices generan un conjunto independiente de tamaño $k$.
 
-#### <mark style="background: #FFB8EBA6;"> Apartado B</mark>
+## <mark style="background: #FFB8EBA6;"> Apartado B</mark>
 
 Nos piden calcular $\alpha(G),\omega(G),\alpha(\bar{G}),\omega(\bar{G})$.
 Como $G$ es un grafo simple $\bar{G}$ también lo es. Esto por definición de grafo complemento.
@@ -437,7 +437,7 @@ Sin embargo, podemos tomar uno y solo uno de los vértices de $K_{n}$ para agran
 Luego, podemos afirmar que $\alpha(\bar{G})=m+1$ ya que no podemos considerar los $n-1$ vértices restantes para agrandar el conjunto independiente actual. 
 Si utilizamos la propiedad mencionada, tenemos que $\alpha(\bar{G})=\omega(G)=m+1$.
 
-### Ejercicio 8
+# Ejercicio 8
 ![[Pasted image 20251202023634.png]]
 
 El enunciado es falso.
@@ -445,7 +445,7 @@ El enunciado es falso.
 
 El enunciado es verdadero si se agrega como hipótesis que $G$ sea conexo.
 
-### Ejercicio 9
+# Ejercicio 9
 ![[Pasted image 20251202183354.png]]
 
 Por el Teorema del Apretón de manos tenemos que
@@ -453,7 +453,7 @@ $$
 \frac{2\cdot{8}+7\cdot{2}}{2} = \frac{16+14}{2} = \frac{30}{2} = 15 = |E(G)|
 $$
 
-### Ejercicio 10
+# Ejercicio 10
 ![[Pasted image 20251202183559.png]]
 
 Sabemos que:
@@ -475,7 +475,7 @@ Luego, $|V(G)|=9$ y cuenta con:
 - 2 vértices de grado 3.
 - 1 vértice de grado 4.
 
-### Ejercicio 11
+# Ejercicio 11
 ![[Pasted image 20251202191649.png]]
 
 a) El grafo de Petersen
@@ -513,7 +513,7 @@ Esto es porque con 1 vértice, no se puede armar un grafo 3-regular.
 Con 2 o 3 vértices, tampoco.
 Solo es posible armar grafos 3-regulares, a partir de los 4 vértices.
 
-### Ejercicio 12
+# Ejercicio 12
 ![[Pasted image 20251202201726.png]]
  
 a) 
@@ -558,7 +558,7 @@ Como el producto entre un número par y un número entero positivo, da como resu
 
 Como $2|E(G)|$ es par, entonces $k\cdot |V(G)|$ es par. Esto implica lógicamente que $k$ es par o $|V(G)|$ es par.
 
-### Ejercicio 13
+# Ejercicio 13
 ![[Pasted image 20251202204851.png]]
 
 <mark style="background: #FFB8EBA6;">a)</mark>
@@ -616,7 +616,7 @@ Repaso conceptual:
 2. **Inciso b):** Demostramos que es imposible pertenecer a $S$ con menos vértices. Incluso el grafo con más aristas posible, con $2n-1$ vértices, tiene una suma de grados $(2n-1)(2n-2)$, la cual es estrictamente menor que el objetivo $2n(2n-1)$.
 3. **Inciso c):** Probamos que si $G$ tiene el mínimo de vértices $2n$, debe ser completo. Para alcanzar la suma requerida, $2n(2n-1)$, con solo $2n$ vértices, **todos** deben tener el grado máximo, $2n-1$. Si faltara una sola arista, la suma bajaría y $G$ no estaría en $S$.
 
-### Ejercicio 14
+# Ejercicio 14
 ![[Pasted image 20251202223445.png]]
 
 Se desea conocer si el grafo $\bar{C_{6}}$ se puede descomponer en copias de $P_{4}$.
@@ -658,7 +658,7 @@ Como las condiciones se cumplen, la descomposición es posible. Ahora debemos co
 ![[Pasted image 20251025210912.png]]
 Dado que se cumplen las condiciones necesarias y brindamos una descomposición explícita, podemos concluir que $\bar{C_{6}}$ se puede descomponer en copias de $P_{4}$.
 
-### Ejercicio 15
+# Ejercicio 15
 ![[Pasted image 20251202224200.png]]
 
 Sea un grafo $G$ con 7 o más vértices de grado impar.
@@ -677,7 +677,7 @@ Un camino está compuesto por 2 vértices extremos de grado impar. Si tenemos 3 
 Por lo tanto, cada $v\in I(G)$ consume al menos 1 extremo disponible.
 Llegamos al absurdo, $8\leq |I(G)|\leq{6}$. Es decir, con 6 vértices de grado impar no logran igualar los 8 vértices de grado impar de $G$. Haría falta descomponer $G$ en un cuarto camino $P_{4}$.
 
-### Ejercicio 16
+# Ejercicio 16
 ![[Pasted image 20251206012153.png]]
 <mark style="background: #FFB8EBA6;">a)</mark>
 Sabemos que el grafo Cubo es 3-regular, es decir, cada uno de sus vértices tiene grado 3. A su vez, sabemos que el tamaño de clique máxima es 2, esto implica que los vecinos de un vértice del grafo Cubo no son vecinos entre sí.
@@ -720,7 +720,7 @@ Del complemento del grafo Cubo sabemos lo siguiente:
 - $|E(\overline{\text{Cubo}})|=C(8,2)-12=28-12=16$.
 - $\forall v\in V(\overline{\text{Cubo}}),\quad d_{\overline{\text{Cubo}}}(v)=8-1-3=4\implies \overline{\text{Cubo}}$ es un grafo 4-regular.
 
-### Ejercicio 17
+# Ejercicio 17
 ![[Pasted image 20251206012502.png]]
 Del grafo de Petersen sabemos lo siguiente:
 - Tiene 10 vértices
@@ -750,7 +750,7 @@ Además, notemos que hay 5 aristas de cada una.
 
 Por lo tanto, la clave para formar las 5 copias de $P_{4}$ es tomar una de cada tipo.
 
-### Ejercicio 18
+# Ejercicio 18
 ![[Pasted image 20251206012516.png]]
 Sea $G$ un grafo simple, con $n$ vértices y autocomplementario.
 Nos piden demostrar que $n$ o $n-1$ es múltiplo de $4$.
@@ -760,11 +760,11 @@ Esta propiedad se cumple con $n\geq{4}$.
 
 Notemos que $n$ y $n-1$ son números consecutivos. Para que su producto sea divisible por 4, uno de los factores (el $n$ o el $n-1$) tiene que ser divisible por 4, es decir, $n$ o $n-1$ se debe poder escribir como $4k$.
 
-### Ejercicio 19
+# Ejercicio 19
 ![[Pasted image 20251206012536.png]]
 $T$ es conexo.
 $F,H,G$ no lo son.
-### Ejercicio 20
+# Ejercicio 20
 ![[Pasted image 20251205192603.png]]
 Sea $G$ un grafo disconexo y simple. Nos piden demostrar que su complemento es conexo.
 
@@ -782,7 +782,7 @@ Luego, $v_{3}\sim v_{1}$ y $v_{3}\sim v_{2}$ en $\bar{G}$.
 
 Como para todo par de vértices en $\bar{G}$ existe un camino que los une, el complemento es conexo.
 
-### Ejercicio 21
+# Ejercicio 21
 ![[Pasted image 20251205201950.png]]
 Sabemos que:
 - $G$ es simple.
@@ -800,7 +800,7 @@ Si tomamos esas dos aristas y sus vértices extremos, tenemos un subgrafo induci
 
 Esta contradicción proviene de suponer que $G$ es disconexo, por lo tanto, $G$ es conexo.
 
-### Ejercicio 22
+# Ejercicio 22
 ![[Pasted image 20251205203713.png]]
 
 <mark style="background: #FFB8EBA6;">a)</mark>

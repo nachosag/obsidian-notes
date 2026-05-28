@@ -1,6 +1,6 @@
-## ⚙️ La Decisión Técnica: Binómica vs. Trigonométrica
+# ⚙️ La Decisión Técnica: Binómica vs. Trigonométrica
 
-### 1. 🟥 Forma Binómica (o Rectangular): $z = x + iy$
+## 1. 🟥 Forma Binómica (o Rectangular): $z = x + iy$
 
 Esta forma es la extensión natural de los números reales y está optimizada para operaciones que se manejan por **componentes** (ejes $x$ e $y$).
 
@@ -13,7 +13,7 @@ Esta forma es la extensión natural de los números reales y está optimizada pa
 
 ---
 
-### 2. Polar (o Trigonométrica/Exponencial): $z = r(\cos\theta + i\sin\theta)$
+## 2. Polar (o Trigonométrica/Exponencial): $z = r(\cos\theta + i\sin\theta)$
 
 Esta forma (basada en el módulo $r$ y el argumento $\theta$) es la mejor para operaciones que se resuelven a través de la **geometría de rotación y escalado** en el plano complejo.
 

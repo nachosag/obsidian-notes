@@ -1,6 +1,6 @@
 Dominio
 
-Estudiantes de una universidad cursan materias en diferentes cursos.   Rinden parciales de los que sí sabemos la fecha y la nota.   Conocemos el nombre y apellido de los estudiantes.
+Estudiantes de una universidad cursan materias en diferentes cursos. Rinden parciales de los que sí sabemos la fecha y la nota. Conocemos el nombre y apellido de los estudiantes.
 
 Casos de Uso
 
