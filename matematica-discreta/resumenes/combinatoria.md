@@ -10,7 +10,7 @@ El conteo no es simplemente enumerar, sino comprender la estructura de los conju
 
 1. **Exhaustividad:** La unión de todos los subconjuntos recupera el conjunto original ($S = S_1 \cup S_2 \cup … \cup S_m$).
     
-2. **Disyunción:** Los subconjuntos son disjuntos dos a dos ($S_i \cap S_j = \emptyset$ para todo $i \neq j$).
+1. **Disyunción:** Los subconjuntos son disjuntos dos a dos ($S_i \cap S_j = \emptyset$ para todo $i \neq j$).
     
 
 **Teorema 1 (Principio Aditivo):** Si un conjunto $S$ puede ser particionado en subconjuntos disjuntos $S_1, …, S_m$, entonces el cardinal de $S$ es simplemente la suma de los cardinales de estos componentes.
@@ -52,9 +52,9 @@ La sumatoria es una herramienta compacta para manejar sumas de series numéricas
 
 1. **Homogeneidad:** $\sum_{i=1}^{n} c \cdot a_i = c \cdot \sum_{i=1}^{n} a_i$ (Las constantes multiplicativas salen fuera de la suma).
     
-2. **Aditividad:** $\sum_{i=1}^{n} (a_i \pm b_i) = \sum_{i=1}^{n} a_i \pm \sum_{i=1}^{n} b_i$ (La suma de una suma es la suma de las sumas).
+1. **Aditividad:** $\sum_{i=1}^{n} (a_i \pm b_i) = \sum_{i=1}^{n} a_i \pm \sum_{i=1}^{n} b_i$ (La suma de una suma es la suma de las sumas).
     
-3. **Suma de Constante:** $\sum_{i=1}^{n} c = \underbrace{c + c + … + c}_{n \text{ veces}} = n \cdot c$.
+1. **Suma de Constante:** $\sum_{i=1}^{n} c = \underbrace{c + c + … + c}_{n \text{ veces}} = n \cdot c$.
     
 
 **Sumas Notables (Fórmulas Cerradas):** Es crucial memorizar estas identidades para simplificar expresiones en inducción:
@@ -108,11 +108,11 @@ $$P_{circ}(n) = \frac{n!}{n} = (n-1)!$$
 
 1. Considera al bloque de $k$ elementos como **un solo super-elemento**.
     
-2. Ahora tienes $(n - k + 1)$ entidades para sentar en la mesa.
+1. Ahora tienes $(n - k + 1)$ entidades para sentar en la mesa.
     
-3. Calcula las permutaciones circulares de estas entidades: $((n - k + 1) - 1)! = (n-k)!$.
+1. Calcula las permutaciones circulares de estas entidades: $((n - k + 1) - 1)! = (n-k)!$.
     
-4. Multiplica por las permutaciones internas del bloque ($k!$), ya que los elementos dentro del bloque pueden cambiar de orden entre sí.
+1. Multiplica por las permutaciones internas del bloque ($k!$), ya que los elementos dentro del bloque pueden cambiar de orden entre sí.
     
 
 ### 2.4 Permutaciones con Repetición (Multiconjuntos)
@@ -133,7 +133,7 @@ $$P_{rep} = \frac{n!}{n_1! \cdot n_2! \cdot … \cdot n_k!}$$
 
 1. **Caso con un elemento único:** Si al menos un tipo de elemento aparece **exactamente una vez**, úsalo como ancla. Fíjalo en la posición "12 en punto". Esto rompe la circularidad y el problema se reduce exactamente a contar las permutaciones lineales de los $n-1$ elementos restantes (con repetición).
     
-2. **Caso complejo (todos se repiten** $\ge 2$ **veces):**
+1. **Caso complejo (todos se repiten** $\ge 2$ **veces):**
     
     - No hay una fórmula cerrada simple.
         
@@ -232,11 +232,11 @@ Si cada variable tiene un mínimo específico distinto ($x_1 \ge 2, x_2 \ge 5$, 
 
 1. Definimos una nueva variable de holgura $y_i$ tal que $y_i = x_i - c_i$.
     
-2. Como $x_i \ge c_i$, entonces $y_i \ge 0$. Esto transforma el problema al caso base.
+1. Como $x_i \ge c_i$, entonces $y_i \ge 0$. Esto transforma el problema al caso base.
     
-3. Sustituimos $x_i = y_i + c_i$ en la ecuación original: $(y_1 + c_1) + … + (y_k + c_k) = m$ $\sum y_i = m - (c_1 + … + c_k)$
+1. Sustituimos $x_i = y_i + c_i$ en la ecuación original: $(y_1 + c_1) + … + (y_k + c_k) = m$ $\sum y_i = m - (c_1 + … + c_k)$
     
-4. El nuevo total a repartir es $m_{nuevo} = m - \sum c_i$.
+1. El nuevo total a repartir es $m_{nuevo} = m - \sum c_i$.
     
 
 **Fórmula General:**
@@ -305,13 +305,13 @@ Para probar que una proposición $P(n)$ es verdadera para todo entero $n \ge n_0
 
 1. **Caso Base:** Probar que $P(n_0)$ es verdadera.
     
-2. **Paso Inductivo:**
+1. **Paso Inductivo:**
     
     - **Hipótesis Inductiva (HI):** Asumir que $P(k)$ es verdadera para un $k \ge n_0$ arbitrario.
         
     - **Tesis Inductiva (TI):** Probar que $P(k+1)$ es verdadera usando la HI.
         
-3. **Conclusión:** Por el principio de inducción, $P(n)$ es verdadera $\forall n \ge n_0$.
+1. **Conclusión:** Por el principio de inducción, $P(n)$ es verdadera $\forall n \ge n_0$.
     
 
 ### 7.2 Inducción Completa (Fuerte)
@@ -322,7 +322,7 @@ Para probar que una proposición $P(n)$ es verdadera para todo entero $n \ge n_0
 
 1. **Caso Base:** Probar $P(n_0)$.
     
-2. **Paso Inductivo:**
+1. **Paso Inductivo:**
     
     - **HI:** Asumir que $P(j)$ es verdadera para **todo** $n_0 \le j < m$.
         

@@ -5,8 +5,8 @@ Un triángulo rectángulo es aquel que tiene un ángulo de 90 grados (ángulo re
 Dado un ángulo agudo ($\theta$) en el triángulo rectángulo, los lados se nombran así:
 
 1. **Hipotenusa (H):** El lado opuesto al ángulo recto (el lado más largo).
-2. **Cateto Opuesto (CO):** El lado que está enfrente del ángulo $\theta$.
-3. **Cateto Adyacente (CA):** El lado que está junto al ángulo $\theta$ (y no es la hipotenusa).
+1. **Cateto Opuesto (CO):** El lado que está enfrente del ángulo $\theta$.
+1. **Cateto Adyacente (CA):** El lado que está junto al ángulo $\theta$ (y no es la hipotenusa).
 ## 1. Las Razones Trigonométricas Fundamentales
 
 Las razones trigonométricas relacionan las longitudes de los lados con los ángulos del triángulo.
@@ -35,13 +35,13 @@ Supongamos que conoces la longitud de dos lados. Sigue estos pasos para encontra
 
 1. **Identificar el ángulo:** Elige cuál de los dos ángulos agudos quieres calcular.
     
-2. **Nombrar los lados:** Con respecto al ángulo elegido ($\theta$), identifica cuál es el Cateto Opuesto (CO), el Cateto Adyacente (CA) y la Hipotenusa (H).
+1. **Nombrar los lados:** Con respecto al ángulo elegido ($\theta$), identifica cuál es el Cateto Opuesto (CO), el Cateto Adyacente (CA) y la Hipotenusa (H).
     
-3. **Seleccionar la razón:** Decide qué razón trigonométrica (sen, cos o tan) utiliza los dos lados cuyas longitudes conoces.
+1. **Seleccionar la razón:** Decide qué razón trigonométrica (sen, cos o tan) utiliza los dos lados cuyas longitudes conoces.
     
-4. **Calcular el ángulo:** Aplica la función inversa de esa razón a la división de los lados para obtener el valor de $\theta$.
+1. **Calcular el ángulo:** Aplica la función inversa de esa razón a la división de los lados para obtener el valor de $\theta$.
     
-5. **Ángulo restante:** Una vez que conoces un ángulo agudo ($\theta_1$), puedes encontrar el otro ($\theta_2$) fácilmente, sabiendo que la suma de los ángulos internos de cualquier triángulo es 180°:
+1. **Ángulo restante:** Una vez que conoces un ángulo agudo ($\theta_1$), puedes encontrar el otro ($\theta_2$) fácilmente, sabiendo que la suma de los ángulos internos de cualquier triángulo es 180°:
     
     $$\theta_2 = 180^\circ - 90^\circ - \theta_1$$$$\theta_2 = 90^\circ - \theta_1$$
 
@@ -51,8 +51,8 @@ Si en un triángulo rectángulo el Cateto Opuesto a un ángulo $\theta$ mide $5$
 
 1. **Razón:** Se conocen CO y CA, por lo tanto, usamos la Tangente.
     
-2. **Cálculo:** $\tan(\theta) = \frac{CO}{CA} = \frac{5}{12} \approx 0.4167$
+1. **Cálculo:** $\tan(\theta) = \frac{CO}{CA} = \frac{5}{12} \approx 0.4167$
     
-3. **Ángulo:** $\theta = \tan^{-1}(0.4167)$
+1. **Ángulo:** $\theta = \tan^{-1}(0.4167)$
     
-4. **Resultado:** $\theta \approx 22.62^\circ$
+1. **Resultado:** $\theta \approx 22.62^\circ$

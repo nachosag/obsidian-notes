@@ -4,11 +4,11 @@
 
 - **Multiplicación Matriz-Vector**: El producto `Ax` puede interpretarse de dos formas:
     1. **Por Renglones**: Cada componente del vector resultante es el producto interno de un renglón de A con el vector x.
-    2. **Por Columnas**: El vector resultante `Ax` es una combinación lineal de las columnas de A, donde los coeficientes son las componentes del vector x.
+    1. **Por Columnas**: El vector resultante `Ax` es una combinación lineal de las columnas de A, donde los coeficientes son las componentes del vector x.
 - **Operaciones Elementales**: Las operaciones elementales por filas, usadas en la eliminación gaussiana, son:
     1. Permutación o intercambio de filas.
-    2. Sustitución de una fila por su suma con una combinación lineal de otras.
-    3. Multiplicación de una fila por un escalar no nulo.
+    1. Sustitución de una fila por su suma con una combinación lineal de otras.
+    1. Multiplicación de una fila por un escalar no nulo.
 - **Matrices Elementales**: Cada operación elemental por filas se corresponde con la multiplicación por una matriz elemental.
 
 | Operación Elemental   | Matriz Elemental Asociada (Ejemplo 3x3)     |
@@ -26,7 +26,7 @@ Este teorema establece cuándo un sistema de ecuaciones lineales `Ax = b` tiene 
 - **Proposición Central**: El álgebra es geometría escrita y la geometría es álgebra dibujada (cita de Sophie Germain).
 - **Teorema**: Para un sistema de `m` ecuaciones con `n` incógnitas:
     1. **Sistema Incompatible (Sin Solución)**: Si `rango(A) < rango([A|b])`. Geométricamente (en 2D), esto corresponde a rectas paralelas.
-    2. **Sistema Compatible (Con Solución)**: Si `rango(A) = rango([A|b]) = r`.
+    1. **Sistema Compatible (Con Solución)**: Si `rango(A) = rango([A|b]) = r`.
         - **Solución Única**: Si `r = n` (el rango es igual al número de incógnitas). Geométricamente (en 2D), las rectas se cortan en un punto.
         - **Infinitas Soluciones**: Si `r < n` (el rango es menor que el número de incógnitas). Geométricamente (en 2D), las ecuaciones representan la misma recta.
 - **Dimensión del Espacio de Soluciones**: Para un sistema compatible, la dimensión del subespacio afín de soluciones es `n - r`.

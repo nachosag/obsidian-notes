@@ -2,7 +2,7 @@
 ![[Pasted image 20251006213949.png]]
 Una aplicación debe cumplir dos condiciones para ser TL.
 1. Para todo vector $v,w\in \mathbb{R}^n$, se debe cumplir que $T(v+w)=T(v)+T(w)$.
-2. Para todo vector $v\in \mathbb{R}^n$ y escalar $\alpha \in \mathbb{R}$, se debe cumplir que $T(\alpha v)=\alpha T(v)$.
+1. Para todo vector $v\in \mathbb{R}^n$ y escalar $\alpha \in \mathbb{R}$, se debe cumplir que $T(\alpha v)=\alpha T(v)$.
 Alternativamente, una función $T:\mathbb{R}^n\to \mathbb{R}^m$ que manda el vector nulo al vector nulo ($T(0)=0$) y que tenga la forma general de una matriz multiplicada por un vector, $T(v)=A\cdot{v}$, será una transformación lineal.
 
 <mark style="background: #FFB8EBA6;">a)</mark>
@@ -100,7 +100,7 @@ Para corroborar el ejercicio, T se debe poder expresar como una multiplicación 
 
 La matriz asociada $A$ se construye utilizando las imágenes de los vectores de la base canónica del espacio de salida (en este caso, $\mathbb{R}²$), puestas como columnas.
 1. Calculamos la imagen del primer vector base: $T(1,0)=(1+0,0,-1,2\cdot{1}-0)=(1,0,-1,2)$.
-2. Calculamos la imagen del segundo vector: $T(0,1)=(0+1,0,-0,2\cdot{0}-1)=(1,0,0,-1)$.
+1. Calculamos la imagen del segundo vector: $T(0,1)=(0+1,0,-0,2\cdot{0}-1)=(1,0,0,-1)$.
 La matriz asociada $A$ se forma colocando estos vectores columna: $$
 A=\begin{pmatrix}
 1 & 1 \\
@@ -178,7 +178,7 @@ Aunque los vectores de entrada no formen una base, como en este caso, **sí podr
 
 La regla es la siguiente:
 1. Si los vectores de entrada forman una base ($\det(A)\neq{0}$), la TL existe y es única.
-2. Si los vectores de entrada no forman una base ($\det(A)=0$), la TL no está determinada unívocamente. Puede ocurrir que:
+1. Si los vectores de entrada no forman una base ($\det(A)=0$), la TL no está determinada unívocamente. Puede ocurrir que:
 	- No exista.
 	- Existan infinitas.
 Ahora tenemos que determinar en qué caso estamos. Para eso necesitamos saber la relación de dependencia lineal entre los vectores de entrada: $$
@@ -354,8 +354,8 @@ Dado que $L:\mathbb{R}³\to \mathbb{R}³$ y $T:\mathbb{R}³\to \mathbb{R}³$, si
 
 **Nuestro plan es**:
 1. Verificar que los tres vectores donde está definida $L$ forman una base $B$ de $\mathbb{R}³$.
-2. Calcular la fórmula explícita de $L$ para cualquier vector $(x_{1},x_{2},x_{3})\in \mathbb{R}³$.
-3. Comparar la fórmula de $L$ con la fórmula dada para $T$.
+1. Calcular la fórmula explícita de $L$ para cualquier vector $(x_{1},x_{2},x_{3})\in \mathbb{R}³$.
+1. Comparar la fórmula de $L$ con la fórmula dada para $T$.
 
 <mark style="background: #FFB86CA6;">Comencemos con el paso 1.</mark>
 Tenemos la transformación lineal $L:\mathbb{R}³\to \mathbb{R}³$ con la siguiente información:
@@ -465,7 +465,7 @@ L_{2}=2(x_{3}) \\
 L_{2}=2x_{3}
 \end{gather}
 $$
-2. Tercera componente $L_{3}=-2\alpha+\beta-\gamma$:
+1. Tercera componente $L_{3}=-2\alpha+\beta-\gamma$:
    Sustituimos $\alpha,\beta,\gamma$ en la expresión: $$
 \begin{gather}
 L_{3}=-2\alpha+\beta-\gamma \\

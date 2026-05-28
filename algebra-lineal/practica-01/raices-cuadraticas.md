@@ -34,8 +34,8 @@ La parte real es: $a^{2}-b^{2}=-5$ y la parte imaginaria es $2ab=-12$.
 
 Ahora tenemos tres ecuaciones.
 1. $a^{2}+b^{2}=13$.
-2. $a^{2}-b^{2}=-5$.
-3. $2ab=-12$.
+1. $a^{2}-b^{2}=-5$.
+1. $2ab=-12$.
 
 Sumamos la ecuación 1 y 2 para conocer $a$.
 $$

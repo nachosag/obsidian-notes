@@ -46,15 +46,15 @@ Se deberá justificar brevemente la decisión de modelado elegida.
 # **Casos De uso**
 
 1. ¿Qué productos pertenecen a la categoría "Electrónica"?  
-2. ¿Qué clientes tienen al menos un pedido con estado "pendiente"?  
-3. Listar productos con stock entre 1 y 5 unidades.  
-4. ¿Qué categorías distintas se venden?  
-5. ¿Qué productos tienen el tag "oferta"?  
-6. Aplicar un descuento del 10% a todos los productos con tag "oferta".  
-7. Eliminar el tag "oferta" de los productos que se quedan sin stock.  
-8. ¿Qué clientes realizaron pedidos que incluyan productos de la categoría "Electrónica"?  
-9. ¿Qué clientes tienen pedidos con total mayor a $100.000?  
-10. ¿Qué productos no tienen stock disponible?
+1. ¿Qué clientes tienen al menos un pedido con estado "pendiente"?  
+1. Listar productos con stock entre 1 y 5 unidades.  
+1. ¿Qué categorías distintas se venden?  
+1. ¿Qué productos tienen el tag "oferta"?  
+1. Aplicar un descuento del 10% a todos los productos con tag "oferta".  
+1. Eliminar el tag "oferta" de los productos que se quedan sin stock.  
+1. ¿Qué clientes realizaron pedidos que incluyan productos de la categoría "Electrónica"?  
+1. ¿Qué clientes tienen pedidos con total mayor a $100.000?  
+1. ¿Qué productos no tienen stock disponible?
 
 ## **Requerimientos adicionales**
 

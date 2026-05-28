@@ -104,7 +104,7 @@ M=A-B=\begin{pmatrix}
 $$
 Si $x=(1,0,-2)^{t}$ es solución del sistema $Mx=b$, entonces $Mx$ debe ser igual $b$.
 
-2. Calculemos $b$.
+1. Calculemos $b$.
 Calculamos $Mx$ para conocer $b$.
 $$
 b = \begin{pmatrix}
@@ -199,7 +199,7 @@ $$
 $$
 \det(M) = t\cdot{2} + 2\cdot{1}=2t+2
 $$
-2. Calculamos $t$.
+1. Calculamos $t$.
 $$
 \begin{gather}
 2t+2=0 \\
@@ -229,7 +229,7 @@ z
 -4
 \end{pmatrix}
 $$
-3. Busquemos el conjunto de soluciones de $Mx=b$.
+1. Busquemos el conjunto de soluciones de $Mx=b$.
 
 Triangulemos la matriz, es decir, llevemos $[M|b]$ a su forma escalonada.
 $$
@@ -306,7 +306,7 @@ $$
 \end{cases}
 $$
 El subespacio $S^{\perp}$ es precisamente el espacio nulo (núcleo) de la matriz de coeficientes de este sistema. Para encontrar una base de $S^{\perp}$ debemos resolver este sistema.
-2. Escalonamos la matriz de coeficientes del sistema.
+1. Escalonamos la matriz de coeficientes del sistema.
 $$
 \begin{pmatrix}
 2 & 2 & 1 \\
@@ -332,7 +332,7 @@ $$
 y-z=0 & (2).
 \end{cases}
 $$
-3. Buscamos el conjunto solución.
+1. Buscamos el conjunto solución.
 Despejamos $y$ en $(2)$.
 $$
 \begin{gather}
@@ -352,7 +352,7 @@ x=-\frac{3}{2}z
 $$
 El conjunto de soluciones para el sistema homogéneo es $(x,y,z)=\left( -\frac{3}{2}z,z,z \right)$ con $z\in \mathbb{R}$.
 
-4. Buscamos una base de $S^{\perp}$.
+1. Buscamos una base de $S^{\perp}$.
 Para obtener una base de $S^{\perp}$, debemos escribir el vector solución como el producto del parámetro por un vector (o varios vectores, si hubiera más de una variable libre).
 $$
 v=(x,y,z)=z\left( -\frac{3}{2},1,1 \right)
@@ -392,7 +392,7 @@ $$
 (x_{1},x_{2},0,x_{1}+2x_{2})=x_{1}(1,0,0,1)+x_{2}(0,1,0,2)
 $$
 Por lo tanto, $\mathcal{B}_{T}=\{ (1,0,0,1),(0,1,0,2) \}$.
-2. Extendemos $\mathcal{B}_{T}$ a una base de $\mathbb{R}^{4}$.
+1. Extendemos $\mathcal{B}_{T}$ a una base de $\mathbb{R}^{4}$.
 Sabemos que una base de $\mathbb{R}^{4}$ debe tener 4 vectores linealmente independientes. Ya tenemos 2. Necesitamos encontrar 2 vectores más (llamémoslos $v_{3},v_{4}$) para que el conjunto completo $\{ v_{1},v_{2},v_{3},v_{4} \}$ sea linealmente independiente.
 
 Podemos completar la base con vectores de la base canónica de $\mathbb{R}^{4}$ es decir, con $e_{1}=(1,0,0,0)$, $e_{2}=(0,1,0,0)$, $e_{3}=(0,0,1,0)$ y $e_{4}=(0,0,0,1)$. Usemos $e_{3}$ y $e_{4}$.

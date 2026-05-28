@@ -193,9 +193,9 @@ Se pide indicar y justificar si las siguientes afirmaciones son verdaderas o fal
 Sea $G$ un grafo euleriano y bipartito, con una bipartición de vértices $V(G)=X\cup Y$.
 
 1. Como $G$ es euleriano, sabemos por el Teorema de Euler que el grado $d(v)$ de cada vértice $v\in V(G)$ debe ser un número par.
-2. En un grafo bipartito, la suma de los grados de los vértices en un conjunto de la partición (por ejemplo, $X$) es igual al número total de aristas, $|E(G)|$. Esto se expresa como:
+1. En un grafo bipartito, la suma de los grados de los vértices en un conjunto de la partición (por ejemplo, $X$) es igual al número total de aristas, $|E(G)|$. Esto se expresa como:
 $$\sum_{v\in X} d(v) = |E(G)|$$
-3. Consideremos la suma $\sum_{v\in X} d(v)$. Como cada grado $d(v)$ en esa suma es un número par (por el paso 1), y la suma de cualquier cantidad de números pares siempre da como resultado un número par, se deduce que la suma total es par.
+1. Consideremos la suma $\sum_{v\in X} d(v)$. Como cada grado $d(v)$ en esa suma es un número par (por el paso 1), y la suma de cualquier cantidad de números pares siempre da como resultado un número par, se deduce que la suma total es par.
 
 Por lo tanto, el número de aristas $|E(G)|$ es **par** y la afirmación es **verdadera**.
 
@@ -295,10 +295,10 @@ Un vértice no puede tener grado 0 ya que existe al menos un vértice universal.
 
 Analicemos los 4 vértices restantes.
 1. Todos pueden tener grado 4
-2. Todos pueden tener grado 2
-3. Pueden haber 3 de grado 4 y 1 de grado 2
-4. Pueden haber 2 de grado 4 y 2 de grado 2
-5. Pueden haber 1 de grado 4 y 3 de grado 2
+1. Todos pueden tener grado 2
+1. Pueden haber 3 de grado 4 y 1 de grado 2
+1. Pueden haber 2 de grado 4 y 2 de grado 2
+1. Pueden haber 1 de grado 4 y 3 de grado 2
 
 Los casos 1, 2 y 5 son geométricamente posibles.
 En el caso 1 $G$ es isomorfo al grafo $K_{5}$.
@@ -343,7 +343,7 @@ Si $C_{1}$ y $C_{2}$ fueran ciclos impares, entonces $i+1$ y $j+1$ son impares. 
 
 Debemos probar las siguientes dos implicaciones:
 1. Si un grafo tiene una única bipartición $\implies$ es conexo.
-2. Si un grafo es conexo $\implies$ tiene una única bipartición.
+1. Si un grafo es conexo $\implies$ tiene una única bipartición.
 
 Comencemos por la segunda implicación.
 Sea $G$ un grafo conexo. Nos piden demostrar que tiene una única bipartición.
@@ -397,7 +397,7 @@ Sea $G$ un grafo conexo simple. Pruebe que $G$ es bipartito completo si y solo s
 
 Sabemos que $G$ es simple y conexo. Nos piden demostrar los siguientes puntos:
 1. Si $G$ es bipartito completo entonces no contiene a $K_{3}$ ni $P_{4}$ como subgrafo inducido.
-2. Si $G$ es un grafo simple y conexo que no contiene a $K_{3}$ ni $P_{4}$ como subgrafo inducido entonces $G$ es bipartito completo.
+1. Si $G$ es un grafo simple y conexo que no contiene a $K_{3}$ ni $P_{4}$ como subgrafo inducido entonces $G$ es bipartito completo.
 ## Primer demostración
 Supongamos que $G$ es un grafo simple, conexo y bipartito completo.
 

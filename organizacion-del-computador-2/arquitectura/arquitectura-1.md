@@ -3,21 +3,21 @@
 
 1. ¿Qué es una computadora IAS? ¿Por qué se las llama así?
 	- IAS es el acrónimo de Institute for Advanced Study Computer (Instituto de Estudios Avanzados de Informática).
-2. ¿Qué es un programa almacenado y qué establece?
+1. ¿Qué es un programa almacenado y qué establece?
 	- Un programa almacenado es un archivo que contiene instrucciones y datos y es almacenado en disco.
 	- Se establece que un programa puede ser cargado en memoria, convirtiéndose así en un proceso, una instancia del programa que está en ejecución.
 		- Que esté "cargado en memoria" implica que tanto los **datos** como las **instrucciones** son cargadas en memoria. 
 		- Esto le permite al procesador acceder a cada instrucción del programa, así como también acceder a cada dato que solicita.
-3. ¿Qué relación tiene con la arquitectura de Von Neumann?
+1. ¿Qué relación tiene con la arquitectura de Von Neumann?
 	- Esta ES la arquitectura Von Neumann. 
-4. ¿Cómo está compuesta la arquitectura de una computadora IAS?
+1. ¿Cómo está compuesta la arquitectura de una computadora IAS?
 	- Memoria
 	- Procesador
 		- ALU (Unidad Aritmético Lógica)
 		- UC (Unidad de Control)
 	- Almacenamiento
 	- Dispositivos de E/S (opcionales)
-5. ¿Qué función cumple cada componente?
+1. ¿Qué función cumple cada componente?
 	- **Memoria:** Se encarga de *almacenar* datos e instrucciones (instrucciones de máquina)
 	- **Procesador:** Se encarga de *ejecutar* instrucciones.
 		- **ALU:** Se encarga de *realizar* operaciones (aritméticas y lógicas) con datos binarios.
@@ -49,7 +49,7 @@
 	- Primero **busca** las instrucciones en la memoria. Esta etapa se la llama **fetch o fetching**.
 	- Segundo, las **interpreta**. Esta etapa se la llama **decode o decoding**.
 	- Tercero, **delega** al resto de componentes (ALU, Memoria, Registros) para que cada uno haga su parte. Esta etapa se la llama **Execute o Executing**.
-2. ¿Qué son los registros? ¿Cuántos hay? ¿Cuáles son? ¿Qué función cumplen?
+1. ¿Qué son los registros? ¿Cuántos hay? ¿Cuáles son? ¿Qué función cumplen?
 	- Los registros son pequeños espacios de memoria que, a diferencia de la memoria principal, estos se encuentran **integrados en el procesador**. Tienen el objetivo de almacenar datos o instrucciones temporalmente con los que el procesador está trabajando en ese instante.
 	- Hay bastantes. Como mínimo unos 6 pero puede haber más.
 	- Entre ellos:
@@ -85,11 +85,11 @@ La CU en más detalle:
 	- Una micro-operación es una acción fundamental y elemental que la CPU realiza sobre los datos presentes en los registros.
 	- Podemos pensarlas como "pasos individuales" para una tarea más grande.
 	- Por ejemplo, para cargar un dato un dato en un registro, la CPU primero tiene que poner la dirección de memoria del dato al cual quiero acceder en el registro **MAR**. Consecuentemente, la memoria va a acceder a esa dirección de memoria y devolver el dato. Luego, el CPU va a guardar el dato en el registro.
-2. ¿Qué significa que se realiza en un solo ciclo de reloj?
+1. ¿Qué significa que se realiza en un solo ciclo de reloj?
 	- Que una micro-operación se realice en un solo ciclo significa que es tan simple que el procesador la termina en un único pulso de ese reloj
-3. ¿A qué se refiere con que "son los componentes básicos de las instrucciones de máquina"?
+1. ¿A qué se refiere con que "son los componentes básicos de las instrucciones de máquina"?
 	- Significa que instrucciones como `LOAD X` o `MOV X` no suceden por arte de magia, sino que están compuestas por micro-operaciones.
-4. ¿Qué es un Lenguaje de Transferencia de Registros (RTL)?
+1. ¿Qué es un Lenguaje de Transferencia de Registros (RTL)?
 	- Es como el "pseudocódigo" de la electrónica del procesador.
 	- Es una notación formal que usan los ingenieros y arquitectos para describir qué pasa con los datos entre los registros durante una micro-operación.
 	- Por ejemplo `AC <- M[X]` nos dice que el **contenido** de una dirección de memoria se mueve al registro AC.
@@ -222,9 +222,9 @@ Ambas arquitecturas representan filosofías de diseño totalmente distintas. La 
 
 # Preguntas Finales
 1. ¿Por qué la arquitectura de Von Neumann fue una revolución?
-2. ¿Qué características principales definen a la arquitecturas IAS?
-3. ¿Cuáles son los ciclos de una instrucción?
-4. ¿Cuál es la diferencia principal entre una instrucción con **direccionamiento directo e indirecto**?
-5. ¿Diferencias entre las arquitecturas `RISC` y `CISC`?
-6. ¿Qué técnicas se utilizan para atenuar el cuello de botella de Von Neumann?
-7. ¿Qué tipos de buses existen? ¿Qué propósito tienen?
+1. ¿Qué características principales definen a la arquitecturas IAS?
+1. ¿Cuáles son los ciclos de una instrucción?
+1. ¿Cuál es la diferencia principal entre una instrucción con **direccionamiento directo e indirecto**?
+1. ¿Diferencias entre las arquitecturas `RISC` y `CISC`?
+1. ¿Qué técnicas se utilizan para atenuar el cuello de botella de Von Neumann?
+1. ¿Qué tipos de buses existen? ¿Qué propósito tienen?

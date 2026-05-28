@@ -59,7 +59,7 @@ $$
 $$
 v_{1}=P-Q=\left( 1, 1, -2 \right) 
 $$
-2. $\Pi_{2}$ debe ser paralelo a $L$ 
+1. $\Pi_{2}$ debe ser paralelo a $L$ 
 Podemos usar cualquier múltiplo de $v_{L}$.
 $$
 v_{2}=(1,3,1)
@@ -394,7 +394,7 @@ Por lo tanto, $B_{S}=gen\{ (-2,-1,0,2),(2,-1,-2,-3) \}$ es una base para $S$ y $
 
 Para que un vector $\mathbf{x}=(x_{1},x_{2},x_{3},x_{4})$ pertenezca a la intersección $S\cap T$, se deben cumplir dos condiciones
 1. $\mathbf{x}$ debe ser una combinación lineal de los generadores de $S$.
-2. $\mathbf{x}$ debe satisfacer la ecuación homogénea que define a $T$.
+1. $\mathbf{x}$ debe satisfacer la ecuación homogénea que define a $T$.
 
 Expresamos $\mathbf{x}\in S$ utilizando $B_{S}$.
 $$

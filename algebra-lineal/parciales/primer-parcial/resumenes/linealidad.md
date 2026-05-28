@@ -9,8 +9,8 @@ Para conocer si un conjunto de vectores es L.I., se debe plantear y resolver el 
 ## A. Método General (Sistema Homogéneo)
 
 1. **Construir la matriz A:** Escriba cada vector $v_i$ como una columna (o, alternativamente, como una fila) de una matriz $A$.
-2. **Plantear el sistema homogéneo:** Considere el sistema $A\mathbf{c} = \vec{0}$, donde $\mathbf{c} = (c_1, c_2, \ldots, c_k)$ es el vector de escalares desconocidos.
-3. **Resolver el sistema:** Aplique el método de eliminación de Gauss-Jordan para llevar la matriz $A$ a su forma escalonada.
+1. **Plantear el sistema homogéneo:** Considere el sistema $A\mathbf{c} = \vec{0}$, donde $\mathbf{c} = (c_1, c_2, \ldots, c_k)$ es el vector de escalares desconocidos.
+1. **Resolver el sistema:** Aplique el método de eliminación de Gauss-Jordan para llevar la matriz $A$ a su forma escalonada.
 
 ### Criterios de Independencia Lineal:
 
@@ -39,7 +39,7 @@ La identificación de los vectores sobrantes se realiza mediante el mismo proces
 Cuando se resuelve el sistema $A\mathbf{c} = \vec{0}$ y se obtienen soluciones no triviales (lo que indica dependencia), esto significa que es posible expresar algunos vectores como combinación lineal de otros:
 
 1. **Identificar variables libres:** Una vez que la matriz $A$ se ha reducido a su forma escalonada $U$ o forma escalonada reducida $R$, las columnas de $A$ que **no contienen pivotes** corresponden a las **variables libres**.
-2. **Determinar la redundancia:** Las columnas (vectores) de la matriz original $A$ que corresponden a las columnas **sin pivote** en la matriz escalonada son aquellas que pueden expresarse como combinaciones lineales de los vectores correspondientes a las columnas con pivotes. Estos son los vectores "sobrantes" que se pueden descartar para formar un conjunto linealmente independiente que genere el mismo subespacio.
+1. **Determinar la redundancia:** Las columnas (vectores) de la matriz original $A$ que corresponden a las columnas **sin pivote** en la matriz escalonada son aquellas que pueden expresarse como combinaciones lineales de los vectores correspondientes a las columnas con pivotes. Estos son los vectores "sobrantes" que se pueden descartar para formar un conjunto linealmente independiente que genere el mismo subespacio.
     - **Ejemplo:** Si el sistema $A\mathbf{c} = \vec{0}$ arroja la solución $3v_1 - v_2 - 2v_3 + 0v_4 = \vec{0}$, y si $v_2$ es el vector correspondiente a una variable libre (escalar no nulo), se puede despejar $v_2 = 3v_1 - 2v_3$, confirmando que $v_2$ es redundante.
 
 ## B. Mediante Eliminación de Filas (para reducir un conjunto generador)

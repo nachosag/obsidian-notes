@@ -919,8 +919,8 @@ Si prefieres mantener la estructura matemática pero ahorrar espacio, puedes usa
 > Existen 21 soluciones para los tamaños de las pilas. Para una solución fija $(x_1, x_2, x_3)$:
 > 
 > 1. Elegimos y ordenamos los libros de la Pila 1: $P(25, x_1)$ formas.
-> 2. Elegimos y ordenamos los libros de la Pila 2: $P(25-x_1, x_2)$ formas.
-> 3. Elegimos y ordenamos los libros de la Pila 3: $P(x_3, x_3)$ formas.
+> 1. Elegimos y ordenamos los libros de la Pila 2: $P(25-x_1, x_2)$ formas.
+> 1. Elegimos y ordenamos los libros de la Pila 3: $P(x_3, x_3)$ formas.
 > 
 > Multiplicando:
 > $$\frac{25!}{(25-x_1)!} \cdot \frac{(25-x_1)!}{(25-x_1-x_2)!} \cdot \frac{x_3!}{0!}$$

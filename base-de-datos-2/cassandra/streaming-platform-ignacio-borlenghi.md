@@ -9,8 +9,8 @@ Una plataforma de streaming musical necesita modelar su base de datos en Apache 
 ```cql
 CREATE KEYSPACE streaming_platform 
 WITH replication = {
-    'class': 'SimpleStrategy', 
-    'replication_factor': 1
+	'class': 'SimpleStrategy', 
+	'replication_factor': 1
 };
 
 USE streaming_platform;

@@ -139,8 +139,9 @@
     },
     "ordered-list-style": {
       "enabled": true,
-      "number-style": "ascending",
-      "list-end-style": "."
+      "number-style": "lazy",
+      "list-end-style": ".",
+      "preserve-start": true
     },
     "proper-ellipsis": {
       "enabled": true

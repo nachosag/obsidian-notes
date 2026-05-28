@@ -5,7 +5,7 @@
     - **Producto por escalar**: `λ(x₁, …, xₙ) = (λx₁, …, λxₙ)`
 - **Subespacio Vectorial**: Un subespacio de un espacio vectorial es un conjunto no vacío que está "cerrado" bajo combinaciones lineales. Cumple dos requisitos:
     1. Si se suman dos vectores cualesquiera del subespacio, su suma (`x + y`) permanece en el subespacio.
-    2. Si se multiplica un vector del subespacio por un escalar (`cx`), el resultado permanece en el subespacio.
+    1. Si se multiplica un vector del subespacio por un escalar (`cx`), el resultado permanece en el subespacio.
 - **Propiedad del Vector Cero**: El vector cero pertenece a todo subespacio vectorial.
 - **Independencia Lineal, Base y Dimensión**:
     - **Generación**: Un conjunto de vectores genera un espacio si todo vector en ese espacio puede escribirse como una combinación lineal de ellos.

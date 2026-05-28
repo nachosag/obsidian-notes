@@ -19,7 +19,7 @@ $$
 $$
 Igualamos componente a componente
 1. $c_{1}+3c_{2}=5\leftrightarrow c_{1}=5-3c_{2}$.
-2. $2c_{1}-c_{2}=1\leftrightarrow-c_{2}=1-2c_{1}\leftrightarrow c_{2}=-1+2c_{1}$.
+1. $2c_{1}-c_{2}=1\leftrightarrow-c_{2}=1-2c_{1}\leftrightarrow c_{2}=-1+2c_{1}$.
 
 Sustituimos $c_{1}=5-3c_{2}$ en la ecuación (2)
 $$
@@ -85,7 +85,7 @@ $$
 $$
 Igualamos componente a componente
 1. $2a-b=-3\leftrightarrow-b=-3-2a\leftrightarrow b=3+2a$.
-2. $a+3b=7\leftrightarrow a=7-3b$.
+1. $a+3b=7\leftrightarrow a=7-3b$.
 
 Buscamos $a$.
 $$
@@ -147,8 +147,8 @@ $$
 $$
 Igualamos componente a componente
 1. $\alpha+\beta+\gamma=2$.
-2. $\beta+\gamma=5$.
-3. $\gamma=0$.
+1. $\beta+\gamma=5$.
+1. $\gamma=0$.
 
 Buscamos $\beta$ sustituyendo $\gamma=0$ en la ecuación $(2)$,
 $$
@@ -189,8 +189,8 @@ $$
 $$
 Igualamos componente a componente
 1. $\alpha+\gamma=3$.
-2. $\alpha+\beta=2$.
-3. $\beta+\gamma=1$.
+1. $\alpha+\beta=2$.
+1. $\beta+\gamma=1$.
 
 Armamos la matriz $A|b$ asociada al sistema de ecuaciones
 $$
@@ -279,9 +279,9 @@ $$
 $$
 Igualando componente a componente
 1. $\alpha+\beta+\gamma+\rho=4$.
-2. $\beta+\gamma+\rho=-3$.
-3. $\gamma+\rho=2$.
-4. $\rho=-1$.
+1. $\beta+\gamma+\rho=-3$.
+1. $\gamma+\rho=2$.
+1. $\rho=-1$.
 
 Por la ecuación 4 tenemos que $\rho=-1$.
 Sustituimos $\rho=-1$ en la ecuación 3 para encontrar $\gamma$.

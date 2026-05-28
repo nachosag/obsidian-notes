@@ -46,15 +46,15 @@ Se deberá justificar brevemente la decisión de modelado elegida.
 # **Casos De uso**
 
 1. ¿Qué pacientes tienen obra social "OSDE"?  
-2. ¿Qué pacientes tienen al menos un turno pendiente de atención?  
-3. ¿Qué pacientes tienen turnos con un médico de especialidad "Cardiología"?  
-4. ¿Qué pacientes se llaman `<<Nombre>>`?  
-5. ¿Qué pacientes tienen un diagnóstico que contenga el texto `<<String>>`?  
-6. ¿Qué pacientes tienen alergias registradas?  
-7. Marcar como "frecuente" a los pacientes que tengan al menos un turno atendido.  
-8. ¿Qué pacientes están marcados como frecuentes?  
-9. ¿Qué pacientes tienen turnos cuyo motivo contiene el texto `<<String>>`?  
-10. ¿Qué pacientes tienen turnos atendidos por médicos con más de una especialidad?
+1. ¿Qué pacientes tienen al menos un turno pendiente de atención?  
+1. ¿Qué pacientes tienen turnos con un médico de especialidad "Cardiología"?  
+1. ¿Qué pacientes se llaman `<<Nombre>>`?  
+1. ¿Qué pacientes tienen un diagnóstico que contenga el texto `<<String>>`?  
+1. ¿Qué pacientes tienen alergias registradas?  
+1. Marcar como "frecuente" a los pacientes que tengan al menos un turno atendido.  
+1. ¿Qué pacientes están marcados como frecuentes?  
+1. ¿Qué pacientes tienen turnos cuyo motivo contiene el texto `<<String>>`?  
+1. ¿Qué pacientes tienen turnos atendidos por médicos con más de una especialidad?
 
 ## **Requerimientos adicionales**
 

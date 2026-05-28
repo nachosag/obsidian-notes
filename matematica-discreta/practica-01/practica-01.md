@@ -360,7 +360,7 @@ Podemos dividir la construcción en dos etapas independientes:
 
 1. **Ubicación:** Dado que debe haber exactamente una torre por fila, para la **Fila 1** tenemos 8 columnas posibles; para la **Fila 2**, 7 columnas (para no amenazar a la anterior), y así sucesivamente. Esto equivale a permutar las 8 columnas: $P(8,8)=8!$.
 
-2. **Coloración:** Una vez ubicadas las torres, tenemos 8 colores para asignar a la primera torre, 7 para la segunda, etc. Esto equivale a permutar los 8 colores: $P(8,8)=8!$.
+1. **Coloración:** Una vez ubicadas las torres, tenemos 8 colores para asignar a la primera torre, 7 para la segunda, etc. Esto equivale a permutar los 8 colores: $P(8,8)=8!$.
 
 Por el **Principio Multiplicativo**, el total es $8!\cdot8! = 1625702400$.
 # Ejercicio 20

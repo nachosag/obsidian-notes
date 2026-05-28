@@ -32,8 +32,8 @@ Esta tabla indica los signos de las funciones trigonométricas (y por ende, de l
 
 Para determinar el argumento ($\theta$) de un número complejo $Z = a + bi$:
 1. **Encuentra el cuadrante:** Usa los signos de $a$ y $b$.
-2. **Encuentra el ángulo de referencia (**$\alpha$**):** Calcula $\alpha = \arctan\left(\left|\frac{b}{a}\right|\right)$ usando solo los valores absolutos (esto siempre te dará un ángulo del Cuadrante I, usando la primera tabla).
-3. **Ajusta el ángulo final (**$\theta$**):**
+1. **Encuentra el ángulo de referencia (**$\alpha$**):** Calcula $\alpha = \arctan\left(\left|\frac{b}{a}\right|\right)$ usando solo los valores absolutos (esto siempre te dará un ángulo del Cuadrante I, usando la primera tabla).
+1. **Ajusta el ángulo final (**$\theta$**):**
     - **I:** $\theta = \alpha$.
     - **II:** $\theta = 180^\circ - \alpha$ ($\pi - \alpha$).
     - **III:** $\theta = 180^\circ + \alpha$ ($\pi + \alpha$).

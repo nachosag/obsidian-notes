@@ -16,9 +16,9 @@ Determina quiénes están facultados para interponer la acción de amparo ante d
 
 1. El sujeto directamente **afectado**.
     
-2. El **Defensor del Pueblo** (órgano unipersonal e independiente instituido por la Constitución).
+1. El **Defensor del Pueblo** (órgano unipersonal e independiente instituido por la Constitución).
     
-3. Las **asociaciones** debidamente registradas que propendan a esos fines de interés público.
+1. Las **asociaciones** debidamente registradas que propendan a esos fines de interés público.
 
 ### C. Tercer Párrafo: La Acción de Habeas Data (y su distinción con el Habeas Corpus)
 
@@ -70,13 +70,13 @@ Para que el almacenamiento y tratamiento de datos sea lícito, debe responder a 
 
 1. **Certeza, Adecuación y Pertinencia:** Los datos deben ser ciertos, adecuados, pertinentes y no excesivos en relación con el ámbito y la finalidad para la que se obtuvieron.
     
-2. **Principio de Finalidad:** Los datos no pueden ser utilizados para propósitos distintos o incompatibles con aquellos que motivaron su recolección.
+1. **Principio de Finalidad:** Los datos no pueden ser utilizados para propósitos distintos o incompatibles con aquellos que motivaron su recolección.
     
-3. **Medios de Recolección Lícitos:** Se prohíbe la recolección de datos por medios fraudulentos, desleales o de forma contraria a las normas de la ley.
+1. **Medios de Recolección Lícitos:** Se prohíbe la recolección de datos por medios fraudulentos, desleales o de forma contraria a las normas de la ley.
     
-4. **Exactitud y Actualización:** Deben ser exactos y actualizarse permanentemente en caso de ser necesario.
+1. **Exactitud y Actualización:** Deben ser exactos y actualizarse permanentemente en caso de ser necesario.
     
-5. **Temporalidad:** Los datos deben ser destruidos o archivados de forma anónima cuando hayan dejado de ser necesarios o pertinentes para los fines para los cuales fueron recolectados.
+1. **Temporalidad:** Los datos deben ser destruidos o archivados de forma anónima cuando hayan dejado de ser necesarios o pertinentes para los fines para los cuales fueron recolectados.
 
 ## 3. El Consentimiento para el Tratamiento de Datos (Art. 5)
 
@@ -88,13 +88,13 @@ La ley prevé taxativamente los supuestos donde se pueden tratar datos sin neces
 
 1. **Fuentes de acceso público irrestricto:** Cuando los datos se obtienen de guías, registros públicos o padrones libres.
     
-2. **Poderes del Estado:** Cuando son recabados para el ejercicio de funciones constitucionales de los órganos estatales o por una obligación legal.
+1. **Poderes del Estado:** Cuando son recabados para el ejercicio de funciones constitucionales de los órganos estatales o por una obligación legal.
     
-3. **Listados básicos limitados:** Listados que se limiten exclusivamente a datos identificatorios mínimos de la persona (**DNI, CUIT/CUIL, nombre, domicilio, ocupación y fecha de nacimiento**).
+1. **Listados básicos limitados:** Listados que se limiten exclusivamente a datos identificatorios mínimos de la persona (**DNI, CUIT/CUIL, nombre, domicilio, ocupación y fecha de nacimiento**).
     
-4. **Relación profesional:** Cuando los datos deriven de una relación contractual, científica o profesional del titular y sean necesarios para su desarrollo o cumplimiento.
+1. **Relación profesional:** Cuando los datos deriven de una relación contractual, científica o profesional del titular y sean necesarios para su desarrollo o cumplimiento.
     
-5. **Entidades Financieras / Crediticias:** Operaciones que realicen las entidades financieras y de informes crediticios (ej. Veraz, Banco Central), bajo el marco de la regulación de los servicios de solvencia económica.
+1. **Entidades Financieras / Crediticias:** Operaciones que realicen las entidades financieras y de informes crediticios (ej. Veraz, Banco Central), bajo el marco de la regulación de los servicios de solvencia económica.
 
 ## 4. El Deber de Información en la Recolección (Art. 6)
 
@@ -102,13 +102,13 @@ Cuando se le soliciten datos personales a un ciudadano, se le debe informar prev
 
 1. **Finalidad:** Para qué se van a usar los datos y quiénes serán sus destinatarios o usuarios.
     
-2. **Existencia del archivo:** La existencia del registro, archivo o base de datos correspondiente, indicando la identidad y el domicilio del responsable de la base.
+1. **Existencia del archivo:** La existencia del registro, archivo o base de datos correspondiente, indicando la identidad y el domicilio del responsable de la base.
     
-3. **Carácter de la respuesta:** Si es de carácter obligatorio o puramente opcional/facultativo responder a las preguntas planteadas.
+1. **Carácter de la respuesta:** Si es de carácter obligatorio o puramente opcional/facultativo responder a las preguntas planteadas.
     
-4. **Consecuencias de la negativa:** Qué consecuencias tiene no entregar los datos o entregarlos de forma inexacta.
+1. **Consecuencias de la negativa:** Qué consecuencias tiene no entregar los datos o entregarlos de forma inexacta.
     
-5. **Derechos del titular:** La facultad y los medios para ejercer sus derechos de acceso, rectificación, actualización y supresión de sus datos.
+1. **Derechos del titular:** La facultad y los medios para ejercer sus derechos de acceso, rectificación, actualización y supresión de sus datos.
 
 ## 5. Derechos de los Titulares de Datos
 

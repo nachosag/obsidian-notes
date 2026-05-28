@@ -2,43 +2,43 @@
 # Ejercicio 2
 1. Dado el vector v = (3, 4), encontrar un vector w distinto de v tal que w sea un múltiplo de v y verifique: 
 	1. $∥w∥ = 7$
-	2. $∥w∥ = 5$
-	3. $∥w∥ = 2$
-2. Sea $w = (1, 3)\in\mathbb{R}$ o cualquier otro vector que prefiera y responda a las siguientes preguntas ayudándose, si lo prefiere, con el GeoGebra.
+	1. $∥w∥ = 5$
+	1. $∥w∥ = 2$
+1. Sea $w = (1, 3)\in\mathbb{R}$ o cualquier otro vector que prefiera y responda a las siguientes preguntas ayudándose, si lo prefiere, con el GeoGebra.
 	1. Graficar $a\cdot w$ con $a \geq 0$.
 		1. Con $\alpha = 0$
 		    ![[Pasted image 20250828031105.png]]
-		2. Con $\alpha = \frac{1}{2}$
+		1. Con $\alpha = \frac{1}{2}$
 		    ![[Pasted image 20250828031234.png]]
-		3. Con $\alpha = 2$
+		1. Con $\alpha = 2$
 		    ![[Pasted image 20250828031318.png]]
-	2. Graficar $\beta\cdot w$ con $-1 \leq \beta \leq 2$ 
+	1. Graficar $\beta\cdot w$ con $-1 \leq \beta \leq 2$ 
 		1. Con $\beta = -1$
 		    ![[Pasted image 20250828031531.png]]
-	3. Graficar $t * w$ con $t \in \mathbb{R}$
+	1. Graficar $t * w$ con $t \in \mathbb{R}$
 		1. Con un número negativo el nuevo vector u se dirigiría en la dirección contraria de w. Con un número positivo el nuevo vector tendría su misma dirección. Con número nulo, el nuevo vector no tendría dirección ya que estaría posicionado en el punto (0,0)
-	4. Graficar $t \cdot w + (0,1)$ con $t \in \mathbb{R}$ 
+	1. Graficar $t \cdot w + (0,1)$ con $t \in \mathbb{R}$ 
 		1. Con $t=0$
 		   ![[Pasted image 20250828032721.png]]
-		2. Con $t = 1$
+		1. Con $t = 1$
 		   ![[Pasted image 20250828032758.png]]
-		3. Con $t = -1$
+		1. Con $t = -1$
 		   ![[Pasted image 20250828032823.png]]
-3. Elegir vectores $v \in \mathbb{R²}$ cualesquiera, preferentemente utilizando el GeoGebra, y responder, en base a los resultados obtenidos, las siguientes preguntas:
+1. Elegir vectores $v \in \mathbb{R²}$ cualesquiera, preferentemente utilizando el GeoGebra, y responder, en base a los resultados obtenidos, las siguientes preguntas:
 	1. ¿Para qué valores del escalar $\lambda \in \mathbb{R}$ resulta que $|| \lambda \cdot v || > || v ||$ ?
-	2. ¿Para qué valores del escalar $\lambda \in \mathbb{R}$ resulta que $|| \lambda \cdot v || < || v ||$?
-	3. ¿Para qué valores del escalar $\lambda \in \mathbb{R}$ resulta que $|| \lambda \cdot v || = 1$? 
+	1. ¿Para qué valores del escalar $\lambda \in \mathbb{R}$ resulta que $|| \lambda \cdot v || < || v ||$?
+	1. ¿Para qué valores del escalar $\lambda \in \mathbb{R}$ resulta que $|| \lambda \cdot v || = 1$? 
 # Ejercicio 3
 Considere $A=(1,0),B=(0,1),C=(1,2),D=(2,1),E=(-1,2),F=(-2,-1)$
 1. Realizar las siguientes operaciones:
 	1. $C\cdot D$
-	2. $D\cdot C$
-	3. $E\cdot E$
-	4. $C\cdot(A+B)$
-	5. $C\cdot A+C\cdot B$
-	6. $(E-F)\cdot(E-F)$
-	7. $||E||²-2E\cdot F+||F||²$
-2. Calcular los seis ángulos entre los 6 vectores e indique cuáles de ellos forman un par de vectores ortogonales.
+	1. $D\cdot C$
+	1. $E\cdot E$
+	1. $C\cdot(A+B)$
+	1. $C\cdot A+C\cdot B$
+	1. $(E-F)\cdot(E-F)$
+	1. $||E||²-2E\cdot F+||F||²$
+1. Calcular los seis ángulos entre los 6 vectores e indique cuáles de ellos forman un par de vectores ortogonales.
 # Ejercicio 4
 Decidir cuáles de los siguientes puntos pertenecen a la recta $\mathbb{L}:X= \alpha(-2,3) + (2,2)$, para $\alpha \in \mathbb{R}: P_{1} = (2,2), P_{2}= (-2,3), P_{3}=(0,0), P_{4}=(12,-13), P_{5}=(2,-1)$. Graficar en un papel y luego verificar la correctitud del dibujo usando geogebra.
 
@@ -402,14 +402,14 @@ $$\begin{array} \\
 (x,y)=(t,-2+3t) \\
 \end{array}
 $$
-2. Pasamos a la forma explícita
+1. Pasamos a la forma explícita
 $$
 \begin{cases}
 x=t \\
 y=-2+3t
 \end{cases}​​
 $$
-3. Eliminamos el parámetro $t$ sustituyendo en $y=-2+3t \implies y=3x-2$ y **recuperamos** la ecuación original.
+1. Eliminamos el parámetro $t$ sustituyendo en $y=-2+3t \implies y=3x-2$ y **recuperamos** la ecuación original.
 # Ejercicio 8
 1. Hallar 3 vectores que sean ortogonales/perpendiculares al $(2,-3)$. ¿Qué relación encuentra entre los vectores hallados?
 
@@ -710,7 +710,7 @@ Queremos un $v=(v_{x},v_{y})$ tal que $n\cdot v=0$
 Hay dos maneras sencillas:
 1. Elegimos $v=(-b,a)$
    Por lo tanto, $v=(-1,1)$
-2. Usar la relación de pendiente. Si $b\neq{0}$, despejamos $y$:
+1. Usar la relación de pendiente. Si $b\neq{0}$, despejamos $y$:
    $$
 ax+by+c=0 \implies y=-\frac{a}{b}x-\frac{c}{b}
 $$ La pendiente es $m=-\frac{a}{b}$. 
@@ -802,13 +802,13 @@ y=-\frac{1}{2}\cdot(x-1)-4 \\
 y=-\frac{1}{2}\cdot{x}-\frac{7}{2}
 \end{gather}
 $$
-2. La recta que es paralela a la recta $L:X=t\cdot{(-2,3)}+(1,-1)$ y pasa por el punto $P=(1,-4)$.
+1. La recta que es paralela a la recta $L:X=t\cdot{(-2,3)}+(1,-1)$ y pasa por el punto $P=(1,-4)$.
   Si las rectas son paralelas, entonces comparten vector director. Entonces $v=(-2,3)$.
 Ahora armamos la paramétrica con $P$
 $$
 X(t)=(1,-4)+t(-2,3)
 $$
-3. La recta que es perpendicular a la recta $L:X=t\cdot{(-2,3)}+(1,-1)$ y pasa por el punto $P=(1,-4)$.
+1. La recta que es perpendicular a la recta $L:X=t\cdot{(-2,3)}+(1,-1)$ y pasa por el punto $P=(1,-4)$.
 La dirección de $L$ es $v_{L}=(-2,3)$. Esto significa que cualquier vector $w$ dirección de la recta buscada debe ser **ortogonal** a $v_{L}$
 
 Escribimos la condición de perpendicularidad

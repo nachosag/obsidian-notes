@@ -13,15 +13,15 @@ Además nos interesa guardar los "me gusta" que cada uno de los usuarios puede h
 En el relevamiento inicial se documentaron los siguientes casos de uso:
 
 1. Traer la información de los artículos publicados dado el nombre del portal y año. Ordenar los resultados por año ascendente.  
-2. Traer artículos publicados por un autor. Ordenarlo por año ascendente.  
-3. Traer la información de los usuarios a quienes les ha gustado un determinado artículo publicado.  
-4. Traer la información de los usuarios quienes hayan dado like a un determinado artículo y además sea de un tema de interés para ellos.  
+1. Traer artículos publicados por un autor. Ordenarlo por año ascendente.  
+1. Traer la información de los usuarios a quienes les ha gustado un determinado artículo publicado.  
+1. Traer la información de los usuarios quienes hayan dado like a un determinado artículo y además sea de un tema de interés para ellos.  
 
 Se pide:
 
 1. Realizar el DER.  
-2. Cassandra:  
+1. Cassandra:  
    1. Diseño de Tabla o CREATE  
-   2. INSERTS  
-   3. CQL  
-   4. Valor del token
+   1. INSERTS  
+   1. CQL  
+   1. Valor del token

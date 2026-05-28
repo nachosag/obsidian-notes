@@ -28,9 +28,9 @@ Tiene por objeto el almacenamiento, la indexación y la recuperación automatiza
     
     1. **Full-Text (Texto Completo):** El criterio de búsqueda se aplica sobre la totalidad de las palabras que componen el documento. Demanda un elevado uso de recursos de procesamiento, pero arroja un resultado exhaustivo.
         
-    2. **Keywords (Palabras Clave):** La búsqueda se restringe a un conjunto limitado de descriptores o palabras clave predefinidas y asociadas al texto. Es un método muy económico en términos de procesamiento, pero el resultado puede ser incompleto.
+    1. **Keywords (Palabras Clave):** La búsqueda se restringe a un conjunto limitado de descriptores o palabras clave predefinidas y asociadas al texto. Es un método muy económico en términos de procesamiento, pero el resultado puede ser incompleto.
         
-    3. **Abstract (Resumen):** El criterio se aplica sobre una síntesis o sumario del documento. Es un punto intermedio que equilibra el uso de recursos computacionales con la calidad de los resultados devueltos.
+    1. **Abstract (Resumen):** El criterio se aplica sobre una síntesis o sumario del documento. Es un punto intermedio que equilibra el uso de recursos computacionales con la calidad de los resultados devueltos.
 
 ### B. Informática Jurídica de Gestión y Control
 
@@ -56,21 +56,21 @@ Al convertirse las tecnologías en el objeto de regulación del derecho, surgen 
 
 1. **Valor Probatorio:** Validez de los documentos digitales, correos electrónicos y mensajes virtuales como prueba en procesos judiciales.
     
-2. **Protección de Datos Personales:** El resguardo de la privacidad de los ciudadanos ante la recolección masiva de su información (Ley 25.326).
+1. **Protección de Datos Personales:** El resguardo de la privacidad de los ciudadanos ante la recolección masiva de su información (Ley 25.326).
     
-3. **Delitos Informáticos:** Tipificación y persecución penal de accesos ilegítimos, hackeos, virus, estafas y sabotajes de sistemas.
+1. **Delitos Informáticos:** Tipificación y persecución penal de accesos ilegítimos, hackeos, virus, estafas y sabotajes de sistemas.
     
-4. **Flujo Transfronterizo de Datos:** Conflictos de soberanía y jurisdicción aplicable cuando los datos se procesan y almacenan en nubes (*cloud computing*) distribuidas en diferentes países.
+1. **Flujo Transfronterizo de Datos:** Conflictos de soberanía y jurisdicción aplicable cuando los datos se procesan y almacenan en nubes (*cloud computing*) distribuidas en diferentes países.
     
-5. **Propiedad Intelectual:** Protección jurídica del software (código fuente y objeto) y las bases de datos (Ley 11.723).
+1. **Propiedad Intelectual:** Protección jurídica del software (código fuente y objeto) y las bases de datos (Ley 11.723).
     
-6. **Contratos Informáticos:** Regulación y validez de las operaciones comerciales de hardware, software y servicios tecnológicos.
+1. **Contratos Informáticos:** Regulación y validez de las operaciones comerciales de hardware, software y servicios tecnológicos.
     
-7. **Ergonomía Informática:** Normas de salud ocupacional vinculadas a las enfermedades y riesgos laborales específicos del trabajo informático.
+1. **Ergonomía Informática:** Normas de salud ocupacional vinculadas a las enfermedades y riesgos laborales específicos del trabajo informático.
     
-8. **Regulación de los Bienes Informacionales:** El estatuto de propiedad y valor comercial aplicable a la información en sí misma.
+1. **Regulación de los Bienes Informacionales:** El estatuto de propiedad y valor comercial aplicable a la información en sí misma.
     
-9. **Regulación de los Bienes Informáticos:** El régimen jurídico para los elementos físicos (hardware, periféricos e insumos).
+1. **Regulación de los Bienes Informáticos:** El régimen jurídico para los elementos físicos (hardware, periféricos e insumos).
 
 ## 4. Contratos Informáticos y la Etapa Precontractual
 
@@ -82,9 +82,9 @@ Basado en los textos de Eduardo Molina Quiroga, el contrato informático posee u
     
     1. **Estudio de las Necesidades del Usuario:** Relevamiento técnico donde el cliente detalla sus requerimientos y el proveedor analiza la viabilidad del proyecto.
         
-    2. **Negociación:** Intercambio de ofertas, presupuestos técnicos y estimación de tiempos.
+    1. **Negociación:** Intercambio de ofertas, presupuestos técnicos y estimación de tiempos.
         
-    3. **Consentimiento:** Confluencia de la oferta y la aceptación que perfecciona el contrato.
+    1. **Consentimiento:** Confluencia de la oferta y la aceptación que perfecciona el contrato.
 
 ### El "Deber de Información" en la Etapa Precontractual
 
@@ -104,9 +104,9 @@ Afectan las condiciones internas de la voluntad (discernimiento, intención y li
 
 1. **Error:** Es una falsa representación de la realidad o de las características técnicas del sistema que llevó a la parte a contratar bajo un supuesto falso.
     
-2. **Dolo (Art. 271 CCCN):** Es toda aserción de lo que es falso o disimulación de lo verdadero, cualquier artificio, astucia o maquinación que se emplee para celebrar el acto. En los contratos informáticos, ocurre por el engaño del proveedor o por el incumplimiento deliberado de su **Deber de Información** (reticencia u omisión dolosa de incompatibilidades), induciendo al usuario al error para lograr que firme.
+1. **Dolo (Art. 271 CCCN):** Es toda aserción de lo que es falso o disimulación de lo verdadero, cualquier artificio, astucia o maquinación que se emplee para celebrar el acto. En los contratos informáticos, ocurre por el engaño del proveedor o por el incumplimiento deliberado de su **Deber de Información** (reticencia u omisión dolosa de incompatibilidades), induciendo al usuario al error para lograr que firme.
     
-3. **Violencia:** Coacción física o intimidación moral (fuerza irresistible o amenazas de sufrir un mal grave e inminente) ejercida sobre el sujeto para forzarlo a prestar su consentimiento.
+1. **Violencia:** Coacción física o intimidación moral (fuerza irresistible o amenazas de sufrir un mal grave e inminente) ejercida sobre el sujeto para forzarlo a prestar su consentimiento.
 
 ### B. Defectos Estructurales de Validez (Nulidad en la Estructura Contractual)
 
@@ -114,9 +114,9 @@ Fallas insalvables en los elementos esenciales del acto jurídico:
 
 1. **Incapacidad de las Partes:** Que una o ambas partes carezcan de la capacidad legal de ejercicio para obligarse civilmente (ej. menores de edad o personas judicialmente declaradas incapaces sin representación idónea).
     
-2. **Objeto Ilícito:** Que la prestación acordada sea prohibida por la ley, contraria a la moral, las buenas costumbres o el orden público (ej. contratar para hackear un servidor público o vender bases de datos que contengan datos sensibles recopilados de manera ilegal).
+1. **Objeto Ilícito:** Que la prestación acordada sea prohibida por la ley, contraria a la moral, las buenas costumbres o el orden público (ej. contratar para hackear un servidor público o vender bases de datos que contengan datos sensibles recopilados de manera ilegal).
     
-3. **Causa Ilícita:** Cuando el propósito común e inmediato perseguido por las partes al celebrar el contrato es contrario al ordenamiento jurídico.
+1. **Causa Ilícita:** Cuando el propósito común e inmediato perseguido por las partes al celebrar el contrato es contrario al ordenamiento jurídico.
 
 ## 6. Firma Digital, Firma Electrónica y Certificados (Ley 25.506)
 
@@ -130,7 +130,7 @@ Es el resultado de aplicar a un documento digital un procedimiento matemático c
     
     1. **Presunción de Autoría:** Se presume, salvo prueba en contrario, que el documento digital firmado pertenece al titular de la firma digital asociada.
         
-    2. **Presunción de Integridad:** Se presume que el documento digital no ha sido modificado o alterado desde el momento exacto de su firma.
+    1. **Presunción de Integridad:** Se presume que el documento digital no ha sido modificado o alterado desde el momento exacto de su firma.
         
 - **Impacto Procesal (Carga de la prueba):** Produce la **inversión de la carga de la prueba**. Si el firmante niega su firma, la ley asume que es suya, por lo que **él mismo debe demostrar** que su clave privada fue vulnerada o que el documento fue alterado.
 

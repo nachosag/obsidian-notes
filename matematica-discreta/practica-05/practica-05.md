@@ -388,16 +388,16 @@ Es decir, podemos identificar dos casos:
 	1. Existe al menos una arista entre los vecinos de $v$.
 	   Tomemos dos $w_{1},w_{2}\in N(v)$ tal que $w_{1}\sim w_{2}$.
 	   En este caso, $w_{1}\sim w_{2},v\sim w_{1},v\sim w_{2}\implies \omega(G)\geq{3}$.
-	2. No existe ninguna arista entre los vecinos de $v$.
+	1. No existe ninguna arista entre los vecinos de $v$.
 	   Tomemos tres $w_{1},w_{2},w_{3}\in N(v)$ tal que $w_{1}\not\sim w_{2},w_{1}\not\sim w_{3},w_{2}\not\sim w_{3}$.
 	   En este caso, $w_{1}\not\sim w_{2},w_{1}\not\sim w_{3},w_{2}\not\sim w_{3}\implies \alpha(G)\geq{3}$.
-2. $v$ tiene como mucho 2 vecinos
+1. $v$ tiene como mucho 2 vecinos
    Es decir, $0\leq d(v)\leq{2}$.
    Luego, podemos identificar dos subcasos:
 	1. Existe al menos un par de no vecinos de $v$ que no son vecinos entre sí.
 	   Tomemos $w_{1},w_{2}\in V(G)$ tal que $w_{1}\not\sim w_{2},v\not\sim w_{1},v\not\sim w_{2}$. 
 	   En este caso, $w_{1}\not\sim w_{2},v\not\sim w_{1},v\not\sim w_{2}\implies \alpha(G)\geq{3}$.
-	2. Todos los no vecinos son vecinos entre sí.
+	1. Todos los no vecinos son vecinos entre sí.
 	   Tomemos $w_{1},w_{2},w_{3}\in V(G)$ tal que $w_{1}\sim w_{2},w_{1}\sim w_{3},w_{2}\sim w_{3}$ pero $v\not\sim w_{1},v\not\sim w_{2},v\not\sim w_{3}$.
 	   En este caso, $w_{1}\sim w_{2},w_{1}\sim w_{3},w_{2}\sim w_{3}\implies \omega(G)\geq{3}$.
 
@@ -613,8 +613,8 @@ Ambos factores son iguales, esto nos confirma que $G$ pertenece a $S$. A su vez,
 
 Repaso conceptual:
 1. **Inciso a):** Confirmamos que el grafo completo $K_{2n}$ pertenece a $S$. Al tener $2n$ vértices, cada uno con grado máximo $2n-1$, la suma de grados es exactamente $2n(2n-1)$.
-2. **Inciso b):** Demostramos que es imposible pertenecer a $S$ con menos vértices. Incluso el grafo con más aristas posible, con $2n-1$ vértices, tiene una suma de grados $(2n-1)(2n-2)$, la cual es estrictamente menor que el objetivo $2n(2n-1)$.
-3. **Inciso c):** Probamos que si $G$ tiene el mínimo de vértices $2n$, debe ser completo. Para alcanzar la suma requerida, $2n(2n-1)$, con solo $2n$ vértices, **todos** deben tener el grado máximo, $2n-1$. Si faltara una sola arista, la suma bajaría y $G$ no estaría en $S$.
+1. **Inciso b):** Demostramos que es imposible pertenecer a $S$ con menos vértices. Incluso el grafo con más aristas posible, con $2n-1$ vértices, tiene una suma de grados $(2n-1)(2n-2)$, la cual es estrictamente menor que el objetivo $2n(2n-1)$.
+1. **Inciso c):** Probamos que si $G$ tiene el mínimo de vértices $2n$, debe ser completo. Para alcanzar la suma requerida, $2n(2n-1)$, con solo $2n$ vértices, **todos** deben tener el grado máximo, $2n-1$. Si faltara una sola arista, la suma bajaría y $G$ no estaría en $S$.
 
 # Ejercicio 14
 ![[Pasted image 20251202223445.png]]
