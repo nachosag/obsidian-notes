@@ -84,7 +84,7 @@
 - **Firma Digital:** Es el resultado de aplicar un procedimiento matemático (criptografía asimétrica) utilizando información de exclusivo control del firmante y sustentada en un Certificado Digital emitido por un Certificador Licenciado por el Estado. Goza de **presunción de autoría y de integridad**, lo que produce la **inversión de la carga de la prueba** (quien la niegue debe demostrar su falsedad).
 - **Firma Electrónica:** Es un conjunto de datos electrónicos usados como medio de identificación, pero que **carece de alguno de los requisitos legales** para ser considerada firma digital. Su diferencia fundamental es que **no goza de presunciones legales**, por lo que, en caso de disputa en un juicio, la **carga de la prueba recae íntegramente sobre quien la invoca**.
 
-**16. ¿Qué es el “deber de información” en la etapa precontractual?** 
+**16. ¿Qué es el "deber de información" en la etapa precontractual?** 
 
 - Es una obligación legal fundamentada en el principio de buena fe que recae sobre el proveedor. Exige brindar al cliente o futuro usuario información **clara, veraz, objetiva, detallada y comprensible** sobre las características técnicas, limitaciones y riesgos del sistema o equipo informático a contratar. Su objetivo es **equilibrar la asimetría de conocimientos técnicos** entre el experto (proveedor) y el usuario, evitando sobreventas (overselling) o sistemas insuficientes para sus necesidades.
 

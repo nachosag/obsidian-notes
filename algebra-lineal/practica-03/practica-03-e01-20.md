@@ -100,7 +100,7 @@ $$
 \beta=3
 \end{gather}
 $$
-3. Sustituímos $\alpha,\beta$ en la tercera ecuación: $$
+2. Sustituímos $\alpha,\beta$ en la tercera ecuación: $$
 \begin{gather}
 \alpha x_{1}+\beta x_{2}+8x_{3}=0 \\
 -1\cdot{2}+3\cdot{(-2)}+8\cdot{1}=0 \\
@@ -361,7 +361,7 @@ Aplicamos eliminación Gaussiana. Recordemos las <mark style="background: #BBFAB
 1. Multiplicar una fila por un escalar distinto de cero $$
 k\cdot{R_{i}}\to F_{i}
 $$
-2. Intercambiar dos filas $$
+1. Intercambiar dos filas $$
 F_{i}\leftrightarrow F_{j}
 $$
 3. Sumar a una fila un múltiplo de otra $$

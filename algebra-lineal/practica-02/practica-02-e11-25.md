@@ -424,8 +424,8 @@ $$ Desarrollando: $$
 $$ Comprobación rápida: sustituímos $P_{2}=(0,-2,1):-2\cdot{2}\cdot{1}=-2+2=0$, cumple; y cualquier punto de $L_{1}$ (por ejemplo $P_{1}=(3,0,0)$) también cumple: $0+0=0$. Todo consistente.
 
 **Resumen final**
-+ Paramétrica: $X(s,t)=(3,0,0)+s(-1,2,-1)+t(-3,-2,1)$.
-+ Implícita: $y+2z=0$.
+- Paramétrica: $X(s,t)=(3,0,0)+s(-1,2,-1)+t(-3,-2,1)$.
+- Implícita: $y+2z=0$.
 # Ejercicio 22
 ![[Pasted image 20250908211655.png]]
 Estos son los datos que tenemos:

@@ -102,7 +102,7 @@ Para cada componente $C_i$, analicemos los dos casos posibles:
    
 En este caso, $v_i$ no tiene más vecinos en $C_i$. Al volver a $T$, su único vecino es $v$. Por lo tanto, $d_T(v_i)=1$ y $v_i$ es una hoja en $T$.
 
-2. $C_i$ tiene al menos 2 vértices:
+1. $C_i$ tiene al menos 2 vértices:
 
 Por el Lema 22, sabemos que todo árbol con al menos 2 vértices tiene al menos 2 hojas.
 Dentro de $C_i$, una de esas hojas podría ser el vértice $v_i$ (que se conecta a $v$ en el grafo original). Sin embargo, la segunda hoja, llamémosla $w$, no es vecina de $v$.

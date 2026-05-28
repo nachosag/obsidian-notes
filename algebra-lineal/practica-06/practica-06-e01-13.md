@@ -465,7 +465,7 @@ L_{2}=2(x_{3}) \\
 L_{2}=2x_{3}
 \end{gather}
 $$
-3. Tercera componente $L_{3}=-2\alpha+\beta-\gamma$:
+2. Tercera componente $L_{3}=-2\alpha+\beta-\gamma$:
    Sustituimos $\alpha,\beta,\gamma$ en la expresión: $$
 \begin{gather}
 L_{3}=-2\alpha+\beta-\gamma \\

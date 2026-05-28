@@ -36,7 +36,7 @@
 		- Fetch: Buscar la masa
 		- Decode: Mirar de qué es
 		- Execute: Poner el dulce de leche
-		- ... y así
+		- … y así
 	- Cuando hay un JMP se debe saltar a la instrucción 500. Esto es un **Salto de pipeline**. El CPU tiene que hacer lo siguiente:
 		- Vaciar el pipeline
 		- ir a buscar la instrucción 500
@@ -64,4 +64,3 @@
 	- Cuando dos núcleos quieren tocar el mismo recurso, el hardware usa una señal de LOCK. Esto hace que el procesador "secuestre" el bus de datos o bloquee la linea de caché para que ningún otro núcleo pueda leer o escribir hasta que la instrucción termine. 
 
 - **¿Cuál es la diferencia fundamental entre una arquitectura RISC y una CISC?** Y para meterle un poco más de picante: **¿Por qué decimos que en RISC el "esfuerzo" está en el software (compilador) mientras que en CISC está en el hardware?**
-	- 

@@ -127,7 +127,7 @@ M_{BE'}(T) =
 \end{pmatrix}
 $$
 
-2. Si $T$ está definida como en el enunciado, ¿cómo podrías hallar la matriz $M_{EE'}(T)$?
+1. Si $T$ está definida como en el enunciado, ¿cómo podrías hallar la matriz $M_{EE'}(T)$?
 
 Para hallar la matriz $M_{EE'}(T)$ necesitamos la matriz de cambio de base $C_{EB}=(C_{BE})^{-1}=\begin{pmatrix}1 & 0 & 1 \\ 0 & 1 & 1 \\ 1 & 1 & 0\end{pmatrix}^{-1}$tal que
 $$

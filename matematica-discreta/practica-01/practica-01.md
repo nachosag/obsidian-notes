@@ -349,7 +349,7 @@ Dado que hay 8 torres y 8 filas, necesariamente debe haber una torre en cada fil
 
 - Para la **fila 1**, disponemos de **8** columnas posibles.
 - Para la **fila 2**, disponemos de **7** columnas (cualquiera excepto la usada en la fila 1).
-- ...
+- …
 - Para la **fila 8**, disponemos de **1** columna restante.
 
 Esto equivale a contar las permutaciones de 8 elementos (las columnas) en 8 posiciones (las filas). Por lo tanto, existen $P(8,8)=8!=40.320$ formas distintas.

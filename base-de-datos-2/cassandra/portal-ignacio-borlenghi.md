@@ -8,7 +8,7 @@ Cada portal temático puede tener un nombre, año de creación, país, URL, tema
 
 Los usuarios deberán registrarse y de cada uno se desea almacenar su nombre, apellido, correo electrónico y temas de interés para él. Los usuarios pueden escribir comentarios sobre cada uno de los artículos especificando un título, un cuerpo y una calificación que corresponde al artículo digital. Se guarda la fecha del comentario.
 
-Además nos interesa guardar los “me gusta” que cada uno de los usuarios puede hacer sobre los portales temáticos, artículos digitales y/o comentarios.
+Además nos interesa guardar los "me gusta" que cada uno de los usuarios puede hacer sobre los portales temáticos, artículos digitales y/o comentarios.
 
 En el relevamiento inicial se documentaron los siguientes casos de uso:
 
@@ -21,7 +21,7 @@ Se pide:
 
 1. Realizar el DER.  
 2. Cassandra:  
-   3. Diseño de Tabla o CREATE  
-   4. INSERTS  
-   5. CQL  
-   6. Valor del token
+   1. Diseño de Tabla o CREATE  
+   2. INSERTS  
+   3. CQL  
+   4. Valor del token

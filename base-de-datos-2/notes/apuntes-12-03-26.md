@@ -3,7 +3,7 @@ El diagrama representa una simplificación de cómo interactúa un **cliente** c
 
 Primero se interpreta la estructura del dibujo.
 
-Un **usuario** interactúa con una aplicación cliente. Ese cliente envía instrucciones al servidor de base de datos. El servidor se ejecuta dentro de una computadora (la “PC” del diagrama) y utiliza tres recursos principales: **CPU**, **RAM** y **almacenamiento**.
+Un **usuario** interactúa con una aplicación cliente. Ese cliente envía instrucciones al servidor de base de datos. El servidor se ejecuta dentro de una computadora (la "PC" del diagrama) y utiliza tres recursos principales: **CPU**, **RAM** y **almacenamiento**.
 
 El flujo es el siguiente:
 

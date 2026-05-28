@@ -156,7 +156,7 @@ z
 $$
 El enunciado menciona que el sistema $Mx=b$ tiene infinitas soluciones. Esto solo es posible si $\det(M)=0$.
 
-3. Calculemos $\det(M)$ mediante expansión de cofactores utilizando la tercer fila.
+1. Calculemos $\det(M)$ mediante expansión de cofactores utilizando la tercer fila.
 $$
 \det(M) = 
 0\cdot \det \begin{pmatrix}
@@ -199,7 +199,7 @@ $$
 $$
 \det(M) = t\cdot{2} + 2\cdot{1}=2t+2
 $$
-4. Calculamos $t$.
+2. Calculamos $t$.
 $$
 \begin{gather}
 2t+2=0 \\
@@ -229,7 +229,7 @@ z
 -4
 \end{pmatrix}
 $$
-5. Busquemos el conjunto de soluciones de $Mx=b$.
+3. Busquemos el conjunto de soluciones de $Mx=b$.
 
 Triangulemos la matriz, es decir, llevemos $[M|b]$ a su forma escalonada.
 $$
@@ -386,13 +386,13 @@ $$
 Armamos el conjunto solución
 $T=\{ (x_{1},x_{2},0,x_{1}+2x_{2}) \}$ donde $x_{1},x_{2}\in \mathbb{R}$.
 
-2. Busquemos la base $\mathcal{B}_{T}$.
+1. Busquemos la base $\mathcal{B}_{T}$.
 Para obtener la base $\mathcal{B}_{T}$ debemos descomponer este vector en la suma de vectores donde cada uno es multiplicado por su respectivo parámetro, $x_{1}$ y $x_{2}$.
 $$
 (x_{1},x_{2},0,x_{1}+2x_{2})=x_{1}(1,0,0,1)+x_{2}(0,1,0,2)
 $$
 Por lo tanto, $\mathcal{B}_{T}=\{ (1,0,0,1),(0,1,0,2) \}$.
-3. Extendemos $\mathcal{B}_{T}$ a una base de $\mathbb{R}^{4}$.
+2. Extendemos $\mathcal{B}_{T}$ a una base de $\mathbb{R}^{4}$.
 Sabemos que una base de $\mathbb{R}^{4}$ debe tener 4 vectores linealmente independientes. Ya tenemos 2. Necesitamos encontrar 2 vectores más (llamémoslos $v_{3},v_{4}$) para que el conjunto completo $\{ v_{1},v_{2},v_{3},v_{4} \}$ sea linealmente independiente.
 
 Podemos completar la base con vectores de la base canónica de $\mathbb{R}^{4}$ es decir, con $e_{1}=(1,0,0,0)$, $e_{2}=(0,1,0,0)$, $e_{3}=(0,0,1,0)$ y $e_{4}=(0,0,0,1)$. Usemos $e_{3}$ y $e_{4}$.

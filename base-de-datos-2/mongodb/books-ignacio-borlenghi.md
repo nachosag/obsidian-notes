@@ -26,25 +26,25 @@ type book = {
 mongoimport --host=127.0.0.1 --port=27017 --db=test --collection=books --type=json --file=books.json --jsonArray
 ```
 
-2. Importar el documento especificando solamente el .Json (obtener conclusiones).
+1. Importar el documento especificando solamente el .Json (obtener conclusiones).
 
 ```bash
 mongoimport --file=books.json
 ```
 
-3. Encontrar todos los libros de una categoría específica.
+1. Encontrar todos los libros de una categoría específica.
 
 ```javascript
 db.books.find({ categories: 'Java' })
 ```
 
-4. Encontrar un libro por su isbn.
+1. Encontrar un libro por su isbn.
 
 ```javascript
 db.books.find({ isbn: '1932394907' })
 ```
 
-5. Actualizar el número de páginas de un libro usando $set.
+1. Actualizar el número de páginas de un libro usando $set.
 
 ```javascript
 db.books.updateOne(
@@ -53,7 +53,7 @@ db.books.updateOne(
 )
 ```
 
-6. Eliminar un campo de un documento usando $unset.
+1. Eliminar un campo de un documento usando $unset.
 
 ```javascript
 db.books.updateOne(
@@ -62,13 +62,13 @@ db.books.updateOne(
 )
 ```
 
-5. Buscar todos los libros que no tienen el campo longDescription
+1. Buscar todos los libros que no tienen el campo longDescription
 
 ```javascript
 db.books.find({ longDescription: { $exists: false } })
 ```
 
-6. Añadir una nueva categoría a un libro existente usando $addToSet.
+1. Añadir una nueva categoría a un libro existente usando $addToSet.
 
 ```javascript
 db.books.updateOne(
@@ -77,7 +77,7 @@ db.books.updateOne(
 )
 ```
 
-7. Actualizar el estado de un libro usando $set.
+1. Actualizar el estado de un libro usando $set.
 
 ```javascript
 db.books.updateOne(
@@ -86,25 +86,25 @@ db.books.updateOne(
 )
 ```
 
-8. Buscar todos los libros publicados después del 2010.
+1. Buscar todos los libros publicados después del 2010.
 
 ```javascript
 db.books.find({ publishedDate: { $gt: new Date('2010-12-31') } })
 ```
 
-9. Buscar todos los libros con más de 500 páginas.
+1. Buscar todos los libros con más de 500 páginas.
 
 ```javascript
 db.books.find({ pageCount: { $gt: 500 } })
 ```
 
-10. Buscá libros con menos de 150 páginas.
+1. Buscá libros con menos de 150 páginas.
 
 ```javascript
 db.books.find({ pageCount: { $lt: 150 } })
 ```
 
-11. Buscá libros que tengan entre 100 y 200 páginas $and
+1. Buscá libros que tengan entre 100 y 200 páginas $and
 
 ```javascript
 db.books.find({
@@ -121,13 +121,13 @@ db.books.find({
 })
 ```
 
-12. Eliminar un libro por su _id.
+1. Eliminar un libro por su _id.
 
 ```javascript
 db.books.deleteOne({ _id: 165 })
 ```
 
-13. Incrementar el número de páginas de un libro usando $inc.
+1. Incrementar el número de páginas de un libro usando $inc.
 
 ```javascript
 db.books.updateOne(
@@ -136,7 +136,7 @@ db.books.updateOne(
 )
 ```
 
-14. Buscar todos los libros con la palabra "Action" en el título.
+1. Buscar todos los libros con la palabra "Action" en el título.
 
 ```javascript
 db.books.find({ 
@@ -147,7 +147,7 @@ db.books.find({
 })
 ```
 
-15. Buscar libros que pertenezcan a múltiples categorías $in
+1. Buscar libros que pertenezcan a múltiples categorías $in
 
 ```javascript
 db.books.find({ 
@@ -157,7 +157,7 @@ db.books.find({
 })
 ```
 
-16. Buscar libros que no pertenezcan a una categoría específica $nin
+1. Buscar libros que no pertenezcan a una categoría específica $nin
 
 ```javascript
 db.books.find({ 
@@ -167,7 +167,7 @@ db.books.find({
 })
 ```
 
-17. Encontrá libros que NO sean de las categorías “Java” ni “MongoDB” $nor
+1. Encontrá libros que NO sean de las categorías "Java" ni "MongoDB" $nor
 
 ```javascript
 db.books.find({
@@ -178,7 +178,7 @@ db.books.find({
 })
 ```
 
-18. Buscá libros con campo publishedDate que sea de tipo date $type
+1. Buscá libros con campo publishedDate que sea de tipo date $type
 
 ```javascript
 db.books.find({
@@ -188,7 +188,7 @@ db.books.find({
 })
 ```
 
-19. Actualizar múltiples documentos para establecer una misma clave usando $set (por ejemplo, disponibilidad en true).
+1. Actualizar múltiples documentos para establecer una misma clave usando $set (por ejemplo, disponibilidad en true).
 
 ```javascript
 db.books.updateMany(
@@ -197,7 +197,7 @@ db.books.updateMany(
 )
 ```
 
-20. Renombrá el campo shortDescription a descripcionCorta $rename
+1. Renombrá el campo shortDescription a descripcionCorta $rename
 
 ```javascript
 db.books.updateMany(
@@ -206,19 +206,19 @@ db.books.updateMany(
 )
 ```
 
-21. Buscar libros que tengan una cantidad de páginas entre 300 y 600 $gte $lte
+1. Buscar libros que tengan una cantidad de páginas entre 300 y 600 $gte $lte
 
 ```javascript
 db.books.find({ pageCount: { $gte: 300, $lte: 600 } })
 ```
 
-22. Buscar libros cuyos autores incluyan "Kyle Banker".
+1. Buscar libros cuyos autores incluyan "Kyle Banker".
 
 ```javascript
 db.books.find({ authors: 'Kyle Banker' })
 ```
 
-23. Eliminar la categoría "Java" de un libro usando $pull
+1. Eliminar la categoría "Java" de un libro usando $pull
 
 ```javascript
 db.books.updateOne(
@@ -227,7 +227,7 @@ db.books.updateOne(
 )
 ```
 
-24. Añadir un nuevo autor a un libro existente usando $push
+1. Añadir un nuevo autor a un libro existente usando $push
 
 ```javascript
 db.books.updateOne(
@@ -236,7 +236,7 @@ db.books.updateOne(
 )
 ```
 
-25. Buscar todos los libros que tienen más de un autor $size
+1. Buscar todos los libros que tienen más de un autor $size
 
 ```javascript
 db.books.find({
@@ -247,7 +247,7 @@ db.books.find({
 })
 ```
 
-26. Encontrá libros que tengan exactamente dos categorías $size
+1. Encontrá libros que tengan exactamente dos categorías $size
 
 ```javascript
 db.books.find({
@@ -255,7 +255,7 @@ db.books.find({
 })
 ```
 
-27. Buscar libros cuya descripción corta no esté vacía $ne
+1. Buscar libros cuya descripción corta no esté vacía $ne
 
 ```javascript
 db.books.find({
@@ -263,7 +263,7 @@ db.books.find({
 })
 ```
 
-28. Reemplazar completamente un libro por uno nuevo usando replaceOne.
+1. Reemplazar completamente un libro por uno nuevo usando replaceOne.
 
 ```javascript
 const newBook = {
@@ -284,7 +284,7 @@ db.books.replaceOne(
 )
 ```
 
-29. Buscar todos los libros que no tengan el campo thumbnailUrl ($exists y $ne).
+1. Buscar todos los libros que no tengan el campo thumbnailUrl ($exists y $ne).
 
 ```javascript
 db.books.find({
@@ -295,7 +295,7 @@ db.books.find({
 })
 ```
 
-30. Buscar libros cuyo pageCount no esté entre 200 y 400 páginas $not
+1. Buscar libros cuyo pageCount no esté entre 200 y 400 páginas $not
 
 ```javascript
 db.books.find({
@@ -303,13 +303,13 @@ db.books.find({
 })
 ```
 
-31. Encontrá libros con exactamente 500 páginas $eq
+1. Encontrá libros con exactamente 500 páginas $eq
 
 ```javascript
 db.books.find({ pageCount: 500 })
 ```
 
-32. Buscá libros cuya categoría incluye tanto “Programming” como “Web” $all
+1. Buscá libros cuya categoría incluye tanto "Programming" como "Web" $all
 
 ```javascript
 db.books.find({
@@ -319,7 +319,7 @@ db.books.find({
 })
 ```
 
-33. Multiplicá por 2 el número de páginas de un libro específico $mul
+1. Multiplicá por 2 el número de páginas de un libro específico $mul
 
 ```javascript
 db.books.updateOne(
@@ -328,7 +328,7 @@ db.books.updateOne(
 )
 ```
 
-34. Agregá un array comentarios y usá $push para añadir uno nuevo.
+1. Agregá un array comentarios y usá $push para añadir uno nuevo.
 
 ```javascript
 db.books.updateMany(
@@ -342,7 +342,7 @@ db.books.updateOne(
 )
 ```
 
-35. Usá $addToSet para evitar agregar categorías duplicadas.
+1. Usá $addToSet para evitar agregar categorías duplicadas.
 
 ```javascript
 db.books.updateOne(
@@ -351,7 +351,7 @@ db.books.updateOne(
 )
 ```
 
-36. Usá $pull para eliminar el autor “Desconocido” del array authors.
+1. Usá $pull para eliminar el autor "Desconocido" del array authors.
 
 ```javascript
 db.books.updateOne(
@@ -365,7 +365,7 @@ db.books.updateOne(
 )
 ```
 
-37. Usá $elemMatch para encontrar libros con un comentario que tenga usuario: "Juan" y rating \>= 4
+1. Usá $elemMatch para encontrar libros con un comentario que tenga usuario: "Juan" y rating \>= 4
 ```javascript
 const juansComment = { 'username': 'Juan', 'rating': 2 }
 const pedrosComment = { 'username': 'Pedro', 'rating': 5 }
@@ -390,7 +390,7 @@ db.books.find({
 })
 ```
 
-38. Eliminá el campo thumbnailUrl de todos los documentos que lo tengan.
+2. Eliminá el campo thumbnailUrl de todos los documentos que lo tengan.
 
 ```javascript
 db.books.updateMany(
@@ -399,7 +399,7 @@ db.books.updateMany(
 )
 ```
 
-39. Buscá libros donde descripcionCorta exista pero está vacía.
+1. Buscá libros donde descripcionCorta exista pero está vacía.
 
 ```javascript
 db.books.find({ shortDescription: '' })

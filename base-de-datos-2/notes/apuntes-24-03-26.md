@@ -21,7 +21,7 @@ En este diseño, el flujo de una petición (lectura o escritura) sigue un orden 
 > El flujo real sigue uno de estos dos modelos:
 > 
 > 	- **Modelo Master-Slave (Principal-Réplica)**: El cliente escribe siempre en el nodo **Master** (la base de datos original). Una vez que el Master confirma la escritura, propaga ese cambio a las **Réplicas (Slaves)** de forma síncrona o asíncrona para que queden sincronizadas. Las lecturas se pueden distribuir entre las réplicas para aliviar la carga del Master.
-> 	  
+> 
 > 	- **Modelo Peer-to-Peer / Multi-Master (como Cassandra)**: No hay un único "Master". El nodo que recibe la petición del balanceador actúa como **Nodo Coordinador**. Este nodo escribe el dato localmente y, usando una función de hash o anillo de tokens, determina qué otros nodos del cluster deben actuar como réplicas para ese dato específico, enviándoles la copia de forma simultánea.
 
 ## Conceptos Fundamentales de Infraestructura

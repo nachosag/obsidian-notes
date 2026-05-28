@@ -204,7 +204,7 @@ Dos grafos son isomorfos si son **estructuralmente idénticos**, aunque sus dibu
     
     - Implica que $|E(G)| = |E(\overline{G})| = \frac{1}{2}\binom{n}{2}$.
         
-    - Esto solo es posible si $n \equiv 0$ o $1 \pmod 4$. Si $n$ es 2, 3, 6, 7... el grafo **no** puede ser autocomplementario.
+    - Esto solo es posible si $n \equiv 0$ o $1 \pmod 4$. Si $n$ es 2, 3, 6, 7… el grafo **no** puede ser autocomplementario.
         
 
 #### Metodología Robusta: Verificar Isomorfismo

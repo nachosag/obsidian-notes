@@ -9,8 +9,8 @@
 
 Para todos los casos:
 
-* Estructura de Tabla (usar MAP, SET y LIST cuando corresponda)  
-* CQL de creación de la tabla  
-* CQL  
-* INSERTs  
-* valor del token
+- Estructura de Tabla (usar MAP, SET y LIST cuando corresponda)  
+- CQL de creación de la tabla  
+- CQL  
+- INSERTs  
+- valor del token

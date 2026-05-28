@@ -36,7 +36,7 @@ Notemos que $\det(A)=2$ independientemente del valor que tome $a\in \mathbb{R}$,
 
 Es decir, $T$ es un isomorfismo para todo $a\in \mathbb{R}$.
 
-2. Para $a = 0$, halla una **base** y la **dimensión** del **Núcleo** $(\operatorname{Nu}(T))$ y de la **Imagen** $(\operatorname{Im}(T))$ de $T$. ¿Cómo clasificarías a $T$ en este caso (monomorfismo, epimorfismo, isomorfismo)?
+1. Para $a = 0$, halla una **base** y la **dimensión** del **Núcleo** $(\operatorname{Nu}(T))$ y de la **Imagen** $(\operatorname{Im}(T))$ de $T$. ¿Cómo clasificarías a $T$ en este caso (monomorfismo, epimorfismo, isomorfismo)?
 
 Consideremos $a=0$ en la matriz $A$:
 $$
@@ -153,7 +153,7 @@ Notemos que la igualdad se cumple si:
 - $\lambda=1$. Notemos que este autovalor tiene multiplicidad doble.
 - $\lambda=2$. Notemos que este autovalor tiene multiplicidad singular.
 
-2. Determina una **base** para cada **autoespacio** asociado a los autovalores reales de $A$.
+1. Determina una **base** para cada **autoespacio** asociado a los autovalores reales de $A$.
 
 ## Consideramos $\lambda=1$ en $A-\lambda I$
 $$
@@ -295,7 +295,7 @@ $$
 A = \begin{pmatrix} 1 & 1 & 0 \\ 0 & 2 & 0 \\ 0 & 1 & 1 \end{pmatrix}
 $$
 
-2. En caso afirmativo, encuentra una matriz diagonal $D$ y una matriz invertible $C$ tales que $A = C D C^{-1}$.
+1. En caso afirmativo, encuentra una matriz diagonal $D$ y una matriz invertible $C$ tales que $A = C D C^{-1}$.
 
 La matriz diagonal $D$ se forma con los autovalores en su diagonal, en el orden que elijamos
 $$
@@ -432,7 +432,7 @@ $$
 dim(Nu(T))=0
 $$
 
-2. Determina una **base** y la **dimensión** de la **Imagen** $(\operatorname{Im}(T))$ de $T$. 
+1. Determina una **base** y la **dimensión** de la **Imagen** $(\operatorname{Im}(T))$ de $T$. 
 
 Por el **Teorema de la Dimensión** tenemos que
 $$
@@ -472,7 +472,7 @@ Como $dim(Nu(T))=0\leftrightarrow T$ es monomorfismo.
 Como $dim(\mathrm{Im}(T))=dim(\mathbb{R}^{3})=3$ pero $dim(\mathbb{R}^{4})=4$, $T$ no es epimorfismo.
 Como $T$ es monomorfismo pero no es epimorfismo, $T$ no es isomorfismo.
 
-2. Halla la **fórmula** de la transformación lineal $T(x, y, z)$. 
+1. Halla la **fórmula** de la transformación lineal $T(x, y, z)$. 
 
 Buscamos
 $$
@@ -601,7 +601,7 @@ M_{EE'}(L)=\begin{pmatrix}
 \end{pmatrix}
 $$
 
-5. Utiliza la propiedad de la composición para hallar la matriz de la composición $L \circ T$ en las bases $B$ de $\mathbb{R}^3$ (salida) y $E'$ de $\mathbb{R}^2$ (llegada), es decir, **$M_{B E'}(L \circ T)$**.
+1. Utiliza la propiedad de la composición para hallar la matriz de la composición $L \circ T$ en las bases $B$ de $\mathbb{R}^3$ (salida) y $E'$ de $\mathbb{R}^2$ (llegada), es decir, **$M_{B E'}(L \circ T)$**.
 
 La matriz de la composición se obtiene a partir del producto matricial de las matrices asociadas, es decir
 $$
@@ -627,7 +627,7 @@ M_{BE'}(LoT) = \begin{pmatrix}
 \end{pmatrix}
 $$
 
-6. Calcula $(L \circ T)(\mathbf{v})$ para el vector $\mathbf{v} = (1, 1, 0) \in \mathbb{R}^3$.
+1. Calcula $(L \circ T)(\mathbf{v})$ para el vector $\mathbf{v} = (1, 1, 0) \in \mathbb{R}^3$.
 
 Para utilizar la matriz $M_{BE'}(LoT)$, necesitamos primero las coordenadas de $\mathbf{v}$ en la base de salida $B$, es decir $[\mathbf{v}]_{B}$.
 
@@ -780,7 +780,7 @@ dim(\mathrm{Im}(T))=2
 $$
 
 
-2. Aplica el Teorema de la Dimensión para calcular $\dim(\operatorname{Nu}(T))$.
+1. Aplica el Teorema de la Dimensión para calcular $\dim(\operatorname{Nu}(T))$.
 
 Por el **Teorema de la Dimensión** tenemos que
 $$
@@ -794,7 +794,7 @@ $$
 dim(Nu(T))=1
 $$
 
-3. Halla una **base** para el $\operatorname{Nu}(T)$ y una **base** para la $\operatorname{Im}(T)$.
+1. Halla una **base** para el $\operatorname{Nu}(T)$ y una **base** para la $\operatorname{Im}(T)$.
 
 Encontramos la $B_{\mathrm{Im}(T)}$ en el **apartado a)**:
 $$
@@ -861,7 +861,7 @@ Dado que $dim(Nu(T))=1$, $T$ no puede ser monomorfismo.
 Dado que $dim(\mathrm{Im}(T))=2$ y $dim(\mathbb{R}^{3})=3$, como $2\neq{3}$, $T$ no es epimorfismo.
 Dado que $T$ no es monomorfismo ni epimorfismo, $T$ tampoco es un isomorfismo.
 
-2. Halla la **matriz canónica** $M_{E E}(T)$ y utiliza este resultado para encontrar la **fórmula** de $T(x, y, z)$.
+1. Halla la **matriz canónica** $M_{E E}(T)$ y utiliza este resultado para encontrar la **fórmula** de $T(x, y, z)$.
 
 La fórmula de la composición es la siguiente
 $$
@@ -967,7 +967,7 @@ $$
 [\mathbf{w}]_{B}=\begin{pmatrix}0 \\ -1 \\ 4\end{pmatrix}
 $$
 
-3. Utiliza el resultado de a.3 para decidir si el vector $\mathbf{w}$ pertenece al subespacio $\operatorname{Im}(T)$.
+1. Utiliza el resultado de a.3 para decidir si el vector $\mathbf{w}$ pertenece al subespacio $\operatorname{Im}(T)$.
 
 Recordemos la base de la imagen que hallamos anteriormente
 $$
@@ -1087,7 +1087,7 @@ $$
 dim(Nu(T)) = 1
 $$
 
-2. Halla una **base** para el $\operatorname{Nu}(T)$ y una **base** para la $\operatorname{Im}(T)$.
+1. Halla una **base** para el $\operatorname{Nu}(T)$ y una **base** para la $\operatorname{Im}(T)$.
 
 ## Núcleo
 
@@ -1156,7 +1156,7 @@ $$
 B_{\mathrm{Im}(T)} = \{ (2,1,-1),(1,0,1) \}
 $$
 
-3. **Clasifica** la transformación lineal $T$ (monomorfismo, epimorfismo, isomorfismo).
+1. **Clasifica** la transformación lineal $T$ (monomorfismo, epimorfismo, isomorfismo).
 
 Como $dim(Nu(T))=1$ y $1\neq{0}$, $T$ no es monomorfismo.
 Como $dim(\mathrm{Im}(T))=2$ y $2\neq{3}$, $T$ no es epimorfismo.
@@ -1183,7 +1183,7 @@ $$
 \end{pmatrix}
 $$
 
-2. Halla la **matriz canónica** $M_{E E}(T)$.
+1. Halla la **matriz canónica** $M_{E E}(T)$.
 
 La fórmula de la composición es
 $$
@@ -1208,7 +1208,7 @@ M_{EE}(T) =
 \end{pmatrix}
 $$
 
-3. Determina la **fórmula** de la transformación $T(x, y, z)$.
+1. Determina la **fórmula** de la transformación $T(x, y, z)$.
 
 La fórmula de la transformación podemos obtenerla haciendo
 $$
@@ -1265,7 +1265,7 @@ M_{EE}(L) =
 \end{pmatrix}
 $$
 
-2. Calcula la matriz de la composición $M_{B E}(L \circ T)$.
+1. Calcula la matriz de la composición $M_{B E}(L \circ T)$.
 
 Por la fórmula de la composición tenemos que
 $$
@@ -1290,7 +1290,7 @@ M_{BE}(L \circ T) =
 \end{pmatrix}
 $$
 
-3. Sea $\mathbf{v} = (0, 2, 2)$. Determina $[\mathbf{v}]_{B}$ y calcula $[(L \circ T)(\mathbf{v})]_{E}$.
+1. Sea $\mathbf{v} = (0, 2, 2)$. Determina $[\mathbf{v}]_{B}$ y calcula $[(L \circ T)(\mathbf{v})]_{E}$.
 
 ## Calculamos $[\mathbf{v}]_{B}$
 

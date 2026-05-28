@@ -457,7 +457,7 @@ $$
 Por lo tanto, hemos hallado otros tres vectores perpendiculares al punto $(2,-3)$.
 Estos son $\left( 1, \frac{3}{2} \right), (2,3), \left( -1, -\frac{3}{2} \right)$
 
-2. Hallar todos los vectores perpendiculares al $(2,-2)$ que tengan norma 1.
+1. Hallar todos los vectores perpendiculares al $(2,-2)$ que tengan norma 1.
 
 Escribimos el vector desconocido como $u=(x,y)$.
 <mark style="background: #ADCCFFA6;">Condición de perpendicularidad</mark>: el producto deber ser cero.
@@ -525,7 +525,7 @@ $$
 $$
 Para $u_{2}$ la norma es la misma porque el signo no afecta al cuadrado: $||u_{2}||=1$
 
-3. Hallar una ecuación paramétrica y una implícita de la recta que es perpendicular a $\mathbb{L}:X=t(2,-3)+(5,7)$ y que pase por el punto $P=(1,-3)$.
+1. Hallar una ecuación paramétrica y una implícita de la recta que es perpendicular a $\mathbb{L}:X=t(2,-3)+(5,7)$ y que pase por el punto $P=(1,-3)$.
 
 Comenzamos indentificando el vector director de $\mathbb{L}:d=(2,-3)$.
 
@@ -640,7 +640,7 @@ y=-x+5 \\
 \text{Se puede ver claramente un -1 multiplicando a x. Por lo tanto, } m=-1
 \end{gather}
 $$
-2. Hallar la ecuación de una recta paralela a $L_{1}$ que pase por el $(5,2)$ y la de una recta paralela a $L_{3}$ que pase por el $(2,5)$.
+1. Hallar la ecuación de una recta paralela a $L_{1}$ que pase por el $(5,2)$ y la de una recta paralela a $L_{3}$ que pase por el $(2,5)$.
 **Regla:** dos rectas son paralelas si tienen el mismo vector dirección (o la misma pendiente).
 
 (a) Recta paralela a $L_{1}$ que pase por $(5,2)$
@@ -895,4 +895,4 @@ X(t)=(2,0)+t\cdot(2,1), \quad t \in \mathbb{R}
 $$
 4. La recta que es perpendicular a la recta ${(x,y)\in \mathbb{R²}}:x-2y=1$ y pasa por el punto $(2,0)$.
 
-5. La recta que pasa por el origen y es paralela a la recta que contiene a los puntos $(4,-5)$ y $\left( \frac{1}{2},3 \right)$.
+1. La recta que pasa por el origen y es paralela a la recta que contiene a los puntos $(4,-5)$ y $\left( \frac{1}{2},3 \right)$.

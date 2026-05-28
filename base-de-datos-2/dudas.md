@@ -75,7 +75,7 @@
 | **Cassandra**                                 | **AP** (Disponibilidad / Partición)            | Sacrifica consistencia estricta para asegurar que el sistema nunca deje de responder.                                      |
 | **Relacionales** *(MySQL, Postgres, MariaDB)* | **CA** (En un solo nodo) o **CP** (En cluster) | Tradicionalmente son de un solo nodo (consistencia estricta). Si se configuran en cluster distribuido, actúan como **CP**. |
 	
-4. El comportamiento real ante un fallo de red: Imageinemos un escenario: tenés un cluster dividido en dos por un fallo de red. El lado A tiene 2 nods y el lado B tiene 1 nodo. No pueden hablar entre sí. ¿Qué hace cada motor?
+1. El comportamiento real ante un fallo de red: Imageinemos un escenario: tenés un cluster dividido en dos por un fallo de red. El lado A tiene 2 nods y el lado B tiene 1 nodo. No pueden hablar entre sí. ¿Qué hace cada motor?
 	
 	1. MongoDB
 		

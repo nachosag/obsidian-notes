@@ -12,7 +12,7 @@ El determinante de una matriz A, denotado como `det(A)` o `|A|`, se puede calcul
 
 - **Fórmula de 2x2:** Para una matriz de 2x2, el determinante es `ad - bc`.
 - **Fórmula por Cofactores:** El determinante de una matriz de orden *n* es igual a la suma de los productos de los elementos de una fila (o columna) por sus correspondientes adjuntos (o cofactores). El cofactor `Cᵢⱼ` se calcula como `(-1)ⁱ⁺ʲ` multiplicado por el determinante de la submatriz `Mᵢⱼ` que resulta de eliminar la fila *i* y la columna *j*.
-- **Fórmula General por Permutaciones:** El determinante es una suma de *n!* términos, donde cada término corresponde a una permutación de los números de columna (α, β, ..., ν).
+- **Fórmula General por Permutaciones:** El determinante es una suma de *n!* términos, donde cada término corresponde a una permutación de los números de columna (α, β, …, ν).
 
 ### Propiedades Fundamentales
 
@@ -51,7 +51,7 @@ La matriz identidad es el elemento neutro en la multiplicación de matrices, an�
 - Es una matriz cuadrada denotada por **I**.
 - Tiene unos (1) en su diagonal principal y ceros (0) en todas las demás posiciones.
 - La matriz identidad de 3x3 es:
-- Sus columnas son los vectores de la base canónica (e₁, e₂, ..., eₙ).
+- Sus columnas son los vectores de la base canónica (e₁, e₂, …, eₙ).
 
 ### Propiedades
 

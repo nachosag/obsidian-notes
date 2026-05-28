@@ -68,7 +68,7 @@ const intermediateEnglishCourse = {
 db.courses.insertOne(intermediateEnglishCourse)
 ```
 
-2. Insertar dos cursos nuevos (Francés Inicial y Alemán Avanzado) en una sola operación. 
+1. Insertar dos cursos nuevos (Francés Inicial y Alemán Avanzado) en una sola operación. 
 
 ```javascript
 const initialFrench = {
@@ -94,7 +94,7 @@ const frenchAndGermanCourses = [initialFrench, advancedGerman]
 db.courses.insertMany(frenchAndGermanCourses)
 ```
 
-3. Crear un curso de Portugués Inicial únicamente si no existe previamente.
+1. Crear un curso de Portugués Inicial únicamente si no existe previamente.
 
 ```javascript
 const initialPortuguese = {
@@ -113,7 +113,7 @@ db.courses.updateOne(
 )
 ```
 
-4. Agregar un nuevo estudiante al curso de Inglés Intermedio, evitando duplicar si el DNI ya está cargado.
+1. Agregar un nuevo estudiante al curso de Inglés Intermedio, evitando duplicar si el DNI ya está cargado.
 
 ```javascript
 const newStudentForIntermediateEnglish = {
@@ -140,7 +140,7 @@ db.courses.updateOne(
 )
 ```
 
-5. Agregar dos exámenes nuevos a un estudiante específico dentro del curso de Inglés Intermedio. 
+1. Agregar dos exámenes nuevos a un estudiante específico dentro del curso de Inglés Intermedio. 
 
 ```javascript
 const firstExamForCarlosAlberto = {
@@ -176,7 +176,7 @@ db.courses.updateOne(
 )
 ```
 
-6. Listar los cursos de idioma Inglés mostrando idioma, nivel, turno y sede.
+1. Listar los cursos de idioma Inglés mostrando idioma, nivel, turno y sede.
 
 ```javascript
 db.courses.find(
@@ -193,7 +193,7 @@ db.courses.find(
 )
 ```
 
-7. Mostrar los nombres de los alumnos que cursan la materia (idioma) “Inglés”.
+1. Mostrar los nombres de los alumnos que cursan la materia (idioma) "Inglés".
 
 ```javascript
 db.courses.aggregate([
@@ -214,7 +214,7 @@ db.courses.aggregate([
 ])
 ```
 
-8. Listar los alumnos que hayan obtenido una nota mayor o igual a 8 en algún examen.
+1. Listar los alumnos que hayan obtenido una nota mayor o igual a 8 en algún examen.
 
 ```javascript
 db.courses.aggregate([
@@ -237,7 +237,7 @@ db.courses.aggregate([
 ])
 ```
 
-9. Listar los alumnos que reprobaron al menos un examen (nota menor que 4).
+1. Listar los alumnos que reprobaron al menos un examen (nota menor que 4).
 
 ```javascript
 
@@ -272,7 +272,7 @@ db.courses.aggregate([
 ])
 ```
 
-10. Mostrar los cursos que ya tienen estudiantes con la clave recursa.
+1. Mostrar los cursos que ya tienen estudiantes con la clave recursa.
 
 ```javascript
 
@@ -314,7 +314,7 @@ db.courses.find(
 
 ```
 
-11. Buscar alumnos cuyo nombre contenga el texto “ana” (sin distinguir mayúsculas o minúsculas).
+1. Buscar alumnos cuyo nombre contenga el texto "ana" (sin distinguir mayúsculas o minúsculas).
 
 ```javascript
 const analia = {
@@ -382,7 +382,7 @@ db.courses.aggregate([
 ])
 ```
 
-12. Mostrar el curso y los datos del alumno llamado exactamente “Lucas Fernández”.
+1. Mostrar el curso y los datos del alumno llamado exactamente "Lucas Fernández".
 
 ```javascript
 const lucasFernandez = {
@@ -411,7 +411,7 @@ db.courses.aggregate([
 ])
 ```
 
-13. Para todos los estudiantes con al menos una nota menor que 4, agregar la clave recursa: true.
+1. Para todos los estudiantes con al menos una nota menor que 4, agregar la clave recursa: true.
 
 ```javascript
 db.courses.updateMany(
@@ -423,7 +423,7 @@ db.courses.updateMany(
 )
 ```
 
-14. Corregir la nota de un examen específico, identificando al estudiante y la fecha del examen.
+1. Corregir la nota de un examen específico, identificando al estudiante y la fecha del examen.
 
 ```javascript
 db.courses.updateOne(
@@ -452,7 +452,7 @@ db.courses.updateOne(
 )
 ```
 
-15. Agregar el correo electrónico a un estudiante que todavía no tenga el campo de email.
+1. Agregar el correo electrónico a un estudiante que todavía no tenga el campo de email.
 
 ```javascript
 db.courses.updateOne(
@@ -473,7 +473,7 @@ db.courses.updateOne(
 )
 ```
 
-16. Eliminar el último examen de la lista de un estudiante (por error de carga).
+1. Eliminar el último examen de la lista de un estudiante (por error de carga).
 
 ```javascript
 db.courses.updateOne(
@@ -488,7 +488,7 @@ db.courses.updateOne(
 )
 ```
 
-17. Eliminar de todos los estudiantes los exámenes que tengan nota igual a 0 (no válidos).
+1. Eliminar de todos los estudiantes los exámenes que tengan nota igual a 0 (no válidos).
 
 ```javascript
 db.courses.updateMany(
@@ -503,7 +503,7 @@ db.courses.updateMany(
 )
 ```
 
-18. Renombrar el campo profesor del curso a docente.
+1. Renombrar el campo profesor del curso a docente.
 
 ```javascript
 db.courses.updateMany(
@@ -516,7 +516,7 @@ db.courses.updateMany(
 )
 ```
 
-19. Eliminar un estudiante específico de un curso, identificándolo por DNI.
+1. Eliminar un estudiante específico de un curso, identificándolo por DNI.
 
 ```javascript
 db.courses.updateOne(
@@ -531,7 +531,7 @@ db.courses.updateOne(
 )
 ```
 
-20. Eliminar completamente el curso de Francés Inicial de la colección.
+1. Eliminar completamente el curso de Francés Inicial de la colección.
 
 ```javascript
 db.courses.deleteOne(

@@ -26,27 +26,27 @@ Se requieren las siguientes consultas:
 
 **Nuevos Casos de Uso:**
 
-4. Almacena las reservas realizadas por cada huésped, ordenadas por fecha de inicio
+1. Almacena las reservas realizadas por cada huésped, ordenadas por fecha de inicio
 
-5. Consulta la disponibilidad de habitaciones en un hotel para una fecha específica.
+2. Consulta la disponibilidad de habitaciones en un hotel para una fecha específica.
 
-6. Lista las amenidades disponibles en una habitación específica.
+3. Lista las amenidades disponibles en una habitación específica.
 
-7. Consulta todas las reservas en un hotel para una fecha específica.
+4. Consulta todas las reservas en un hotel para una fecha específica.
 
-8. Obtiene los puntos de interés asociados a una zona específica de la ciudad.
+5. Obtiene los puntos de interés asociados a una zona específica de la ciudad.
 
-9. Consulta todas las reservas realizadas por un huésped en un hotel específico.
+6. Consulta todas las reservas realizadas por un huésped en un hotel específico.
 
-10. Lista las amenidades disponibles en un hotel para un tipo de habitación específico.
+7. Lista las amenidades disponibles en un hotel para un tipo de habitación específico.
 
-11. Consulta todas las reservas realizadas para un tipo de habitación específico en una fecha determinada.
+8. Consulta todas las reservas realizadas para un tipo de habitación específico en una fecha determinada.
 
-12. Consulta la disponibilidad de todas las habitaciones de un hotel para una fecha específica, ordenadas por número de habitación.
+9. Consulta la disponibilidad de todas las habitaciones de un hotel para una fecha específica, ordenadas por número de habitación.
 
 Para cada consulta se pide:
 
-* Diseño de tabla  
-* Instanciar  
-* Script de creación de la tabla (utilizando donde sea posible, un MAP SET o LIST).  
-* INSERTs de datos
+- Diseño de tabla  
+- Instanciar  
+- Script de creación de la tabla (utilizando donde sea posible, un MAP SET o LIST).  
+- INSERTs de datos

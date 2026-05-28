@@ -1,8 +1,8 @@
 # Definiciones y Propiedades
 
-- **Definición de Rⁿ**: El espacio `Rⁿ` se define como el conjunto de n-uplas de números reales `{(x₁, x₂, ..., xₙ) : x₁, ..., xₙ ∈ ℝ}`. En este espacio se definen dos operaciones:
-    - **Suma**: `(x₁, ..., xₙ) + (y₁, ..., yₙ) = (x₁ + y₁, ..., xₙ + yₙ)`
-    - **Producto por escalar**: `λ(x₁, ..., xₙ) = (λx₁, ..., λxₙ)`
+- **Definición de Rⁿ**: El espacio `Rⁿ` se define como el conjunto de n-uplas de números reales `{(x₁, x₂, …, xₙ) : x₁, …, xₙ ∈ ℝ}`. En este espacio se definen dos operaciones:
+    - **Suma**: `(x₁, …, xₙ) + (y₁, …, yₙ) = (x₁ + y₁, …, xₙ + yₙ)`
+    - **Producto por escalar**: `λ(x₁, …, xₙ) = (λx₁, …, λxₙ)`
 - **Subespacio Vectorial**: Un subespacio de un espacio vectorial es un conjunto no vacío que está "cerrado" bajo combinaciones lineales. Cumple dos requisitos:
     1. Si se suman dos vectores cualesquiera del subespacio, su suma (`x + y`) permanece en el subespacio.
     2. Si se multiplica un vector del subespacio por un escalar (`cx`), el resultado permanece en el subespacio.

@@ -17,7 +17,7 @@ c) Considerar $k = 1$. Si $L: \mathbb{R}^3 \to \mathbb{R}^2$, $L(x,y,z) = (3z, x
 
 ---
 
-2. Dada la matriz $A \in \mathbb{R}^{3 \times 3}$,
+1. Dada la matriz $A \in \mathbb{R}^{3 \times 3}$,
 $$
 A =  
 \begin{pmatrix}  
@@ -33,7 +33,7 @@ b) Escribir $A^{-1}$ como combinación lineal de $A^2$, $A$ e $I$.
 
 ---
 
-3. Dados los números complejos $z = \sqrt{3} - i$ y $w = 3\left( \cos\left(\frac{\pi}{6}\right) + i \sin\left(\frac{\pi}{6}\right) \right)$, 
+1. Dados los números complejos $z = \sqrt{3} - i$ y $w = 3\left( \cos\left(\frac{\pi}{6}\right) + i \sin\left(\frac{\pi}{6}\right) \right)$, 
 
 a) Escribir la forma trigonométrica del número
 $$

@@ -8,7 +8,7 @@ Casos de Uso
 2.  ¿Qué alumnos sacaron un 8 ó más en algún parcial?  
 3. ¿Qué alumnos reprobaron al menos un parcial?  
 4. ¿Qué alumnos se llaman \<\<Nombre\>\>?  
-5. ¿Qué alumnos tiene algún nombre que incluya el string “\<\<String\>”?  
+5. ¿Qué alumnos tiene algún nombre que incluya el string "\<\<String\>"?  
 6. Para aquellos alumnos que tienen al menos una nota menor que 4, agregar una clave que indique que recursa.  
 7. ¿Qué alumnos recursan?
 

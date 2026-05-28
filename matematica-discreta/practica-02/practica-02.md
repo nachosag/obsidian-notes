@@ -628,7 +628,7 @@ Al añadir $y \ge 0$, transformamos la inecuación $\sum x_i \le 6$ en una igual
 
 - Si $\sum x_i = 6$, entonces $y=0$.
 - Si $\sum x_i = 5$, entonces $y=1$.
-- ...
+- …
 - Si $\sum x_i = 0$, entonces $y=6$.
 
 $y$ es la herramienta matemática que permite usar la fórmula de la igualdad para un problema de desigualdad.
@@ -916,17 +916,17 @@ Esta opción se centra en que, al fijar los tamaños, solo estamos creando "casi
 
 Si prefieres mantener la estructura matemática pero ahorrar espacio, puedes usar la definición de Permutación $P(n,k)$ en lugar de escribir Combinatoria y Factorial por separado.
 
->Existen 21 soluciones para los tamaños de las pilas. Para una solución fija $(x_1, x_2, x_3)$:
+> Existen 21 soluciones para los tamaños de las pilas. Para una solución fija $(x_1, x_2, x_3)$:
 > 
->1. Elegimos y ordenamos los libros de la Pila 1: $P(25, x_1)$ formas.
->2. Elegimos y ordenamos los libros de la Pila 2: $P(25-x_1, x_2)$ formas.
->3. Elegimos y ordenamos los libros de la Pila 3: $P(x_3, x_3)$ formas.
+> 1. Elegimos y ordenamos los libros de la Pila 1: $P(25, x_1)$ formas.
+> 2. Elegimos y ordenamos los libros de la Pila 2: $P(25-x_1, x_2)$ formas.
+> 3. Elegimos y ordenamos los libros de la Pila 3: $P(x_3, x_3)$ formas.
 > 
->Multiplicando:
->$$\frac{25!}{(25-x_1)!} \cdot \frac{(25-x_1)!}{(25-x_1-x_2)!} \cdot \frac{x_3!}{0!}$$
->Como $25-x_1-x_2 = x_3$, los términos se cancelan directamente resultando en $25!$.
+> Multiplicando:
+> $$\frac{25!}{(25-x_1)!} \cdot \frac{(25-x_1)!}{(25-x_1-x_2)!} \cdot \frac{x_3!}{0!}$$
+> Como $25-x_1-x_2 = x_3$, los términos se cancelan directamente resultando en $25!$.
 > 
->**Total:** $21 \times 25!$.
+> **Total:** $21 \times 25!$.
 
 # Ejercicio 28
 ![[Pasted image 20251214203859.png]]

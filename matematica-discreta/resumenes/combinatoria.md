@@ -6,16 +6,16 @@ El conteo no es simplemente enumerar, sino comprender la estructura de los conju
 
 ### 1.1 Principios Básicos
 
-**Definición (Partición):** Una colección $S_1, S_2, ..., S_m$ de subconjuntos de un conjunto finito $S$ constituye una partición si se cumplen dos condiciones estrictas:
+**Definición (Partición):** Una colección $S_1, S_2, …, S_m$ de subconjuntos de un conjunto finito $S$ constituye una partición si se cumplen dos condiciones estrictas:
 
-1. **Exhaustividad:** La unión de todos los subconjuntos recupera el conjunto original ($S = S_1 \cup S_2 \cup ... \cup S_m$).
+1. **Exhaustividad:** La unión de todos los subconjuntos recupera el conjunto original ($S = S_1 \cup S_2 \cup … \cup S_m$).
     
 2. **Disyunción:** Los subconjuntos son disjuntos dos a dos ($S_i \cap S_j = \emptyset$ para todo $i \neq j$).
     
 
-**Teorema 1 (Principio Aditivo):** Si un conjunto $S$ puede ser particionado en subconjuntos disjuntos $S_1, ..., S_m$, entonces el cardinal de $S$ es simplemente la suma de los cardinales de estos componentes.
+**Teorema 1 (Principio Aditivo):** Si un conjunto $S$ puede ser particionado en subconjuntos disjuntos $S_1, …, S_m$, entonces el cardinal de $S$ es simplemente la suma de los cardinales de estos componentes.
 
-$$|S| = |S_1| + |S_2| + ... + |S_m|$$
+$$|S| = |S_1| + |S_2| + … + |S_m|$$
 
 *Aplicación y Estrategia:* Este principio es la herramienta fundamental cuando un proceso de decisión se ramifica en **casos mutuamente excluyentes**. Por ejemplo, si debemos elegir un representante que puede ser estudiante o profesor (y nadie es ambas cosas a la vez), sumamos la cantidad de estudiantes más la cantidad de profesores. *Ejemplo:* Contar cuántos números naturales menores a 10 son múltiplos de 3 o terminan en 7 (se debe tener cuidado si los casos no son disjuntos, lo que llevaría al Principio de Inclusión-Exclusión).
 
@@ -25,14 +25,14 @@ $$|S| = |S_1| + |S_2| + ... + |S_m|$$
     
 - El paso 2 tiene $n_2$ opciones (asumiendo que el paso 1 ya ocurrió).
     
-- ...
+- …
     
 - El paso $k$ tiene $n_k$ opciones.
     
 
 Entonces el número total de formas de completar la tarea es el producto:
 
-$$N = n_1 \times n_2 \times ... \times n_k$$
+$$N = n_1 \times n_2 \times … \times n_k$$
 
 *Condición Crítica:* La **cantidad** de opciones disponibles en el paso $i$ no debe depender de la **elección específica** hecha en los pasos anteriores, aunque el conjunto de opciones sí pueda cambiar. Si la elección anterior cambia el *número* de opciones futuras, el principio simple no aplica directamente y se requiere un árbol de decisión. *Ejemplo clásico:* La formación de patentes o contraseñas donde cada posición se llena independientemente de las otras.
 
@@ -46,7 +46,7 @@ $$|A| = |U| - |\overline{A}|$$
 
 La sumatoria es una herramienta compacta para manejar sumas de series numéricas, vital en inducción y análisis de algoritmos.
 
-**Notación:** $\sum_{i=1}^{n} a_i = a_1 + a_2 + ... + a_n$. Aquí $i$ es el índice mudo de la suma.
+**Notación:** $\sum_{i=1}^{n} a_i = a_1 + a_2 + … + a_n$. Aquí $i$ es el índice mudo de la suma.
 
 **Propiedades de Linealidad:** Estas propiedades permiten manipular algebraicamente las sumas:
 
@@ -54,7 +54,7 @@ La sumatoria es una herramienta compacta para manejar sumas de series numéricas
     
 2. **Aditividad:** $\sum_{i=1}^{n} (a_i \pm b_i) = \sum_{i=1}^{n} a_i \pm \sum_{i=1}^{n} b_i$ (La suma de una suma es la suma de las sumas).
     
-3. **Suma de Constante:** $\sum_{i=1}^{n} c = \underbrace{c + c + ... + c}_{n \text{ veces}} = n \cdot c$.
+3. **Suma de Constante:** $\sum_{i=1}^{n} c = \underbrace{c + c + … + c}_{n \text{ veces}} = n \cdot c$.
     
 
 **Sumas Notables (Fórmulas Cerradas):** Es crucial memorizar estas identidades para simplificar expresiones en inducción:
@@ -76,7 +76,7 @@ Aquí distinguimos si el **orden** de los elementos importa (lineal) o no (grupo
 
 **Teorema (Fórmula de Permutaciones):** Se deriva del principio multiplicativo: tenemos $n$ opciones para el primer lugar, $n-1$ para el segundo, hasta $n-r+1$ para el lugar $r$.
 
-$$P(n,r) = n \times (n-1) \times ... \times (n-r+1) = \frac{n!}{(n-r)!}$$
+$$P(n,r) = n \times (n-1) \times … \times (n-r+1) = \frac{n!}{(n-r)!}$$
 
 *Caso particular:* Si ordenamos *todos* los elementos ($r=n$), obtenemos $P(n,n) = n!$. Esto representa todas las biyecciones de un conjunto en sí mismo.
 
@@ -117,11 +117,11 @@ $$P_{circ}(n) = \frac{n!}{n} = (n-1)!$$
 
 ### 2.4 Permutaciones con Repetición (Multiconjuntos)
 
-**Definición:** ¿Cómo ordenamos linealmente objetos si algunos son idénticos entre sí? Sea un multiconjunto con $k$ clases de objetos, con cardinalidades $n_1, n_2, ..., n_k$ tal que el total es $n = \sum n_i$.
+**Definición:** ¿Cómo ordenamos linealmente objetos si algunos son idénticos entre sí? Sea un multiconjunto con $k$ clases de objetos, con cardinalidades $n_1, n_2, …, n_k$ tal que el total es $n = \sum n_i$.
 
 **Teorema:** Si todos fueran distintos tendríamos $n!$ ordenamientos. Pero como las permutaciones entre elementos idénticos no generan nuevos arreglos visuales, debemos dividir por las sobre-conteo de cada grupo ($n_i!$).
 
-$$P_{rep} = \frac{n!}{n_1! \cdot n_2! \cdot ... \cdot n_k!}$$
+$$P_{rep} = \frac{n!}{n_1! \cdot n_2! \cdot … \cdot n_k!}$$
 
 *Ejemplo clásico:* Anagramas de la palabra MISSISSIPPI.
 
@@ -163,9 +163,9 @@ $$\binom{n}{k} = \binom{n-1}{k-1} + \binom{n-1}{k}$$
 
 **Teorema:** La suma de todos los números combinatorios de orden $n$ es $2^n$.
 
-$$\sum_{k=0}^{n} \binom{n}{k} = \binom{n}{0} + \binom{n}{1} + ... + \binom{n}{n} = 2^n$$
+$$\sum_{k=0}^{n} \binom{n}{k} = \binom{n}{0} + \binom{n}{1} + … + \binom{n}{n} = 2^n$$
 
-*Interpretación:* El lado izquierdo cuenta los subconjuntos de tamaño 0, de tamaño 1, ..., hasta tamaño $n$. La suma es el total de subconjuntos posibles de un conjunto $S$. Alternativamente, por cada elemento tenemos 2 opciones (estar o no estar en el subconjunto), lo que da $2 \times 2 \times ... \times 2 = 2^n$ configuraciones.
+*Interpretación:* El lado izquierdo cuenta los subconjuntos de tamaño 0, de tamaño 1, …, hasta tamaño $n$. La suma es el total de subconjuntos posibles de un conjunto $S$. Alternativamente, por cada elemento tenemos 2 opciones (estar o no estar en el subconjunto), lo que da $2 \times 2 \times … \times 2 = 2^n$ configuraciones.
 
 ### 3.3 Binomio de Newton
 
@@ -183,9 +183,9 @@ Generalización para la potencia de una suma de $t$ variables.
 
 **Teorema:**
 
-$$(x_1 + x_2 + ... + x_t)^n = \sum_{n_1+...+n_t=n} \frac{n!}{n_1! n_2! ... n_t!} x_1^{n_1} x_2^{n_2} ... x_t^{n_t}$$
+$$(x_1 + x_2 + … + x_t)^n = \sum_{n_1+…+n_t=n} \frac{n!}{n_1! n_2! … n_t!} x_1^{n_1} x_2^{n_2} … x_t^{n_t}$$
 
-*Interpretación:* Para obtener el término $x_1^{n_1}...x_t^{n_t}$, debemos elegir $x_1$ en $n_1$ paréntesis, $x_2$ en $n_2$ paréntesis, etc. Esto equivale a contar los anagramas de una palabra con esas letras.
+*Interpretación:* Para obtener el término $x_1^{n_1}…x_t^{n_t}$, debemos elegir $x_1$ en $n_1$ paréntesis, $x_2$ en $n_2$ paréntesis, etc. Esto equivale a contar los anagramas de una palabra con esas letras.
 
 ## 4. Ecuaciones Lineales y Combinaciones con Repetición
 
@@ -193,7 +193,7 @@ $$(x_1 + x_2 + ... + x_t)^n = \sum_{n_1+...+n_t=n} \frac{n!}{n_1! n_2! ... n_t!}
 
 Buscamos determinar la cantidad de soluciones enteras para la ecuación lineal:
 
-$$x_1 + x_2 + ... + x_k = m$$
+$$x_1 + x_2 + … + x_k = m$$
 
 Donde $m$ es una constante entera. Las restricciones sobre las variables $x_i$ determinan el método a usar.
 
@@ -234,7 +234,7 @@ Si cada variable tiene un mínimo específico distinto ($x_1 \ge 2, x_2 \ge 5$, 
     
 2. Como $x_i \ge c_i$, entonces $y_i \ge 0$. Esto transforma el problema al caso base.
     
-3. Sustituimos $x_i = y_i + c_i$ en la ecuación original: $(y_1 + c_1) + ... + (y_k + c_k) = m$ $\sum y_i = m - (c_1 + ... + c_k)$
+3. Sustituimos $x_i = y_i + c_i$ en la ecuación original: $(y_1 + c_1) + … + (y_k + c_k) = m$ $\sum y_i = m - (c_1 + … + c_k)$
     
 4. El nuevo total a repartir es $m_{nuevo} = m - \sum c_i$.
     
@@ -251,7 +251,7 @@ El PIE es una técnica para contar el tamaño de la unión de conjuntos que se s
 
 **Teorema (Para** $k$ **conjuntos/propiedades):**
 
-$$|A_1 \cup ... \cup A_k| = \sum |A_i| - \sum |A_i \cap A_j| + \sum |A_i \cap A_j \cap A_l| - ... + (-1)^{k-1} |\cap A_i|$$
+$$|A_1 \cup … \cup A_k| = \sum |A_i| - \sum |A_i \cap A_j| + \sum |A_i \cap A_j \cap A_l| - … + (-1)^{k-1} |\cap A_i|$$
 
 ### 5.2 Forma Complementaria (Ninguna Propiedad)
 
@@ -259,7 +259,7 @@ En combinatoria, a menudo es más fácil definir "propiedades malas" (ej. restri
 
 **Fórmula:**
 
-$$N(\text{ninguna}) = |S| - (\text{elementos con al menos una propiedad})$$$$N(\text{ninguna}) = |S| - \sum |A_i| + \sum |A_i \cap A_j| - ... + (-1)^k |A_1 \cap ... \cap A_k|$$
+$$N(\text{ninguna}) = |S| - (\text{elementos con al menos una propiedad})$$$$N(\text{ninguna}) = |S| - \sum |A_i| + \sum |A_i \cap A_j| - … + (-1)^k |A_1 \cap … \cap A_k|$$
 
 Donde $|S|$ es el conjunto universal total (sin restricciones)..
 
@@ -289,7 +289,7 @@ $$N = n(r-1) + 1$$
 
 ### 6.3 Formulación de Promedios
 
-Si el promedio de $n$ números no negativos $a_1, ..., a_n$ es mayor que $r-1$:
+Si el promedio de $n$ números no negativos $a_1, …, a_n$ es mayor que $r-1$:
 
 $$\frac{\sum a_i}{n} > r-1$$
 

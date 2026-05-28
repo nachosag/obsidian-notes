@@ -20,5 +20,5 @@
 - **Bases Ortonormales**:
     - Un conjunto de vectores es ortogonal si todos los pares de vectores distintos del conjunto son perpendiculares.
     - Un conjunto es ortonormal si es ortogonal y todos sus vectores son unitarios (tienen longitud 1).
-    - Todo vector `b` puede expresarse como la suma de sus proyecciones sobre las rectas que pasan por los vectores de una base ortonormal `{qᵢ}`: `b = (q₁ᵀb)q₁ + (q₂ᵀb)q₂ + ... + (qₙᵀb)qₙ`
+    - Todo vector `b` puede expresarse como la suma de sus proyecciones sobre las rectas que pasan por los vectores de una base ortonormal `{qᵢ}`: `b = (q₁ᵀb)q₁ + (q₂ᵀb)q₂ + … + (qₙᵀb)qₙ`
 - **Proceso de Ortogonalización de Gram-Schmidt**: Permite construir una base ortonormal `{qᵢ}` a partir de cualquier base dada `{aᵢ}`.

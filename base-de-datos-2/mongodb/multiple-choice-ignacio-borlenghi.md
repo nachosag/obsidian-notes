@@ -1,81 +1,81 @@
 Elegir la o las respuestas que considera más convenientes:
 
 1. Motivos que ayudaron al desarrollo y surgimiento de las bases de datos NoSQL:  
-	* [ ] Redes más rápidas  
-	* [ ] Aparición de las redes sociales  
-	* [ ] Equipos computacionales más rápidos  
-	* [ ] Crecimiento y masificación de los smartphones
+	- [ ] Redes más rápidas  
+	- [ ] Aparición de las redes sociales  
+	- [ ] Equipos computacionales más rápidos  
+	- [ ] Crecimiento y masificación de los smartphones
 
 2. Copiar los datos (altas/bajas/modificaciones) desde una base de datos (origen) a otra base de datos (destino) automáticamente se conoce como:  
-	* [ ] Backup  
-	* [ ] Replicación  
-	* [ ] Sharding  
-	* [ ] Scripting
+	- [ ] Backup  
+	- [ ] Replicación  
+	- [ ] Sharding  
+	- [ ] Scripting
 
 3. El teorema de CAP tiene en cuenta:  
-* [ ] Contingencia, aislamiento y Redundancia.  
-* [ ] Consistencia, Atomicidad y Procesamiento  
-* [ ] Atomicidad, Consistencia, Aislamiento y Duración  
-* [ ] Disponibilidad, Consistencia y Tolerancia a la partición
+- [ ] Contingencia, aislamiento y Redundancia.  
+- [ ] Consistencia, Atomicidad y Procesamiento  
+- [ ] Atomicidad, Consistencia, Aislamiento y Duración  
+- [ ] Disponibilidad, Consistencia y Tolerancia a la partición
 
-4. Paradigmas de base de datos son:  
-	* [ ] Relacional  
-	* [ ] NoSQL  
-	* [ ] Orientado a Eventos  
-	* [ ] Orientado a Objetos
+1. Paradigmas de base de datos son:  
+	- [ ] Relacional  
+	- [ ] NoSQL  
+	- [ ] Orientado a Eventos  
+	- [ ] Orientado a Objetos
 
-5. Persistencia políglota hace referencia a:  
-	* [ ] Se refiere al tipo de filesystem que utiliza cada modelo de BD.  
-	* [ ] Se refiere a la posibilidad de usar más de un modelo o tecnología de BD (en una solución).  
-	* [ ] Se refiere a los diferentes tipo de BD.  
-	* [ ] Se refiere a los diferentes paradigmas de BD.
+2. Persistencia políglota hace referencia a:  
+	- [ ] Se refiere al tipo de filesystem que utiliza cada modelo de BD.  
+	- [ ] Se refiere a la posibilidad de usar más de un modelo o tecnología de BD (en una solución).  
+	- [ ] Se refiere a los diferentes tipo de BD.  
+	- [ ] Se refiere a los diferentes paradigmas de BD.
 
-6. Modelos de distribución de datos son:  
-	* [ ] Cloud Computing  
-	* [ ] Big Data  
-	* [ ] Sharding  
-	* [ ] Replicación
+3. Modelos de distribución de datos son:  
+	- [ ] Cloud Computing  
+	- [ ] Big Data  
+	- [ ] Sharding  
+	- [ ] Replicación
 
-7. Características de las bases de datos NoSQL  
-	* [ ] Persistencia de datos  
-	* [ ] Se ejecuta en commodities servers.  
-	* [ ] Joins se ejecutan más rápidamente.  
-	* [ ] Las tablas pueden ser infinitas columnas.
-
-
-8. Tecnologías de base de datos NoSQL son:  
-	* [ ] Redis  
-	* [ ] PostgreSQL High Availability  
-	* [ ] MongoDB  
-	* [ ] MySQL
+4. Características de las bases de datos NoSQL  
+	- [ ] Persistencia de datos  
+	- [ ] Se ejecuta en commodities servers.  
+	- [ ] Joins se ejecutan más rápidamente.  
+	- [ ] Las tablas pueden ser infinitas columnas.
 
 
-9. “Vamos a agregar más memoria y procesadores más rápidos a nuestros equipos de base de datos”. Es un ejemplo de:  
-	* [ ] Flexibilidad  
-	* [ ] Escalabilidad Horizontal  
-	* [ ] Escalabilidad Vertical  
-	* [ ] Mantenibilidad
+5. Tecnologías de base de datos NoSQL son:  
+	- [ ] Redis  
+	- [ ] PostgreSQL High Availability  
+	- [ ] MongoDB  
+	- [ ] MySQL
 
 
-10. Motivaciones para elegir una base de datos NoSQL  
-	* [ ] Escalabilidad  
-	* [ ] Rendimiento o performance  
-	* [ ] Disponibilidad  
-	* [ ] Mantenibilidad
+6. "Vamos a agregar más memoria y procesadores más rápidos a nuestros equipos de base de datos". Es un ejemplo de:  
+	- [ ] Flexibilidad  
+	- [ ] Escalabilidad Horizontal  
+	- [ ] Escalabilidad Vertical  
+	- [ ] Mantenibilidad
 
 
-11. ¿Qué significa el concepto de taxonomía de las bases de datos?  
-	* [ ] Se refiere al tipo de filesystem que utiliza cada modelo de BD.  
-	* [ ] Se refiere a la posibilidad de usar más de un modelo o tecnología de BD (en una solución).  
-	* [ ] Se refiere a los diferentes tipo de BD.  
-	* [ ] Se refiere a los diferentes paradigmas de BD.
+7. Motivaciones para elegir una base de datos NoSQL  
+	- [ ] Escalabilidad  
+	- [ ] Rendimiento o performance  
+	- [ ] Disponibilidad  
+	- [ ] Mantenibilidad
 
 
-12. La técnica para gestionar (balancear de alguna manera) la carga de los datos entre tres servidores se denomina:   
-	* [ ] Backup  
-	* [ ] Replicación  
-	* [ ] Sharding  
-	* [ ] Scripting
+8. ¿Qué significa el concepto de taxonomía de las bases de datos?  
+	- [ ] Se refiere al tipo de filesystem que utiliza cada modelo de BD.  
+	- [ ] Se refiere a la posibilidad de usar más de un modelo o tecnología de BD (en una solución).  
+	- [ ] Se refiere a los diferentes tipo de BD.  
+	- [ ] Se refiere a los diferentes paradigmas de BD.
+
+
+9. La técnica para gestionar (balancear de alguna manera) la carga de los datos entre tres servidores se denomina:   
+	- [ ] Backup  
+	- [ ] Replicación  
+	- [ ] Sharding  
+	- [ ] Scripting
 
 Responder únicamente Verdadero o Falso según corresponda. Puede justificar en no más de 3 renglones:
 

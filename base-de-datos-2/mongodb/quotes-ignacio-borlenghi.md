@@ -14,61 +14,61 @@ Una base de datos contiene información sobre empresas que cotizan en bolsa.
 
 ## Ejercicios
 
-1. ¿Qué empresas pertenecen al rubro “Energía Renovable”?
+1. ¿Qué empresas pertenecen al rubro "Energía Renovable"?
 
 ```javascript
 
 ```
 
-2. ¿Qué empresas tienen una cotización con precio de cierre mayor a 33?
+1. ¿Qué empresas tienen una cotización con precio de cierre mayor a 33?
 
 ```javascript
 
 ```
 
-3. ¿Qué empresas tienen una cotización donde el precio de cierre fue menor al de apertura?
+1. ¿Qué empresas tienen una cotización donde el precio de cierre fue menor al de apertura?
 
 ```javascript
 
 ```
 
-4. ¿Qué empresas tienen sede en “Buenos Aires” o “CABA”?
+1. ¿Qué empresas tienen sede en "Buenos Aires" o "CABA"?
 
 ```javascript
 
 ```
 
-4. ¿Qué empresas tienen al menos una cotización el día “2025-05-15”?
+1. ¿Qué empresas tienen al menos una cotización el día "2025-05-15"?
 
 ```javascript
 
 ```
 
-4. ¿Qué empresas están marcadas como activas?
+1. ¿Qué empresas están marcadas como activas?
 
 ```javascript
 
 ```
 
-4. ¿Qué empresas no tienen definido el campo activo?
+1. ¿Qué empresas no tienen definido el campo activo?
 
 ```javascript
 
 ```
 
-4. Marcar como inactiva a las empresas con cotizaciones cuyo cierre sea menor a $1.
+1. Marcar como inactiva a las empresas con cotizaciones cuyo cierre sea menor a $1.
 
 ```javascript
 
 ```
 
-4. Eliminar el campo activa a empresas que ya no operan en Argentina.
+1. Eliminar el campo activa a empresas que ya no operan en Argentina.
 
 ```javascript
 
 ```
 
-4. Buscar empresas activas y con cierre mayor a 30 en alguna cotización.
+1. Buscar empresas activas y con cierre mayor a 30 en alguna cotización.
 
 ```javascript
 

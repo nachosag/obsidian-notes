@@ -45,7 +45,7 @@ El análisis se divide en tres casos posibles:
 - **Condición:** `rg(A) < rg(A')`
 - **Conclusión:** El sistema **no tiene solución**.
 
-**Explicación:** Si el rango de la matriz ampliada es mayor que el de la matriz de coeficientes, significa que durante la eliminación gaussiana aparece una fila de la forma `(0 0 ... 0 | k)` donde `k` es un número distinto de cero. Esto se traduce en una ecuación inconsistente del tipo `0 = k`, una contradicción matemática.
+**Explicación:** Si el rango de la matriz ampliada es mayor que el de la matriz de coeficientes, significa que durante la eliminación gaussiana aparece una fila de la forma `(0 0 … 0 | k)` donde `k` es un número distinto de cero. Esto se traduce en una ecuación inconsistente del tipo `0 = k`, una contradicción matemática.
 
 **Interpretación Geométrica:** Cada ecuación lineal representa un hiperplano. En dos dimensiones (*n*=2), son rectas; en tres dimensiones (*n*=3), son planos. Un sistema incompatible corresponde a figuras geométricas que no tienen ningún punto en común. Por ejemplo, en dos dimensiones, serían dos rectas paralelas que nunca se cortan. En tres dimensiones, podrían ser planos paralelos o planos que se cortan dos a dos formando un prisma triangular sin un punto de intersección común.
 

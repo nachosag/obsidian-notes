@@ -190,7 +190,7 @@ $$
 \alpha=0
 \end{gather}
 $$ 
-2. Sustituimos $\alpha=0$ en $\alpha+\beta=0$. Esto nos da $\beta=0$:
+5. Sustituimos $\alpha=0$ en $\alpha+\beta=0$. Esto nos da $\beta=0$:
 Hemos obtenido $\alpha=\beta=0$ como única solución. Por lo tanto $v_{1}$ y $v_{2}$ son linealmente independientes.
 <mark style="background: #FFB8EBA6;">ii)</mark>
 Queremos determinar si el conjunto $C=\{ (1,1),(1,-1),(2,-1) \}$ es l.i.
