@@ -44,14 +44,14 @@ Se deberá justificar brevemente la decisión de modelado elegida.
 # **Casos De uso**
 
 1. ¿Qué libros pertenecen al género "Ciencia Ficción"?  
-1. ¿Qué socios tienen al menos un préstamo activo?  
-1. Listar los libros publicados entre 1990 y 2010\.  
-1. ¿Qué autores distintos figuran en la biblioteca?  
-1. ¿Qué socios tienen préstamos con multa aplicada?  
-1. Marcar como morosos a los socios que tengan al menos un préstamo con multa aplicada.  
-1. Eliminar el campo "observaciones" cuando esté vacío.  
-1. ¿Qué libros fueron prestados al menos una vez?  
-1. Obtener los socios que hayan retirado libros del género "Ciencia Ficción".
+2. ¿Qué socios tienen al menos un préstamo activo?  
+3. Listar los libros publicados entre 1990 y 2010\.  
+4. ¿Qué autores distintos figuran en la biblioteca?  
+5. ¿Qué socios tienen préstamos con multa aplicada?  
+6. Marcar como morosos a los socios que tengan al menos un préstamo con multa aplicada.  
+7. Eliminar el campo "observaciones" cuando esté vacío.  
+8. ¿Qué libros fueron prestados al menos una vez?  
+9. Obtener los socios que hayan retirado libros del género "Ciencia Ficción".
 
 ## **Requerimientos adicionales**
 

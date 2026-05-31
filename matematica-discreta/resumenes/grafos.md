@@ -120,7 +120,7 @@ Este es un problema NP-difícil en general, pero en ejercicios manuales usamos c
         
     - *Redacción:* "Por inspección, encontramos el conjunto $I = \{v_1, v_3, v_8\}$. Verificamos que no existen aristas entre ellos. Como $|I|=3$, entonces $\alpha(G) \ge 3$".
         
-1. **Establecer Cota Superior (**$\alpha(G) \le x$**):**
+2. **Establecer Cota Superior (**$\alpha(G) \le x$**):**
     
     - Usa el **Recubrimiento por Cliques/Subgrafos**. Si puedes dividir todos los vértices del grafo en $k$ subgrafos (cliques, ciclos impares, caminos), la suma de los $\alpha$ de esos subgrafos es una cota superior.
         
@@ -128,14 +128,14 @@ Este es un problema NP-difícil en general, pero en ejercicios manuales usamos c
         
     - Fórmula: $V(G) = V(H_1) \cup \dots \cup V(H_k) \implies \alpha(G) \le \sum \alpha(H_i)$.
         
-1. **Cierre:** Si logras que la cota inferior sea igual a la superior (ej. $3 \le \alpha(G) \le 3$), has demostrado el valor exacto.
+3. **Cierre:** Si logras que la cota inferior sea igual a la superior (ej. $3 \le \alpha(G) \le 3$), has demostrado el valor exacto.
     
 
 #### B. Estrategia para hallar la clique máxima ($\omega(G)$)
 
 1. **Cota Inferior (**$\omega(G) \ge x$**):** Identifica visualmente la estructura "todos con todos" más grande (ej. un tetraedro dibujado es un $K_4$).
     
-1. **Refutación por Grados (Cota Superior):**
+2. **Refutación por Grados (Cota Superior):**
     
     - Para que exista un $K_{x+1}$, necesitas al menos $x+1$ vértices que tengan, *cada uno*, grado $\ge x$.
         
@@ -143,7 +143,7 @@ Este es un problema NP-difícil en general, pero en ejercicios manuales usamos c
         
     - *Ejemplo:* Para buscar un $K_4$ ($\omega=4$), necesitas al menos 4 vértices con grado $\ge 3$. Si solo tienes 2 vértices con grado 3, entonces $\omega(G) < 4$.
         
-1. **Análisis de Vecindad (Refinamiento):**
+3. **Análisis de Vecindad (Refinamiento):**
     
     - Si *sí* tienes suficientes vértices con el grado adecuado, no garantiza la clique. Debes verificar si esos candidatos específicos se conectan entre sí.
         
@@ -160,9 +160,9 @@ El complemento es el "negativo" del grafo.
     
     1. Mantén los mismos vértices.
         
-    1. Si existía una arista entre $u$ y $v$ en $G$, **bórrala**.
+    2. Si existía una arista entre $u$ y $v$ en $G$, **bórrala**.
         
-    1. Si **no** existía arista entre $u$ y $v$ en $G$, **dibújala**.
+    3. Si **no** existía arista entre $u$ y $v$ en $G$, **dibújala**.
         
 - **Propiedades Clave:**
     
@@ -221,7 +221,7 @@ El problema del isomorfismo de grafos no tiene solución polinomial simple conoc
         
     - **Subestructuras:** Si $G$ tiene un ciclo de longitud 3 (triángulo) y $H$ no, no son isomorfos. Si $G$ tiene 2 vértices de grado 4 vecinos entre sí, y en $H$ los vértices de grado 4 no son vecinos, no son isomorfos.
         
-1. **Fase 2: La Prueba del Isomorfismo (Confirmación)** Si pasan los filtros, debes construir la función $f$.
+2. **Fase 2: La Prueba del Isomorfismo (Confirmación)** Si pasan los filtros, debes construir la función $f$.
     
     - **Etiquetado Inteligente:** Asigna las etiquetas basándote en características únicas. "El vértice $u$ en $G$ es el único de grado 5 conectado a un triángulo. En $H$, el único que cumple esto es $x$. Por tanto, $f(u)=x$".
         
@@ -257,7 +257,7 @@ Descomponer un grafo significa dividir sus aristas en grupos disjuntos que forme
         
     - Verifica: $|E(G)|$ debe ser múltiplo de $|E(H)|$. Si $|E(G)|=10$ y queremos descomponer en triángulos ($|E|=3$), es imposible ($10 \nmid 3$).
         
-1. **Condición de Grados (Vértices Impares):**
+2. **Condición de Grados (Vértices Impares):**
     
     - *Principio:* En una descomposición, el grado de un vértice $v$ en $G$ es la suma de sus grados en cada copia $H_i$.
         
@@ -269,7 +269,7 @@ Descomponer un grafo significa dividir sus aristas en grupos disjuntos que forme
         
     - El grafo original $G$ debe tener capacidad para absorber estos grados impares. Si $G$ tiene demasiados vértices de grado impar, puede fallar.
         
-1. **Exploración Constructiva:**
+3. **Exploración Constructiva:**
     
     - Usa lápices de colores. Marca una copia del subgrafo y "gasta" esas aristas. Repite con las aristas restantes (no aristas originales).
         
@@ -375,15 +375,15 @@ Para verificar manualmente si es bipartito:
 
 1. Elige un vértice arbitrario $v$ y asígnale el "Grupo A".
     
-1. Todos los vecinos de $v$ **deben** ir al "Grupo B".
+2. Todos los vecinos de $v$ **deben** ir al "Grupo B".
     
-1. Todos los vecinos del "Grupo B" **deben** ir al "Grupo A".
+3. Todos los vecinos del "Grupo B" **deben** ir al "Grupo A".
     
-1. Continúa expandiendo (BFS/DFS).
+4. Continúa expandiendo (BFS/DFS).
     
-1. **Conflicto:** Si en algún momento encuentras dos vértices asignados al mismo grupo que están conectados por una arista, has encontrado un ciclo impar. El grafo **NO** es bipartito.
+5. **Conflicto:** Si en algún momento encuentras dos vértices asignados al mismo grupo que están conectados por una arista, has encontrado un ciclo impar. El grafo **NO** es bipartito.
     
-1. **Éxito:** Si terminas de asignar todos los vértices sin conflictos, los grupos A y B son la bipartición buscada.
+6. **Éxito:** Si terminas de asignar todos los vértices sin conflictos, los grupos A y B son la bipartición buscada.
     
 
 ## 8. Grafos Eulerianos
@@ -409,7 +409,7 @@ El problema de los puentes de Königsberg dio origen a este campo.
         
     - *Por qué:* Cada vez que entras a un vértice por una arista, debes salir por otra. Las aristas vienen en pares de entrada/salida.
         
-1. **Para Camino Euleriano:**
+2. **Para Camino Euleriano:**
     
     - Condición 1: El grafo debe ser conexo.
         
@@ -424,9 +424,9 @@ Si necesitas *encontrar* el recorrido:
 
 1. Empieza en un vértice válido (cualquiera si todos son pares; uno impar si hay dos impares).
     
-1. Cruza una arista adyacente y bórrala (mentalmente).
+2. Cruza una arista adyacente y bórrala (mentalmente).
     
-1. **Regla de Oro:** No cruces un puente (arista de corte) a menos que no haya otra opción. Si cruzas un puente prematuramente, te quedarás aislado en una parte del grafo sin poder volver a recorrer el resto de aristas.
+3. **Regla de Oro:** No cruces un puente (arista de corte) a menos que no haya otra opción. Si cruzas un puente prematuramente, te quedarás aislado en una parte del grafo sin poder volver a recorrer el resto de aristas.
     
 
 ## 9. Grafos Planares
@@ -456,7 +456,7 @@ La relación $v - e + f = 2$ es una de las joyas de la geometría combinatoria.
             
         - *Advertencia:* Si cumple la desigualdad, **no** garantiza que sea planar. Es condición necesaria, no suficiente.
             
-    1. **Sin Triángulos:** Si el grafo no tiene ciclos de longitud 3 (ej. bipartitos), la cota es más estricta:
+    2. **Sin Triángulos:** Si el grafo no tiene ciclos de longitud 3 (ej. bipartitos), la cota es más estricta:
         
         - $|E| \le 2|V| - 4$.
             
@@ -499,9 +499,9 @@ Si el grafo parece "enmarañado", intenta encontrar los culpables ($K_{3,3}$ o $
 
 1. Busca vértices de grado $\ge 3$. Necesitas al menos 6.
     
-1. Intenta dividir esos vértices en dos grupos de 3 ($X$ e $Y$).
+2. Intenta dividir esos vértices en dos grupos de 3 ($X$ e $Y$).
     
-1. Verifica si existen caminos disjuntos entre todos los miembros de $X$ y todos los de $Y$.
+3. Verifica si existen caminos disjuntos entre todos los miembros de $X$ y todos los de $Y$.
     
     - *Pista Visual:* A menudo el $K_{3,3}$ está camuflado como un hexágono con diagonales o una escalera cruzada.
         
@@ -510,7 +510,7 @@ Si el grafo parece "enmarañado", intenta encontrar los culpables ($K_{3,3}$ o $
 
 1. Busca vértices de grado $\ge 4$. Necesitas al menos 5.
     
-1. Verifica conectividad total entre ellos. Es menos común en ejercicios que el $K_{3,3}$ porque requiere alta densidad de aristas.
+2. Verifica conectividad total entre ellos. Es menos común en ejercicios que el $K_{3,3}$ porque requiere alta densidad de aristas.
     
 
 #### Paso 3: Método de Contracción (Wagner) - Herramienta de Potencia
@@ -519,8 +519,8 @@ A veces es difícil ver la subdivisión, pero fácil ver la contracción.
 
 1. Identifica vértices que "sobran" o molestan.
     
-1. Contrae aristas incidentes a vértices de grado bajo para fusionarlos con nodos principales.
+2. Contrae aristas incidentes a vértices de grado bajo para fusionarlos con nodos principales.
     
-1. Si tras varias contracciones obtienes un $K_5$ o $K_{3,3}$ explícito, el grafo original **NO** era planar.
+3. Si tras varias contracciones obtienes un $K_5$ o $K_{3,3}$ explícito, el grafo original **NO** era planar.
     
     - *Ejemplo Clásico:* El Grafo de Petersen. Es difícil ver la subdivisión de $K_{3,3}$ a simple vista, pero contrayendo las aristas que conectan el pentágono exterior con la estrella interior, se revela instantáneamente un $K_5$. Por tanto, Petersen no es planar.

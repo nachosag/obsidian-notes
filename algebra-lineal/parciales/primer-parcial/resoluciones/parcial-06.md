@@ -54,8 +54,8 @@ $$
 <mark style="background: #FFB8EBA6;">(b)</mark>
 Nos piden buscar una recta $L_{1}$ que cumpla las siguientes tres condiciones
 1. $L_{1}$ esté incluida en $\pi$.
-1. $L_{1}$ sea perpendicular a $L$.
-1. $L_{1}$ pase por el punto $P=(4,-1,-4)$.
+2. $L_{1}$ sea perpendicular a $L$.
+3. $L_{1}$ pase por el punto $P=(4,-1,-4)$.
 
 Para que se cumpla la condición 1 y 2 tiene que suceder lo siguiente
 - El vector director $v_{1}$ de $L_{1}$ tiene que ser perpendicular al vector normal $n_{\pi}=(2,-2,1)$ del plano $\pi$.
@@ -379,9 +379,9 @@ Luego, el sistema $(3A^{t}B-3A^{t})X=\vec{0}$ tiene infinitas soluciones con $k\
 ![[Pasted image 20251114003504.png]]
 Este es el procedimiento a seguir:
 1. Buscamos una base para $H$ y determinamos su dimensión.
-1. Buscamos una base para $T$ y determinamos su dimensión.
-1. Hallar la intersección $H\cap T$.
-1. Usar el Teorema de la Dimensión para determinar si $H+T$ es suma directa.
+2. Buscamos una base para $T$ y determinamos su dimensión.
+3. Hallar la intersección $H\cap T$.
+4. Usar el Teorema de la Dimensión para determinar si $H+T$ es suma directa.
 
 Buscamos una base para $H$ y $dim(H)$.
 
@@ -429,7 +429,7 @@ Luego, $dim(B)=2$.
 <mark style="background: #FFB8EBA6;">(b)</mark>
 Para que un vector $v$ esté en $H\cap T$ se deben cumplir dos condiciones
 1. $v$ debe estar en $T$, es decir, $v$ es una combinación lineal de $w_{1}$ y $w_{2}$.
-1. $v$ debe estar en $H$, es decir, $v$ debe satisfacer las ecuaciones de $H$.
+2. $v$ debe estar en $H$, es decir, $v$ debe satisfacer las ecuaciones de $H$.
 
 Podemos escribir un vector genérico $v\in T$ como
 $$

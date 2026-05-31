@@ -27,11 +27,11 @@ Una base de datos contiene información sobre empresas que cotizan en bolsa.
 ```
 
 1. ¿Qué empresas tienen una cotización donde el precio de cierre fue menor al de apertura?
-
+	
 ```javascript
 
 ```
-
+	
 1. ¿Qué empresas tienen sede en "Buenos Aires" o "CABA"?
 
 ```javascript

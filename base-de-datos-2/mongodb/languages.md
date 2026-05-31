@@ -14,13 +14,13 @@ Un instituto de idiomas dicta **cursos** de Inglés, Francés, Alemán y Portugu
 ## Diseño de la colección `courses`
 
 ```typescript
-export type Exam = {
+type Exam = {
   date: Date
   score: number
   modality: 'presential' | 'virtual'
 }
 
-export type Student = {
+type Student = {
   fullName: string
   dni: string
   email?: string
@@ -28,7 +28,7 @@ export type Student = {
   isRecoursing: boolean
 }
 
-export type Course = {
+type Course = {
   language: 'English' | 'French' | 'German' | 'Portuguese'
   level: 'Initial' | 'Intermediate' | 'Advanced'
   professor: string

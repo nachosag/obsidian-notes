@@ -39,18 +39,18 @@ P_{n}=\{P(x)=a_{0}+a_{1}x+\dots+a_{n}x^n\quad:a_{i}\in \mathbb{R}\}.
 $$
 Probar que $P_{n}$ es espacio vectorial real:
 1. **No vacío (existe el cero)**: El polinomio cero $0(x)=0$ (todos los coeficientes cero) pertenece a $P_{n}$.
-1. **Cerrado por suma**:
+2. **Cerrado por suma**:
    Sean $$
 p(x)=\sum_{k=0}^n a_{k}x^k, \qquad q(x)=\sum_{k=0}^n b_{k}x^k
 $$ Entonces $$
 p(x)+q(x)=\sum_{k=0}^n (a_{k}+b_{k})x^k,
 $$ y cada coeficiente $a_{k}+b_{k} \in \mathbb{R}$. Además el grado máximo no supera $n$. Luego $p+q \in P_{n}$.
  porque $\lambda a_{k} \in \mathbb{R}$ y el grado sigue siendo $\leq n$.
-1. **Cerrado por producto escalar**:
+3. **Cerrado por producto escalar**:
    Para $\lambda \in \mathbb{R}$, $$
 \lambda p(x)=\sum _{k=0}^n (\lambda a_{k})x^k \in P_{n},
 $$ porque $\lambda a_{k} \in \mathbb{R}$ y el grado sigue siendo $\leq n$.
-1. Axiomas
+4. Axiomas
    Las propiedades (asociatividad, conmutatividad de la suma, existencia de inverso, distributividad, etc.) se comprueban coeficiente por coeficiente usando las propiedades de $\mathbb{R}$. Por ejemplo
    **inverso aditivo**: $-p(x)=\sum_{k=0}(-a_{k})x^k\quad$y$\quad p+(-p)=0$.
    **distributividad**:$$
@@ -190,7 +190,7 @@ $$
 \alpha=0
 \end{gather}
 $$ 
-1. Sustituimos $\alpha=0$ en $\alpha+\beta=0$. Esto nos da $\beta=0$:
+5. Sustituimos $\alpha=0$ en $\alpha+\beta=0$. Esto nos da $\beta=0$:
 Hemos obtenido $\alpha=\beta=0$ como única solución. Por lo tanto $v_{1}$ y $v_{2}$ son linealmente independientes.
 <mark style="background: #FFB8EBA6;">ii)</mark>
 Queremos determinar si el conjunto $C=\{ (1,1),(1,-1),(2,-1) \}$ es l.i.
@@ -887,7 +887,7 @@ El primer paso para comparar dos subespacios dados por generadores es determinar
 1. Calculamos la dimensión de $S$.
 Son $v_{1}=(1,-1,1),\quad v_{2}=(2,0,1)$ l.i.? si, porque no son múltiplos entre sí.
 Como $S$ está generado por dos vectores l.i., su base es $B_{S}=\{ (1,-1,1),(2,0,1) \}$ y su dimensión es $dim(S)=2$.
-1. Calculamos la dimensión de $T$.
+2. Calculamos la dimensión de $T$.
 Son $w_{1}=(4,-2,3),\quad w_{2}=(7,-3,5)$ l.i.? si, porque no son múltiplos entre sí.
 Como $T$ está generado por vectores l.i., su base es $B_{T}=\{ (4,-2,3),(7,-3,5) \}$ y su dimensión es $dim(T)=2$.
 

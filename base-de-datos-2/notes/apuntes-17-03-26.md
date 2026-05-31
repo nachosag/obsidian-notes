@@ -53,8 +53,8 @@ Para llevar las relaciones del papel a las tablas SQL, aplicamos reglas estricta
 Cuando definís una columna como `PRIMARY KEY`, el motor de la base de datos ejecuta automáticamente tres acciones bajo el capó:
 
 1. **Unicidad (`UNIQUE`)**: Garantiza que no existan dos filas con el mismo valor en esa columna.
-1. **No Nulo (`NOT NULL`)**: Impide que el valor sea nulo, asegurando que cada registro sea identificable.
-1. **Creación de un Índice**:
+2. **No Nulo (`NOT NULL`)**: Impide que el valor sea nulo, asegurando que cada registro sea identificable.
+3. **Creación de un Índice**:
     - **Ojo con esto**: Pusiste en tus notas que un índice es un *árbol binario*. En las bases de datos relacionales reales, esto **no es así**.
     - Los motores usan **Árboles B** o **Árboles B+** (B-Trees).
     - *¿Por qué?* Un árbol binario común tiene un factor de ramificación muy bajo (máximo 2 hijos por nodo), lo que haría que el árbol sea extremadamente alto y requiera demasiadas lecturas de disco. Los **B-Trees** están optimizados para sistemas de almacenamiento físico porque cada nodo puede tener cientos de hijos, reduciendo la altura del árbol a solo 3 o 4 niveles, haciendo que las búsquedas sean ridículamente rápidas.

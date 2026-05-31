@@ -16,11 +16,11 @@ La **Ley 11.723** protege los derechos de los autores sobre sus obras científic
 
 1. El **autor** de la obra.
     
-1. Sus **herederos** o derechohabientes.
+2. Sus **herederos** o derechohabientes.
     
-1. Los que con permiso del autor la **traducen, refunden o adaptan**.
+3. Los que con permiso del autor la **traducen, refunden o adaptan**.
     
-1. **En el ámbito del software (Relación Laboral):** Las personas físicas o jurídicas cuyos dependientes contratados para producir un programa de computación hubiesen elaborado dicho software en el desempeño de sus funciones laborales (salvo estipulación contractual contraria).
+4. **En el ámbito del software (Relación Laboral):** Las personas físicas o jurídicas cuyos dependientes contratados para producir un programa de computación hubiesen elaborado dicho software en el desempeño de sus funciones laborales (salvo estipulación contractual contraria).
 
 ### B. Plazos Legales de Vigencia
 
@@ -46,9 +46,9 @@ El autor puede explotar económicamente su obra mediante tres figuras contractua
 
 1. **Contrato de Edición:** El titular se compromete a entregar la obra al editor, y este se obliga a reproducirla, distribuirla y venderla, pagando regalías al autor.
     
-1. **Contrato de Representación:** El autor entrega una obra a un empresario para su **transmisión o exhibición pública** (por radio, televisión, internet o cine).
+2. **Contrato de Representación:** El autor entrega una obra a un empresario para su **transmisión o exhibición pública** (por radio, televisión, internet o cine).
     
-1. **Contrato de Venta (Cesión de Derechos):** El autor enajena los derechos de explotación económica. La autoría (los derechos morales) es inalienable e irrenunciable.
+3. **Contrato de Venta (Cesión de Derechos):** El autor enajena los derechos de explotación económica. La autoría (los derechos morales) es inalienable e irrenunciable.
 
 ## 3. Propiedad Industrial: Patentes de Invención (Ley 24.481)
 
@@ -62,9 +62,9 @@ La Propiedad Industrial protege las creaciones de aplicación técnica e industr
         
         - *Plazo de gracia por Divulgación:* El inventor tiene **1 año** desde que dio a conocer el invento en muestras o medios científicos para presentar la solicitud en el INPI antes de que caiga en dominio público.
             
-    1. **Actividad Inventiva:** Que el desarrollo no sea obvio ni evidente para un técnico con conocimientos medios en la materia (exige cierta complejidad).
+    2. **Actividad Inventiva:** Que el desarrollo no sea obvio ni evidente para un técnico con conocimientos medios en la materia (exige cierta complejidad).
         
-    1. **Aplicación Industrial:** Que el objeto pueda ser fabricado o reproducido en serie en cualquier rama de la industria.
+    3. **Aplicación Industrial:** Que el objeto pueda ser fabricado o reproducido en serie en cualquier rama de la industria.
         
 - **Duración de la Patente:** La patente de invención otorga un derecho de exclusividad por un plazo de **20 años improrrogables**, contados a partir de la fecha de presentación de la solicitud ante el INPI. Una vez vencido, el invento pasa definitivamente al dominio público.
 
@@ -74,11 +74,11 @@ El expediente de solicitud debe contener obligatoriamente:
 
 1. Denominación y descripción detallada del invento.
     
-1. Planos y dibujos técnicos aclaratorios.
+2. Planos y dibujos técnicos aclaratorios.
     
-1. **Una o más reivindicaciones:** Definición técnica y jurídica del objeto preciso sobre el cual se reclama el monopolio de exclusividad.
+3. **Una o más reivindicaciones:** Definición técnica y jurídica del objeto preciso sobre el cual se reclama el monopolio de exclusividad.
     
-1. Resumen de la descripción.
+4. Resumen de la descripción.
 
 ## 4. Modelos de Utilidad (Art. 53 de la Ley 24.481)
 
@@ -90,7 +90,7 @@ De acuerdo con el documento y el gráfico adjunto (`Pasted image 20260528002246.
     
     1. **Novedad industrial** (que la forma o disposición sea nueva).
         
-    1. Una **mejora, utilidad o ventaja práctica funcional** real sobre el objeto preexistente.
+    2. Una **mejora, utilidad o ventaja práctica funcional** real sobre el objeto preexistente.
         
 - **Duración del Modelo de Utilidad:** Otorga un derecho de exclusividad por un plazo de **10 años improrrogables**, contados a partir de la fecha de presentación de la solicitud ante el INPI.
     

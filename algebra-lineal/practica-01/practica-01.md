@@ -601,7 +601,7 @@ r^{3}=1 \\
 r=1
 \end{gather}
 $$
-1. Ecuación para el argumento $(\theta)$:
+2. Ecuación para el argumento $(\theta)$:
 $$
 \begin{gather}
 3\cdot \theta=2k\pi \\
@@ -618,11 +618,11 @@ Ahora, usemos estos tres valores para calcular los **tres argumentos distintos**
 $$
 \theta_{0}=\frac{2\cdot{0}\pi}{3}=0
 $$
-1. Para $k=1$:
+2. Para $k=1$:
 $$
 \theta_{1}=\frac{2\cdot{1}\cdot \pi}{3}=\frac{2}{3}\pi
 $$
-1. Para $k=2$:
+3. Para $k=2$:
 $$
 \theta_{2}=\frac{2\cdot{2}\cdot \pi}{3}=\frac{4}{3}\pi
 $$
@@ -669,7 +669,7 @@ r^{6}=1 \\
 r=1
 \end{gather}
 $$
-1. Ecuación para el argumento $\theta$:
+2. Ecuación para el argumento $\theta$:
 $$
 \begin{gather}
 6\cdot \theta=2k\pi \\
@@ -686,23 +686,23 @@ Ahora, usemos estos tres valores para calcular los **tres argumentos distintos**
 $$
 \theta_{0}=\frac{2k\pi}{6}=\frac{2*{0}\cdot \pi}{6}=0
 $$
-1. Para $k=1$:
+2. Para $k=1$:
 $$
 \theta_{1}=\frac{2k\pi}{6}=\frac{2\cdot{1}\cdot \pi}{6}=\frac{2\pi}{6}=\frac{\pi}{3}
 $$
-1. Para $k=2$:
+3. Para $k=2$:
 $$
 \theta_{2}=\frac{2k\pi}{6}=\frac{2\cdot{2}\cdot \pi}{6}=\frac{4\pi}{6}=\frac{2\pi}{3}
 $$
-1. Para $k=3$:
+4. Para $k=3$:
 $$
 \theta_{3}=\frac{2k\pi}{6}=\frac{2\cdot{3}\cdot \pi}{6}=\frac{6\pi}{6}=\pi
 $$
-1. Para $k=4$:
+5. Para $k=4$:
 $$
 \theta_{4}=\frac{2k\pi}{6}=\frac{2\cdot{4}\cdot \pi}{6}=\frac{8\pi}{6}=\frac{4\pi}{3}
 $$
-1. Para $k=5$:
+6. Para $k=5$:
 $$
 \theta_{5}=\frac{2k\pi}{6}=\frac{2\cdot{5}\cdot \pi}{6}=\frac{10\pi}{6}=\frac{5\pi}{3}
 $$

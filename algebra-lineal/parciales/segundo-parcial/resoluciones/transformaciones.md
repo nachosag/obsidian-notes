@@ -589,9 +589,9 @@ Para encontrar la matriz $M_{EE'}(L)$, debemos aplicar $L$ a los vectores de la 
 
 Aplicamos $L(x_1, x_2, x_3, x_4) = (x_1 - x_4, 2x_2 + x_3)$ a los vectores de la base canónica de $\mathbb{R}^4$:
 1. 1. **$L(\mathbf{e}_1)$**: $L(1, 0, 0, 0) = (1 - 0, 2(0) + 0) = (1, 0)$.
-1. **$L(\mathbf{e}_2)$**: $L(0, 1, 0, 0) = (0 - 0, 2(1) + 0) = (0, 2)$.
-1. **$L(\mathbf{e}_3)$**: $L(0, 0, 1, 0) = (0 - 0, 2(0) + 1) = (0, 1)$.
-1. **$L(\mathbf{e}_4)$**: $L(0, 0, 0, 1) = (0 - 1, 2(0) + 0) = (-1, 0)$.
+2. **$L(\mathbf{e}_2)$**: $L(0, 1, 0, 0) = (0 - 0, 2(1) + 0) = (0, 2)$.
+3. **$L(\mathbf{e}_3)$**: $L(0, 0, 1, 0) = (0 - 0, 2(0) + 1) = (0, 1)$.
+4. **$L(\mathbf{e}_4)$**: $L(0, 0, 0, 1) = (0 - 1, 2(0) + 0) = (-1, 0)$.
 
 Colocando estos resultados como columnas tenemos
 $$
@@ -643,8 +643,8 @@ $$
 $$
 Igualamos componente a componente
 1. $\alpha+\gamma=1$.
-1. $\beta+\gamma=1$.
-1. $\alpha+\beta=0$.
+2. $\beta+\gamma=1$.
+3. $\alpha+\beta=0$.
 
 Por la ecuación 3 tenemos que $\alpha=-\beta$.
 Sustituimos $\alpha=-\beta$ en la ecuación 1 $\alpha+\gamma=1\leftrightarrow -\beta+\gamma=1\leftrightarrow \gamma=1+\beta$.

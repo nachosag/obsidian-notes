@@ -98,51 +98,51 @@
 
 1. Sobre la integración de la FPU, ¿cuál de las siguientes afirmaciones es correcta?
 	1. A) Siempre estuvo integrada en el chip principal desde el Intel 8086.
-	1. B) En el Intel 8087 era un coprocesador externo, pero a partir del 80486 se integró al procesador.
-	1. C) Se volvió a separar del procesador en las arquitecturas modernas para ganar velocidad.
-	1. D) Solo existe como unidad externa en sistemas de alta performance.
-1. El estándar IEEE 754 se utiliza principalmente para:
+	2. B) En el Intel 8087 era un coprocesador externo, pero a partir del 80486 se integró al procesador.
+	3. C) Se volvió a separar del procesador en las arquitecturas modernas para ganar velocidad.
+	4. D) Solo existe como unidad externa en sistemas de alta performance.
+2. El estándar IEEE 754 se utiliza principalmente para:
 	1. A) Definir cómo se comunican la CPU y la GPU. 
-	1. B) Garantizar que diferentes fabricantes usen representaciones compatibles y asegurar la retrocompatibilidad. 
-	1. C) Establecer la velocidad máxima de transferencia en el bus de datos. 
-	1. D) Limitar la cantidad de memoria que puede usar un programa de punto flotante.
-1. En la representación $(-1)^{S} \times \text{mantisa} \times 2^{\text{exponente}}$, ¿qué componente determina la precisión del número?
+	2. B) Garantizar que diferentes fabricantes usen representaciones compatibles y asegurar la retrocompatibilidad. 
+	3. C) Establecer la velocidad máxima de transferencia en el bus de datos. 
+	4. D) Limitar la cantidad de memoria que puede usar un programa de punto flotante.
+3. En la representación $(-1)^{S} \times \text{mantisa} \times 2^{\text{exponente}}$, ¿qué componente determina la precisión del número?
 	1. A) El exponente. 
-	1. B) El signo ($S$).
-	1. C) La mantisa. 
-	1. D) La base 2.
-1. La FPU x87 utiliza una precisión extendida de:
+	2. B) El signo ($S$).
+	3. C) La mantisa. 
+	4. D) La base 2.
+4. La FPU x87 utiliza una precisión extendida de:
 	1. A) 32 bits. 
-	1. B) 64 bits. 
-	1. C) 80 bits. 
-	1. D) 128 bits.
-1. ¿Cuál es la estructura de datos fundamental que utiliza la FPU x87 para operar?
+	2. B) 64 bits. 
+	3. C) 80 bits. 
+	4. D) 128 bits.
+5. ¿Cuál es la estructura de datos fundamental que utiliza la FPU x87 para operar?
 	1. A) Una cola (FIFO) de 16 registros. 
-	1. B) Un archivo de registros de acceso aleatorio. 
-	1. C) Una pila (Stack) circular de 8 registros. 
-	1. D) Un buffer circular de 80 bits.
-1. Si ocurre una excepción y esta se encuentra "enmascarada", ¿qué hace la FPU?
+	2. B) Un archivo de registros de acceso aleatorio. 
+	3. C) Una pila (Stack) circular de 8 registros. 
+	4. D) Un buffer circular de 80 bits.
+6. Si ocurre una excepción y esta se encuentra "enmascarada", ¿qué hace la FPU?
 	1. A) Detiene la ejecución inmediatamente y lanza un kernel panic. 
-	1. B) Ignora el error y pone el registro en cero siempre. 
-	1. C) Escribe un valor por defecto (como un NaN o indefinido) y el programa sigue su curso. 
-	1. D) Llama a un manejador de excepciones por software de forma inmediata.
-1. La "Palabra de Etiquetado" (Tag Word) tiene como función principal:
+	2. B) Ignora el error y pone el registro en cero siempre. 
+	3. C) Escribe un valor por defecto (como un NaN o indefinido) y el programa sigue su curso. 
+	4. D) Llama a un manejador de excepciones por software de forma inmediata.
+7. La "Palabra de Etiquetado" (Tag Word) tiene como función principal:
 	1. A) Guardar el resultado de la última comparación aritmética. 
-	1. B) Indicar el estado de cada registro (si está vacío, tiene un valor válido, cero o especial). 
-	1. C) Almacenar la dirección de la última instrucción ejecutada. 
-	1. D) Definir el método de redondeo que debe usar la FPU.
-1. ¿Qué registro indica cuál es el tope de la pila (TOP) actual en la FPU?
+	2. B) Indicar el estado de cada registro (si está vacío, tiene un valor válido, cero o especial). 
+	3. C) Almacenar la dirección de la última instrucción ejecutada. 
+	4. D) Definir el método de redondeo que debe usar la FPU.
+8. ¿Qué registro indica cuál es el tope de la pila (TOP) actual en la FPU?
 	1. A) La Palabra de Control (Control Word). 
-	1. B) El Puntero de Instrucción. 
-	1. C) La Palabra de Estado (Status Word). 
-	1. D) El registro ST(7).
-1. ¿Por qué las arquitecturas SSE y AVX terminaron desplazando a la x87?
+	2. B) El Puntero de Instrucción. 
+	3. C) La Palabra de Estado (Status Word). 
+	4. D) El registro ST(7).
+9. ¿Por qué las arquitecturas SSE y AVX terminaron desplazando a la x87?
 	1. A) Porque usan menos bits para representar los números. 
-	1. B) Porque permiten paralelismo (SIMD) y ofrecen un rendimiento mucho mayor. 
-	1. C) Porque la arquitectura de pila de la x87 es más rápida que el acceso a registros paralelos. 
-	1. D) Porque el estándar IEEE 754 dejó de ser compatible con la x87.
-1. ¿Cuál de estos es un límite real de la representación de punto flotante?
+	2. B) Porque permiten paralelismo (SIMD) y ofrecen un rendimiento mucho mayor. 
+	3. C) Porque la arquitectura de pila de la x87 es más rápida que el acceso a registros paralelos. 
+	4. D) Porque el estándar IEEE 754 dejó de ser compatible con la x87.
+10. ¿Cuál de estos es un límite real de la representación de punto flotante?
 	1. A) No puede representar números negativos. 
-	1. B) Solo puede representar números enteros. 
-	1. C) No puede representar números irracionales debido a que tiene una cantidad finita de bits. 
-	1. D) No permite realizar divisiones por cero.
+	2. B) Solo puede representar números enteros. 
+	3. C) No puede representar números irracionales debido a que tiene una cantidad finita de bits. 
+	4. D) No permite realizar divisiones por cero.

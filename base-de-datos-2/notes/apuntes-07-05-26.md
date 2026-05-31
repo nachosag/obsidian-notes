@@ -82,7 +82,7 @@ $$\text{Base de Datos Total} = \sum_{i=1}^{n} \text{Shard}_i$$
     
     1. **Memtable (Memoria RAM)**: El dato se escribe en una estructura en memoria RAM estructurada y ordenada para búsquedas rápidas. Cuando la Memtable se llena, se vuelca (flushea) al disco de forma secuencial creando un archivo inmutable llamado `SSTable`.
         
-    1. **CommitLog / Transaction Log (Disco rígido)**:
+    2. **CommitLog / Transaction Log (Disco rígido)**:
         
         - Es un archivo log persistente en disco donde se registran todas las operaciones cronológicamente de forma secuencial.
             

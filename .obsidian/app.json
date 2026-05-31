@@ -13,5 +13,6 @@
   "readableLineLength": false,
   "promptDelete": false,
   "alwaysUpdateLinks": true,
-  "smartIndentList": true
+  "smartIndentList": true,
+  "showUnsupportedFiles": true
 }

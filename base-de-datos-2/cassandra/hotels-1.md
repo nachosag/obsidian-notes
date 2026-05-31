@@ -20,29 +20,29 @@ De cada huésped nos interesa su teléfono/s, correo electrónico/s, nombre apel
 Se requieren las siguientes consultas:
 
 1. Traer los hoteles cerca de un punto de interés determinado.  
-1. Encontrar información sobre un determinado hotel. Por ejemplo el nombre y su  
+2. Encontrar información sobre un determinado hotel. Por ejemplo el nombre y su  
    ubicación.  
-1. Encontrar puntos de interés cerca de un hotel determinado.
+3. Encontrar puntos de interés cerca de un hotel determinado.
 
 **Nuevos Casos de Uso:**
 
 1. Almacena las reservas realizadas por cada huésped, ordenadas por fecha de inicio
 
-1. Consulta la disponibilidad de habitaciones en un hotel para una fecha específica.
+2. Consulta la disponibilidad de habitaciones en un hotel para una fecha específica.
 
-1. Lista las amenidades disponibles en una habitación específica.
+3. Lista las amenidades disponibles en una habitación específica.
 
-1. Consulta todas las reservas en un hotel para una fecha específica.
+4. Consulta todas las reservas en un hotel para una fecha específica.
 
-1. Obtiene los puntos de interés asociados a una zona específica de la ciudad.
+5. Obtiene los puntos de interés asociados a una zona específica de la ciudad.
 
-1. Consulta todas las reservas realizadas por un huésped en un hotel específico.
+6. Consulta todas las reservas realizadas por un huésped en un hotel específico.
 
-1. Lista las amenidades disponibles en un hotel para un tipo de habitación específico.
+7. Lista las amenidades disponibles en un hotel para un tipo de habitación específico.
 
-1. Consulta todas las reservas realizadas para un tipo de habitación específico en una fecha determinada.
+8. Consulta todas las reservas realizadas para un tipo de habitación específico en una fecha determinada.
 
-1. Consulta la disponibilidad de todas las habitaciones de un hotel para una fecha específica, ordenadas por número de habitación.
+9. Consulta la disponibilidad de todas las habitaciones de un hotel para una fecha específica, ordenadas por número de habitación.
 
 Para cada consulta se pide:
 

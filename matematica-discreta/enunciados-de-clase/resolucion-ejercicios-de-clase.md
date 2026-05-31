@@ -15,5 +15,5 @@ Ahora falta demostrar que $G-v$ tiene al menos una arista. Si el menor ciclo es 
 # Ejercicio 34
 Considere el siguiente grafo $G$.
 1. Decidir si $G$ es bipartito.
-1. Hallar $A(G[T])$ siendo $T=\{ v_{1},v_{2},v_{4},v_{6} \}$.
+2. Hallar $A(G[T])$ siendo $T=\{ v_{1},v_{2},v_{4},v_{6} \}$.
 ![[Drawing 2025-10-19 22.16.06.excalidraw]]

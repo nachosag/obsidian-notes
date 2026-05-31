@@ -8,7 +8,7 @@ Cada nota está diseñada para ser un recurso de aprendizaje que cumple con dos 
 
 1. **Rigor y Detalle:** Documentar cada paso en la resolución de problemas (especialmente en Álgebra Lineal y Matemática Discreta), asegurando que el proceso de razonamiento sea completamente transparente.
     
-1. **Interconexión (Linking):** Utilizar la arquitectura de enlaces de Obsidian para conectar conceptos teóricos, ejercicios resueltos y temas relacionados, facilitando un repaso activo y un entendimiento profundo.
+2. **Interconexión (Linking):** Utilizar la arquitectura de enlaces de Obsidian para conectar conceptos teóricos, ejercicios resueltos y temas relacionados, facilitando un repaso activo y un entendimiento profundo.
     
 
 ## 📂 Estructura Principal del Repositorio
@@ -61,7 +61,7 @@ Si utiliza este *vault* como referencia y detecta algún error conceptual, lógi
 
 1. Abra un **Issue** con una referencia clara a la nota (`ruta/archivo.md` y ejercicio).
     
-1. Explique de manera **detallada y estructurada** el error encontrado y el razonamiento que lo refuta, siguiendo el mismo nivel de detalle que encontraría en las notas.
+2. Explique de manera **detallada y estructurada** el error encontrado y el razonamiento que lo refuta, siguiendo el mismo nivel de detalle que encontraría en las notas.
     
 
 Agradezco de antemano cualquier contribución que mejore la precisión y el rigor de este recurso de estudio.

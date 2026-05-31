@@ -58,8 +58,8 @@
 - Las causales de disolución incluyen: 
 
 	1. Por la declaración de quiebra. 
-	1. Por decisión de sus miembros aprobada por unanimidad o mayoría. 
-	1. Por haberse logrado el objeto para el cual se constituyó o por ser de imposible cumplimiento.
+	2. Por decisión de sus miembros aprobada por unanimidad o mayoría. 
+	3. Por haberse logrado el objeto para el cual se constituyó o por ser de imposible cumplimiento.
 
 **12. El derecho de propiedad de una obra científica, literaria o artística le otorga a su autor una serie de facultades. Mencione tres de ellas.** 
 
@@ -74,8 +74,8 @@
 - Debe cumplir obligatoriamente tres requisitos:
 
 	1. **Novedad absoluta:** Que no esté comprendida en el estado de la técnica a nivel mundial.
-	1. **Actividad inventiva:** Que el proceso creativo no se deduzca del estado de la técnica de forma evidente para un experto.
-	1. **Aplicación industrial:** Que su objeto pueda ser fabricado o conducido a la obtención de un resultado en la industria.
+	2. **Actividad inventiva:** Que el proceso creativo no se deduzca del estado de la técnica de forma evidente para un experto.
+	3. **Aplicación industrial:** Que su objeto pueda ser fabricado o conducido a la obtención de un resultado en la industria.
 
 # NIVEL 3: Desarrollos y Conceptos Estructurados (Mayor tiempo de asimilación)
 
@@ -112,5 +112,5 @@
 **20. Mencione y explique brevemente al menos tres principios generales del derecho.**
 
 1. **Principio de la Buena Fe:** Implica actuar con rectitud, lealtad y honestidad. En su faz objetiva, exige mantener un comportamiento coherente (doctrina de los actos propios) y en su faz subjetiva protege la creencia razonable de estar obrando conforme a derecho.
-1. **Abuso del Derecho:** Es un límite interno a los derechos subjetivos. Indica que la ley no ampara a quien ejerce un derecho contrariando los fines sociales y económicos que la ley tuvo en mira al reconocerlo, o si se exceden los límites de la buena fe, la moral y las buenas costumbres.
-1. **Inexcusabilidad de la ignorancia de la ley:** Establece que la ignorancia de las leyes no sirve como excusa legal para su incumplimiento, fundamentándose en la presunción de que una norma, una vez publicada, es conocida por todos los ciudadanos.
+2. **Abuso del Derecho:** Es un límite interno a los derechos subjetivos. Indica que la ley no ampara a quien ejerce un derecho contrariando los fines sociales y económicos que la ley tuvo en mira al reconocerlo, o si se exceden los límites de la buena fe, la moral y las buenas costumbres.
+3. **Inexcusabilidad de la ignorancia de la ley:** Establece que la ignorancia de las leyes no sirve como excusa legal para su incumplimiento, fundamentándose en la presunción de que una norma, una vez publicada, es conocida por todos los ciudadanos.

@@ -68,7 +68,7 @@ Resultado para $v_{4}:(E_{1},E_{2},E_{3})=(0,0,0)$.
 ---
 Pasos a seguir:
 1. Para decidir si un vector $v_{i}$ es solución del sistema $S$ hay que comparar su $(E_{1},E_{2},E_{3})$ con $(2,0,-1)$. Si coinciden en las tres entradas, entonces $v_{i}$ es solución de $S$.
-1. Para decidir si $v_{i}$ es solución del sistema homogeneo $S_{h}$ hay que comparar $(E_{1},E_{2},E_{3})$ con $(0,0,0)$. Si coinciden, entonces $v_{i}$ pertenece al espacio de soluciones homogeneas.
+2. Para decidir si $v_{i}$ es solución del sistema homogeneo $S_{h}$ hay que comparar $(E_{1},E_{2},E_{3})$ con $(0,0,0)$. Si coinciden, entonces $v_{i}$ pertenece al espacio de soluciones homogeneas.
 ---
 <mark style="background: #FF5582A6;">Paso 1</mark>
 El vector $v_{3}$ es el único que es solución del sistema $S$.
@@ -100,7 +100,7 @@ $$
 \beta=3
 \end{gather}
 $$
-1. Sustituímos $\alpha,\beta$ en la tercera ecuación: $$
+2. Sustituímos $\alpha,\beta$ en la tercera ecuación: $$
 \begin{gather}
 \alpha x_{1}+\beta x_{2}+8x_{3}=0 \\
 -1\cdot{2}+3\cdot{(-2)}+8\cdot{1}=0 \\
@@ -198,7 +198,7 @@ $$
 - Si la fila de coeficientes es múltiplo pero la constante NO es el mismo múltiplo, entonces se obtiene algo como $0=c$ con $c\neq{0}\implies$ **incompatible**.
 Apliquemos esta observación:
 1. Observemos que $-2\cdot{(2x+3y)}=-4x-6y$.
-1. Ahora comprobemos si la constante satisface la misma proporción: $-2\cdot{(-1)}=2$.
+2. Ahora comprobemos si la constante satisface la misma proporción: $-2\cdot{(-1)}=2$.
 Como los coeficientes y las constantes son proporcionales a $-2$, podemos afirmar que ambas ecuaciones representan la misma recta, por lo tanto existen **infinitas soluciones** que satisfacen a ambas ecuaciones.
 <mark style="background: #FF5582A6;">Sistema (c)</mark>
 Tenemos el sistema $$
@@ -658,7 +658,7 @@ Conclusión inmediata: Dado que los vectores normales son paralelos, los planos 
 
 Si dos planos son paralelos, hay dos posibilidades:
 1. Son **coincidentes** (el mismo plano), y en ese caso hay infinitas soluciones.
-1. Son **paralelos y distintos**, y en ese caso no se tocan nunca, por lo que no hay solución.
+2. Son **paralelos y distintos**, y en ese caso no se tocan nunca, por lo que no hay solución.
 Para verificar esto, podemos tomar la primera ecuación y multiplicar por el escalar $k=-3$ que encontramos. Si el resultado es idéntico a la segunda ecuación, los planos son coincidentes.
 $$
 \begin{gather}

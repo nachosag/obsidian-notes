@@ -405,51 +405,51 @@
 
 1. ¿Cuál es la diferencia fundamental entre el procesador 8086 y el 8088?
 	1. A) El 8086 es de 16 bits y el 8088 es de 8 bits internamente. 
-	1. B) El 8086 tiene un bus de datos de 16 bits, mientras que el 8088 lo tiene de 8 bits. 
-	1. C) El 8088 introdujo el modo protegido que el 8086 no tenía. 
-	1. D) El 8086 puede direccionar 1 MB de memoria y el 8088 solo 640 KB.
-1. El modo protegido, introducido en el 80286, soluciona principalmente el problema de:
+	2. B) El 8086 tiene un bus de datos de 16 bits, mientras que el 8088 lo tiene de 8 bits. 
+	3. C) El 8088 introdujo el modo protegido que el 8086 no tenía. 
+	4. D) El 8086 puede direccionar 1 MB de memoria y el 8088 solo 640 KB.
+2. El modo protegido, introducido en el 80286, soluciona principalmente el problema de:
 	1. A) La baja velocidad de procesamiento en cálculos matemáticos. 
-	1. B) La fragmentación externa de la memoria RAM. 
-	1. C) La vulnerabilidad de que un programa con errores pueda modificar la memoria de otros procesos o del sistema operativo. 
-	1. D) La limitación de no poder ejecutar instrucciones de 32 bits.
-1. En la arquitectura del 80386, ¿qué problema específico viene a resolver la técnica de paginación?
+	2. B) La fragmentación externa de la memoria RAM. 
+	3. C) La vulnerabilidad de que un programa con errores pueda modificar la memoria de otros procesos o del sistema operativo. 
+	4. D) La limitación de no poder ejecutar instrucciones de 32 bits.
+3. En la arquitectura del 80386, ¿qué problema específico viene a resolver la técnica de paginación?
 	1. A) La falta de registros de propósito general. 
-	1. B) La fragmentación externa, al dividir la memoria en bloques de tamaño fijo. 
-	1. C) La incapacidad de ejecutar programas del 8086. 
-	1. D) El cuello de botella del bus de datos de 16 bits.
-1. Un "Descriptor de Segmento" en modo protegido es un bloque de 8 bytes que define:
+	2. B) La fragmentación externa, al dividir la memoria en bloques de tamaño fijo. 
+	3. C) La incapacidad de ejecutar programas del 8086. 
+	4. D) El cuello de botella del bus de datos de 16 bits.
+4. Un "Descriptor de Segmento" en modo protegido es un bloque de 8 bytes que define:
 	1. A) Únicamente la dirección virtual generada por la CPU. 
-	1. B) La tabla de páginas que vive en la RAM. 
-	1. C) La dirección física base, el límite y los permisos de acceso de un espacio de memoria. 
-	1. D) El historial de saltos para la predicción dinámica.
-1. ¿Qué innovación permitió al Intel Pentium original ejecutar dos instrucciones por cada ciclo de reloj?
+	2. B) La tabla de páginas que vive en la RAM. 
+	3. C) La dirección física base, el límite y los permisos de acceso de un espacio de memoria. 
+	4. D) El historial de saltos para la predicción dinámica.
+5. ¿Qué innovación permitió al Intel Pentium original ejecutar dos instrucciones por cada ciclo de reloj?
 	1. A) La incorporación de la memoria caché L2 integrada. 
-	1. B) Su arquitectura superescalar con doble pipeline (U y V). 
-	1. C) El uso de registros extendidos de 64 bits. 
-	1. D) La eliminación definitiva del microcódigo CISC.
-1. La "Ejecución Especulativa" se diferencia de la "Predicción de Saltos" en que:
+	2. B) Su arquitectura superescalar con doble pipeline (U y V). 
+	3. C) El uso de registros extendidos de 64 bits. 
+	4. D) La eliminación definitiva del microcódigo CISC.
+6. La "Ejecución Especulativa" se diferencia de la "Predicción de Saltos" en que:
 	1. A) La ejecución especulativa solo adivina el camino, pero no procesa nada. 
-	1. B) La predicción de saltos es de software y la ejecución especulativa es de hardware. 
-	1. C) La ejecución especulativa efectivamente procesa las instrucciones y guarda resultados temporales en un búfer (ROB) antes de confirmarlos. 
-	1. D) No hay diferencia, son dos nombres para el mismo mecanismo de pipeline.
-1. Sobre las instrucciones SIMD (como MMX o SSE), ¿cuál es su principal ventaja?
+	2. B) La predicción de saltos es de software y la ejecución especulativa es de hardware. 
+	3. C) La ejecución especulativa efectivamente procesa las instrucciones y guarda resultados temporales en un búfer (ROB) antes de confirmarlos. 
+	4. D) No hay diferencia, son dos nombres para el mismo mecanismo de pipeline.
+7. Sobre las instrucciones SIMD (como MMX o SSE), ¿cuál es su principal ventaja?
 	1. A) Permiten que cada núcleo del procesador ejecute un programa distinto simultáneamente. 
-	1. B) Permiten ejecutar una única operación matemática sobre múltiples datos al mismo tiempo. 
-	1. C) Aumentan la frecuencia de reloj del procesador automáticamente. 
-	1. D) Eliminan la necesidad de usar memoria caché L1.
-1. ¿Qué es el Hyper-threading?
+	2. B) Permiten ejecutar una única operación matemática sobre múltiples datos al mismo tiempo. 
+	3. C) Aumentan la frecuencia de reloj del procesador automáticamente. 
+	4. D) Eliminan la necesidad de usar memoria caché L1.
+8. ¿Qué es el Hyper-threading?
 	1. A) Una técnica para duplicar la frecuencia de los núcleos físicos. 
-	1. B) La capacidad de un núcleo físico de presentarse ante el SO como dos procesadores lógicos, compartiendo el motor de ejecución. 
-	1. C) El uso de múltiples niveles de caché (L1, L2, L3) para acelerar el acceso a datos. 
-	1. D) Un modo de ejecución que solo permite instrucciones RISC puras.
-1. En el debate RISC vs CISC, ¿cómo operan los procesadores Intel modernos (como un Core i7)?
+	2. B) La capacidad de un núcleo físico de presentarse ante el SO como dos procesadores lógicos, compartiendo el motor de ejecución. 
+	3. C) El uso de múltiples niveles de caché (L1, L2, L3) para acelerar el acceso a datos. 
+	4. D) Un modo de ejecución que solo permite instrucciones RISC puras.
+9. En el debate RISC vs CISC, ¿cómo operan los procesadores Intel modernos (como un Core i7)?
 	1. A) Son puramente CISC para mantener la compatibilidad con el software viejo. 
-	1. B) Son puramente RISC y emulan las instrucciones x86 por software. 
-	1. C) Reciben instrucciones complejas (CISC) y las decodifican internamente en microoperaciones simples (similares a RISC) para su ejecución. 
-	1. D) Han abandonado ambos modelos por una arquitectura de red neuronal.
-1. ¿Qué ventaja técnica trajo el renombrado de registros?
+	2. B) Son puramente RISC y emulan las instrucciones x86 por software. 
+	3. C) Reciben instrucciones complejas (CISC) y las decodifican internamente en microoperaciones simples (similares a RISC) para su ejecución. 
+	4. D) Han abandonado ambos modelos por una arquitectura de red neuronal.
+10. ¿Qué ventaja técnica trajo el renombrado de registros?
 	1. A) Permite que el programador use nombres de registros más largos. 
-	1. B) Elimina conflictos de dependencia de datos, permitiendo que instrucciones independientes usen registros físicos distintos aunque en el código se llamen igual. 
-	1. C) Aumenta el tamaño de la memoria direccionable de 4 GB a 64 GB. 
-	1. D) Es el mecanismo que permite traducir direcciones virtuales a físicas.
+	2. B) Elimina conflictos de dependencia de datos, permitiendo que instrucciones independientes usen registros físicos distintos aunque en el código se llamen igual. 
+	3. C) Aumenta el tamaño de la memoria direccionable de 4 GB a 64 GB. 
+	4. D) Es el mecanismo que permite traducir direcciones virtuales a físicas.

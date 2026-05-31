@@ -10,8 +10,8 @@ Sea $T$ un árbol con exactamente 2 vértices de grado 1 (hojas). Entonces $T$ e
 
 Sea $T$ un árbol con $n$ vértices.
 1. Por definición, $T$ es **conexo** y **acíclico** (no tiene ciclos).
-1. Por hipótesis, $T$ tiene exactamente 2 hojas (vértices con grado 1).
-1. Por un teorema fundamental de los árboles, $T$ tiene exactamente $n-1$ aristas.
+2. Por hipótesis, $T$ tiene exactamente 2 hojas (vértices con grado 1).
+3. Por un teorema fundamental de los árboles, $T$ tiene exactamente $n-1$ aristas.
 
 Para demostrar que $T$ es un camino, debemos probar que **todos sus vértices no-hojas (los vértices internos) tienen grado 2**.
 

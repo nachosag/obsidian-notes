@@ -8,17 +8,17 @@ De acuerdo con la sistematización de la materia, los ejes temáticos que compon
 
 1. **Teoría de los Hechos y Actos Jurídicos:** El estudio de los acontecimientos y celebraciones humanas con trascendencia legal.
     
-1. **Obligaciones:** El vínculo jurídico entre un acreedor y un deudor.
+2. **Obligaciones:** El vínculo jurídico entre un acreedor y un deudor.
     
-1. **Contratos:** Los acuerdos de voluntades destinados a crear, regular, modificar o extinguir relaciones jurídicas patrimoniales.
+3. **Contratos:** Los acuerdos de voluntades destinados a crear, regular, modificar o extinguir relaciones jurídicas patrimoniales.
     
-1. **Derechos Reales (mencionados en notas como "deberes reales"):** El poder jurídico de estructura legal que una persona ejerce directamente sobre una cosa (relación sujeto-cosa).
+4. **Derechos Reales (mencionados en notas como "deberes reales"):** El poder jurídico de estructura legal que una persona ejerce directamente sobre una cosa (relación sujeto-cosa).
     
-1. **Familia:** Relaciones jurídicas basadas en el parentesco, el matrimonio y la filiación.
+5. **Familia:** Relaciones jurídicas basadas en el parentesco, el matrimonio y la filiación.
     
-1. **Sucesiones:** La transmisión de los bienes y derechos de una persona tras su muerte.
+6. **Sucesiones:** La transmisión de los bienes y derechos de una persona tras su muerte.
     
-1. **Derecho Institucional Privado:** Regulación de las bases institucionales del derecho privado.
+7. **Derecho Institucional Privado:** Regulación de las bases institucionales del derecho privado.
 
 ## 2. El Concepto de Persona y su Clasificación
 
@@ -128,9 +128,9 @@ Las personas jurídicas pueden experimentar transformaciones estructurales duran
 
 1. **Transformación:** Ocurre cuando una sociedad adopta un tipo jurídico distinto al que tenía originalmente (por ejemplo, pasar de ser una S.R.L. a una S.A.), sin disolverse ni perder su personalidad jurídica.
     
-1. **Fusión:** Se produce cuando dos o más sociedades se disuelven sin liquidarse para constituir una nueva sociedad; o cuando una de ellas incorpora a otra u otras que se disuelven sin liquidarse (fusión por absorción).
+2. **Fusión:** Se produce cuando dos o más sociedades se disuelven sin liquidarse para constituir una nueva sociedad; o cuando una de ellas incorpora a otra u otras que se disuelven sin liquidarse (fusión por absorción).
     
-1. **Escisión:** Ocurre cuando una sociedad, sin disolverse, destina parte de su patrimonio para fusionarse con sociedades existentes o para participar con ella en la creación de una nueva sociedad.
+3. **Escisión:** Ocurre cuando una sociedad, sin disolverse, destina parte de su patrimonio para fusionarse con sociedades existentes o para participar con ella en la creación de una nueva sociedad.
 
 ### D. Disolución (Fin de la Existencia)
 
@@ -162,7 +162,7 @@ La relación de causalidad jurídica se fundamenta en la distinción entre acont
 
 1. **Hechos Naturales (o de la naturaleza):** Acontecimientos producidos sin la intervención del hombre, pero que acarrean efectos legales (ej. un rayo que destruye una propiedad asegurada, el paso del tiempo que genera la prescripción de un derecho).
     
-1. **Hechos Humanos (o actos):** Producidos de manera directa o indirecta por el obrar humano. Se subdividen en:
+2. **Hechos Humanos (o actos):** Producidos de manera directa o indirecta por el obrar humano. Se subdividen en:
     
     - **Involuntarios:** Realizados sin cumplir con las condiciones internas de la voluntad. No producen responsabilidad para su autor por regla general (salvo cuestiones de equidad).
         
@@ -192,8 +192,8 @@ Todo acto jurídico requiere obligatoriamente para su validez la concurrencia de
 
 1. **Sujeto:** El sujeto de derecho (persona humana o jurídica) que celebra el acto y manifiesta su consentimiento. Debe gozar de capacidad legal para obrar.
     
-1. **Objeto:** La materia, hecho o bien sobre el cual recae el acto jurídico. Debe ser lícito, material y jurídicamente posible, no contrario a la moral, las buenas costumbres o el orden público.
+2. **Objeto:** La materia, hecho o bien sobre el cual recae el acto jurídico. Debe ser lícito, material y jurídicamente posible, no contrario a la moral, las buenas costumbres o el orden público.
     
-1. **Causa (Causa Fin):** El propósito o finalidad jurídica inmediata perseguida por las partes al celebrar el acto, debiendo ser lícita y real.
+3. **Causa (Causa Fin):** El propósito o finalidad jurídica inmediata perseguida por las partes al celebrar el acto, debiendo ser lícita y real.
     
-1. **Forma:** El conjunto de solemnidades y requisitos externos que la ley impone para la celebración y validez del acto jurídico (por ejemplo, que sea redactado por escrito, en instrumento público o mediante escritura pública en el caso de la compra de inmuebles).
+4. **Forma:** El conjunto de solemnidades y requisitos externos que la ley impone para la celebración y validez del acto jurídico (por ejemplo, que sea redactado por escrito, en instrumento público o mediante escritura pública en el caso de la compra de inmuebles).

@@ -26,19 +26,19 @@ type book = {
 mongoimport --host=127.0.0.1 --port=27017 --db=test --collection=books --type=json --file=books.json --jsonArray
 ```
 
-2. Importar el documento especificando solamente el .Json (obtener conclusiones).
+1. Importar el documento especificando solamente el .Json (obtener conclusiones).
 
 ```bash
 mongoimport --file=books.json
 ```
 
-3. Encontrar todos los libros de una categoría específica.
+1. Encontrar todos los libros de una categoría específica.
 
 ```javascript
 db.books.find({ categories: 'Java' })
 ```
 
-4. Encontrar un libro por su isbn.
+1. Encontrar un libro por su isbn.
 
 ```javascript
 db.books.find({ isbn: '1932394907' })
@@ -390,7 +390,7 @@ db.books.find({
 })
 ```
 
-1. Eliminá el campo thumbnailUrl de todos los documentos que lo tengan.
+2. Eliminá el campo thumbnailUrl de todos los documentos que lo tengan.
 
 ```javascript
 db.books.updateMany(

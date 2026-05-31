@@ -8,9 +8,9 @@ Un **usuario** interactúa con una aplicación cliente. Ese cliente envía instr
 El flujo es el siguiente:
 
 1. El usuario envía una operación (por ejemplo un `SELECT`).
-1. El cliente transmite esa operación al servidor de base de datos.
-1. El servidor procesa la operación utilizando CPU y RAM.
-1. Si necesita leer o escribir datos persistentes, accede al almacenamiento (disco).
+2. El cliente transmite esa operación al servidor de base de datos.
+3. El servidor procesa la operación utilizando CPU y RAM.
+4. Si necesita leer o escribir datos persistentes, accede al almacenamiento (disco).
 
 Esto refleja el modelo **cliente–servidor** típico de los sistemas de bases de datos.
 
@@ -61,8 +61,8 @@ SELECT * FROM usuarios WHERE edad > 30;
 La CPU se encarga de:
 
 1. interpretar la consulta
-1. recorrer registros
-1. evaluar la condición `edad > 30`
+2. recorrer registros
+3. evaluar la condición `edad > 30`
 
 ---
 
@@ -519,10 +519,10 @@ Significa que el sistema gestor implementa mecanismos internos para garantizar:
 Estos mecanismos incluyen:
 
 1. logs de transacciones
-1. control de concurrencia
-1. locking o MVCC
-1. recovery ante fallos
-1. validación de integridad
+2. control de concurrencia
+3. locking o MVCC
+4. recovery ante fallos
+5. validación de integridad
 
 Motores relacionales clásicos que cumplen ACID:
 
@@ -536,9 +536,9 @@ Motores relacionales clásicos que cumplen ACID:
 # 8. Flujo completo de una consulta (resumen conceptual)
 
 1. Cliente envía SQL al servidor.
-1. El servidor **parsea** la consulta.
-1. Se crea un **plan de ejecución**.
-1. La CPU ejecuta el plan.
-1. Se leen páginas desde disco a RAM.
-1. Se procesan datos.
-1. Se devuelve el resultado al cliente.
+2. El servidor **parsea** la consulta.
+3. Se crea un **plan de ejecución**.
+4. La CPU ejecuta el plan.
+5. Se leen páginas desde disco a RAM.
+6. Se procesan datos.
+7. Se devuelve el resultado al cliente.

@@ -56,7 +56,7 @@ db.createCollection('enrollments')
 
 ## Ejercicios
 
-1. Insertar un nuevo curso de Inglés Intermedio con dos estudiantes iniciales.
+### 1. Insertar un nuevo curso de Inglés Intermedio con dos estudiantes iniciales.
 
 ```javascript
 const newCourse = {
@@ -104,7 +104,7 @@ const enrollment2 = {
 db.enrollments.insertMany([enrollment1, enrollment2])
 ```
 
-1. Insertar dos cursos nuevos (Francés Inicial y Alemán Avanzado) en una sola operación. 
+### 2. Insertar dos cursos nuevos (Francés Inicial y Alemán Avanzado) en una sola operación.
 
 ```javascript
 const courseFrench = {
@@ -126,7 +126,7 @@ const courseGerman = {
 db.courses.insertMany([courseFrench, courseGerman])
 ```
 
-1. Crear un curso de Portugués Inicial únicamente si no existe previamente.
+### 3. Crear un curso de Portugués Inicial únicamente si no existe previamente.
 
 ```javascript
 const coursePortuguese = {
@@ -144,7 +144,7 @@ db.courses.updateOne(
 )
 ```
 
-1. Agregar un nuevo estudiante al curso de Inglés Intermedio, evitando duplicar si el DNI ya está cargado.
+### 4. Agregar un nuevo estudiante al curso de Inglés Intermedio, evitando duplicar si el DNI ya está cargado.
 
 ```javascript
 const newStudent = {
@@ -180,7 +180,7 @@ db.enrollments.updateOne(
 )
 ```
 
-1. Agregar dos exámenes nuevos a un estudiante específico dentro del curso de Inglés Intermedio. 
+### 5. Agregar dos exámenes nuevos a un estudiante específico dentro del curso de Inglés Intermedio.
 
 ```javascript
 const exam1 = {
@@ -204,7 +204,7 @@ db.enrollments.updateOne(
 )
 ```
 
-1. Listar los cursos de idioma Inglés mostrando idioma, nivel, turno y sede.
+### 6. Listar los cursos de idioma Inglés mostrando idioma, nivel, turno y sede.
 
 ```javascript
 db.courses.find(
@@ -219,7 +219,7 @@ db.courses.find(
 )
 ```
 
-1. Mostrar los nombres de los alumnos que cursan la materia (idioma) "Inglés".
+### 7. Mostrar los nombres de los alumnos que cursan la materia (idioma) "Inglés".
 
 ```javascript
 db.enrollments.aggregate([
@@ -256,7 +256,7 @@ db.enrollments.aggregate([
 ])
 ```
 
-1. Listar los alumnos que hayan obtenido una nota mayor o igual a 8 en algún examen.
+### 8. Listar los alumnos que hayan obtenido una nota mayor o igual a 8 en algún examen.
 
 ```javascript
 db.enrollments.aggregate([
@@ -285,7 +285,7 @@ db.enrollments.aggregate([
 ])
 ```
 
-1. Listar los alumnos que reprobaron al menos un examen (nota menor que 4).
+### 9. Listar los alumnos que reprobaron al menos un examen (nota menor que 4).
 
 ```javascript
 db.enrollments.aggregate([
@@ -314,7 +314,7 @@ db.enrollments.aggregate([
 ])
 ```
 
-1. Mostrar los cursos que ya tienen estudiantes con la clave recursa.
+### 10. Mostrar los cursos que ya tienen estudiantes con la clave recursa.
 
 ```javascript
 db.enrollments.aggregate([
@@ -344,62 +344,167 @@ db.enrollments.aggregate([
 ])
 ```
 
-1. Buscar alumnos cuyo nombre contenga el texto "ana" (sin distinguir mayúsculas o minúsculas).
+### 11. Buscar alumnos cuyo nombre contenga el texto "ana" (sin distinguir mayúsculas o minúsculas).
 
 ```javascript
-
+db.students.find({
+	fullName: {
+		$regex: 'Ana',
+		$options: 'i'
+	}
+})
 ```
 
-1. Mostrar el curso y los datos del alumno llamado exactamente "Lucas Fernández".
+### 12. Mostrar el curso y los datos del alumno llamado exactamente "Lucas Fernández".
 
 ```javascript
-
+db.students.aggregate([
+	{ $match: { fullName: 'Lucas Fernández'	} },
+	{
+		$lookup: {
+			from: 'enrollments',
+			localField: '_id',
+			foreignField: 'studentId',
+			as: 'enrollments'
+		}
+	},
+	{
+		$lookup: {
+			from: 'courses',
+			localField: 'enrollments.courseId',
+			foreignField: '_id',
+			as: 'courses'
+		}
+	},
+	{ $unwind: '$enrollments'	},
+	{
+		$project: {
+			_id: 0,
+			student: '$fullName',
+			email: 1,
+			courses: {
+				language: 1,
+				level: 1
+			}
+		}
+	}
+])
 ```
 
-1. Para todos los estudiantes con al menos una nota menor que 4, agregar la clave recursa: true.
+### 13. Para todos los estudiantes con al menos una nota menor que 4, agregar la clave recursa: true.
 
 ```javascript
-
+db.enrollments.updateMany(
+	{ 'exams.score': { $lt: 4 } },
+	{ $set: { isRecoursing: true } }
+)
 ```
 
-1. Corregir la nota de un examen específico, identificando al estudiante y la fecha del examen.
+### 14. Corregir la nota de un examen específico, identificando al estudiante y la fecha del examen.
 
 ```javascript
+const courseDoc = db.courses.findOne({ 
+	language: 'English', 
+	level: 'Intermediate' 
+})
 
+const studentDoc = db.students.findOne({ 
+	dni: '77888999' 
+})
+
+const newScore = 4
+
+db.enrollments.updateOne( 
+	{ studentId: studentDoc._id, courseId: courseDoc._id }, 
+	{ $push: { 
+			exams: { 
+				date: new Date('2026-05-10'), 
+				score: 2, 
+				modality: 'presential' 
+			} 
+		} 
+	} 
+)
+
+db.enrollments.updateOne(
+	{ 
+		studentId: studentDoc._id, 
+		'exams.date': new Date('2026-05-10') 
+	},
+	{ $set: { 
+		'exams.$.score': newScore 
+		} 
+	}
+)
 ```
 
-1. Agregar el correo electrónico a un estudiante que todavía no tenga el campo de email.
+### 15. Agregar el correo electrónico a un estudiante que todavía no tenga el campo de email.
 
 ```javascript
-
+db.students.updateOne(
+	{ dni: '44555666', email: { $exists: false } },
+	{ $set: {  email: 'maria.garcia@email.com' } }
+)
 ```
 
-1. Eliminar el último examen de la lista de un estudiante (por error de carga).
+### 16. Eliminar el último examen de la lista de un estudiante (por error de carga).
 
 ```javascript
+const studentDoc = db.students.findOne({ 
+	dni: '77888999' 
+})
 
+db.enrollments.updateOne(
+	{ studentId: studentDoc._id },
+	{ $pop: { exams: 1 } }
+)
 ```
 
-1. Eliminar de todos los estudiantes los exámenes que tengan nota igual a 0 (no válidos).
+### 17. Eliminar de todos los estudiantes los exámenes que tengan nota igual a 0 (no válidos).
 
 ```javascript
-
+db.enrollments.updateMany(
+	{},
+	{
+		$pull: {
+			exams: { score: 0 }
+		}
+	}
+)
 ```
 
-1. Renombrar el campo profesor del curso a docente.
+### 18. Renombrar el campo profesor del curso a docente.
 
 ```javascript
-
+db.courses.updateMany(
+	{},
+	{ $rename: { docente: 'teacher' } }
+)
 ```
 
-1. Eliminar un estudiante específico de un curso, identificándolo por DNI.
+### 19. Eliminar un estudiante específico de un curso, identificándolo por DNI.
 
 ```javascript
+const courseDoc = db.courses.findOne({ 
+	language: 'English', 
+	level: 'Intermediate' 
+})
 
+const studentDoc = db.students.findOne({ 
+	dni: '77888999' 
+})
+
+db.enrollments.deleteOne({
+	studentId: studentDoc._id,
+	courseId: courseDoc._id
+})
 ```
 
-1. Eliminar completamente el curso de Francés Inicial de la colección.
+### 20. Eliminar completamente el curso de Francés Inicial de la colección.
 
 ```javascript
-
+db.courses.deleteOne({
+	language: 'French',
+	level: 'Initial'
+})
 ```

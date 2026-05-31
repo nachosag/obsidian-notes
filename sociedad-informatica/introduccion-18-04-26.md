@@ -53,12 +53,12 @@ El comportamiento humano no solo está regulado por el derecho; coexisten distin
 Se denominan fuentes del derecho a las causas, hechos o actos de donde surgen o emanan las normas jurídicas vigentes en una sociedad. Las fuentes clásicas son:
 
 1. **La Ley:** Es la fuente primordial y principal en nuestro sistema continental. Consiste en la norma escrita, de carácter general, abstracto, obligatorio y permanente, emanada del órgano del Estado dotado de potestad legislativa (Poder Legislativo).
+	
+2. **La Costumbre (Costumbre Jurídica):** Es la repetición constante, uniforme y generalizada de un determinado comportamiento por parte de los miembros de una comunidad, realizada con la convicción profunda de que responder a una necesidad u obligación jurídica (*opinio iuris*).
     
-1. **La Costumbre (Costumbre Jurídica):** Es la repetición constante, uniforme y generalizada de un determinado comportamiento por parte de los miembros de una comunidad, realizada con la convicción profunda de que responder a una necesidad u obligación jurídica (*opinio iuris*).
+3. **La Jurisprudencia:** Es el conjunto de sentencias, fallos y decisiones concordantes dictadas por los tribunales de justicia. Sienta un criterio de interpretación uniforme y unificado ante casos de similar naturaleza, sirviendo de guía obligatoria o persuasiva para futuros litigios.
     
-1. **La Jurisprudencia:** Es el conjunto de sentencias, fallos y decisiones concordantes dictadas por los tribunales de justicia. Sienta un criterio de interpretación uniforme y unificado ante casos de similar naturaleza, sirviendo de guía obligatoria o persuasiva para futuros litigios.
-    
-1. **La Doctrina:** Consiste en las opiniones, estudios, interpretaciones y análisis científicos realizados por los juristas y teóricos del derecho. Carece de fuerza obligatoria formal, pero representa una guía intelectual fundamental para jueces y legisladores a la hora de aplicar o crear normas.
+4. **La Doctrina:** Consiste en las opiniones, estudios, interpretaciones y análisis científicos realizados por los juristas y teóricos del derecho. Carece de fuerza obligatoria formal, pero representa una guía intelectual fundamental para jueces y legisladores a la hora de aplicar o crear normas.
 
 ## 4. Principios Generales del Derecho
 

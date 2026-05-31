@@ -265,9 +265,9 @@ v = c(2,1,-1,0) + d(-1,0,0,1) = (2c,c,-c,0) + (-d,0,0,d) = (2c-d, c, -c, d)
 $$
 Igualamos coordenada a coordenada
 1. $-a+b=2c-d$.
-1. $b=c$.
-1. $-a+b=-c$.
-1. $a+b=d$.
+2. $b=c$.
+3. $-a+b=-c$.
+4. $a+b=d$.
 
 Por el item 2 tenemos que $b=c$.
 Sustituimos $b=c$ en el item 3 de forma tal que
@@ -1080,7 +1080,7 @@ Notemos que $dim(T)=3$.
 
 Para que $S$ y $T$ estén en **Suma Directa** ($S \oplus T$), deben cumplirse dos condiciones:
 1. **Intersección Trivial**: $S \cap T = \{\vec{0}\}$, es decir, $\text{dim}(S \cap T) = 0$.
-1. **Suma Completa**: $S + T = \mathbb{R}^4$, es decir, $\text{dim}(S + T) = 4$.
+2. **Suma Completa**: $S + T = \mathbb{R}^4$, es decir, $\text{dim}(S + T) = 4$.
 
 Verificamos la condición 1 (Intersección Trivial) utilizando el Teorema de la Dimensión para la Suma:
 $$\text{dim}(S + T) = \text{dim}(S) + \text{dim}(T) - \text{dim}(S \cap T)$$

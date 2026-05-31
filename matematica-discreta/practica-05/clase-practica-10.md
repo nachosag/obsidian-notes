@@ -3,8 +3,8 @@ Sea $G$ un grafo simple conexo, no completo. Probar que existen tres vértices d
 
 Conocemos los siguientes datos:
 1. $G$ es un grafo simple $\implies$ no hay bucles ni aristas múltiples.
-1. $G$ es conexo $\implies$ existe un camino entre cualquier par de vértices.
-1. $G$ no es completo $\implies$ existe al menos un par de vértices $a$ y $b$ que no son adyacentes.
+2. $G$ es conexo $\implies$ existe un camino entre cualquier par de vértices.
+3. $G$ no es completo $\implies$ existe al menos un par de vértices $a$ y $b$ que no son adyacentes.
 Por el segundo punto podemos afirmar que existe un camino de longitud mínima entre los vértices $a$ y $b$ que los tiene por extremos. $$
 a=v_{0},v_{1},v_{2},\dots,v_{k}=b,\quad k\geq2
 $$ Si usamos los tres primeros vértices del camino $P_{k}:x=v_{0},y=v_{1},z=v_{2}$: si $v_{0}$ fuera adyacente a $v_{2}$ entonces existiría un camino de longitud 1 entre ellos y esto implicaría que la secuencia $v_{0},v_{1},v_{2}$ ya no podría ser el camino de longitud mínima porque la ruta $v_{0},v_{2}$ sería mas corta.
@@ -42,9 +42,9 @@ Demostrar que si $G$ es un grafo simple con exactamente $2n$ vértices y $(n-1)$
 
 Tenemos:
 1. $G$ es un grafo simple.
-1. $|V(G)|=2n$.
-1. $G$ es $(n-1)$-regular: $d_{G}(v)=n-1$ para todo $v\in V(G)$.
-1. $\overline{G}$ es simple y tiene $|V(\overline{G})|=2n$.
+2. $|V(G)|=2n$.
+3. $G$ es $(n-1)$-regular: $d_{G}(v)=n-1$ para todo $v\in V(G)$.
+4. $\overline{G}$ es simple y tiene $|V(\overline{G})|=2n$.
 El objetivo es demostrar que el complemento $\overline{G}$ es conexo.
 
 El grado de un vértice $v$ en su complemento es $d_{\overline{G}}(v)=|V(G)|-d_{G}(v)-1$. Si realizamos la sustitución esto quedaría de la siguiente manera: $$

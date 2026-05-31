@@ -7,12 +7,12 @@ Cuando las necesidades de una aplicación superan las capacidades de un único s
 En este diseño, el flujo de una petición (lectura o escritura) sigue un orden jerárquico y estructurado para garantizar la disponibilidad y el rendimiento:
 
 1. **La Interfaz del Usuario**: El cliente (o la aplicación) se comunica enviando consultas o comandos (por ejemplo, a través de una consola SQL o una API de conexión).
-1. **Balanceador de Carga (Load Balancer)**:
+2. **Balanceador de Carga (Load Balancer)**:
     
     - Es el punto de entrada que recibe todas las peticiones entrantes. Su función principal es distribuir el tráfico de manera equitativa entre los nodos disponibles para evitar cuellos de botella.
     - Puede implementarse por **Hardware** (dispositivos físicos dedicados extremadamente rápidos, como F5) o por **Software** (servicios configurables de balanceo de carga, como Nginx, HAProxy o AWS ALB).
       
-1. **Nodos del Cluster**: La petición es redirigida a uno de los $N$ nodos del cluster.
+3. **Nodos del Cluster**: La petición es redirigida a uno de los $N$ nodos del cluster.
 
 ### Corrigiendo el Flujo de Replicación: ¿Cómo se escribe realmente?
 
@@ -48,9 +48,9 @@ Se suele caracterizar mediante las **3 V** de la gestión de datos:
 
 1. **Volumen**: La cantidad masiva de datos que deben persistirse (Terabytes, Petabytes).
     
-1. **Velocidad**: El ritmo acelerado con el que los datos ingresan y deben ser procesados en tiempo real o casi real.
+2. **Velocidad**: El ritmo acelerado con el que los datos ingresan y deben ser procesados en tiempo real o casi real.
     
-1. **Variedad**: La diversidad de formatos en los que llegan los datos (estructurados, semiestructurados como JSON, o no estructurados como archivos multimedia).
+3. **Variedad**: La diversidad de formatos en los que llegan los datos (estructurados, semiestructurados como JSON, o no estructurados como archivos multimedia).
 
 ## Taxonomías de Bases de Datos NoSQL
 

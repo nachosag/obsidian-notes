@@ -19,20 +19,20 @@ El determinante de una matriz A, denotado como `det(A)` o `|A|`, se puede calcul
 El determinante se rige por un conjunto de propiedades clave que facilitan su cálculo y comprensión.
 
 1. **Determinante de la Identidad:** `det(I) = 1`.
-1. **Intercambio de Filas:** Si se intercambian dos filas de una matriz, el signo de su determinante cambia.
-1. **Dependencia Lineal:** El determinante depende linealmente de cada una de sus filas. Esto implica:
+2. **Intercambio de Filas:** Si se intercambian dos filas de una matriz, el signo de su determinante cambia.
+3. **Dependencia Lineal:** El determinante depende linealmente de cada una de sus filas. Esto implica:
     - Si se multiplica una fila por un escalar *t*, el determinante se multiplica por *t*.
     - Si una fila es la suma de dos vectores, el determinante es la suma de los determinantes correspondientes.
-1. **Filas Iguales:** Si una matriz tiene dos filas iguales, su determinante es 0.
-1. **Operaciones Elementales:** Restar un múltiplo de una fila a otra no cambia el determinante. Esta propiedad es fundamental para el método de eliminación gaussiana.
-1. **Fila de Ceros:** Si una matriz tiene una fila compuesta enteramente por ceros, su determinante es 0.
-1. **Matrices Triangulares:** El determinante de una matriz triangular (superior o inferior) es el producto de los elementos de su diagonal principal.
-1. **Singularidad:** Una matriz A es singular (no invertible) si y solo si `det(A) = 0`. Si es invertible, `det(A) ≠ 0`.
-1. **Determinante de un Producto:** El determinante del producto de dos matrices es el producto de sus determinantes: `det(AB) = det(A) * det(B)`.
-1. **Determinante de la Traspuesta:** El determinante de una matriz traspuesta es igual al de la matriz original: `det(Aᵀ) = det(A)`. Esto implica que todas las propiedades válidas para las filas también son válidas para las columnas.
-1. **Determinante de un múltiplo escalar:** Si `k` es un escalar y `M` una matriz `n * n` entonces `det(kM) = k^n * det(M)`.
-1. **Determinante de la matriz inversa:** Si `M` es invertible, entonces `det(M⁻1) = 1 / det(M)`.
-1. **Potencias de una matriz:** Para cualquier entero positivo `n`, `det(M^n) = (det(M))^n`.
+4. **Filas Iguales:** Si una matriz tiene dos filas iguales, su determinante es 0.
+5. **Operaciones Elementales:** Restar un múltiplo de una fila a otra no cambia el determinante. Esta propiedad es fundamental para el método de eliminación gaussiana.
+6. **Fila de Ceros:** Si una matriz tiene una fila compuesta enteramente por ceros, su determinante es 0.
+7. **Matrices Triangulares:** El determinante de una matriz triangular (superior o inferior) es el producto de los elementos de su diagonal principal.
+8. **Singularidad:** Una matriz A es singular (no invertible) si y solo si `det(A) = 0`. Si es invertible, `det(A) ≠ 0`.
+9. **Determinante de un Producto:** El determinante del producto de dos matrices es el producto de sus determinantes: `det(AB) = det(A) * det(B)`.
+10. **Determinante de la Traspuesta:** El determinante de una matriz traspuesta es igual al de la matriz original: `det(Aᵀ) = det(A)`. Esto implica que todas las propiedades válidas para las filas también son válidas para las columnas.
+11. **Determinante de un múltiplo escalar:** Si `k` es un escalar y `M` una matriz `n * n` entonces `det(kM) = k^n * det(M)`.
+12. **Determinante de la matriz inversa:** Si `M` es invertible, entonces `det(M⁻1) = 1 / det(M)`.
+13. **Potencias de una matriz:** Para cualquier entero positivo `n`, `det(M^n) = (det(M))^n`.
 
 ### Aplicaciones Clave
 

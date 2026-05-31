@@ -1,7 +1,7 @@
 # Ejercicio 11
 ![[Pasted image 20250907180726.png]]
 1. ![[Pasted image 20250907181136.png]]
-1. Cálculos:
+2. Cálculos:
 $$
 \begin{gather}
 A+C \\
@@ -434,8 +434,8 @@ Estos son los datos que tenemos:
 - Plano $\Pi:-x+y-2z=9$. Su vector normal es $n=(-1,1,-2)$.
 Queremos una recta $L$ que:
 1. Sea perpendicular a $L_{1}\implies$su vector director $v$ debe cumplir $v\cdot u_{1}=0$.
-1. Sea paralela al plano $\Pi\implies v$ debe ser perpendicular al normal del plano: $v\cdot n=0$.
-1. Tenga un punto en común con $L_{2}\implies L$ debe pasar por algún punto $r_{2}(t)$ para algún $t$.
+2. Sea paralela al plano $\Pi\implies v$ debe ser perpendicular al normal del plano: $v\cdot n=0$.
+3. Tenga un punto en común con $L_{2}\implies L$ debe pasar por algún punto $r_{2}(t)$ para algún $t$.
 <mark style="background: #FF5582A6;">Paso 1</mark>
 Las condiciones 1 y 2 significan que $v$ debe ser ortogonal simultaneamente a $u_{1}$ y a $n$. Un vector ortogonal a ambos es el producto vectorial $$
 v=u_{1}\times n
