@@ -14,20 +14,20 @@ Un instituto de idiomas dicta **cursos** de Inglés, Francés, Alemán y Portugu
 ## Diseño de las colecciones `enrollments`, `students` y `courses`
 
 ```typescript
-export type Exam = {
+type Exam = {
 	date: Date
 	score: number
 	modality: 'presential' | 'virtual'
 }
 
-export type Student = {
+type Student = {
 	_id: ObjectId
 	fullName: string
 	dni: string
 	email?: string
 }
 
-export type Course = {
+type Course = {
 	_id: ObjectId
 	language: 'English' | 'French' | 'German' | 'Portuguese'
 	level: 'Initial' | 'Intermediate' | 'Advanced'
@@ -36,7 +36,7 @@ export type Course = {
 	location: string
 }
 
-export type Enrollment = {
+type Enrollment = {
 	_id: ObjectId
 	courseId: ObjectId
 	studentId: ObjectId

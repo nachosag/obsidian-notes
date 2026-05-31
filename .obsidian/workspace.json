@@ -13,44 +13,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "base-de-datos-2/mongodb/languages.md",
+                "file": "base-de-datos-2/mongodb/hospital-appointments.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "languages"
-            }
-          },
-          {
-            "id": "8c4e499c8b17fd92",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "base-de-datos-2/mongodb/e-commerce.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "e-commerce"
-            }
-          },
-          {
-            "id": "ede3bda08c58f261",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "base-de-datos-2/mongodb/languages-redone.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "languages-redone"
+              "title": "hospital-appointments"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -210,13 +181,14 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "8c4e499c8b17fd92",
+  "active": "9e577fadfe2d27ba",
   "lastOpenFiles": [
     "base-de-datos-2/mongodb/languages-redone.md",
+    "base-de-datos-2/mongodb/hospital-appointments.md",
     "base-de-datos-2/mongodb/e-commerce.md",
+    "base-de-datos-2/mongodb/languages.md",
     "base-de-datos-2/mongodb/books.md",
     "base-de-datos-2/mongodb/courses.md",
-    "base-de-datos-2/mongodb/languages.md",
     "base-de-datos-2/plan-de-estudio.md",
     "base-de-datos-2/multiple-choice.md",
     "sociedad-informatica/guia-de-estudio.md",
@@ -237,7 +209,6 @@
     "base-de-datos-2/cassandra/hotels-2.md",
     "base-de-datos-2/cassandra/hotels-1.md",
     "algebra-lineal/parciales/primer-parcial/resumenes/rouche-frobenius.md",
-    "sociedad-informatica/derecho-informatico-16-05-26-copia.md",
     "sociedad-informatica/anexos/Pasted image 20260528002246.png",
     "sociedad-informatica/anexos",
     "sociedad-informatica",
