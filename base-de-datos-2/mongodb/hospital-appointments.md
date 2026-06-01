@@ -54,7 +54,7 @@ type Patient = {
 	healthInsurance: string,
 	bloodType: string,
 	allergies: string[],
-	frequent: false // Para el caso de uso 7 y 8
+	frequent: boolean // Para el caso de uso 7 y 8
 }
 
 type Doctor = {

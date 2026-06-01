@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "base-de-datos-2/mongodb/hospital-appointments.md",
+                "file": "base-de-datos-2/cassandra/courses-platform.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "hospital-appointments"
+              "title": "courses-platform"
             }
           }
         ]
@@ -53,12 +53,12 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "rouche",
+                "query": "path:\"base-de-datos-2/notes/\"  line:(tipo de dato))",
                 "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
+                "explainSearch": true,
+                "collapseAll": true,
+                "extraContext": true,
+                "sortOrder": "byCreatedTime"
               },
               "icon": "lucide-search",
               "title": "Buscar"
@@ -183,20 +183,25 @@
   },
   "active": "9e577fadfe2d27ba",
   "lastOpenFiles": [
-    "base-de-datos-2/mongodb/languages-redone.md",
-    "base-de-datos-2/mongodb/hospital-appointments.md",
-    "base-de-datos-2/mongodb/e-commerce.md",
-    "base-de-datos-2/mongodb/languages.md",
+    "base-de-datos-2/notes/errores-confusiones.md",
+    "base-de-datos-2/notes/apuntes-30-04-26.md",
+    "base-de-datos-2/cassandra/courses-platform.md",
+    "base-de-datos-2/notes/apuntes-12-03-26.md",
+    "sociedad-informatica/guia-de-estudio.md",
     "base-de-datos-2/mongodb/books.md",
     "base-de-datos-2/mongodb/courses.md",
+    "base-de-datos-2/mongodb/e-commerce.md",
+    "base-de-datos-2/mongodb/flights.md",
+    "base-de-datos-2/mongodb/hospital-appointments.md",
+    "base-de-datos-2/mongodb/languages.md",
+    "base-de-datos-2/mongodb/languages-redone.md",
+    "base-de-datos-2/mongodb/quotes.md",
+    "base-de-datos-2/mongodb/library.md",
     "base-de-datos-2/plan-de-estudio.md",
     "base-de-datos-2/multiple-choice.md",
-    "sociedad-informatica/guia-de-estudio.md",
     "README.md",
     "base-de-datos-2/dudas.md",
     "base-de-datos-2/Sin título.md",
-    "base-de-datos-2/mongodb/quotes.md",
-    "base-de-datos-2/cassandra/courses-platform.md",
     "base-de-datos-2/cassandra/educational-platform.md",
     "base-de-datos-2/cassandra/delivery.md",
     "base-de-datos-2/cassandra/streaming-platform.md",
@@ -204,11 +209,6 @@
     "sociedad-informatica/derecho-informatico-16-05-26.md",
     "sociedad-informatica/personas-25-04-26.md",
     "sociedad-informatica/introduccion-18-04-26.md",
-    "base-de-datos-2/tarjetas.md",
-    "base-de-datos-2/cassandra/portal.md",
-    "base-de-datos-2/cassandra/hotels-2.md",
-    "base-de-datos-2/cassandra/hotels-1.md",
-    "algebra-lineal/parciales/primer-parcial/resumenes/rouche-frobenius.md",
     "sociedad-informatica/anexos/Pasted image 20260528002246.png",
     "sociedad-informatica/anexos",
     "sociedad-informatica",
