@@ -13,7 +13,7 @@ CREATE TABLE students_by_student_id (
 	student_id UUID,
 	skills SET<TEXT>,
 	contact_links MAP<TEXT, TEXT>,
-	recent_view_courses: LIST<UUID>,
+	recent_view_courses LIST<UUID>,
 	
 	PRIMARY KEY (student_id)
 );
@@ -92,12 +92,6 @@ WHERE
 
 #### 5. Obtener las calificaciones de un curso en una institución determinada, ordenadas por nota descendente y, a igualdad de nota, por fecha de evaluación.
 
-##### `scores_by_course_id_and_institution_id`
-
-| `(PK) course_id: UUID` | `(PK) institution_id: UUID` | `(CK) score: INT` | `(CK) evaluation_date: DATE` | `(CK) student_id: UUID` | `…` |
-| ---------------------- | --------------------------- | ----------------- | ---------------------------- | ----------------------- | ----- |
-|                        |                             |                   |                              |                         |       |
-
 ```cql
 CREATE TABLE scores_by_course_id_and_institution_id (
 	course_id UUID,
@@ -131,6 +125,7 @@ CREATE TABLE homework_by_teacher_id_course_id_and_date (
 	homework_id UUID,
 	
 	PRIMARY KEY ((teacher_id, course_id, date), delivery_time, student_id, homework_id)
+	
 ) WITH CLUSTERING ORDER BY (delivery_time ASC, student_id ASC, homework_id ASC);
 ```
 
@@ -147,23 +142,18 @@ WHERE
 
 #### 7. Obtener las métricas de un curso por canal de acceso, país y mes, ordenadas por día.
 
-##### `metrics_by_course_channel_country_and_month`
-
-| `(PK) course_id: UUID` | `(PK) channel: TEXT` | `(PK) country: TEXT` | `(PK) month: INT` | `(CK) day: INT` | `(CK) metric_id: UUID` | `…` |
-| ---------------------- | -------------------- | -------------------- | ----------------- | --------------- | ---------------------- | ----- |
-|                        |                      |                      |                   |                 |                        |       |
-
 ```cql
 CREATE TABLE metric_by_course_channel_country_and_month (
 	course_id UUID,
 	channel TEXT,
-	country TEXT
+	country TEXT,
 	month INT,
 	day INT,
 	metric_id UUID,
 	
 	PRIMARY KEY ((course_id, channel, country, month), day, metric_id)
-) WITH CLUSTERING ORDER BY (day ASC, metric_id ASC)
+	
+) WITH CLUSTERING ORDER BY (day ASC, metric_id ASC);
 ```
 
 ```cql
@@ -183,84 +173,119 @@ Las operaciones se aplican sobre la tabla de estudiantes, que debe contener un S
 #### 1. Insertar un estudiante con sus habilidades (SET), enlaces (MAP) y cursos vistos (LIST) cargados.
 
 ```cql
-
+INSERT INTO students_by_student_id (student_id, skills, contact_links, recent_view_courses)
+VALUES (
+	uuid(),
+	{'habilidad_A', 'habilidad_B'},
+	{'nombre_red': 'url_perfil', 'otra_red': 'otra_url'},
+	[uuid(), uuid()]
+);
 ```
 
 #### 2. Insertar un segundo estudiante con valores mínimos pero incluyendo al menos una habilidad, un enlace y un curso visto.
 
 ```cql
-
+INSERT INTO students_by_student_id (student_id, skills, contact_links, recent_view_courses)
+VALUES (
+	uuid(),
+	{'unsa_sola_habilidad'},
+	{'una_red': 'su_url'},
+	[uuid()]
+);
 ```
 #### 3. Agregar la habilidad "python" al SET skills usando el operador +.
 
 ```cql
-
+UPDATE students_by_student_id
+SET skills += {'python'} 
+WHERE student_id = 6a4c0eee-0dd6-49f3-a014-cb42224afa87 ;
 ```
 
 #### 4. Eliminar la habilidad "excel" del SET skills usando el operador -.
 
 ```cql
-
+UPDATE students_by_student_id
+SET skills -= {'excel'}
+WHERE student_id = 6a4c0eee-0dd6-49f3-a014-cb42224afa87;
 ```
 
 #### 5. Reemplazar todo el contenido del SET skills por uno nuevo.
 
 ```cql
-
+UPDATE students_by_student_id
+SET skills = {'nueva_habilidad'}
+WHERE student_id = e473cec4-918a-4307-ae1f-a28dd7c689d3;
 ```
 
 #### 6. Agregar (o actualizar si ya existía) un enlace al MAP links usando el operador +.
 
 ```cql
-
+UPDATE students_by_student_id
+SET contact_links += {'github': 'www.github.com/nachosag'}
+WHERE student_id = 6a4c0eee-0dd6-49f3-a014-cb42224afa87 ;
 ```
 
 #### 7. Actualizar un enlace puntual usando la sintaxis de acceso por clave links['linkedin'].
 
 ```cql
-
+UPDATE students_by_student_id
+SET contact_links['linkedin'] = 'https://linkedin.com/in/ignacio-borlenghi'
+WHERE student_id = 6a4c0eee-0dd6-49f3-a014-cb42224afa87 ;
 ```
 
 #### 8. Eliminar una clave específica del MAP links.
   
 ```cql
-
+UPDATE students_by_student_id
+SET contact_links -= {'linkedin'}
+WHERE student_id = 6a4c0eee-0dd6-49f3-a014-cb42224afa87 ;
 ```
 
 #### 9. Agregar un curso al final de la LIST recent_courses usando el operador +.
 
 ```cql
-
+UPDATE students_by_student_id
+SET recent_view_courses += [uuid()]
+WHERE student_id = 6a4c0eee-0dd6-49f3-a014-cb42224afa87 ;
 ```
 
 #### 10. Anteponer un curso al inicio de la LIST recent_courses.
 
 ```cql
-
+UPDATE students_by_student_id
+SET recent_view_courses = [uuid()] + recent_view_courses
+WHERE student_id = 6a4c0eee-0dd6-49f3-a014-cb42224afa87 ;
 ```
 
 #### 11. Reemplazar el curso en una posición específica de la LIST recent_courses[0].
 
 ```cql
-
+UPDATE students_by_student_id
+SET recent_view_courses[0] = uuid()
+WHERE student_id = 6a4c0eee-0dd6-49f3-a014-cb42224afa87 ;
 ```
 
 #### 12. Eliminar un valor concreto de la LIST recent_courses.
 
 ```cql
-
+UPDATE students_by_student_id
+SET recent_view_courses -= [8239dc18-652f-4e56-b662-ed250b64ad16]
+WHERE student_id = 6a4c0eee-0dd6-49f3-a014-cb42224afa87 ;
 ```
 
 #### 13. Borrar únicamente la columna skills del registro, sin eliminar el resto.
 
 ```cql
-
+DELETE skills
+FROM students_by_student_id
+WHERE student_id = 6a4c0eee-0dd6-49f3-a014-cb42224afa87 ;
 ```
 
 #### 14. Eliminar el registro completo del estudiante.
 
 ```cql
-
+DELETE FROM students_by_student_id
+WHERE student_id = e473cec4-918a-4307-ae1f-a28dd7c689d3 ;
 ```
 
 ## Entrega

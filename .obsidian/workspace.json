@@ -4,21 +4,21 @@
     "type": "split",
     "children": [
       {
-        "id": "3d8a6fa681c78af2",
+        "id": "5873fc8ab9ff3e82",
         "type": "tabs",
         "children": [
           {
-            "id": "9e577fadfe2d27ba",
+            "id": "eb547db32dfff237",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "base-de-datos-2/cassandra/courses-platform.md",
+                "file": "base-de-datos-2/cassandra/world-cup.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "courses-platform"
+              "title": "world-cup"
             }
           }
         ]
@@ -53,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "path:\"base-de-datos-2/notes/\"  line:(tipo de dato))",
+                "query": "group",
                 "matchingCase": false,
                 "explainSearch": true,
                 "collapseAll": true,
@@ -88,8 +88,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5,
-    "collapsed": true
+    "width": 267.5
   },
   "right": {
     "id": "60744be18a06282d",
@@ -181,11 +180,12 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "9e577fadfe2d27ba",
+  "active": "696b8c848afd1155",
   "lastOpenFiles": [
+    "base-de-datos-2/cassandra/world-cup.md",
+    "base-de-datos-2/cassandra/courses-platform.md",
     "base-de-datos-2/notes/errores-confusiones.md",
     "base-de-datos-2/notes/apuntes-30-04-26.md",
-    "base-de-datos-2/cassandra/courses-platform.md",
     "base-de-datos-2/notes/apuntes-12-03-26.md",
     "sociedad-informatica/guia-de-estudio.md",
     "base-de-datos-2/mongodb/books.md",
@@ -205,7 +205,6 @@
     "base-de-datos-2/cassandra/educational-platform.md",
     "base-de-datos-2/cassandra/delivery.md",
     "base-de-datos-2/cassandra/streaming-platform.md",
-    "base-de-datos-2/cassandra/world-cup.md",
     "sociedad-informatica/derecho-informatico-16-05-26.md",
     "sociedad-informatica/personas-25-04-26.md",
     "sociedad-informatica/introduccion-18-04-26.md",
