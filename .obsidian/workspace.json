@@ -4,21 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "5873fc8ab9ff3e82",
+        "id": "990ae0bf925f4964",
         "type": "tabs",
         "children": [
           {
-            "id": "eb547db32dfff237",
+            "id": "ecef5302d0183747",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "base-de-datos-2/cassandra/world-cup.md",
+                "file": "base-de-datos-2/multiple-choice.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "world-cup"
+              "title": "multiple-choice"
+            }
+          },
+          {
+            "id": "3c2235f0cfe5ed20",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "base-de-datos-2/dudas.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "dudas"
             }
           }
         ]
@@ -35,13 +49,13 @@
         "type": "tabs",
         "children": [
           {
-            "id": "696b8c848afd1155",
+            "id": "8bc675f629608819",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": true
               },
               "icon": "lucide-folder-closed",
               "title": "Explorador de archivos"
@@ -65,16 +79,6 @@
             }
           },
           {
-            "id": "064f20b7111ffef9",
-            "type": "leaf",
-            "state": {
-              "type": "bookmarks",
-              "state": {},
-              "icon": "lucide-bookmark",
-              "title": "Bookmarks"
-            }
-          },
-          {
             "id": "4002cea30ee603af",
             "type": "leaf",
             "state": {
@@ -88,7 +92,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 267.5
+    "width": 267.5,
+    "collapsed": true
   },
   "right": {
     "id": "60744be18a06282d",
@@ -98,37 +103,6 @@
         "id": "eeeb2da969b94033",
         "type": "tabs",
         "children": [
-          {
-            "id": "ea6a90103bdb8b14",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Enlaces entrantes"
-            }
-          },
-          {
-            "id": "720fda297a9b7527",
-            "type": "leaf",
-            "state": {
-              "type": "outgoing-link",
-              "state": {
-                "linksCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-going-out",
-              "title": "Outgoing links"
-            }
-          },
           {
             "id": "a4d810856c79370b",
             "type": "leaf",
@@ -145,18 +119,32 @@
             }
           },
           {
-            "id": "14acf8cb1e50b37b",
+            "id": "81441b787739927e",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "algebra-lineal/practica-02-e11-25.md",
-                "followCursor": true,
+                "file": "base-de-datos-2/multiple-choice.md",
+                "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of practica-02-e11-25"
+              "title": "Esquema de multiple-choice"
+            }
+          },
+          {
+            "id": "c0e22998bb1d4a9b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "base-de-datos-2/multiple-choice.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Enlaces salientes de multiple-choice"
             }
           }
         ]
@@ -177,11 +165,28 @@
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": false,
       "github-sync:Sync with Remote": false,
-      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
+      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false,
+      "workspaces:Gestionar disposiciones de espacio de trabajo": false,
+      "zk-prefixer:Crear nueva nota única": false
     }
   },
-  "active": "696b8c848afd1155",
+  "active": "ecef5302d0183747",
   "lastOpenFiles": [
+    "base-de-datos-2/dudas.md",
+    "base-de-datos-2/multiple-choice.md",
+    "base-de-datos-2/tarjetas.md",
+    "base-de-datos-2/cassandra/delivery.md",
+    "base-de-datos-2/cassandra/hotels-1.md",
+    "base-de-datos-2/cassandra/hotels-2.md",
+    "base-de-datos-2/cassandra/streaming-platform.md",
+    "base-de-datos-2/cassandra/portal.md",
+    "base-de-datos-2/cassandra/anexos/Pasted image 20260602223848.png",
+    "base-de-datos-2/cassandra/portal-v2.md",
+    "base-de-datos-2/cassandra/anexos/Pasted image 20260602212406.png",
+    "base-de-datos-2/cassandra/anexos/Pasted image 20260602212345.png",
+    "base-de-datos-2/cassandra/anexos",
+    "base-de-datos-2/cassandra/anexos/Pasted image 20260602211054.png",
+    "base-de-datos-2/cassandra/anexos/Pasted image 20260602211030.png",
     "base-de-datos-2/cassandra/world-cup.md",
     "base-de-datos-2/cassandra/courses-platform.md",
     "base-de-datos-2/notes/errores-confusiones.md",
@@ -198,16 +203,7 @@
     "base-de-datos-2/mongodb/quotes.md",
     "base-de-datos-2/mongodb/library.md",
     "base-de-datos-2/plan-de-estudio.md",
-    "base-de-datos-2/multiple-choice.md",
     "README.md",
-    "base-de-datos-2/dudas.md",
-    "base-de-datos-2/Sin título.md",
-    "base-de-datos-2/cassandra/educational-platform.md",
-    "base-de-datos-2/cassandra/delivery.md",
-    "base-de-datos-2/cassandra/streaming-platform.md",
-    "sociedad-informatica/derecho-informatico-16-05-26.md",
-    "sociedad-informatica/personas-25-04-26.md",
-    "sociedad-informatica/introduccion-18-04-26.md",
     "sociedad-informatica/anexos/Pasted image 20260528002246.png",
     "sociedad-informatica/anexos",
     "sociedad-informatica",
@@ -216,19 +212,13 @@
     "base-de-datos-2/notes/anexos/Pasted image 20260315204421.png",
     "base-de-datos-2/notes/anexos/Pasted image 20260520225046.png",
     "base-de-datos-2/notes/anexos/Pasted image 20260520225001.png",
-    "base-de-datos-2/notes/anexos/Pasted image 20260520224957.png",
-    "base-de-datos-2/notes/anexos/Pasted image 20260520225021.png",
-    "base-de-datos-2/notes/anexos/Pasted image 20260520224248.png",
     "base-de-datos-2/notes/anexos",
     "base-de-datos-2/notes",
     "base-de-datos-2/cassandra",
     "matematica-discreta/practica-01/practica-01-MD.pdf",
     "base-de-datos-2/mongodb",
     "organizacion-del-computador-2/compiladores",
-    "organizacion-del-computador-2/repaso/01-repaso.pdf",
     "Sin título.canvas",
-    "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251221013143.png",
-    "matematica-discreta/parciales/combinatoria/anexos/Pasted image 20251221013122.png",
     "algebra-lineal/parciales/primer-parcial/Untitled.canvas",
     "Untitled.canvas"
   ]
