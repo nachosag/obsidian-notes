@@ -7,14 +7,18 @@
 **2. ¿Qué es un modelo de utilidad?** 
 
 - Es un título de propiedad industrial que protege toda **disposición o forma nueva introducida en herramientas o dispositivos conocidos** que se presten a un trabajo práctico, en cuanto importen una **mejor utilización, mayor comodidad o ventaja funcional** para su empleo.
+- <mark style="background: #FFB8EBA6;">Es un título que protege toda disposición o nueva forma aplicada a una herramienta o dispositivo con el objetivo de mejorar su usabilidad</mark>
 
 **3. ¿Cuál es la diferencia entre la informática jurídica y el derecho informático?** 
 
 - La **informática jurídica** es una disciplina instrumental donde la tecnología (hardware y software) actúa como una **herramienta aplicada para optimizar el derecho** y la actividad legal. En cambio, el **derecho informático** es una rama jurídica autónoma donde **la tecnología es el objeto de estudio y regulación**.
+- <mark style="background: #FFB8EBA6;">La informática jurídica es la informática aplicada a procesos del derecho mientras que el derecho informático es una rama del derecho que estudia y regula el uso de la tecnología
+</mark>
 
-**4. ¿Qué es el Certificado Digital?** 
+**4. ¿Qué es el Certificado Digital?**
 
 - Es un documento digital emitido por un **Certificador Licenciado** autorizado por el Estado, que vincula los datos de verificación de firma a su titular y es requisito indispensable para que una firma digital tenga plena validez legal.
+- <mark style="background: #FFB8EBA6;">Es un <strong>documento digital</strong> que vincula la identidad del firmante con su clave pública</mark>
 
 **5. Mencione tres ejemplos de persona jurídica de carácter público y tres ejemplos de persona jurídica de carácter privado.**
 
@@ -24,6 +28,7 @@
 **6. ¿Qué tipos de domicilio existen?** 
 
 - De acuerdo con las normativas, existen el **domicilio real** (asiento físico y habitual de la persona) y el **domicilio constituido o legal** (aquel que la ley asigna o que se fija para un trámite o contrato específico).
+- <mark style="background: #FFB8EBA6;">Existen dos tipos de domicilios. El <strong>domicilio real</strong> es aquel donde una persona reside de forma física, mientras que el <strong>domicilio legal</strong> es aquel donde la ley asume que una persona habita.</mark>
 
 # NIVEL 2: Definiciones y Clasificaciones Básicas (Complejidad Media)
 
@@ -33,13 +38,23 @@
 
 	- **Derecho Objetivo:** Es el conjunto de normas jurídicas (leyes, costumbres) de carácter obligatorio que establece el Estado para regir la vida humana en sociedad.
 	- **Derecho Subjetivo:** Es la facultad, poder o prerrogativa que el ordenamiento le otorga a un individuo para obrar lícitamente o para exigir de otra persona una determinada conducta.
+		- <mark style="background: #FFB8EBA6;">Es el <strong>poder</strong> que otorgan las normas jurídicas para actuar de una manera determinada o exigir a otra persona que cumpla con una obligación</mark>
 
 **8. ¿Cuáles son las dos principales divisiones del derecho? Explique las diferencias.**
 
 - **Derecho Privado:** Regula las relaciones entre particulares (o de particulares con el Estado cuando actúa como un particular más) en un plano de igualdad. Se basa en el principio de la **autonomía de la voluntad**, donde las partes tienen libertad para definir sus relaciones.
 - **Derecho Público:** Regula las relaciones de los ciudadanos con los órganos del Estado cuando estos actúan con potestad pública (*imperium*). Su principio es la **subordinación** del particular frente al Estado y sus normas son **obligatorias e imperativas** en defensa del interés público.
 
+| Criterio                   | Derecho Privado                                                                                                                                                                                                                                                    | Derecho Público                                                                                                                                                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Sujetos**                | Particulares entre sí, y la interacción de particulares con el Estado cuando este actúa como un simple particular (sin poder de autoridad).                                                                                                                        | Órganos del Estado entre sí, y la interacción del Estado con particulares cuando ejerce su poder de autoridad.                                                                                                        |
+| **Tipo de relación**       | De igualdad o coordinación.<br><br>- A pesar de que puede haber diferencias de poder entre los particulares, que la relación sea de igualdad significa que ninguna de las partes tiene el poder del Estado a su favor para imponer obligaciones a la otra persona. | De subordinación (del particular frente al poder del Estado).<br><br>- Podría ocurrir que dos organismos públicos se relacionan de manera igualitaria o coordinada, sin embargo esto es una excepción de la práctica. |
+| **Carácter de las normas** | Rige la autonomía de la voluntad de las partes.<br><br>- Los particulares son libres de negociar y definir las condiciones de sus acuerdos como mejor les parezca, siempre que no violen las leyes básicas.                                                        | Son obligatorias e imperativas.<br><br>- Significa que el Estado las impone de manera estricta para proteger el interés y orden general, por lo que no pueden ser modificadas ni negociadas.                          |
+| **Finalidad**              | Satisfacer los intereses de los particulares.                                                                                                                                                                                                                      | Resguardar el interés público y el orden general.                                                                                                                                                                     |
+
 **9. ¿Cuáles son los atributos de la persona?** 
+
+> *Acrónimo:* Cada Estudiante Puede Nombrar Derechos
 
 - Los atributos son cualidades esenciales e inviolables que individualizan a la persona humana: 
 
@@ -52,6 +67,9 @@
 **10. ¿Qué es una persona jurídica y cuándo comienza su existencia?** 
 
 - Son entes de existencia ideal a los cuales el ordenamiento jurídico les confiere **aptitud para adquirir derechos y contraer obligaciones**. La existencia de las personas jurídicas privadas **comienza a partir de su constitución** mediante un acto jurídico (como un estatuto), y no pueden funcionar hasta obtener la autorización del Estado en los casos en que la ley así lo exija.
+- <mark style="background: #FFB8EBA6;">Una persona jurídica es un <strong>ente inmaterial</strong> al que el ordenamiento jurídico le confiere la aptitud/capacidad de adquirir derechos y contraer obligaciones para cumplir con sus fines.</mark>
+	- Una persona jurídica privada comienza a existir desde el día de su constitución
+	- Una persona jurídica pública comienza a existir en el momento exacto en el que se sanciona una ley con el propósito de crearla
 
 **11. Mencione tres causales de fin de existencia de una persona jurídica.** 
 
