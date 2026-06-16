@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "7cdce0bd246350fb",
+        "id": "a721958db04ccfa3",
         "type": "tabs",
         "children": [
           {
-            "id": "a31ebc1080c50360",
+            "id": "8ec17232bec70cb6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "organizacion-del-computador-2/compiladores/compiladores-resumen.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "compiladores-resumen"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -142,23 +137,29 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-excalidraw-plugin:New drawing": false,
       "switcher:Abrir selector rápido": false,
       "graph:Abrir vista gráfica": false,
       "canvas:Crear nuevo lienzo": false,
       "command-palette:Abrir paleta de comandos": false,
       "bases:Crear nueva base": false,
-      "github-sync:Sync with Remote": false,
-      "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
+      "github-sync:Sync with Remote": false
     }
   },
-  "active": "a31ebc1080c50360",
+  "active": "8bc675f629608819",
   "lastOpenFiles": [
+    "organizacion-del-computador-2/compiladores/compiladores.md",
+    "organizacion-del-computador-2/threads/arquitectura-paralela.md",
+    "organizacion-del-computador-2/threads/arquitectura-paralela-01.pdf",
+    "organizacion-del-computador-2/pipelines/pipelines.md",
+    "organizacion-del-computador-2/instrucciones/instrucciones.md",
+    "organizacion-del-computador-2/threads/threads.md",
+    "organizacion-del-computador-2/threads/threads-01.pdf",
     "organizacion-del-computador-2/arquitectura/arquitectura-01.pdf",
     "organizacion-del-computador-2/arquitectura/arquitectura-02.pdf",
     "organizacion-del-computador-2/arquitectura/arquitectura-apuntes-01.md",
     "organizacion-del-computador-2/arquitectura/arquitectura-apuntes-02.md",
     "organizacion-del-computador-2/arquitectura/arquitectura-feynmann-01.md",
-    "organizacion-del-computador-2/compiladores/compiladores-resumen.md",
     "organizacion-del-computador-2/repaso/feynmann.md",
     "base-de-datos-2/cassandra/world-cup.md",
     "base-de-datos-2/cassandra/streaming-platform.md",
@@ -175,20 +176,13 @@
     "organizacion-del-computador-2/compiladores/Sin confirmar 288001.crdownload",
     "organizacion-del-computador-2/compiladores/etapas-01.pdf",
     "organizacion-del-computador-2/compiladores/fases-del-compilador-01.pdf",
-    "organizacion-del-computador-2/threads/threads-01.pdf",
     "organizacion-del-computador-2/pipelines/superescalar-risc-01.pdf",
     "organizacion-del-computador-2/pipelines/escalar-risc-02.pdf",
-    "organizacion-del-computador-2/pipelines/escalar-risc-01.pdf",
-    "organizacion-del-computador-2/pipelines/superescalar-risc-02.pdf",
     "sociedad-informatica/guia-de-estudio.md",
     "base-de-datos-2/mongodb/e-commerce.md",
     "base-de-datos-2/mongodb/courses.md",
     "base-de-datos-2/mongodb/books.md",
     "base-de-datos-2/mongodb/quotes.md",
-    "base-de-datos-2/mongodb/library.md",
-    "base-de-datos-2/mongodb/languages.md",
-    "base-de-datos-2/mongodb/hospital-appointments.md",
-    "base-de-datos-2/mongodb/flights.md",
     "base-de-datos-2/cassandra/anexos/Pasted image 20260602223848.png",
     "base-de-datos-2/cassandra/anexos/Pasted image 20260602212406.png",
     "base-de-datos-2/cassandra/anexos/Pasted image 20260602212345.png",
