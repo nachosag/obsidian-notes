@@ -1,7 +1,5 @@
 # Guía de Estudio Definitiva: El Camino del Código al Proceso en Ejecución
 
-*Materia: Organización del Computador II*
-
 ## Introducción: El Viaje del Código Fuente al Silicio
 
 Cuando escribís una línea de código en un lenguaje de alto nivel como C o C++, estás interactuando con una abstracción diseñada para la mente humana. Sin embargo, el procesador real de tu computadora es un dispositivo que solo entiende señales binarias específicas de una arquitectura de hardware (como x86 o ARM).
@@ -56,14 +54,12 @@ El Scanner lee el archivo expandido carácter por carácter y los agrupa en unid
 - *Ejemplo:* La cadena `if (x >= 10)` se convierte en los tokens: `[KEYWORD: if]`, `[PUNCTUATION: (]`, `[IDENTIFIER: x]`, `[OPERATOR: >=]`, `[NUMBER: 10]`, `[PUNCTUATION: )]`.
     
 - *Detección de errores:* Es el encargado de detectar caracteres inválidos (como un símbolo extraño fuera de un string) o cadenas de texto mal cerradas.
-    
 
 #### B. Analizador Sintáctico (Parser)
 
 El Parser toma el flujo de tokens provisto por el Scanner y verifica si respetan las reglas gramaticales del lenguaje de programación. Para esto, construye una estructura de datos jerárquica llamada **Árbol de Sintaxis Abstracta (AST)**.
 
 - *Detección de errores:* Encuentra paréntesis desbalanceados, falta de puntos y comas, o estructuras mal formadas como `if x >= 10 )`.
-    
 
 #### C. Analizador Semántico
 
@@ -72,7 +68,6 @@ El analizador semántico examina el AST para asegurar que el programa tenga cohe
 - *Verificaciones típicas:* Asegurar que una variable se use solo si fue declarada previamente, validar que no se intente sumar un puntero con un tipo incompatible, o verificar que las funciones reciban la cantidad y tipo correcto de argumentos.
     
 - *Detección de errores:* Discrepancias de tipos de datos, variables no definidas, redeclaración de variables en el mismo ámbito.
-    
 
 ## Parte II: Representación Intermedia (IR) y Optimización
 
@@ -130,7 +125,6 @@ $$\text{Ejemplos: } x + 0 \rightarrow x \quad \text{o} \quad x * 2 \rightarrow x
 - **Eliminación de código inalcanzable o muerto:** Remueve porciones de código que nunca se van a ejecutar (por ejemplo, bloques dentro de un `if (false)`) o variables asignadas que nunca se vuelven a leer.
     
 - **Recursión de cola a iteración (Tail Recursion Elimination):** Transforma una función recursiva pura en un bucle iterativo, evitando el costo de crear nuevos *stack frames* en cada llamada y previniendo un potencial *Stack Overflow*.
-    
 
 ### 3. Generación y Mejora de Código Objetivo
 
@@ -191,8 +185,9 @@ Ocurre cuando una instrucción del programa hace referencia a una etiqueta que s
 ```
 JMP destino    ; ¿Adónde salto? El ensamblador aún no leyó la etiqueta 'destino'
 ADD EAX, EBX
+
 destino:
-    SUB EAX, ECX
+	SUB EAX, ECX
 ```
 
 Para resolver esto de manera elegante, los ensambladores implementan un esquema de **dos pasadas**.

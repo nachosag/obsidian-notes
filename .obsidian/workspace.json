@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "a721958db04ccfa3",
+        "id": "85b7609f64ddac8d",
         "type": "tabs",
         "children": [
           {
-            "id": "8ec17232bec70cb6",
+            "id": "328a292ad92b2c58",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -146,9 +146,12 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "8bc675f629608819",
+  "active": "328a292ad92b2c58",
   "lastOpenFiles": [
     "organizacion-del-computador-2/compiladores/compiladores.md",
+    "base-de-datos-2/parcial/512823a3-7398-4f2c-a736-0754970418ff.jpeg",
+    "base-de-datos-2/parcial/Sin confirmar 672269.crdownload",
+    "base-de-datos-2/parcial",
     "organizacion-del-computador-2/threads/arquitectura-paralela.md",
     "organizacion-del-computador-2/threads/arquitectura-paralela-01.pdf",
     "organizacion-del-computador-2/pipelines/pipelines.md",
@@ -176,8 +179,6 @@
     "organizacion-del-computador-2/compiladores/Sin confirmar 288001.crdownload",
     "organizacion-del-computador-2/compiladores/etapas-01.pdf",
     "organizacion-del-computador-2/compiladores/fases-del-compilador-01.pdf",
-    "organizacion-del-computador-2/pipelines/superescalar-risc-01.pdf",
-    "organizacion-del-computador-2/pipelines/escalar-risc-02.pdf",
     "sociedad-informatica/guia-de-estudio.md",
     "base-de-datos-2/mongodb/e-commerce.md",
     "base-de-datos-2/mongodb/courses.md",
@@ -192,7 +193,6 @@
     "base-de-datos-2/anexos/Pasted image 20260527010314.png",
     "base-de-datos-2/notes/anexos/Pasted image 20260315204421.png",
     "base-de-datos-2/notes/anexos/Pasted image 20260520225046.png",
-    "base-de-datos-2/notes/anexos/Pasted image 20260520225001.png",
     "Sin título.canvas",
     "algebra-lineal/parciales/primer-parcial/Untitled.canvas",
     "Untitled.canvas"
