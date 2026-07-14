@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "c2e230a1ff581ef1",
+        "id": "05b45af317801e23",
         "type": "tabs",
         "children": [
           {
-            "id": "2f91fd8ca95ea2dd",
+            "id": "84bc70101e53f482",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "arquitectura-de-software/clean-architecture/capas-principales.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "capas-principales"
             }
           }
         ]
@@ -74,7 +79,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 281.5026054382324
+    "width": 240.50260543823242
   },
   "right": {
     "id": "60744be18a06282d",
@@ -146,16 +151,26 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "2f91fd8ca95ea2dd",
+  "active": "84bc70101e53f482",
   "lastOpenFiles": [
-    "base-de-datos-2/teoria/arquitectura-no-relacional.md",
+    "arquitectura-de-software/clean-architecture/limites.md",
+    "arquitectura-de-software/clean-architecture/capas-principales.md",
+    "arquitectura-de-software/clean-architecture/entidades-y-comunicacion.md",
+    "arquitectura-de-software/clean-architecture/conceptos-basicos.md",
+    "arquitectura-de-software/clean-architecture/anexos/Pasted image 20260713202543.png",
+    "arquitectura-de-software/clean-architecture/anexos",
+    "arquitectura-de-software/clean-architecture/apuntes-13-07-26.md",
+    "arquitectura-de-software/clean-architecture",
+    "arquitectura-de-software",
+    "README.md",
+    "base-de-datos-2/teoria/taxonomías-nosql.md",
+    "base-de-datos-2/teoria/diferencias-diseño.md",
+    "base-de-datos-2/teoria/diferencias-arquitectura.md",
     "base-de-datos-2/teoria/arquitectura-relacional.md",
+    "base-de-datos-2/teoria/arquitectura-no-relacional.md",
     "base-de-datos-2/teoria",
     "base-de-datos-2/Sin título.md",
-    "base-de-datos-2/teoria/diferencias-entre-mysql-mongodb-cassandra-por-diseño.md",
-    "base-de-datos-2/teoria/diferencias-entre-mysql-mongodb-cassandra-por-arquitectura.md",
     "base-de-datos-2/parcial/kevin/parcial-18-06-2026.md",
-    "base-de-datos-2/teoria/taxonomías-nosql.md",
     "base-de-datos-2/anexos/Pasted image 20260622030424.png",
     "base-de-datos-2/anexos/Pasted image 20260622030049.png",
     "base-de-datos-2/anexos/Pasted image 20260622025416.png",
@@ -177,22 +192,13 @@
     "base-de-datos-2/parcial/mio/5.jpeg",
     "base-de-datos-2/parcial/mio/4.jpeg",
     "base-de-datos-2/parcial/mio/3.jpeg",
-    "base-de-datos-2/parcial/mio/2.jpeg",
     "base-de-datos-2/parcial/lucas/lucas-palavecino-parcial-04-06-26.md",
     "base-de-datos-2/parcial/mio/ignacio-borlenghi-parcial-04-06-26.md",
     "base-de-datos-2/parcial/mio/Sin confirmar 289370.crdownload",
     "base-de-datos-2/parcial/mio/Sin confirmar 438752.crdownload",
     "base-de-datos-2/parcial/mio/Sin confirmar 451037.crdownload",
     "base-de-datos-2/parcial/mio/Sin confirmar 518004.crdownload",
-    "base-de-datos-2/parcial/mio/Sin confirmar 668193.crdownload",
     "base-de-datos-2/notes/apuntes-07-05-26.md",
-    "base-de-datos-2/notes/apuntes-30-04-26.md",
-    "base-de-datos-2/notes/apuntes-27-4-26.md",
-    "base-de-datos-2/notes/apuntes-24-03-26.md",
-    "base-de-datos-2/notes/apuntes-19-03-26.md",
-    "base-de-datos-2/notes/apuntes-17-03-26.md",
-    "base-de-datos-2/parcial/lucas/resolucion",
-    "base-de-datos-2/parcial/lucas",
     "Sin título.canvas",
     "algebra-lineal/parciales/primer-parcial/Untitled.canvas",
     "Untitled.canvas"
