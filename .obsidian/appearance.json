@@ -5,8 +5,8 @@
   "monospaceFontFamily": "Google Sans Code",
   "interfaceFontFamily": "",
   "theme": "obsidian",
-  "baseFontSizeAction": false,
+  "baseFontSizeAction": true,
   "enabledCssSnippets": [],
-  "baseFontSize": 19,
+  "baseFontSize": 20,
   "accentColor": "#f4013a"
 }

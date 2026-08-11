@@ -27,8 +27,655 @@ __export(main_exports, {
   default: () => MermaidZoomPlugin
 });
 module.exports = __toCommonJS(main_exports);
+var import_obsidian4 = require("obsidian");
+
+// settings.ts
+var import_obsidian2 = require("obsidian");
+
+// i18n.ts
 var import_obsidian = require("obsidian");
-var MermaidZoomPlugin = class extends import_obsidian.Plugin {
+
+// locale/en.json
+var en_default = {
+  "setting.defaultZoom.name": "Default zoom level",
+  "setting.defaultZoom.desc": "Initial zoom percentage when a Mermaid diagram is rendered. 100% fits the container; higher values make diagrams appear larger by default.",
+  "setting.containerBorder.name": "Show container border",
+  "setting.containerBorder.desc": "Display a dashed border around each diagram container to help visualize the zoom area boundaries.",
+  "setting.alignment.name": "Default alignment",
+  "setting.alignment.desc": "Horizontal alignment of the diagram within its container.",
+  "setting.alignment.option.left": "Left",
+  "setting.alignment.option.center": "Center",
+  "setting.alignment.option.right": "Right",
+  "setting.maxHeight.name": "Max container height",
+  "setting.maxHeight.desc": "Maximum height in pixels for the zoom container. Set to 0 to auto-size so the diagram is fully visible at the current zoom level.",
+  "settings.note": "Changes apply to newly rendered diagrams. Reload the note to see the effect on existing diagrams.",
+  "setting.exportDestination.name": "PNG export destination",
+  "setting.exportDestination.desc": "Where exported PNG images of diagrams are saved.",
+  "setting.exportDestination.option.vault": "Vault (attachments folder)",
+  "setting.exportDestination.option.download": "Download to your computer",
+  "export.buttonTitle": "Export as PNG",
+  "export.savedNotice": "Saved: {path}",
+  "export.downloadedNotice": "Downloaded: {name}",
+  "export.failedNotice": "Failed to export PNG",
+  "modal.close": "Close",
+  "lock.label": "Lock"
+};
+
+// locale/zh.json
+var zh_default = {
+  "setting.defaultZoom.name": "\u9ED8\u8BA4\u7F29\u653E\u7EA7\u522B",
+  "setting.defaultZoom.desc": "Mermaid \u56FE\u8868\u6E32\u67D3\u65F6\u7684\u521D\u59CB\u7F29\u653E\u767E\u5206\u6BD4\u3002100% \u9002\u914D\u5BB9\u5668\uFF1B\u8C03\u9AD8\u53EF\u8BA9\u56FE\u8868\u9ED8\u8BA4\u663E\u793A\u5F97\u66F4\u5927\u3002",
+  "setting.containerBorder.name": "\u663E\u793A\u5BB9\u5668\u8FB9\u6846",
+  "setting.containerBorder.desc": "\u5728\u6BCF\u4E2A\u56FE\u8868\u5BB9\u5668\u5468\u56F4\u663E\u793A\u865A\u7EBF\u8FB9\u6846\uFF0C\u4FBF\u4E8E\u770B\u6E05\u7F29\u653E\u533A\u57DF\u7684\u8FB9\u754C\u3002",
+  "setting.alignment.name": "\u9ED8\u8BA4\u5BF9\u9F50\u65B9\u5F0F",
+  "setting.alignment.desc": "\u56FE\u8868\u5728\u5BB9\u5668\u5185\u7684\u6C34\u5E73\u5BF9\u9F50\u65B9\u5F0F\u3002",
+  "setting.alignment.option.left": "\u5DE6\u5BF9\u9F50",
+  "setting.alignment.option.center": "\u5C45\u4E2D",
+  "setting.alignment.option.right": "\u53F3\u5BF9\u9F50",
+  "setting.maxHeight.name": "\u6700\u5927\u5BB9\u5668\u9AD8\u5EA6",
+  "setting.maxHeight.desc": "\u7F29\u653E\u5BB9\u5668\u7684\u6700\u5927\u9AD8\u5EA6\uFF08\u50CF\u7D20\uFF09\u3002\u8BBE\u4E3A 0 \u8868\u793A\u81EA\u52A8\u9002\u914D\uFF0C\u4F7F\u56FE\u8868\u5728\u5F53\u524D\u7F29\u653E\u7EA7\u522B\u4E0B\u5B8C\u6574\u53EF\u89C1\u3002",
+  "settings.note": "\u66F4\u6539\u4EC5\u5BF9\u65B0\u6E32\u67D3\u7684\u56FE\u8868\u751F\u6548\u3002\u91CD\u65B0\u6253\u5F00\u7B14\u8BB0\u5373\u53EF\u770B\u5230\u5BF9\u5DF2\u6709\u56FE\u8868\u7684\u5F71\u54CD\u3002",
+  "setting.exportDestination.name": "PNG \u5BFC\u51FA\u4F4D\u7F6E",
+  "setting.exportDestination.desc": "\u5BFC\u51FA\u7684\u56FE\u8868 PNG \u56FE\u7247\u4FDD\u5B58\u5230\u54EA\u91CC\u3002",
+  "setting.exportDestination.option.vault": "\u4ED3\u5E93\uFF08\u9644\u4EF6\u76EE\u5F55\uFF09",
+  "setting.exportDestination.option.download": "\u4E0B\u8F7D\u5230\u672C\u5730",
+  "export.buttonTitle": "\u5BFC\u51FA\u4E3A PNG",
+  "export.savedNotice": "\u5DF2\u4FDD\u5B58\uFF1A{path}",
+  "export.downloadedNotice": "\u5DF2\u4E0B\u8F7D\uFF1A{name}",
+  "export.failedNotice": "\u5BFC\u51FA PNG \u5931\u8D25",
+  "modal.close": "\u5173\u95ED",
+  "lock.label": "\u9501\u5B9A"
+};
+
+// locale/zh-TW.json
+var zh_TW_default = {
+  "setting.defaultZoom.name": "\u9810\u8A2D\u7E2E\u653E\u5C64\u7D1A",
+  "setting.defaultZoom.desc": "Mermaid \u5716\u8868\u7B97\u7E6A\u6642\u7684\u521D\u59CB\u7E2E\u653E\u767E\u5206\u6BD4\u3002100% \u7B26\u5408\u5BB9\u5668\uFF1B\u8ABF\u9AD8\u53EF\u8B93\u5716\u8868\u9810\u8A2D\u986F\u793A\u5F97\u66F4\u5927\u3002",
+  "setting.containerBorder.name": "\u986F\u793A\u5BB9\u5668\u908A\u6846",
+  "setting.containerBorder.desc": "\u5728\u6BCF\u500B\u5716\u8868\u5BB9\u5668\u5468\u570D\u986F\u793A\u865B\u7DDA\u908A\u6846\uFF0C\u4FBF\u65BC\u770B\u6E05\u7E2E\u653E\u5340\u57DF\u7684\u908A\u754C\u3002",
+  "setting.alignment.name": "\u9810\u8A2D\u5C0D\u9F4A\u65B9\u5F0F",
+  "setting.alignment.desc": "\u5716\u8868\u5728\u5BB9\u5668\u5167\u7684\u6C34\u5E73\u5C0D\u9F4A\u65B9\u5F0F\u3002",
+  "setting.alignment.option.left": "\u5DE6",
+  "setting.alignment.option.center": "\u7F6E\u4E2D",
+  "setting.alignment.option.right": "\u53F3",
+  "setting.maxHeight.name": "\u6700\u5927\u5BB9\u5668\u9AD8\u5EA6",
+  "setting.maxHeight.desc": "\u7E2E\u653E\u5BB9\u5668\u7684\u6700\u5927\u9AD8\u5EA6\uFF08\u50CF\u7D20\uFF09\u3002\u8A2D\u70BA 0 \u8868\u793A\u81EA\u52D5\u8ABF\u6574\uFF0C\u4F7F\u5716\u8868\u5728\u76EE\u524D\u7E2E\u653E\u5C64\u7D1A\u4E0B\u5B8C\u6574\u986F\u793A\u3002",
+  "settings.note": "\u8B8A\u66F4\u50C5\u5C0D\u65B0\u7B97\u7E6A\u7684\u5716\u8868\u751F\u6548\u3002\u91CD\u65B0\u958B\u555F\u7B46\u8A18\u5373\u53EF\u770B\u5230\u5C0D\u65E2\u6709\u5716\u8868\u7684\u5F71\u97FF\u3002",
+  "modal.close": "\u95DC\u9589",
+  "lock.label": "\u9396\u5B9A"
+};
+
+// locale/ja.json
+var ja_default = {
+  "setting.defaultZoom.name": "\u30C7\u30D5\u30A9\u30EB\u30C8\u306E\u30BA\u30FC\u30E0\u30EC\u30D9\u30EB",
+  "setting.defaultZoom.desc": "Mermaid \u56F3\u304C\u30EC\u30F3\u30C0\u30EA\u30F3\u30B0\u3055\u308C\u305F\u969B\u306E\u521D\u671F\u30BA\u30FC\u30E0\u500D\u7387\u3067\u3059\u3002100% \u3067\u30B3\u30F3\u30C6\u30CA\u306B\u53CE\u307E\u308A\u3001\u3088\u308A\u5927\u304D\u306A\u5024\u306B\u3059\u308B\u3068\u56F3\u304C\u521D\u671F\u72B6\u614B\u3067\u5927\u304D\u304F\u8868\u793A\u3055\u308C\u307E\u3059\u3002",
+  "setting.containerBorder.name": "\u30B3\u30F3\u30C6\u30CA\u306E\u67A0\u7DDA\u3092\u8868\u793A",
+  "setting.containerBorder.desc": "\u5404\u56F3\u306E\u30B3\u30F3\u30C6\u30CA\u5468\u56F2\u306B\u7834\u7DDA\u306E\u67A0\u3092\u8868\u793A\u3057\u3001\u30BA\u30FC\u30E0\u9818\u57DF\u306E\u5883\u754C\u3092\u898B\u3084\u3059\u304F\u3057\u307E\u3059\u3002",
+  "setting.alignment.name": "\u30C7\u30D5\u30A9\u30EB\u30C8\u306E\u914D\u7F6E",
+  "setting.alignment.desc": "\u30B3\u30F3\u30C6\u30CA\u5185\u306E\u56F3\u306E\u6C34\u5E73\u65B9\u5411\u306E\u914D\u7F6E\u3067\u3059\u3002",
+  "setting.alignment.option.left": "\u5DE6",
+  "setting.alignment.option.center": "\u4E2D\u592E",
+  "setting.alignment.option.right": "\u53F3",
+  "setting.maxHeight.name": "\u30B3\u30F3\u30C6\u30CA\u306E\u6700\u5927\u9AD8\u3055",
+  "setting.maxHeight.desc": "\u30BA\u30FC\u30E0\u30B3\u30F3\u30C6\u30CA\u306E\u6700\u5927\u9AD8\u3055\uFF08\u30D4\u30AF\u30BB\u30EB\uFF09\u30020 \u306B\u8A2D\u5B9A\u3059\u308B\u3068\u3001\u73FE\u5728\u306E\u30BA\u30FC\u30E0\u500D\u7387\u3067\u56F3\u304C\u3059\u3079\u3066\u8868\u793A\u3055\u308C\u308B\u3088\u3046\u81EA\u52D5\u8ABF\u6574\u3057\u307E\u3059\u3002",
+  "settings.note": "\u5909\u66F4\u306F\u65B0\u3057\u304F\u30EC\u30F3\u30C0\u30EA\u30F3\u30B0\u3055\u308C\u305F\u56F3\u306B\u306E\u307F\u9069\u7528\u3055\u308C\u307E\u3059\u3002\u65E2\u5B58\u306E\u56F3\u306B\u53CD\u6620\u3055\u305B\u308B\u306B\u306F\u30CE\u30FC\u30C8\u3092\u518D\u8AAD\u307F\u8FBC\u307F\u3057\u3066\u304F\u3060\u3055\u3044\u3002",
+  "modal.close": "\u9589\u3058\u308B",
+  "lock.label": "\u30ED\u30C3\u30AF"
+};
+
+// locale/de.json
+var de_default = {
+  "setting.defaultZoom.name": "Standard-Zoomstufe",
+  "setting.defaultZoom.desc": "Anf\xE4nglicher Zoom-Prozentsatz bei der Darstellung eines Mermaid-Diagramms. 100 % passt in den Container; h\xF6here Werte lassen Diagramme standardm\xE4\xDFig gr\xF6\xDFer erscheinen.",
+  "setting.containerBorder.name": "Container-Rahmen anzeigen",
+  "setting.containerBorder.desc": "Zeigt einen gestrichelten Rahmen um jeden Diagramm-Container, um die Grenzen des Zoombereichs besser zu erkennen.",
+  "setting.alignment.name": "Standardausrichtung",
+  "setting.alignment.desc": "Horizontale Ausrichtung des Diagramms innerhalb seines Containers.",
+  "setting.alignment.option.left": "Links",
+  "setting.alignment.option.center": "Zentriert",
+  "setting.alignment.option.right": "Rechts",
+  "setting.maxHeight.name": "Maximale Container-H\xF6he",
+  "setting.maxHeight.desc": "Maximale H\xF6he des Zoom-Containers in Pixeln. Auf 0 setzen, um die Gr\xF6\xDFe automatisch so anzupassen, dass das Diagramm bei der aktuellen Zoomstufe vollst\xE4ndig sichtbar ist.",
+  "settings.note": "\xC4nderungen gelten nur f\xFCr neu dargestellte Diagramme. Laden Sie die Notiz neu, um die Auswirkungen auf vorhandene Diagramme zu sehen.",
+  "modal.close": "Schlie\xDFen",
+  "lock.label": "Sperren"
+};
+
+// locale/es.json
+var es_default = {
+  "setting.defaultZoom.name": "Nivel de zoom predeterminado",
+  "setting.defaultZoom.desc": "Porcentaje de zoom inicial al renderizar un diagrama de Mermaid. 100 % se ajusta al contenedor; valores m\xE1s altos hacen que los diagramas se vean m\xE1s grandes por defecto.",
+  "setting.containerBorder.name": "Mostrar borde del contenedor",
+  "setting.containerBorder.desc": "Muestra un borde discontinuo alrededor de cada contenedor de diagrama para visualizar mejor los l\xEDmites del \xE1rea de zoom.",
+  "setting.alignment.name": "Alineaci\xF3n predeterminada",
+  "setting.alignment.desc": "Alineaci\xF3n horizontal del diagrama dentro de su contenedor.",
+  "setting.alignment.option.left": "Izquierda",
+  "setting.alignment.option.center": "Centro",
+  "setting.alignment.option.right": "Derecha",
+  "setting.maxHeight.name": "Altura m\xE1xima del contenedor",
+  "setting.maxHeight.desc": "Altura m\xE1xima en p\xEDxeles del contenedor de zoom. Establecer en 0 para que se ajuste autom\xE1ticamente y el diagrama sea completamente visible con el nivel de zoom actual.",
+  "settings.note": "Los cambios se aplican a los diagramas reci\xE9n renderizados. Vuelve a cargar la nota para ver el efecto en los diagramas existentes.",
+  "modal.close": "Cerrar",
+  "lock.label": "Bloquear"
+};
+
+// locale/fr.json
+var fr_default = {
+  "setting.defaultZoom.name": "Niveau de zoom par d\xE9faut",
+  "setting.defaultZoom.desc": "Pourcentage de zoom initial lors du rendu d'un diagramme Mermaid. 100 % s'ajuste au conteneur ; des valeurs plus \xE9lev\xE9es affichent les diagrammes plus grands par d\xE9faut.",
+  "setting.containerBorder.name": "Afficher la bordure du conteneur",
+  "setting.containerBorder.desc": "Affiche une bordure en pointill\xE9s autour de chaque conteneur de diagramme pour mieux visualiser les limites de la zone de zoom.",
+  "setting.alignment.name": "Alignement par d\xE9faut",
+  "setting.alignment.desc": "Alignement horizontal du diagramme dans son conteneur.",
+  "setting.alignment.option.left": "Gauche",
+  "setting.alignment.option.center": "Centre",
+  "setting.alignment.option.right": "Droite",
+  "setting.maxHeight.name": "Hauteur maximale du conteneur",
+  "setting.maxHeight.desc": "Hauteur maximale en pixels du conteneur de zoom. D\xE9finir sur 0 pour ajuster automatiquement afin que le diagramme soit enti\xE8rement visible au niveau de zoom actuel.",
+  "settings.note": "Les modifications s'appliquent aux diagrammes nouvellement rendus. Rechargez la note pour voir l'effet sur les diagrammes existants.",
+  "modal.close": "Fermer",
+  "lock.label": "Verrouiller"
+};
+
+// locale/ru.json
+var ru_default = {
+  "setting.defaultZoom.name": "\u041C\u0430\u0441\u0448\u0442\u0430\u0431 \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E",
+  "setting.defaultZoom.desc": "\u041D\u0430\u0447\u0430\u043B\u044C\u043D\u044B\u0439 \u043C\u0430\u0441\u0448\u0442\u0430\u0431 (\u0432 \u043F\u0440\u043E\u0446\u0435\u043D\u0442\u0430\u0445) \u043F\u0440\u0438 \u043E\u0442\u0440\u0438\u0441\u043E\u0432\u043A\u0435 \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u044B Mermaid. 100 % \u0432\u043F\u0438\u0441\u044B\u0432\u0430\u0435\u0442 \u0432 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440; \u0431\u043E\u043B\u044C\u0448\u0438\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F \u0434\u0435\u043B\u0430\u044E\u0442 \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u044B \u043A\u0440\u0443\u043F\u043D\u0435\u0435 \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E.",
+  "setting.containerBorder.name": "\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C \u0440\u0430\u043C\u043A\u0443 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440\u0430",
+  "setting.containerBorder.desc": "\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442 \u043F\u0443\u043D\u043A\u0442\u0438\u0440\u043D\u0443\u044E \u0440\u0430\u043C\u043A\u0443 \u0432\u043E\u043A\u0440\u0443\u0433 \u043A\u0430\u0436\u0434\u043E\u0433\u043E \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440\u0430 \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u044B, \u0447\u0442\u043E\u0431\u044B \u043B\u0443\u0447\u0448\u0435 \u0432\u0438\u0434\u0435\u0442\u044C \u0433\u0440\u0430\u043D\u0438\u0446\u044B \u043E\u0431\u043B\u0430\u0441\u0442\u0438 \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F.",
+  "setting.alignment.name": "\u0412\u044B\u0440\u0430\u0432\u043D\u0438\u0432\u0430\u043D\u0438\u0435 \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E",
+  "setting.alignment.desc": "\u0413\u043E\u0440\u0438\u0437\u043E\u043D\u0442\u0430\u043B\u044C\u043D\u043E\u0435 \u0432\u044B\u0440\u0430\u0432\u043D\u0438\u0432\u0430\u043D\u0438\u0435 \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u044B \u0432\u043D\u0443\u0442\u0440\u0438 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440\u0430.",
+  "setting.alignment.option.left": "\u0421\u043B\u0435\u0432\u0430",
+  "setting.alignment.option.center": "\u041F\u043E \u0446\u0435\u043D\u0442\u0440\u0443",
+  "setting.alignment.option.right": "\u0421\u043F\u0440\u0430\u0432\u0430",
+  "setting.maxHeight.name": "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F \u0432\u044B\u0441\u043E\u0442\u0430 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440\u0430",
+  "setting.maxHeight.desc": "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F \u0432\u044B\u0441\u043E\u0442\u0430 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440\u0430 \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F \u0432 \u043F\u0438\u043A\u0441\u0435\u043B\u044F\u0445. \u0423\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435 0 \u0434\u043B\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u043E\u0433\u043E \u043F\u043E\u0434\u0431\u043E\u0440\u0430, \u0447\u0442\u043E\u0431\u044B \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u0430 \u0431\u044B\u043B\u0430 \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u0432\u0438\u0434\u043D\u0430 \u043F\u0440\u0438 \u0442\u0435\u043A\u0443\u0449\u0435\u043C \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0435.",
+  "settings.note": "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u044E\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u043A \u043D\u043E\u0432\u044B\u043C \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u0430\u043C. \u041F\u0435\u0440\u0435\u043E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u0437\u0430\u043C\u0435\u0442\u043A\u0443, \u0447\u0442\u043E\u0431\u044B \u0443\u0432\u0438\u0434\u0435\u0442\u044C \u044D\u0444\u0444\u0435\u043A\u0442 \u043D\u0430 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0445 \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u0430\u0445.",
+  "modal.close": "\u0417\u0430\u043A\u0440\u044B\u0442\u044C",
+  "lock.label": "\u0411\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u0442\u044C"
+};
+
+// locale/pt-BR.json
+var pt_BR_default = {
+  "setting.defaultZoom.name": "N\xEDvel de zoom padr\xE3o",
+  "setting.defaultZoom.desc": "Porcentagem inicial de zoom ao renderizar um diagrama Mermaid. 100 % cabe no cont\xEAiner; valores maiores fazem os diagramas aparecerem maiores por padr\xE3o.",
+  "setting.containerBorder.name": "Mostrar borda do cont\xEAiner",
+  "setting.containerBorder.desc": "Exibe uma borda tracejada ao redor de cada cont\xEAiner de diagrama para ajudar a visualizar os limites da \xE1rea de zoom.",
+  "setting.alignment.name": "Alinhamento padr\xE3o",
+  "setting.alignment.desc": "Alinhamento horizontal do diagrama dentro de seu cont\xEAiner.",
+  "setting.alignment.option.left": "Esquerda",
+  "setting.alignment.option.center": "Centro",
+  "setting.alignment.option.right": "Direita",
+  "setting.maxHeight.name": "Altura m\xE1xima do cont\xEAiner",
+  "setting.maxHeight.desc": "Altura m\xE1xima em pixels do cont\xEAiner de zoom. Defina como 0 para ajustar automaticamente e o diagrama ficar totalmente vis\xEDvel no n\xEDvel de zoom atual.",
+  "settings.note": "As altera\xE7\xF5es se aplicam a diagramas rec\xE9m-renderizados. Recarregue a nota para ver o efeito em diagramas existentes.",
+  "modal.close": "Fechar",
+  "lock.label": "Bloquear"
+};
+
+// locale/ko.json
+var ko_default = {
+  "setting.defaultZoom.name": "\uAE30\uBCF8 \uD655\uB300/\uCD95\uC18C \uC218\uC900",
+  "setting.defaultZoom.desc": "Mermaid \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC774 \uB80C\uB354\uB9C1\uB420 \uB54C\uC758 \uCD08\uAE30 \uD655\uB300/\uCD95\uC18C \uBE44\uC728\uC785\uB2C8\uB2E4. 100%\uC774\uBA74 \uCEE8\uD14C\uC774\uB108\uC5D0 \uB9DE\uCDB0\uC9C0\uACE0, \uAC12\uC744 \uB192\uC774\uBA74 \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC774 \uAE30\uBCF8\uC801\uC73C\uB85C \uB354 \uD06C\uAC8C \uD45C\uC2DC\uB429\uB2C8\uB2E4.",
+  "setting.containerBorder.name": "\uCEE8\uD14C\uC774\uB108 \uD14C\uB450\uB9AC \uD45C\uC2DC",
+  "setting.containerBorder.desc": "\uAC01 \uB2E4\uC774\uC5B4\uADF8\uB7A8 \uCEE8\uD14C\uC774\uB108 \uC8FC\uC704\uC5D0 \uC810\uC120 \uD14C\uB450\uB9AC\uB97C \uD45C\uC2DC\uD558\uC5EC \uD655\uB300/\uCD95\uC18C \uC601\uC5ED\uC758 \uACBD\uACC4\uB97C \uC27D\uAC8C \uD655\uC778\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
+  "setting.alignment.name": "\uAE30\uBCF8 \uC815\uB82C",
+  "setting.alignment.desc": "\uCEE8\uD14C\uC774\uB108 \uB0B4 \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC758 \uAC00\uB85C \uC815\uB82C\uC785\uB2C8\uB2E4.",
+  "setting.alignment.option.left": "\uC67C\uCABD",
+  "setting.alignment.option.center": "\uAC00\uC6B4\uB370",
+  "setting.alignment.option.right": "\uC624\uB978\uCABD",
+  "setting.maxHeight.name": "\uCD5C\uB300 \uCEE8\uD14C\uC774\uB108 \uB192\uC774",
+  "setting.maxHeight.desc": "\uD655\uB300/\uCD95\uC18C \uCEE8\uD14C\uC774\uB108\uC758 \uCD5C\uB300 \uB192\uC774(\uD53D\uC140). 0\uC73C\uB85C \uC124\uC815\uD558\uBA74 \uD604\uC7AC \uD655\uB300/\uCD95\uC18C \uC218\uC900\uC5D0\uC11C \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC774 \uC644\uC804\uD788 \uBCF4\uC774\uB3C4\uB85D \uC790\uB3D9\uC73C\uB85C \uB9DE\uCDB0\uC9D1\uB2C8\uB2E4.",
+  "settings.note": "\uBCC0\uACBD \uC0AC\uD56D\uC740 \uC0C8\uB85C \uB80C\uB354\uB9C1\uB41C \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC5D0\uB9CC \uC801\uC6A9\uB429\uB2C8\uB2E4. \uAE30\uC874 \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC5D0 \uBBF8\uCE58\uB294 \uD6A8\uACFC\uB97C \uBCF4\uB824\uBA74 \uB178\uD2B8\uB97C \uB2E4\uC2DC \uC5EC\uC2ED\uC2DC\uC624.",
+  "modal.close": "\uB2EB\uAE30",
+  "lock.label": "\uC7A0\uAE08"
+};
+
+// i18n.ts
+var translations = {
+  en: en_default,
+  zh: zh_default,
+  "zh-TW": zh_TW_default,
+  ja: ja_default,
+  de: de_default,
+  es: es_default,
+  fr: fr_default,
+  ru: ru_default,
+  "pt-BR": pt_BR_default,
+  pt: pt_BR_default,
+  // European Portuguese falls back to the Brazilian translation.
+  ko: ko_default
+};
+function resolveDict(lang) {
+  var _a;
+  if (translations[lang])
+    return translations[lang];
+  const base = lang.split("-")[0];
+  return (_a = translations[base]) != null ? _a : translations.en;
+}
+var dict = resolveDict((0, import_obsidian.getLanguage)());
+function t(key) {
+  var _a, _b;
+  return (_b = (_a = dict[key]) != null ? _a : translations.en[key]) != null ? _b : key;
+}
+
+// settings.ts
+var DEFAULT_SETTINGS = {
+  defaultZoom: 100,
+  showContainerBorder: false,
+  alignment: "center",
+  maxHeight: 0,
+  exportDestination: "vault"
+};
+var MermaidZoomSettingTab = class extends import_obsidian2.PluginSettingTab {
+  constructor(app, plugin) {
+    super(app, plugin);
+    this.plugin = plugin;
+  }
+  // Declarative settings API (Obsidian 1.13.0+). When this returns a
+  // non-empty array, Obsidian renders the tab from these definitions and
+  // indexes them for settings search; display() is used as the fallback for
+  // older Obsidian versions.
+  getSettingDefinitions() {
+    return [
+      {
+        name: t("setting.defaultZoom.name"),
+        desc: t("setting.defaultZoom.desc"),
+        control: {
+          type: "slider",
+          key: "defaultZoom",
+          min: 50,
+          max: 300,
+          step: 5,
+          defaultValue: 100,
+          displayFormat: (value) => `${value}%`
+        }
+      },
+      {
+        name: t("setting.containerBorder.name"),
+        desc: t("setting.containerBorder.desc"),
+        control: {
+          type: "toggle",
+          key: "showContainerBorder",
+          defaultValue: false
+        }
+      },
+      {
+        name: t("setting.alignment.name"),
+        desc: t("setting.alignment.desc"),
+        control: {
+          type: "dropdown",
+          key: "alignment",
+          options: {
+            left: t("setting.alignment.option.left"),
+            center: t("setting.alignment.option.center"),
+            right: t("setting.alignment.option.right")
+          },
+          defaultValue: "center"
+        }
+      },
+      {
+        name: t("setting.maxHeight.name"),
+        desc: t("setting.maxHeight.desc"),
+        control: {
+          type: "number",
+          key: "maxHeight",
+          defaultValue: 0,
+          placeholder: "0",
+          min: 0,
+          step: 1
+        }
+      },
+      {
+        name: t("setting.exportDestination.name"),
+        desc: t("setting.exportDestination.desc"),
+        control: {
+          type: "dropdown",
+          key: "exportDestination",
+          options: {
+            vault: t("setting.exportDestination.option.vault"),
+            download: t("setting.exportDestination.option.download")
+          },
+          defaultValue: "vault"
+        }
+      }
+    ];
+  }
+  // Persist declarative-control writes through the plugin's own saver so
+  // data.json stays in sync. (The base reads from this.plugin.settings.)
+  async setControlValue(key, value) {
+    this.plugin.settings[key] = value;
+    await this.plugin.saveSettings();
+  }
+  display() {
+    const { containerEl } = this;
+    containerEl.empty();
+    new import_obsidian2.Setting(containerEl).setName(t("setting.defaultZoom.name")).setDesc(t("setting.defaultZoom.desc")).addSlider((slider) => slider.setLimits(50, 300, 5).setValue(this.plugin.settings.defaultZoom).onChange(async (value) => {
+      this.plugin.settings.defaultZoom = value;
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian2.Setting(containerEl).setName(t("setting.containerBorder.name")).setDesc(t("setting.containerBorder.desc")).addToggle((toggle) => toggle.setValue(this.plugin.settings.showContainerBorder).onChange(async (value) => {
+      this.plugin.settings.showContainerBorder = value;
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian2.Setting(containerEl).setName(t("setting.alignment.name")).setDesc(t("setting.alignment.desc")).addDropdown((dropdown) => dropdown.addOption("left", t("setting.alignment.option.left")).addOption("center", t("setting.alignment.option.center")).addOption("right", t("setting.alignment.option.right")).setValue(this.plugin.settings.alignment).onChange(async (value) => {
+      this.plugin.settings.alignment = value;
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian2.Setting(containerEl).setName(t("setting.maxHeight.name")).setDesc(t("setting.maxHeight.desc")).addText((text) => text.setPlaceholder("0").setValue(this.plugin.settings.maxHeight > 0 ? String(this.plugin.settings.maxHeight) : "").onChange(async (value) => {
+      const num = parseInt(value, 10);
+      this.plugin.settings.maxHeight = isNaN(num) || num < 0 ? 0 : num;
+      await this.plugin.saveSettings();
+    }));
+    new import_obsidian2.Setting(containerEl).setName(t("setting.exportDestination.name")).setDesc(t("setting.exportDestination.desc")).addDropdown((dropdown) => dropdown.addOption("vault", t("setting.exportDestination.option.vault")).addOption("download", t("setting.exportDestination.option.download")).setValue(this.plugin.settings.exportDestination).onChange(async (value) => {
+      this.plugin.settings.exportDestination = value;
+      await this.plugin.saveSettings();
+    }));
+    containerEl.createEl("p", {
+      text: t("settings.note"),
+      cls: "setting-item-description"
+    });
+  }
+};
+
+// gestures.ts
+function updateTransform(contentWrapper, state) {
+  contentWrapper.style.transform = `translate(${state.translateX}px, ${state.translateY}px) scale(${state.scale})`;
+  if (state.scaleIndicator) {
+    state.scaleIndicator.textContent = `${Math.round(state.scale * 100)}%`;
+  }
+}
+function zoom(contentWrapper, state, factor) {
+  let newScale = state.scale * factor;
+  newScale = Math.max(state.minScale, Math.min(state.maxScale, newScale));
+  const container = contentWrapper.parentElement;
+  if (container) {
+    const rect = container.getBoundingClientRect();
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+    const scaleRatio = newScale / state.scale;
+    state.translateX = centerX - (centerX - state.translateX) * scaleRatio;
+    state.translateY = centerY - (centerY - state.translateY) * scaleRatio;
+  }
+  state.scale = newScale;
+  updateTransform(contentWrapper, state);
+}
+function addWheelZoom(container, contentWrapper, state) {
+  const wheelHandler = (e) => {
+    if (state.locked)
+      return;
+    e.preventDefault();
+    const rect = container.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+    const delta = e.deltaY > 0 ? 0.9 : 1.1;
+    const oldScale = state.scale;
+    let newScale = oldScale * delta;
+    newScale = Math.max(state.minScale, Math.min(state.maxScale, newScale));
+    if (newScale !== oldScale) {
+      const scaleRatio = newScale / oldScale;
+      state.translateX = mouseX - (mouseX - state.translateX) * scaleRatio;
+      state.translateY = mouseY - (mouseY - state.translateY) * scaleRatio;
+      state.scale = newScale;
+      updateTransform(contentWrapper, state);
+    }
+  };
+  container.addEventListener("wheel", wheelHandler, { passive: false });
+  return () => container.removeEventListener("wheel", wheelHandler);
+}
+function addDragPan(container, contentWrapper, state) {
+  contentWrapper.classList.add("mermaid-zoom-content");
+  container.addEventListener("mousedown", (e) => {
+    if (state.locked)
+      return;
+    if (e.button === 0) {
+      state.isDragging = true;
+      state.startX = e.clientX - state.translateX;
+      state.startY = e.clientY - state.translateY;
+      contentWrapper.addClass("dragging");
+    }
+  });
+  const onMouseMove = (e) => {
+    if (state.isDragging) {
+      e.preventDefault();
+      state.translateX = e.clientX - state.startX;
+      state.translateY = e.clientY - state.startY;
+      updateTransform(contentWrapper, state);
+    }
+  };
+  const onMouseUp = () => {
+    if (state.isDragging) {
+      state.isDragging = false;
+      contentWrapper.removeClass("dragging");
+    }
+  };
+  document.addEventListener("mousemove", onMouseMove);
+  document.addEventListener("mouseup", onMouseUp);
+  return () => {
+    document.removeEventListener("mousemove", onMouseMove);
+    document.removeEventListener("mouseup", onMouseUp);
+  };
+}
+function addTouchGestures(container, contentWrapper, state) {
+  let initialDistance = 0;
+  let initialScale = 1;
+  const onTouchStart = (e) => {
+    if (state.locked)
+      return;
+    if (e.touches.length === 2) {
+      const touch1 = e.touches[0];
+      const touch2 = e.touches[1];
+      initialDistance = Math.hypot(
+        touch2.clientX - touch1.clientX,
+        touch2.clientY - touch1.clientY
+      );
+      initialScale = state.scale;
+    } else if (e.touches.length === 1) {
+      state.isDragging = true;
+      state.startX = e.touches[0].clientX - state.translateX;
+      state.startY = e.touches[0].clientY - state.translateY;
+    }
+  };
+  const onTouchMove = (e) => {
+    if (state.locked)
+      return;
+    e.preventDefault();
+    if (e.touches.length === 2) {
+      const touch1 = e.touches[0];
+      const touch2 = e.touches[1];
+      const currentDistance = Math.hypot(
+        touch2.clientX - touch1.clientX,
+        touch2.clientY - touch1.clientY
+      );
+      const scaleRatio = currentDistance / initialDistance;
+      let newScale = initialScale * scaleRatio;
+      newScale = Math.max(state.minScale, Math.min(state.maxScale, newScale));
+      state.scale = newScale;
+      updateTransform(contentWrapper, state);
+    } else if (e.touches.length === 1 && state.isDragging) {
+      state.translateX = e.touches[0].clientX - state.startX;
+      state.translateY = e.touches[0].clientY - state.startY;
+      updateTransform(contentWrapper, state);
+    }
+  };
+  const onTouchEnd = () => {
+    state.isDragging = false;
+  };
+  container.addEventListener("touchstart", onTouchStart);
+  container.addEventListener("touchmove", onTouchMove, { passive: false });
+  container.addEventListener("touchend", onTouchEnd);
+  return () => {
+    container.removeEventListener("touchstart", onTouchStart);
+    container.removeEventListener("touchmove", onTouchMove);
+    container.removeEventListener("touchend", onTouchEnd);
+  };
+}
+function addResizeHandles(container, contentWrapper, state, reset) {
+  const cursorClassMap = {
+    "nwse-resize": "mermaid-zoom-resizing-nwse",
+    "nesw-resize": "mermaid-zoom-resizing-nesw",
+    "ns-resize": "mermaid-zoom-resizing-ns",
+    "ew-resize": "mermaid-zoom-resizing-ew"
+  };
+  const handles = [
+    { position: "top-left", cursor: "nwse-resize", style: "top: 0; left: 0; width: 12px; height: 12px;" },
+    { position: "top-right", cursor: "nesw-resize", style: "top: 0; right: 0; width: 12px; height: 12px;" },
+    { position: "bottom-left", cursor: "nesw-resize", style: "bottom: 0; left: 0; width: 12px; height: 12px;" },
+    { position: "bottom-right", cursor: "nwse-resize", style: "bottom: 0; right: 0; width: 12px; height: 12px;" },
+    { position: "top", cursor: "ns-resize", style: "top: 0; left: 12px; right: 12px; height: 6px;" },
+    { position: "bottom", cursor: "ns-resize", style: "bottom: 0; left: 12px; right: 12px; height: 6px;" },
+    { position: "left", cursor: "ew-resize", style: "top: 12px; bottom: 12px; left: 0; width: 6px;" },
+    { position: "right", cursor: "ew-resize", style: "top: 12px; bottom: 12px; right: 0; width: 6px;" }
+  ];
+  const documentListeners = [];
+  let currentMarginLeft = 0;
+  let currentMarginTop = 0;
+  handles.forEach(({ position, cursor, style }) => {
+    const handle = container.createDiv(`mermaid-resize-${position}`);
+    handle.style.cssText = `
+			position: absolute;
+			${style}
+			cursor: ${cursor};
+			z-index: 50;
+		`;
+    const resizeClass = cursorClassMap[cursor];
+    let isResizing = false;
+    let startX = 0;
+    let startY = 0;
+    let startWidth = 0;
+    let startHeight = 0;
+    let startMarginLeft = 0;
+    let startMarginTop = 0;
+    const onMouseDown = (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      isResizing = true;
+      startX = e.clientX;
+      startY = e.clientY;
+      startWidth = container.offsetWidth;
+      startHeight = container.offsetHeight;
+      startMarginLeft = currentMarginLeft;
+      startMarginTop = currentMarginTop;
+      document.body.addClass(resizeClass);
+    };
+    const onMouseMove = (e) => {
+      if (!isResizing)
+        return;
+      e.preventDefault();
+      const deltaX = e.clientX - startX;
+      const deltaY = e.clientY - startY;
+      let newWidth = startWidth;
+      let newHeight = startHeight;
+      let newMarginLeft = startMarginLeft;
+      let newMarginTop = startMarginTop;
+      if (position.includes("right")) {
+        newWidth = Math.max(150, startWidth + deltaX);
+      } else if (position.includes("left")) {
+        const widthDelta = -deltaX;
+        newWidth = Math.max(150, startWidth + widthDelta);
+        if (newWidth > 150) {
+          newMarginLeft = startMarginLeft + deltaX;
+        }
+      }
+      if (position.includes("bottom")) {
+        newHeight = Math.max(100, startHeight + deltaY);
+      } else if (position.includes("top")) {
+        const heightDelta = -deltaY;
+        newHeight = Math.max(100, startHeight + heightDelta);
+        if (newHeight > 100) {
+          newMarginTop = startMarginTop + deltaY;
+        }
+      }
+      container.style.width = `${newWidth}px`;
+      container.style.height = `${newHeight}px`;
+      container.style.marginLeft = `${newMarginLeft}px`;
+      container.style.marginTop = `${newMarginTop}px`;
+      currentMarginLeft = newMarginLeft;
+      currentMarginTop = newMarginTop;
+    };
+    const onMouseUp = () => {
+      if (!isResizing)
+        return;
+      isResizing = false;
+      document.body.removeClass(resizeClass);
+      reset();
+    };
+    handle.addEventListener("mousedown", onMouseDown);
+    document.addEventListener("mousemove", onMouseMove);
+    document.addEventListener("mouseup", onMouseUp);
+    documentListeners.push(
+      { type: "mousemove", fn: onMouseMove },
+      { type: "mouseup", fn: onMouseUp }
+    );
+  });
+  return () => {
+    for (const { type, fn } of documentListeners) {
+      document.removeEventListener(type, fn);
+    }
+  };
+}
+
+// export.ts
+var import_obsidian3 = require("obsidian");
+async function svgToPngBlob(svg, width, height, scale = 2) {
+  const clone = svg.cloneNode(true);
+  clone.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+  clone.setAttribute("width", String(width));
+  clone.setAttribute("height", String(height));
+  clone.style.removeProperty("transform");
+  const svgDataUrl = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(new XMLSerializer().serializeToString(clone));
+  const img = new Image();
+  const loaded = new Promise((resolve, reject) => {
+    img.onload = () => resolve();
+    img.onerror = () => reject(new Error("SVG image failed to load"));
+  });
+  img.src = svgDataUrl;
+  await loaded;
+  const canvas = createEl("canvas");
+  canvas.width = Math.max(1, Math.round(width * scale));
+  canvas.height = Math.max(1, Math.round(height * scale));
+  const ctx = canvas.getContext("2d");
+  if (!ctx)
+    throw new Error("Canvas 2D context unavailable");
+  ctx.scale(scale, scale);
+  ctx.drawImage(img, 0, 0, width, height);
+  const blob = await new Promise((resolve) => canvas.toBlob(resolve, "image/png"));
+  if (!blob)
+    throw new Error("Canvas failed to produce a PNG");
+  return blob;
+}
+function downloadBlob(blob, filename) {
+  const url = URL.createObjectURL(blob);
+  const a = createEl("a");
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+async function exportDiagramPng(app, svg, width, height, destination) {
+  var _a;
+  try {
+    const blob = await svgToPngBlob(svg, width, height, 2);
+    const active = app.workspace.getActiveFile();
+    const filename = ((_a = active == null ? void 0 : active.basename) != null ? _a : "diagram") + ".png";
+    if (destination === "download") {
+      downloadBlob(blob, filename);
+      new import_obsidian3.Notice(t("export.downloadedNotice").replace("{name}", filename));
+    } else {
+      const path = await app.fileManager.getAvailablePathForAttachment(filename, active == null ? void 0 : active.path);
+      await app.vault.createBinary(path, await blob.arrayBuffer());
+      new import_obsidian3.Notice(t("export.savedNotice").replace("{path}", path));
+    }
+  } catch (err) {
+    console.error("Mermaid Zoom: PNG export failed", err);
+    new import_obsidian3.Notice(t("export.failedNotice"));
+  }
+}
+
+// main.ts
+var MermaidZoomPlugin = class extends import_obsidian4.Plugin {
   constructor() {
     super(...arguments);
     this.zoomStates = /* @__PURE__ */ new Map();
@@ -36,8 +683,17 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     this.defaultMaxScale = 5;
     this.defaultScale = 1;
     this.processedElements = /* @__PURE__ */ new WeakSet();
+    this.settings = DEFAULT_SETTINGS;
   }
-  onload() {
+  async loadSettings() {
+    this.settings = Object.assign({}, DEFAULT_SETTINGS, await this.loadData());
+  }
+  async saveSettings() {
+    await this.saveData(this.settings);
+  }
+  async onload() {
+    await this.loadSettings();
+    this.addSettingTab(new MermaidZoomSettingTab(this.app, this));
     console.debug("Loading Mermaid Zoom plugin");
     this.setupMutationObserver();
     this.setupResizeObserver();
@@ -51,7 +707,7 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
       this.processAllMermaidDiagrams();
     }));
     this.registerEvent(this.app.workspace.on("file-open", () => {
-      setTimeout(() => this.processAllMermaidDiagrams(), 200);
+      window.setTimeout(() => this.processAllMermaidDiagrams(), 200);
     }));
   }
   setupResizeObserver() {
@@ -81,7 +737,7 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     this.mutationObserver = new MutationObserver((mutations) => {
       for (const mutation of Array.from(mutations)) {
         for (const node of Array.from(mutation.addedNodes)) {
-          if (node instanceof HTMLElement || node instanceof SVGElement) {
+          if (node.instanceOf(HTMLElement) || node.instanceOf(SVGElement)) {
             this.processPotentialMermaidElement(node);
           }
         }
@@ -94,7 +750,7 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
   }
   processPotentialMermaidElement(element) {
     const mermaidSvgs = [];
-    if (element instanceof HTMLElement) {
+    if (element.instanceOf(HTMLElement)) {
       const svgs = Array.from(element.querySelectorAll('.mermaid svg, svg[id^="mermaid-"]'));
       mermaidSvgs.push(...svgs);
       if (element.classList.contains("mermaid")) {
@@ -134,25 +790,18 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     const targetElement = mermaidContainer || svg;
     if (!targetParent)
       return;
-    const initialSvgRect = svg.getBoundingClientRect();
-    const initialSvgHeight = initialSvgRect.height || 200;
-    const parentWidth = targetParent.clientWidth || 600;
-    const containerHeight = Math.min(initialSvgHeight + 60, parentWidth);
     const container = createDiv("mermaid-zoom-container");
     container.style.cssText = `
 			position: relative;
 			overflow: hidden;
 			width: 100%;
-			height: ${containerHeight}px;
 			min-width: 150px;
 			min-height: 100px;
-			background: var(--background-secondary);
-			border-radius: 8px;
-			border: 1px solid var(--background-modifier-border);
-			margin: 1em 0;
+			margin: 0;
 			padding: 1em;
 			padding-bottom: 2.5em;
 			box-sizing: border-box;
+			${this.settings.showContainerBorder ? "border: 1px dashed var(--background-modifier-border); border-radius: 4px;" : ""}
 		`;
     const contentWrapper = container.createDiv("mermaid-zoom-content");
     contentWrapper.style.cssText = `
@@ -165,6 +814,17 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     const svgRect = svg.getBoundingClientRect();
     const svgOriginalWidth = svgRect.width || svg.clientWidth || 300;
     const svgOriginalHeight = svgRect.height || svg.clientHeight || 200;
+    const computedStyle = getComputedStyle(container);
+    const paddingTop = parseFloat(computedStyle.paddingTop) || 0;
+    const paddingBottom = parseFloat(computedStyle.paddingBottom) || 0;
+    const paddingLeft = parseFloat(computedStyle.paddingLeft) || 0;
+    const paddingRight = parseFloat(computedStyle.paddingRight) || 0;
+    const availableWidth = container.clientWidth - paddingLeft - paddingRight;
+    const defaultZoomScale = this.settings.defaultZoom / 100;
+    const effectiveScale = Math.min(availableWidth / svgOriginalWidth, defaultZoomScale);
+    const naturalHeight = svgOriginalHeight * effectiveScale + paddingTop + paddingBottom;
+    const containerHeight = this.settings.maxHeight > 0 ? Math.min(naturalHeight, this.settings.maxHeight) : naturalHeight;
+    container.style.height = `${containerHeight}px`;
     const state = {
       scale: this.defaultScale,
       minScale: this.defaultMinScale,
@@ -177,13 +837,14 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
       svg,
       container,
       svgOriginalWidth,
-      svgOriginalHeight
+      svgOriginalHeight,
+      locked: true
     };
     this.zoomStates.set(contentWrapper, state);
     this.register(this.createControls(container, contentWrapper, state));
-    this.register(this.addWheelZoom(container, contentWrapper, state));
-    this.register(this.addDragPan(container, contentWrapper, state));
-    this.register(this.addTouchGestures(container, contentWrapper, state));
+    this.register(addWheelZoom(container, contentWrapper, state));
+    this.register(addDragPan(container, contentWrapper, state));
+    this.register(addTouchGestures(container, contentWrapper, state));
     this.fitToContainer(container, contentWrapper, svg, state);
     (_a = this.resizeObserver) == null ? void 0 : _a.observe(container);
   }
@@ -203,18 +864,30 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     const svgHeight = state.svgOriginalHeight;
     const scaleX = availableWidth / svgWidth;
     const scaleY = availableHeight / svgHeight;
-    const fitScale = Math.min(scaleX, scaleY, 1);
+    const fitScale = Math.min(scaleX, scaleY, this.settings.defaultZoom / 100);
     const scaledWidth = svgWidth * fitScale;
     const scaledHeight = svgHeight * fitScale;
-    const centerX = (container.clientWidth - scaledWidth) / 2 - paddingLeft;
+    let offsetX;
+    switch (this.settings.alignment) {
+      case "left":
+        offsetX = 0;
+        break;
+      case "right":
+        offsetX = availableWidth - scaledWidth;
+        break;
+      case "center":
+      default:
+        offsetX = (availableWidth - scaledWidth) / 2;
+        break;
+    }
     const centerY = (container.clientHeight - scaledHeight) / 2 - paddingTop;
     state.scale = fitScale;
-    state.translateX = centerX;
+    state.translateX = offsetX;
     state.translateY = Math.max(0, centerY);
-    this.updateTransform(contentWrapper, state);
+    updateTransform(contentWrapper, state);
   }
   openFullscreenModal(state) {
-    const modal = document.createElement("div");
+    const modal = createDiv();
     modal.className = "mermaid-zoom-modal";
     modal.style.cssText = `
 			position: fixed;
@@ -227,7 +900,7 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
 			display: flex;
 			flex-direction: column;
 		`;
-    const header = document.createElement("div");
+    const header = createDiv();
     header.className = "mermaid-zoom-modal-header";
     header.style.cssText = `
 			display: flex;
@@ -236,14 +909,13 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
 			background: var(--background-secondary);
 			border-bottom: 1px solid var(--background-modifier-border);
 		`;
-    const closeBtn = document.createElement("button");
+    const closeBtn = createEl("button");
     closeBtn.className = "mermaid-zoom-modal-close";
     closeBtn.textContent = "\u2715";
     closeBtn.style.cssText = `
 			width: 32px;
 			height: 32px;
 			border: none;
-			background: var(--interactive-normal);
 			color: var(--text-normal);
 			border-radius: 4px;
 			cursor: pointer;
@@ -254,7 +926,7 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
 			transition: background 0.2s;
 		`;
     header.appendChild(closeBtn);
-    const content = document.createElement("div");
+    const content = createDiv();
     content.className = "mermaid-zoom-modal-content";
     content.style.cssText = `
 			flex: 1;
@@ -264,7 +936,7 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
 			align-items: center;
 			justify-content: center;
 		`;
-    const modalZoomContainer = document.createElement("div");
+    const modalZoomContainer = createDiv();
     modalZoomContainer.className = "mermaid-zoom-modal-zoom-container";
     modalZoomContainer.style.cssText = `
 			width: 100%;
@@ -272,7 +944,7 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
 			overflow: hidden;
 			position: relative;
 		`;
-    const modalContentWrapper = document.createElement("div");
+    const modalContentWrapper = createDiv();
     modalContentWrapper.className = "mermaid-zoom-modal-wrapper";
     modalContentWrapper.style.cssText = `
 			transform-origin: 0 0;
@@ -284,7 +956,7 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     modalContentWrapper.appendChild(svgClone);
     modalZoomContainer.appendChild(modalContentWrapper);
     content.appendChild(modalZoomContainer);
-    const controls = document.createElement("div");
+    const controls = createDiv();
     controls.className = "mermaid-zoom-modal-controls";
     controls.style.cssText = `
 			position: absolute;
@@ -309,23 +981,31 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
       svg: svgClone,
       container: modalZoomContainer,
       svgOriginalWidth: state.svgOriginalWidth,
-      svgOriginalHeight: state.svgOriginalHeight
+      svgOriginalHeight: state.svgOriginalHeight,
+      locked: false
     };
-    const zoomInBtn = document.createElement("button");
+    const zoomInBtn = createEl("button");
     zoomInBtn.textContent = "+";
     this.styleButton(zoomInBtn);
-    zoomInBtn.addEventListener("click", () => this.zoom(modalContentWrapper, modalState, 1.2));
-    const zoomOutBtn = document.createElement("button");
+    zoomInBtn.addEventListener("click", () => zoom(modalContentWrapper, modalState, 1.2));
+    const zoomOutBtn = createEl("button");
     zoomOutBtn.textContent = "-";
     this.styleButton(zoomOutBtn);
-    zoomOutBtn.addEventListener("click", () => this.zoom(modalContentWrapper, modalState, 0.8));
-    const resetBtn = document.createElement("button");
+    zoomOutBtn.addEventListener("click", () => zoom(modalContentWrapper, modalState, 0.8));
+    const resetBtn = createEl("button");
     resetBtn.textContent = "\u27F2";
     this.styleButton(resetBtn);
     resetBtn.addEventListener("click", () => {
       this.fitToContainerModal(modalZoomContainer, modalContentWrapper, modalState);
     });
-    const scaleIndicator = document.createElement("span");
+    const exportBtn = createEl("button");
+    exportBtn.textContent = "\u2913";
+    exportBtn.title = t("export.buttonTitle");
+    this.styleButton(exportBtn);
+    exportBtn.addEventListener("click", () => {
+      void exportDiagramPng(this.app, state.svg, state.svgOriginalWidth, state.svgOriginalHeight, this.settings.exportDestination);
+    });
+    const scaleIndicator = createSpan();
     scaleIndicator.style.cssText = `
 			padding: 4px 8px;
 			font-size: 12px;
@@ -335,23 +1015,48 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
 			text-align: center;
 		`;
     modalState.scaleIndicator = scaleIndicator;
+    const controlsCloseBtn = createEl("button");
+    controlsCloseBtn.textContent = "\u2715";
+    controlsCloseBtn.title = t("modal.close");
+    controlsCloseBtn.setAttribute("aria-label", t("modal.close"));
+    this.styleButton(controlsCloseBtn);
+    controlsCloseBtn.addClass("mermaid-modal-close-btn");
+    const controlsSeparator = createDiv();
+    controlsSeparator.style.cssText = `
+			width: 1px;
+			align-self: stretch;
+			margin: 2px 4px;
+			background: var(--background-modifier-border);
+		`;
     controls.appendChild(zoomInBtn);
     controls.appendChild(zoomOutBtn);
     controls.appendChild(resetBtn);
     controls.appendChild(scaleIndicator);
+    controls.appendChild(controlsSeparator);
+    controls.appendChild(exportBtn);
+    controls.appendChild(controlsCloseBtn);
     content.appendChild(controls);
     modal.appendChild(header);
     modal.appendChild(content);
     const modalCleanupFns = [];
-    modalCleanupFns.push(this.addWheelZoom(modalZoomContainer, modalContentWrapper, modalState));
-    modalCleanupFns.push(this.addDragPan(modalZoomContainer, modalContentWrapper, modalState));
-    modalCleanupFns.push(this.addTouchGestures(modalZoomContainer, modalContentWrapper, modalState));
+    modalCleanupFns.push(addWheelZoom(modalZoomContainer, modalContentWrapper, modalState));
+    modalCleanupFns.push(addDragPan(modalZoomContainer, modalContentWrapper, modalState));
+    modalCleanupFns.push(addTouchGestures(modalZoomContainer, modalContentWrapper, modalState));
+    let closedByPopstate = false;
+    const popstateHandler = () => {
+      closedByPopstate = true;
+      closeModal();
+    };
     const closeModal = () => {
+      window.removeEventListener("popstate", popstateHandler);
       for (const cleanup of modalCleanupFns) {
         cleanup();
       }
       modal.remove();
       document.removeEventListener("keydown", handleKeydown);
+      if (!closedByPopstate) {
+        history.back();
+      }
     };
     const handleKeydown = (e) => {
       if (e.key === "Escape") {
@@ -359,9 +1064,12 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
       }
     };
     document.addEventListener("keydown", handleKeydown);
+    history.pushState(null, "");
+    window.addEventListener("popstate", popstateHandler);
     closeBtn.addEventListener("click", closeModal);
+    controlsCloseBtn.addEventListener("click", closeModal);
     document.body.appendChild(modal);
-    requestAnimationFrame(() => {
+    window.requestAnimationFrame(() => {
       this.fitToContainerModal(modalZoomContainer, modalContentWrapper, modalState);
     });
   }
@@ -385,7 +1093,7 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
     state.scale = fitScale;
     state.translateX = centerX;
     state.translateY = centerY;
-    this.updateTransform(contentWrapper, state);
+    updateTransform(contentWrapper, state);
   }
   createControls(container, contentWrapper, state) {
     const controls = container.createDiv("mermaid-zoom-controls");
@@ -394,6 +1102,7 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
 			bottom: 10px;
 			right: 10px;
 			display: flex;
+			flex-direction: column;
 			gap: 5px;
 			z-index: 100;
 			background: var(--background-secondary);
@@ -401,34 +1110,82 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
 			border-radius: 5px;
 			box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 		`;
-    const zoomInBtn = controls.createEl("button", {
+    const topRow = controls.createDiv();
+    topRow.style.cssText = `
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 8px;
+		`;
+    const bottomRow = controls.createDiv();
+    bottomRow.style.cssText = `
+			display: flex;
+			align-items: center;
+			gap: 5px;
+		`;
+    const lockToggle = topRow.createDiv("mermaid-lock-toggle");
+    lockToggle.style.cssText = `
+			display: flex;
+			align-items: center;
+			gap: 6px;
+			padding: 0 8px 0 4px;
+		`;
+    const lockLabel = lockToggle.createSpan({
+      text: t("lock.label"),
+      cls: "mermaid-lock-label"
+    });
+    lockLabel.style.cssText = `
+			font-size: 12px;
+			font-family: var(--font-ui-medium);
+			color: var(--text-muted);
+			white-space: nowrap;
+		`;
+    new import_obsidian4.ToggleComponent(lockToggle).setValue(state.locked).onChange((value) => {
+      state.locked = value;
+      contentWrapper.classList.toggle("locked", state.locked);
+    });
+    contentWrapper.classList.toggle("locked", state.locked);
+    const stopSwitchEvent = (e) => e.stopPropagation();
+    lockToggle.addEventListener("mousedown", stopSwitchEvent);
+    lockToggle.addEventListener("click", stopSwitchEvent);
+    const zoomInBtn = bottomRow.createEl("button", {
       text: "+",
       cls: "mermaid-zoom-btn"
     });
     this.styleButton(zoomInBtn);
     zoomInBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      this.zoom(contentWrapper, state, 1.2);
+      zoom(contentWrapper, state, 1.2);
     });
-    const zoomOutBtn = controls.createEl("button", {
+    const zoomOutBtn = bottomRow.createEl("button", {
       text: "-",
       cls: "mermaid-zoom-btn"
     });
     this.styleButton(zoomOutBtn);
     zoomOutBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      this.zoom(contentWrapper, state, 0.8);
+      zoom(contentWrapper, state, 0.8);
     });
-    const resetBtn = controls.createEl("button", {
+    const resetBtn = bottomRow.createEl("button", {
       text: "\u27F2",
       cls: "mermaid-zoom-btn"
     });
     this.styleButton(resetBtn);
     resetBtn.addEventListener("click", (e) => {
       e.stopPropagation();
-      this.resetZoom(contentWrapper, state);
+      this.fitToContainer(state.container, contentWrapper, state.svg, state);
     });
-    const scaleIndicator = controls.createEl("span", {
+    const exportBtn = bottomRow.createEl("button", {
+      text: "\u2913",
+      cls: "mermaid-zoom-btn"
+    });
+    exportBtn.title = t("export.buttonTitle");
+    this.styleButton(exportBtn);
+    exportBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      void exportDiagramPng(this.app, state.svg, state.svgOriginalWidth, state.svgOriginalHeight, this.settings.exportDestination);
+    });
+    const scaleIndicator = topRow.createSpan({
       cls: "mermaid-zoom-scale"
     });
     scaleIndicator.style.cssText = `
@@ -440,8 +1197,8 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
 			text-align: center;
 		`;
     state.scaleIndicator = scaleIndicator;
-    this.updateTransform(contentWrapper, state);
-    const fullscreenBtn = controls.createEl("button", {
+    updateTransform(contentWrapper, state);
+    const fullscreenBtn = bottomRow.createEl("button", {
       cls: "mermaid-zoom-btn mermaid-fullscreen-btn"
     });
     const svgNS = "http://www.w3.org/2000/svg";
@@ -472,14 +1229,14 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
       e.stopPropagation();
       this.openFullscreenModal(state);
     });
-    return this.addResizeHandles(container, contentWrapper, state);
+    return addResizeHandles(container, contentWrapper, state, () => this.fitToContainer(state.container, contentWrapper, state.svg, state));
   }
   styleButton(btn) {
+    btn.addClass("mermaid-zoom-btn");
     btn.style.cssText = `
 			width: 28px;
 			height: 28px;
 			border: none;
-			background: var(--interactive-normal);
 			color: var(--text-normal);
 			border-radius: 4px;
 			cursor: pointer;
@@ -489,236 +1246,6 @@ var MermaidZoomPlugin = class extends import_obsidian.Plugin {
 			justify-content: center;
 			transition: background 0.2s;
 		`;
-  }
-  addResizeHandles(container, contentWrapper, state) {
-    const cursorClassMap = {
-      "nwse-resize": "mermaid-zoom-resizing-nwse",
-      "nesw-resize": "mermaid-zoom-resizing-nesw",
-      "ns-resize": "mermaid-zoom-resizing-ns",
-      "ew-resize": "mermaid-zoom-resizing-ew"
-    };
-    const handles = [
-      { position: "top-left", cursor: "nwse-resize", style: "top: 0; left: 0; width: 12px; height: 12px;" },
-      { position: "top-right", cursor: "nesw-resize", style: "top: 0; right: 0; width: 12px; height: 12px;" },
-      { position: "bottom-left", cursor: "nesw-resize", style: "bottom: 0; left: 0; width: 12px; height: 12px;" },
-      { position: "bottom-right", cursor: "nwse-resize", style: "bottom: 0; right: 0; width: 12px; height: 12px;" },
-      { position: "top", cursor: "ns-resize", style: "top: 0; left: 12px; right: 12px; height: 6px;" },
-      { position: "bottom", cursor: "ns-resize", style: "bottom: 0; left: 12px; right: 12px; height: 6px;" },
-      { position: "left", cursor: "ew-resize", style: "top: 12px; bottom: 12px; left: 0; width: 6px;" },
-      { position: "right", cursor: "ew-resize", style: "top: 12px; bottom: 12px; right: 0; width: 6px;" }
-    ];
-    const documentListeners = [];
-    let currentMarginLeft = 0;
-    let currentMarginTop = 0;
-    handles.forEach(({ position, cursor, style }) => {
-      const handle = container.createDiv(`mermaid-resize-${position}`);
-      handle.style.cssText = `
-				position: absolute;
-				${style}
-				cursor: ${cursor};
-				z-index: 50;
-			`;
-      const resizeClass = cursorClassMap[cursor];
-      let isResizing = false;
-      let startX = 0;
-      let startY = 0;
-      let startWidth = 0;
-      let startHeight = 0;
-      let startMarginLeft = 0;
-      let startMarginTop = 0;
-      const onMouseDown = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
-        isResizing = true;
-        startX = e.clientX;
-        startY = e.clientY;
-        startWidth = container.offsetWidth;
-        startHeight = container.offsetHeight;
-        startMarginLeft = currentMarginLeft;
-        startMarginTop = currentMarginTop;
-        document.body.addClass(resizeClass);
-      };
-      const onMouseMove = (e) => {
-        if (!isResizing)
-          return;
-        e.preventDefault();
-        const deltaX = e.clientX - startX;
-        const deltaY = e.clientY - startY;
-        let newWidth = startWidth;
-        let newHeight = startHeight;
-        let newMarginLeft = startMarginLeft;
-        let newMarginTop = startMarginTop;
-        if (position.includes("right")) {
-          newWidth = Math.max(150, startWidth + deltaX);
-        } else if (position.includes("left")) {
-          const widthDelta = -deltaX;
-          newWidth = Math.max(150, startWidth + widthDelta);
-          if (newWidth > 150) {
-            newMarginLeft = startMarginLeft + deltaX;
-          }
-        }
-        if (position.includes("bottom")) {
-          newHeight = Math.max(100, startHeight + deltaY);
-        } else if (position.includes("top")) {
-          const heightDelta = -deltaY;
-          newHeight = Math.max(100, startHeight + heightDelta);
-          if (newHeight > 100) {
-            newMarginTop = startMarginTop + deltaY;
-          }
-        }
-        container.style.width = `${newWidth}px`;
-        container.style.height = `${newHeight}px`;
-        container.style.marginLeft = `${newMarginLeft}px`;
-        container.style.marginTop = `${newMarginTop}px`;
-        currentMarginLeft = newMarginLeft;
-        currentMarginTop = newMarginTop;
-      };
-      const onMouseUp = () => {
-        if (!isResizing)
-          return;
-        isResizing = false;
-        document.body.removeClass(resizeClass);
-        this.resetZoom(contentWrapper, state);
-      };
-      handle.addEventListener("mousedown", onMouseDown);
-      document.addEventListener("mousemove", onMouseMove);
-      document.addEventListener("mouseup", onMouseUp);
-      documentListeners.push(
-        { type: "mousemove", fn: onMouseMove },
-        { type: "mouseup", fn: onMouseUp }
-      );
-    });
-    return () => {
-      for (const { type, fn } of documentListeners) {
-        document.removeEventListener(type, fn);
-      }
-    };
-  }
-  addWheelZoom(container, contentWrapper, state) {
-    const wheelHandler = (e) => {
-      e.preventDefault();
-      const rect = container.getBoundingClientRect();
-      const mouseX = e.clientX - rect.left;
-      const mouseY = e.clientY - rect.top;
-      const delta = e.deltaY > 0 ? 0.9 : 1.1;
-      const oldScale = state.scale;
-      let newScale = oldScale * delta;
-      newScale = Math.max(state.minScale, Math.min(state.maxScale, newScale));
-      if (newScale !== oldScale) {
-        const scaleRatio = newScale / oldScale;
-        state.translateX = mouseX - (mouseX - state.translateX) * scaleRatio;
-        state.translateY = mouseY - (mouseY - state.translateY) * scaleRatio;
-        state.scale = newScale;
-        this.updateTransform(contentWrapper, state);
-      }
-    };
-    container.addEventListener("wheel", wheelHandler, { passive: false });
-    return () => container.removeEventListener("wheel", wheelHandler);
-  }
-  addDragPan(container, contentWrapper, state) {
-    contentWrapper.classList.add("mermaid-zoom-content");
-    container.addEventListener("mousedown", (e) => {
-      if (e.button === 0) {
-        state.isDragging = true;
-        state.startX = e.clientX - state.translateX;
-        state.startY = e.clientY - state.translateY;
-        contentWrapper.addClass("dragging");
-      }
-    });
-    const onMouseMove = (e) => {
-      if (state.isDragging) {
-        e.preventDefault();
-        state.translateX = e.clientX - state.startX;
-        state.translateY = e.clientY - state.startY;
-        this.updateTransform(contentWrapper, state);
-      }
-    };
-    const onMouseUp = () => {
-      if (state.isDragging) {
-        state.isDragging = false;
-        contentWrapper.removeClass("dragging");
-      }
-    };
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseup", onMouseUp);
-    return () => {
-      document.removeEventListener("mousemove", onMouseMove);
-      document.removeEventListener("mouseup", onMouseUp);
-    };
-  }
-  addTouchGestures(container, contentWrapper, state) {
-    let initialDistance = 0;
-    let initialScale = 1;
-    const onTouchStart = (e) => {
-      if (e.touches.length === 2) {
-        const touch1 = e.touches[0];
-        const touch2 = e.touches[1];
-        initialDistance = Math.hypot(
-          touch2.clientX - touch1.clientX,
-          touch2.clientY - touch1.clientY
-        );
-        initialScale = state.scale;
-      } else if (e.touches.length === 1) {
-        state.isDragging = true;
-        state.startX = e.touches[0].clientX - state.translateX;
-        state.startY = e.touches[0].clientY - state.translateY;
-      }
-    };
-    const onTouchMove = (e) => {
-      e.preventDefault();
-      if (e.touches.length === 2) {
-        const touch1 = e.touches[0];
-        const touch2 = e.touches[1];
-        const currentDistance = Math.hypot(
-          touch2.clientX - touch1.clientX,
-          touch2.clientY - touch1.clientY
-        );
-        const scaleRatio = currentDistance / initialDistance;
-        let newScale = initialScale * scaleRatio;
-        newScale = Math.max(state.minScale, Math.min(state.maxScale, newScale));
-        state.scale = newScale;
-        this.updateTransform(contentWrapper, state);
-      } else if (e.touches.length === 1 && state.isDragging) {
-        state.translateX = e.touches[0].clientX - state.startX;
-        state.translateY = e.touches[0].clientY - state.startY;
-        this.updateTransform(contentWrapper, state);
-      }
-    };
-    const onTouchEnd = () => {
-      state.isDragging = false;
-    };
-    container.addEventListener("touchstart", onTouchStart);
-    container.addEventListener("touchmove", onTouchMove, { passive: false });
-    container.addEventListener("touchend", onTouchEnd);
-    return () => {
-      container.removeEventListener("touchstart", onTouchStart);
-      container.removeEventListener("touchmove", onTouchMove);
-      container.removeEventListener("touchend", onTouchEnd);
-    };
-  }
-  zoom(contentWrapper, state, factor) {
-    let newScale = state.scale * factor;
-    newScale = Math.max(state.minScale, Math.min(state.maxScale, newScale));
-    const container = contentWrapper.parentElement;
-    if (container) {
-      const rect = container.getBoundingClientRect();
-      const centerX = rect.width / 2;
-      const centerY = rect.height / 2;
-      const scaleRatio = newScale / state.scale;
-      state.translateX = centerX - (centerX - state.translateX) * scaleRatio;
-      state.translateY = centerY - (centerY - state.translateY) * scaleRatio;
-    }
-    state.scale = newScale;
-    this.updateTransform(contentWrapper, state);
-  }
-  resetZoom(contentWrapper, state) {
-    this.fitToContainer(state.container, contentWrapper, state.svg, state);
-  }
-  updateTransform(contentWrapper, state) {
-    contentWrapper.style.transform = `translate(${state.translateX}px, ${state.translateY}px) scale(${state.scale})`;
-    if (state.scaleIndicator) {
-      state.scaleIndicator.textContent = `${Math.round(state.scale * 100)}%`;
-    }
   }
   onunload() {
     console.debug("Unloading Mermaid Zoom plugin");

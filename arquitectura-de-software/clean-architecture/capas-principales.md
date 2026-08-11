@@ -76,6 +76,6 @@ Esta es la distinción entre el "qué" y el "cómo":
 
 ## <mark style="background: #FFB8EBA6;">Capa Externa</mark>
 
-- **La Capa Externa es un detalle de implementación:** El autor argumenta que herramientas como _React_, _Angular_, _Express_, _Node.js_ o incluso las bases de datos (SQL, NoSQL, DynamoDB) no son el núcleo del negocio, sino meros detalles técnicos que no afectan la lógica central de la aplicación.
+- **La Capa Externa es un detalle de implementación:** El autor argumenta que herramientas como *React*, *Angular*, *Express*, *Node.js* o incluso las bases de datos (SQL, NoSQL, DynamoDB) no son el núcleo del negocio, sino meros detalles técnicos que no afectan la lógica central de la aplicación.
 - **El rol de los adaptadores:** Se explica cómo los adaptadores permiten aislar el dominio y los casos de uso de la tecnología externa. Si decides cambiar de base de datos, solo necesitas modificar el adaptador sin tocar la lógica de negocio.
 - **La revelación sobre el Frontend:** El autor sostiene que incluso la web en sí misma es un detalle de implementación. Explica que el **DOM** funciona como el nexo o adaptador necesario para interactuar con el navegador, mientras que la regla de negocio debe ser agnóstica a si la interfaz se muestra en una web o un dispositivo de hardware.
