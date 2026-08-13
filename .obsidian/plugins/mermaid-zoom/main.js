@@ -1042,11 +1042,7 @@ var MermaidZoomPlugin = class extends import_obsidian4.Plugin {
     modalCleanupFns.push(addWheelZoom(modalZoomContainer, modalContentWrapper, modalState));
     modalCleanupFns.push(addDragPan(modalZoomContainer, modalContentWrapper, modalState));
     modalCleanupFns.push(addTouchGestures(modalZoomContainer, modalContentWrapper, modalState));
-    let closedByPopstate = false;
-    const popstateHandler = () => {
-      closedByPopstate = true;
-      closeModal();
-    };
+    const popstateHandler = () => closeModal();
     const closeModal = () => {
       window.removeEventListener("popstate", popstateHandler);
       for (const cleanup of modalCleanupFns) {
@@ -1054,9 +1050,6 @@ var MermaidZoomPlugin = class extends import_obsidian4.Plugin {
       }
       modal.remove();
       document.removeEventListener("keydown", handleKeydown);
-      if (!closedByPopstate) {
-        history.back();
-      }
     };
     const handleKeydown = (e) => {
       if (e.key === "Escape") {
@@ -1064,8 +1057,10 @@ var MermaidZoomPlugin = class extends import_obsidian4.Plugin {
       }
     };
     document.addEventListener("keydown", handleKeydown);
-    history.pushState(null, "");
-    window.addEventListener("popstate", popstateHandler);
+    if (import_obsidian4.Platform.isMobile) {
+      history.pushState(null, "");
+      window.addEventListener("popstate", popstateHandler);
+    }
     closeBtn.addEventListener("click", closeModal);
     controlsCloseBtn.addEventListener("click", closeModal);
     document.body.appendChild(modal);

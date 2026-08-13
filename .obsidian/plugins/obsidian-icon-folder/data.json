@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
-      "🔨",
-      "⚖",
-      "LiComputer",
-      "LiChartColumnStacked",
-      "📎"
+      "LiBrain",
+      "LiArchiveX",
+      "LiDatabase",
+      "🖌",
+      "LiExcalidrawIcon"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -34,8 +34,8 @@
     "debugMode": false,
     "useInternalPlugins": false
   },
-  "algebra-lineal": "🧮",
-  "Excalidraw": "🎨",
+  "algebra-lineal": "LiBrain",
+  "Excalidraw": "🖌",
   "algebra-lineal/practica-03/practica-03-e01-20.md": "✍",
   "algebra-lineal/practica-02/practica-02-e11-25.md": "✍",
   "algebra-lineal/practica-02/practica-02-e01-10.md": "✍",
@@ -46,10 +46,13 @@
   "algebra-lineal/practica-05/Anexos": "📎",
   "algebra-lineal/practica-05/practica-05-e01-26.md": "✍",
   "algebra-lineal/practica-06/practica-06-e01-13.md": "✍",
-  "matematica-discreta": "🧩",
+  "matematica-discreta": "LiCalculator",
   "matematica-discreta/practica-01/practica-01.md": "✍",
-  "base-de-datos-2": "LiChartColumnStacked",
+  "base-de-datos-2": "LiDatabase",
   "organizacion-del-computador-2": "LiComputer",
   "sociedad-informatica": "⚖",
-  "arquitectura-de-software": "🔨"
+  "arquitectura-de-software": "LiArchiveX",
+  "sistemas-operativos-y-redes": "LiLaptop",
+  "sistemas-operativos-y-redes/redes": "LiNetwork",
+  "sistemas-operativos-y-redes/sistemas-operativos": "LiLaptop"
 }

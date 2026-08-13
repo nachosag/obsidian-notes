@@ -4,42 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "836c748c96731c48",
+        "id": "94477a042b3f5f69",
         "type": "tabs",
-        "dimension": 51.2472885032538,
         "children": [
           {
-            "id": "27a061410d7d2cdc",
+            "id": "844e4040a61c139e",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/systemcall-kernel-dispisitivos-drivers-parte-1.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "systemcall-kernel-dispisitivos-drivers-parte-1"
-            }
-          }
-        ]
-      },
-      {
-        "id": "d77876629ac2a018",
-        "type": "tabs",
-        "dimension": 48.7527114967462,
-        "children": [
-          {
-            "id": "b28658d71b91548a",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/systemcall-kernel-dispisitivos-drivers-parte-1.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "systemcall-kernel-dispisitivos-drivers-parte-1"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -101,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 405.5,
-    "collapsed": true
+    "width": 405.5
   },
   "right": {
     "id": "60744be18a06282d",
@@ -174,17 +148,19 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "27a061410d7d2cdc",
+  "active": "844e4040a61c139e",
   "lastOpenFiles": [
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/systemcall-kernel-dispisitivos-drivers-parte-1.pdf",
+    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/ejercicios.pdf",
+    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/drivers-y-dispositivos.md",
+    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/user-kernel-systemcalls-descriptores.md",
+    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/arquitectura-y-niveles.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/systemcall-kernel-dispisitivos-drivers-parte-1.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/anexos/Pasted image 20260810203032.png",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/anexos/Pasted image 20260810185602.png",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/anexos/Pasted image 20260810183923.png",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/anexos",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/systemcall-kernel-dispisitivos-drivers-parte-2.md",
-    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/ejercicios.pdf",
-    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/Sin título.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes",
     "sistemas-operativos-y-redes/sistemas-operativos/virtualizacion-contenedores-y-docker",
     "sistemas-operativos-y-redes/sistemas-operativos/sistemas-operativos-en-tiempo-real",
@@ -219,8 +195,6 @@
     "base-de-datos-2/cassandra/anexos/Pasted image 20260620235658.png",
     "Excalidraw/Drawing 2026-06-20 23.37.28.excalidraw.md",
     "base-de-datos-2/cassandra/courses-platform.md",
-    "base-de-datos-2/cassandra/delivery.md",
-    "base-de-datos-2/cassandra/educational-platform.md",
     "Sin título.canvas",
     "algebra-lineal/parciales/primer-parcial/Untitled.canvas",
     "Untitled.canvas"
