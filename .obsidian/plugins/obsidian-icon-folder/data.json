@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiBook",
       "LiBrain",
       "LiArchiveX",
       "LiDatabase",
-      "🖌",
-      "LiExcalidrawIcon"
+      "🖌"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -48,11 +48,12 @@
   "algebra-lineal/practica-06/practica-06-e01-13.md": "✍",
   "matematica-discreta": "LiCalculator",
   "matematica-discreta/practica-01/practica-01.md": "✍",
-  "base-de-datos-2": "LiDatabase",
-  "organizacion-del-computador-2": "LiComputer",
   "sociedad-informatica": "⚖",
   "arquitectura-de-software": "LiArchiveX",
   "sistemas-operativos-y-redes": "LiLaptop",
   "sistemas-operativos-y-redes/redes": "LiNetwork",
-  "sistemas-operativos-y-redes/sistemas-operativos": "LiLaptop"
+  "sistemas-operativos-y-redes/sistemas-operativos": "LiLaptop",
+  "README.md": "LiBook",
+  "base-de-datos": "LiDatabase",
+  "organizacion-del-computador": "LiComputer"
 }
