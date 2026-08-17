@@ -4,17 +4,40 @@
     "type": "split",
     "children": [
       {
-        "id": "26c5307ff1b093ac",
+        "id": "4a6d5a14f741915a",
         "type": "tabs",
         "children": [
           {
-            "id": "57b697cb5c7c83a6",
+            "id": "6bb16efb10df6747",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "sistemas-operativos-y-redes/sistemas-operativos/estructuras-de-almacenamiento-masivo/apuntes/Sin título.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "Sin título"
+            }
+          }
+        ]
+      },
+      {
+        "id": "bff0d5b81e36e25d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1e50308b258ddf82",
+            "type": "leaf",
+            "state": {
+              "type": "pdf",
+              "state": {
+                "file": "sistemas-operativos-y-redes/sistemas-operativos/estructuras-de-almacenamiento-masivo/discos-y-raid.pdf"
+              },
+              "icon": "lucide-file-text",
+              "title": "discos-y-raid"
             }
           }
         ]
@@ -76,7 +99,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 405.5
+    "width": 405.5,
+    "collapsed": true
   },
   "right": {
     "id": "60744be18a06282d",
@@ -148,26 +172,28 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "57b697cb5c7c83a6",
+  "active": "6bb16efb10df6747",
   "lastOpenFiles": [
+    "proyecto-profesional/bibliografia/XP/extreme-programming-explained-embrace-change-2.pdf",
+    "proyecto-profesional/bibliografia/XP",
+    "proyecto-profesional/bibliografia/POSAD/pattern-oriented-software-architecture-for-dummies.pdf",
+    "proyecto-profesional/bibliografia/POSAD",
+    "proyecto-profesional/bibliografia/POSA/pattern-oriented-software-architecture.pdf",
+    "proyecto-profesional/bibliografia/POSA",
+    "proyecto-profesional/bibliografia/PEAA/Patterns of Enterprise Application Architecture - Martin Fowler.pdf",
+    "proyecto-profesional/bibliografia/PEAA/Patterns of Enterprise Application Architecture - Martin Fowler.epub",
+    "proyecto-profesional/bibliografia/PEAA",
+    "proyecto-profesional/bibliografia",
+    "proyecto-profesional",
+    "sistemas-operativos-y-redes/sistemas-operativos/estructuras-de-almacenamiento-masivo/apuntes/Sin título.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/drivers-y-dispositivos.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/buffering.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/caching.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/gestion-de-datos.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/modos-de-acceso.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/spooling.md",
-    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/systemcall-Kernel-dispisitivos-drivers-parte-2.pdf",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/dma.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/interrupciones.md",
-    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/ejercicios.pdf",
-    "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/ejercicios.pdf",
-    "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/Sin confirmar 841618.crdownload",
-    "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/file-system-parte-2.pdf",
-    "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/Sin confirmar 39936.crdownload",
-    "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/file-system-parte-1.pdf",
-    "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/Sin confirmar 904208.crdownload",
-    "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/fundamentos-del-file-system.pdf",
-    "sistemas-operativos-y-redes/sistemas-operativos/estructuras-de-almacenamiento-masivo/ejercicios.pdf",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/user-kernel-systemcalls-descriptores.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/arquitectura-y-niveles.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/systemcall-kernel-dispisitivos-drivers-parte-1.md",
@@ -188,7 +214,6 @@
     "base-de-datos/teoria/arquitectura-relacional.md",
     "base-de-datos/teoria/arquitectura-no-relacional.md",
     "base-de-datos-2/Sin título.md",
-    "base-de-datos/parcial/kevin/parcial-18-06-2026.md",
     "base-de-datos/anexos/Pasted image 20260622030424.png",
     "base-de-datos-2/anexos/Pasted image 20260622030049.png",
     "base-de-datos-2/anexos/Pasted image 20260622025416.png",
