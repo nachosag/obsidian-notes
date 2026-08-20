@@ -6,11 +6,11 @@
     "emojiStyle": "native",
     "iconColor": null,
     "recentlyUsedIcons": [
+      "LiHammer",
+      "LiWorkflow",
       "LiBook",
       "LiBrain",
-      "LiArchiveX",
-      "LiDatabase",
-      "🖌"
+      "LiArchiveX"
     ],
     "recentlyUsedIconsSize": 5,
     "rules": [],
@@ -55,5 +55,7 @@
   "sistemas-operativos-y-redes/sistemas-operativos": "LiLaptop",
   "README.md": "LiBook",
   "base-de-datos": "LiDatabase",
-  "organizacion-del-computador": "LiComputer"
+  "organizacion-del-computador": "LiComputer",
+  "proyecto-profesional": "LiWorkflow",
+  "ingenieria-en-sistemas": "LiHammer"
 }

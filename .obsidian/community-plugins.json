@@ -5,5 +5,8 @@
   "github-sync",
   "typewriter-mode",
   "obsidian-linter",
-  "mermaid-zoom"
+  "mermaid-zoom",
+  "obsidian-math-plus",
+  "obsidian-latex-suite",
+  "obsidian-latex-environments"
 ]
