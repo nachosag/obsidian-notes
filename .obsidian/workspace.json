@@ -4,19 +4,55 @@
     "type": "split",
     "children": [
       {
-        "id": "2dbb5186348dc36a",
+        "id": "e4be03fddec5fdf6",
         "type": "tabs",
         "children": [
           {
-            "id": "3bdaf3d45447f6b3",
+            "id": "791f6d6161564a37",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "proyecto-profesional/primer-parcial/apuntes/mvc-posa.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "mvc-posa"
+            }
+          },
+          {
+            "id": "103513bb5732535c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "proyecto-profesional/primer-parcial/tips.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
+              "icon": "lucide-file",
+              "title": "tips"
+            }
+          }
+        ]
+      },
+      {
+        "id": "a017d5247a31a482",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3d05445d99490216",
             "type": "leaf",
             "state": {
               "type": "pdf",
               "state": {
-                "file": "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/file-system-parte-1.pdf"
+                "file": "proyecto-profesional/primer-parcial/mvc-posa.pdf"
               },
               "icon": "lucide-file-text",
-              "title": "file-system-parte-1"
+              "title": "mvc-posa"
             }
           }
         ]
@@ -78,7 +114,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 405.5
+    "width": 405.5,
+    "collapsed": true
   },
   "right": {
     "id": "60744be18a06282d",
@@ -150,23 +187,26 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "3bdaf3d45447f6b3",
+  "active": "791f6d6161564a37",
   "lastOpenFiles": [
+    "proyecto-profesional/primer-parcial/mvc-posa.pdf",
+    "proyecto-profesional/primer-parcial/apuntes/mvc-posa.md",
+    "proyecto-profesional/primer-parcial/tips.md",
+    "proyecto-profesional/primer-parcial/brokers-posa.pdf",
+    "proyecto-profesional/primer-parcial/apuntes/Sin título.md",
+    "proyecto-profesional/primer-parcial/apuntes",
+    "proyecto-profesional/primer-parcial",
+    "proyecto-profesional/primer-parcial/temario.md",
+    "proyecto-profesional/bibliografia/POSA/pattern-oriented-software-architecture.pdf",
+    "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/file-system-parte-1.pdf",
     "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/fundamentos-del-file-system.pdf",
     "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/file-system-parte-2.pdf",
-    "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/file-system-parte-1.pdf",
     "sistemas-operativos-y-redes/sistemas-operativos/estructuras-de-almacenamiento-masivo/estructuras-de-almacenamiento-masivo.pdf",
     "sistemas-operativos-y-redes/sistemas-operativos/estructuras-de-almacenamiento-masivo/apuntes/estructuras-de-almacenamiento-masivo.md",
     "sistemas-operativos-y-redes/sistemas-operativos/estructuras-de-almacenamiento-masivo/apuntes/algoritmos-de-planificacion.md",
     "sistemas-operativos-y-redes/sistemas-operativos/estructuras-de-almacenamiento-masivo/apuntes/discos-y-raid.md",
     "sistemas-operativos-y-redes/sistemas-operativos/estructuras-de-almacenamiento-masivo/discos-y-raid.pdf",
     "ingenieria-en-sistemas/Sin título.md",
-    "ingenieria-en-sistemas",
-    "proyecto-profesional/bibliografia/XP/extreme-programming-explained-embrace-change-2.pdf",
-    "proyecto-profesional/bibliografia/XP",
-    "proyecto-profesional/bibliografia/POSAD/pattern-oriented-software-architecture-for-dummies.pdf",
-    "proyecto-profesional/bibliografia/POSAD",
-    "proyecto-profesional/bibliografia/POSA/pattern-oriented-software-architecture.pdf",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/drivers-y-dispositivos.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/buffering.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/caching.md",
@@ -188,10 +228,6 @@
     "arquitectura-de-software/clean-architecture/entidades-y-comunicacion.md",
     "arquitectura-de-software/clean-architecture/anexos/Pasted image 20260713202543.png",
     "arquitectura-de-software/clean-architecture/apuntes-13-07-26.md",
-    "README.md",
-    "base-de-datos/teoria/taxonomías-nosql.md",
-    "base-de-datos/teoria/diferencias-diseño.md",
-    "base-de-datos/teoria/diferencias-arquitectura.md",
     "base-de-datos/anexos/Pasted image 20260622030424.png",
     "base-de-datos-2/anexos/Pasted image 20260622030049.png",
     "base-de-datos-2/anexos/Pasted image 20260622025416.png",

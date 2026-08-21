@@ -1,0 +1,4 @@
+- MVC del POSA1 o del POSAD, *NO* del PEAA. 
+- Broker del POSA1/D. 
+- {Page, Front, Application} Controller del PEAA (una parte del cap. 14). 
+- Caps. 15 y 18 del PEAA, todo.
