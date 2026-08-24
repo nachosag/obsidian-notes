@@ -37,8 +37,8 @@ var import_obsidian = require("obsidian");
 
 // locale/en.json
 var en_default = {
-  "setting.defaultZoom.name": "Default zoom level",
-  "setting.defaultZoom.desc": "Initial zoom percentage when a Mermaid diagram is rendered. 100% fits the container; higher values make diagrams appear larger by default.",
+  "setting.zoomSensitivity.name": "Zoom sensitivity",
+  "setting.zoomSensitivity.desc": "How strongly mouse-wheel scrolling and pinch gestures zoom. Lower values feel gentler \u2014 try 0.5x if scrolling on a trackpad or Magic Mouse zooms too fast. Takes effect the next time a diagram is opened fullscreen.",
   "setting.containerBorder.name": "Show container border",
   "setting.containerBorder.desc": "Display a dashed border around each diagram container to help visualize the zoom area boundaries.",
   "setting.alignment.name": "Default alignment",
@@ -46,9 +46,7 @@ var en_default = {
   "setting.alignment.option.left": "Left",
   "setting.alignment.option.center": "Center",
   "setting.alignment.option.right": "Right",
-  "setting.maxHeight.name": "Max container height",
-  "setting.maxHeight.desc": "Maximum height in pixels for the zoom container. Set to 0 to auto-size so the diagram is fully visible at the current zoom level.",
-  "settings.note": "Changes apply to newly rendered diagrams. Reload the note to see the effect on existing diagrams.",
+  "settings.note": "Appearance settings (alignment, border) apply to open notes immediately; zoom sensitivity takes effect the next time a diagram is opened fullscreen.",
   "setting.exportDestination.name": "PNG export destination",
   "setting.exportDestination.desc": "Where exported PNG images of diagrams are saved.",
   "setting.exportDestination.option.vault": "Vault (attachments folder)",
@@ -58,13 +56,15 @@ var en_default = {
   "export.downloadedNotice": "Downloaded: {name}",
   "export.failedNotice": "Failed to export PNG",
   "modal.close": "Close",
-  "lock.label": "Lock"
+  "modal.zoomIn": "Zoom in",
+  "modal.zoomOut": "Zoom out",
+  "modal.reset": "Reset zoom"
 };
 
 // locale/zh.json
 var zh_default = {
-  "setting.defaultZoom.name": "\u9ED8\u8BA4\u7F29\u653E\u7EA7\u522B",
-  "setting.defaultZoom.desc": "Mermaid \u56FE\u8868\u6E32\u67D3\u65F6\u7684\u521D\u59CB\u7F29\u653E\u767E\u5206\u6BD4\u3002100% \u9002\u914D\u5BB9\u5668\uFF1B\u8C03\u9AD8\u53EF\u8BA9\u56FE\u8868\u9ED8\u8BA4\u663E\u793A\u5F97\u66F4\u5927\u3002",
+  "setting.zoomSensitivity.name": "\u7F29\u653E\u7075\u654F\u5EA6",
+  "setting.zoomSensitivity.desc": "\u9F20\u6807\u6EDA\u8F6E\u548C\u53CC\u6307\u634F\u5408\u7684\u7F29\u653E\u5F3A\u5EA6\u3002\u6570\u503C\u8D8A\u5C0F\u624B\u611F\u8D8A\u67D4\u548C\u2014\u2014\u82E5\u89E6\u63A7\u677F\u6216\u5999\u63A7\u9F20\u6807\u6EDA\u52A8\u7F29\u653E\u8FC7\u5FEB\uFF0C\u53EF\u5C1D\u8BD5 0.5x\u3002\u91CD\u65B0\u6253\u5F00\u5168\u5C4F\u89C6\u56FE\u540E\u751F\u6548\u3002",
   "setting.containerBorder.name": "\u663E\u793A\u5BB9\u5668\u8FB9\u6846",
   "setting.containerBorder.desc": "\u5728\u6BCF\u4E2A\u56FE\u8868\u5BB9\u5668\u5468\u56F4\u663E\u793A\u865A\u7EBF\u8FB9\u6846\uFF0C\u4FBF\u4E8E\u770B\u6E05\u7F29\u653E\u533A\u57DF\u7684\u8FB9\u754C\u3002",
   "setting.alignment.name": "\u9ED8\u8BA4\u5BF9\u9F50\u65B9\u5F0F",
@@ -72,9 +72,7 @@ var zh_default = {
   "setting.alignment.option.left": "\u5DE6\u5BF9\u9F50",
   "setting.alignment.option.center": "\u5C45\u4E2D",
   "setting.alignment.option.right": "\u53F3\u5BF9\u9F50",
-  "setting.maxHeight.name": "\u6700\u5927\u5BB9\u5668\u9AD8\u5EA6",
-  "setting.maxHeight.desc": "\u7F29\u653E\u5BB9\u5668\u7684\u6700\u5927\u9AD8\u5EA6\uFF08\u50CF\u7D20\uFF09\u3002\u8BBE\u4E3A 0 \u8868\u793A\u81EA\u52A8\u9002\u914D\uFF0C\u4F7F\u56FE\u8868\u5728\u5F53\u524D\u7F29\u653E\u7EA7\u522B\u4E0B\u5B8C\u6574\u53EF\u89C1\u3002",
-  "settings.note": "\u66F4\u6539\u4EC5\u5BF9\u65B0\u6E32\u67D3\u7684\u56FE\u8868\u751F\u6548\u3002\u91CD\u65B0\u6253\u5F00\u7B14\u8BB0\u5373\u53EF\u770B\u5230\u5BF9\u5DF2\u6709\u56FE\u8868\u7684\u5F71\u54CD\u3002",
+  "settings.note": "\u5916\u89C2\u8BBE\u7F6E\uFF08\u5BF9\u9F50\u3001\u8FB9\u6846\uFF09\u7ACB\u5373\u4F5C\u7528\u4E8E\u5DF2\u6253\u5F00\u7684\u7B14\u8BB0\uFF1B\u7F29\u653E\u7075\u654F\u5EA6\u5728\u5168\u5C4F\u89C6\u56FE\u4E0B\u6B21\u6253\u5F00\u65F6\u751F\u6548\u3002",
   "setting.exportDestination.name": "PNG \u5BFC\u51FA\u4F4D\u7F6E",
   "setting.exportDestination.desc": "\u5BFC\u51FA\u7684\u56FE\u8868 PNG \u56FE\u7247\u4FDD\u5B58\u5230\u54EA\u91CC\u3002",
   "setting.exportDestination.option.vault": "\u4ED3\u5E93\uFF08\u9644\u4EF6\u76EE\u5F55\uFF09",
@@ -84,13 +82,15 @@ var zh_default = {
   "export.downloadedNotice": "\u5DF2\u4E0B\u8F7D\uFF1A{name}",
   "export.failedNotice": "\u5BFC\u51FA PNG \u5931\u8D25",
   "modal.close": "\u5173\u95ED",
-  "lock.label": "\u9501\u5B9A"
+  "modal.zoomIn": "\u653E\u5927",
+  "modal.zoomOut": "\u7F29\u5C0F",
+  "modal.reset": "\u91CD\u7F6E\u7F29\u653E"
 };
 
 // locale/zh-TW.json
 var zh_TW_default = {
-  "setting.defaultZoom.name": "\u9810\u8A2D\u7E2E\u653E\u5C64\u7D1A",
-  "setting.defaultZoom.desc": "Mermaid \u5716\u8868\u7B97\u7E6A\u6642\u7684\u521D\u59CB\u7E2E\u653E\u767E\u5206\u6BD4\u3002100% \u7B26\u5408\u5BB9\u5668\uFF1B\u8ABF\u9AD8\u53EF\u8B93\u5716\u8868\u9810\u8A2D\u986F\u793A\u5F97\u66F4\u5927\u3002",
+  "setting.zoomSensitivity.name": "\u7E2E\u653E\u9748\u654F\u5EA6",
+  "setting.zoomSensitivity.desc": "\u6ED1\u9F20\u6EFE\u8F2A\u8207\u96D9\u6307\u634F\u5408\u7684\u7E2E\u653E\u5F37\u5EA6\u3002\u6578\u503C\u8D8A\u5C0F\u624B\u611F\u8D8A\u67D4\u548C\u2014\u2014\u82E5\u89F8\u63A7\u677F\u6216\u5DE7\u63A7\u6ED1\u9F20\u6372\u52D5\u7E2E\u653E\u904E\u5FEB\uFF0C\u53EF\u5617\u8A66 0.5x\u3002\u91CD\u65B0\u958B\u555F\u5168\u87A2\u5E55\u6AA2\u8996\u5F8C\u751F\u6548\u3002",
   "setting.containerBorder.name": "\u986F\u793A\u5BB9\u5668\u908A\u6846",
   "setting.containerBorder.desc": "\u5728\u6BCF\u500B\u5716\u8868\u5BB9\u5668\u5468\u570D\u986F\u793A\u865B\u7DDA\u908A\u6846\uFF0C\u4FBF\u65BC\u770B\u6E05\u7E2E\u653E\u5340\u57DF\u7684\u908A\u754C\u3002",
   "setting.alignment.name": "\u9810\u8A2D\u5C0D\u9F4A\u65B9\u5F0F",
@@ -98,17 +98,17 @@ var zh_TW_default = {
   "setting.alignment.option.left": "\u5DE6",
   "setting.alignment.option.center": "\u7F6E\u4E2D",
   "setting.alignment.option.right": "\u53F3",
-  "setting.maxHeight.name": "\u6700\u5927\u5BB9\u5668\u9AD8\u5EA6",
-  "setting.maxHeight.desc": "\u7E2E\u653E\u5BB9\u5668\u7684\u6700\u5927\u9AD8\u5EA6\uFF08\u50CF\u7D20\uFF09\u3002\u8A2D\u70BA 0 \u8868\u793A\u81EA\u52D5\u8ABF\u6574\uFF0C\u4F7F\u5716\u8868\u5728\u76EE\u524D\u7E2E\u653E\u5C64\u7D1A\u4E0B\u5B8C\u6574\u986F\u793A\u3002",
-  "settings.note": "\u8B8A\u66F4\u50C5\u5C0D\u65B0\u7B97\u7E6A\u7684\u5716\u8868\u751F\u6548\u3002\u91CD\u65B0\u958B\u555F\u7B46\u8A18\u5373\u53EF\u770B\u5230\u5C0D\u65E2\u6709\u5716\u8868\u7684\u5F71\u97FF\u3002",
+  "settings.note": "\u5916\u89C0\u8A2D\u5B9A\uFF08\u5C0D\u9F4A\u3001\u908A\u6846\uFF09\u7ACB\u5373\u5957\u7528\u65BC\u5DF2\u958B\u555F\u7684\u7B46\u8A18\uFF1B\u7E2E\u653E\u9748\u654F\u5EA6\u65BC\u5168\u87A2\u5E55\u6AA2\u8996\u4E0B\u6B21\u958B\u555F\u6642\u751F\u6548\u3002",
   "modal.close": "\u95DC\u9589",
-  "lock.label": "\u9396\u5B9A"
+  "modal.zoomIn": "\u653E\u5927",
+  "modal.zoomOut": "\u7E2E\u5C0F",
+  "modal.reset": "\u91CD\u8A2D\u7E2E\u653E"
 };
 
 // locale/ja.json
 var ja_default = {
-  "setting.defaultZoom.name": "\u30C7\u30D5\u30A9\u30EB\u30C8\u306E\u30BA\u30FC\u30E0\u30EC\u30D9\u30EB",
-  "setting.defaultZoom.desc": "Mermaid \u56F3\u304C\u30EC\u30F3\u30C0\u30EA\u30F3\u30B0\u3055\u308C\u305F\u969B\u306E\u521D\u671F\u30BA\u30FC\u30E0\u500D\u7387\u3067\u3059\u3002100% \u3067\u30B3\u30F3\u30C6\u30CA\u306B\u53CE\u307E\u308A\u3001\u3088\u308A\u5927\u304D\u306A\u5024\u306B\u3059\u308B\u3068\u56F3\u304C\u521D\u671F\u72B6\u614B\u3067\u5927\u304D\u304F\u8868\u793A\u3055\u308C\u307E\u3059\u3002",
+  "setting.zoomSensitivity.name": "\u30BA\u30FC\u30E0\u611F\u5EA6",
+  "setting.zoomSensitivity.desc": "\u30DE\u30A6\u30B9\u30DB\u30A4\u30FC\u30EB\u3068\u30D4\u30F3\u30C1\u64CD\u4F5C\u306B\u3088\u308B\u30BA\u30FC\u30E0\u306E\u5F37\u3055\u3067\u3059\u3002\u5024\u3092\u5C0F\u3055\u304F\u3059\u308B\u3068\u3088\u308A\u7DE9\u3084\u304B\u306B\u52D5\u4F5C\u3057\u307E\u3059\u3002\u30C8\u30E9\u30C3\u30AF\u30D1\u30C3\u30C9\u3084 Magic Mouse \u3067\u30BA\u30FC\u30E0\u304C\u901F\u3059\u304E\u308B\u5834\u5408\u306F 0.5x \u3092\u8A66\u3057\u3066\u304F\u3060\u3055\u3044\u3002\u56F3\u3092\u5168\u753B\u9762\u8868\u793A\u3057\u76F4\u3059\u3068\u53CD\u6620\u3055\u308C\u307E\u3059\u3002",
   "setting.containerBorder.name": "\u30B3\u30F3\u30C6\u30CA\u306E\u67A0\u7DDA\u3092\u8868\u793A",
   "setting.containerBorder.desc": "\u5404\u56F3\u306E\u30B3\u30F3\u30C6\u30CA\u5468\u56F2\u306B\u7834\u7DDA\u306E\u67A0\u3092\u8868\u793A\u3057\u3001\u30BA\u30FC\u30E0\u9818\u57DF\u306E\u5883\u754C\u3092\u898B\u3084\u3059\u304F\u3057\u307E\u3059\u3002",
   "setting.alignment.name": "\u30C7\u30D5\u30A9\u30EB\u30C8\u306E\u914D\u7F6E",
@@ -116,17 +116,17 @@ var ja_default = {
   "setting.alignment.option.left": "\u5DE6",
   "setting.alignment.option.center": "\u4E2D\u592E",
   "setting.alignment.option.right": "\u53F3",
-  "setting.maxHeight.name": "\u30B3\u30F3\u30C6\u30CA\u306E\u6700\u5927\u9AD8\u3055",
-  "setting.maxHeight.desc": "\u30BA\u30FC\u30E0\u30B3\u30F3\u30C6\u30CA\u306E\u6700\u5927\u9AD8\u3055\uFF08\u30D4\u30AF\u30BB\u30EB\uFF09\u30020 \u306B\u8A2D\u5B9A\u3059\u308B\u3068\u3001\u73FE\u5728\u306E\u30BA\u30FC\u30E0\u500D\u7387\u3067\u56F3\u304C\u3059\u3079\u3066\u8868\u793A\u3055\u308C\u308B\u3088\u3046\u81EA\u52D5\u8ABF\u6574\u3057\u307E\u3059\u3002",
-  "settings.note": "\u5909\u66F4\u306F\u65B0\u3057\u304F\u30EC\u30F3\u30C0\u30EA\u30F3\u30B0\u3055\u308C\u305F\u56F3\u306B\u306E\u307F\u9069\u7528\u3055\u308C\u307E\u3059\u3002\u65E2\u5B58\u306E\u56F3\u306B\u53CD\u6620\u3055\u305B\u308B\u306B\u306F\u30CE\u30FC\u30C8\u3092\u518D\u8AAD\u307F\u8FBC\u307F\u3057\u3066\u304F\u3060\u3055\u3044\u3002",
+  "settings.note": "\u5916\u89B3\u8A2D\u5B9A\uFF08\u914D\u7F6E\u30FB\u67A0\u7DDA\uFF09\u306F\u958B\u3044\u3066\u3044\u308B\u30CE\u30FC\u30C8\u306B\u5373\u6642\u53CD\u6620\u3055\u308C\u307E\u3059\u3002\u30BA\u30FC\u30E0\u611F\u5EA6\u306F\u56F3\u3092\u5168\u753B\u9762\u8868\u793A\u3057\u76F4\u3059\u3068\u53CD\u6620\u3055\u308C\u307E\u3059\u3002",
   "modal.close": "\u9589\u3058\u308B",
-  "lock.label": "\u30ED\u30C3\u30AF"
+  "modal.zoomIn": "\u62E1\u5927",
+  "modal.zoomOut": "\u7E2E\u5C0F",
+  "modal.reset": "\u30BA\u30FC\u30E0\u3092\u30EA\u30BB\u30C3\u30C8"
 };
 
 // locale/de.json
 var de_default = {
-  "setting.defaultZoom.name": "Standard-Zoomstufe",
-  "setting.defaultZoom.desc": "Anf\xE4nglicher Zoom-Prozentsatz bei der Darstellung eines Mermaid-Diagramms. 100 % passt in den Container; h\xF6here Werte lassen Diagramme standardm\xE4\xDFig gr\xF6\xDFer erscheinen.",
+  "setting.zoomSensitivity.name": "Zoom-Empfindlichkeit",
+  "setting.zoomSensitivity.desc": "Wie stark Mausrad-Scrollen und Pinch-Gesten zoomen. Niedrigere Werte f\xFChlen sich sanfter an \u2014 probieren Sie 0.5x, wenn Zoomen per Trackpad oder Magic Mouse zu schnell ist. Wird beim n\xE4chsten \xD6ffnen der Vollbildansicht wirksam.",
   "setting.containerBorder.name": "Container-Rahmen anzeigen",
   "setting.containerBorder.desc": "Zeigt einen gestrichelten Rahmen um jeden Diagramm-Container, um die Grenzen des Zoombereichs besser zu erkennen.",
   "setting.alignment.name": "Standardausrichtung",
@@ -134,17 +134,17 @@ var de_default = {
   "setting.alignment.option.left": "Links",
   "setting.alignment.option.center": "Zentriert",
   "setting.alignment.option.right": "Rechts",
-  "setting.maxHeight.name": "Maximale Container-H\xF6he",
-  "setting.maxHeight.desc": "Maximale H\xF6he des Zoom-Containers in Pixeln. Auf 0 setzen, um die Gr\xF6\xDFe automatisch so anzupassen, dass das Diagramm bei der aktuellen Zoomstufe vollst\xE4ndig sichtbar ist.",
-  "settings.note": "\xC4nderungen gelten nur f\xFCr neu dargestellte Diagramme. Laden Sie die Notiz neu, um die Auswirkungen auf vorhandene Diagramme zu sehen.",
+  "settings.note": "Darstellungseinstellungen (Ausrichtung, Rahmen) wirken sofort in ge\xF6ffneten Notizen; die Zoom-Empfindlichkeit wird beim n\xE4chsten \xD6ffnen der Vollbildansicht wirksam.",
   "modal.close": "Schlie\xDFen",
-  "lock.label": "Sperren"
+  "modal.zoomIn": "Vergr\xF6\xDFern",
+  "modal.zoomOut": "Verkleinern",
+  "modal.reset": "Zoom zur\xFCcksetzen"
 };
 
 // locale/es.json
 var es_default = {
-  "setting.defaultZoom.name": "Nivel de zoom predeterminado",
-  "setting.defaultZoom.desc": "Porcentaje de zoom inicial al renderizar un diagrama de Mermaid. 100 % se ajusta al contenedor; valores m\xE1s altos hacen que los diagramas se vean m\xE1s grandes por defecto.",
+  "setting.zoomSensitivity.name": "Sensibilidad de zoom",
+  "setting.zoomSensitivity.desc": "La intensidad con la que ampl\xEDan la rueda del rat\xF3n y el gesto de pellizco. Los valores bajos se sienten m\xE1s suaves: prueba 0.5x si el zoom con el trackpad o el Magic Mouse va demasiado r\xE1pido. Se aplica al volver a abrir una vista a pantalla completa.",
   "setting.containerBorder.name": "Mostrar borde del contenedor",
   "setting.containerBorder.desc": "Muestra un borde discontinuo alrededor de cada contenedor de diagrama para visualizar mejor los l\xEDmites del \xE1rea de zoom.",
   "setting.alignment.name": "Alineaci\xF3n predeterminada",
@@ -152,17 +152,17 @@ var es_default = {
   "setting.alignment.option.left": "Izquierda",
   "setting.alignment.option.center": "Centro",
   "setting.alignment.option.right": "Derecha",
-  "setting.maxHeight.name": "Altura m\xE1xima del contenedor",
-  "setting.maxHeight.desc": "Altura m\xE1xima en p\xEDxeles del contenedor de zoom. Establecer en 0 para que se ajuste autom\xE1ticamente y el diagrama sea completamente visible con el nivel de zoom actual.",
-  "settings.note": "Los cambios se aplican a los diagramas reci\xE9n renderizados. Vuelve a cargar la nota para ver el efecto en los diagramas existentes.",
+  "settings.note": "Los ajustes de apariencia (alineaci\xF3n, borde) se aplican de inmediato a las notas abiertas; la sensibilidad de zoom surte efecto al volver a abrir un diagrama a pantalla completa.",
   "modal.close": "Cerrar",
-  "lock.label": "Bloquear"
+  "modal.zoomIn": "Acercar",
+  "modal.zoomOut": "Alejar",
+  "modal.reset": "Restablecer zoom"
 };
 
 // locale/fr.json
 var fr_default = {
-  "setting.defaultZoom.name": "Niveau de zoom par d\xE9faut",
-  "setting.defaultZoom.desc": "Pourcentage de zoom initial lors du rendu d'un diagramme Mermaid. 100 % s'ajuste au conteneur ; des valeurs plus \xE9lev\xE9es affichent les diagrammes plus grands par d\xE9faut.",
+  "setting.zoomSensitivity.name": "Sensibilit\xE9 du zoom",
+  "setting.zoomSensitivity.desc": "Intensit\xE9 du zoom \xE0 la molette de la souris et au pincement. Des valeurs plus faibles sont plus douces \u2014 essayez 0.5x si le zoom au trackpad ou \xE0 la Magic Mouse est trop rapide. Prend effet \xE0 la prochaine ouverture en plein \xE9cran.",
   "setting.containerBorder.name": "Afficher la bordure du conteneur",
   "setting.containerBorder.desc": "Affiche une bordure en pointill\xE9s autour de chaque conteneur de diagramme pour mieux visualiser les limites de la zone de zoom.",
   "setting.alignment.name": "Alignement par d\xE9faut",
@@ -170,17 +170,17 @@ var fr_default = {
   "setting.alignment.option.left": "Gauche",
   "setting.alignment.option.center": "Centre",
   "setting.alignment.option.right": "Droite",
-  "setting.maxHeight.name": "Hauteur maximale du conteneur",
-  "setting.maxHeight.desc": "Hauteur maximale en pixels du conteneur de zoom. D\xE9finir sur 0 pour ajuster automatiquement afin que le diagramme soit enti\xE8rement visible au niveau de zoom actuel.",
-  "settings.note": "Les modifications s'appliquent aux diagrammes nouvellement rendus. Rechargez la note pour voir l'effet sur les diagrammes existants.",
+  "settings.note": "Les r\xE9glages d'apparence (alignement, bordure) s'appliquent imm\xE9diatement aux notes ouvertes ; la sensibilit\xE9 du zoom prend effet \xE0 la prochaine ouverture en plein \xE9cran.",
   "modal.close": "Fermer",
-  "lock.label": "Verrouiller"
+  "modal.zoomIn": "Zoomer",
+  "modal.zoomOut": "D\xE9zoomer",
+  "modal.reset": "R\xE9initialiser le zoom"
 };
 
 // locale/ru.json
 var ru_default = {
-  "setting.defaultZoom.name": "\u041C\u0430\u0441\u0448\u0442\u0430\u0431 \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E",
-  "setting.defaultZoom.desc": "\u041D\u0430\u0447\u0430\u043B\u044C\u043D\u044B\u0439 \u043C\u0430\u0441\u0448\u0442\u0430\u0431 (\u0432 \u043F\u0440\u043E\u0446\u0435\u043D\u0442\u0430\u0445) \u043F\u0440\u0438 \u043E\u0442\u0440\u0438\u0441\u043E\u0432\u043A\u0435 \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u044B Mermaid. 100 % \u0432\u043F\u0438\u0441\u044B\u0432\u0430\u0435\u0442 \u0432 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440; \u0431\u043E\u043B\u044C\u0448\u0438\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F \u0434\u0435\u043B\u0430\u044E\u0442 \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u044B \u043A\u0440\u0443\u043F\u043D\u0435\u0435 \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E.",
+  "setting.zoomSensitivity.name": "\u0427\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F",
+  "setting.zoomSensitivity.desc": "\u041D\u0430\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u0441\u0438\u043B\u044C\u043D\u043E \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u0443\u044E\u0442 \u043F\u0440\u043E\u043A\u0440\u0443\u0442\u043A\u0430 \u043A\u043E\u043B\u0435\u0441\u0430 \u043C\u044B\u0448\u0438 \u0438 \u0436\u0435\u0441\u0442 \u0449\u0438\u043F\u043A\u0430. \u041C\u0435\u043D\u044C\u0448\u0438\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044F \u043E\u0449\u0443\u0449\u0430\u044E\u0442\u0441\u044F \u043C\u044F\u0433\u0447\u0435 \u2014 \u043F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 0.5x, \u0435\u0441\u043B\u0438 \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435 \u043D\u0430 \u0442\u0440\u0435\u043A\u043F\u0430\u0434\u0435 \u0438\u043B\u0438 Magic Mouse \u043F\u0440\u043E\u0438\u0441\u0445\u043E\u0434\u0438\u0442 \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0431\u044B\u0441\u0442\u0440\u043E. \u041F\u0440\u0438\u043C\u0435\u043D\u044F\u0435\u0442\u0441\u044F \u043F\u0440\u0438 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u043C \u043E\u0442\u043A\u0440\u044B\u0442\u0438\u0438 \u043F\u043E\u043B\u043D\u043E\u044D\u043A\u0440\u0430\u043D\u043D\u043E\u0433\u043E \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440\u0430.",
   "setting.containerBorder.name": "\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0442\u044C \u0440\u0430\u043C\u043A\u0443 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440\u0430",
   "setting.containerBorder.desc": "\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442 \u043F\u0443\u043D\u043A\u0442\u0438\u0440\u043D\u0443\u044E \u0440\u0430\u043C\u043A\u0443 \u0432\u043E\u043A\u0440\u0443\u0433 \u043A\u0430\u0436\u0434\u043E\u0433\u043E \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440\u0430 \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u044B, \u0447\u0442\u043E\u0431\u044B \u043B\u0443\u0447\u0448\u0435 \u0432\u0438\u0434\u0435\u0442\u044C \u0433\u0440\u0430\u043D\u0438\u0446\u044B \u043E\u0431\u043B\u0430\u0441\u0442\u0438 \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F.",
   "setting.alignment.name": "\u0412\u044B\u0440\u0430\u0432\u043D\u0438\u0432\u0430\u043D\u0438\u0435 \u043F\u043E \u0443\u043C\u043E\u043B\u0447\u0430\u043D\u0438\u044E",
@@ -188,17 +188,17 @@ var ru_default = {
   "setting.alignment.option.left": "\u0421\u043B\u0435\u0432\u0430",
   "setting.alignment.option.center": "\u041F\u043E \u0446\u0435\u043D\u0442\u0440\u0443",
   "setting.alignment.option.right": "\u0421\u043F\u0440\u0430\u0432\u0430",
-  "setting.maxHeight.name": "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F \u0432\u044B\u0441\u043E\u0442\u0430 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440\u0430",
-  "setting.maxHeight.desc": "\u041C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F \u0432\u044B\u0441\u043E\u0442\u0430 \u043A\u043E\u043D\u0442\u0435\u0439\u043D\u0435\u0440\u0430 \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F \u0432 \u043F\u0438\u043A\u0441\u0435\u043B\u044F\u0445. \u0423\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435 0 \u0434\u043B\u044F \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0447\u0435\u0441\u043A\u043E\u0433\u043E \u043F\u043E\u0434\u0431\u043E\u0440\u0430, \u0447\u0442\u043E\u0431\u044B \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u0430 \u0431\u044B\u043B\u0430 \u043F\u043E\u043B\u043D\u043E\u0441\u0442\u044C\u044E \u0432\u0438\u0434\u043D\u0430 \u043F\u0440\u0438 \u0442\u0435\u043A\u0443\u0449\u0435\u043C \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0435.",
-  "settings.note": "\u0418\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u044E\u0442\u0441\u044F \u0442\u043E\u043B\u044C\u043A\u043E \u043A \u043D\u043E\u0432\u044B\u043C \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u0430\u043C. \u041F\u0435\u0440\u0435\u043E\u0442\u043A\u0440\u043E\u0439\u0442\u0435 \u0437\u0430\u043C\u0435\u0442\u043A\u0443, \u0447\u0442\u043E\u0431\u044B \u0443\u0432\u0438\u0434\u0435\u0442\u044C \u044D\u0444\u0444\u0435\u043A\u0442 \u043D\u0430 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0445 \u0434\u0438\u0430\u0433\u0440\u0430\u043C\u043C\u0430\u0445.",
+  "settings.note": "\u041D\u0430\u0441\u0442\u0440\u043E\u0439\u043A\u0438 \u0432\u043D\u0435\u0448\u043D\u0435\u0433\u043E \u0432\u0438\u0434\u0430 (\u0432\u044B\u0440\u0430\u0432\u043D\u0438\u0432\u0430\u043D\u0438\u0435, \u0440\u0430\u043C\u043A\u0430) \u043D\u0435\u043C\u0435\u0434\u043B\u0435\u043D\u043D\u043E \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u044E\u0442\u0441\u044F \u043A \u043E\u0442\u043A\u0440\u044B\u0442\u044B\u043C \u0437\u0430\u043C\u0435\u0442\u043A\u0430\u043C; \u0447\u0443\u0432\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0441\u0442\u044C \u043C\u0430\u0441\u0448\u0442\u0430\u0431\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F \u0434\u0435\u0439\u0441\u0442\u0432\u0443\u0435\u0442 \u043F\u0440\u0438 \u0441\u043B\u0435\u0434\u0443\u044E\u0449\u0435\u043C \u043E\u0442\u043A\u0440\u044B\u0442\u0438\u0438 \u043F\u043E\u043B\u043D\u043E\u044D\u043A\u0440\u0430\u043D\u043D\u043E\u0433\u043E \u043F\u0440\u043E\u0441\u043C\u043E\u0442\u0440\u0430.",
   "modal.close": "\u0417\u0430\u043A\u0440\u044B\u0442\u044C",
-  "lock.label": "\u0411\u043B\u043E\u043A\u0438\u0440\u043E\u0432\u0430\u0442\u044C"
+  "modal.zoomIn": "\u0423\u0432\u0435\u043B\u0438\u0447\u0438\u0442\u044C",
+  "modal.zoomOut": "\u0423\u043C\u0435\u043D\u044C\u0448\u0438\u0442\u044C",
+  "modal.reset": "\u0421\u0431\u0440\u043E\u0441\u0438\u0442\u044C \u043C\u0430\u0441\u0448\u0442\u0430\u0431"
 };
 
 // locale/pt-BR.json
 var pt_BR_default = {
-  "setting.defaultZoom.name": "N\xEDvel de zoom padr\xE3o",
-  "setting.defaultZoom.desc": "Porcentagem inicial de zoom ao renderizar um diagrama Mermaid. 100 % cabe no cont\xEAiner; valores maiores fazem os diagramas aparecerem maiores por padr\xE3o.",
+  "setting.zoomSensitivity.name": "Sensibilidade do zoom",
+  "setting.zoomSensitivity.desc": "Qu\xE3o forte o zoom responde \xE0 roda do mouse e ao gesto de pin\xE7a. Valores menores s\xE3o mais suaves \u2014 tente 0.5x se o zoom no trackpad ou Magic Mouse for r\xE1pido demais. Surte efeito ao reabrir a visualiza\xE7\xE3o em tela cheia.",
   "setting.containerBorder.name": "Mostrar borda do cont\xEAiner",
   "setting.containerBorder.desc": "Exibe uma borda tracejada ao redor de cada cont\xEAiner de diagrama para ajudar a visualizar os limites da \xE1rea de zoom.",
   "setting.alignment.name": "Alinhamento padr\xE3o",
@@ -206,17 +206,17 @@ var pt_BR_default = {
   "setting.alignment.option.left": "Esquerda",
   "setting.alignment.option.center": "Centro",
   "setting.alignment.option.right": "Direita",
-  "setting.maxHeight.name": "Altura m\xE1xima do cont\xEAiner",
-  "setting.maxHeight.desc": "Altura m\xE1xima em pixels do cont\xEAiner de zoom. Defina como 0 para ajustar automaticamente e o diagrama ficar totalmente vis\xEDvel no n\xEDvel de zoom atual.",
-  "settings.note": "As altera\xE7\xF5es se aplicam a diagramas rec\xE9m-renderizados. Recarregue a nota para ver o efeito em diagramas existentes.",
+  "settings.note": "As configura\xE7\xF5es de apar\xEAncia (alinhamento, borda) se aplicam imediatamente \xE0s notas abertas; a sensibilidade do zoom surte efeito ao reabrir a visualiza\xE7\xE3o em tela cheia.",
   "modal.close": "Fechar",
-  "lock.label": "Bloquear"
+  "modal.zoomIn": "Ampliar",
+  "modal.zoomOut": "Reduzir",
+  "modal.reset": "Redefinir zoom"
 };
 
 // locale/ko.json
 var ko_default = {
-  "setting.defaultZoom.name": "\uAE30\uBCF8 \uD655\uB300/\uCD95\uC18C \uC218\uC900",
-  "setting.defaultZoom.desc": "Mermaid \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC774 \uB80C\uB354\uB9C1\uB420 \uB54C\uC758 \uCD08\uAE30 \uD655\uB300/\uCD95\uC18C \uBE44\uC728\uC785\uB2C8\uB2E4. 100%\uC774\uBA74 \uCEE8\uD14C\uC774\uB108\uC5D0 \uB9DE\uCDB0\uC9C0\uACE0, \uAC12\uC744 \uB192\uC774\uBA74 \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC774 \uAE30\uBCF8\uC801\uC73C\uB85C \uB354 \uD06C\uAC8C \uD45C\uC2DC\uB429\uB2C8\uB2E4.",
+  "setting.zoomSensitivity.name": "\uD655\uB300/\uCD95\uC18C \uBBFC\uAC10\uB3C4",
+  "setting.zoomSensitivity.desc": "\uB9C8\uC6B0\uC2A4 \uD720\uACFC \uC9D1\uAE30 \uC81C\uC2A4\uCC98\uC758 \uD655\uB300/\uCD95\uC18C \uAC15\uB3C4\uC785\uB2C8\uB2E4. \uAC12\uC774 \uB0AE\uC744\uC218\uB85D \uBD80\uB4DC\uB7FD\uAC8C \uC791\uB3D9\uD558\uBA70, \uD2B8\uB799\uD328\uB4DC\uB098 \uB9E4\uC9C1 \uB9C8\uC6B0\uC2A4\uC5D0\uC11C \uD655\uB300/\uCD95\uC18C\uAC00 \uB108\uBB34 \uBE60\uB974\uBA74 0.5x\uB97C \uC0AC\uC6A9\uD574 \uBCF4\uC138\uC694. \uC804\uCCB4 \uD654\uBA74 \uBCF4\uAE30\uB97C \uB2E4\uC2DC \uC5F4\uBA74 \uC801\uC6A9\uB429\uB2C8\uB2E4.",
   "setting.containerBorder.name": "\uCEE8\uD14C\uC774\uB108 \uD14C\uB450\uB9AC \uD45C\uC2DC",
   "setting.containerBorder.desc": "\uAC01 \uB2E4\uC774\uC5B4\uADF8\uB7A8 \uCEE8\uD14C\uC774\uB108 \uC8FC\uC704\uC5D0 \uC810\uC120 \uD14C\uB450\uB9AC\uB97C \uD45C\uC2DC\uD558\uC5EC \uD655\uB300/\uCD95\uC18C \uC601\uC5ED\uC758 \uACBD\uACC4\uB97C \uC27D\uAC8C \uD655\uC778\uD560 \uC218 \uC788\uC2B5\uB2C8\uB2E4.",
   "setting.alignment.name": "\uAE30\uBCF8 \uC815\uB82C",
@@ -224,11 +224,11 @@ var ko_default = {
   "setting.alignment.option.left": "\uC67C\uCABD",
   "setting.alignment.option.center": "\uAC00\uC6B4\uB370",
   "setting.alignment.option.right": "\uC624\uB978\uCABD",
-  "setting.maxHeight.name": "\uCD5C\uB300 \uCEE8\uD14C\uC774\uB108 \uB192\uC774",
-  "setting.maxHeight.desc": "\uD655\uB300/\uCD95\uC18C \uCEE8\uD14C\uC774\uB108\uC758 \uCD5C\uB300 \uB192\uC774(\uD53D\uC140). 0\uC73C\uB85C \uC124\uC815\uD558\uBA74 \uD604\uC7AC \uD655\uB300/\uCD95\uC18C \uC218\uC900\uC5D0\uC11C \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC774 \uC644\uC804\uD788 \uBCF4\uC774\uB3C4\uB85D \uC790\uB3D9\uC73C\uB85C \uB9DE\uCDB0\uC9D1\uB2C8\uB2E4.",
-  "settings.note": "\uBCC0\uACBD \uC0AC\uD56D\uC740 \uC0C8\uB85C \uB80C\uB354\uB9C1\uB41C \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC5D0\uB9CC \uC801\uC6A9\uB429\uB2C8\uB2E4. \uAE30\uC874 \uB2E4\uC774\uC5B4\uADF8\uB7A8\uC5D0 \uBBF8\uCE58\uB294 \uD6A8\uACFC\uB97C \uBCF4\uB824\uBA74 \uB178\uD2B8\uB97C \uB2E4\uC2DC \uC5EC\uC2ED\uC2DC\uC624.",
+  "settings.note": "\uC678\uD615 \uC124\uC815(\uC815\uB82C, \uD14C\uB450\uB9AC)\uC740 \uC5F4\uB9B0 \uB178\uD2B8\uC5D0 \uC989\uC2DC \uC801\uC6A9\uB429\uB2C8\uB2E4. \uD655\uB300/\uCD95\uC18C \uBBFC\uAC10\uB3C4\uB294 \uC804\uCCB4 \uD654\uBA74 \uBCF4\uAE30\uB97C \uB2E4\uC2DC \uC5F4\uBA74 \uC801\uC6A9\uB429\uB2C8\uB2E4.",
   "modal.close": "\uB2EB\uAE30",
-  "lock.label": "\uC7A0\uAE08"
+  "modal.zoomIn": "\uD655\uB300",
+  "modal.zoomOut": "\uCD95\uC18C",
+  "modal.reset": "\uD655\uB300/\uCD95\uC18C \uC7AC\uC124\uC815"
 };
 
 // i18n.ts
@@ -261,10 +261,9 @@ function t(key) {
 
 // settings.ts
 var DEFAULT_SETTINGS = {
-  defaultZoom: 100,
+  zoomSensitivity: 1,
   showContainerBorder: false,
   alignment: "center",
-  maxHeight: 0,
   exportDestination: "vault"
 };
 var MermaidZoomSettingTab = class extends import_obsidian2.PluginSettingTab {
@@ -279,16 +278,16 @@ var MermaidZoomSettingTab = class extends import_obsidian2.PluginSettingTab {
   getSettingDefinitions() {
     return [
       {
-        name: t("setting.defaultZoom.name"),
-        desc: t("setting.defaultZoom.desc"),
+        name: t("setting.zoomSensitivity.name"),
+        desc: t("setting.zoomSensitivity.desc"),
         control: {
           type: "slider",
-          key: "defaultZoom",
-          min: 50,
-          max: 300,
-          step: 5,
-          defaultValue: 100,
-          displayFormat: (value) => `${value}%`
+          key: "zoomSensitivity",
+          min: 0.2,
+          max: 3,
+          step: 0.1,
+          defaultValue: 1,
+          displayFormat: (value) => `${value}x`
         }
       },
       {
@@ -315,18 +314,6 @@ var MermaidZoomSettingTab = class extends import_obsidian2.PluginSettingTab {
         }
       },
       {
-        name: t("setting.maxHeight.name"),
-        desc: t("setting.maxHeight.desc"),
-        control: {
-          type: "number",
-          key: "maxHeight",
-          defaultValue: 0,
-          placeholder: "0",
-          min: 0,
-          step: 1
-        }
-      },
-      {
         name: t("setting.exportDestination.name"),
         desc: t("setting.exportDestination.desc"),
         control: {
@@ -346,26 +333,26 @@ var MermaidZoomSettingTab = class extends import_obsidian2.PluginSettingTab {
   async setControlValue(key, value) {
     this.plugin.settings[key] = value;
     await this.plugin.saveSettings();
+    if (key === "alignment" || key === "showContainerBorder") {
+      this.plugin.decorateAllMermaidBlocks();
+    }
   }
   display() {
     const { containerEl } = this;
     containerEl.empty();
-    new import_obsidian2.Setting(containerEl).setName(t("setting.defaultZoom.name")).setDesc(t("setting.defaultZoom.desc")).addSlider((slider) => slider.setLimits(50, 300, 5).setValue(this.plugin.settings.defaultZoom).onChange(async (value) => {
-      this.plugin.settings.defaultZoom = value;
+    new import_obsidian2.Setting(containerEl).setName(t("setting.zoomSensitivity.name")).setDesc(t("setting.zoomSensitivity.desc")).addSlider((slider) => slider.setLimits(0.2, 3, 0.1).setValue(this.plugin.settings.zoomSensitivity).onChange(async (value) => {
+      this.plugin.settings.zoomSensitivity = value;
       await this.plugin.saveSettings();
     }));
     new import_obsidian2.Setting(containerEl).setName(t("setting.containerBorder.name")).setDesc(t("setting.containerBorder.desc")).addToggle((toggle) => toggle.setValue(this.plugin.settings.showContainerBorder).onChange(async (value) => {
       this.plugin.settings.showContainerBorder = value;
       await this.plugin.saveSettings();
+      this.plugin.decorateAllMermaidBlocks();
     }));
     new import_obsidian2.Setting(containerEl).setName(t("setting.alignment.name")).setDesc(t("setting.alignment.desc")).addDropdown((dropdown) => dropdown.addOption("left", t("setting.alignment.option.left")).addOption("center", t("setting.alignment.option.center")).addOption("right", t("setting.alignment.option.right")).setValue(this.plugin.settings.alignment).onChange(async (value) => {
       this.plugin.settings.alignment = value;
       await this.plugin.saveSettings();
-    }));
-    new import_obsidian2.Setting(containerEl).setName(t("setting.maxHeight.name")).setDesc(t("setting.maxHeight.desc")).addText((text) => text.setPlaceholder("0").setValue(this.plugin.settings.maxHeight > 0 ? String(this.plugin.settings.maxHeight) : "").onChange(async (value) => {
-      const num = parseInt(value, 10);
-      this.plugin.settings.maxHeight = isNaN(num) || num < 0 ? 0 : num;
-      await this.plugin.saveSettings();
+      this.plugin.decorateAllMermaidBlocks();
     }));
     new import_obsidian2.Setting(containerEl).setName(t("setting.exportDestination.name")).setDesc(t("setting.exportDestination.desc")).addDropdown((dropdown) => dropdown.addOption("vault", t("setting.exportDestination.option.vault")).addOption("download", t("setting.exportDestination.option.download")).setValue(this.plugin.settings.exportDestination).onChange(async (value) => {
       this.plugin.settings.exportDestination = value;
@@ -388,29 +375,31 @@ function updateTransform(contentWrapper, state) {
 function zoom(contentWrapper, state, factor) {
   let newScale = state.scale * factor;
   newScale = Math.max(state.minScale, Math.min(state.maxScale, newScale));
-  const container = contentWrapper.parentElement;
-  if (container) {
-    const rect = container.getBoundingClientRect();
-    const centerX = rect.width / 2;
-    const centerY = rect.height / 2;
-    const scaleRatio = newScale / state.scale;
-    state.translateX = centerX - (centerX - state.translateX) * scaleRatio;
-    state.translateY = centerY - (centerY - state.translateY) * scaleRatio;
-  }
+  const container = state.container;
+  const rect = container.getBoundingClientRect();
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+  const scaleRatio = newScale / state.scale;
+  state.translateX = centerX - (centerX - state.translateX) * scaleRatio;
+  state.translateY = centerY - (centerY - state.translateY) * scaleRatio;
   state.scale = newScale;
   updateTransform(contentWrapper, state);
 }
-function addWheelZoom(container, contentWrapper, state) {
+function addWheelZoom(container, contentWrapper, state, sensitivity = 1) {
   const wheelHandler = (e) => {
-    if (state.locked)
-      return;
     e.preventDefault();
     const rect = container.getBoundingClientRect();
     const mouseX = e.clientX - rect.left;
     const mouseY = e.clientY - rect.top;
-    const delta = e.deltaY > 0 ? 0.9 : 1.1;
+    let deltaPx = e.deltaY;
+    if (e.deltaMode === 1)
+      deltaPx *= 33;
+    else if (e.deltaMode === 2)
+      deltaPx *= 300;
+    const clamped = Math.max(-100, Math.min(100, deltaPx));
+    const factor = Math.exp(-clamped / 100 * 0.12 * sensitivity);
     const oldScale = state.scale;
-    let newScale = oldScale * delta;
+    let newScale = oldScale * factor;
     newScale = Math.max(state.minScale, Math.min(state.maxScale, newScale));
     if (newScale !== oldScale) {
       const scaleRatio = newScale / oldScale;
@@ -424,10 +413,7 @@ function addWheelZoom(container, contentWrapper, state) {
   return () => container.removeEventListener("wheel", wheelHandler);
 }
 function addDragPan(container, contentWrapper, state) {
-  contentWrapper.classList.add("mermaid-zoom-content");
   container.addEventListener("mousedown", (e) => {
-    if (state.locked)
-      return;
     if (e.button === 0) {
       state.isDragging = true;
       state.startX = e.clientX - state.translateX;
@@ -456,12 +442,14 @@ function addDragPan(container, contentWrapper, state) {
     document.removeEventListener("mouseup", onMouseUp);
   };
 }
-function addTouchGestures(container, contentWrapper, state) {
+function addTouchGestures(container, contentWrapper, state, sensitivity = 1) {
   let initialDistance = 0;
   let initialScale = 1;
+  let initialTranslateX = 0;
+  let initialTranslateY = 0;
+  let initialCenterX = 0;
+  let initialCenterY = 0;
   const onTouchStart = (e) => {
-    if (state.locked)
-      return;
     if (e.touches.length === 2) {
       const touch1 = e.touches[0];
       const touch2 = e.touches[1];
@@ -470,6 +458,12 @@ function addTouchGestures(container, contentWrapper, state) {
         touch2.clientY - touch1.clientY
       );
       initialScale = state.scale;
+      initialTranslateX = state.translateX;
+      initialTranslateY = state.translateY;
+      const rect = container.getBoundingClientRect();
+      initialCenterX = (touch1.clientX + touch2.clientX) / 2 - rect.left;
+      initialCenterY = (touch1.clientY + touch2.clientY) / 2 - rect.top;
+      state.isDragging = false;
     } else if (e.touches.length === 1) {
       state.isDragging = true;
       state.startX = e.touches[0].clientX - state.translateX;
@@ -477,10 +471,10 @@ function addTouchGestures(container, contentWrapper, state) {
     }
   };
   const onTouchMove = (e) => {
-    if (state.locked)
-      return;
     e.preventDefault();
     if (e.touches.length === 2) {
+      if (initialDistance === 0)
+        return;
       const touch1 = e.touches[0];
       const touch2 = e.touches[1];
       const currentDistance = Math.hypot(
@@ -488,8 +482,14 @@ function addTouchGestures(container, contentWrapper, state) {
         touch2.clientY - touch1.clientY
       );
       const scaleRatio = currentDistance / initialDistance;
-      let newScale = initialScale * scaleRatio;
+      let newScale = initialScale * Math.pow(scaleRatio, sensitivity);
       newScale = Math.max(state.minScale, Math.min(state.maxScale, newScale));
+      const rect = container.getBoundingClientRect();
+      const currentCenterX = (touch1.clientX + touch2.clientX) / 2 - rect.left;
+      const currentCenterY = (touch1.clientY + touch2.clientY) / 2 - rect.top;
+      const appliedScaleRatio = newScale / initialScale;
+      state.translateX = currentCenterX - (initialCenterX - initialTranslateX) * appliedScaleRatio;
+      state.translateY = currentCenterY - (initialCenterY - initialTranslateY) * appliedScaleRatio;
       state.scale = newScale;
       updateTransform(contentWrapper, state);
     } else if (e.touches.length === 1 && state.isDragging) {
@@ -504,114 +504,12 @@ function addTouchGestures(container, contentWrapper, state) {
   container.addEventListener("touchstart", onTouchStart);
   container.addEventListener("touchmove", onTouchMove, { passive: false });
   container.addEventListener("touchend", onTouchEnd);
+  container.addEventListener("touchcancel", onTouchEnd);
   return () => {
     container.removeEventListener("touchstart", onTouchStart);
     container.removeEventListener("touchmove", onTouchMove);
     container.removeEventListener("touchend", onTouchEnd);
-  };
-}
-function addResizeHandles(container, contentWrapper, state, reset) {
-  const cursorClassMap = {
-    "nwse-resize": "mermaid-zoom-resizing-nwse",
-    "nesw-resize": "mermaid-zoom-resizing-nesw",
-    "ns-resize": "mermaid-zoom-resizing-ns",
-    "ew-resize": "mermaid-zoom-resizing-ew"
-  };
-  const handles = [
-    { position: "top-left", cursor: "nwse-resize", style: "top: 0; left: 0; width: 12px; height: 12px;" },
-    { position: "top-right", cursor: "nesw-resize", style: "top: 0; right: 0; width: 12px; height: 12px;" },
-    { position: "bottom-left", cursor: "nesw-resize", style: "bottom: 0; left: 0; width: 12px; height: 12px;" },
-    { position: "bottom-right", cursor: "nwse-resize", style: "bottom: 0; right: 0; width: 12px; height: 12px;" },
-    { position: "top", cursor: "ns-resize", style: "top: 0; left: 12px; right: 12px; height: 6px;" },
-    { position: "bottom", cursor: "ns-resize", style: "bottom: 0; left: 12px; right: 12px; height: 6px;" },
-    { position: "left", cursor: "ew-resize", style: "top: 12px; bottom: 12px; left: 0; width: 6px;" },
-    { position: "right", cursor: "ew-resize", style: "top: 12px; bottom: 12px; right: 0; width: 6px;" }
-  ];
-  const documentListeners = [];
-  let currentMarginLeft = 0;
-  let currentMarginTop = 0;
-  handles.forEach(({ position, cursor, style }) => {
-    const handle = container.createDiv(`mermaid-resize-${position}`);
-    handle.style.cssText = `
-			position: absolute;
-			${style}
-			cursor: ${cursor};
-			z-index: 50;
-		`;
-    const resizeClass = cursorClassMap[cursor];
-    let isResizing = false;
-    let startX = 0;
-    let startY = 0;
-    let startWidth = 0;
-    let startHeight = 0;
-    let startMarginLeft = 0;
-    let startMarginTop = 0;
-    const onMouseDown = (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-      isResizing = true;
-      startX = e.clientX;
-      startY = e.clientY;
-      startWidth = container.offsetWidth;
-      startHeight = container.offsetHeight;
-      startMarginLeft = currentMarginLeft;
-      startMarginTop = currentMarginTop;
-      document.body.addClass(resizeClass);
-    };
-    const onMouseMove = (e) => {
-      if (!isResizing)
-        return;
-      e.preventDefault();
-      const deltaX = e.clientX - startX;
-      const deltaY = e.clientY - startY;
-      let newWidth = startWidth;
-      let newHeight = startHeight;
-      let newMarginLeft = startMarginLeft;
-      let newMarginTop = startMarginTop;
-      if (position.includes("right")) {
-        newWidth = Math.max(150, startWidth + deltaX);
-      } else if (position.includes("left")) {
-        const widthDelta = -deltaX;
-        newWidth = Math.max(150, startWidth + widthDelta);
-        if (newWidth > 150) {
-          newMarginLeft = startMarginLeft + deltaX;
-        }
-      }
-      if (position.includes("bottom")) {
-        newHeight = Math.max(100, startHeight + deltaY);
-      } else if (position.includes("top")) {
-        const heightDelta = -deltaY;
-        newHeight = Math.max(100, startHeight + heightDelta);
-        if (newHeight > 100) {
-          newMarginTop = startMarginTop + deltaY;
-        }
-      }
-      container.style.width = `${newWidth}px`;
-      container.style.height = `${newHeight}px`;
-      container.style.marginLeft = `${newMarginLeft}px`;
-      container.style.marginTop = `${newMarginTop}px`;
-      currentMarginLeft = newMarginLeft;
-      currentMarginTop = newMarginTop;
-    };
-    const onMouseUp = () => {
-      if (!isResizing)
-        return;
-      isResizing = false;
-      document.body.removeClass(resizeClass);
-      reset();
-    };
-    handle.addEventListener("mousedown", onMouseDown);
-    document.addEventListener("mousemove", onMouseMove);
-    document.addEventListener("mouseup", onMouseUp);
-    documentListeners.push(
-      { type: "mousemove", fn: onMouseMove },
-      { type: "mouseup", fn: onMouseUp }
-    );
-  });
-  return () => {
-    for (const { type, fn } of documentListeners) {
-      document.removeEventListener(type, fn);
-    }
+    container.removeEventListener("touchcancel", onTouchEnd);
   };
 }
 
@@ -678,11 +576,8 @@ async function exportDiagramPng(app, svg, width, height, destination) {
 var MermaidZoomPlugin = class extends import_obsidian4.Plugin {
   constructor() {
     super(...arguments);
-    this.zoomStates = /* @__PURE__ */ new Map();
     this.defaultMinScale = 0.1;
     this.defaultMaxScale = 5;
-    this.defaultScale = 1;
-    this.processedElements = /* @__PURE__ */ new WeakSet();
     this.settings = DEFAULT_SETTINGS;
   }
   async loadSettings() {
@@ -696,49 +591,25 @@ var MermaidZoomPlugin = class extends import_obsidian4.Plugin {
     this.addSettingTab(new MermaidZoomSettingTab(this.app, this));
     console.debug("Loading Mermaid Zoom plugin");
     this.setupMutationObserver();
-    this.setupResizeObserver();
     this.app.workspace.onLayoutReady(() => {
-      this.processAllMermaidDiagrams();
+      this.decorateAllMermaidBlocks();
     });
     this.registerEvent(this.app.workspace.on("layout-change", () => {
-      this.processAllMermaidDiagrams();
+      this.decorateAllMermaidBlocks();
     }));
     this.registerEvent(this.app.workspace.on("active-leaf-change", () => {
-      this.processAllMermaidDiagrams();
+      this.decorateAllMermaidBlocks();
     }));
     this.registerEvent(this.app.workspace.on("file-open", () => {
-      window.setTimeout(() => this.processAllMermaidDiagrams(), 200);
+      window.setTimeout(() => this.decorateAllMermaidBlocks(), 200);
     }));
-  }
-  setupResizeObserver() {
-    this.resizeObserver = new ResizeObserver((entries) => {
-      var _a;
-      for (const entry of entries) {
-        const container = entry.target;
-        if (!document.contains(container)) {
-          (_a = this.resizeObserver) == null ? void 0 : _a.unobserve(container);
-          const contentWrapper2 = container.querySelector(".mermaid-zoom-content");
-          if (contentWrapper2) {
-            this.zoomStates.delete(contentWrapper2);
-          }
-          continue;
-        }
-        const contentWrapper = container.querySelector(".mermaid-zoom-content");
-        if (!contentWrapper)
-          continue;
-        const state = this.zoomStates.get(contentWrapper);
-        if (state) {
-          this.fitToContainer(container, contentWrapper, state.svg, state);
-        }
-      }
-    });
   }
   setupMutationObserver() {
     this.mutationObserver = new MutationObserver((mutations) => {
       for (const mutation of Array.from(mutations)) {
         for (const node of Array.from(mutation.addedNodes)) {
-          if (node.instanceOf(HTMLElement) || node.instanceOf(SVGElement)) {
-            this.processPotentialMermaidElement(node);
+          if (node.instanceOf(HTMLElement)) {
+            this.decorateMermaidBlocksIn(node);
           }
         }
       }
@@ -748,184 +619,99 @@ var MermaidZoomPlugin = class extends import_obsidian4.Plugin {
       subtree: true
     });
   }
-  processPotentialMermaidElement(element) {
-    const mermaidSvgs = [];
-    if (element.instanceOf(HTMLElement)) {
-      const svgs = Array.from(element.querySelectorAll('.mermaid svg, svg[id^="mermaid-"]'));
-      mermaidSvgs.push(...svgs);
-      if (element.classList.contains("mermaid")) {
-        const svg = element.querySelector("svg");
-        if (svg)
-          mermaidSvgs.push(svg);
+  // Obsidian structure: <div class="mermaid"><svg id="mermaid-xxx">...</svg></div>.
+  // A bare .mermaid div may be added before its svg renders, and a rendered
+  // svg may be injected into an existing div — catch both shapes.
+  decorateMermaidBlocksIn(root) {
+    const blocks = Array.from(root.querySelectorAll(".mermaid"));
+    if (root.classList.contains("mermaid")) {
+      blocks.push(root);
+    } else {
+      for (const svg of Array.from(root.querySelectorAll(".mermaid svg"))) {
+        const host = svg.closest(".mermaid");
+        if (host)
+          blocks.push(host);
       }
     }
-    for (const svg of mermaidSvgs) {
-      if (!this.processedElements.has(svg) && !this.hasZoomContainer(svg)) {
-        this.wrapMermaidWithZoom(svg);
-        this.processedElements.add(svg);
-      }
+    for (const block of blocks) {
+      this.decorateMermaidBlock(block);
     }
   }
-  hasZoomContainer(svg) {
+  /** Decorate every mermaid block in the document; also re-syncs appearance
+   * classes (used after settings change). */
+  decorateAllMermaidBlocks() {
+    const blocks = document.querySelectorAll(".mermaid");
+    for (const block of Array.from(blocks)) {
+      this.decorateMermaidBlock(block);
+    }
+  }
+  // Appearance classes are re-applied on every visit — the operation is
+  // idempotent, and it keeps re-attached blocks in sync: live preview
+  // detaches far embeds and re-attaches the SAME cached node when you
+  // scroll back, so a node that missed a settings change must catch up the
+  // moment it reappears. The mermaid-zoom-ready marker only guards the
+  // one-time button insert.
+  decorateMermaidBlock(block) {
+    if (!block.querySelector("svg"))
+      return;
+    block.removeClass("mermaid-zoom-align-left", "mermaid-zoom-align-center", "mermaid-zoom-align-right");
+    block.addClass(`mermaid-zoom-align-${this.settings.alignment}`);
+    block.toggleClass("mermaid-zoom-bordered", this.settings.showContainerBorder);
+    if (!block.hasClass("mermaid-zoom-ready")) {
+      block.addClass("mermaid-zoom-ready");
+      this.addFullscreenButton(block);
+    }
+  }
+  addFullscreenButton(block) {
+    const fullscreenBtn = block.createEl("button", {
+      cls: "mermaid-zoom-icon-btn mermaid-zoom-fullscreen-btn"
+    });
+    const svgNS = "http://www.w3.org/2000/svg";
+    const svg = document.createElementNS(svgNS, "svg");
+    svg.setAttribute("width", "18");
+    svg.setAttribute("height", "18");
+    svg.setAttribute("viewBox", "0 0 16 16");
+    svg.setAttribute("fill", "none");
+    svg.setAttribute("stroke", "currentColor");
+    svg.setAttribute("stroke-width", "1");
+    svg.setAttribute("stroke-linecap", "round");
+    svg.setAttribute("stroke-linejoin", "round");
+    const polyline1 = document.createElementNS(svgNS, "polyline");
+    polyline1.setAttribute("points", "1,10 1,15 6,15");
+    svg.appendChild(polyline1);
+    const polyline2 = document.createElementNS(svgNS, "polyline");
+    polyline2.setAttribute("points", "15,10 15,15 10,15");
+    svg.appendChild(polyline2);
+    const polyline3 = document.createElementNS(svgNS, "polyline");
+    polyline3.setAttribute("points", "1,6 1,1 6,1");
+    svg.appendChild(polyline3);
+    const polyline4 = document.createElementNS(svgNS, "polyline");
+    polyline4.setAttribute("points", "15,6 15,1 10,1");
+    svg.appendChild(polyline4);
+    fullscreenBtn.appendChild(svg);
+    fullscreenBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const currentSvg = block.querySelector("svg");
+      if (currentSvg) {
+        this.openFullscreenModal(currentSvg);
+      }
+    });
+  }
+  openFullscreenModal(sourceSvg) {
     var _a;
-    const mermaidContainer = svg.closest(".mermaid");
-    const parent = (mermaidContainer == null ? void 0 : mermaidContainer.parentElement) || svg.parentElement;
-    return (_a = parent == null ? void 0 : parent.hasClass("mermaid-zoom-content")) != null ? _a : false;
-  }
-  processAllMermaidDiagrams() {
-    const mermaidSvgs = document.querySelectorAll('.mermaid svg, svg[id^="mermaid-"]');
-    for (const mermaidSvg of Array.from(mermaidSvgs)) {
-      if (!this.processedElements.has(mermaidSvg) && !this.hasZoomContainer(mermaidSvg)) {
-        this.wrapMermaidWithZoom(mermaidSvg);
-        this.processedElements.add(mermaidSvg);
-      }
-    }
-  }
-  wrapMermaidWithZoom(svg) {
-    var _a;
-    if (!svg.parentElement)
-      return;
-    const mermaidContainer = svg.closest(".mermaid");
-    const targetParent = (mermaidContainer == null ? void 0 : mermaidContainer.parentElement) || svg.parentElement;
-    const targetElement = mermaidContainer || svg;
-    if (!targetParent)
-      return;
-    const container = createDiv("mermaid-zoom-container");
-    container.style.cssText = `
-			position: relative;
-			overflow: hidden;
-			width: 100%;
-			min-width: 150px;
-			min-height: 100px;
-			margin: 0;
-			padding: 1em;
-			padding-bottom: 2.5em;
-			box-sizing: border-box;
-			${this.settings.showContainerBorder ? "border: 1px dashed var(--background-modifier-border); border-radius: 4px;" : ""}
-		`;
-    const contentWrapper = container.createDiv("mermaid-zoom-content");
-    contentWrapper.style.cssText = `
-			transform-origin: 0 0;
-			transition: transform 0.1s ease-out;
-			width: fit-content;
-		`;
-    targetParent.insertBefore(container, targetElement);
-    contentWrapper.appendChild(targetElement);
-    const svgRect = svg.getBoundingClientRect();
-    const svgOriginalWidth = svgRect.width || svg.clientWidth || 300;
-    const svgOriginalHeight = svgRect.height || svg.clientHeight || 200;
-    const computedStyle = getComputedStyle(container);
-    const paddingTop = parseFloat(computedStyle.paddingTop) || 0;
-    const paddingBottom = parseFloat(computedStyle.paddingBottom) || 0;
-    const paddingLeft = parseFloat(computedStyle.paddingLeft) || 0;
-    const paddingRight = parseFloat(computedStyle.paddingRight) || 0;
-    const availableWidth = container.clientWidth - paddingLeft - paddingRight;
-    const defaultZoomScale = this.settings.defaultZoom / 100;
-    const effectiveScale = Math.min(availableWidth / svgOriginalWidth, defaultZoomScale);
-    const naturalHeight = svgOriginalHeight * effectiveScale + paddingTop + paddingBottom;
-    const containerHeight = this.settings.maxHeight > 0 ? Math.min(naturalHeight, this.settings.maxHeight) : naturalHeight;
-    container.style.height = `${containerHeight}px`;
-    const state = {
-      scale: this.defaultScale,
-      minScale: this.defaultMinScale,
-      maxScale: this.defaultMaxScale,
-      isDragging: false,
-      startX: 0,
-      startY: 0,
-      translateX: 0,
-      translateY: 0,
-      svg,
-      container,
-      svgOriginalWidth,
-      svgOriginalHeight,
-      locked: true
-    };
-    this.zoomStates.set(contentWrapper, state);
-    this.register(this.createControls(container, contentWrapper, state));
-    this.register(addWheelZoom(container, contentWrapper, state));
-    this.register(addDragPan(container, contentWrapper, state));
-    this.register(addTouchGestures(container, contentWrapper, state));
-    this.fitToContainer(container, contentWrapper, svg, state);
-    (_a = this.resizeObserver) == null ? void 0 : _a.observe(container);
-  }
-  fitToContainer(container, contentWrapper, svg, state) {
-    if (container.clientWidth <= 0 || container.clientHeight <= 0)
-      return;
-    if (state.svgOriginalWidth <= 0 || state.svgOriginalHeight <= 0)
-      return;
-    const computedStyle = getComputedStyle(container);
-    const paddingLeft = parseFloat(computedStyle.paddingLeft) || 0;
-    const paddingRight = parseFloat(computedStyle.paddingRight) || 0;
-    const paddingTop = parseFloat(computedStyle.paddingTop) || 0;
-    const paddingBottom = parseFloat(computedStyle.paddingBottom) || 0;
-    const availableWidth = container.clientWidth - paddingLeft - paddingRight;
-    const availableHeight = container.clientHeight - paddingTop - paddingBottom;
-    const svgWidth = state.svgOriginalWidth;
-    const svgHeight = state.svgOriginalHeight;
-    const scaleX = availableWidth / svgWidth;
-    const scaleY = availableHeight / svgHeight;
-    const fitScale = Math.min(scaleX, scaleY, this.settings.defaultZoom / 100);
-    const scaledWidth = svgWidth * fitScale;
-    const scaledHeight = svgHeight * fitScale;
-    let offsetX;
-    switch (this.settings.alignment) {
-      case "left":
-        offsetX = 0;
-        break;
-      case "right":
-        offsetX = availableWidth - scaledWidth;
-        break;
-      case "center":
-      default:
-        offsetX = (availableWidth - scaledWidth) / 2;
-        break;
-    }
-    const centerY = (container.clientHeight - scaledHeight) / 2 - paddingTop;
-    state.scale = fitScale;
-    state.translateX = offsetX;
-    state.translateY = Math.max(0, centerY);
-    updateTransform(contentWrapper, state);
-  }
-  openFullscreenModal(state) {
+    const controlsRight = import_obsidian4.Platform.isMobile ? "20px" : "15px";
+    const controlsBottom = import_obsidian4.Platform.isMobile ? "28px" : "15px";
     const modal = createDiv();
     modal.className = "mermaid-zoom-modal";
     modal.style.cssText = `
 			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100vw;
-			height: 100vh;
+			inset: 0;
 			background: var(--background-primary);
 			z-index: 9999;
 			display: flex;
 			flex-direction: column;
+			box-sizing: border-box;
 		`;
-    const header = createDiv();
-    header.className = "mermaid-zoom-modal-header";
-    header.style.cssText = `
-			display: flex;
-			justify-content: flex-end;
-			padding: 10px 15px;
-			background: var(--background-secondary);
-			border-bottom: 1px solid var(--background-modifier-border);
-		`;
-    const closeBtn = createEl("button");
-    closeBtn.className = "mermaid-zoom-modal-close";
-    closeBtn.textContent = "\u2715";
-    closeBtn.style.cssText = `
-			width: 32px;
-			height: 32px;
-			border: none;
-			color: var(--text-normal);
-			border-radius: 4px;
-			cursor: pointer;
-			font-size: 18px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			transition: background 0.2s;
-		`;
-    header.appendChild(closeBtn);
     const content = createDiv();
     content.className = "mermaid-zoom-modal-content";
     content.style.cssText = `
@@ -952,23 +738,14 @@ var MermaidZoomPlugin = class extends import_obsidian4.Plugin {
 			width: fit-content;
 			position: absolute;
 		`;
-    const svgClone = state.svg.cloneNode(true);
+    const svgClone = sourceSvg.cloneNode(true);
     modalContentWrapper.appendChild(svgClone);
     modalZoomContainer.appendChild(modalContentWrapper);
     content.appendChild(modalZoomContainer);
-    const controls = createDiv();
-    controls.className = "mermaid-zoom-modal-controls";
-    controls.style.cssText = `
-			position: absolute;
-			bottom: 20px;
-			right: 20px;
-			display: flex;
-			gap: 5px;
-			background: var(--background-secondary);
-			padding: 8px;
-			border-radius: 8px;
-			box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-		`;
+    const cloneRect = svgClone.getBoundingClientRect();
+    const viewBox = (_a = svgClone.viewBox) == null ? void 0 : _a.baseVal;
+    const svgOriginalWidth = cloneRect.width || (viewBox == null ? void 0 : viewBox.width) || parseFloat(svgClone.getAttribute("width") || "") || 300;
+    const svgOriginalHeight = cloneRect.height || (viewBox == null ? void 0 : viewBox.height) || parseFloat(svgClone.getAttribute("height") || "") || 200;
     const modalState = {
       scale: 1,
       minScale: this.defaultMinScale,
@@ -980,68 +757,60 @@ var MermaidZoomPlugin = class extends import_obsidian4.Plugin {
       translateY: 0,
       svg: svgClone,
       container: modalZoomContainer,
-      svgOriginalWidth: state.svgOriginalWidth,
-      svgOriginalHeight: state.svgOriginalHeight,
-      locked: false
+      svgOriginalWidth,
+      svgOriginalHeight
     };
-    const zoomInBtn = createEl("button");
-    zoomInBtn.textContent = "+";
-    this.styleButton(zoomInBtn);
-    zoomInBtn.addEventListener("click", () => zoom(modalContentWrapper, modalState, 1.2));
-    const zoomOutBtn = createEl("button");
-    zoomOutBtn.textContent = "-";
-    this.styleButton(zoomOutBtn);
-    zoomOutBtn.addEventListener("click", () => zoom(modalContentWrapper, modalState, 0.8));
-    const resetBtn = createEl("button");
-    resetBtn.textContent = "\u27F2";
-    this.styleButton(resetBtn);
-    resetBtn.addEventListener("click", () => {
+    const controls = createDiv();
+    controls.className = "mermaid-zoom-modal-controls";
+    controls.style.cssText = `
+			position: absolute;
+			bottom: ${controlsBottom};
+			right: ${controlsRight};
+			z-index: 1;
+			display: flex;
+			align-items: center;
+			gap: 2px;
+		`;
+    const makeIconButton = (iconId, label, onClick) => {
+      const btn = createEl("button", { cls: "mermaid-zoom-icon-btn" });
+      (0, import_obsidian4.setIcon)(btn, iconId);
+      btn.setAttribute("aria-label", label);
+      btn.title = label;
+      btn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        onClick();
+      });
+      controls.appendChild(btn);
+    };
+    makeIconButton("plus", t("modal.zoomIn"), () => zoom(modalContentWrapper, modalState, 1.2));
+    makeIconButton("minus", t("modal.zoomOut"), () => zoom(modalContentWrapper, modalState, 0.8));
+    makeIconButton("rotate-ccw", t("modal.reset"), () => {
       this.fitToContainerModal(modalZoomContainer, modalContentWrapper, modalState);
     });
-    const exportBtn = createEl("button");
-    exportBtn.textContent = "\u2913";
-    exportBtn.title = t("export.buttonTitle");
-    this.styleButton(exportBtn);
-    exportBtn.addEventListener("click", () => {
-      void exportDiagramPng(this.app, state.svg, state.svgOriginalWidth, state.svgOriginalHeight, this.settings.exportDestination);
-    });
-    const scaleIndicator = createSpan();
+    const scaleIndicator = createSpan({ cls: "mermaid-zoom-scale" });
     scaleIndicator.style.cssText = `
-			padding: 4px 8px;
+			min-width: 38px;
+			text-align: center;
 			font-size: 12px;
 			font-family: var(--font-ui-medium);
 			color: var(--text-muted);
-			min-width: 45px;
-			text-align: center;
 		`;
     modalState.scaleIndicator = scaleIndicator;
-    const controlsCloseBtn = createEl("button");
-    controlsCloseBtn.textContent = "\u2715";
-    controlsCloseBtn.title = t("modal.close");
-    controlsCloseBtn.setAttribute("aria-label", t("modal.close"));
-    this.styleButton(controlsCloseBtn);
-    controlsCloseBtn.addClass("mermaid-modal-close-btn");
-    const controlsSeparator = createDiv();
-    controlsSeparator.style.cssText = `
-			width: 1px;
-			align-self: stretch;
-			margin: 2px 4px;
-			background: var(--background-modifier-border);
-		`;
-    controls.appendChild(zoomInBtn);
-    controls.appendChild(zoomOutBtn);
-    controls.appendChild(resetBtn);
     controls.appendChild(scaleIndicator);
-    controls.appendChild(controlsSeparator);
-    controls.appendChild(exportBtn);
-    controls.appendChild(controlsCloseBtn);
-    content.appendChild(controls);
-    modal.appendChild(header);
+    makeIconButton("download", t("export.buttonTitle"), () => {
+      void exportDiagramPng(this.app, svgClone, svgOriginalWidth, svgOriginalHeight, this.settings.exportDestination);
+    });
+    const closeBtn = createEl("button", { cls: "mermaid-zoom-icon-btn mermaid-zoom-modal-close" });
+    (0, import_obsidian4.setIcon)(closeBtn, "x");
+    closeBtn.setAttribute("aria-label", t("modal.close"));
+    closeBtn.title = t("modal.close");
+    controls.appendChild(closeBtn);
+    modal.appendChild(controls);
     modal.appendChild(content);
     const modalCleanupFns = [];
-    modalCleanupFns.push(addWheelZoom(modalZoomContainer, modalContentWrapper, modalState));
+    modalCleanupFns.push(addWheelZoom(modalZoomContainer, modalContentWrapper, modalState, this.settings.zoomSensitivity));
     modalCleanupFns.push(addDragPan(modalZoomContainer, modalContentWrapper, modalState));
-    modalCleanupFns.push(addTouchGestures(modalZoomContainer, modalContentWrapper, modalState));
+    modalCleanupFns.push(addTouchGestures(modalZoomContainer, modalContentWrapper, modalState, this.settings.zoomSensitivity));
     const popstateHandler = () => closeModal();
     const closeModal = () => {
       window.removeEventListener("popstate", popstateHandler);
@@ -1054,6 +823,12 @@ var MermaidZoomPlugin = class extends import_obsidian4.Plugin {
     const handleKeydown = (e) => {
       if (e.key === "Escape") {
         closeModal();
+      } else if (e.key === "+" || e.key === "=") {
+        zoom(modalContentWrapper, modalState, 1.2);
+      } else if (e.key === "-" || e.key === "_") {
+        zoom(modalContentWrapper, modalState, 0.8);
+      } else if (e.key === "0") {
+        this.fitToContainerModal(modalZoomContainer, modalContentWrapper, modalState);
       }
     };
     document.addEventListener("keydown", handleKeydown);
@@ -1062,7 +837,6 @@ var MermaidZoomPlugin = class extends import_obsidian4.Plugin {
       window.addEventListener("popstate", popstateHandler);
     }
     closeBtn.addEventListener("click", closeModal);
-    controlsCloseBtn.addEventListener("click", closeModal);
     document.body.appendChild(modal);
     window.requestAnimationFrame(() => {
       this.fitToContainerModal(modalZoomContainer, modalContentWrapper, modalState);
@@ -1090,168 +864,23 @@ var MermaidZoomPlugin = class extends import_obsidian4.Plugin {
     state.translateY = centerY;
     updateTransform(contentWrapper, state);
   }
-  createControls(container, contentWrapper, state) {
-    const controls = container.createDiv("mermaid-zoom-controls");
-    controls.style.cssText = `
-			position: absolute;
-			bottom: 10px;
-			right: 10px;
-			display: flex;
-			flex-direction: column;
-			gap: 5px;
-			z-index: 100;
-			background: var(--background-secondary);
-			padding: 5px;
-			border-radius: 5px;
-			box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-		`;
-    const topRow = controls.createDiv();
-    topRow.style.cssText = `
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: 8px;
-		`;
-    const bottomRow = controls.createDiv();
-    bottomRow.style.cssText = `
-			display: flex;
-			align-items: center;
-			gap: 5px;
-		`;
-    const lockToggle = topRow.createDiv("mermaid-lock-toggle");
-    lockToggle.style.cssText = `
-			display: flex;
-			align-items: center;
-			gap: 6px;
-			padding: 0 8px 0 4px;
-		`;
-    const lockLabel = lockToggle.createSpan({
-      text: t("lock.label"),
-      cls: "mermaid-lock-label"
-    });
-    lockLabel.style.cssText = `
-			font-size: 12px;
-			font-family: var(--font-ui-medium);
-			color: var(--text-muted);
-			white-space: nowrap;
-		`;
-    new import_obsidian4.ToggleComponent(lockToggle).setValue(state.locked).onChange((value) => {
-      state.locked = value;
-      contentWrapper.classList.toggle("locked", state.locked);
-    });
-    contentWrapper.classList.toggle("locked", state.locked);
-    const stopSwitchEvent = (e) => e.stopPropagation();
-    lockToggle.addEventListener("mousedown", stopSwitchEvent);
-    lockToggle.addEventListener("click", stopSwitchEvent);
-    const zoomInBtn = bottomRow.createEl("button", {
-      text: "+",
-      cls: "mermaid-zoom-btn"
-    });
-    this.styleButton(zoomInBtn);
-    zoomInBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      zoom(contentWrapper, state, 1.2);
-    });
-    const zoomOutBtn = bottomRow.createEl("button", {
-      text: "-",
-      cls: "mermaid-zoom-btn"
-    });
-    this.styleButton(zoomOutBtn);
-    zoomOutBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      zoom(contentWrapper, state, 0.8);
-    });
-    const resetBtn = bottomRow.createEl("button", {
-      text: "\u27F2",
-      cls: "mermaid-zoom-btn"
-    });
-    this.styleButton(resetBtn);
-    resetBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      this.fitToContainer(state.container, contentWrapper, state.svg, state);
-    });
-    const exportBtn = bottomRow.createEl("button", {
-      text: "\u2913",
-      cls: "mermaid-zoom-btn"
-    });
-    exportBtn.title = t("export.buttonTitle");
-    this.styleButton(exportBtn);
-    exportBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      void exportDiagramPng(this.app, state.svg, state.svgOriginalWidth, state.svgOriginalHeight, this.settings.exportDestination);
-    });
-    const scaleIndicator = topRow.createSpan({
-      cls: "mermaid-zoom-scale"
-    });
-    scaleIndicator.style.cssText = `
-			padding: 4px 8px;
-			font-size: 12px;
-			font-family: var(--font-ui-medium);
-			color: var(--text-muted);
-			min-width: 45px;
-			text-align: center;
-		`;
-    state.scaleIndicator = scaleIndicator;
-    updateTransform(contentWrapper, state);
-    const fullscreenBtn = bottomRow.createEl("button", {
-      cls: "mermaid-zoom-btn mermaid-fullscreen-btn"
-    });
-    const svgNS = "http://www.w3.org/2000/svg";
-    const svg = document.createElementNS(svgNS, "svg");
-    svg.setAttribute("width", "24");
-    svg.setAttribute("height", "24");
-    svg.setAttribute("viewBox", "0 0 16 16");
-    svg.setAttribute("fill", "none");
-    svg.setAttribute("stroke", "currentColor");
-    svg.setAttribute("stroke-width", "1");
-    svg.setAttribute("stroke-linecap", "round");
-    svg.setAttribute("stroke-linejoin", "round");
-    const polyline1 = document.createElementNS(svgNS, "polyline");
-    polyline1.setAttribute("points", "1,10 1,15 6,15");
-    svg.appendChild(polyline1);
-    const polyline2 = document.createElementNS(svgNS, "polyline");
-    polyline2.setAttribute("points", "15,10 15,15 10,15");
-    svg.appendChild(polyline2);
-    const polyline3 = document.createElementNS(svgNS, "polyline");
-    polyline3.setAttribute("points", "1,6 1,1 6,1");
-    svg.appendChild(polyline3);
-    const polyline4 = document.createElementNS(svgNS, "polyline");
-    polyline4.setAttribute("points", "15,6 15,1 10,1");
-    svg.appendChild(polyline4);
-    fullscreenBtn.appendChild(svg);
-    this.styleButton(fullscreenBtn);
-    fullscreenBtn.addEventListener("click", (e) => {
-      e.stopPropagation();
-      this.openFullscreenModal(state);
-    });
-    return addResizeHandles(container, contentWrapper, state, () => this.fitToContainer(state.container, contentWrapper, state.svg, state));
-  }
-  styleButton(btn) {
-    btn.addClass("mermaid-zoom-btn");
-    btn.style.cssText = `
-			width: 28px;
-			height: 28px;
-			border: none;
-			color: var(--text-normal);
-			border-radius: 4px;
-			cursor: pointer;
-			font-size: 16px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			transition: background 0.2s;
-		`;
-  }
   onunload() {
+    var _a;
     console.debug("Unloading Mermaid Zoom plugin");
-    if (this.mutationObserver) {
-      this.mutationObserver.disconnect();
+    (_a = this.mutationObserver) == null ? void 0 : _a.disconnect();
+    const decorated = document.querySelectorAll(".mermaid-zoom-ready");
+    for (const block of Array.from(decorated)) {
+      block.removeClass(
+        "mermaid-zoom-ready",
+        "mermaid-zoom-bordered",
+        "mermaid-zoom-align-left",
+        "mermaid-zoom-align-center",
+        "mermaid-zoom-align-right"
+      );
+      for (const btn of Array.from(block.querySelectorAll(".mermaid-zoom-fullscreen-btn"))) {
+        btn.remove();
+      }
     }
-    if (this.resizeObserver) {
-      this.resizeObserver.disconnect();
-    }
-    this.zoomStates.clear();
-    this.processedElements = /* @__PURE__ */ new WeakSet();
   }
 };
 

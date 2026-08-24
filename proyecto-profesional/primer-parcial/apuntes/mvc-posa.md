@@ -1,91 +1,66 @@
-# Model View Controller (MVC)
+# Model-View-Controller
 
-## Pre-preguntas
+- [x] **Pregunta 1:** ¿Cuál es el propósito del mecanismo de propagación de cambios y qué rol asume el Modelo en su diseño táctico?
 
-### 1. Contexto y problemas
+	- El mecanismo de propagación de cambios <mark style="background: #FFB8EBA6;">se encarga de sincronizar y mantener la consistencia</mark> entre las vistas y el modelo
+	- El modelo tiene las siguientes responsabilidades:
+		- proveer la funcionalidad principal de la aplicacion
+		- mantener un registro de aquellas Vistas y Controladores que dependen de él (sus suscriptores)
+		- notificar a los componentes dentro del registro (sus suscriptores) acerca de cambios en su estado interno
 
-- [x] por qué el texto plantea que la interfaz de usuario cambia mas seguido que el nucleo funcional del sistema?
-- [x] qué problema de acoplamiento ocurre si la lógica de negocio y la interfaz gráfica están mezcladas?
-- [x] mirando el diagrama de [[mvc-posa.pdf#page=3|mvc-posa, página 3]]: como se relacionan multiples vistas con un único dato central?
+- [x] **Pregunta 2:** En la inicialización de la tríada MVC, ¿cuál es el orden exacto de creación y suscripción del Modelo, la Vista y el Controlador?
 
-### 2. Estructura y responsabilidades
+	- el orden exacto de creacion de los componentes es el siguiente:
+		1. `new Model()`
+		2. `new View(model: Model)`
+		3. `new Controller(view: View, model: Model)`
+	- el orden exacto en que se suscriben es el siguiente:
+		1. la vista se suscribe al modelo llamando `model.attach()`
+		2. el controlador se suscribe al modelo llamando `model.attach()`
 
-- [ ] cual es la responsabilidad de cada componente?
-- [ ] qué rol cumple el mecanismo de propagación de cambios entre el modelo y las vistas?
-- [ ] mirando el diagrama de clases de [[mvc-posa.pdf#page=7|mvc-posa, página 7]], quién conoce a quién y cómo se comunican las interfaces Observer, Model, View y Controller?
+- [x] **Pregunta 3:** ¿Qué sacrificamos exactamente (en términos de flexibilidad) cuando decidimos implementar la variante Document-View?
 
-### 3. Dinámica e Interacción
-
-- [ ] escaneando el diagrama de secuencia de [[mvc-posa.pdf#page=9|mvc-posa, página 9]]: cuando el usuario genera un evento (un click), cuál es la secuencia exacta de llamadas entre Controller, Model y View para actualizar la pantalla?
-- [ ] en la inicialización en qué orden se instancian y se suscriben los componentes?
-
-### 4. Implementación y variantes
-
-- [ ] por qué en la implementación se menciona al patrón Factory y Method para crear el controller desde la vista?
-- [ ] qué son los pluggable controllers y qué ventaja dan al sistema?
-- [ ] en qué se diferencia la variante Document-View del MVC clásico?
-
-### 5. Consecuencias
-
-- [ ] cuales son los posibles beneficios y desventajas de aplicar MVC?
-- [ ] por qué el texto advierte sobre la complejidad o la ineficiencia en el acceso a datos desde la vista?
+	- al implementar la variante Document-View se sacrifica <mark style="background: #FFB8EBA6;">la posibilidad de intercambiar controladores</mark> (*pluggable controllers*). Esto es así porque en este esquema la vista se fusiona con el controlador en un único componente, es decir, se acopla fuertemente. Mientras que el Document sigue siendo el modelo.
 
 ---
 
-## 1. Contexto y problemas
+- [x] **Pregunta 1:** ¿De qué manera podemos aplicar el patrón **Command Processor** para lograr que los **Controladores** de MVC sean 100% reutilizables e independientes de los cambios en la interfaz del **Modelo**?
 
-- el libro afirma que los requerimientos funcionales son muy poco propensos a sufrir cambios. El núcleo de los sistemas interactivos se construye basandose en estos requerimientos funcionales. Por lo tanto, el nucleo de los sistemas interactivos es poco propenso a sufrir cambios.
-- distinto es el caso con las interfaces de usuario. Se afirma que están sujetas a cambios y adaptaciones constantes, como por ejemplo:
+	- en MVC del POSA el Controlador conoce al Modelo y eso ocasiona dos problemas muy grandes:
+	
+		1. Si el modelo cambia su interfaz entonces hay que arreglar al controlador. Es decir, están fuertemente acoplados. 
+		2. Esto también implica que un Controlador solo funciona con un único Modelo. Esto evita que los Controladores sean reutilizables.
+	
+	- para solucionar estos dos problemas se debe desacoplar al Modelo del Controlador introduciendo un intemediario entre ellos.
+		- un **objeto Comando**
+		- un **Procesador de Comandos**
+	- El Controlador en lugar de hacer `model.doSomething()`, crea un Comando que **internamente** conoce la interfaz que utiliza el Modelo, esto el Controlador no lo sabe. El Controlador **no ejecuta ese comando**; solo lo crear.
+	- El Controlador le pasa ese Comando al Procesador de Comandos para que lo ejecute cuando sea conveniente (de paso puede guardarlo en un historial). 
+	- El Comando al ser ejecutado, interactúa con el Modelo de forma directa
+	- El modelo actualiza su estado interno
 
-	- los sistemas quizas tienen que soportar diferentes estandares de interfaces de usuario
-	- estilos y comportamientos personalizados para cada cliente
-	- interfaces que deben ser ajustadas para encajar en los procesos empresariales del cliente
+- [x] **Pregunta 2:** ¿Por qué POSA advierte que es costoso y complejo forzar el uso de MVC si decides desarrollar sobre **toolkits de UI modernos** o constructores visuales de interfaces?
 
-- para evitar estos problemas, se requiere arquitecturas que soporten cambios en las interfaces de usuario sin causar efectos secundarios en funcionalidades de la aplicacion o en el modelo de datos
+	- Los toolkits modernos (React/Angular) ya gestionan el flujo de control y traducen los eventos físicos de bajo nivel directamente en la vista (ej: `onClick`). Forzar el MVC clásico de POSA aquí obligaría a crear controladores redundantes que sirvan de meros pasamanos. Hoy se acepta fusionar la captura del evento en la vista y mantener el desacoplamiento únicamente en la lógica de negocio del modelo.
 
-- el libro describe dos patrones que proveen una organizacion estructurada para sistemas interactivos
+- [x] **Pregunta 3:** Si la interfaz tiene vistas complejas anidadas, ¿cómo cooperan los patrones **Composite** y **Chain of Responsibility** para organizar y distribuir los eventos de usuario entre los distintos controladores?
 
-	- MVC: divide una aplicacion interactiva en tres componentes.
-		- **el modelo:** contiene la funcionalidad principal y los datos
-		- **la vista:** muestra informacion al usuario
-		- **el controlador:** maneja los inputs del usuario
-			- la vista y el controlador constituyen las interfaces de usuario
-			- un mecanismo de propagacion de cambios garantiza consistencia entre el modelo y las interfaces de usuario
-	- PAC
+	- el **Chain of Responibility** permite que, si el controlador de una vista hija no sabe procesar un evento, lo delegue automátiacmente al controlador de su vista padre en la estructura jerárquica que genera el **Composite**. Esto se hace hasta que algún controlador de la cadena lo consuma o se descarte. Esto evita cablear ruteos de eventos de forma manual.
 
-- el libro menciona que PAC resuelve problemas que MVC deja sin resolver, como por ejemplo:
-	- cómo organizar de manera efectiva la comunicacion entre diferentes partes del núcleo funcional y las interfaces de usuario
+---
 
-- en el ejemplo de [[mvc-posa.pdf#page=3|mvc-posa, página 3]] se menciona que se busca integrar nuevas formas de presentar información sin impactar gravemente en el sistema
-	- se menciona además que el sistema debe ser capaz de migrar de plataformas (como por ejemplo, una app nativa de android 17 --> una app de escritorio en windows 11)
-	- la core data es **unica e independiente** y múltiples Vistas (los gráficos) se suscriben a él (al core data), convirtiendose en Observadores. 
-		- La vista lee los datos (el modelo) y éste no tiene ni idea de qué tipo de gráfica o tabla las está mostrando 
+## Escenarios de sabotaje
 
-- el libro presenta un contexto, un problema y una solucion.
-		
-	- **el contexto:** una aplicación interactiva flexible
-	- **el problema:** las interfaces de usuario son propensas a cambios y estos son sus argumentos:
-			
-		- al agregar funcionalidades a una aplicacion, se deben modificar los menús para acceder a dichas funcionalidades
-		- usuarios o clientes pueden pedir alguna interfaz especifica adaptada a sus necesidades
-		- un sistema necesita migrarse de una plataforma a otra con un estilo y comportamiento totalmente distinto
-			- como por ejemplo, migrar una aplicación mobile a desktop
-			
-	- el libro menciona que cuando las interfaces están mezcladas con la lógica de negocio, sucede que construir sistemas flexibles se vuelve costoso y propenso a errores
-		- esto puede resultar en desarrollar o mantener varios sistemas distintos
-		
-	- **la solución:** aplicar MVC, dividiendo esta aplicacion interactiva en tres áreas:
-		
-		1. procesamiento
-		2. salida
-		3. entrada
-		
-		- donde el modelo **encapsula** los datos y funcionalidades principales. El modelo es independiente de las representaciones externas o del comportamiento de entrada
+### Escenario 1
 
-## 2. Estructura y responsabilidades
+Imagina que tu **Modelo** recibe ráfagas masivas de actualizaciones por segundo (por ejemplo, entrada continua de votos en tiempo real). Si mantienes el mecanismo estándar de propagación de cambios donde cada cambio notifica directamente a las vistas:
 
-## 3. Dinámica e Interacción
+1. ¿Qué conflicto crítico de rendimiento sufrirán las Vistas?
 
-## 4. Implementación y Variantes
+	- las vistas sufrirán un problema de performance ya que cada actualización del modelo implica un renderizado en la vista. Si se ejecutan `n` actualizaciones entonces habría `n` renderizados
 
-## 5. Consecuencias
+2. ¿Qué estrategias específicas propone POSA para solucionar o mitigar este desperdicio de procesamiento?
+
+	- el libro menciona soluciones como: 
+		- pasar parámetros adicionales en el método `view.update()`. De esta forma, la vista puede decidir si tiene que renderizar o no
+		- posponer y agendar el renderizado para ejecutarlo unicamente cuando no queden más eventos pendientes en la cola
