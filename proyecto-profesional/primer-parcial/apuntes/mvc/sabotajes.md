@@ -94,3 +94,26 @@ Migrás tu app de Desktop (Win32) a la Web. El navegador dispara un `MouseEvent`
 2. ¿Quién se encarga de transformar ese `MouseEvent` nativo al evento interno que entiende el controlador?
 
 	- se encarga el `webSensor` 
+
+## Escenario 6
+
+Diseñás un framework usando la abstracción unificada `Windowport` (estilo ET++). El cliente exige eventos multitouch complejos en móviles y clics clásicos en desktop. Si `Windowport` unifica dibujo y entrada de eventos tan dispares, 
+
+1. ¿no rompe el **SRP** volviéndose un *God Object*? 
+
+	- si, rompe el SIngle Responsibility Principle porque Windowport tiene que encargarse de dibujar los elementos y del Event Loop en dos plataformas distintas, mobile y desktop
+
+2. ¿Cómo evitarías que se infle sin volver al esquema separado de Smalltalk (`Display`/`Sensor`)?
+
+	- Para evitar que se infle habría que crear un port específico por plataforma. 
+		- `WindowportMobile` para celulares
+		- `WindowportDesktop` para desktops
+
+## Escenario 7
+
+En la app de cripto, el Modelo envía 100 notificaciones/seg. Con tu caché lista, 
+
+1. ¿cómo optimizás el refresco en `update()` para que la pantalla no se congele al redibujar?
+
+	- La pantalla debería redibujar solo aquello que fue modificado, no todo. Ese es el sentido del caché.
+		- redibujado selectivo mediante parametros en el `update()`

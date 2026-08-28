@@ -80,30 +80,30 @@ Este roadmap desglosa en detalle todos los ejes conceptuales, estructurales, din
   - [x] Fusión de responsabilidades de View y Controller en un solo componente visual.
   - [x] Motivación: toolkits gráficos fuertemente acoplados a ventanas y eventos locales.
   - [x] Mantenimiento del desacoplamiento frente al `Document` (Model).
-- [ ] **5.2 Usos Históricos y Reales**
-  - [ ] Smalltalk-80 (origen del patrón con Trygve Reenskaug).
-  - [ ] Microsoft Foundation Classes (MFC) con arquitectura Document-View.
-  - [ ] ET++ framework y la abstracción `WindowPort`.
+- [x] **5.2 Usos Históricos y Reales**
+  - [x] Smalltalk-80 (origen del patrón con Trygve Reenskaug).
+  - [x] Microsoft Foundation Classes (MFC) con arquitectura Document-View.
+  - [x] ET++ framework y la abstracción `WindowPort`.
 
 ---
 
 ## 6. Consecuencias: Beneficios y Desventajas
-- [ ] **6.1 Beneficios (Pros)**
+- [x] **6.1 Beneficios (Pros)**
   - [x] Múltiples vistas sincronizadas para un mismo modelo.
   - [x] Componentes intercambiables (*Pluggable Views & Controllers*) en tiempo de ejecución.
-  - [ ] Facilidad para cambiar el Look-and-Feel sin alterar el core.
-  - [ ] Alto potencial para construcción de frameworks reutilizables.
-- [ ] **6.2 Desventajas y Riesgos (Cons / Liabilities)**
-  - [ ] Complejidad estructural incrementada (innecesario para controles UI simples).
+  - [x] Facilidad para cambiar el Look-and-Feel sin alterar el core.
+  - [x] Alto potencial para construcción de frameworks reutilizables.
+- [x] **6.2 Desventajas y Riesgos (Cons / Liabilities)**
+  - [x] Complejidad estructural incrementada (innecesario para controles UI simples).
   - [x] Sobrecarga de actualizaciones innecesarias (necesidad de filtrado/scheduling).
-  - [ ] Fuerte acoplamiento íntimo entre View y Controller (dificulta reutilización aislada).
+  - [x] Fuerte acoplamiento íntimo entre View y Controller (dificulta reutilización aislada).
   - [x] Acoplamiento directo de View y Controller a la interfaz del Model.
-  - [ ] Ineficiencia en el acceso a datos (múltiples llamadas `getData` -> necesidad de caching).
+  - [x] Ineficiencia en el acceso a datos (múltiples llamadas `getData` -> necesidad de caching).
   - [x] Dificultad de integración con toolkits UI modernos basados en callbacks / diseñadores visuales.
 
 ---
 
 ## 7. Comparación Conceptual: MVC vs. PAC
-- [ ] Diferencias de organización: Tríada centralizada vs. Jerarquía de agentes cooperativos.
-- [ ] Rol del `Control` en PAC vs. `Controller` en MVC (PAC desacopla abstracción y presentación a través del control).
-- [ ] Comunicación entre subsistemas y distribución de responsabilidades.
+- [x] Diferencias de organización: Tríada centralizada vs. Jerarquía de agentes cooperativos.
+- [x] Rol del `Control` en PAC vs. `Controller` en MVC (PAC desacopla abstracción y presentación a través del control).
+- [x] Comunicación entre subsistemas y distribución de responsabilidades.

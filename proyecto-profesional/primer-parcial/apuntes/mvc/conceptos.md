@@ -28,3 +28,12 @@
 **View Registry**: Catálogo de referencias de vistas activas.
 **Display**: Abstracción para pintar en pantalla. 
 **Sensor**: Abstracción para traducir eventos físicos.
+**Framework** (Entorno reutilizable de clases UI). 
+**Windowport** (Abstracción de interfaz en ET++). 
+**Sensor** (Mapeador de eventos en Smalltalk).
+**Overhead** (Sobrecarga de notificaciones). 
+**Tight Coupling** (Acoplamiento estrecho View-Controller). 
+**Indirection** (Indirección entre capas).
+**Agent** (Subsistema PAC). 
+**Hierarchy** (Árbol de agentes). 
+**Abstraction** (Lógica/datos local)

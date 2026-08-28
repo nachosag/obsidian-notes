@@ -4,90 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "c1bb822d8c2059f0",
+        "id": "d4b6682e22eba0fb",
         "type": "tabs",
         "children": [
           {
-            "id": "1dd3440d71ebb3b2",
+            "id": "eb3707ef44a481d6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "proyecto-profesional/primer-parcial/apuntes/mvc/mvc-posa.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "mvc-posa"
-            }
-          },
-          {
-            "id": "20e45f06cf6fe591",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "proyecto-profesional/primer-parcial/apuntes/mvc/sabotajes.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "sabotajes"
-            }
-          },
-          {
-            "id": "55ebae6ab4910c44",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "proyecto-profesional/primer-parcial/apuntes/mvc/conceptos.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "conceptos"
+              "title": "Nueva pestaña"
             }
           }
-        ],
-        "currentTab": 1
-      },
-      {
-        "id": "127826ac1bca69cf",
-        "type": "tabs",
-        "children": [
-          {
-            "id": "fa9d22f907567ded",
-            "type": "leaf",
-            "state": {
-              "type": "pdf",
-              "state": {
-                "file": "proyecto-profesional/primer-parcial/mvc-posa.pdf"
-              },
-              "icon": "lucide-file-text",
-              "title": "mvc-posa"
-            }
-          },
-          {
-            "id": "5d1b9fe7623071e3",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "proyecto-profesional/primer-parcial/apuntes/mvc/roadmap-mvc.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
-              "icon": "lucide-file",
-              "title": "roadmap-mvc"
-            }
-          }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -146,8 +76,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 275.5,
-    "collapsed": true
+    "width": 275.5
   },
   "right": {
     "id": "60744be18a06282d",
@@ -219,12 +148,13 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "5d1b9fe7623071e3",
+  "active": "eb3707ef44a481d6",
   "lastOpenFiles": [
-    "proyecto-profesional/primer-parcial/apuntes/mvc/sabotajes.md",
     "proyecto-profesional/primer-parcial/apuntes/mvc/mvc-posa.md",
-    "proyecto-profesional/primer-parcial/mvc-posa.pdf",
     "proyecto-profesional/primer-parcial/apuntes/mvc/roadmap-mvc.md",
+    "proyecto-profesional/primer-parcial/mvc-posa.pdf",
+    "proyecto-profesional/primer-parcial/apuntes/mvc/sabotajes.md",
+    "proyecto-profesional/primer-parcial/temario.md",
     "proyecto-profesional/primer-parcial/apuntes/mvc/conceptos.md",
     "proyecto-profesional/proyecto/apuntes-primera-revision-25-07-206.md",
     "proyecto-profesional/proyecto",
@@ -239,7 +169,6 @@
     "proyecto-profesional/primer-parcial/apuntes/Sin título.md",
     "proyecto-profesional/primer-parcial/apuntes",
     "proyecto-profesional/primer-parcial",
-    "proyecto-profesional/primer-parcial/temario.md",
     "proyecto-profesional/bibliografia/POSA/pattern-oriented-software-architecture.pdf",
     "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/file-system-parte-1.pdf",
     "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/fundamentos-del-file-system.pdf",

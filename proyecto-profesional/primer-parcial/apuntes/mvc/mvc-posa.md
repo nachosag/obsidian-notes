@@ -226,13 +226,13 @@
 
 ---
 
-- [ ] **Pregunta 1:** ¿Qué beneficio de portabilidad aporta meter estas dos abstracciones intermedias?
+- [x] **Pregunta 1:** ¿Qué beneficio de portabilidad aporta meter estas dos abstracciones intermedias?
 
 	- facilita la migracion entre plataformas
 	- los Controladores suelen estar acoplados a una plataforma ya sea Web (navegador) o Desktop (Sistema Operativo)
 	- Con estas abstracciones es muy sencillo adaptar una aplicacion tanto para Desktop en Windows 11 como para Web en Mozilla o Chromium
 
-- [ ] **Pregunta 2:** ¿Por qué se complica portar un MVC a otro sistema operativo si no las usás?
+- [x] **Pregunta 2:** ¿Por qué se complica portar un MVC a otro sistema operativo si no las usás?
 
 	- Porque cada plataforma tiene sus propias APIs para crear Vistas 
 	
@@ -245,3 +245,51 @@
 		- **En Windows:** Los eventos llegan como mensajes numéricos en una cola del sistema (`WM_LBUTTONDOWN`, `WM_KEYDOWN`).
 		- **En macOS / Cocoa:** Llegan como objetos de tipo `NSEvent` con selectores específicos.
 		- **En la Web:** Llegan como eventos del navegador (`MouseEvent`, `KeyboardEvent`).
+
+---
+
+- [x] **Pregunta 1:** ¿Por qué Smalltalk-80 requirió abstracciones como `Display` y `Sensor` para su *Look-and-Feel*?
+
+	- con estas abstracciones (el patrón Bridge) puedieron cambiar el look-and-feel de la aplicación dinámicamente así como también portar la aplicacion a diferentes plataformas (sistemas operativos)
+
+- [x] **Pregunta 2:** ¿De qué manera **MFC** reorganiza el patrón MVC clásico en su variante *Document-View*?
+
+	- en el *Document-View* la Vista está compuesta por la Vista y el Controlador del MVC. El Document es equivalente al Modelo en el MVC
+
+- [x] **Pregunta 3:** ¿Qué función cumple la clase `Windowport` en **ET++** para desacoplar el sistema operativo?
+
+	- `Windowport` actua como Bridge entre la UI de la aplicacion y el sistema operativo. Cumple la misma función que `Display + Sensor` pero en una única abstracción
+
+---
+
+- [x] **Pregunta 1:** ¿Por qué MVC añade complejidad estructural innecesaria en componentes UI simples?
+
+	- su estructura estricta dificulta la rapidez con la que uno puede terminar estos componentes simples
+
+- [x] **Pregunta 2:** ¿Cómo afectan las múltiples llamadas `getData()` al rendimiento y cómo se mitiga?
+
+	- multiples llamadas al Modelo para pedirle informacion afectan de manera considerable al CPU
+	- se puede mitigar con alguna de estas estrategias:
+		- encolando las llamadas a una queue y ejecutarlas cada cierto tiempo
+		- agregar parametros al `view.update()` para que la Vista decida si debe renderizar o no
+		- implementar Caching de datos en la Vista para evitar consultar al Modelo múltiples veces
+
+- [x] **Pregunta 3:** ¿Por qué alterar la interfaz del Modelo suele romper a la Vista y al Controlador al mismo tiempo?
+
+	- porque tanto la Vista como el Controlador conocen al Modelo e interactúan directamente con él mediante su interfaz.
+	- Cualquier cambio en la interfaz del Modelo puede romper la Vista o el Controlador
+
+---
+
+- [ ] **Pregunta 1:** ¿Cómo difiere la jerarquía de **Agentes** en PAC respecto a la tríada centralizada de MVC?
+
+	- PAC define una estructura para sistemas de software interactivos en forma de jerarquía de agentes cooperativos
+	- donde cada agente es responsable de una parte específica de la aplicacion
+
+- [ ] **Pregunta 2:** En PAC, Presentación y Abstracción no se hablan directamente. ¿Qué rol cumple el **Control** ahí?
+
+	- En PAC la Presentación (la Vista y el Controlador) y la Abstracción (el Modelo) no se conocen. Se comunican a través de un intermediario, el Control
+
+- [ ] **Pregunta 3:** ¿En qué escenario de sistema conviene elegir la arquitectura PAC por sobre MVC?
+
+	- PAC es conveniente en sistemas que constan de varios subsistemas autosuficientes
