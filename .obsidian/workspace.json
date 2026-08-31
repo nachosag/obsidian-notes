@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "d4b6682e22eba0fb",
+        "id": "2658d6bc11e5e290",
         "type": "tabs",
         "children": [
           {
-            "id": "eb3707ef44a481d6",
+            "id": "0f516c5f8a1edfcc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "ingenieria-de-software/localhost/localhost-documento-y-canvas.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "localhost-documento-y-canvas"
             }
           }
         ]
@@ -148,30 +153,35 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "eb3707ef44a481d6",
+  "active": "0f516c5f8a1edfcc",
   "lastOpenFiles": [
-    "proyecto-profesional/primer-parcial/apuntes/mvc/mvc-posa.md",
-    "proyecto-profesional/primer-parcial/apuntes/mvc/roadmap-mvc.md",
-    "proyecto-profesional/primer-parcial/mvc-posa.pdf",
-    "proyecto-profesional/primer-parcial/apuntes/mvc/sabotajes.md",
+    "ingenieria-de-software/localhost/LocalHost-Documento-y-Canvas.md",
+    "ingenieria-de-software/localhost/localhost-business-model-canvas.html",
+    "proyecto-profesional/primer-parcial/broker/broker.md",
+    "ingenieria-de-software/localhost/localhost-documento-y-canvas.md",
+    "_tmp_441372_0c691b19",
+    "_tmp_440719_1a502a03",
+    "_tmp_440719_199e6997",
+    "_tmp_433606_305f5a64",
+    "_tmp_433575_1a58dd64",
+    "_tmp_433554_111ca078",
+    "_tmp_433554_1034337b",
+    "_tmp_433482_04901fcf",
+    "_tmp_433441_28497c7b",
+    "proyecto-profesional/primer-parcial/broker/pre-preguntas-broker.md",
+    "proyecto-profesional/primer-parcial/broker/roadmap-broker.md",
     "proyecto-profesional/primer-parcial/temario.md",
-    "proyecto-profesional/primer-parcial/apuntes/mvc/conceptos.md",
+    "proyecto-profesional/primer-parcial/mvc/roadmap-mvc.md",
+    "proyecto-profesional/primer-parcial/mvc/mvc-posa.md",
+    "proyecto-profesional/primer-parcial/mvc/sabotajes.md",
+    "proyecto-profesional/primer-parcial/mvc/conceptos.md",
     "proyecto-profesional/proyecto/apuntes-primera-revision-25-07-206.md",
-    "proyecto-profesional/proyecto",
-    "proyecto-profesional/primer-parcial/apuntes/mvc",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/ejercicios.md",
-    "proyecto-profesional/primer-parcial/apuntes/mvc/command-processor.md",
+    "proyecto-profesional/primer-parcial/mvc/command-processor.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/arquitectura-y-niveles.md",
-    "proyecto-profesional/primer-parcial/ejemplos",
     "proyecto-profesional/guidelines.md",
     "proyecto-profesional/diferencias-entre-distintos-mvc.md",
-    "proyecto-profesional/primer-parcial/brokers-posa.pdf",
     "proyecto-profesional/primer-parcial/apuntes/Sin título.md",
-    "proyecto-profesional/primer-parcial/apuntes",
-    "proyecto-profesional/primer-parcial",
-    "proyecto-profesional/bibliografia/POSA/pattern-oriented-software-architecture.pdf",
-    "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/file-system-parte-1.pdf",
-    "sistemas-operativos-y-redes/sistemas-operativos/sistemas-de-archivos/fundamentos-del-file-system.pdf",
     "sistemas-operativos-y-redes/sistemas-operativos/estructuras-de-almacenamiento-masivo/apuntes/estructuras-de-almacenamiento-masivo.md",
     "sistemas-operativos-y-redes/sistemas-operativos/estructuras-de-almacenamiento-masivo/apuntes/algoritmos-de-planificacion.md",
     "sistemas-operativos-y-redes/sistemas-operativos/estructuras-de-almacenamiento-masivo/apuntes/discos-y-raid.md",
@@ -181,10 +191,6 @@
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/caching.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/gestion-de-datos.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/modos-de-acceso.md",
-    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/spooling.md",
-    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/dma.md",
-    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/interrupciones.md",
-    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/user-kernel-systemcalls-descriptores.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/anexos/Pasted image 20260810203032.png",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/anexos/Pasted image 20260810185602.png",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/anexos/Pasted image 20260810183923.png",

@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Model Canvas — LocalHost S.R.L.</title>
+    <style>
+      :root {
+        --teal: #1f6d6a;
+        --teal-dark: #174e4c;
+        --bg: #f4f6f6;
+        --cell-bg: #ffffff;
+        --border: #2e8783;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+          Arial, sans-serif;
+        background: var(--bg);
+        color: #1c2b2b;
+        padding: 24px;
+      }
+      .wrap {
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+      header {
+        background: var(--teal);
+        color: #fff;
+        text-align: center;
+        padding: 18px 10px;
+        border-radius: 8px 8px 0 0;
+      }
+      header h1 {
+        font-size: 28px;
+        letter-spacing: 1px;
+        font-weight: 800;
+      }
+      header .sub {
+        font-size: 14px;
+        opacity: 0.9;
+        margin-top: 4px;
+      }
+
+      .canvas {
+        display: grid;
+        grid-template-columns: 1.15fr 1.15fr 1.3fr 1.15fr 1.15fr;
+        grid-template-rows: auto auto;
+        gap: 10px;
+        padding: 10px;
+        background: #d9e2e2;
+        border-radius: 0 0 8px 8px;
+        border: 1px solid var(--border);
+        border-top: none;
+      }
+      .cell {
+        background: var(--cell-bg);
+        border: 2px solid var(--border);
+        border-radius: 6px;
+        padding: 12px;
+        display: flex;
+        flex-direction: column;
+      }
+      .cell h3 {
+        font-size: 15px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--teal-dark);
+        border-bottom: 2px solid var(--teal);
+        padding-bottom: 6px;
+        margin-bottom: 8px;
+      }
+      .cell ul {
+        list-style: none;
+        font-size: 13px;
+        line-height: 1.45;
+      }
+      .cell li {
+        padding: 4px 0 4px 14px;
+        position: relative;
+      }
+      .cell li::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: var(--teal);
+        font-weight: bold;
+      }
+      .cell li strong {
+        color: var(--teal-dark);
+      }
+      .cell .tag {
+        display: block;
+        font-size: 11px;
+        color: var(--teal);
+        margin-top: 2px;
+        font-style: italic;
+      }
+      .tall {
+        grid-row: 1 / 3;
+      }
+      .half-top {
+        grid-row: 1;
+      }
+      .half-bottom {
+        grid-row: 2;
+      }
+
+      .wide {
+        grid-column: 1 / 3;
+      }
+      .wide2 {
+        grid-column: 3 / 6;
+      }
+
+      footer {
+        text-align: center;
+        padding: 16px 0 8px;
+        font-size: 13px;
+        color: #516b6b;
+      }
+      footer .meta {
+        font-size: 12px;
+        margin-top: 6px;
+        opacity: 0.8;
+      }
+
+      @media print {
+        body {
+          padding: 0;
+          background: #fff;
+        }
+        .canvas {
+          border: none;
+        }
+        .cell {
+          break-inside: avoid;
+        }
+        header {
+          border-radius: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>BUSINESS MODEL CANVAS</h1>
+        <div class="sub">
+          LocalHost S.R.L. · Tu nube, en tu casa · Servidores privados
+          personalizados (llave en mano)
+        </div>
+      </header>
+
+      <div class="canvas">
+        <!-- KEY PARTNERS -->
+        <div class="cell tall">
+          <h3>Key Partners · Socios clave</h3>
+          <ul>
+            <li>
+              <strong>Proveedores de hardware:</strong> mini-PCs (Beelink/Intel
+              N100), discos (Seagate), UPS (APC)
+            </li>
+            <li>
+              <strong>Upstream open source:</strong> Nextcloud, Immich,
+              Jellyfin, Vaultwarden, Paperless-ngx, OnlyOffice, Home Assistant
+            </li>
+            <li><strong>Conectividad segura:</strong> Tailscale / WireGuard</li>
+            <li>
+              <strong>Pagos y facturación:</strong> MercadoPago (cuotas) + AFIP
+            </li>
+            <li>
+              <strong>Partners regionales:</strong> Córdoba, Rosario, Mendoza
+              (instalación en interior)
+            </li>
+            <li><strong>Contador externo</strong> (administración)</li>
+          </ul>
+          <span class="tag"
+            >Optimizar costos · reducir riesgo (open source) · escalar sin
+            estructura pesada</span
+          >
+        </div>
+
+        <!-- KEY ACTIVITIES -->
+        <div class="cell half-top">
+          <h3>Key Activities · Actividades clave</h3>
+          <ul>
+            <li>Relevamiento y consultoría previa</li>
+            <li>
+              Ensamblado y aprovisionamiento automatizado (imagen + perfil del
+              cliente)
+            </li>
+            <li>
+              Instalación llave en mano: a domicilio (Opción A) o en taller
+              (Opción B) + capacitación 30 min
+            </li>
+            <li>Monitoreo y soporte post-venta (solo con abono Cuido)</li>
+            <li>Curaduría y testing de apps open source</li>
+            <li>Desarrollo de apps a medida (upsell)</li>
+          </ul>
+        </div>
+
+        <!-- KEY RESOURCES -->
+        <div class="cell half-bottom">
+          <h3>Key Resources · Recursos clave</h3>
+          <ul>
+            <li>
+              <strong>Físicos:</strong> home-lab en Buenos Aires (grupo), stock
+              mini-PCs, rack para Opción B
+            </li>
+            <li>
+              <strong>Intelectuales:</strong> LocalHost Nexus (plataforma),
+              catálogo de imágenes, marca, know-how
+            </li>
+            <li>
+              <strong>Humanos:</strong> 5 socios devs con roles distribuidos
+            </li>
+            <li>
+              <strong>Financieros:</strong> capital de trabajo para stock,
+              cuotas MercadoPago
+            </li>
+          </ul>
+        </div>
+
+        <!-- VALUE PROPOSITIONS -->
+        <div class="cell tall">
+          <h3>Value Propositions · Propuesta de valor</h3>
+          <ul>
+            <li>
+              <strong>Para negocios/profesionales:</strong> soberanía de datos +
+              ahorro 40-60% vs suscripciones en USD + privacidad legal
+            </li>
+            <li>
+              <strong>Para hogares:</strong> tus fotos y películas en tu casa,
+              sin Big Tech, para siempre
+            </li>
+            <li>
+              <strong>Diferencial:</strong> llave en mano + 100% personalizado
+              (packs a medida) + soporte humano local
+            </li>
+            <li>
+              <strong>Prueba:</strong> demo en taller + simulador de ahorro
+              (ROI) + redundancia opcional
+            </li>
+            <li>
+              <strong>Garantía:</strong> "si no te adaptás en 30 días, te lo
+              desinstalo"
+            </li>
+          </ul>
+          <span class="tag"
+            >Tu nube, en tu casa. Privada, tuya, para siempre.</span
+          >
+        </div>
+
+        <!-- CUSTOMER RELATIONSHIP -->
+        <div class="cell half-top">
+          <h3>Customer Relationship · Relación</h3>
+          <ul>
+            <li>
+              <strong>Asistencia personal:</strong> técnico a domicilio /
+              instalación humana
+            </li>
+            <li>
+              <strong>Soporte proactivo:</strong> monitoreo antes de que el
+              cliente se entere (con abono)
+            </li>
+            <li>
+              <strong>Autoservicio:</strong> portal cliente (estado, soporte,
+              facturas)
+            </li>
+            <li><strong>Comunidad:</strong> grupo de usuarios LocalHost</li>
+            <li>
+              <strong>Co-creación:</strong> feedback de clientes para nuevos
+              packs
+            </li>
+          </ul>
+        </div>
+
+        <!-- CHANNEL -->
+        <div class="cell half-bottom">
+          <h3>Channel · Canales</h3>
+          <ul>
+            <li>
+              <strong>Directo:</strong> web + Instagram + boca a boca
+              profesional/universitario
+            </li>
+            <li>
+              <strong>Directo:</strong> visita de relevamiento a
+              domicilio/empresa
+            </li>
+            <li><strong>Indirecto:</strong> partners regionales (interior)</li>
+            <li>
+              <strong>Digital:</strong> portal cliente + WhatsApp Business
+            </li>
+            <li><strong>Físico:</strong> kit de entrega + acta de entrega</li>
+          </ul>
+        </div>
+
+        <!-- CUSTOMER SEGMENTS -->
+        <div class="cell tall">
+          <h3>Customer Segments · Segmentos</h3>
+          <ul>
+            <li>
+              <strong>Principal (70%):</strong> negocios/profesionales
+              SaaS-dependientes
+            </li>
+            <li class="sub">
+              Estudios contables y jurídicos, estudios de fotografía,
+              productoras, agencias, consultorios · 3–30 personas · pagan USD
+              40–400/mes
+            </li>
+            <li><strong>Secundario (30%):</strong> hogares prosumers</li>
+            <li class="sub">
+              Familias tech-savvy que quieren control de fotos/pelis/archivos
+            </li>
+          </ul>
+          <span class="tag"
+            >Criterio: cuánto duele la suscripción SaaS (no el rubro)</span
+          >
+        </div>
+
+        <!-- COST STRUCTURE -->
+        <div class="cell wide">
+          <h3>Cost Structure · Estructura de costes</h3>
+          <ul>
+            <li>
+              <strong>Fijos:</strong> honorarios del equipo (5), servicios del
+              home-lab, seguros, rack Opción B, amortización stock en comodato
+            </li>
+            <li>
+              <strong>Variables:</strong> hardware por proyecto, combustible,
+              viáticos, comisiones MercadoPago, energía/fibra Opción B, borrado
+              certificado NIST en rotación
+            </li>
+            <li><strong>Inversión:</strong> desarrollo de LocalHost Nexus</li>
+            <li>
+              <strong>Economías de escala:</strong> automatización (8h → 1.5h
+              por instalación), BYO auditado, equipo técnico propio
+            </li>
+          </ul>
+        </div>
+
+        <!-- REVENUE STREAM -->
+        <div class="cell wide2">
+          <h3>Revenue Streams · Fuentes de ingresos</h3>
+          <ul>
+            <li>
+              <strong>Instalación llave en mano</strong> (1 pago o cuotas: USD
+              600–1.800) — hardware + mano de obra
+            </li>
+            <li>
+              <strong>Abono Cuido</strong> (opcional pero recomendado) — plan
+              único personalizado: USD 25–60/mes
+            </li>
+            <li>
+              <strong>Hosting Opción B:</strong> +USD 15–25/mes (si aloja en
+              nuestro taller)
+            </li>
+            <li>
+              <strong>Desarrollo a medida</strong> (upsell opcional): USD
+              500–3.000 por proyecto
+            </li>
+            <li><strong>Soporte por ticket</strong> (sin abono): USD 80/h</li>
+            <li>
+              <strong>Seguro hardware</strong> (opcional): +USD 5–8/mes ·
+              <strong>Venta residual</strong> (disco con datos) + dcto.
+              telemetría anónima USD 3–5
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <footer>
+        Business Model Canvas · Basado en Osterwalder (2004) vía HubSpot —
+        LocalHost S.R.L. (ficticia)
+        <div class="meta">
+          Diseñado para: Trabajo grupal · Universidad · 5 estudiantes de
+          Desarrollo de Software · Buenos Aires, 2026
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
