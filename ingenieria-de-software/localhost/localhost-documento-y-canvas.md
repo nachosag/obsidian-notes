@@ -595,11 +595,11 @@ flowchart TD
 
 ## 11. Preguntas frecuentes (FAQ) — Objeciones reales del grupo
 
-### 11.1 ¿Qué es LocalHost Nexus? (explicación simple)
+### 11.1 ¿Qué Es LocalHost Nexus? (explicación simple)
 
 Es el sistema que usa el equipo de LocalHost para instalar y cuidar tu servidor sin hacerlo a mano. Vos no lo ves ni lo configurás. Para vos es: te instalan un aparatito en tu casa con tus apps (fotos, archivos, pelis), y ellos lo monitorean desde su oficina. Si algo se llena o falla, te avisan antes de que te enteres. Vos solo usás tus apps, como siempre.
 
-### 11.2 ¿Cuál es el problema que resuelve la empresa?
+### 11.2 ¿Cuál Es el problema que resuelve la empresa?
 
 Dos problemas en uno:
 
@@ -608,11 +608,11 @@ Dos problemas en uno:
 
 Nexus automatiza la instalación (de 8 h a 90 min) y el monitoreo, para que el negocio escale de taller a empresa.
 
-### 11.3 ¿Por qué monitorear si el cliente paga por privacidad?
+### 11.3 ¿Por Qué monitorear si el cliente paga por privacidad?
 
 Porque monitoreamos **salud, no contenido**. Es como el service del auto: miramos "cuánta nafta tenés y si el motor está bien", no a dónde fuiste. El agente reporta "disco 80% lleno, copia OK, disponibilidad 99%" — nunca "foto de vacaciones.jpg" ni el texto de tus documentos. Sin ese monitoreo, no podemos avisarte antes de que te quedes sin espacio o se rompa un disco. Y sin abono, directamente no monitoreamos: es tu elección.
 
-### 11.4 ¿Cómo sabe el cliente que no vemos sus datos? (garantías)
+### 11.4 ¿Cómo Sabe el cliente que no vemos sus datos? (garantías)
 
 Cuatro garantías concretas:
 
@@ -621,7 +621,7 @@ Cuatro garantías concretas:
 3. **Servidor en tu casa:** el disco está en tu domicilio (Opción A). Si se cae internet, seguís usando todo. No somos intermediarios.
 4. **Contrato y borrado certificado:** cláusula de privacidad en el comodato y, si te vas, borrado NIST 800-88 con certificado.
 
-### 11.5 ¿Cómo funciona el abono? ¿Es obligatorio?
+### 11.5 ¿Cómo Funciona el abono? ¿Es obligatorio?
 
 No es obligatorio, pero es recomendado. Es un **plan único a medida**, no hay niveles Basic/Pro.
 
@@ -632,7 +632,7 @@ No es obligatorio, pero es recomendado. Es un **plan único a medida**, no hay n
 
 Variables: si tenés 1 TB u 8 TB, si usás 2 apps o 6, si querés acceso fuera de casa, si querés redundancia RAID/UPS. Se calcula en el presupuestador y queda en el contrato. Seguro (+USD 5–8) y telemetría (-USD 3–5) son opcionales del Cuido.
 
-### 11.6 ¿Qué pasa si el cliente se quiere ir? (propiedad y datos)
+### 11.6 ¿Qué Pasa si el cliente se quiere ir? (propiedad y datos)
 
 Elige entre dos opciones limpias (ver diagrama 7.4):
 
@@ -641,11 +641,11 @@ Elige entre dos opciones limpias (ver diagrama 7.4):
 
 BYO (equipo propio auditado) no entra en esta tabla: ya era suyo.
 
-### 11.7 ¿Y si no tengo lugar o no quiero el equipo en casa?
+### 11.7 ¿Y Si no tengo lugar o no quiero el equipo en casa?
 
 Opción B: alojamos **tu** servidor (que sigue siendo tuyo, en comodato o comprado) en nuestro taller con fibra y energía 24/7. Pagás +USD 15–25/mes de hosting. Sigue siendo privado: disco cifrado, clave tuya, nosotros solo damos rack y conectividad. Podés migrar de Opción B a Opción A cuando quieras.
 
-### 11.8 ¿Qué son las métricas anónimas y por qué me dan descuento?
+### 11.8 ¿Qué Son las métricas anónimas y por qué me dan descuento?
 
 Si aceptás compartir métricas anónimas (ej. "60% del disco usado, 3 usuarios activos, app más usada Immich"), nos ayudás a mejorar el producto (priorizar apps, prevenir fallas). Nunca es contenido. Se anonimiza en tu servidor, es opt-in y revocable en 1 clic. A cambio te damos **USD 3–5 de descuento** en el abono. Es la forma de abaratar sin resignar privacidad. Ver sección 9.
 

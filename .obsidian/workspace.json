@@ -4,22 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "2658d6bc11e5e290",
+        "id": "b35d7d788e1c7308",
         "type": "tabs",
         "children": [
           {
-            "id": "0f516c5f8a1edfcc",
+            "id": "3c0efd098a7e63e7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "ingenieria-de-software/localhost/localhost-documento-y-canvas.md",
-                "mode": "source",
-                "source": false,
-                "backlinks": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "localhost-documento-y-canvas"
+              "title": "Nueva pestaña"
             }
           }
         ]
@@ -153,12 +148,12 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "0f516c5f8a1edfcc",
+  "active": "3c0efd098a7e63e7",
   "lastOpenFiles": [
+    "ingenieria-de-software/localhost/localhost-documento-y-canvas.md",
     "ingenieria-de-software/localhost/LocalHost-Documento-y-Canvas.md",
     "ingenieria-de-software/localhost/localhost-business-model-canvas.html",
     "proyecto-profesional/primer-parcial/broker/broker.md",
-    "ingenieria-de-software/localhost/localhost-documento-y-canvas.md",
     "_tmp_441372_0c691b19",
     "_tmp_440719_1a502a03",
     "_tmp_440719_199e6997",
