@@ -7,7 +7,7 @@
     "enabledPlatforms": "both"
   },
   "typewriter": {
-    "isTypewriterScrollEnabled": true,
+    "isTypewriterScrollEnabled": false,
     "isOnlyMaintainTypewriterOffsetWhenReachedEnabled": false,
     "isTypewriterOnlyUseCommandsEnabled": false,
     "typewriterOffset": 0.5

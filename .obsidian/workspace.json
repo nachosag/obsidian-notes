@@ -4,17 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "b35d7d788e1c7308",
+        "id": "66e32d4b267c74fa",
         "type": "tabs",
         "children": [
           {
-            "id": "3c0efd098a7e63e7",
+            "id": "236c598bd51d3acf",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "ingenieria-de-software/localhost/localhost-documento-y-canvas.md",
+                "mode": "source",
+                "source": false,
+                "backlinks": false
+              },
               "icon": "lucide-file",
-              "title": "Nueva pestaña"
+              "title": "localhost-documento-y-canvas"
             }
           }
         ]
@@ -37,7 +42,7 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": true,
+                "autoReveal": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
@@ -148,21 +153,22 @@
       "obsidian-excalidraw-plugin:Nuevo Bosquejo": false
     }
   },
-  "active": "3c0efd098a7e63e7",
+  "active": "236c598bd51d3acf",
   "lastOpenFiles": [
+    "ingenieria-de-software/localhost/localhost-presentation.md",
+    "localhost",
     "ingenieria-de-software/localhost/localhost-documento-y-canvas.md",
+    "_tmp_474951_152b1e7e",
+    "_tmp_474951_140f2d0d",
+    "_tmp_474941_12858b2d",
+    "_tmp_474856_2f14bf2b",
+    "_tmp_474786_3584e5cf",
+    "_tmp_474524_29470bff",
+    "_tmp_474524_23428cb2",
+    "_tmp_474501_16807541",
+    "_tmp_474381_2dbc1316",
     "ingenieria-de-software/localhost/LocalHost-Documento-y-Canvas.md",
-    "ingenieria-de-software/localhost/localhost-business-model-canvas.html",
     "proyecto-profesional/primer-parcial/broker/broker.md",
-    "_tmp_441372_0c691b19",
-    "_tmp_440719_1a502a03",
-    "_tmp_440719_199e6997",
-    "_tmp_433606_305f5a64",
-    "_tmp_433575_1a58dd64",
-    "_tmp_433554_111ca078",
-    "_tmp_433554_1034337b",
-    "_tmp_433482_04901fcf",
-    "_tmp_433441_28497c7b",
     "proyecto-profesional/primer-parcial/broker/pre-preguntas-broker.md",
     "proyecto-profesional/primer-parcial/broker/roadmap-broker.md",
     "proyecto-profesional/primer-parcial/temario.md",
@@ -185,7 +191,6 @@
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/buffering.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/caching.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/gestion-de-datos.md",
-    "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/modos-de-acceso.md",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/anexos/Pasted image 20260810203032.png",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/anexos/Pasted image 20260810185602.png",
     "sistemas-operativos-y-redes/sistemas-operativos/arquitectura-del-kernel-gestion-de-dispositivos-optimizacion-de-entrada-y-salida/apuntes/anexos/Pasted image 20260810183923.png",
