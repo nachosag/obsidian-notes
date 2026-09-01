@@ -5,15 +5,15 @@
 ### Preguntas de Indagación y Mecánica
 
 1. **Compensación de Tanenbaum vs. Realidad del Software:** Si los sistemas distribuidos ofrecen claras ventajas económicas y de escalabilidad frente a los mainframes ("The network is the computer"), ¿cuál es la razón técnica de fondo por la que el software centralizado tradicional falla al trasladarse a este entorno y qué obligó a consorcios como la OMG y empresas como Microsoft a formular nuevas arquitecturas?
-    
+     ^704151
 2. **Anatomía del Acoplamiento en IPC Directo:** Describa los tres acoplamientos críticos que sufre un sistema cuando los componentes gestionan por sí mismos su comunicación entre procesos sin una capa de intermediación.
-    
+     ^551b41
 3. **Gestión de Ciclo de Vida en Tiempo de Ejecución:** ¿Por qué la gestión dinámica de componentes (adición, remoción, intercambio, activación y localización) resulta inviable si la invocación depende de contratos binarios o protocolos cableados punto a punto?
-    
+     ^cea903
 4. **Principio de Transparencia de Distribución:** Desde la perspectiva del desarrollador que consume un servicio, ¿cuál es la equivalencia exacta que el patrón Broker debe garantizar entre el acceso a un objeto local en memoria y un objeto remoto en un nodo heterogéneo?
-    
+     ^a022ea
 5. **Tensión de Fuerzas del Patrón:** Explique cómo el patrón reconcilia la fuerza de permitir un acceso remoto y transparente a servicios con la fuerza de desacoplar y ocultar las dependencias específicas del sistema operativo y la red subyacente.
-    
+     ^7ed6bb
 
 ### 🛡️ Pregunta Integradora (Gatekeeper de Fase 1)
 
