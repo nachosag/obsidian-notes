@@ -114,13 +114,13 @@ Aunque somos 5, cubrimos 6 funciones. Así se reparte:
 
 - **Oficina / Taller central:** Buenos Aires (CABA/AMBA) — espacio de trabajo compartido del grupo (30–40 m², puede ser la casa de uno o un espacio de la facu) con banco de pruebas, stock inicial de 5 mini-PCs (Beelink, Intel N100), discos NAS y laboratorio para clonar imágenes. Sin alquiler comercial al inicio.
 - **Depósito:** en el mismo taller, stock para 5 a 8 instalaciones iniciales.
-- **Movilidad:** autos del grupo + mensajería. Instalaciones a domicilio en AMBA; interior (Córdoba, Rosario, Mendoza) con partner local o envío + instalación remota guiada.
+- **Movilidad:** autos del grupo + mensajería. Instalaciones a domicilio exclusivamente en AMBA.
 - **Modelo de hardware:** ver sección 7. El cliente elige entre **comodato** (equipo nuestro, Care obligatorio 12 meses) o **compra 100%** (equipo suyo, Care opcional). Si ya tenés un NAS o mini-PC, lo auditamos (BYO — *Bring Your Own*, traé tu propio equipo — auditado, sección 7.3): si sirve, se reutiliza y baja el costo; si no, recomendamos reemplazo justificado. El servidor queda por defecto en tu casa u oficina (Opción A). Opción B: queda alojado en nuestro taller con fibra y energía 24/7 si no tenés lugar o condiciones.
 - **Cómo trabajamos hoy (antes de Nexus):** Trello + Sheets para pedidos, WhatsApp Business, presupuestos en PDF hechos a mano, instalaciones 100% artesanales por SSH, sin monitoreo central y sin historial por cliente.
 
 ### 2.4 Mercados donde opera
 
-- **Geográfico:** base en Buenos Aires (AMBA) y expansión a Córdoba, Rosario y Mendoza — ciudades con muchos profesionales independientes y pymes.
+- **Geográfico:** exclusivamente AMBA (CABA + GBA) — base en Buenos Aires, donde se concentra la mayor densidad de profesionales independientes y pymes. Operación 100% local sin expansión al interior.
 - **Segmento principal (85–90% del foco): Negocios y profesionales que dependen mucho de suscripciones (SaaS)** — no importa el rubro, importa cuánto duele la cuota en dólares. Ejemplos: estudios de fotografía con 4 TB en Google Fotos/Drive, estudios jurídicos/contables, productoras audiovisuales, agencias, consultorios. Todos pagan entre USD 40 y USD 400 por mes en servicios en la nube (caso testigo: Nate Gentile, creador español, ~EUR 33k en 2 años en Workspace, Slack, Notion, Adobe, Frame.io, etc.) y buscan tener el control de sus datos. Pymes de 3 a 30 personas.
 - **Segmento secundario (10–15%): Hogares Prosumers** — familias con interés por tecnología que quieren tener sus fotos, películas y archivos bajo control sin volverse técnicas. Se mantiene como segmento testimonial, sin prospección activa.
 
@@ -612,11 +612,11 @@ flowchart TD
 | Upstream open source (Nextcloud, Jellyfin, Immich) | Ensamblado y preparación automatizada | **Para Hogares:** tus fotos y pelis en tu casa, sin Big Tech, para siempre | Soporte proactivo (avisamos antes que llame) | Estudios, agencias, productoras, consultorios |
 | Partners de conectividad (Tailscale/WireGuard) | Instalación llave en mano + capacitación | **Diferencial:** llave en mano + a medida + soporte local humano | Comunidad: grupo de usuarios LocalHost | **Secundario (30%):** Hogares Prosumers |
 | MercadoPago / AFIP | Monitoreo y soporte post-venta | **Prueba:** demo en taller + simulador de ahorro | Autoservicio: Portal cliente | Familias con interés tech |
-| Partners regionales (Rosario, CABA) para interior | Curaduría y testing de apps | **Garantía:** "Si no te adaptás en 30 días, te lo desinstalo" | Co-creación: feedback para nuevos packs | |
+| Logística AMBA (mensajería y movilidad propia) | Curaduría y testing de apps | **Garantía:** "Si no te adaptás en 30 días, te lo desinstalo" | Co-creación: feedback para nuevos packs | |
 | **6. Recursos Clave** | | | **3. Canales** | |
 | Físicos: Home-lab en Buenos Aires (grupo de 5), stock inicial, vehículos. *Con comodato: stock rotativo como activo.: storage para backup externo cifrado* | | | Directo: Web + Instagram + boca a boca **B2B (colegios profesionales) — palanca 3** | |
 | Intelectuales: LocalHost Nexus, catálogo de imágenes, marca | | | Directo: visita de relevamiento a domicilio/empresa | |
-| Humanos: 5 socios fundadores (todos devs, roles distribuidos) | | | Indirecto: partners regionales | |
+| Humanos: 5 socios fundadores (todos devs, roles distribuidos) | | | Indirecto: no aplica — operación directa solo AMBA | |
 | Financieros: capital de trabajo para stock | | | Digital: Portal cliente, WhatsApp Business | |
 | | **9. Estructura de Costes** | | **5. Fuentes de Ingresos** | |
 | | Fijos: honorarios equipo (5), servicios home-lab, seguros, rack para Opción B + storage backup externo | | Instalación llave en mano (compra 100% USD 600–1.800 o comodato con Care obligatorio 12m) + venta residual (tabla 7.2) | |
@@ -673,7 +673,7 @@ flowchart TD
 
 - **Optimizar:** proveedores de hardware para buen precio.
 - **Reducir riesgo:** upstream open source (no reinventar la rueda).
-- **Escalar:** partners regionales.
+- **Escalar:** operación directa sin intermediarios — cobertura solo AMBA, sin partners regionales.
 
 **9. Estructura de Costes**
 
