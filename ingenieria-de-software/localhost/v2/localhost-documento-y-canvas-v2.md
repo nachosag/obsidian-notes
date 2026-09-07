@@ -18,7 +18,7 @@
 
 **LocalHost S.R.L. te instala tu nube privada en tu casa u oficina en 48 horas.** Te llevás un mini-servidor con las apps que elijas — fotos, archivos, películas, contraseñas — y dejás de pagar 4 a 7 suscripciones en dólares (Drive, Fotos, Netflix, 1Password, etc.).
 
-- El hardware puede ser tuyo desde el día 1 o quedar en comodato y lo comprás cuando quieras. **v2:** Pack comodato + Care 12 meses con 10% off en el equipo (palanca 1).
+- El hardware puede ser tuyo desde el día 1 (compra 100%) o quedar en comodato y lo comprás cuando quieras. **v2:** en comodato, Care obligatorio mínimo 12 meses (palanca 1).
 - Tus datos son siempre tuyos. LocalHost solo ve datos de salud del equipo para cuidarlo. **v2:** Backup externo cifrado opcional +USD 10–15/mes con tu clave (palanca 2).
 - Con abono Care tenés monitoreo y soporte proactivo. Sin abono, soporte por ticket. **v2:** Care mensual USD 25–60 o anual USD 250–550 (2 meses gratis, palanca 5). Desarrollo a medida con mantenimiento mensual +USD 20 (palanca 4). Foco 85–90% B2B (palanca 3).
 
@@ -52,7 +52,8 @@ Pensado para leer rápido, no para sufrirlo. Elegí cuánto tiempo tenés:
    - [6.1 Arquitectura en 3 piezas](#61-arquitectura-en-3-piezas)
    - [6.3 Packs 3+3](#63-catálogo-personalizado--packs-definidos-33)
 7. [Modelo de propiedad y salida](#7-modelo-de-propiedad-y-salida)
-   - [7.2 Comodato y compra](#72-comodato-con-opción-de-compra-en-cualquier-momento)
+   - [7.2 Las dos puertas y comodato](#72-las-dos-puertas-de-propiedad-y-comodato-con-opción-de-compra)
+   - [7.6 Cómo se calcula el Care](#76-cómo-se-calcula-el-care--complejidad-del-servicio)
    - [7.4 Flujo de salida](#74-flujo-de-salida--desvinculación)
 8. [Política de datos y privacidad](#8-política-de-datos-y-privacidad)
 9. [Métricas anónimas](#9-métricas-anónimas-para-mejorar-el-producto)
@@ -115,7 +116,7 @@ Aunque somos 5, cubrimos 6 funciones. Así se reparte:
 - **Oficina / Taller central:** Buenos Aires (CABA/AMBA) — espacio de trabajo compartido del grupo (30–40 m², puede ser la casa de uno o un espacio de la facu) con banco de pruebas, stock inicial de 5 mini-PCs (Beelink, Intel N100), discos NAS y laboratorio para clonar imágenes. Sin alquiler comercial al inicio.
 - **Depósito:** en el mismo taller, stock para 5 a 8 instalaciones iniciales.
 - **Movilidad:** autos del grupo + mensajería. Instalaciones a domicilio en AMBA; interior (Córdoba, Rosario, Mendoza) con partner local o envío + instalación remota guiada.
-- **Modelo de hardware:** ver sección 7. Por defecto vendemos el hardware (mini-PC/NAS + discos + UPS) como parte de la instalación llave en mano. Si ya tenés un NAS o mini-PC, lo auditamos (BYO — *Bring Your Own*, traé tu propio equipo — auditado, sección 7.3): si sirve, se reutiliza y baja el costo; si no, recomendamos reemplazo justificado. El servidor queda por defecto en tu casa u oficina (Opción A). Opción B: queda alojado en nuestro taller con fibra y energía 24/7 si no tenés lugar o condiciones.
+- **Modelo de hardware:** ver sección 7. El cliente elige entre **comodato** (equipo nuestro, Care obligatorio 12 meses) o **compra 100%** (equipo suyo, Care opcional). Si ya tenés un NAS o mini-PC, lo auditamos (BYO — *Bring Your Own*, traé tu propio equipo — auditado, sección 7.3): si sirve, se reutiliza y baja el costo; si no, recomendamos reemplazo justificado. El servidor queda por defecto en tu casa u oficina (Opción A). Opción B: queda alojado en nuestro taller con fibra y energía 24/7 si no tenés lugar o condiciones.
 - **Cómo trabajamos hoy (antes de Nexus):** Trello + Sheets para pedidos, WhatsApp Business, presupuestos en PDF hechos a mano, instalaciones 100% artesanales por SSH, sin monitoreo central y sin historial por cliente.
 
 ### 2.4 Mercados donde opera
@@ -200,12 +201,12 @@ LocalHost Nexus es transversal. Es el sistema operativo de la empresa.
 - Alta de cliente y relevamiento (formulario guiado: usuarios, TB, apps, lugar de alojamiento A/B, si necesita redundancia RAID/UPS).
 - Presupuesto y orden de trabajo automáticos (con hardware nuevo o BYO auditado).
 - Gestión de stock de hardware y compras.
-- Facturación puntual (instalación en 1 pago o en cuotas vía MercadoPago) y recurrente (abono opcional pero recomendado) con integración AFIP.
+- Facturación puntual (instalación en 1 pago o en cuotas vía MercadoPago) y recurrente (abono Care — obligatorio en comodato, opcional en compra 100%) con integración AFIP.
 
 ### 5.2 Procesos comerciales — v2
 
-- **Cotización con simulador de ahorro — v2:** "hoy pagás USD 85/mes, con LocalHost pagás USD 35/mes de abono + inversión inicial que recuperás en 8 meses", con desglose de hardware (1 pago o cuotas, con 10% off si es pack comodato + Care 12 meses — palanca 1) + abono a medida + add-ons opcionales (backup externo +USD 10–15/mes palanca 2, mantenimiento de mejoras +USD 20/mes palanca 4). El presupuestador ofrece pago mensual o anual prepago con 2 meses gratis (palanca 5).
-- **Seguimiento de oportunidad — v2:** lead → relevamiento → presupuesto → instalación → **Care 12 meses por defecto (palanca 1)**. Sigue siendo legalmente opcional, pero comercialmente es la opción preseleccionada; sin abono, entrega + 30 días de garantía y luego soporte por ticket; con Care, monitoreo y actualizaciones incluidas. Objetivo v2: 80% de adopción vs 30% en v1.
+- **Cotización con simulador de ahorro — v2:** "hoy pagás USD 85/mes, con LocalHost pagás USD 35/mes de abono + inversión inicial que recuperás en 8 meses", con desglose de hardware (compra 100% o comodato con entrada USD 250–400 de instalación — palanca 1) + abono a medida + add-ons opcionales (backup externo +USD 10–15/mes palanca 2, mantenimiento de mejoras +USD 20/mes palanca 4). El presupuestador ofrece pago mensual o anual prepago con 2 meses gratis (palanca 5).
+- **Seguimiento de oportunidad — v2:** lead → relevamiento → presupuesto → instalación. En comodato, **Care 12 meses es obligatorio (palanca 1)**; en compra 100% es opcional. Sin abono (solo compra 100%): entrega + 30 días de garantía y luego soporte por ticket; con Care, monitoreo y actualizaciones incluidas. Objetivo v2: 100% de comodatos con Care.
 - Portal cliente para ver estado del servidor, tickets y facturas. Desde el portal se puede activar/desactivar telemetría, contratar backup externo y cambiar a prepago anual.
 - **Venta de mejoras — v2:** desarrollo a medida con modelo recurrente ("¿querés que tu Nextcloud hable con tu sistema de gestión?" — USD 800 + USD 20/mes de mantenimiento, palanca 4).
 
@@ -219,7 +220,7 @@ LocalHost Nexus es transversal. Es el sistema operativo de la empresa.
 
 ### 5.4 Procesos financieros — v2
 
-- Cálculo de costo por instalación (hardware + horas + licencias) y por hosting Opción B. **v2:** aplica 10% off en hardware si es pack 12 meses (palanca 1).
+- Cálculo de costo por instalación (hardware + horas + licencias) y por hosting Opción B. **v2:** en comodato el Care 12 meses es obligatorio (palanca 1); en compra 100% es opcional.
 - Cálculo de margen por abono a medida (base + variables por TB/apps/acceso/redundancia) + **backup externo (+USD 10–15, palanca 2)** + **mantenimiento de mejoras (+USD 20, palanca 4)** y valor de vida del cliente (LTV). Con 5 palancas el mix pasa de 70/30 a 40/60 (HW/abono).
 - Conciliación de cobranzas recurrentes (abono mensual **o anual prepago USD 250–550 con 2 meses gratis — palanca 5**) y control de morosidad. Sin abono, facturación por ticket/hora. Prepago anual financiado vía MercadoPago mejora caja para stock en comodato.
 
@@ -265,6 +266,8 @@ flowchart LR
 | **Portal Cliente** | Web/app simple | Cliente final | Ve estado, pide soporte, ve facturas. No configura el servidor |
 
 > Regla de oro: Central nunca ve contenido. Ver sección 8 para garantías.
+
+**Agente según propiedad y abono — v2.1 (comodato puro):** El Agente solo reporta si hay Care activo. **Compra 100% + con Care:** Agente instalado y reportando cada 5 min. **Compra 100% + sin Care:** Agente **se desinstala al entregar** — equipo 100% autónomo y privado, sin reporte. Si luego quiere Care, se reinstala con visita de re-alta. **Comodato (siempre con Care, ver 7.1):** Agente instalado y reportando cada 5 min. Sin Care el soporte es por ticket sin contexto del Agente (más lento, a USD 80/h).
 
 ### 6.2 Módulos funcionales
 
@@ -314,14 +317,35 @@ Todos los packs son base personalizable: podés pedir "Pack Negocio + Immich" o 
 
 | Activo                              | De quién es                                             | Dónde está                                                                                                              |
 | :---------------------------------- | :------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------- |
-| **Hardware** (mini-PC, discos, UPS) | Al inicio, de LocalHost (comodato). Ver 7.2 para compra | En casa/oficina del cliente (Opción A) o en taller LocalHost (Opción B), pero el título es nuestro hasta que lo compres |
+| **Hardware** (mini-PC, discos, UPS) | De LocalHost mientras esté en comodato. Ver 7.2 para la compra | En casa/oficina del cliente (Opción A) o en taller LocalHost (Opción B), pero el título es nuestro hasta que lo compre |
 | **Datos**                           | 100% del cliente, siempre                               | En su servidor. Nunca son nuestros, ni siquiera si nos deja el disco                                                    |
 
-**Por qué importa:** baja el costo de entrada de ~USD 1.500 (compra directa) a ~USD 250–400 (instalación + primer mes), porque el primer día no financiás todo el equipo. Es un modelo **leasing con opción a compra**, defendible frente al profesor (como hacen las telcos o automotrices).
+**Por qué importa:** baja el costo de entrada de ~USD 1.500 (compra directa) a ~USD 250–400 (instalación + puesta en marcha), porque el primer día el cliente no financia todo el equipo.
 
-### 7.2 Comodato con opción de compra en cualquier momento
+**La figura jurídica — v2.1:** el hardware se presta en **comodato** (préstamo de uso gratuito) y el cliente paga por **servicios**, no por el equipo. Son dos contratos separados e independientes:
 
-Podés comprar el equipo cuando quieras: día 1, a los 3 años, o el día que te desvinculás. Precio según depreciación lineal. El presupuesto detalla 2 precios base por separado — **Disco** (ej. USD 200) y **Resto del equipo** (mini-PC + UPS, ej. USD 600) — que suman el valor total del equipo (ej. USD 800). La tabla de porcentajes se aplica por componente:
+1. **Comodato** — gratuito. LocalHost presta el equipo y conserva el título de propiedad.
+2. **Contrato de servicios Care** — oneroso. Monitoreo, actualizaciones y soporte, calculado por **complejidad del servicio** (ver §7.6), nunca por el valor del equipo.
+
+> **Analogía (para la defensa):** es lo que hacen los proveedores de internet: el módem va en comodato y el cliente paga el servicio. El equipo no se alquila ni se compra en cuotas: se presta gratis y se compra aparte si el cliente lo decide (ver 7.2). El Care jamás amortiza el equipo — es pago por servicio, como el abono de internet.
+
+**Regla de oro del comodato — v2.1:** en comodato, **Care es obligatorio con compromiso mínimo de 12 meses**. Si el cliente no quiere pagar un servicio mensual, la única alternativa es la **compra 100% del día 1** (ver 7.2). No existe comodato sin Care: es lo que permite financiar el equipo sin inmovilizar capital sin retorno.
+
+### 7.2 Las dos puertas de propiedad, y comodato con opción de compra
+
+El cliente elige una de dos puertas:
+
+| Puerta | Entrada | Mensual | ¿De quién es el equipo? |
+| :--- | :--- | :--- | :--- |
+| **A — Comodato** | USD 250–400 (instalación) | Care obligatorio (mín. 12 meses) | De LocalHost, hasta que lo compre |
+| **B — Compra 100%** | USD 600–1.800 (todo el equipo) | Care opcional | Del cliente desde el día 1 |
+
+**Puerta A — Comodato (dos condiciones, escritas en el contrato):**
+
+1. **Entrada por instalación:** USD 250–400 según el equipo (relevamiento, preparación y puesta en marcha). Es un cobro por servicio, no un pago a cuenta del equipo.
+2. **Care activo:** obligatorio durante todo el comodato, con compromiso mínimo de 12 meses desde la instalación. Al mes 13 puede seguir mensual o pasar a anual prepago (palanca 5).
+
+El cliente puede comprar el equipo cuando quiera: día 1, a los 3 años, o el día que se desvincula. La compra es una **transacción aparte**: los pagos de Care **no acumulan propiedad ni se descuentan del precio**. El precio se calcula por depreciación lineal. El presupuesto detalla 2 precios base por separado — **Disco** (ej. USD 200) y **Resto del equipo** (mini-PC + UPS, ej. USD 600) — que suman el valor total del equipo (ej. USD 800). La tabla de porcentajes se aplica por componente:
 
 | Momento | Valor residual | Ejemplo sobre USD 800 |
 | :--- | :--- | :--- |
@@ -333,8 +357,11 @@ Podés comprar el equipo cuando quieras: día 1, a los 3 años, o el día que te
 - El presupuesto real detalla los valores base por componente; los porcentajes de la tabla se aplican a cada componente por separado.
 - La depreciación es lineal y está escrita en el contrato. Sin sorpresas.
 - Si querés comprar el día 1, pagás 100% y sos dueño desde el inicio. Si esperás 3 años, pagás valor simbólico.
+- **La entrada y el Care no se descuentan del valor residual.** La entrada es servicio de instalación y el Care es servicio consumido cada mes; lo único que baja el precio de compra es el tiempo transcurrido según la tabla.
 
 > **Ejemplo concreto:** Si A1 compra solo el disco a 12 meses: 200 × 66% = USD 132. Si compra equipo completo a 12 meses: 800 × 66% = USD 528.
+
+**Puerta B — Compra 100% (día 1):** el cliente paga el equipo completo (USD 600–1.800) y es dueño desde el inicio. Care es opcional: con Care, monitoreo y soporte proactivo; sin Care, entrega + 30 días de garantía y luego soporte por ticket a USD 80/h (ver §11.5).
 
 ### 7.3 BYO auditado — ¿y si el cliente ya tiene equipo?
 
@@ -354,11 +381,13 @@ Si el cliente ya tiene un NAS o mini-PC, lo auditamos mediante checklist técnic
 
 | Resultado | Qué implica |
 | :--- | :--- |
-| **Apto** | Se reutiliza. Baja el presupuesto (no se cobra hardware nuevo). El equipo ya era del cliente: esta cláusula de comodato/compra no aplica |
+| **Apto** | Se reutiliza. Baja el presupuesto (no se cobra hardware nuevo). El equipo ya es del cliente (equivale a la Puerta B, compra 100%): esta cláusula de comodato/compra no aplica y el Care es opcional |
 | **Apto con observaciones** | Se reutiliza con *disclaimer* escrito: sin garantía de rendimiento máximo ni de vida útil remanente; LocalHost no compromete SLA de hardware sobre equipo BYO |
 | **No apto** | Recomendamos reemplazo justificado por escrito (ej. "CPU Celeron J3455 por debajo de N100; RAM 4 GB insuficiente para Immich con 3 usuarios; SMART con 12 sectores reasignados") |
 
 BYO auditado reduce costo y es parte de las economías de escala del Canvas. La auditoría queda asentada en acta firmada por ambas partes.
+
+**Intervención del cliente según propiedad — v2 (acuerdo del grupo 06/09/2026):** Si el hardware es de LocalHost (comodato), el cliente **no puede intervenir el equipo** (no abre, no cambia discos, no toca software por SSH). Si el hardware es del cliente (compra 100% día 1 o BYO apto), **sí puede intervenir**, pero si rompe algo pierde la garantía de 30 días y el SLA de hardware: LocalHost interviene igual pero factura ticket a USD 80/h + repuesto a precio de lista + visita. El abono Care sigue cubriendo software/monitoreo, no el fierro dañado por el cliente. Si el equipo es nuestro y el cliente intervino igual con daño intencional o negligencia grave, el seguro no cubre (ver §7.5) y paga reposición a precio residual + mano de obra. Todo queda asentado en acta.
 
 ### 7.4 Flujo de salida / desvinculación
 
@@ -425,6 +454,32 @@ El seguro se contrata o no, a elección del cliente, como cualquier otro opciona
 | **Estructura de Costes**  | Amortización del equipo + gestión de stock + borrado seguro                                                      |
 | **Fuentes de Ingresos**   | Abono Care + venta residual eventual + seguro opcional + descuento por telemetría anónima como palanca comercial |
 | **Relación con Clientes** | Salida limpia y documentada genera confianza y boca a boca ("me fui y me dieron todo perfecto")                  |
+
+---
+
+### 7.6 Cómo se calcula el Care — complejidad del servicio
+
+El Care no se cobra por el valor del equipo (eso sería un canon de alquiler/leasing), sino por **cuánto trabajo real genera cuidarlo por mes**. Es una escala medible, con 5 drivers objetivos:
+
+| Driver | Unidad | Por qué cuesta más servicio |
+| :--- | :--- | :--- |
+| **Almacenamiento** | TB | Más discos que vigilar (SMART), más backup que verificar, restauraciones más lentas |
+| **Redundancia (RAID + UPS)** | Sí/No | Array que monitorear, rebuilds, reemplazo en caliente, prueba de batería |
+| **Apps activas** | Cantidad | Cada app es un contenedor que actualizar, testear y parchear |
+| **Usuarios** | Cantidad | Más cuentas, permisos y tickets posibles; más carga |
+| **Acceso externo** | Sí/No | Túneles, certificados, firewall y superficie de ataque que vigilar |
+
+**Fórmula:**
+
+```text
+Care = Base (USD 15) + Σ drivers
+```
+
+Base cubre lo fijo: agente instalado + slot en Central + monitoreo mínimo. Tarifario ilustrativo: +USD 5/TB, +USD 8 redundancia, +USD 3/app extra, +USD 2/usuario extra, +USD 5 acceso externo.
+
+**La prueba de que no es leasing:** las dos escalas (valor del equipo y complejidad del servicio) están correlacionadas pero no son la misma. Un server de USD 2.000 con 1 disco y 2 apps puede pagar ~USD 20/mes, mientras que uno de USD 800 con RAID y 6 apps puede pagar ~USD 40/mes. Si el Care fuera un alquiler del equipo, eso sería imposible — el más caro siempre pagaría más.
+
+> **Para memorizar:** el valor del hardware responde "cuánto cuesta el fierro si hay que reponerlo" (va en la entrada, el residual y el comodato). La complejidad del servicio responde "cuánto laburo cuesta cuidarlo por mes" (va en el Care).
 
 ---
 
@@ -509,7 +564,7 @@ Es el mismo ahorro que buscaba la idea de "quedarse con datos", pero sin romper 
 flowchart TD
     Ingresos["Fuentes de ingresos — LocalHost S.R.L. v2"]
 
-    Ingresos --> HW["Hardware<br/>Opción 1: compra 100% día 1<br/>USD 600-1800<br/>Opción 2: comodato + cuotas<br/>USD 250-400 entrada<br/>v2: -10% con Care 12m (palanca 1)"]
+    Ingresos --> HW["Hardware<br/>Opción 1: compra 100% día 1<br/>USD 600-1800<br/>Opción 2: comodato<br/>entrada USD 250-400 (instalación)<br/>v2: Care obligatorio 12m (palanca 1)"]
     Ingresos --> Abono["Abono Care<br/>Plan único personalizado<br/>base USD 20 + variables<br/>USD 25-60/mes<br/>o USD 250-550/año (palanca 5)<br/>monitoreo + updates + soporte"]
     Ingresos --> Hosting["Hosting Opción B<br/>+USD 15-25/mes<br/>si aloja en taller LocalHost"]
     Ingresos --> Backup["Backup externo cifrado<br/>+USD 10-15/mes (palanca 2)<br/>clave del cliente, 100% margen"]
@@ -531,15 +586,15 @@ flowchart TD
     style Seguro fill:#fce4ec,stroke:#c2185b,stroke-width:2px
 ```
 
-**Lectura — v2:** el cliente elige cómo pagar el equipo (compra o comodato en cuotas, con 10% off si lleva Care 12 meses — palanca 1), elige Care mensual o anual prepago con 2 meses gratis (palanca 5), puede sumar backup externo cifrado +USD 10–15/mes (palanca 2), desarrollo a medida ahora con mantenimiento +USD 20/mes (palanca 4) y hosting/seguro/telemetría opcionales. Foco 85–90% B2B (palanca 3) duplica ARPU.
+**Lectura — v2.1:** el cliente elige cómo tener el equipo (compra 100% o comodato con entrada de instalación USD 250–400 y Care obligatorio 12 meses — palanca 1), elige Care mensual o anual prepago con 2 meses gratis (palanca 5), puede sumar backup externo cifrado +USD 10–15/mes (palanca 2), desarrollo a medida ahora con mantenimiento +USD 20/mes (palanca 4) y hosting/seguro/telemetría opcionales. Foco 85–90% B2B (palanca 3) duplica ARPU.
 
 ### 10.2 Tabla de ingresos detallada — v2 (con 5 palancas)
 
 | Fuente | Modalidad | Rango | Cuándo se cobra | v2 |
 | :--- | :--- | :--- | :--- | :--- |
-| **Instalación llave en mano** (hardware + mano de obra) | 1 pago o cuotas MercadoPago | USD 600–1.800 | Al instalar. Con comodato, entrada USD 250–400 + cuotas del residual | **-10% en hardware si es pack comodato + Care 12 meses (palanca 1)** |
+| **Instalación llave en mano** (hardware + mano de obra) | 1 pago (compra 100%) o entrada de instalación | USD 600–1.800 (compra) / USD 250–400 (entrada comodato) | Al instalar. En comodato, la entrada es por instalación, no un pago a cuenta del equipo | **Comodato: Care obligatorio 12 meses (palanca 1)** |
 | **Venta residual** (si compra después) | Según tabla 7.2 | USD 80–800 | Cuando el cliente ejerce opción de compra o se va con el disco | Sin cambio |
-| **Abono Care** (a medida, no hay niveles) | Mensual **o anual prepago** | USD 25–60/mes (base ~USD 20 + variables) **o USD 250–550/año** | Mensual o anual. **Por defecto en pack 12 meses (palanca 1)**. Opcional legalmente, preseleccionado comercialmente. Objetivo 80% adopción | **Palanca 1 + 5** |
+| **Abono Care** (a medida, no hay niveles) | Mensual **o anual prepago** | USD 25–60/mes (base ~USD 20 + variables por complejidad) **o USD 250–550/año** | Mensual o anual. **Obligatorio en comodato (mín. 12 meses — palanca 1)**. Opcional en compra 100% | **Palanca 1 + 5** |
 | **Backup externo cifrado** | Mensual (add-on del Care) | **+USD 10–15/mes** | Mensual, con clave del cliente (LUKS). 100% margen | **NUEVO — palanca 2** |
 | **Hosting Opción B** | Mensual | +USD 15–25/mes | Solo si elige alojar en taller | Sin cambio |
 | **Seguro hardware** | Mensual o anual prepago | +USD 5–8/mes o USD 60/año | Opcional del Care | Sin cambio |
@@ -565,8 +620,8 @@ flowchart TD
 | Humanos: 5 socios fundadores (todos devs, roles distribuidos) | | | Indirecto: partners regionales | |
 | Financieros: capital de trabajo para stock | | | Digital: Portal cliente, WhatsApp Business | |
 | | **9. Estructura de Costes — v2** | | **5. Fuentes de Ingresos — v2** | |
-| | Fijos: honorarios equipo (5), servicios home-lab, seguros, rack para Opción B + storage backup externo | | Instalación llave en mano (1 pago o cuotas: USD 600–1.800, -10% con Care 12m) + venta residual (tabla 7.2) | |
-| | Variables: hardware por proyecto, combustible, comisiones, energía/fibra Opción B | | Abono Care — mensual USD 25–60 o anual USD 250–550 (2 meses gratis, palanca 5) — por defecto 12m (palanca 1) | |
+| | Fijos: honorarios equipo (5), servicios home-lab, seguros, rack para Opción B + storage backup externo | | Instalación llave en mano (compra 100% USD 600–1.800 o comodato con Care obligatorio 12m) + venta residual (tabla 7.2) | |
+| | Variables: hardware por proyecto, combustible, comisiones, energía/fibra Opción B | | Abono Care — mensual USD 25–60 o anual USD 250–550 (2 meses gratis, palanca 5) — obligatorio en comodato 12m (palanca 1) | |
 | | Inversión: desarrollo LocalHost Nexus | | Hosting Opción B (+USD 15–25/mes) + seguro (USD 5–8/mes) + **backup externo cifrado +USD 10–15/mes (palanca 2)** | |
 | | Economía de escala: preparación automatizada baja horas de 8 a 1.5; BYO auditado reduce costo | | Mejoras: **USD 800 + USD 20/mes mantenimiento (palanca 4)** + soporte por ticket sin abono (USD 80/h) — descuento telemetría -USD 3–5 | |
 
@@ -600,7 +655,7 @@ flowchart TD
 
 **5. Fuentes de Ingresos — v2 (5 palancas)**
 
-- Venta de activos (hardware en 1 pago o cuotas + venta residual, **con -10% si es pack 12m — palanca 1**), suscripción **por defecto 12 meses (objetivo 80% adopción) mensual USD 25–60 o anual USD 250–550 con 2 meses gratis — palancas 1 y 5**, hosting opcional (Opción B), **backup externo cifrado +USD 10–15/mes — palanca 2**, proyecto + **mantenimiento +USD 20/mes por mejora — palanca 4** y ticket sin abono. Incluye seguro opcional y descuento por telemetría. Modelo híbrido que maximiza valor de vida del cliente (LTV). Con v2 el mix objetivo es 40% HW / 60% abonos vs 70/30 en v1. El abono sigue siendo único y a medida, sin niveles Basic/Pro.
+- Venta de activos (compra 100% o venta residual + comodato con **Care obligatorio 12 meses — palanca 1**), suscripción **mensual USD 25–60 o anual USD 250–550 con 2 meses gratis — palancas 1 y 5**, hosting opcional (Opción B), **backup externo cifrado +USD 10–15/mes — palanca 2**, proyecto + **mantenimiento +USD 20/mes por mejora — palanca 4** y ticket sin abono (solo compra 100%). Incluye seguro opcional y descuento por telemetría. Modelo híbrido que maximiza valor de vida del cliente (LTV). Con v2 el mix objetivo es 40% HW / 60% abonos vs 70/30 en v1. El abono sigue siendo único y a medida, sin niveles Basic/Pro.
 
 **6. Actividades Clave**
 
@@ -633,7 +688,7 @@ flowchart TD
 
 **Estado v2: las 5 palancas están aplicadas en este documento. v1 queda intacto como referencia.**
 
-1. **✅ APLICADA — Hacer el abono casi obligatorio.** Pack `comodato + Care 12 meses` con 10% de descuento en el equipo. → El abono pasa del ~30% al 80% de los clientes. Impacta en §2.1, §5.2, §5.4, §10.1, §10.2, §10.3 y §11.5. Legalmente sigue opcional, comercialmente preseleccionado.
+1. **✅ APLICADA — Abono obligatorio en comodato.** En comodato, `Care 12 meses` es obligatorio (mínimo 12 meses); en compra 100% es opcional. → El abono llega al 100% de los comodatos. Impacta en §5.2, §5.4, §7.1, §7.2, §10.1, §10.2, §10.3 y §11.5. Es una regla estructural, no un incentivo comercial.
 
 2. **✅ APLICADA — Cobrar la copia de seguridad externa.** Copia cifrada (clave del cliente, ver 8.3) en nuestro taller por **+USD 10–15/mes**. → Ingreso mensual nuevo, casi sin costo, 100% margen. Impacta en §10.1, §10.2, §10.3 y §11.5.
 
@@ -643,7 +698,7 @@ flowchart TD
 
 5. **✅ APLICADA — Cobrar el abono por año.** `USD 25–60/mes → USD 250–550/año` (2 meses de regalo). → Plata por adelantado y el cliente se queda más tiempo. Impacta en §5.4, §10.1, §10.2 y §11.5.
 
-**Resultado v2:** mix objetivo **40% HW / 60% abonos** (vs 70/30 en v1), facturación proyectada **USD 160k–190k** (vs USD 120k–150k), con **80% adopción de Care**. Ver comparativa en `comparativa-palancas-rentabilidad.html`.
+**Resultado v2:** mix objetivo **40% HW / 60% abonos** (vs 70/30 en v1), facturación proyectada **USD 160k–190k** (vs USD 120k–150k), con **100% de comodatos con Care**. Ver comparativa en `comparativa-palancas-rentabilidad.html`.
 
 ---
 
@@ -677,21 +732,22 @@ Cuatro garantías concretas:
 
 ### 11.5 ¿Qué Es el abono Care y cómo funciona? ¿Es obligatorio? — v2
 
-**v2:** Sigue sin ser legalmente obligatorio, pero ahora es **preseleccionado comercialmente** mediante el pack `comodato + Care 12 meses` con 10% off en hardware (palanca 1). Es un **plan único a medida** — no hay niveles Basic/Pro. Pagás solo por lo que usás. Ahora con opción mensual o anual prepaga (palanca 5).
+**v2.1:** En comodato, el Care es **obligatorio (mínimo 12 meses)** — es la regla de la Puerta A (palanca 1). En compra 100%, es opcional. Es un **plan único a medida** — no hay niveles Basic/Pro. Pagás por complejidad del servicio (ver §7.6), no por el valor del equipo. Opción mensual o anual prepaga (palanca 5).
 
 | Modalidad | Qué incluye | SLA / Tiempos | Precio — v2 |
 | :--- | :--- | :--- | :--- |
-| **Sin abono** | Entrega + 30 días de garantía. Luego soporte por ticket a USD 80/h. Sin monitoreo proactivo y sin compromiso de reposición | *Best effort* 72–96 h hábiles por ticket; sin monitoreo proactivo | Solo instalación |
+| **Sin abono (solo compra 100%)** | Entrega + 30 días de garantía. Luego soporte por ticket a USD 80/h. Sin monitoreo proactivo y sin compromiso de reposición | *Best effort* 72–96 h hábiles por ticket; sin monitoreo proactivo | Sin costo mensual (el equipo ya se compró) |
 | **Con abono Care mensual** | Monitoreo cada 5 min, actualizaciones coordinadas y probadas en laboratorio, copias verificadas, 2 h de soporte/mes, alertas proactivas antes de que falle | Respuesta 24 h hábiles; reposición hardware 72 h con seguro / 5 días hábiles sin seguro; monitoreo proactivo cada 5 min | Base ~USD 20 + variables = **USD 25–60/mes** |
 | **Con abono Care anual (palanca 5)** | Mismo que mensual, prepago | Mismo SLA | **USD 250–550/año** (2 meses gratis, equivale a 10 meses) |
-| **Pack recomendado v2 (palanca 1)** | Comodato + Care 12 meses | Mismo SLA | **Hardware con 10% off + Care anual/mensual** — objetivo 80% adopción |
+| **Comodato (palanca 1)** | Comodato + Care 12 meses obligatorio | Mismo SLA | **Entrada USD 250–400 + Care mensual/anual** — 100% de comodatos con Care |
 
-**Cómo se calcula el Care (presupuestador, queda en el contrato) — v2:**
+**Cómo se calcula el Care (presupuestador, queda en el contrato) — v2.1 (ver §7.6):**
 
 | Variable | Impacto |
 | :--- | :--- |
 | **Almacenamiento** | 1 TB vs 8 TB |
 | **Apps activas** | 2 apps vs 6 apps |
+| **Usuarios** | 2 usuarios vs 10 usuarios |
 | **Acceso externo** | Solo red local vs WireGuard/Tailscale fuera de casa |
 | **Redundancia** | Sin / con RAID1/UPS |
 | **Backup externo cifrado (palanca 2)** | +USD 10–15/mes si lo suma |
@@ -777,9 +833,9 @@ Valores de ejemplo con dólar y tarifas 2024/25. El presupuestador calcula tu br
 
 **Pregunta 1 — Buyer persona — v2 (palanca 3):** se afinó de "pymes genéricas" a "pymes/profesionales que dependen mucho de suscripciones" y en **v2 se prioriza 85–90% B2B** (vs 70% en v1). Referencia real: Nate Gentile (~EUR 33k/2 años en servicios en la nube). Ejemplo transversal: estudio de fotografía con TBs en Google Fotos/Drive.
 
-**Pregunta 2 — Hardware:** LocalHost vende el hardware por defecto. BYO (equipo del cliente) es posible si pasa auditoría de suficiencia y abarata costos. Ubicación por defecto en domicilio del cliente (Opción A).
+**Pregunta 2 — Hardware:** el cliente elige entre comodato (equipo nuestro, Care obligatorio 12m) y compra 100% (equipo suyo, Care opcional). BYO (equipo del cliente) es posible si pasa auditoría de suficiencia y abarata costos. Ubicación por defecto en domicilio del cliente (Opción A).
 
-**Pregunta 3 — Pricing — v2 (palancas 1, 4 y 5):** hardware en 1 pago o cuotas (MercadoPago) **con 10% off si es pack comodato + Care 12 meses (palanca 1)**. Software y abono siguen opcionales legalmente pero preseleccionados comercialmente (objetivo 80% adopción). Abono = base fija + variables (~USD 25–60/mes **o USD 250–550/año con 2 meses gratis — palanca 5**). **Desarrollo a medida v2:** USD 800 + USD 20/mes de mantenimiento (palanca 4) vs USD 500–3.000 una vez en v1.
+**Pregunta 3 — Pricing — v2.1 (palancas 1, 4 y 5):** hardware en compra 100% (1 pago o cuotas MercadoPago) o en comodato con entrada de instalación USD 250–400 y **Care obligatorio 12 meses (palanca 1)**. En compra 100% el Care es opcional. Abono = base fija + variables por complejidad (~USD 25–60/mes **o USD 250–550/año con 2 meses gratis — palanca 5**). **Desarrollo a medida v2:** USD 800 + USD 20/mes de mantenimiento (palanca 4) vs USD 500–3.000 una vez en v1.
 
 **Pregunta 4 — Redundancia/SLA:** redundancia (RAID1/UPS) es opcional del plan a medida. Con redundancia, continuidad inmediata ante fallo de disco. Sin redundancia, respuesta "lo antes posible" sin compromiso horario estricto.
 
@@ -789,7 +845,7 @@ Valores de ejemplo con dólar y tarifas 2024/25. El presupuestador calcula tu br
 
 ---
 
-> **Nota para el grupo — v2:** todos los datos de LocalHost son ficticios pero verosímiles para el mercado argentino 2025–2026. Esta es la **v2 con las 5 palancas de rentabilidad integradas** (original intacto en `localhost-documento-y-canvas.md`). La plataforma LocalHost Nexus está diseñada para cumplir los 6 puntos de la consigna y es implementable como proyecto de la materia (MVP en 3 meses: relevamiento + presupuestador + preparación de 1 pack + panel de monitoreo simulado). **Cambios v2:** foco pasa a 85–90% B2B (palanca 3), pack comodato+Care 12m con 10% off (palanca 1), backup externo cifrado +USD 10–15 (palanca 2), desarrollo con fee +USD 20/mes (palanca 4) y prepago anual con 2 meses gratis (palanca 5). Ver comparativa en `comparativa-palancas-rentabilidad.html`.
+> **Nota para el grupo — v2.1:** todos los datos de LocalHost son ficticios pero verosímiles para el mercado argentino 2025–2026. Esta es la **v2 con las 5 palancas de rentabilidad integradas** (original intacto en `localhost-documento-y-canvas.md`). La plataforma LocalHost Nexus está diseñada para cumplir los 6 puntos de la consigna y es implementable como proyecto de la materia (MVP en 3 meses: relevamiento + presupuestador + preparación de 1 pack + panel de monitoreo simulado). **Cambios v2:** foco pasa a 85–90% B2B (palanca 3), comodato puro con Care obligatorio 12m (palanca 1), backup externo cifrado +USD 10–15 (palanca 2), desarrollo con fee +USD 20/mes (palanca 4) y prepago anual con 2 meses gratis (palanca 5). Ver comparativa en `comparativa-palancas-rentabilidad.html`.
 
 ---
 
