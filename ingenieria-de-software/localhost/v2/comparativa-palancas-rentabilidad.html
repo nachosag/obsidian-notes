@@ -1,0 +1,943 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalHost S.R.L. — Comparativa Palancas de Rentabilidad</title>
+    <style>
+      :root {
+        --green: #1f6d6a;
+        --green-light: #e0f2f1;
+        --green-mid: #2e7d32;
+        --yellow: #e6a700;
+        --yellow-light: #fff8e1;
+        --blue: #1565c0;
+        --blue-light: #e3f2fd;
+        --pink: #c2185b;
+        --pink-light: #fce4ec;
+        --gray: #f5f5f5;
+        --text: #1a1a1a;
+        --muted: #5f6368;
+        --border: #e0e0e0;
+        --radius: 14px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        font-family:
+          "Segoe UI",
+          system-ui,
+          -apple-system,
+          sans-serif;
+        background: #fafafa;
+        color: var(--text);
+        line-height: 1.5;
+        padding: 32px 16px;
+      }
+      .container {
+        max-width: 1100px;
+        margin: 0 auto;
+      }
+      header {
+        background: linear-gradient(135deg, var(--green) 0%, #174e4c 100%);
+        color: white;
+        border-radius: 20px;
+        padding: 36px 32px;
+        margin-bottom: 28px;
+        position: relative;
+        overflow: hidden;
+      }
+      header::after {
+        content: "";
+        position: absolute;
+        right: -40px;
+        top: -40px;
+        width: 220px;
+        height: 220px;
+        background: rgba(255, 255, 255, 0.07);
+        border-radius: 50%;
+      }
+      header h1 {
+        font-size: 26px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        margin-bottom: 6px;
+      }
+      header p {
+        opacity: 0.9;
+        font-size: 14.5px;
+        max-width: 720px;
+      }
+      .badge {
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.18);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        padding: 4px 10px;
+        border-radius: 999px;
+        font-size: 11px;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 12px;
+      }
+      .kpi-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 14px;
+        margin-bottom: 26px;
+      }
+      .kpi {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px 18px;
+        display: flex;
+        gap: 14px;
+        align-items: center;
+      }
+      .kpi-icon {
+        width: 42px;
+        height: 42px;
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+      .kpi strong {
+        font-size: 20px;
+        display: block;
+        line-height: 1;
+      }
+      .kpi span {
+        font-size: 12.5px;
+        color: var(--muted);
+      }
+      .kpi small {
+        font-size: 11.5px;
+        color: var(--muted);
+      }
+      .card {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        overflow: hidden;
+        margin-bottom: 22px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+      }
+      .card-header {
+        padding: 18px 22px;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border-bottom: 1px solid var(--border);
+        background: linear-gradient(to right, #ffffff, #fcfcfc);
+      }
+      .num {
+        width: 36px;
+        height: 36px;
+        border-radius: 999px;
+        display: grid;
+        place-items: center;
+        font-weight: 800;
+        font-size: 14px;
+        color: white;
+        flex-shrink: 0;
+      }
+      .card-header h2 {
+        font-size: 15.5px;
+        font-weight: 800;
+      }
+      .card-header p {
+        font-size: 12.5px;
+        color: var(--muted);
+      }
+      .pill-row {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-left: auto;
+      }
+      .pill {
+        font-size: 11px;
+        font-weight: 700;
+        padding: 5px 10px;
+        border-radius: 999px;
+        border: 1px solid var(--border);
+        letter-spacing: 0.3px;
+      }
+      .pill.green {
+        background: var(--green-light);
+        color: var(--green);
+        border-color: #b2dfdb;
+      }
+      .pill.yellow {
+        background: var(--yellow-light);
+        color: #8d6e00;
+        border-color: #ffe082;
+      }
+      .pill.blue {
+        background: var(--blue-light);
+        color: var(--blue);
+        border-color: #90caf9;
+      }
+      .pill.pink {
+        background: var(--pink-light);
+        color: var(--pink);
+        border-color: #f48fb1;
+      }
+      .grid-compare {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+      }
+      .col {
+        padding: 18px 20px;
+      }
+      .col:first-child {
+        border-right: 1px solid var(--border);
+        background: #fcfcfc;
+      }
+      .col-label {
+        font-size: 10.5px;
+        font-weight: 800;
+        letter-spacing: 0.7px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      .col-label.now {
+        color: var(--muted);
+      }
+      .col-label.propuesta {
+        color: var(--green);
+      }
+      .col ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+      .col li {
+        font-size: 13.2px;
+        line-height: 1.45;
+        padding-left: 22px;
+        position: relative;
+      }
+      .col li::before {
+        position: absolute;
+        left: 0;
+        top: 1px;
+        font-size: 13px;
+      }
+      .col:first-child li::before {
+        content: "—";
+        color: #9e9e9e;
+        font-weight: 700;
+      }
+      .col:last-child li::before {
+        content: "✓";
+        color: var(--green-mid);
+        font-weight: 800;
+      }
+      .col li strong {
+        font-weight: 700;
+      }
+      .price {
+        display: inline-block;
+        background: var(--gray);
+        border: 1px solid var(--border);
+        padding: 2px 7px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-weight: 700;
+        font-family: ui-monospace, monospace;
+      }
+      .price.new {
+        background: var(--green-light);
+        border-color: #b2dfdb;
+        color: var(--green);
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 0;
+        border-top: 1px solid var(--border);
+        background: #fafafa;
+      }
+      .footer-grid div {
+        padding: 14px 18px;
+        text-align: center;
+        border-right: 1px solid var(--border);
+      }
+      .footer-grid div:last-child {
+        border-right: none;
+      }
+      .footer-grid small {
+        display: block;
+        font-size: 10.5px;
+        font-weight: 800;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 4px;
+      }
+      .footer-grid strong {
+        font-size: 13px;
+      }
+      .impacto-alto {
+        color: var(--green-mid);
+      }
+      .impacto-medio {
+        color: var(--blue);
+      }
+      .esfuerzo-bajo {
+        color: var(--green-mid);
+      }
+      .esfuerzo-medio {
+        color: var(--yellow);
+        color: #8d6e00;
+      }
+      /* Resumen */
+      .summary {
+        background: white;
+        border: 1px solid var(--border);
+        border-radius: 20px;
+        padding: 24px;
+        margin-top: 10px;
+      }
+      .summary h3 {
+        font-size: 16px;
+        font-weight: 800;
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 13px;
+        overflow: hidden;
+        border-radius: 12px;
+        border: 1px solid var(--border);
+      }
+      th {
+        background: var(--green);
+        color: white;
+        text-align: left;
+        padding: 10px 12px;
+        font-size: 11.5px;
+        letter-spacing: 0.4px;
+        text-transform: uppercase;
+      }
+      td {
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: top;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      tr:nth-child(even) td {
+        background: #fcfcfc;
+      }
+      .dot {
+        display: inline-block;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        margin-right: 6px;
+        vertical-align: middle;
+      }
+      .dot.green {
+        background: var(--green-mid);
+      }
+      .dot.blue {
+        background: var(--blue);
+      }
+      .dot.yellow {
+        background: var(--yellow);
+      }
+      .reco {
+        margin-top: 18px;
+        background: linear-gradient(135deg, var(--yellow-light), #fff);
+        border: 1px solid #ffe082;
+        border-radius: 14px;
+        padding: 16px 18px;
+        display: flex;
+        gap: 12px;
+      }
+      .reco-icon {
+        font-size: 22px;
+      }
+      .reco strong {
+        font-size: 13.5px;
+      }
+      .reco p {
+        font-size: 13px;
+        color: #5d4037;
+        margin-top: 4px;
+      }
+      .legend {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        font-size: 11.5px;
+        color: var(--muted);
+        margin-top: 16px;
+        justify-content: center;
+      }
+      .legend span {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+      footer {
+        text-align: center;
+        margin-top: 22px;
+        font-size: 11.5px;
+        color: var(--muted);
+      }
+      @media (max-width: 760px) {
+        .kpi-row {
+          grid-template-columns: 1fr;
+        }
+        .grid-compare {
+          grid-template-columns: 1fr;
+        }
+        .col:first-child {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+        }
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+        .footer-grid div {
+          border-right: none;
+          border-bottom: 1px solid var(--border);
+          text-align: left;
+        }
+        .pill-row {
+          margin-left: 0;
+          margin-top: 8px;
+        }
+        .card-header {
+          flex-wrap: wrap;
+        }
+      }
+      @media print {
+        body {
+          background: white;
+          padding: 0;
+        }
+        header {
+          break-after: avoid;
+        }
+        .card {
+          break-inside: avoid;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="badge">
+          LocalHost S.R.L. · Documento §10.5 · Para discutir en grupo
+        </div>
+        <h1>¿Cómo hacer más rentable a LocalHost?</h1>
+        <p>
+          <strong>Hoy ganamos poco con hardware y mucho con abono.</strong>
+          Estamos 70% instalaciones / 30% abonos. Estas 5 palancas invierten esa
+          ecuación sin reescribir todo el modelo. Cada una se puede aceptar o
+          descartar por separado.
+        </p>
+      </header>
+
+      <div class="kpi-row">
+        <div class="kpi">
+          <div
+            class="kpi-icon"
+            style="background: var(--green-light); border: 1px solid #b2dfdb"
+          >
+            💰
+          </div>
+          <div>
+            <strong>70 / 30</strong>
+            <span>Hoy: 70% HW · 30% abono</span><br />
+            <small>Objetivo: 40% HW · 60% abono</small>
+          </div>
+        </div>
+        <div class="kpi">
+          <div
+            class="kpi-icon"
+            style="background: var(--blue-light); border: 1px solid #90caf9"
+          >
+            📈
+          </div>
+          <div>
+            <strong>~90%</strong>
+            <span>Margen del abono Care</span><br />
+            <small>vs. ~10-15% del hardware</small>
+          </div>
+        </div>
+        <div class="kpi">
+          <div
+            class="kpi-icon"
+            style="background: var(--yellow-light); border: 1px solid #ffe082"
+          >
+            ⏱️
+          </div>
+          <div>
+            <strong>8 → 12 meses</strong>
+            <span>Recupero inversión cliente</span><br />
+            <small>Después es ahorro neto anual</small>
+          </div>
+        </div>
+      </div>
+
+      <!-- PALANCA 1 -->
+      <div class="card">
+        <div class="card-header">
+          <div class="num" style="background: var(--green)">1</div>
+          <div>
+            <h2>Hacer el abono casi obligatorio</h2>
+            <p>Empaquetar comodato + Care 12 meses</p>
+          </div>
+          <div class="pill-row">
+            <span class="pill green">Impacto Alto</span>
+            <span class="pill green">Esfuerzo Bajo</span>
+          </div>
+        </div>
+        <div class="grid-compare">
+          <div class="col">
+            <div class="col-label now">▫ Lo que tenemos ahora</div>
+            <ul>
+              <li>
+                Abono Care <strong>100% opcional</strong>. El cliente puede irse
+                solo con la instalación + 30 días de garantía.
+              </li>
+              <li>
+                Adopción estimada <strong>~30%</strong>. El resto queda sin
+                monitoreo, solo ticket a <span class="price">USD 80/h</span>.
+              </li>
+              <li>
+                Precio: <span class="price">USD 25–60/mes</span> (base ~20 +
+                variables).
+              </li>
+              <li>
+                Riesgo: con equipo en comodato nuestro, si no lo monitoreamos se
+                nos puede romper sin aviso.
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="col-label propuesta">✓ Lo que propone la palanca</div>
+            <ul>
+              <li>
+                Pack <strong>comodato + Care 12 meses</strong> con
+                <strong>10% off</strong> en el equipo.
+              </li>
+              <li>
+                El Care sigue siendo opcional legalmente, pero
+                <strong>comercialmente se vuelve la opción por defecto</strong>.
+              </li>
+              <li>
+                Adopción objetivo: <strong>~80%</strong>. El monitoreo protege
+                nuestro activo.
+              </li>
+              <li>
+                Mismo precio <span class="price new">USD 25–60/mes</span> pero
+                atado 12 meses. Mejora LTV y flujo de caja.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div>
+            <small>¿Qué cambia?</small
+            ><strong>Contrato + §10.2 + §11.5 + Canvas</strong>
+          </div>
+          <div>
+            <small>Impacto</small
+            ><strong class="impacto-alto"
+              >+35 a 50% ingresos recurrentes</strong
+            >
+          </div>
+          <div>
+            <small>Riesgo si no se hace</small
+            ><strong>Stock sin monitorear, churn alto</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- PALANCA 2 -->
+      <div class="card">
+        <div class="card-header">
+          <div class="num" style="background: var(--blue)">2</div>
+          <div>
+            <h2>Cobrar backup externo cifrado</h2>
+            <p>Segunda copia en nuestro taller, clave del cliente</p>
+          </div>
+          <div class="pill-row">
+            <span class="pill green">Impacto Alto</span>
+            <span class="pill green">Esfuerzo Bajo</span>
+          </div>
+        </div>
+        <div class="grid-compare">
+          <div class="col">
+            <div class="col-label now">▫ Lo que tenemos ahora</div>
+            <ul>
+              <li>
+                Backup <strong>solo en el disco del cliente</strong> (local o
+                RAID1). Verificado por el Agente.
+              </li>
+              <li>
+                Si se inunda/roban el equipo o falla el disco sin RAID,
+                <strong>no hay segunda copia</strong>.
+              </li>
+              <li>
+                Sin ingreso extra por respaldo. Costo de disco ya incluido en el
+                abono base.
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="col-label propuesta">✓ Lo que propone la palanca</div>
+            <ul>
+              <li>
+                Add-on opcional:
+                <strong>copia cifrada (LUKS, clave del cliente)</strong> en
+                nuestro taller.
+              </li>
+              <li>
+                Precio: <span class="price new">+USD 10–15/mes</span> sobre el
+                Care. 100% margen (disco del taller ya amortizado).
+              </li>
+              <li>
+                Se vende como <strong>seguro de datos</strong>: "aunque te roben
+                el servidor, recuperás todo".
+              </li>
+              <li>
+                No vemos el contenido: mismo principio de privacidad que §8.3
+                (Shamir/sobre sellado).
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div>
+            <small>¿Qué cambia?</small
+            ><strong>§10.1 + §10.2 + §6.4 + Canvas</strong>
+          </div>
+          <div>
+            <small>Impacto</small
+            ><strong class="impacto-alto"
+              >+USD 120–180/año por cliente que adhiere</strong
+            >
+          </div>
+          <div>
+            <small>Esfuerzo</small
+            ><strong class="esfuerzo-bajo"
+              >Solo Agente + renglón en presupuesto</strong
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- PALANCA 3 -->
+      <div class="card">
+        <div class="card-header">
+          <div class="num" style="background: #ef6c00; color: white">3</div>
+          <div>
+            <h2>Venderle a empresas, no a hogares</h2>
+            <p>Reposicionar el buyer principal a B2B</p>
+          </div>
+          <div class="pill-row">
+            <span class="pill blue">Impacto Alto</span>
+            <span class="pill yellow">Esfuerzo Medio</span>
+          </div>
+        </div>
+        <div class="grid-compare">
+          <div class="col">
+            <div class="col-label now">▫ Lo que tenemos ahora</div>
+            <ul>
+              <li>
+                Foco <strong>70% negocios / 30% hogares</strong> (§2.4). Hogar
+                paga <span class="price">USD 30/mes</span> y discute precio.
+              </li>
+              <li>
+                Mensaje genérico: "tu nube en tu casa" sirve para ambos pero no
+                pega fuerte en B2B.
+              </li>
+              <li>Ticket promedio bajo si entran muchos hogares.</li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="col-label propuesta">✓ Lo que propone la palanca</div>
+            <ul>
+              <li>
+                Foco <strong>85–90% B2B</strong> (estudios, agencias,
+                consultorios de 3–30 personas).
+              </li>
+              <li>
+                Esos clientes hoy pagan
+                <span class="price new">USD 80–400/mes</span> en nube. Nuestro
+                Care de <span class="price new">USD 40–60</span> es ahorro
+                directo.
+              </li>
+              <li>
+                Hogares quedan como
+                <strong>segmento secundario testimonial</strong>, no se abandona
+                pero no se prospecta.
+              </li>
+              <li>
+                Menos clientes,
+                <strong>más ARPU y menos soporte emocional</strong>.
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div>
+            <small>¿Qué cambia?</small
+            ><strong>§2.4 + §10.4 + mensaje comercial</strong>
+          </div>
+          <div>
+            <small>Impacto</small
+            ><strong class="impacto-alto">Duplica ARPU, reduce churn</strong>
+          </div>
+          <div>
+            <small>Riesgo</small><strong>Ciclo de venta más largo (B2B)</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- PALANCA 4 -->
+      <div class="card">
+        <div class="card-header">
+          <div class="num" style="background: #6a1b9a; color: white">4</div>
+          <div>
+            <h2>Cobrar mantenimiento por mejoras</h2>
+            <p>De proyecto único a fee mensual</p>
+          </div>
+          <div class="pill-row">
+            <span class="pill blue">Impacto Medio</span>
+            <span class="pill green">Esfuerzo Bajo</span>
+          </div>
+        </div>
+        <div class="grid-compare">
+          <div class="col">
+            <div class="col-label now">▫ Lo que tenemos ahora</div>
+            <ul>
+              <li>
+                Desarrollo a medida (Paperless+AFIP, bots, n8n) se cobra
+                <strong>por proyecto</strong>:
+                <span class="price">USD 500–3.000</span> una vez.
+              </li>
+              <li>
+                Después no hay ingreso. Si se rompe por update, se cobra ticket
+                aparte.
+              </li>
+              <li>
+                Módulo 6.2 ya lo prevé como "ingreso extra" pero sin
+                recurrencia.
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="col-label propuesta">✓ Lo que propone la palanca</div>
+            <ul>
+              <li>
+                Cobrar <span class="price new">USD 800 + USD 20/mes</span> de
+                mantenimiento.
+              </li>
+              <li>
+                Incluye: compatibilidad con updates de Nextcloud/Paperless,
+                soporte de la integración, hosting del bot.
+              </li>
+              <li>
+                Convierte un ingreso puntual en
+                <strong>ingreso recurrente que fideliza 12+ meses</strong>.
+              </li>
+              <li>Se presupuesta como renglón separado en §10.2.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div>
+            <small>¿Qué cambia?</small
+            ><strong>§6.2 + §10.2 + contrato de mejoras</strong>
+          </div>
+          <div>
+            <small>Impacto</small
+            ><strong class="impacto-medio"
+              >+USD 240/año por mejora activa</strong
+            >
+          </div>
+          <div>
+            <small>Ventaja</small
+            ><strong>Cliente cautivo, menos re-trabajo gratis</strong>
+          </div>
+        </div>
+      </div>
+
+      <!-- PALANCA 5 -->
+      <div class="card">
+        <div class="card-header">
+          <div class="num" style="background: var(--pink); color: white">5</div>
+          <div>
+            <h2>Cobrar el abono por año</h2>
+            <p>Prepago anual con 2 meses de regalo</p>
+          </div>
+          <div class="pill-row">
+            <span class="pill blue">Impacto Medio</span>
+            <span class="pill green">Esfuerzo Bajo</span>
+          </div>
+        </div>
+        <div class="grid-compare">
+          <div class="col">
+            <div class="col-label now">▫ Lo que tenemos ahora</div>
+            <ul>
+              <li>
+                Solo <strong>mensual</strong>:
+                <span class="price">USD 25–60/mes</span> vía MercadoPago.
+              </li>
+              <li>Cobranza mes a mes, riesgo de mora y churn mensual.</li>
+              <li>Flujo de caja ajustado para comprar stock.</li>
+            </ul>
+          </div>
+          <div class="col">
+            <div class="col-label propuesta">✓ Lo que propone la palanca</div>
+            <ul>
+              <li>
+                Opción <strong>anual prepaga</strong>:
+                <span class="price new">USD 250–550/año</span> (10 meses, 2
+                gratis).
+              </li>
+              <li>
+                Se cobra <strong>por adelantado</strong>. Financia el stock del
+                comodato.
+              </li>
+              <li>
+                Cliente se queda mínimo 12 meses →
+                <strong>baja churn y costo de cobranza</strong>.
+              </li>
+              <li>Se ofrece junto con la palanca 1 (pack 12 meses).</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-grid">
+          <div>
+            <small>¿Qué cambia?</small
+            ><strong>§10.2 + §5.4 (financiero)</strong>
+          </div>
+          <div>
+            <small>Impacto</small
+            ><strong class="impacto-medio"
+              >Mejora caja 40%, retiene cliente</strong
+            >
+          </div>
+          <div>
+            <small>Esfuerzo</small
+            ><strong class="esfuerzo-bajo"
+              >Solo tabla de precios + MercadoPago</strong
+            >
+          </div>
+        </div>
+      </div>
+
+      <!-- RESUMEN -->
+      <div class="summary">
+        <h3>📊 Resumen para votar en grupo</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Palanca</th>
+              <th>Cambia plata</th>
+              <th>Cuesta hacerla</th>
+              <th>Recomendación</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1</strong></td>
+              <td>Abono casi obligatorio (pack 12m)</td>
+              <td><span class="dot green"></span>Alto — +35/50% recurrente</td>
+              <td><span class="dot green"></span>Bajo</td>
+              <td><strong>Hacer sí o sí</strong> — es 1 párrafo de contrato</td>
+            </tr>
+            <tr>
+              <td><strong>2</strong></td>
+              <td>Backup externo cifrado +10/15</td>
+              <td><span class="dot green"></span>Alto — margen 100%</td>
+              <td><span class="dot green"></span>Bajo</td>
+              <td><strong>Hacer sí o sí</strong> — con 1 y 2 financiás todo</td>
+            </tr>
+            <tr>
+              <td><strong>3</strong></td>
+              <td>Foco B2B 85/90%</td>
+              <td><span class="dot green"></span>Alto — duplica ARPU</td>
+              <td><span class="dot yellow"></span>Medio</td>
+              <td>Hacer si quieren menos clientes pero mejores</td>
+            </tr>
+            <tr>
+              <td><strong>4</strong></td>
+              <td>Mantenimiento de mejoras +20/mes</td>
+              <td><span class="dot blue"></span>Medio</td>
+              <td><span class="dot green"></span>Bajo</td>
+              <td>Hacer si van a vender integraciones</td>
+            </tr>
+            <tr>
+              <td><strong>5</strong></td>
+              <td>Prepago anual (2 meses gratis)</td>
+              <td><span class="dot blue"></span>Medio — caja</td>
+              <td><span class="dot green"></span>Bajo</td>
+              <td>Hacer junto con la 1, sin costo extra</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="reco">
+          <div class="reco-icon">💡</div>
+          <div>
+            <strong
+              >Recomendación del documento (§10.5): empezá por 1 + 2</strong
+            >
+            <p>
+              Son cambios chicos (ajustar 2 tablas y 1 cláusula del contrato) y
+              son las que más plata agregan sin tocar la arquitectura ni el
+              Canvas. La 3 es reposicionar el negocio. La 4 ya tiene base en el
+              módulo 6.2. La 5 se hace gratis junto con la 1. Podés votar cada
+              una por separado con tu grupo: no son todo o nada.
+            </p>
+          </div>
+        </div>
+
+        <div class="legend">
+          <span
+            ><span class="dot green"></span> Impacto Alto / Esfuerzo Bajo</span
+          >
+          <span><span class="dot blue"></span> Impacto Medio</span>
+          <span
+            ><span class="dot yellow"></span> Esfuerzo Medio (cambio de
+            mensaje)</span
+          >
+        </div>
+      </div>
+
+      <footer>
+        LocalHost S.R.L. — Tu nube, en tu casa · Comparativa generada desde
+        localhost-documento-y-canvas.md §10.5 · Para imprimir o proyectar en
+        reunión
+      </footer>
+    </div>
+  </body>
+</html>
